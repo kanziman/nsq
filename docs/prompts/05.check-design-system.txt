@@ -1,0 +1,22 @@
+scripts/check-design-system.js를 생성해줘.
+
+이 스크립트의 동작:
+- 인자로 받은 파일 경로를 읽어서
+- hard-coded 색상값(#xxxxxx, rgb(...), hsl(...))이 있으면 경고
+- docs/design-system/spacing.md에 정의되지 않은 임의의 spacing 값이 있으면 경고
+- 위반 사항이 있으면 stderr로 출력하고 exit code 0 반환 (Claude가 다음 응답에서 자가 수정하도록)
+
+그 다음 .claude/settings.json의 hooks.PostToolUse를 다음과 같이 등록해줘.
+
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "node scripts/check-design-system.js \"$CLAUDE_FILE_PATH\"" }
+        ]
+      }
+    ]
+  }
+}
