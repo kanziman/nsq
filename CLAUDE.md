@@ -24,8 +24,9 @@
 ```
 nsq/
 ├── .shadowing/              # 로컬 데이터 저장소 (오디오 mp3, 자막 vtt, 세그먼트 json 등)
-├── design-system/           # 디자인 시스템 가이드 및 리소스
-├── docs/                    # 개발 및 도메인 관련 문서
+├── docs/                    # 개발 및 도메인 문서
+│   └── design-system/       # 디자인 시스템 가이드 (colors, typography, spacing, components)
+├── scripts/                 # 개발용 스크립트 (디자인 시스템 실시간 검증 훅 등)
 ├── src/
 │   ├── app/                 # Next.js App Router (페이지, API 라우트)
 │   ├── components/          # React 컴포넌트
@@ -52,7 +53,8 @@ nsq/
 ### 2. 폰트 및 스타일링 기준
 
 - **폰트 패밀리**: `Cormorant Garamond` (serif display), `Inter` (sans body), `JetBrains Mono` (code) 폰트 세트를 `next/font/google`을 활용해 루트 레이아웃에 주입하고, Tailwind CSS 설정을 연동합니다.
-- **테마 토큰**: `design-system/DESIGN.md`에 맞춰 따뜻한 에디토리얼 테마(warm cream canvas, coral CTA, dark navy surfaces 등)를 CSS 변수로 관리하고 Tailwind CSS를 확장(extend)합니다.
+- **디자인 시스템 명세 준수**: [docs/design-system/DESIGN.md](file:///Users/zorba/projects/nsq/docs/design-system/DESIGN.md)와 그 세부 사양([colors.md](file:///Users/zorba/projects/nsq/docs/design-system/colors.md), [typography.md](file:///Users/zorba/projects/nsq/docs/design-system/typography.md), [spacing.md](file:///Users/zorba/projects/nsq/docs/design-system/spacing.md), [components/](file:///Users/zorba/projects/nsq/docs/design-system/components))의 맵핑을 준수합니다.
+- **디자인 규격 검증 훅 (Post-use Hook)**: 파일 수정/쓰기 시 [check-design-system.js](file:///Users/zorba/projects/nsq/scripts/check-design-system.js)가 자동 실행됩니다. 하드코딩된 색상값(#xxxxxx 등) 또는 스펙에 없는 임의의 spacing 픽셀값이 발견되면 경고(stderr)를 출력하므로, 자가 수정을 통해 이를 즉시 시정해야 합니다.
 
 ### 3. API 및 예외 처리 (Error Handling)
 
