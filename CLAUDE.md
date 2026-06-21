@@ -54,7 +54,9 @@ nsq/
 
 - **폰트 패밀리**: `Cormorant Garamond` (serif display), `Inter` (sans body), `JetBrains Mono` (code) 폰트 세트를 `next/font/google`을 활용해 루트 레이아웃에 주입하고, Tailwind CSS 설정을 연동합니다.
 - **디자인 시스템 명세 준수**: [docs/design-system/DESIGN.md](file:///Users/zorba/projects/nsq/docs/design-system/DESIGN.md)와 그 세부 사양([colors.md](file:///Users/zorba/projects/nsq/docs/design-system/colors.md), [typography.md](file:///Users/zorba/projects/nsq/docs/design-system/typography.md), [spacing.md](file:///Users/zorba/projects/nsq/docs/design-system/spacing.md), [components/](file:///Users/zorba/projects/nsq/docs/design-system/components))의 맵핑을 준수합니다.
-- **디자인 규격 검증 훅 (Post-use Hook)**: 파일 수정/쓰기 시 [check-design-system.js](file:///Users/zorba/projects/nsq/scripts/check-design-system.js)가 자동 실행됩니다. 하드코딩된 색상값(#xxxxxx 등) 또는 스펙에 없는 임의의 spacing 픽셀값이 발견되면 경고(stderr)를 출력하므로, 자가 수정을 통해 이를 즉시 시정해야 합니다.
+- **디자인 규격 검증 훅 (Post-use Hook)**: 파일 수정/쓰기 시 [check-design-system.js](file:///Users/zorba/projects/nsq/scripts/check-design-system.js)가 자동 실행됩니다.
+  - **색상은 반드시 CSS 변수로만 사용한다 (하드코딩 금지)**
+  - 스펙에 없는 임의의 spacing 픽셀값이 발견되면 경고(stderr)를 출력하므로, 자가 수정을 통해 이를 즉시 시정해야 합니다.
 
 ### 3. API 및 예외 처리 (Error Handling)
 

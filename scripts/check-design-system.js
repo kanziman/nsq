@@ -55,7 +55,7 @@ try {
       if (hexMatch) {
         hexMatch.forEach((color) => {
           warnings.push(
-            `Hardcoded HEX color found: "${color}". Use colors.md tokens instead.`,
+            `Hardcoded HEX color found: "${color}". 색상은 반드시 CSS 변수로만 사용해야 합니다 (하드코딩 금지).`,
           );
         });
       }
@@ -63,12 +63,12 @@ try {
       // RGB / HSL check
       if (line.match(/rgb\([^)]+\)/gi)) {
         warnings.push(
-          `Hardcoded RGB color found. Use colors.md tokens instead.`,
+          `Hardcoded RGB color found. 색상은 반드시 CSS 변수로만 사용해야 합니다 (하드코딩 금지).`,
         );
       }
       if (line.match(/hsl\([^)]+\)/gi)) {
         warnings.push(
-          `Hardcoded HSL color found. Use colors.md tokens instead.`,
+          `Hardcoded HSL color found. 색상은 반드시 CSS 변수로만 사용해야 합니다 (하드코딩 금지).`,
         );
       }
     }
