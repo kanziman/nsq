@@ -1,67 +1,91 @@
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { ShadowingPlayer } from '@/components/player/shadowing-player';
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-8 md:p-24 max-w-4xl mx-auto space-y-12">
+    <main className="min-h-screen p-8 md:p-24 max-w-5xl mx-auto space-y-16">
       {/* Header section (Editorial Display style) */}
       <header className="space-y-4 border-b border-hairline pb-8">
         <div className="text-primary font-semibold tracking-wider text-xs uppercase">
-          Project Setup Success
+          Design System Integration
         </div>
         <h1 className="font-serif text-5xl md:text-6xl text-ink font-normal tracking-tight">
           NSQ Shadowing Web App
         </h1>
         <p className="font-sans text-body text-lg leading-relaxed max-w-2xl">
-          Next.js App Router, Tailwind CSS, and shadcn/ui development
-          environment has been initialized based on the warm-canvas editorial
-          design system.
+          Core components and speaker styles have been integrated conforming to
+          the warm-canvas editorial design system parameters.
         </p>
       </header>
 
-      {/* Interactive elements test (Buttons and Spacings) */}
-      <section className="space-y-6">
-        <h2 className="font-serif text-3xl text-ink">
-          Design Tokens Verification
-        </h2>
-        <div className="flex flex-wrap gap-4">
-          {/* Primary Coral Button */}
-          <button className="h-10 px-5 rounded-md bg-primary text-primary-foreground font-medium text-sm transition-colors hover:bg-primary-active active:bg-primary-active disabled:opacity-50">
-            Primary Coral CTA
-          </button>
+      {/* Main 2-column showcase: Left components, Right Shadowing player preview */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        {/* Left Side: Components Showcase (5 columns) */}
+        <div className="lg:col-span-5 space-y-8">
+          <section className="space-y-4">
+            <h2 className="font-serif text-2xl text-ink font-normal">
+              UI Components
+            </h2>
 
-          {/* Secondary Outline Button */}
-          <button className="h-10 px-5 rounded-md bg-canvas text-ink border border-hairline font-medium text-sm transition-colors hover:bg-secondary active:bg-secondary">
-            Secondary Outline
-          </button>
+            {/* Buttons card showcase */}
+            <Card className="p-6 space-y-4">
+              <h3 className="text-sm font-semibold text-muted">
+                Button Variants
+              </h3>
+              <div className="flex flex-col gap-2">
+                <Button variant="primary">Primary Coral Button</Button>
+                <Button variant="secondary">Secondary Outline</Button>
+                <Button variant="textLink" className="justify-start">
+                  Text Link variant
+                </Button>
 
-          {/* Badge Pills */}
-          <span className="inline-flex items-center rounded-full bg-surface-card px-3 py-1 text-xs font-medium text-ink">
-            Badge Pill
-          </span>
-          <span className="inline-flex items-center rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary-foreground">
-            NEW
-          </span>
+                <div className="bg-surface-dark p-4 rounded-md flex gap-2 justify-center items-center">
+                  <Button variant="secondaryOnDark" size="sm">
+                    On-Dark Small
+                  </Button>
+                  <Button variant="iconCircular" size="icon">
+                    ▶
+                  </Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Inputs card showcase */}
+            <Card className="p-6 space-y-4">
+              <h3 className="text-sm font-semibold text-muted">Form Input</h3>
+              <div className="space-y-2">
+                <label className="text-xs text-muted-soft block">
+                  Podcast Episode URL
+                </label>
+                <Input
+                  type="text"
+                  placeholder="https://youtube.com/watch?v=..."
+                />
+              </div>
+            </Card>
+
+            {/* Badges card showcase */}
+            <Card className="p-6 space-y-4">
+              <h3 className="text-sm font-semibold text-muted">Badges</h3>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="pill">Badge Pill</Badge>
+                <Badge variant="coral">NEW</Badge>
+              </div>
+            </Card>
+          </section>
         </div>
-      </section>
 
-      {/* Dark Navy Card (Product Mockup) and Code Block */}
-      <section className="space-y-4">
-        <h3 className="font-serif text-2xl text-ink">Dark Navy Surface</h3>
-        <div className="bg-surface-dark text-on-dark rounded-lg p-6 space-y-4">
-          <p className="font-sans text-sm text-on-dark-soft">
-            This card represents a dark navy product surface like code windows
-            and audio players.
-          </p>
-          <div className="bg-surface-dark-soft text-on-dark font-mono text-xs p-4 rounded-md overflow-x-auto border border-surface-dark-elevated">
-            <code>
-              {`// Environment standards check
-const BOUNDARY_PARK_BACKOFF_SEC = 0.05;
-const verifyMatchRate = (rate: number): boolean => {
-  if (rate < 0.85) throw new Error("Sync quality below threshold.");
-  return true;
-};`}
-            </code>
-          </div>
+        {/* Right Side: Player Preview (7 columns) */}
+        <div className="lg:col-span-7 space-y-4">
+          <h2 className="font-serif text-2xl text-ink font-normal">
+            Shadowing Player Layout
+          </h2>
+          <ShadowingPlayer />
         </div>
-      </section>
+      </div>
 
       {/* Bottom Footer block */}
       <footer className="pt-8 border-t border-hairline text-xs text-muted-soft">
