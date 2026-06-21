@@ -14,7 +14,7 @@
           "feature": "Next.js 프로젝트 초기화",
           "path": "package.json",
           "relatedPaths": ["next.config.ts", "tsconfig.json"],
-          "status": "pending",
+          "status": "completed",
           "description": "Next.js App Router + TypeScript 프로젝트 생성"
         },
         {
@@ -22,7 +22,7 @@
           "feature": "Tailwind CSS 설정",
           "path": "tailwind.config.ts",
           "relatedPaths": ["app/globals.css", "postcss.config.mjs"],
-          "status": "pending",
+          "status": "completed",
           "description": "Tailwind CSS 설치 + design-system/DESIGN.md 토큰 기반 커스텀 설정"
         },
         {
@@ -30,7 +30,7 @@
           "feature": "shadcn/ui 초기화",
           "path": "components.json",
           "relatedPaths": ["components/ui/", "lib/utils.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "shadcn/ui 설치 및 기본 컴포넌트(button, card, slider 등) 추가"
         },
         {
@@ -38,7 +38,7 @@
           "feature": "루트 레이아웃",
           "path": "app/layout.tsx",
           "relatedPaths": ["app/globals.css"],
-          "status": "pending",
+          "status": "completed",
           "description": "Cormorant Garamond + Inter + JetBrains Mono 폰트, warm cream canvas 기본 테마 적용"
         }
       ]
@@ -55,7 +55,7 @@
           "feature": "CSS 디자인 토큰 변환",
           "path": "app/globals.css",
           "relatedPaths": ["design-system/DESIGN.md", "tailwind.config.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "DESIGN.md의 colors, spacing, rounded, typography 토큰을 CSS custom properties로 변환. Tailwind에서 참조 가능하도록 extend 설정"
         },
         {
@@ -63,7 +63,7 @@
           "feature": "폰트 설치 및 설정",
           "path": "app/layout.tsx",
           "relatedPaths": ["app/globals.css"],
-          "status": "pending",
+          "status": "completed",
           "description": "Cormorant Garamond(serif display 대체), Inter(sans body), JetBrains Mono(code) Google Fonts 또는 next/font 설정"
         },
         {
@@ -71,7 +71,7 @@
           "feature": "shadcn/ui 테마 커스터마이징",
           "path": "app/globals.css",
           "relatedPaths": ["components.json"],
-          "status": "pending",
+          "status": "completed",
           "description": "shadcn CSS variables를 DESIGN.md 컬러 팔레트로 오버라이드 (canvas=#faf9f5, primary=#cc785c, surface-dark=#181715 등)"
         },
         {
@@ -79,7 +79,7 @@
           "feature": "버튼 컴포넌트 커스터마이징",
           "path": "components/ui/button.tsx",
           "relatedPaths": ["design-system/DESIGN.md"],
-          "status": "pending",
+          "status": "completed",
           "description": "shadcn Button을 DESIGN.md 사양으로 커스터마이징: primary(coral), secondary(cream+hairline), on-dark, text-link 변형"
         },
         {
@@ -87,7 +87,7 @@
           "feature": "카드 컴포넌트 커스터마이징",
           "path": "components/ui/card.tsx",
           "relatedPaths": ["design-system/DESIGN.md"],
-          "status": "pending",
+          "status": "completed",
           "description": "feature-card(cream), product-mockup-card-dark(navy), code-window-card 변형 추가"
         },
         {
@@ -95,7 +95,7 @@
           "feature": "입력 컴포넌트 커스터마이징",
           "path": "components/ui/input.tsx",
           "relatedPaths": ["design-system/DESIGN.md"],
-          "status": "pending",
+          "status": "completed",
           "description": "text-input: cream bg, hairline border, coral focus ring. rounded-md(8px)"
         },
         {
@@ -103,7 +103,7 @@
           "feature": "배지/태그 컴포넌트",
           "path": "components/ui/badge.tsx",
           "relatedPaths": ["design-system/DESIGN.md"],
-          "status": "pending",
+          "status": "completed",
           "description": "badge-pill(cream), badge-coral(primary) 변형. 화자 레이블 표시용"
         },
         {
@@ -111,7 +111,7 @@
           "feature": "화자별 컬러 시스템",
           "path": "lib/constants/speakers.ts",
           "relatedPaths": ["app/globals.css"],
-          "status": "pending",
+          "status": "completed",
           "description": "DESIGN.md 팔레트 내에서 화자별 색상 할당: DUCKWORTH=accent-teal(#5db8a6), DUBNER=primary(#cc785c), NARRATOR=muted, BOTH=accent-amber(#e8a55a)"
         },
         {
@@ -119,7 +119,7 @@
           "feature": "플레이어 다크 서피스 레이아웃",
           "path": "components/player/shadowing-player.tsx",
           "relatedPaths": ["design-system/DESIGN.md"],
-          "status": "pending",
+          "status": "completed",
           "description": "플레이어 영역은 surface-dark(#181715) 위에 on-dark 텍스트. 스크립트 영역은 canvas(#faf9f5). cream-to-dark 페이싱 적용"
         }
       ]
@@ -135,7 +135,7 @@
           "feature": "타입 정의",
           "path": "lib/types.ts",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "Episode, Segment, ImportState, Meta 등 TypeScript 타입/인터페이스 정의"
         },
         {
@@ -143,7 +143,7 @@
           "feature": "에피소드 데이터 접근 레이어",
           "path": "lib/services/episodes.ts",
           "relatedPaths": [".shadowing/episodes/"],
-          "status": "pending",
+          "status": "completed",
           "description": "파일 시스템 기반 에피소드 목록 조회, 개별 에피소드 데이터 로드"
         }
       ]
@@ -617,6 +617,6 @@
     "totalTasks": 55,
     "mvpTasks": 48,
     "postMvpTasks": 7,
-    "completedTasks": 0
+    "completedTasks": 15
   }
 }
