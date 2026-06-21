@@ -1,0 +1,9 @@
+{
+  "eval_id": 2,
+  "eval_name": "project-scan-prompt",
+  "prompt": "현재 프로젝트 구조 분석해서 mermaid 아키텍처 다이어그램 HTML 파일 만들고 open 해줘",
+  "assertions": [
+    "The file docs/architecture/index.html was successfully created",
+    "The output message contains '아키텍처 다이어그램이 브라우저에서 열렸습니다.'"
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "project": "nsq-shadowing",
+  "version": "0.1.0",
+  "updatedAt": "2026-06-17",
+
+  "phases": [
+    {
+      "id": "setup",
+      "name": "프로젝트 셋업",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "setup-nextjs",
+          "feature": "Next.js 프로젝트 초기화",
+          "path": "package.json",
+          "relatedPaths": ["next.config.ts", "tsconfig.json"],
+          "status": "pending",
+          "description": "Next.js App Router + TypeScript 프로젝트 생성"
+        },
+        {
+          "id": "setup-tailwind",
+          "feature": "Tailwind CSS 설정",
+          "path": "tailwind.config.ts",
+          "relatedPaths": ["app/globals.css", "postcss.config.mjs"],
+          "status": "pending",
+          "description": "Tailwind CSS 설치 + design-system/DESIGN.md 토큰 기반 커스텀 설정"
+        },
+        {
+          "id": "setup-shadcn",
+          "feature": "shadcn/ui 초기화",
+          "path": "components.json",
+          "relatedPaths": ["components/ui/", "lib/utils.ts"],
+          "status": "pending",
+          "description": "shadcn/ui 설치 및 기본 컴포넌트(button, card, slider 등) 추가"
+        },
+        {
+          "id": "setup-layout",
+          "feature": "루트 레이아웃",
+          "path": "app/layout.tsx",
+          "relatedPaths": ["app/globals.css"],
+          "status": "pending",
+          "description": "Cormorant Garamond + Inter + JetBrains Mono 폰트, warm cream canvas 기본 테마 적용"
+        }
+      ]
+    },
+
+    {
+      "id": "design-system",
+      "name": "디자인 시스템 통합",
+      "phase": "MVP",
+      "designRef": "design-system/DESIGN.md",
+      "tasks": [
+        {
+          "id": "ds-tokens-css",
+          "feature": "CSS 디자인 토큰 변환",
+          "path": "app/globals.css",
+          "relatedPaths": ["design-system/DESIGN.md", "tailwind.config.ts"],
+          "status": "pending",
+          "description": "DESIGN.md의 colors, spacing, rounded, typography 토큰을 CSS custom properties로 변환. Tailwind에서 참조 가능하도록 extend 설정"
+        },
+        {
+          "id": "ds-fonts",
+          "feature": "폰트 설치 및 설정",
+          "path": "app/layout.tsx",
+          "relatedPaths": ["app/globals.css"],
+          "status": "pending",
+          "description": "Cormorant Garamond(serif display 대체), Inter(sans body), JetBrains Mono(code) Google Fonts 또는 next/font 설정"
+        },
+        {
+          "id": "ds-shadcn-theme",
+          "feature": "shadcn/ui 테마 커스터마이징",
+          "path": "app/globals.css",
+          "relatedPaths": ["components.json"],
+          "status": "pending",
+          "description": "shadcn CSS variables를 DESIGN.md 컬러 팔레트로 오버라이드 (canvas=#faf9f5, primary=#cc785c, surface-dark=#181715 등)"
+        },
+        {
+          "id": "ds-button-variants",
+          "feature": "버튼 컴포넌트 커스터마이징",
+          "path": "components/ui/button.tsx",
+          "relatedPaths": ["design-system/DESIGN.md"],
+          "status": "pending",
+          "description": "shadcn Button을 DESIGN.md 사양으로 커스터마이징: primary(coral), secondary(cream+hairline), on-dark, text-link 변형"
+        },
+        {
+          "id": "ds-card-variants",
+          "feature": "카드 컴포넌트 커스터마이징",
+          "path": "components/ui/card.tsx",
+          "relatedPaths": ["design-system/DESIGN.md"],
+          "status": "pending",
+          "description": "feature-card(cream), product-mockup-card-dark(navy), code-window-card 변형 추가"
+        },
+        {
+          "id": "ds-input-variants",
+          "feature": "입력 컴포넌트 커스터마이징",
+          "path": "components/ui/input.tsx",
+          "relatedPaths": ["design-system/DESIGN.md"],
+          "status": "pending",
+          "description": "text-input: cream bg, hairline border, coral focus ring. rounded-md(8px)"
+        },
+        {
+          "id": "ds-badge-variants",
+          "feature": "배지/태그 컴포넌트",
+          "path": "components/ui/badge.tsx",
+          "relatedPaths": ["design-system/DESIGN.md"],
+          "status": "pending",
+          "description": "badge-pill(cream), badge-coral(primary) 변형. 화자 레이블 표시용"
+        },
+        {
+          "id": "ds-speaker-colors",
+          "feature": "화자별 컬러 시스템",
+          "path": "lib/constants/speakers.ts",
+          "relatedPaths": ["app/globals.css"],
+          "status": "pending",
+          "description": "DESIGN.md 팔레트 내에서 화자별 색상 할당: DUCKWORTH=accent-teal(#5db8a6), DUBNER=primary(#cc785c), NARRATOR=muted, BOTH=accent-amber(#e8a55a)"
+        },
+        {
+          "id": "ds-dark-player-surface",
+          "feature": "플레이어 다크 서피스 레이아웃",
+          "path": "components/player/shadowing-player.tsx",
+          "relatedPaths": ["design-system/DESIGN.md"],
+          "status": "pending",
+          "description": "플레이어 영역은 surface-dark(#181715) 위에 on-dark 텍스트. 스크립트 영역은 canvas(#faf9f5). cream-to-dark 페이싱 적용"
+        }
+      ]
+    },
+
+    {
+      "id": "data",
+      "name": "데이터 레이어",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "data-types",
+          "feature": "타입 정의",
+          "path": "lib/types.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "Episode, Segment, ImportState, Meta 등 TypeScript 타입/인터페이스 정의"
+        },
+        {
+          "id": "data-episodes-store",
+          "feature": "에피소드 데이터 접근 레이어",
+          "path": "lib/services/episodes.ts",
+          "relatedPaths": [".shadowing/episodes/"],
+          "status": "pending",
+          "description": "파일 시스템 기반 에피소드 목록 조회, 개별 에피소드 데이터 로드"
+        }
+      ]
+    },
+
+    {
+      "id": "import-pipeline",
+      "name": "임포트 파이프라인",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "import-api",
+          "feature": "임포트 API 엔드포인트",
+          "path": "app/api/import/route.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API. 재시도 파라미터(all, transcript, subtitles) 지원 및 matchRate 검증"
+        },
+        {
+          "id": "import-youtube",
+          "feature": "YouTube 다운로드 서비스",
+          "path": "src/lib/youtube.ts",
+          "relatedPaths": [
+            ".shadowing/episodes/{videoId}/audio.mp3",
+            ".shadowing/episodes/{videoId}/subtitle.en.vtt"
+          ],
+          "status": "pending",
+          "description": "yt-dlp로 오디오(mp3) + 자막(vtt) + 썸네일 다운로드"
+        },
+        {
+          "id": "import-transcript",
+          "feature": "트랜스크립트 스크래핑 및 파싱",
+          "path": "src/lib/freakonomics.ts",
+          "relatedPaths": [
+            "src/lib/transcript.ts",
+            ".shadowing/episodes/{videoId}/transcript.txt"
+          ],
+          "status": "pending",
+          "description": "freakonomics.com 대본 URL fetch, 파싱하여 비발화 콘텐츠 제거 및 화자(Angela, Steven) 이름 정규화 및 문장 분할"
+        },
+        {
+          "id": "import-alignment",
+          "feature": "대본 ↔ VTT 토큰 정렬",
+          "path": "src/lib/alignTranscript.ts",
+          "relatedPaths": [
+            "src/lib/vtt.ts",
+            ".shadowing/episodes/{videoId}/segments.json"
+          ],
+          "status": "pending",
+          "description": "patience-diff 방식 희소 단어 앵커링(LIS 최장 증가 부분수열)과 선형 보간을 사용한 대본 문장 ↔ VTT 토큰 정합. matchRate 0.85 미만 시 중단 처리"
+        },
+        {
+          "id": "import-state",
+          "feature": "파이프라인 상태 관리",
+          "path": "src/lib/import-state.ts",
+          "relatedPaths": [".shadowing/episodes/{videoId}/import-state.json"],
+          "status": "pending",
+          "description": "download → subtitle → transcript → alignment 단계별 진행 상태 추적"
+        },
+        {
+          "id": "import-form-ui",
+          "feature": "임포트 입력 폼 및 제어 UI",
+          "path": "components/import-form.tsx",
+          "relatedPaths": [
+            "components/ui/button.tsx",
+            "components/ui/input.tsx"
+          ],
+          "status": "pending",
+          "description": "임포트 URL 입력 폼, 단계별 진행 상태 게이지/타임라인 표시, 실패 단계별 개별 재시도 버튼 제공"
+        },
+        {
+          "id": "import-page",
+          "feature": "임포트 전용 화면",
+          "path": "app/import/page.tsx",
+          "relatedPaths": ["components/import-form.tsx"],
+          "status": "pending",
+          "description": "임포트 전용 라우팅 페이지. 디자인 시스템(DESIGN.md)을 준수하는 모니터링 레이아웃 구성"
+        }
+      ]
+    },
+
+    {
+      "id": "episodes",
+      "name": "에피소드 관리",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "episodes-api",
+          "feature": "에피소드 목록 API",
+          "path": "app/api/episodes/route.ts",
+          "relatedPaths": ["app/api/episodes/[id]/route.ts"],
+          "status": "pending",
+          "description": "에피소드 목록 조회(GET), 삭제 등 CRUD API"
+        },
+        {
+          "id": "episodes-audio-api",
+          "feature": "오디오 스트리밍 API",
+          "path": "app/api/episodes/[id]/audio/route.ts",
+          "relatedPaths": [".shadowing/episodes/{videoId}/audio.mp3"],
+          "status": "pending",
+          "description": "에피소드 mp3 오디오 파일 스트리밍 제공 (Range 요청 지원)"
+        },
+        {
+          "id": "episodes-list-page",
+          "feature": "에피소드 목록 페이지",
+          "path": "app/page.tsx",
+          "relatedPaths": ["components/episode-list.tsx"],
+          "status": "pending",
+          "description": "홈 페이지: 임포트된 에피소드 카드 목록 및 임포트 페이지 이동 버튼"
+        },
+        {
+          "id": "episodes-list-component",
+          "feature": "에피소드 리스트 컴포넌트",
+          "path": "components/episode-list.tsx",
+          "relatedPaths": ["components/ui/card.tsx"],
+          "status": "pending",
+          "description": "썸네일, 제목, 시간, 상태를 표시하는 에피소드 카드 그리드"
+        }
+      ]
+    },
+
+    {
+      "id": "player",
+      "name": "쉐도잉 플레이어",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "player-page",
+          "feature": "쉐도잉 플레이어 페이지",
+          "path": "app/episodes/[id]/page.tsx",
+          "relatedPaths": ["components/tutor-chat.tsx"],
+          "status": "pending",
+          "description": "에피소드 상세 페이지: 플레이어 + 스크립트 뷰 + AI 튜터 우측 채팅 레이아웃"
+        },
+        {
+          "id": "player-mode",
+          "feature": "학습 모드 선택 기능",
+          "path": "components/player/shadowing-player.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "전체 모드(스크립트 전체 학습) 및 집중 모드(세그먼트 반복 및 음성 녹음) 전환 UI"
+        },
+        {
+          "id": "player-recording",
+          "feature": "집중 모드 음성 녹음",
+          "path": "components/player/recorder.tsx",
+          "relatedPaths": ["lib/utils/recorder.ts"],
+          "status": "pending",
+          "description": "집중 모드에서 현재 세그먼트에 대해 사용자의 음성을 녹음하고 재생(들어보기)하는 UI 및 기능"
+        },
+        {
+          "id": "player-core",
+          "feature": "쉐도잉 플레이어 코어",
+          "path": "components/player/shadowing-player.tsx",
+          "relatedPaths": ["lib/utils/audio.ts"],
+          "status": "pending",
+          "description": "HTML5 Audio 기반 세그먼트 단위 재생 엔진"
+        },
+        {
+          "id": "player-controls",
+          "feature": "오디오 컨트롤 UI",
+          "path": "components/player/audio-controls.tsx",
+          "relatedPaths": [
+            "components/ui/button.tsx",
+            "components/ui/slider.tsx"
+          ],
+          "status": "pending",
+          "description": "재생/정지, 이전/다음 세그먼트, 진행바, 타임코드 표시"
+        },
+        {
+          "id": "player-ab-repeat",
+          "feature": "A-B 구간 반복",
+          "path": "components/player/shadowing-player.tsx",
+          "relatedPaths": ["components/player/audio-controls.tsx"],
+          "status": "pending",
+          "description": "선택한 세그먼트(들) 구간 반복 재생 + 반복 횟수 표시"
+        },
+        {
+          "id": "player-speed",
+          "feature": "재생 속도 조절",
+          "path": "components/player/audio-controls.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "0.5x ~ 2.0x 재생 속도 조절 UI"
+        },
+        {
+          "id": "player-speaker-filter",
+          "feature": "화자 필터링",
+          "path": "components/player/speaker-filter.tsx",
+          "relatedPaths": ["components/player/shadowing-player.tsx"],
+          "status": "pending",
+          "description": "특정 화자만 선택하여 해당 세그먼트만 재생"
+        },
+        {
+          "id": "player-waveform",
+          "feature": "오디오 파형 시각화",
+          "path": "components/player/waveform.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "현재 재생 구간의 파형 표시 + 클릭으로 위치 이동"
+        },
+        {
+          "id": "player-keyboard",
+          "feature": "키보드 단축키",
+          "path": "lib/hooks/use-keyboard-shortcuts.ts",
+          "relatedPaths": ["components/player/shadowing-player.tsx"],
+          "status": "pending",
+          "description": "Space(재생/정지), ←→(세그먼트 이동), R(구간반복) 등 핫키"
+        },
+        {
+          "id": "player-boundary",
+          "feature": "재생 경계 처리 (Boundary Back-off)",
+          "path": "app/episodes/[id]/page.tsx",
+          "relatedPaths": ["components/player/shadowing-player.tsx"],
+          "status": "pending",
+          "description": "인접 세그먼트 간 start/end 경계 공유 시 재생 오판정 및 역행 방지를 위해 BOUNDARY_PARK_BACKOFF_SEC(0.05s) 기반 경계 직전 park 처리"
+        }
+      ]
+    },
+
+    {
+      "id": "script-view",
+      "name": "스크립트 뷰",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "script-view-core",
+          "feature": "스크립트 뷰 코어",
+          "path": "components/script-view.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "세그먼트 목록을 화자별 색상으로 렌더링"
+        },
+        {
+          "id": "script-view-highlight",
+          "feature": "현재 재생 하이라이트",
+          "path": "components/script-view.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "현재 재생 중인 세그먼트 시각적 강조 + 자동 스크롤"
+        },
+        {
+          "id": "script-view-translation",
+          "feature": "번역 블러 처리 및 전체 토글",
+          "path": "components/script-view.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "한국어 번역 기본 블러(blur) 처리, 개별 해제 기능 및 스크립트 전체 번역 일괄 보이기/숨기기 토글 버튼 제공"
+        },
+        {
+          "id": "script-view-word-highlight",
+          "feature": "단어 레벨 하이라이트",
+          "path": "components/script-view.tsx",
+          "relatedPaths": ["lib/utils/vtt-parser.ts"],
+          "status": "pending",
+          "description": "VTT word-level timing을 활용한 단어 단위 하이라이트"
+        },
+        {
+          "id": "script-view-segment-select",
+          "feature": "구간 선택",
+          "path": "components/script-view.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "클릭으로 세그먼트 선택, 드래그로 범위 선택 → A-B 반복 연결"
+        }
+      ]
+    },
+
+    {
+      "id": "utils",
+      "name": "유틸리티",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "utils-audio",
+          "feature": "Audio API 유틸",
+          "path": "lib/utils/audio.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "HTML5 Audio 래퍼: 시간 이동, 구간 재생, 속도 제어"
+        },
+        {
+          "id": "utils-time",
+          "feature": "시간 포맷 유틸",
+          "path": "lib/utils/time.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "초 → mm:ss, VTT 타임코드 파싱 등 시간 관련 헬퍼"
+        },
+        {
+          "id": "utils-vtt-parser",
+          "feature": "VTT 파서",
+          "path": "lib/utils/vtt-parser.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "VTT 자막 파일 파싱: 타임코드 + 단어 레벨 타이밍 추출"
+        },
+        {
+          "id": "utils-recorder",
+          "feature": "웹 오디오 녹음 유틸",
+          "path": "lib/utils/recorder.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "MediaRecorder API를 래핑하여 오디오 녹음, 정지, Blob 파일 생성 기능 지원"
+        }
+      ]
+    },
+
+    {
+      "id": "learning",
+      "name": "학습 보조",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "learning-repeat-counter",
+          "feature": "세그먼트 반복 횟수 카운터",
+          "path": "lib/hooks/use-learning-state.ts",
+          "relatedPaths": ["components/script-view.tsx"],
+          "status": "pending",
+          "description": "각 세그먼트 반복 재생 횟수 추적 + UI 표시"
+        },
+        {
+          "id": "learning-bookmark",
+          "feature": "북마크",
+          "path": "lib/hooks/use-bookmarks.ts",
+          "relatedPaths": ["components/script-view.tsx"],
+          "status": "pending",
+          "description": "어려운 세그먼트를 북마크하여 빠르게 접근"
+        },
+        {
+          "id": "learning-progress",
+          "feature": "학습 진행률",
+          "path": "components/learning-progress.tsx",
+          "relatedPaths": ["lib/hooks/use-learning-state.ts"],
+          "status": "pending",
+          "description": "전체 세그먼트 중 완료 비율 프로그레스바"
+        },
+        {
+          "id": "learning-dictionary",
+          "feature": "단어/구문 사전 연동",
+          "path": "components/dictionary-popup.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "스크립트 내 영어 단어 클릭 시 간이 사전 팝업으로 뜻을 보여주는 기능"
+        }
+      ]
+    },
+
+    {
+      "id": "ai-tutor",
+      "name": "AI 튜터 피드백",
+      "phase": "MVP",
+      "tasks": [
+        {
+          "id": "tutor-api",
+          "feature": "AI 튜터 채팅 API",
+          "path": "app/api/tutor/route.ts",
+          "relatedPaths": ["lib/services/tutor.ts"],
+          "status": "pending",
+          "description": "Angela, Stephen, General 캐릭터별 페르소나 프롬프트를 처리하는 LLM 채팅 Route 핸들러"
+        },
+        {
+          "id": "tutor-service",
+          "feature": "AI 튜터 서비스 레이어",
+          "path": "lib/services/tutor.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "캐릭터별 시스템 프롬프트(페르소나) 정의 및 LLM 연동 API 헬퍼"
+        },
+        {
+          "id": "tutor-chat-ui",
+          "feature": "AI 튜터 우측 채팅 UI",
+          "path": "components/tutor-chat.tsx",
+          "relatedPaths": ["app/api/tutor/route.ts"],
+          "status": "pending",
+          "description": "학습 화면 우측 배치, 튜터 선택(Angela, Stephen, General) 탭, 실시간 대화 피드백 UI"
+        }
+      ]
+    },
+
+    {
+      "id": "phase2-auth",
+      "name": "사용자 시스템",
+      "phase": "Phase 2",
+      "tasks": [
+        {
+          "id": "auth-login",
+          "feature": "사용자 인증",
+          "path": "app/auth/",
+          "relatedPaths": ["lib/services/auth.ts"],
+          "status": "pending",
+          "description": "로그인/회원가입"
+        },
+        {
+          "id": "auth-user-progress",
+          "feature": "개인별 학습 진행 저장",
+          "path": "lib/services/user-progress.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "사용자별 학습 상태 영속화"
+        },
+        {
+          "id": "auth-dashboard",
+          "feature": "학습 통계 대시보드",
+          "path": "app/dashboard/page.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "학습 시간, 반복 횟수, 진행률 통계"
+        }
+      ]
+    },
+
+    {
+      "id": "phase3-advanced",
+      "name": "고급 학습 기능",
+      "phase": "Phase 3",
+      "tasks": [
+        {
+          "id": "advanced-srs",
+          "feature": "스페이스드 반복 (SRS)",
+          "path": "lib/services/srs.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "SRS 기반 복습 스케줄"
+        },
+        {
+          "id": "advanced-chunking",
+          "feature": "청크 기반 학습",
+          "path": "components/chunk-practice.tsx",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "문장 → 구 → 단어 단위 분해 연습"
+        }
+      ]
+    },
+
+    {
+      "id": "phase4-mobile",
+      "name": "모바일 / PWA",
+      "phase": "Phase 4",
+      "tasks": [
+        {
+          "id": "mobile-pwa",
+          "feature": "PWA 지원",
+          "path": "public/manifest.json",
+          "relatedPaths": ["public/sw.js"],
+          "status": "pending",
+          "description": "오프라인 학습 가능한 PWA 설정"
+        },
+        {
+          "id": "mobile-responsive",
+          "feature": "모바일 최적화 UI",
+          "path": "app/globals.css",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "반응형 레이아웃, 터치 친화 UI"
+        },
+        {
+          "id": "mobile-background-audio",
+          "feature": "오디오 백그라운드 재생",
+          "path": "lib/utils/media-session.ts",
+          "relatedPaths": [],
+          "status": "pending",
+          "description": "Media Session API를 활용한 백그라운드 재생"
+        }
+      ]
+    }
+  ],
+
+  "stats": {
+    "totalTasks": 55,
+    "mvpTasks": 48,
+    "postMvpTasks": 7,
+    "completedTasks": 0
+  }
+}
