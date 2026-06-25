@@ -22,6 +22,14 @@ export interface EpisodeMeta {
   addedAt: string;
 }
 
+export type RetryStep = 'all' | 'transcript' | 'subtitles';
+
+export interface ImportRequestBody {
+  youtubeUrl: string; // 필수
+  transcriptUrl: string; // 필수
+  retryStep?: RetryStep; // 선택 (Issue 1에서는 409 분기 우회에만 사용)
+}
+
 export interface ImportState {
   videoId: string;
   status:

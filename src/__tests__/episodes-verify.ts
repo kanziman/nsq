@@ -7,7 +7,7 @@ import {
   getEpisodeSegments,
   deleteEpisode,
 } from '../lib/services/episodes';
-import { EpisodeMeta, Segment, ImportState } from '../types';
+import { EpisodeMeta, Segment, ImportState } from '../lib/types';
 
 const TEST_ID = 'test-video-123';
 const BASE_DIR = path.join(process.cwd(), '.shadowing', 'episodes', TEST_ID);
