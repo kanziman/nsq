@@ -11,7 +11,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "tsx src/__tests__/episodes-verify.ts",
+    "test": "vitest run",
+    "test:episodes": "tsx src/__tests__/episodes-verify.ts",
     "prepare": "husky"
   },
   "keywords": [],
@@ -27,6 +28,7 @@
     "@types/node": "^26.0.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.9",
     "autoprefixer": "^10.5.0",
     "eslint": "^10.5.0",
     "husky": "^9.1.7",
@@ -35,7 +37,9 @@
     "prettier": "^3.8.4",
     "tailwindcss": "^4.3.1",
     "tsx": "^4.22.4",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.1.9"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
