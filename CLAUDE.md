@@ -78,3 +78,22 @@ nsq/
 커밋 시 반드시 아래 접두사를 사용하고 영어 소문자로 작성합니다:
 
 - `feat`: 새로운 기능 추가 | `fix`: 버그 수정 | `refactor`: 리팩토링 | `docs`: 문서 수정 | `style`: 포맷팅 등 | `chore`: 설정 변경 등
+
+## TDD 이슈 사이클
+
+새 이슈 작업 시 다음 순서를 따른다:
+
+0. 자식 브랜치 생성 — 부모 feature 브랜치에서 분기 `git checkout -b <feature>-issue-N` (부모명을 `/`로 prefix하면 ref 충돌나니 피한다)
+1. /test-scenarios N — 시그니처 + 시나리오 (skill)
+2. /tdd-red N — 실패 테스트 작성 (skill)
+3. /tdd-green N — 최소 구현, 테스트 전체 통과 (skill)
+4. @ac-verifier N — AC 충족 독립 검증, 테스트 통과 ≠ AC 충족 (agent)
+5. /tdd-refactor N — 구조 개선, 깨지면 즉시 롤백 (skill)
+6. /security-review N — 타입·보안 점검 (skill)
+7. commit (관심사별 분리 커밋, conventional)
+8. PR: 자식 → 부모 feature 브랜치 (`--base <feature>`) → squash merge → 자식 브랜치 삭제 → 이슈 클로즈
+
+각 단계는 인간 승인 게이트가 있다. **자동으로 다음 단계로 넘어가지 말 것.**
+이슈 의존성이 있으면 선행 이슈가 머지된 feature 브랜치에서 분기.
+
+> **이슈 자동 클로즈**: GitHub는 클로징 키워드(`Closes #N`)가 **기본 브랜치(main)** 로 머지될 때만 자동으로 닫는다. 자식→부모(feature) PR로는 닫히지 않으니, feature→main 통합 PR 본문에 `Closes #N`을 모아 넣어 main 머지 시 일괄 클로즈한다. (즉시 닫으려면 `gh issue close N`)
