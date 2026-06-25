@@ -108,6 +108,29 @@ export async function getEpisodeSegments(id: string): Promise<Segment[]> {
 }
 
 /**
+ * videoId의 현재 import-state.json을 읽는다. 없으면 null.
+ *
+ * TDD Red 단계 스텁: 구현은 후속 Green 단계에서 작성한다.
+ */
+export async function getImportState(
+  videoId: string,
+): Promise<ImportState | null> {
+  throw new Error('Not implemented');
+}
+
+/**
+ * 초기/갱신 import-state.json을 기록한다 (디렉토리 없으면 생성).
+ *
+ * TDD Red 단계 스텁: 구현은 후속 Green 단계에서 작성한다.
+ */
+export async function saveImportState(
+  videoId: string,
+  state: ImportState,
+): Promise<void> {
+  throw new Error('Not implemented');
+}
+
+/**
  * 에피소드 저장소 디렉토리를 완전히 삭제합니다.
  */
 export async function deleteEpisode(id: string): Promise<void> {
