@@ -33,6 +33,11 @@ async function readJson<T>(filePath: string): Promise<T | null> {
   }
 }
 
+// videoId의 import-state.json 경로를 반환하는 헬퍼
+function importStatePath(videoId: string): string {
+  return path.join(BASE_DIR, videoId, 'import-state.json');
+}
+
 /**
  * 로컬에 임포트된 모든 에피소드 목록을 반환합니다.
  */
@@ -68,7 +73,7 @@ export async function getEpisodes(): Promise<Episode[]> {
 export async function getEpisodeById(id: string): Promise<Episode | null> {
   const episodeDir = path.join(BASE_DIR, id);
   const metaPath = path.join(episodeDir, 'meta.json');
-  const statePath = path.join(episodeDir, 'import-state.json');
+  const statePath = importStatePath(id);
 
   if (!(await exists(episodeDir))) {
     return null;
@@ -108,26 +113,27 @@ export async function getEpisodeSegments(id: string): Promise<Segment[]> {
 }
 
 /**
- * videoId의 현재 import-state.json을 읽는다. 없으면 null.
- *
- * TDD Red 단계 스텁: 구현은 후속 Green 단계에서 작성한다.
+ * videoId의 현재 import-state.json을 읽는다. 없거나 손상 시 null. (readJson 재사용)
  */
 export async function getImportState(
   videoId: string,
 ): Promise<ImportState | null> {
-  throw new Error('Not implemented');
+  return readJson<ImportState>(importStatePath(videoId));
 }
 
 /**
- * 초기/갱신 import-state.json을 기록한다 (디렉토리 없으면 생성).
- *
- * TDD Red 단계 스텁: 구현은 후속 Green 단계에서 작성한다.
+ * import-state.json을 기록한다 (디렉토리 없으면 생성).
  */
 export async function saveImportState(
   videoId: string,
   state: ImportState,
 ): Promise<void> {
-  throw new Error('Not implemented');
+  await ensureDir(path.join(BASE_DIR, videoId));
+  await fs.writeFile(
+    importStatePath(videoId),
+    JSON.stringify(state, null, 2),
+    'utf-8',
+  );
 }
 
 /**
