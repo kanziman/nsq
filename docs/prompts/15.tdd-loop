@@ -1,0 +1,54 @@
+/skill-creator로 아래 조건의 .claude/skills/tdd-loop/SKILL.md 만들어줘:
+
+  목적:
+    이슈 1개를 받아 TDD 풀 사이클의 7단계를 순서대로 진행한다.
+    각 단계는 기존 스킬/에이전트를 그대로 호출하며,
+    그 안의 승인 게이트는 유지된다. 컨테이너는 순서만 보장한다.
+
+  입력:
+    - $ARGUMENTS: GitHub 이슈 번호
+
+  실행 순서:
+    0. 사전 점검
+       - gh issue view $ARGUMENTS — 이슈 본문 + AC 확인
+       - git status — uncommitted changes 있으면 중단 (안전 차원)
+       - 현재 브랜치가 feature/<spec>인지 확인
+       - feat/<issue-slug> 브랜치가 이미 있으면:
+           - 동일 이슈 재실행으로 간주 → 사용자에게 확인 (덮어쓸지/취소할지)
+       - 없으면 feature/<spec>에서 분기 + 체크아웃
+       - 위 중 하나라도 실패 시 사용자에게 알리고 중단
+
+    1. /test-scenarios $ARGUMENTS
+       - 시그니처 승인 게이트
+       - 시나리오 승인 게이트
+
+    2. /tdd-red
+       - 시나리오 → 실패 테스트 변환
+       - collect 실패 시 stub 생성 안내
+
+    3. /tdd-green
+       - 최소 구현, 회귀 감시
+       - 5회 피드백 루프
+
+    4. @ac-verifier
+       - AC 충족 독립 검증
+       - 갭이 있으면 사용자에게 보고
+
+    5. /tdd-refactor
+       - 리팩토링, 변경마다 npm test
+
+    6. /security-review
+       - tsc / npm audit / 보안 패턴 점검
+       - 등급별 처리 안내
+
+    7. /create-pr
+       - 커밋 메시지 commitlint 통과 확인
+       - PR base = feature/<spec>
+       - PR body에 "Closes #$ARGUMENTS" 포함
+       - 이슈에 PR 링크 코멘트
+
+  특징:
+    - 컨테이너는 각 단계 호출 사이에 진행 메시지만 출력
+    - 각 스킬 내부의 사용자 승인은 그대로 작동 (사용자가 응답해야 다음 진행)
+    - 컨테이너 자체는 "다음 단계 진행할까요?" 같은 추가 게이트를 만들지 않음
+    - 단계 실패 시 어디서 멈췄는지 명확히 출력하고 중단
