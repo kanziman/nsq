@@ -51,10 +51,10 @@
 
 **Acceptance Criteria**
 
-- [ ] Given 모든 step 더블이 성공, When `runImportPipeline` 실행, Then `import-state.json`이 download→subtitle→transcript→alignment 순으로 `currentStep`이 전이되고 최종 `status: completed`, `segments.json`이 생성된다.
-- [ ] Given alignment 더블이 `matchRate 0.72` 반환, When 실행, Then `status: failed`, `currentStep: alignment`, `error`에 `0.72 < 0.85`가 포함되고 다운로드된 아티펙트는 삭제되지 않는다.
-- [ ] Given 임의 step이 예외를 throw, When 실행, Then `status: failed`와 해당 `currentStep`·`error`가 기록되고 기존 아티펙트는 유지된다.
-- [ ] Given 라우트가 `202`를 반환, When 직후 `import-state.json`을 폴링, Then 응답 지연 없이 진행 상태가 갱신되어 간다(fire-and-forget 동작 확인).
+- [x] Given 모든 step 더블이 성공, When `runImportPipeline` 실행, Then `import-state.json`이 download→subtitle→transcript→alignment 순으로 `currentStep`이 전이되고 최종 `status: completed`, `segments.json`이 생성된다.
+- [x] Given alignment 더블이 `matchRate 0.72` 반환, When 실행, Then `status: failed`, `currentStep: alignment`, `error`에 `0.72 < 0.85`가 포함되고 다운로드된 아티펙트는 삭제되지 않는다.
+- [x] Given 임의 step이 예외를 throw, When 실행, Then `status: failed`와 해당 `currentStep`·`error`가 기록되고 기존 아티펙트는 유지된다.
+- [x] Given 라우트가 `202`를 반환, When 직후 `import-state.json`을 폴링, Then 응답 지연 없이 진행 상태가 갱신되어 간다(fire-and-forget 동작 확인).
 
 ---
 
