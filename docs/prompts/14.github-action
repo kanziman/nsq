@@ -1,0 +1,8 @@
+GitHub Actions CI 워크플로우를 작성해줘.
+
+조건:
+- 트리거: main 브랜치 대상 PR
+- 환경: ubuntu-latest, Node.js (프로젝트 버전에 맞게)
+- 단계: npm ci → lint → tsc --noEmit → npm audit --audit-level=moderate → npm test
+
+파일 위치: .github/workflows/ci.yml

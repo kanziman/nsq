@@ -93,3 +93,9 @@ out/
 
 # Local shadowing data directory (stores audio/subtitles/segments)
 .shadowing/
+
+# Playwright
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/

@@ -1,5 +1,6 @@
-import { add } from './math';
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
-export function formatString(s: string): string {
-  return s.toUpperCase() + ' - ' + add(1, 2);
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
 }

@@ -1,0 +1,8 @@
+다음 조건에 따라 .claude/skills/mermaid-diagram/SKILL.md 파일을 생성해라. 이 스킬은 아키텍처를 브라우저로 즉시 시각화하는 것을 목적으로 한다.
+
+1. 스킬 정의: name은 mermaid-diagram, description은 "프로젝트 구조를 분석하여 Mermaid 다이어그램 HTML을 생성하고 브라우저를 실행하여 시각화합니다."
+2. 핵심 로직:
+   - 단계 1: src/ 디렉토리를 스캔하여 컴포넌트 간 의존성 분석, Mermaid graph TD 구문 생성
+   - 단계 2: docs/architecture/index.html에 파일 생성. Mermaid.js CDN 포함, 어두운 테마(#1a1a1a 배경) 적용
+   - 단계 3: OS별 브라우저 즉시 실행 (macOS: open, Linux: xdg-open)
+3. 완료 후 "아키텍처 다이어그램이 브라우저에서 열렸습니다."라고 보고

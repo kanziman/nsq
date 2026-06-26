@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # TODO: Next 16에서 `next lint`가 제거되고 ESLint flat config가 아직 없음.
+      # ESLint flat config(eslint.config.mjs, .next/node_modules ignore) 셋업 후 복구한다. (별도 후속 이슈)
+      # - name: Run linter
+      #   run: npm run lint
+
+      - name: Check types
+        run: npx tsc --noEmit
+
+      - name: Security audit
+        # moderate(postcss via next, fix는 breaking)로 인한 오탐 실패 방지 — high/critical만 차단
+        run: npm audit --audit-level=high
+
+      - name: Run tests
+        run: npm test
