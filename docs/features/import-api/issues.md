@@ -74,10 +74,10 @@
 
 **Acceptance Criteria**
 
-- [ ] Given `failed`이고 `audio.mp3`·`subtitle.en.vtt`가 존재, When `retryStep: "transcript"`로 `POST /api/import`, Then download/subtitle step은 호출되지 않고 transcript→alignment만 재실행되어 상태가 갱신된다.
-- [ ] Given `completed`인 에피소드, When `retryStep: "subtitles"`로 `POST /api/import`, Then `409` 없이 수락되고 `audio.mp3`는 재다운로드되지 않으며 subtitle→alignment가 재실행된다.
-- [ ] Given `retryStep: "all"`, When `POST /api/import`, Then 모든 단계가 처음부터 재실행된다(audio 재다운로드 포함).
-- [ ] Given 재사용 대상 아티펙트가 누락, When 해당 retryStep 실행, Then 명확한 `error`와 함께 `failed` 처리된다.
+- [x] Given `failed`이고 `audio.mp3`·`subtitle.en.vtt`가 존재, When `retryStep: "transcript"`로 `POST /api/import`, Then download/subtitle step은 호출되지 않고 transcript→alignment만 재실행되어 상태가 갱신된다.
+- [x] Given `completed`인 에피소드, When `retryStep: "subtitles"`로 `POST /api/import`, Then `409` 없이 수락되고 `audio.mp3`는 재다운로드되지 않으며 subtitle→alignment가 재실행된다.
+- [x] Given `retryStep: "all"`, When `POST /api/import`, Then 모든 단계가 처음부터 재실행된다(audio 재다운로드 포함).
+- [x] Given 재사용 대상 아티펙트가 누락, When 해당 retryStep 실행, Then 명확한 `error`와 함께 `failed` 처리된다.
 
 ---
 
