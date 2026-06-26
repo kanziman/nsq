@@ -280,3 +280,225 @@ describe('runImportPipeline', () => {
     ).toBe(true);
   });
 });
+
+describe('runImportPipeline — retryStep (Issue 3)', () => {
+  // ------------------------------ 정상 ------------------------------
+  it('should run all steps (download→subtitle→transcript→alignment) when retryStep is undefined (fresh import)', async () => {
+    const steps = makeSteps();
+
+    await runImportPipeline(TEST_VIDEO_ID, URLS, steps);
+
+    expect(steps.downloadAudio).toHaveBeenCalled();
+    expect(steps.fetchSubtitle).toHaveBeenCalled();
+    expect(steps.fetchTranscript).toHaveBeenCalled();
+    expect(steps.alignTranscript).toHaveBeenCalled();
+  });
+
+  it("should run all steps including downloadAudio when retryStep is 'all'", async () => {
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'all' },
+      steps,
+    );
+
+    expect(steps.downloadAudio).toHaveBeenCalled();
+    expect(steps.fetchSubtitle).toHaveBeenCalled();
+    expect(steps.fetchTranscript).toHaveBeenCalled();
+    expect(steps.alignTranscript).toHaveBeenCalled();
+  });
+
+  it("should skip downloadAudio/fetchSubtitle and run only fetchTranscript→alignTranscript when retryStep is 'transcript' and audio.mp3 + subtitle.en.vtt exist", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3');
+    await writeArtifact(TEST_VIDEO_ID, 'subtitle.en.vtt');
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    expect(steps.downloadAudio).not.toHaveBeenCalled();
+    expect(steps.fetchSubtitle).not.toHaveBeenCalled();
+    expect(steps.fetchTranscript).toHaveBeenCalled();
+    expect(steps.alignTranscript).toHaveBeenCalled();
+  });
+
+  it("should skip downloadAudio/fetchTranscript and run only fetchSubtitle→alignTranscript when retryStep is 'subtitles' and audio.mp3 + transcript.txt exist", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3');
+    await writeArtifact(TEST_VIDEO_ID, 'transcript.txt');
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'subtitles' },
+      steps,
+    );
+
+    expect(steps.downloadAudio).not.toHaveBeenCalled();
+    expect(steps.fetchTranscript).not.toHaveBeenCalled();
+    expect(steps.fetchSubtitle).toHaveBeenCalled();
+    expect(steps.alignTranscript).toHaveBeenCalled();
+  });
+
+  // ------------------------------ 경계 ------------------------------
+  it("should reach status 'completed' on a 'transcript' retry when transcript and alignment succeed", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3');
+    await writeArtifact(TEST_VIDEO_ID, 'subtitle.en.vtt');
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      makeSteps(),
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('completed');
+  });
+
+  it("should not call downloadAudio (no audio re-download) on a 'subtitles' retry of an existing episode", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3');
+    await writeArtifact(TEST_VIDEO_ID, 'transcript.txt');
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'subtitles' },
+      steps,
+    );
+
+    expect(steps.downloadAudio).not.toHaveBeenCalled();
+  });
+
+  it('should still mark failed when matchRate < 0.85 on a retry path (matchRate check not bypassed)', async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3');
+    await writeArtifact(TEST_VIDEO_ID, 'subtitle.en.vtt');
+    const steps = makeSteps({
+      alignTranscript: vi.fn().mockResolvedValue({ matchRate: 0.5 }),
+    });
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+  });
+
+  // ------------------------------ 예외 ------------------------------
+  it("should mark failed with a clear error naming the missing artifact when retryStep is 'transcript' but audio.mp3 is missing", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'subtitle.en.vtt'); // audio.mp3 누락
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.error).toContain('audio.mp3');
+  });
+
+  it("should mark failed when retryStep is 'transcript' but subtitle.en.vtt is missing", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3'); // subtitle.en.vtt 누락
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.error).toContain('subtitle.en.vtt');
+  });
+
+  it("should mark failed when retryStep is 'subtitles' but transcript.txt is missing", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'audio.mp3'); // transcript.txt 누락
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'subtitles' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.error).toContain('transcript.txt');
+  });
+
+  it('should not call any step (transcript/alignment) when a required reused artifact is missing', async () => {
+    // retryStep 'transcript'인데 audio.mp3·subtitle.en.vtt 모두 없음
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    expect(steps.fetchTranscript).not.toHaveBeenCalled();
+    expect(steps.alignTranscript).not.toHaveBeenCalled();
+  });
+
+  // --- ac-verifier 갭 보강 (Gap 1·3·4) ---
+  it("should mark failed with error naming 'audio.mp3' when retryStep is 'subtitles' but audio.mp3 is missing", async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'transcript.txt'); // audio.mp3 누락
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'subtitles' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.error).toContain('audio.mp3');
+  });
+
+  it("should set currentStep to 'transcript' (not 'download') when precheck fails on a 'transcript' retry", async () => {
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      makeSteps(),
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.currentStep).toBe('transcript');
+  });
+
+  it("should set currentStep to 'subtitle' when precheck fails on a 'subtitles' retry", async () => {
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'subtitles' },
+      makeSteps(),
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.currentStep).toBe('subtitle');
+  });
+
+  it('should include both retryStep name and missing artifact name in the precheck error message', async () => {
+    await writeArtifact(TEST_VIDEO_ID, 'subtitle.en.vtt'); // audio.mp3 누락
+    const steps = makeSteps();
+
+    await runImportPipeline(
+      TEST_VIDEO_ID,
+      { ...URLS, retryStep: 'transcript' },
+      steps,
+    );
+
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.error).toContain("Cannot retry 'transcript'");
+    expect(state?.error).toContain("missing reused artifact 'audio.mp3'");
+  });
+});
