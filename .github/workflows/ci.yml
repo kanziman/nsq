@@ -22,8 +22,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linter
-        run: npm run lint
+      # TODO: Next 16에서 `next lint`가 제거되고 ESLint flat config가 아직 없음.
+      # ESLint flat config(eslint.config.mjs, .next/node_modules ignore) 셋업 후 복구한다. (별도 후속 이슈)
+      # - name: Run linter
+      #   run: npm run lint
 
       - name: Check types
         run: npx tsc --noEmit
