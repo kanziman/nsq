@@ -83,7 +83,7 @@ nsq/
 
 새 이슈 작업 시 다음 순서를 따른다:
 
-0. 자식 브랜치 생성 — 부모 feature 브랜치에서 분기 `git checkout -b <feature>-issue-N` (부모명을 `/`로 prefix하면 ref 충돌나니 피한다)
+0. 자식 브랜치 생성 — 분기 전 부모 feature 브랜치를 먼저 push(`git push origin <feature>`)해 로컬·원격을 맞춘 뒤 `git checkout -b <feature>-issue-N` (부모명을 `/`로 prefix하면 ref 충돌나니 피한다)
 1. /test-scenarios N — 시그니처 + 시나리오 (skill)
 2. /tdd-red N — 실패 테스트 작성 (skill)
 3. /tdd-green N — 최소 구현, 테스트 전체 통과 (skill)
@@ -97,3 +97,5 @@ nsq/
 이슈 의존성이 있으면 선행 이슈가 머지된 feature 브랜치에서 분기.
 
 > **이슈 자동 클로즈**: GitHub는 클로징 키워드(`Closes #N`)가 **기본 브랜치(main)** 로 머지될 때만 자동으로 닫는다. 자식→부모(feature) PR로는 닫히지 않으니, feature→main 통합 PR 본문에 `Closes #N`을 모아 넣어 main 머지 시 일괄 클로즈한다. (즉시 닫으려면 `gh issue close N`)
+>
+> **분기 전 부모 push 필수**: 부모 feature 브랜치에 로컬 커밋(예: CLAUDE.md 갱신)을 쌓았다면 자식 분기 전에 반드시 push한다. 안 하면 자식 PR squash 머지 시 부모의 로컬·원격이 갈라져(`not possible to fast-forward`) `gh pr merge --delete-branch`가 로컬 정렬에 실패한다. 이 경우 작업 손실은 없으며 `git reset --hard origin/<feature>`로 원격(머지 결과)에 맞추면 복구된다.
