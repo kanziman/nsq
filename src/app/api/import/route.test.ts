@@ -208,4 +208,12 @@ describe('POST /api/import', () => {
       error: expect.any(String),
     });
   });
+
+  it('should forward retryStep to runImportPipeline when retryStep is provided', async () => {
+    await POST(makeRequest({ ...VALID_BODY, retryStep: 'transcript' }));
+    expect(mockRunPipeline).toHaveBeenCalledWith(
+      'vid123',
+      expect.objectContaining({ retryStep: 'transcript' }),
+    );
+  });
 });
