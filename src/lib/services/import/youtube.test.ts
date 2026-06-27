@@ -1,7 +1,12 @@
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import fs from 'fs/promises';
 import path from 'path';
-import { downloadAudio, type Runner, type RunnerResult } from './youtube';
+import {
+  downloadAudio,
+  fetchSubtitle,
+  type Runner,
+  type RunnerResult,
+} from './youtube';
 
 const BASE = path.join(process.cwd(), '.shadowing', 'episodes');
 const VID = 'test-issue9-vid';
@@ -9,6 +14,10 @@ const URL = 'https://www.youtube.com/watch?v=test9';
 
 function audioPath(id: string): string {
   return path.join(BASE, id, 'audio.mp3');
+}
+
+function subPath(id: string): string {
+  return path.join(BASE, id, 'subtitle.en.vtt');
 }
 
 async function fileExists(p: string): Promise<boolean> {
@@ -131,5 +140,110 @@ describe('downloadAudio', () => {
     const runner: Runner = vi.fn(async () => ({ code: 0, stderr: '' }));
     await expect(downloadAudio(VID, URL, runner)).rejects.toThrow();
     expect(runner).toHaveBeenCalledTimes(1);
+  });
+});
+
+// 수동 자막만 존재: --write-subs(자동 아님) 단계에서 subtitle.en.vtt 생성.
+function manualOnlyRunner(content = 'MANUAL_VTT'): Runner {
+  return vi.fn(async (_cmd: string, args: string[]): Promise<RunnerResult> => {
+    if (args.includes('--write-subs') && !args.includes('--write-auto-subs')) {
+      await fs.mkdir(path.join(BASE, VID), { recursive: true });
+      await fs.writeFile(subPath(VID), content);
+      return { code: 0, stderr: '' };
+    }
+    return { code: 1, stderr: 'no subtitles produced' };
+  });
+}
+
+// 자동 자막만 존재: --write-auto-subs 단계에서만 생성, 수동 단계는 빈 결과.
+function autoOnlyRunner(content = 'AUTO_VTT'): Runner {
+  return vi.fn(async (_cmd: string, args: string[]): Promise<RunnerResult> => {
+    if (args.includes('--write-auto-subs')) {
+      await fs.mkdir(path.join(BASE, VID), { recursive: true });
+      await fs.writeFile(subPath(VID), content);
+      return { code: 0, stderr: '' };
+    }
+    return { code: 1, stderr: 'no manual subtitles' };
+  });
+}
+
+// 수동·자동 모두 없음: 항상 비-0, 파일 미생성.
+function noSubsRunner(stderr = 'ERROR: no subtitles available'): Runner {
+  return vi.fn(async () => ({ code: 1, stderr }));
+}
+
+describe('fetchSubtitle', () => {
+  // [정상]
+  it('should produce subtitle.en.vtt from manual step and not call auto fallback when manual subs exist', async () => {
+    const runner = manualOnlyRunner();
+    await fetchSubtitle(VID, URL, runner);
+    expect(await fileExists(subPath(VID))).toBe(true);
+    expect(runner).toHaveBeenCalledTimes(1);
+    const calls = (
+      runner as unknown as { mock: { calls: [string, string[]][] } }
+    ).mock.calls;
+    expect(calls.every(([, args]) => !args.includes('--write-auto-subs'))).toBe(
+      true,
+    );
+  });
+
+  it('should pass --write-subs and --sub-langs en/--sub-format vtt on the manual step', async () => {
+    const runner = manualOnlyRunner();
+    await fetchSubtitle(VID, URL, runner);
+    const [, args] = callArgs(runner);
+    expect(args).toContain('--write-subs');
+    expect(args).not.toContain('--write-auto-subs');
+    const langIdx = args.indexOf('--sub-langs');
+    expect(langIdx).toBeGreaterThanOrEqual(0);
+    expect(args[langIdx + 1]).toBe('en');
+    const fmtIdx = args.indexOf('--sub-format');
+    expect(fmtIdx).toBeGreaterThanOrEqual(0);
+    expect(args[fmtIdx + 1]).toBe('vtt');
+    const convIdx = args.indexOf('--convert-subs');
+    expect(convIdx).toBeGreaterThanOrEqual(0);
+    expect(args[convIdx + 1]).toBe('vtt');
+  });
+
+  // [경계]
+  it('should run auto fallback (--write-auto-subs) and produce subtitle.en.vtt when manual subs are absent', async () => {
+    const runner = autoOnlyRunner();
+    await fetchSubtitle(VID, URL, runner);
+    expect(await fileExists(subPath(VID))).toBe(true);
+    expect(runner).toHaveBeenCalledTimes(2);
+    const secondArgs = (
+      runner as unknown as { mock: { calls: [string, string[]][] } }
+    ).mock.calls[1][1];
+    expect(secondArgs).toContain('--write-auto-subs');
+    // 폴백 단계도 동일한 공통 인자(en/vtt)를 전달해야 한다.
+    const langIdx = secondArgs.indexOf('--sub-langs');
+    expect(secondArgs[langIdx + 1]).toBe('en');
+    const fmtIdx = secondArgs.indexOf('--sub-format');
+    expect(secondArgs[fmtIdx + 1]).toBe('vtt');
+  });
+
+  it('should re-fetch and overwrite (no skip) when subtitle.en.vtt already exists', async () => {
+    await fs.mkdir(path.join(BASE, VID), { recursive: true });
+    await fs.writeFile(subPath(VID), 'OLD_VTT');
+    const runner = manualOnlyRunner('NEW_VTT');
+    await fetchSubtitle(VID, URL, runner);
+    expect(await fs.readFile(subPath(VID), 'utf-8')).toBe('NEW_VTT');
+    // 스킵 없이 새로 fetch했음을 보장(runner 실제 호출).
+    expect(runner).toHaveBeenCalledTimes(1);
+  });
+
+  // [예외]
+  it('should throw Error and leave no subtitle.en.vtt when neither manual nor auto subs exist', async () => {
+    const runner = noSubsRunner();
+    await expect(fetchSubtitle(VID, URL, runner)).rejects.toThrow();
+    expect(await fileExists(subPath(VID))).toBe(false);
+    // 수동·자동 두 단계 모두 시도했음을 보장(폴백까지 호출).
+    expect(runner).toHaveBeenCalledTimes(2);
+  });
+
+  it('should include stderr tail in the error when both steps fail', async () => {
+    const runner = noSubsRunner('ERROR: distinctive-sub-fail-zzz');
+    await expect(fetchSubtitle(VID, URL, runner)).rejects.toThrow(
+      /distinctive-sub-fail-zzz/,
+    );
   });
 });
