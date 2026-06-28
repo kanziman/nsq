@@ -10,8 +10,17 @@ vi.mock('next/navigation', () => ({
   useSearchParams: () => searchParams,
 }));
 vi.mock('@/components/import/ImportMonitor', () => ({
-  ImportMonitor: ({ videoId }: { videoId: string }) => (
-    <div>monitor:{videoId}</div>
+  ImportMonitor: ({
+    videoId,
+    onNewImport,
+  }: {
+    videoId: string;
+    onNewImport?: () => void;
+  }) => (
+    <div>
+      monitor:{videoId}
+      <button onClick={onNewImport}>새 임포트</button>
+    </div>
   ),
 }));
 
@@ -39,6 +48,13 @@ describe('ImportPage', () => {
     searchParams = new URLSearchParams('videoId=abc123');
     render(<ImportPage />);
     expect(screen.getByText('monitor:abc123')).toBeInTheDocument();
+  });
+
+  it("should router.replace('/import') (drop videoId) when monitor onNewImport fires", async () => {
+    searchParams = new URLSearchParams('videoId=abc123');
+    render(<ImportPage />);
+    await userEvent.click(screen.getByRole('button', { name: '새 임포트' }));
+    expect(replace).toHaveBeenCalledWith('/import');
   });
 
   it("should router.replace('/import?videoId=abc123') on 202", async () => {

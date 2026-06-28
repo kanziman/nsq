@@ -10,7 +10,12 @@ function ImportContent() {
   const videoId = useSearchParams().get('videoId');
 
   if (videoId) {
-    return <ImportMonitor videoId={videoId} />;
+    return (
+      <ImportMonitor
+        videoId={videoId}
+        onNewImport={() => router.replace('/import')}
+      />
+    );
   }
 
   return (

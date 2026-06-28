@@ -248,7 +248,12 @@ describe('ImportMonitor retry', () => {
       updatedAt: '',
     });
     render(<ImportMonitor videoId="v" />);
-    expect(screen.queryByRole('button')).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: '전체 재시도' }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: '대본·정합 재시도' }),
+    ).not.toBeInTheDocument();
   });
 
   it('should not render retry button when failed but currentStep is unmapped', () => {
@@ -271,5 +276,62 @@ describe('ImportMonitor retry', () => {
 
     await waitFor(() => expect(fetchMock).toHaveBeenCalled());
     expect(restart).not.toHaveBeenCalled();
+  });
+});
+
+describe('ImportMonitor completed actions', () => {
+  function completedState(): ImportState {
+    return {
+      videoId: 'v',
+      status: 'completed',
+      progress: 100,
+      currentStep: 'completed',
+      matchRate: 0.9,
+      updatedAt: '',
+    };
+  }
+
+  it("should render '새 임포트' and '에피소드 보기' buttons when status is 'completed'", () => {
+    setState(completedState());
+    render(<ImportMonitor videoId="v" />);
+    expect(
+      screen.getByRole('button', { name: '새 임포트' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: '에피소드 보기' }),
+    ).toBeInTheDocument();
+  });
+
+  it("should call onNewImport when '새 임포트' is clicked", async () => {
+    const onNewImport = vi.fn();
+    setState(completedState());
+    render(<ImportMonitor videoId="v" onNewImport={onNewImport} />);
+    await userEvent.click(screen.getByRole('button', { name: '새 임포트' }));
+    expect(onNewImport).toHaveBeenCalledTimes(1);
+  });
+
+  it("should render '에피소드 보기' as a disabled placeholder", () => {
+    setState(completedState());
+    render(<ImportMonitor videoId="v" />);
+    expect(
+      screen.getByRole('button', { name: '에피소드 보기' }),
+    ).toBeDisabled();
+  });
+
+  it("should not render '새 임포트'/'에피소드 보기' when status is not 'completed'", () => {
+    setState({
+      videoId: 'v',
+      status: 'aligning',
+      progress: 90,
+      currentStep: 'alignment',
+      updatedAt: '',
+    });
+    render(<ImportMonitor videoId="v" />);
+    expect(
+      screen.queryByRole('button', { name: '새 임포트' }),
+    ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', { name: '에피소드 보기' }),
+    ).not.toBeInTheDocument();
   });
 });
