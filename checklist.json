@@ -1,7 +1,7 @@
 {
   "project": "nsq-shadowing",
   "version": "0.1.0",
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-06-28",
 
   "phases": [
     {
@@ -158,50 +158,56 @@
           "id": "import-api",
           "feature": "임포트 API 엔드포인트",
           "path": "app/api/import/route.ts",
-          "relatedPaths": [],
-          "status": "pending",
-          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API. 재시도 파라미터(all, transcript, subtitles) 지원 및 matchRate 검증"
+          "relatedPaths": ["lib/services/import-pipeline.ts"],
+          "status": "completed",
+          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API. 재시도 파라미터(all, transcript, subtitles) 지원 및 matchRate 검증 (Issues #1-3, #7)"
         },
         {
           "id": "import-youtube",
           "feature": "YouTube 다운로드 서비스",
-          "path": "src/lib/youtube.ts",
+          "path": "lib/services/import/youtube.ts",
           "relatedPaths": [
             ".shadowing/episodes/{videoId}/audio.mp3",
             ".shadowing/episodes/{videoId}/subtitle.en.vtt"
           ],
-          "status": "pending",
-          "description": "yt-dlp로 오디오(mp3) + 자막(vtt) + 썸네일 다운로드"
+          "status": "completed",
+          "description": "주입형 runner(child_process.spawn) 기반 yt-dlp로 오디오(mp3) 다운로드 + 자막(en.vtt, 수동→자동 폴백) 취득. 썸네일은 계약(PipelineSteps) 범위 외 (Issues #9, #10)"
         },
         {
           "id": "import-transcript",
           "feature": "트랜스크립트 스크래핑 및 파싱",
-          "path": "src/lib/freakonomics.ts",
+          "path": "lib/services/import/transcript.ts",
           "relatedPaths": [
-            "src/lib/transcript.ts",
+            "lib/services/import/transcript/parse.ts",
             ".shadowing/episodes/{videoId}/transcript.txt"
           ],
-          "status": "pending",
-          "description": "freakonomics.com 대본 URL fetch, 파싱하여 비발화 콘텐츠 제거 및 화자(Angela, Steven) 이름 정규화 및 문장 분할"
+          "status": "completed",
+          "description": "주입형 fetcher로 대본 URL fetch → node-html-parser로 파싱(비발화 제거·화자 정규화 DUCKWORTH/DUBNER/BOTH/NARRATOR·문장 분할) → Sentence JSONL 기록 (Issue #11)"
         },
         {
           "id": "import-alignment",
           "feature": "대본 ↔ VTT 토큰 정렬",
-          "path": "src/lib/alignTranscript.ts",
+          "path": "lib/services/import/alignment.ts",
           "relatedPaths": [
-            "src/lib/vtt.ts",
+            "lib/services/import/vtt/parse.ts",
+            "lib/services/import/align/anchor.ts",
+            "lib/services/import/align/lis.ts",
+            "lib/services/import/align/interpolate.ts",
             ".shadowing/episodes/{videoId}/segments.json"
           ],
-          "status": "pending",
-          "description": "patience-diff 방식 희소 단어 앵커링(LIS 최장 증가 부분수열)과 선형 보간을 사용한 대본 문장 ↔ VTT 토큰 정합. matchRate 0.85 미만 시 중단 처리"
+          "status": "completed",
+          "description": "순수 코어(vtt 파싱·희소 단어 앵커링·LIS·선형 보간)로 대본 문장 ↔ VTT 토큰 정합 → segments.json + matchRate(anchored/candidate). 저품질도 기록, 임계값 0.85 판단은 오케스트레이터 (Issues #12, #13)"
         },
         {
           "id": "import-state",
           "feature": "파이프라인 상태 관리",
-          "path": "src/lib/import-state.ts",
-          "relatedPaths": [".shadowing/episodes/{videoId}/import-state.json"],
-          "status": "pending",
-          "description": "download → subtitle → transcript → alignment 단계별 진행 상태 추적"
+          "path": "lib/services/import-pipeline.ts",
+          "relatedPaths": [
+            "lib/services/episodes.ts",
+            ".shadowing/episodes/{videoId}/import-state.json"
+          ],
+          "status": "completed",
+          "description": "오케스트레이터(runImportPipeline)가 download → subtitle → transcript → alignment 단계별 상태 전이(downloading→…→aligning→completed/failed) 기록. 실패 시 아티펙트 유지 (Issues #12-14 통합 검증)"
         },
         {
           "id": "import-form-ui",
@@ -617,6 +623,6 @@
     "totalTasks": 55,
     "mvpTasks": 48,
     "postMvpTasks": 7,
-    "completedTasks": 15
+    "completedTasks": 20
   }
 }
