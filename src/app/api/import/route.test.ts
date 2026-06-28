@@ -216,6 +216,15 @@ describe('POST /api/import', () => {
       expect.objectContaining({ retryStep: 'transcript' }),
     );
   });
+
+  it('should persist youtubeUrl/transcriptUrl into the initial import-state (#24 retry context)', async () => {
+    await POST(makeRequest(VALID_BODY));
+    const [, stateArg] = mockSaveState.mock.calls[0];
+    expect(stateArg).toMatchObject({
+      youtubeUrl: VALID_BODY.youtubeUrl,
+      transcriptUrl: VALID_BODY.transcriptUrl,
+    });
+  });
 });
 
 describe('GET /api/import', () => {
@@ -249,6 +258,19 @@ describe('GET /api/import', () => {
     mockGetState.mockResolvedValue(null);
     const res = await GET(makeGet('missing'));
     expect(res.status).toBe(404);
+  });
+
+  it('should include youtubeUrl/transcriptUrl in the 200 response when state has them (#24 retry context)', async () => {
+    mockGetState.mockResolvedValue({
+      ...stateWith('failed'),
+      currentStep: 'alignment',
+      youtubeUrl: 'https://youtu.be/v',
+      transcriptUrl: 'https://example.com/t',
+    });
+    const res = await GET(makeGet('vid123'));
+    const body = await res.json();
+    expect(body.youtubeUrl).toBe('https://youtu.be/v');
+    expect(body.transcriptUrl).toBe('https://example.com/t');
   });
 
   it('should include matchRate in the 200 response when state has matchRate', async () => {

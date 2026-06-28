@@ -96,6 +96,8 @@ export async function POST(request: Request): Promise<Response> {
       status: 'downloading',
       progress: 0,
       currentStep: 'download',
+      youtubeUrl,
+      transcriptUrl,
       updatedAt: new Date().toISOString(),
     };
     await saveImportState(videoId, state);
