@@ -502,3 +502,25 @@ describe('runImportPipeline — retryStep (Issue 3)', () => {
     expect(state?.error).toContain("missing reused artifact 'audio.mp3'");
   });
 });
+
+describe('matchRate persistence (#23)', () => {
+  it('should persist matchRate in state on completed', async () => {
+    const steps = makeSteps({
+      alignTranscript: vi.fn().mockResolvedValue({ matchRate: 0.93 }),
+    });
+    await runImportPipeline(TEST_VIDEO_ID, URLS, steps);
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('completed');
+    expect(state?.matchRate).toBe(0.93);
+  });
+
+  it('should persist matchRate in state on low-matchRate failed', async () => {
+    const steps = makeSteps({
+      alignTranscript: vi.fn().mockResolvedValue({ matchRate: 0.5 }),
+    });
+    await runImportPipeline(TEST_VIDEO_ID, URLS, steps);
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.matchRate).toBe(0.5);
+  });
+});

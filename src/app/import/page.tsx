@@ -1,11 +1,24 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { ImportForm } from '@/components/import/ImportForm';
+import { ImportMonitor } from '@/components/import/ImportMonitor';
+
+function ImportContent() {
+  const router = useRouter();
+  const videoId = useSearchParams().get('videoId');
+
+  if (videoId) {
+    return <ImportMonitor videoId={videoId} />;
+  }
+
+  return (
+    <ImportForm onAccepted={(id) => router.replace(`/import?videoId=${id}`)} />
+  );
+}
 
 export default function ImportPage() {
-  const router = useRouter();
-
   return (
     <main className="min-h-screen p-8 md:p-24 max-w-2xl mx-auto space-y-8">
       <header className="space-y-2 border-b border-hairline pb-6">
@@ -21,9 +34,9 @@ export default function ImportPage() {
         </p>
       </header>
 
-      <ImportForm
-        onAccepted={(videoId) => router.replace(`/import?videoId=${videoId}`)}
-      />
+      <Suspense fallback={<p className="text-sm text-muted">불러오는 중…</p>}>
+        <ImportContent />
+      </Suspense>
     </main>
   );
 }
