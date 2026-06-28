@@ -75,6 +75,7 @@ async function writeState(
   currentStep: string,
   progress: number,
   error?: string,
+  matchRate?: number,
 ): Promise<void> {
   const state: ImportState = {
     videoId,
@@ -84,6 +85,7 @@ async function writeState(
     updatedAt: new Date().toISOString(),
   };
   if (error !== undefined) state.error = error;
+  if (matchRate !== undefined) state.matchRate = matchRate;
   await saveImportState(videoId, state);
 }
 
@@ -157,11 +159,19 @@ export async function runImportPipeline(
         currentStep,
         progress,
         `matchRate ${matchRate} < ${MATCH_RATE_THRESHOLD}`,
+        matchRate,
       );
       return;
     }
 
-    await writeState(videoId, 'completed', 'completed', 100);
+    await writeState(
+      videoId,
+      'completed',
+      'completed',
+      100,
+      undefined,
+      matchRate,
+    );
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     await writeState(videoId, 'failed', currentStep, progress, message);

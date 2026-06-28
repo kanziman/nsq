@@ -44,6 +44,7 @@ export interface ImportState {
   progress: number; // 0 ~ 100
   currentStep: string;
   error?: string;
+  matchRate?: number; // alignment 산출 품질(0~1). completed·저matchRate failed에만 존재.
   updatedAt: string;
 }
 
