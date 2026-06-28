@@ -524,3 +524,23 @@ describe('matchRate persistence (#23)', () => {
     expect(state?.matchRate).toBe(0.5);
   });
 });
+
+describe('retry-context URL persistence (#24)', () => {
+  it('should persist youtubeUrl/transcriptUrl in the failed state so retry has context', async () => {
+    const steps = makeSteps({
+      downloadAudio: vi.fn().mockRejectedValue(new Error('download boom')),
+    });
+    await runImportPipeline(TEST_VIDEO_ID, URLS, steps);
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('failed');
+    expect(state?.youtubeUrl).toBe(URLS.youtubeUrl);
+    expect(state?.transcriptUrl).toBe(URLS.transcriptUrl);
+  });
+
+  it('should persist youtubeUrl/transcriptUrl in the completed state', async () => {
+    await runImportPipeline(TEST_VIDEO_ID, URLS, makeSteps());
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.youtubeUrl).toBe(URLS.youtubeUrl);
+    expect(state?.transcriptUrl).toBe(URLS.transcriptUrl);
+  });
+});
