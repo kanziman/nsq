@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { ShadowingPlayer } from '@/components/player/shadowing-player';
@@ -19,6 +20,12 @@ export default function HomePage() {
           Core components and speaker styles have been integrated conforming to
           the warm-canvas editorial design system parameters.
         </p>
+        <Link
+          href="/import"
+          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
+        >
+          임포트하기
+        </Link>
       </header>
 
       {/* Main 2-column showcase: Left components, Right Shadowing player preview */}
