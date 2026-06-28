@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { renderHook, waitFor, cleanup } from '@testing-library/react';
+import { renderHook, waitFor, cleanup, act } from '@testing-library/react';
 import { useImportStatus } from './use-import-status';
 
 function res(body: unknown, status = 200): Response {
@@ -126,5 +126,35 @@ describe('useImportStatus', () => {
     );
     const { result } = renderHook(() => useImportStatus('v', 20));
     await waitFor(() => expect(result.current.error).toBeTruthy());
+  });
+
+  it('should resume polling after restart() once it has stopped on a terminal status', async () => {
+    const fetchMock = vi.fn().mockResolvedValue(
+      res({
+        videoId: 'v',
+        status: 'failed',
+        progress: 90,
+        currentStep: 'alignment',
+        error: 'boom',
+        updatedAt: '',
+      }),
+    );
+    vi.stubGlobal('fetch', fetchMock);
+
+    const { result } = renderHook(() => useImportStatus('v', 20));
+    await waitFor(() => expect(result.current.state?.status).toBe('failed'));
+    const countAtFailed = fetchMock.mock.calls.length;
+
+    // 터미널 이후 추가 폴링 없음을 확인
+    await delay(50);
+    expect(fetchMock.mock.calls.length).toBe(countAtFailed);
+
+    // restart() → 폴링 재개(추가 fetch 발생)
+    await act(async () => {
+      result.current.restart();
+    });
+    await waitFor(() =>
+      expect(fetchMock.mock.calls.length).toBeGreaterThan(countAtFailed),
+    );
   });
 });

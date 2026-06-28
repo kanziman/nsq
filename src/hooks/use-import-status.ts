@@ -7,6 +7,8 @@ export interface ImportStatusResult {
   state: ImportState | null;
   error: string | null;
   loading: boolean;
+  /** 폴링을 재개한다. 터미널(completed/failed)에서 멈춘 뒤 재시도 접수 후 호출. */
+  restart: () => void;
 }
 
 const DEFAULT_INTERVAL_MS = 2500;
@@ -26,6 +28,9 @@ export function useImportStatus(
   const [state, setState] = React.useState<ImportState | null>(null);
   const [error, setError] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(videoId !== null);
+  // reloadKey가 바뀌면 폴링 effect를 재실행해 터미널 이후에도 재개한다.
+  const [reloadKey, setReloadKey] = React.useState(0);
+  const restart = React.useCallback(() => setReloadKey((k) => k + 1), []);
 
   React.useEffect(() => {
     if (videoId === null) {
@@ -69,7 +74,7 @@ export function useImportStatus(
       cancelled = true;
       if (timer) clearTimeout(timer);
     };
-  }, [videoId, intervalMs]);
+  }, [videoId, intervalMs, reloadKey]);
 
-  return { state, error, loading };
+  return { state, error, loading, restart };
 }
