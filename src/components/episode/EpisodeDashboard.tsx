@@ -47,6 +47,22 @@ export default function EpisodeDashboard() {
     }
   }, []);
 
+  const handleCardDelete = async (id: string) => {
+    try {
+      const res = await fetch(`/api/episodes/${id}`, {
+        method: 'DELETE',
+      });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || '삭제 중 오류가 발생했습니다.');
+      }
+      setEpisodes((prev) => (prev ? prev.filter((ep) => ep.id !== id) : null));
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : '삭제에 실패했습니다.';
+      alert(msg);
+    }
+  };
+
   // 1. 마운트 시 초기 호출
   useEffect(() => {
     fetchEpisodes();
@@ -126,7 +142,7 @@ export default function EpisodeDashboard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {episodes?.map((ep) => (
-        <EpisodeCard key={ep.id} episode={ep} />
+        <EpisodeCard key={ep.id} episode={ep} onDelete={handleCardDelete} />
       ))}
     </div>
   );

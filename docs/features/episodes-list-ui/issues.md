@@ -74,9 +74,9 @@
 
 **Acceptance Criteria**
 
-- [ ] Given 임포트 완료 또는 실패 상태인 에피소드 카드, When 삭제 버튼 클릭, Then 경고 문구 및 삭제/취소 액션이 있는 AlertDialog 모달이 노출된다.
-- [ ] Given 삭제 모달이 열린 상태, When 최종 "삭제" 클릭, Then `DELETE /api/episodes/[id]` API가 호출되고 리스트에서 해당 카드가 즉시 제거된다.
-- [ ] Given 진행 중인 에피소드 카드, When 렌더링 상태 검사, Then 삭제 버튼이 비활성화(Disabled) 상태여야 한다.
+- [x] Given 임포트 완료 또는 실패 상태인 에피소드 카드, When 삭제 버튼 클릭, Then 경고 문구 및 삭제/취소 액션이 있는 AlertDialog 모달이 노출된다.
+- [x] Given 삭제 모달이 열린 상태, When 최종 "삭제" 클릭, Then `DELETE /api/episodes/[id]` API가 호출되고 리스트에서 해당 카드가 즉시 제거된다.
+- [x] Given 진행 중인 에피소드 카드, When 렌더링 상태 검사, Then 삭제 버튼이 비활성화(Disabled) 상태여야 한다.
 
 ---
 

@@ -22,7 +22,7 @@ export default function HomePage() {
           href="/import"
           className="inline-flex h-10 items-center justify-center rounded bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
         >
-          에피소드 임포트
+          임포트하기
         </Link>
       </header>
 
