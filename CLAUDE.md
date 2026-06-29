@@ -99,5 +99,3 @@ nsq/
 > **이슈 자동 클로즈**: GitHub는 클로징 키워드(`Closes #N`)가 **기본 브랜치(main)** 로 머지될 때만 자동으로 닫는다. 자식→부모(feature) PR로는 닫히지 않으니, feature→main 통합 PR 본문에 `Closes #N`을 모아 넣어 main 머지 시 일괄 클로즈한다. (즉시 닫으려면 `gh issue close N`)
 >
 > **분기 전 부모 push 필수**: 부모 feature 브랜치에 로컬 커밋(예: CLAUDE.md 갱신)을 쌓았다면 자식 분기 전에 반드시 push한다. 안 하면 자식 PR squash 머지 시 부모의 로컬·원격이 갈라져(`not possible to fast-forward`) `gh pr merge --delete-branch`가 로컬 정렬에 실패한다. 이 경우 작업 손실은 없으며 `git reset --hard origin/<feature>`로 원격(머지 결과)에 맞추면 복구된다.
->
-> **E2E 테스트 생략 허용**: 아직 E2E 테스트를 수행할 대상(UI/화면)이 존재하지 않는 순수 백엔드/API 단계인 경우, PR 생성을 위한 E2E 테스트 검증은 생략(pass)하고 진행할 수 있습니다.
