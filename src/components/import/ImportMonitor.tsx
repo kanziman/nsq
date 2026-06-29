@@ -8,6 +8,7 @@ import { StepTimeline } from './StepTimeline';
 
 export interface ImportMonitorProps {
   videoId: string;
+  onNewImport?: () => void; // '새 임포트' 클릭 시 호출(페이지가 URL videoId 제거)
 }
 
 /**
@@ -40,6 +41,7 @@ const STATUS_LABEL: Record<ImportState['status'], string> = {
 
 export function ImportMonitor({
   videoId,
+  onNewImport,
 }: ImportMonitorProps): React.JSX.Element {
   const { state, error, loading, restart } = useImportStatus(videoId);
 
@@ -89,13 +91,23 @@ export function ImportMonitor({
       </p>
 
       {state.status === 'completed' && (
-        <div className="space-y-1">
-          <p className="text-sm text-accent-teal">임포트가 완료되었습니다.</p>
-          {state.matchRate !== undefined && (
-            <p className="text-sm text-muted">
-              정합 품질 (matchRate): {Math.round(state.matchRate * 100)}%
-            </p>
-          )}
+        <div className="space-y-4">
+          <div className="space-y-1">
+            <p className="text-sm text-accent-teal">임포트가 완료되었습니다.</p>
+            {state.matchRate !== undefined && (
+              <p className="text-sm text-muted">
+                정합 품질 (matchRate): {Math.round(state.matchRate * 100)}%
+              </p>
+            )}
+          </div>
+          <div className="flex gap-3">
+            <Button type="button" variant="primary" onClick={onNewImport}>
+              새 임포트
+            </Button>
+            <Button type="button" variant="secondary" disabled>
+              에피소드 보기
+            </Button>
+          </div>
         </div>
       )}
 
