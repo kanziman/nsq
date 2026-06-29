@@ -65,11 +65,11 @@
 
 **Acceptance Criteria**
 
-- [ ] Given 진행 중(`downloading`) 상태인 에피소드 ID, When `GET /api/episodes/[id]/audio` 호출, Then `409 Conflict` 응답을 반환한다.
-- [ ] Given 완료 상태이지만 실제 `audio.mp3` 파일이 없는 에피소드 ID, When `GET /api/episodes/[id]/audio` 호출, Then `404 Not Found` 응답을 반환한다.
-- [ ] Given 완료 및 오디오가 존재하는 에피소드 ID 및 Range 헤더가 없는 요청, When `GET /api/episodes/[id]/audio` 호출, Then `200 OK`와 함께 전체 오디오 콘텐츠 및 올바른 `Content-Length` 헤더를 반환한다.
-- [ ] Given 완료 및 오디오가 존재하는 에피소드 ID 및 `Range: bytes=0-99` 헤더 요청, When `GET /api/episodes/[id]/audio` 호출, Then `206 Partial Content` 응답과 함께 100바이트 크기의 청크 데이터를 전송하며 헤더에 `Content-Range`와 `Content-Length: 100`이 올바르게 세팅되어 있다.
-- [ ] Given 파일 크기 한계를 벗어나는 잘못된 `Range: bytes=99999999-` 헤더 요청, When `GET /api/episodes/[id]/audio` 호출, Then `416 Range Not Satisfiable` 응답을 반환한다.
+- [x] Given 진행 중(`downloading`) 상태인 에피소드 ID, When `GET /api/episodes/[id]/audio` 호출, Then `409 Conflict` 응답을 반환한다.
+- [x] Given 완료 상태이지만 실제 `audio.mp3` 파일이 없는 에피소드 ID, When `GET /api/episodes/[id]/audio` 호출, Then `404 Not Found` 응답을 반환한다.
+- [x] Given 완료 및 오디오가 존재하는 에피소드 ID 및 Range 헤더가 없는 요청, When `GET /api/episodes/[id]/audio` 호출, Then `200 OK`와 함께 전체 오디오 콘텐츠 및 올바른 `Content-Length` 헤더를 반환한다.
+- [x] Given 완료 및 오디오가 존재하는 에피소드 ID 및 `Range: bytes=0-99` 헤더 요청, When `GET /api/episodes/[id]/audio` 호출, Then `206 Partial Content` 응답과 함께 100바이트 크기의 청크 데이터를 전송하며 헤더에 `Content-Range`와 `Content-Length: 100`이 올바르게 세팅되어 있다.
+- [x] Given 파일 크기 한계를 벗어나는 잘못된 `Range: bytes=99999999-` 헤더 요청, When `GET /api/episodes/[id]/audio` 호출, Then `416 Range Not Satisfiable` 응답을 반환한다.
 
 ---
 
