@@ -13,7 +13,7 @@ export default defineConfig({
     // 기본은 node(기존 로직 테스트 속도 보존). 컴포넌트 테스트는 파일 상단
     // `// @vitest-environment jsdom` 프래그마로 jsdom 사용.
     environment: 'node',
-    include: ['src/**/*.test.{ts,tsx}'],
+    include: ['src/**/*.test.{ts,tsx}', 'scripts/**/*.test.ts'],
     setupFiles: ['./vitest.setup.ts'],
   },
 });
