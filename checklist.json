@@ -264,7 +264,7 @@
           "feature": "에피소드 목록 페이지",
           "path": "app/page.tsx",
           "relatedPaths": ["components/episode-list.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "홈 페이지: 임포트된 에피소드 카드 목록 및 임포트 페이지 이동 버튼"
         },
         {
@@ -272,7 +272,7 @@
           "feature": "에피소드 리스트 컴포넌트",
           "path": "components/episode-list.tsx",
           "relatedPaths": ["components/ui/card.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "썸네일, 제목, 시간, 상태를 표시하는 에피소드 카드 그리드"
         }
       ]
@@ -630,6 +630,6 @@
     "totalTasks": 55,
     "mvpTasks": 48,
     "postMvpTasks": 7,
-    "completedTasks": 24
+    "completedTasks": 26
   }
 }
