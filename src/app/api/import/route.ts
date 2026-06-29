@@ -28,6 +28,21 @@ function isNonEmptyString(value: unknown): value is string {
 }
 
 /**
+ * GET /api/import?videoId= — import-state 조회 (모니터 폴링 소스).
+ */
+export async function GET(request: Request): Promise<Response> {
+  const videoId = new URL(request.url).searchParams.get('videoId');
+  if (!isNonEmptyString(videoId)) {
+    return jsonError('videoId is required', 400);
+  }
+  const state = await getImportState(videoId);
+  if (!state) {
+    return jsonError(`No import state for ${videoId}`, 404);
+  }
+  return Response.json(state, { status: 200 });
+}
+
+/**
  * POST /api/import — 임포트 접수·검증·초기 상태 생성 라우트.
  */
 export async function POST(request: Request): Promise<Response> {
@@ -81,6 +96,8 @@ export async function POST(request: Request): Promise<Response> {
       status: 'downloading',
       progress: 0,
       currentStep: 'download',
+      youtubeUrl,
+      transcriptUrl,
       updatedAt: new Date().toISOString(),
     };
     await saveImportState(videoId, state);

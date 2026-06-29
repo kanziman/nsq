@@ -44,6 +44,9 @@ export interface ImportState {
   progress: number; // 0 ~ 100
   currentStep: string;
   error?: string;
+  matchRate?: number; // alignment 산출 품질(0~1). completed·저matchRate failed에만 존재.
+  youtubeUrl?: string; // 재시도 재접수용. 접수(POST) 시 기록, 모든 상태 쓰기에서 보존.
+  transcriptUrl?: string; // 재시도 재접수용.
   updatedAt: string;
 }
 

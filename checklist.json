@@ -1,7 +1,7 @@
 {
   "project": "nsq-shadowing",
   "version": "0.1.0",
-  "updatedAt": "2026-06-17",
+  "updatedAt": "2026-06-29",
 
   "phases": [
     {
@@ -157,70 +157,83 @@
         {
           "id": "import-api",
           "feature": "임포트 API 엔드포인트",
-          "path": "app/api/import/route.ts",
-          "relatedPaths": [],
-          "status": "pending",
-          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API. 재시도 파라미터(all, transcript, subtitles) 지원 및 matchRate 검증"
+          "path": "src/app/api/import/route.ts",
+          "relatedPaths": ["src/lib/services/import-pipeline.ts"],
+          "status": "completed",
+          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API(202 접수/400/409/500). retryStep(all, transcript, subtitles) 지원, GET(?videoId=)으로 import-state 조회, 재시도 컨텍스트 URL 영속"
         },
         {
           "id": "import-youtube",
           "feature": "YouTube 다운로드 서비스",
-          "path": "src/lib/youtube.ts",
+          "path": "src/lib/services/import/youtube.ts",
           "relatedPaths": [
             ".shadowing/episodes/{videoId}/audio.mp3",
             ".shadowing/episodes/{videoId}/subtitle.en.vtt"
           ],
-          "status": "pending",
-          "description": "yt-dlp로 오디오(mp3) + 자막(vtt) + 썸네일 다운로드"
+          "status": "completed",
+          "description": "주입형 runner(child_process.spawn)로 yt-dlp 실행: 오디오(mp3) + 자막(vtt) 다운로드 (downloadAudio·fetchSubtitle)"
         },
         {
           "id": "import-transcript",
           "feature": "트랜스크립트 스크래핑 및 파싱",
-          "path": "src/lib/freakonomics.ts",
+          "path": "src/lib/services/import/transcript.ts",
           "relatedPaths": [
-            "src/lib/transcript.ts",
+            "src/lib/services/import/transcript/parse.ts",
             ".shadowing/episodes/{videoId}/transcript.txt"
           ],
-          "status": "pending",
-          "description": "freakonomics.com 대본 URL fetch, 파싱하여 비발화 콘텐츠 제거 및 화자(Angela, Steven) 이름 정규화 및 문장 분할"
+          "status": "completed",
+          "description": "주입형 fetcher로 freakonomics.com 대본 URL fetch, node-html-parser로 파싱하여 비발화 콘텐츠 제거 및 화자 이름 정규화 및 문장 분할"
         },
         {
           "id": "import-alignment",
           "feature": "대본 ↔ VTT 토큰 정렬",
-          "path": "src/lib/alignTranscript.ts",
+          "path": "src/lib/services/import/alignment.ts",
           "relatedPaths": [
-            "src/lib/vtt.ts",
+            "src/lib/services/import/vtt/parse.ts",
+            "src/lib/services/import/align/anchor.ts",
+            "src/lib/services/import/align/lis.ts",
+            "src/lib/services/import/align/interpolate.ts",
             ".shadowing/episodes/{videoId}/segments.json"
           ],
-          "status": "pending",
-          "description": "patience-diff 방식 희소 단어 앵커링(LIS 최장 증가 부분수열)과 선형 보간을 사용한 대본 문장 ↔ VTT 토큰 정합. matchRate 0.85 미만 시 중단 처리"
+          "status": "completed",
+          "description": "patience-diff 방식 희소 단어 앵커링(LIS 최장 증가 부분수열)과 선형 보간을 사용한 대본 문장 ↔ VTT 토큰 정합. matchRate(anchored/candidate) 산출, 0.85 미만 시 중단 처리"
         },
         {
           "id": "import-state",
           "feature": "파이프라인 상태 관리",
-          "path": "src/lib/import-state.ts",
-          "relatedPaths": [".shadowing/episodes/{videoId}/import-state.json"],
-          "status": "pending",
-          "description": "download → subtitle → transcript → alignment 단계별 진행 상태 추적"
+          "path": "src/lib/services/import-pipeline.ts",
+          "relatedPaths": [
+            "src/lib/services/episodes.ts",
+            "src/lib/types.ts",
+            ".shadowing/episodes/{videoId}/import-state.json"
+          ],
+          "status": "completed",
+          "description": "runImportPipeline 오케스트레이터: download → subtitle → transcript → alignment 단계별 상태(ImportState) 추적·영속. matchRate·youtubeUrl·transcriptUrl 보존, fire-and-forget 안전"
         },
         {
           "id": "import-form-ui",
           "feature": "임포트 입력 폼 및 제어 UI",
-          "path": "components/import-form.tsx",
+          "path": "src/components/import/ImportForm.tsx",
           "relatedPaths": [
-            "components/ui/button.tsx",
-            "components/ui/input.tsx"
+            "src/components/import/ImportMonitor.tsx",
+            "src/components/import/StepTimeline.tsx",
+            "src/hooks/use-import-status.ts",
+            "src/lib/utils/import-form.ts"
           ],
-          "status": "pending",
-          "description": "임포트 URL 입력 폼, 단계별 진행 상태 게이지/타임라인 표시, 실패 단계별 개별 재시도 버튼 제공"
+          "status": "completed",
+          "description": "임포트 URL 입력 폼(클라 검증·제출), 폴링 훅 기반 4단계 타임라인+게이지 모니터, matchRate 표시, 실패 단계별 컨텍스트 재시도 버튼, 완료 후 액션 제공 (#22~#25)"
         },
         {
           "id": "import-page",
           "feature": "임포트 전용 화면",
-          "path": "app/import/page.tsx",
-          "relatedPaths": ["components/import-form.tsx"],
-          "status": "pending",
-          "description": "임포트 전용 라우팅 페이지. 디자인 시스템(DESIGN.md)을 준수하는 모니터링 레이아웃 구성"
+          "path": "src/app/import/page.tsx",
+          "relatedPaths": [
+            "src/components/import/ImportForm.tsx",
+            "src/components/import/ImportMonitor.tsx",
+            "e2e/import.spec.ts"
+          ],
+          "status": "completed",
+          "description": "임포트 전용 client 페이지. useSearchParams(Suspense) 기반 videoId 새로고침 복원으로 폼/모니터 분기, DESIGN.md 준수 레이아웃, Playwright E2E 검증"
         }
       ]
     },
@@ -617,6 +630,6 @@
     "totalTasks": 55,
     "mvpTasks": 48,
     "postMvpTasks": 7,
-    "completedTasks": 15
+    "completedTasks": 22
   }
 }
