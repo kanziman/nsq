@@ -12,6 +12,17 @@ vi.mock('next/navigation', () => ({
     throw new Error('REDIRECT:' + path);
   }),
 }));
+// 라우팅/리다이렉트 검증에 집중 — 오디오 매니저는 가볍게 모킹
+vi.mock('@/lib/utils/audio', () => ({
+  createAudioManager: vi.fn(() => ({
+    play: vi.fn(),
+    pause: vi.fn(),
+    getCurrentTime: vi.fn(() => 0),
+    onTimeUpdate: vi.fn(() => () => {}),
+    onEnded: vi.fn(() => () => {}),
+    destroy: vi.fn(),
+  })),
+}));
 
 import EpisodePlayerPage from './page';
 import { getEpisodeById, getEpisodeSegments } from '@/lib/services/episodes';

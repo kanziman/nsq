@@ -1,5 +1,6 @@
 'use client';
 
+import { memo } from 'react';
 import type { Segment } from '@/lib/types';
 import { SPEAKER_COLORS } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
@@ -10,7 +11,7 @@ interface ScriptViewProps {
   onSegmentClick?: (index: number) => void;
 }
 
-export default function ScriptView({
+function ScriptView({
   segments,
   currentSegmentIndex,
   onSegmentClick,
@@ -50,3 +51,5 @@ export default function ScriptView({
     </div>
   );
 }
+
+export default memo(ScriptView);

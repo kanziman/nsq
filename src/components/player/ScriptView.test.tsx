@@ -36,6 +36,12 @@ describe('ScriptView', () => {
     expect(() => render(<ScriptView segments={SEGMENTS} />)).not.toThrow();
   });
 
+  it('[정상] should mark the segment at currentSegmentIndex as active', () => {
+    render(<ScriptView segments={SEGMENTS} currentSegmentIndex={1} />);
+    const active = document.querySelector('[data-active="true"]');
+    expect(active?.textContent).toContain('How are you?');
+  });
+
   it('[경계] should apply color class for BOTH and NARRATOR speakers', () => {
     const segs: Segment[] = [
       { id: 'b1', start: 0, end: 1, speaker: 'BOTH', text: 'Both speak.' },
