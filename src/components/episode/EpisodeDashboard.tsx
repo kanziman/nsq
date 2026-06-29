@@ -83,7 +83,7 @@ export default function EpisodeDashboard() {
   // 3. 에러 발생 시 처리
   if (error && !loading) {
     return (
-      <div className="max-w-md mx-auto p-8 text-center space-y-6 border border-primary/20 rounded-lg bg-surface-base">
+      <div className="max-w-md mx-auto p-8 text-center space-y-6 border border-primary/20 rounded-lg bg-surface-card">
         <p className="text-ink font-serif text-lg">
           에피소드를 불러오는데 에러가 발생했습니다.
         </p>

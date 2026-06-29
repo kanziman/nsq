@@ -1,11 +1,52 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const filePath = process.argv[2];
 
 if (!filePath) {
   process.exit(0);
 }
+
+// -------------------------------------------------------------
+// globals.css @theme의 --color-* 토큰을 유효 색상 토큰으로 수집
+// (존재하지 않는 Tailwind 색상 유틸 = surface-base 같은 오타/미정의 토큰 검출용)
+// -------------------------------------------------------------
+function loadThemeColorTokens() {
+  const validColorTokens = new Set([
+    'transparent',
+    'current',
+    'inherit',
+    'white',
+    'black',
+    'none',
+  ]);
+  const colorRoots = new Set();
+  try {
+    const themeCssPath = path.resolve(
+      path.dirname(fileURLToPath(import.meta.url)),
+      '../src/app/globals.css',
+    );
+    const themeContent = fs.readFileSync(themeCssPath, 'utf-8');
+    const re = /--color-([a-z0-9-]+)\s*:/gi;
+    let m;
+    while ((m = re.exec(themeContent)) !== null) {
+      const token = m[1].toLowerCase();
+      validColorTokens.add(token);
+      colorRoots.add(token.split('-')[0]);
+    }
+  } catch {
+    // globals.css를 못 읽으면 토큰 검사를 건너뛴다 (colorRoots 비어있음).
+  }
+  return { validColorTokens, colorRoots };
+}
+
+const { validColorTokens, colorRoots } = loadThemeColorTokens();
+
+// 색상을 받는 Tailwind 유틸 프리픽스 (사이즈/간격 유틸과 겹치는 경우는
+// "프로젝트 색상 패밀리 루트"로 한 번 더 걸러 오탐을 방지한다.)
+const COLOR_UTIL_RE =
+  /^(?:[\w-]+:)*(bg|text|border(?:-[trblxyse])?|ring|from|via|to|fill|stroke|divide|outline|decoration|accent|caret|placeholder|shadow)-(.+)$/;
 
 // 검사 대상 확장자 필터링
 const ext = path.extname(filePath);
@@ -117,6 +158,28 @@ try {
               `Hardcoded inline style spacing found: "${match}". Spacing must be one of [${ALLOWED_SPACING_PX.join(', ')}] px.`,
             );
           }
+        }
+      });
+    }
+
+    // 3. 미정의 색상 토큰 검사 (globals.css @theme에 없는 색상 유틸)
+    if (colorRoots.size > 0) {
+      const candidates = line.match(/[a-zA-Z][\w:/.[\]-]*/g) || [];
+      candidates.forEach((cls) => {
+        const mm = cls.match(COLOR_UTIL_RE);
+        if (!mm) return;
+        let token = mm[2];
+        // 임의값(bg-[...]) / 변수 참조는 검사 제외
+        if (token.startsWith('[')) return;
+        // 투명도 수정자 제거 (예: surface-card/60 → surface-card)
+        token = token.split('/')[0];
+        const root = token.split('-')[0];
+        // 프로젝트 색상 패밀리에 속한 유틸만 검사 → 사이즈/간격 유틸 오탐 방지
+        if (!colorRoots.has(root)) return;
+        if (!validColorTokens.has(token)) {
+          warnings.push(
+            `Undefined color token: "${cls}". '${token}'은(는) globals.css @theme에 정의되지 않은 색상 토큰입니다 (오타/미정의 토큰 확인).`,
+          );
         }
       });
     }

@@ -72,7 +72,7 @@ export default function EpisodeCard({
     if (!showConfirm) return null;
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs">
-        <div className="bg-surface-base border border-hairline p-6 rounded-lg max-w-sm w-full mx-4 shadow-xl space-y-6 animate-in fade-in-50 zoom-in-95 duration-200">
+        <div className="bg-surface-card border border-hairline p-6 rounded-lg max-w-sm w-full mx-4 shadow-xl space-y-6 animate-in fade-in-50 zoom-in-95 duration-200">
           <div className="space-y-2">
             <h4 className="font-serif text-lg text-ink font-semibold">
               에피소드를 삭제하시겠습니까?
@@ -105,7 +105,7 @@ export default function EpisodeCard({
   // -------------------------------------------------------------
   if (status === 'completed') {
     return (
-      <div className="group relative border border-hairline rounded-lg overflow-hidden bg-surface-base hover:border-primary-active transition-all duration-300 flex flex-col">
+      <div className="group relative border border-hairline rounded-lg overflow-hidden bg-surface-card hover:border-primary-active transition-all duration-300 flex flex-col">
         {renderConfirmModal()}
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/10">
           <img
@@ -150,7 +150,7 @@ export default function EpisodeCard({
   // -------------------------------------------------------------
   if (status !== 'failed') {
     return (
-      <div className="border border-hairline rounded-lg overflow-hidden bg-surface-base/60 max-w-sm flex flex-col justify-between relative">
+      <div className="border border-hairline rounded-lg overflow-hidden bg-surface-card/60 max-w-sm flex flex-col justify-between relative">
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
           <div className="absolute inset-0 bg-ink/5" />
           <div className="z-10 animate-spin h-6 w-6 border-2 border-primary border-t-transparent rounded-full" />
@@ -199,7 +199,7 @@ export default function EpisodeCard({
   // 4. 실패 상태 (Failed)
   // -------------------------------------------------------------
   return (
-    <div className="border border-primary/20 rounded-lg overflow-hidden bg-surface-base/90 max-w-sm flex flex-col justify-between relative">
+    <div className="border border-primary/20 rounded-lg overflow-hidden bg-surface-card/90 max-w-sm flex flex-col justify-between relative">
       {renderConfirmModal()}
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
         <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase">
