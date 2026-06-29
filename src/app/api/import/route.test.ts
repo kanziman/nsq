@@ -13,7 +13,7 @@ vi.mock('@/lib/services/import-pipeline', () => ({
   runImportPipeline: vi.fn(),
 }));
 
-import { POST } from './route';
+import { GET, POST } from './route';
 import { extractVideoId } from '@/lib/utils/youtube';
 import { getImportState, saveImportState } from '@/lib/services/episodes';
 import { runImportPipeline } from '@/lib/services/import-pipeline';
@@ -215,5 +215,72 @@ describe('POST /api/import', () => {
       'vid123',
       expect.objectContaining({ retryStep: 'transcript' }),
     );
+  });
+
+  it('should persist youtubeUrl/transcriptUrl into the initial import-state (#24 retry context)', async () => {
+    await POST(makeRequest(VALID_BODY));
+    const [, stateArg] = mockSaveState.mock.calls[0];
+    expect(stateArg).toMatchObject({
+      youtubeUrl: VALID_BODY.youtubeUrl,
+      transcriptUrl: VALID_BODY.transcriptUrl,
+    });
+  });
+});
+
+describe('GET /api/import', () => {
+  function makeGet(videoId?: string): Request {
+    const url =
+      videoId === undefined
+        ? 'http://localhost/api/import'
+        : `http://localhost/api/import?videoId=${encodeURIComponent(videoId)}`;
+    return new Request(url, { method: 'GET' });
+  }
+
+  it('should return 200 with ImportState when state exists', async () => {
+    const state = stateWith('aligning');
+    mockGetState.mockResolvedValue(state);
+    const res = await GET(makeGet('vid123'));
+    expect(res.status).toBe(200);
+    expect(await res.json()).toMatchObject({
+      videoId: 'vid123',
+      status: 'aligning',
+    });
+    expect(mockGetState).toHaveBeenCalledWith('vid123');
+  });
+
+  it('should return 400 when videoId is missing', async () => {
+    const res = await GET(makeGet(undefined));
+    expect(res.status).toBe(400);
+    expect(mockGetState).not.toHaveBeenCalled();
+  });
+
+  it('should return 404 when state not found', async () => {
+    mockGetState.mockResolvedValue(null);
+    const res = await GET(makeGet('missing'));
+    expect(res.status).toBe(404);
+  });
+
+  it('should include youtubeUrl/transcriptUrl in the 200 response when state has them (#24 retry context)', async () => {
+    mockGetState.mockResolvedValue({
+      ...stateWith('failed'),
+      currentStep: 'alignment',
+      youtubeUrl: 'https://youtu.be/v',
+      transcriptUrl: 'https://example.com/t',
+    });
+    const res = await GET(makeGet('vid123'));
+    const body = await res.json();
+    expect(body.youtubeUrl).toBe('https://youtu.be/v');
+    expect(body.transcriptUrl).toBe('https://example.com/t');
+  });
+
+  it('should include matchRate in the 200 response when state has matchRate', async () => {
+    mockGetState.mockResolvedValue({
+      ...stateWith('completed'),
+      progress: 100,
+      matchRate: 0.93,
+    });
+    const res = await GET(makeGet('vid123'));
+    expect(res.status).toBe(200);
+    expect((await res.json()).matchRate).toBe(0.93);
   });
 });

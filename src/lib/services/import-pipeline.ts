@@ -75,6 +75,8 @@ async function writeState(
   currentStep: string,
   progress: number,
   error?: string,
+  matchRate?: number,
+  urls?: { youtubeUrl: string; transcriptUrl: string },
 ): Promise<void> {
   const state: ImportState = {
     videoId,
@@ -84,6 +86,12 @@ async function writeState(
     updatedAt: new Date().toISOString(),
   };
   if (error !== undefined) state.error = error;
+  if (matchRate !== undefined) state.matchRate = matchRate;
+  // 재시도 컨텍스트(#24): 모든 상태 쓰기에서 접수 URL을 보존해 failed에서도 재접수 가능.
+  if (urls) {
+    state.youtubeUrl = urls.youtubeUrl;
+    state.transcriptUrl = urls.transcriptUrl;
+  }
   await saveImportState(videoId, state);
 }
 
@@ -105,12 +113,24 @@ export async function runImportPipeline(
   let currentStep = FIRST_STEP[plan];
   let progress = 0;
 
+  // 모든 상태 쓰기에서 접수 URL을 보존하는 로컬 래퍼 (#24)
+  const write = (
+    status: ImportState['status'],
+    step: string,
+    prog: number,
+    error?: string,
+    matchRate?: number,
+  ): Promise<void> =>
+    writeState(videoId, status, step, prog, error, matchRate, {
+      youtubeUrl,
+      transcriptUrl,
+    });
+
   try {
     // 재사용 아티펙트 사전 검증 (AC4): 누락 시 어떤 단계도 실행하지 않고 failed
     const missing = await findMissingReusedArtifact(videoId, plan);
     if (missing) {
-      await writeState(
-        videoId,
+      await write(
         'failed',
         currentStep,
         progress,
@@ -127,43 +147,43 @@ export async function runImportPipeline(
     if (runDownload) {
       currentStep = 'download';
       progress = 10;
-      await writeState(videoId, 'downloading', currentStep, progress);
+      await write('downloading', currentStep, progress);
       await steps.downloadAudio(videoId, youtubeUrl);
     }
 
     if (runSubtitle) {
       currentStep = 'subtitle';
       progress = 40;
-      await writeState(videoId, 'processing_subtitles', currentStep, progress);
+      await write('processing_subtitles', currentStep, progress);
       await steps.fetchSubtitle(videoId, youtubeUrl);
     }
 
     if (runTranscript) {
       currentStep = 'transcript';
       progress = 70;
-      await writeState(videoId, 'processing_transcript', currentStep, progress);
+      await write('processing_transcript', currentStep, progress);
       await steps.fetchTranscript(videoId, transcriptUrl);
     }
 
     currentStep = 'alignment';
     progress = 90;
-    await writeState(videoId, 'aligning', currentStep, progress);
+    await write('aligning', currentStep, progress);
     const { matchRate } = await steps.alignTranscript(videoId);
 
     if (matchRate < MATCH_RATE_THRESHOLD) {
-      await writeState(
-        videoId,
+      await write(
         'failed',
         currentStep,
         progress,
         `matchRate ${matchRate} < ${MATCH_RATE_THRESHOLD}`,
+        matchRate,
       );
       return;
     }
 
-    await writeState(videoId, 'completed', 'completed', 100);
+    await write('completed', 'completed', 100, undefined, matchRate);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    await writeState(videoId, 'failed', currentStep, progress, message);
+    await write('failed', currentStep, progress, message);
   }
 }
