@@ -51,9 +51,9 @@
 
 **Acceptance Criteria**
 
-- [ ] Given 완료 상태인 에피소드 카드, When 카드 클릭, Then `/episodes/{id}` 주소로 정상 이동한다.
-- [ ] Given 진행 중 상태인 에피소드 카드, When 카드 렌더링, Then 프로그레스 바와 단계 텍스트가 표시되며 클릭해도 라우팅이 일어나지 않는다.
-- [ ] Given 실패 상태인 에피소드 카드, When "재시도" 버튼 클릭, Then `/import?videoId={id}` 경로로 정확한 ID 쿼리 스트링과 함께 사용자가 리다이렉트된다.
+- [x] Given 완료 상태인 에피소드 카드, When 카드 클릭, Then `/episodes/{id}` 주소로 정상 이동한다.
+- [x] Given 진행 중 상태인 에피소드 카드, When 카드 렌더링, Then 프로그레스 바와 단계 텍스트가 표시되며 클릭해도 라우팅이 일어나지 않는다.
+- [x] Given 실패 상태인 에피소드 카드, When "재시도" 버튼 클릭, Then `/import?videoId={id}` 경로로 정확한 ID 쿼리 스트링과 함께 사용자가 리다이렉트된다.
 
 ---
 
