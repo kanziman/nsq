@@ -1,103 +1,40 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { ShadowingPlayer } from '@/components/player/shadowing-player';
+import EpisodeDashboard from '@/components/episode/EpisodeDashboard';
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen p-8 md:p-24 max-w-5xl mx-auto space-y-16">
+    <main className="min-h-screen p-8 md:p-24 max-w-5xl mx-auto space-y-12">
       {/* Header section (Editorial Display style) */}
-      <header className="space-y-4 border-b border-hairline pb-8">
-        <div className="text-primary font-semibold tracking-wider text-xs uppercase">
-          Design System Integration
+      <header className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-hairline pb-8">
+        <div className="space-y-3">
+          <div className="text-primary font-semibold tracking-wider text-xs uppercase">
+            Shadowing Playlist
+          </div>
+          <h1 className="font-serif text-4xl md:text-5xl text-ink font-normal tracking-tight">
+            내 에피소드 보드
+          </h1>
+          <p className="font-sans text-muted-soft text-sm max-w-md">
+            임포트된 유튜브 에피소드를 선택해 쉐도잉 훈련을 진행하거나 새로운
+            학습 콘텐츠를 등록하세요.
+          </p>
         </div>
-        <h1 className="font-serif text-5xl md:text-6xl text-ink font-normal tracking-tight">
-          NSQ Shadowing Web App
-        </h1>
-        <p className="font-sans text-body text-lg leading-relaxed max-w-2xl">
-          Core components and speaker styles have been integrated conforming to
-          the warm-canvas editorial design system parameters.
-        </p>
         <Link
           href="/import"
-          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
+          className="inline-flex h-10 items-center justify-center rounded bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
         >
-          임포트하기
+          에피소드 임포트
         </Link>
       </header>
 
-      {/* Main 2-column showcase: Left components, Right Shadowing player preview */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Left Side: Components Showcase (5 columns) */}
-        <div className="lg:col-span-5 space-y-8">
-          <section className="space-y-4">
-            <h2 className="font-serif text-2xl text-ink font-normal">
-              UI Components
-            </h2>
-
-            {/* Buttons card showcase */}
-            <Card className="p-6 space-y-4">
-              <h3 className="text-sm font-semibold text-muted">
-                Button Variants
-              </h3>
-              <div className="flex flex-col gap-2">
-                <Button variant="primary">Primary Coral Button</Button>
-                <Button variant="secondary">Secondary Outline</Button>
-                <Button variant="textLink" className="justify-start">
-                  Text Link variant
-                </Button>
-
-                <div className="bg-surface-dark p-4 rounded-md flex gap-2 justify-center items-center">
-                  <Button variant="secondaryOnDark" size="sm">
-                    On-Dark Small
-                  </Button>
-                  <Button variant="iconCircular" size="icon">
-                    ▶
-                  </Button>
-                </div>
-              </div>
-            </Card>
-
-            {/* Inputs card showcase */}
-            <Card className="p-6 space-y-4">
-              <h3 className="text-sm font-semibold text-muted">Form Input</h3>
-              <div className="space-y-2">
-                <label className="text-xs text-muted-soft block">
-                  Podcast Episode URL
-                </label>
-                <Input
-                  type="text"
-                  placeholder="https://youtube.com/watch?v=..."
-                />
-              </div>
-            </Card>
-
-            {/* Badges card showcase */}
-            <Card className="p-6 space-y-4">
-              <h3 className="text-sm font-semibold text-muted">Badges</h3>
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="pill">Badge Pill</Badge>
-                <Badge variant="coral">NEW</Badge>
-              </div>
-            </Card>
-          </section>
-        </div>
-
-        {/* Right Side: Player Preview (7 columns) */}
-        <div className="lg:col-span-7 space-y-4">
-          <h2 className="font-serif text-2xl text-ink font-normal">
-            Shadowing Player Layout
-          </h2>
-          <ShadowingPlayer />
-        </div>
-      </div>
+      {/* Dashboard list Section */}
+      <section className="space-y-6">
+        <EpisodeDashboard />
+      </section>
 
       {/* Bottom Footer block */}
       <footer className="pt-8 border-t border-hairline text-xs text-muted-soft">
-        &copy; {new Date().getFullYear()} Antigravity. Built with Google
-        DeepMind.
+        &copy; {new Date().getFullYear()} Antigravity. Warm-canvas Design System
+        enabled.
       </footer>
     </main>
   );
