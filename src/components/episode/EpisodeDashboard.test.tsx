@@ -1,6 +1,13 @@
 // @vitest-environment jsdom
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, waitFor, act, cleanup } from '@testing-library/react';
+import {
+  render,
+  screen,
+  waitFor,
+  act,
+  cleanup,
+  fireEvent,
+} from '@testing-library/react';
 import EpisodeDashboard from './EpisodeDashboard';
 import type { Episode } from '@/lib/types';
 
@@ -79,9 +86,7 @@ describe('EpisodeDashboard Component', () => {
     render(<EpisodeDashboard />);
 
     await waitFor(() => {
-      expect(
-        screen.getByText(/EpisodeCard Stub - Episode 1/i),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Episode 1')).toBeInTheDocument();
     });
   });
 
@@ -99,9 +104,7 @@ describe('EpisodeDashboard Component', () => {
     render(<EpisodeDashboard />);
 
     await waitFor(() => {
-      expect(
-        screen.getByText(/EpisodeCard Stub - Episode 2/i),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
     });
 
     expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -114,13 +117,11 @@ describe('EpisodeDashboard Component', () => {
   });
 
   it('should stop polling interval when all episodes transition to completed/failed', async () => {
-    // 1차: 진행중 상태 반환 -> 폴링 가동됨
     vi.mocked(global.fetch).mockResolvedValueOnce({
       ok: true,
       json: async () => [IN_PROGRESS_EPISODE],
     } as Response);
 
-    // 2차 및 그 이후: 완료 상태 반환 -> 폴링 중단 유도
     vi.mocked(global.fetch).mockResolvedValue({
       ok: true,
       json: async () => [COMPLETED_EPISODE],
@@ -129,12 +130,9 @@ describe('EpisodeDashboard Component', () => {
     render(<EpisodeDashboard />);
 
     await waitFor(() => {
-      expect(
-        screen.getByText(/EpisodeCard Stub - Episode 2/i),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
     });
 
-    // 1차 폴링 유발 (3초 경과) -> 완료 데이터 획득
     await act(async () => {
       vi.advanceTimersByTime(3000);
     });
@@ -142,17 +140,14 @@ describe('EpisodeDashboard Component', () => {
     expect(global.fetch).toHaveBeenCalledTimes(2);
 
     await waitFor(() => {
-      expect(
-        screen.getByText(/EpisodeCard Stub - Episode 1/i),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Episode 1')).toBeInTheDocument();
     });
 
-    // 추가 3초 경과 -> 폴링 중단으로 인해 추가 fetch가 일어나지 않아야 함
     await act(async () => {
       vi.advanceTimersByTime(3000);
     });
 
-    expect(global.fetch).toHaveBeenCalledTimes(2); // 여전히 2회 유지
+    expect(global.fetch).toHaveBeenCalledTimes(2);
   });
 
   it('should render error state with retry button when API request fails', async () => {
@@ -169,7 +164,6 @@ describe('EpisodeDashboard Component', () => {
     const retryBtn = screen.getByRole('button', { name: /다시 시도/i });
     expect(retryBtn).toBeInTheDocument();
 
-    // 다시 시도 누르기 전 Mock API 응답 리로드용 정상 설정
     vi.mocked(global.fetch).mockResolvedValue({
       ok: true,
       json: async () => [COMPLETED_EPISODE],
@@ -180,9 +174,54 @@ describe('EpisodeDashboard Component', () => {
     });
 
     await waitFor(() => {
-      expect(
-        screen.getByText(/EpisodeCard Stub - Episode 1/i),
-      ).toBeInTheDocument();
+      expect(screen.getByText('Episode 1')).toBeInTheDocument();
+    });
+  });
+
+  // -------------------------------------------------------------
+  // AlertDialog 통합 및 삭제 연동 테스트
+  // -------------------------------------------------------------
+  it('should delete episode card and update UI when onDelete confirm is clicked', async () => {
+    // 1. 초기 조회: 완료된 에피소드 1개 반환
+    vi.mocked(global.fetch).mockResolvedValueOnce({
+      ok: true,
+      json: async () => [COMPLETED_EPISODE],
+    } as Response);
+
+    render(<EpisodeDashboard />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Episode 1')).toBeInTheDocument();
+    });
+
+    // 2. 삭제 클릭 -> 다이얼로그 모달 오픈
+    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    fireEvent.click(deleteBtn);
+
+    expect(
+      screen.getByText(/에피소드를 삭제하시겠습니까/i),
+    ).toBeInTheDocument();
+
+    // 3. DELETE API 모의 및 진짜 삭제 클릭
+    vi.mocked(global.fetch).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ success: true }),
+    } as Response);
+
+    const confirmBtn = screen.getByRole('button', { name: /진짜 삭제/i });
+
+    await act(async () => {
+      fireEvent.click(confirmBtn);
+    });
+
+    // DELETE API 호출 확인
+    expect(global.fetch).toHaveBeenLastCalledWith('/api/episodes/vid123', {
+      method: 'DELETE',
+    });
+
+    // 대시보드 리스트에서 에피소드 1이 제거되었는지 확인
+    await waitFor(() => {
+      expect(screen.queryByText('Episode 1')).toBeNull();
     });
   });
 });

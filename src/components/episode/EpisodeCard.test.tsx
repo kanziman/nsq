@@ -1,6 +1,12 @@
 // @vitest-environment jsdom
-import { describe, it, expect, afterEach } from 'vitest';
-import { render, screen, cleanup } from '@testing-library/react';
+import { describe, it, expect, afterEach, vi } from 'vitest';
+import {
+  render,
+  screen,
+  cleanup,
+  fireEvent,
+  waitFor,
+} from '@testing-library/react';
 import EpisodeCard from './EpisodeCard';
 import type { Episode } from '@/lib/types';
 
@@ -50,13 +56,16 @@ const FAILED_EPISODE: Episode = {
   },
 };
 
+const mockOnDelete = vi.fn();
+
 afterEach(() => {
   cleanup();
+  vi.clearAllMocks();
 });
 
 describe('EpisodeCard Component', () => {
   it('should render title, thumbnail and duration when status is completed', () => {
-    render(<EpisodeCard episode={COMPLETED_EPISODE} />);
+    render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
 
     expect(screen.getByText('Editorial Shadowing Guide')).toBeInTheDocument();
     expect(screen.getByText('05:20')).toBeInTheDocument();
@@ -68,7 +77,9 @@ describe('EpisodeCard Component', () => {
   });
 
   it('should render progress bar and step name when status is downloading', () => {
-    render(<EpisodeCard episode={IN_PROGRESS_EPISODE} />);
+    render(
+      <EpisodeCard episode={IN_PROGRESS_EPISODE} onDelete={mockOnDelete} />,
+    );
 
     expect(screen.getByText('Processing Next.js Audio')).toBeInTheDocument();
     const progressBar = screen.getByRole('progressbar');
@@ -78,7 +89,7 @@ describe('EpisodeCard Component', () => {
   });
 
   it('should render failed badge and error tooltip when status is failed', () => {
-    render(<EpisodeCard episode={FAILED_EPISODE} />);
+    render(<EpisodeCard episode={FAILED_EPISODE} onDelete={mockOnDelete} />);
 
     expect(screen.getByText('Failed Alignment Podcast')).toBeInTheDocument();
     expect(screen.getByText('Failed')).toBeInTheDocument();
@@ -88,23 +99,79 @@ describe('EpisodeCard Component', () => {
   });
 
   it('should navigate to player page on click when completed', () => {
-    render(<EpisodeCard episode={COMPLETED_EPISODE} />);
+    render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
 
-    const link = screen.getByRole('link');
+    // 카드 루트 링크가 여러 개 생기거나 삭제 버튼의 링크와 분리하기 위해 play-link 검증
+    const link = screen.getByRole('link', { name: /학습하기/i });
     expect(link).toHaveAttribute('href', '/episodes/vid123');
   });
 
   it('should NOT navigate on click when in progress', () => {
-    render(<EpisodeCard episode={IN_PROGRESS_EPISODE} />);
+    render(
+      <EpisodeCard episode={IN_PROGRESS_EPISODE} onDelete={mockOnDelete} />,
+    );
 
-    const link = screen.queryByRole('link');
+    const link = screen.queryByRole('link', { name: /학습하기/i });
     expect(link).toBeNull();
   });
 
   it('should navigate to retry import page on click retry button when failed', () => {
-    render(<EpisodeCard episode={FAILED_EPISODE} />);
+    render(<EpisodeCard episode={FAILED_EPISODE} onDelete={mockOnDelete} />);
 
     const retryLink = screen.getByRole('link', { name: /재시도/i });
     expect(retryLink).toHaveAttribute('href', '/import?videoId=vid789');
+  });
+
+  // -------------------------------------------------------------
+  // 삭제 (DELETE / AlertDialog) 검증 케이스 추가
+  // -------------------------------------------------------------
+  it('should show AlertDialog modal when delete button is clicked', () => {
+    render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
+
+    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    fireEvent.click(deleteBtn);
+
+    expect(
+      screen.getByText(/에피소드를 삭제하시겠습니까/i),
+    ).toBeInTheDocument();
+  });
+
+  it('should call onDelete prop and close modal when confirm delete is clicked', async () => {
+    render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
+
+    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    fireEvent.click(deleteBtn);
+
+    const confirmBtn = screen.getByRole('button', { name: /진짜 삭제/i });
+    fireEvent.click(confirmBtn);
+
+    expect(mockOnDelete).toHaveBeenCalledTimes(1);
+    expect(mockOnDelete).toHaveBeenCalledWith('vid123');
+    // 다이얼로그 모달 문구가 지워졌는지 비동기적으로 대기 검증
+    await waitFor(() => {
+      expect(screen.queryByText(/에피소드를 삭제하시겠습니까/i)).toBeNull();
+    });
+  });
+
+  it('should close modal without calling onDelete when cancel is clicked', () => {
+    render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
+
+    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    fireEvent.click(deleteBtn);
+
+    const cancelBtn = screen.getByRole('button', { name: /취소/i });
+    fireEvent.click(cancelBtn);
+
+    expect(mockOnDelete).not.toHaveBeenCalled();
+    expect(screen.queryByText(/에피소드를 삭제하시겠습니까/i)).toBeNull();
+  });
+
+  it('should disable delete button when episode status is downloading', () => {
+    render(
+      <EpisodeCard episode={IN_PROGRESS_EPISODE} onDelete={mockOnDelete} />,
+    );
+
+    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    expect(deleteBtn).toBeDisabled();
   });
 });

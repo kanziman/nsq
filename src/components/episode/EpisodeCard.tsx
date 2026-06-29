@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import type { Episode } from '@/lib/types';
 
@@ -15,7 +16,14 @@ const STEP_NAMES: Record<string, string> = {
   aligning: '대본 정합 중',
 };
 
-export default function EpisodeCard({ episode }: { episode: Episode }) {
+export default function EpisodeCard({
+  episode,
+  onDelete,
+}: {
+  episode: Episode;
+  onDelete: (_id: string) => Promise<void>;
+}) {
+  const [showConfirm, setShowConfirm] = useState(false);
   const { title, duration, addedAt, importState } = episode;
   const status = importState?.status ?? 'completed';
   const progress = importState?.progress ?? 0;
@@ -33,15 +41,72 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
   const stepText =
     STEP_NAMES[status] || STEP_NAMES[currentStep] || '임포트 처리 중';
 
+  const handleDeleteClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowConfirm(true);
+  };
+
+  const handleConfirmDelete = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      await onDelete(episode.id);
+    } catch {
+      // 대시보드 에러 전파 처리
+    } finally {
+      setShowConfirm(false);
+    }
+  };
+
+  const handleCancelDelete = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowConfirm(false);
+  };
+
   // -------------------------------------------------------------
-  // 1. 완료 상태 (Completed)
+  // 1. 공통 모달 렌더링 헬퍼
+  // -------------------------------------------------------------
+  const renderConfirmModal = () => {
+    if (!showConfirm) return null;
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs">
+        <div className="bg-surface-base border border-hairline p-6 rounded-lg max-w-sm w-full mx-4 shadow-xl space-y-6 animate-in fade-in-50 zoom-in-95 duration-200">
+          <div className="space-y-2">
+            <h4 className="font-serif text-lg text-ink font-semibold">
+              에피소드를 삭제하시겠습니까?
+            </h4>
+            <p className="text-xs text-muted-soft leading-relaxed">
+              다운로드된 오디오 및 대본 정보가 컴퓨터에서 영구적으로 삭제됩니다.
+            </p>
+          </div>
+          <div className="flex justify-end gap-3">
+            <button
+              onClick={handleCancelDelete}
+              className="h-9 px-4 rounded border border-hairline text-xs font-medium text-muted hover:bg-hairline/10 transition-colors cursor-pointer"
+            >
+              취소
+            </button>
+            <button
+              onClick={handleConfirmDelete}
+              className="h-9 px-4 rounded bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
+            >
+              진짜 삭제
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  // -------------------------------------------------------------
+  // 2. 완료 상태 (Completed)
   // -------------------------------------------------------------
   if (status === 'completed') {
     return (
-      <Link
-        href={`/episodes/${episode.id}`}
-        className="group block border border-hairline rounded-lg overflow-hidden bg-surface-base hover:border-primary-active transition-all duration-300"
-      >
+      <div className="group relative border border-hairline rounded-lg overflow-hidden bg-surface-base hover:border-primary-active transition-all duration-300 flex flex-col">
+        {renderConfirmModal()}
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/10">
           <img
             src={thumbnail}
@@ -52,25 +117,40 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
             {formattedDuration}
           </div>
         </div>
-        <div className="p-5 space-y-3">
+        <div className="p-5 flex-grow flex flex-col justify-between space-y-3">
           <h3 className="font-serif text-ink font-normal text-lg leading-snug line-clamp-2 min-h-[3.25rem] group-hover:text-primary-active transition-colors">
             {title}
           </h3>
+
           <div className="flex items-center justify-between text-xs text-muted-soft pt-2 border-t border-hairline">
             <span>{formattedDate}</span>
-            <span className="font-medium text-primary">학습하기 →</span>
+            <div className="flex items-center gap-3">
+              <button
+                aria-label="삭제"
+                onClick={handleDeleteClick}
+                className="p-1.5 rounded hover:bg-primary/10 text-muted hover:text-primary transition-colors cursor-pointer"
+              >
+                🗑️
+              </button>
+              <Link
+                href={`/episodes/${episode.id}`}
+                className="font-medium text-primary hover:text-primary-active"
+              >
+                학습하기 →
+              </Link>
+            </div>
           </div>
         </div>
-      </Link>
+      </div>
     );
   }
 
   // -------------------------------------------------------------
-  // 2. 진행 중 상태 (In Progress)
+  // 3. 진행 중 상태 (In Progress)
   // -------------------------------------------------------------
   if (status !== 'failed') {
     return (
-      <div className="border border-hairline rounded-lg overflow-hidden bg-surface-base/60 max-w-sm flex flex-col justify-between">
+      <div className="border border-hairline rounded-lg overflow-hidden bg-surface-base/60 max-w-sm flex flex-col justify-between relative">
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
           <div className="absolute inset-0 bg-ink/5" />
           <div className="z-10 animate-spin h-6 w-6 border-2 border-primary border-t-transparent rounded-full" />
@@ -99,8 +179,15 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
                 style={{ width: `${progress}%` }}
               />
             </div>
-            <div className="text-[10px] text-muted-soft text-right">
-              {formattedDate}
+            <div className="flex items-center justify-between pt-1">
+              <button
+                aria-label="삭제"
+                disabled
+                className="p-1.5 rounded text-muted-soft/40 cursor-not-allowed"
+              >
+                🗑️
+              </button>
+              <div className="text-[10px] text-muted-soft">{formattedDate}</div>
             </div>
           </div>
         </div>
@@ -109,10 +196,11 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
   }
 
   // -------------------------------------------------------------
-  // 3. 실패 상태 (Failed)
+  // 4. 실패 상태 (Failed)
   // -------------------------------------------------------------
   return (
-    <div className="border border-primary/20 rounded-lg overflow-hidden bg-surface-base/90 max-w-sm flex flex-col justify-between">
+    <div className="border border-primary/20 rounded-lg overflow-hidden bg-surface-base/90 max-w-sm flex flex-col justify-between relative">
+      {renderConfirmModal()}
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
         <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase">
           Failed
@@ -123,7 +211,6 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
           <h3 className="font-serif text-ink font-normal text-lg leading-snug line-clamp-2">
             {title || '알 수 없는 비디오'}
           </h3>
-          {/* 에러 상세 툴팁 영역 (마우스 오버 툴팁 역할 겸 텍스트 영역) */}
           <div className="group relative p-2.5 rounded bg-surface-dark border border-hairline text-xs text-muted-soft leading-relaxed min-h-[3rem] overflow-hidden">
             <span className="line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
               {errorMsg || '임포트 중 상세 불명의 오류가 발생했습니다.'}
@@ -133,12 +220,21 @@ export default function EpisodeCard({ episode }: { episode: Episode }) {
 
         <div className="flex items-center justify-between pt-3 border-t border-hairline">
           <span className="text-[10px] text-muted-soft">{formattedDate}</span>
-          <Link
-            href={`/import?videoId=${episode.id}`}
-            className="inline-flex h-8 items-center justify-center px-4 rounded bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
-          >
-            재시도
-          </Link>
+          <div className="flex items-center gap-3">
+            <button
+              aria-label="삭제"
+              onClick={handleDeleteClick}
+              className="p-1.5 rounded hover:bg-primary/10 text-muted hover:text-primary transition-colors cursor-pointer"
+            >
+              🗑️
+            </button>
+            <Link
+              href={`/import?videoId=${episode.id}`}
+              className="inline-flex h-8 items-center justify-center px-4 rounded bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
+            >
+              재시도
+            </Link>
+          </div>
         </div>
       </div>
     </div>
