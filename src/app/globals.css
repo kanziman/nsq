@@ -56,7 +56,17 @@
   --radius-xl: 16px;
   --radius-pill: 9999px;
 
-  /* Spacing */
+  /* Fonts */
+  --font-serif: 'Cormorant Garamond', Garamond, Times New Roman, serif;
+  --font-sans:
+    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* 디자인 시스템 spacing 스케일 (docs/design-system/spacing.md).
+   의도적으로 @theme 밖에 둔다 — sm/md/lg/xl 이름이 Tailwind v4 컨테이너
+   스케일과 충돌해 max-w-md 등이 28rem 대신 16px로 깨지는 것을 막기 위함. */
+:root {
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
   --spacing-sm: 12px;
@@ -65,12 +75,6 @@
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
   --spacing-section: 96px;
-
-  /* Fonts */
-  --font-serif: 'Cormorant Garamond', Garamond, Times New Roman, serif;
-  --font-sans:
-    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
 @layer base {
