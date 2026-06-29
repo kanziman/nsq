@@ -246,17 +246,17 @@
         {
           "id": "episodes-api",
           "feature": "에피소드 목록 API",
-          "path": "app/api/episodes/route.ts",
-          "relatedPaths": ["app/api/episodes/[id]/route.ts"],
-          "status": "pending",
+          "path": "src/app/api/episodes/route.ts",
+          "relatedPaths": ["src/app/api/episodes/[id]/route.ts"],
+          "status": "completed",
           "description": "에피소드 목록 조회(GET), 삭제 등 CRUD API"
         },
         {
           "id": "episodes-audio-api",
           "feature": "오디오 스트리밍 API",
-          "path": "app/api/episodes/[id]/audio/route.ts",
+          "path": "src/app/api/episodes/[id]/audio/route.ts",
           "relatedPaths": [".shadowing/episodes/{videoId}/audio.mp3"],
-          "status": "pending",
+          "status": "completed",
           "description": "에피소드 mp3 오디오 파일 스트리밍 제공 (Range 요청 지원)"
         },
         {
@@ -630,6 +630,6 @@
     "totalTasks": 55,
     "mvpTasks": 48,
     "postMvpTasks": 7,
-    "completedTasks": 22
+    "completedTasks": 24
   }
 }
