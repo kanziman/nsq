@@ -40,9 +40,9 @@
 
 **Acceptance Criteria**
 
-- [ ] Given 임포트 진행 중(`downloading`)인 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `409 Conflict` 응답을 반환하고 디렉토리가 지워지지 않고 보존된다.
-- [ ] Given 완료(`completed`) 또는 실패(`failed`) 상태인 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `200 OK` 응답을 반환하고 로컬의 해당 에피소드 디렉토리가 완전히 제거된다.
-- [ ] Given 존재하지 않는 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `404 Not Found` 응답을 반환한다.
+- [x] Given 임포트 진행 중(`downloading`)인 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `409 Conflict` 응답을 반환하고 디렉토리가 지워지지 않고 보존된다.
+- [x] Given 완료(`completed`) 또는 실패(`failed`) 상태인 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `200 OK` 응답을 반환하고 로컬의 해당 에피소드 디렉토리가 완전히 제거된다.
+- [x] Given 존재하지 않는 에피소드 ID, When `DELETE /api/episodes/[id]` 호출, Then `404 Not Found` 응답을 반환한다.
 
 ---
 
