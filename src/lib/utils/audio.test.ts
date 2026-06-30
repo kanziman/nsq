@@ -68,6 +68,20 @@ describe('createAudioManager', () => {
     expect(cb).not.toHaveBeenCalled();
   });
 
+  it('[정상] seekTo should set element.currentTime', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.seekTo(42);
+    expect(el.currentTime).toBe(42);
+  });
+
+  it('[정상] getDuration should return element.duration', () => {
+    const el = makeFakeElement();
+    (el as unknown as { duration: number }).duration = 300;
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    expect(m.getDuration()).toBe(300);
+  });
+
   it('[정상] destroy should pause and detach listeners', () => {
     const el = makeFakeElement();
     const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
