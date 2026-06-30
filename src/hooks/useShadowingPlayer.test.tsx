@@ -9,6 +9,7 @@ type FakeManager = {
   getCurrentTime: ReturnType<typeof vi.fn>;
   getDuration: ReturnType<typeof vi.fn>;
   seekTo: ReturnType<typeof vi.fn>;
+  playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
@@ -26,6 +27,7 @@ vi.mock('@/lib/utils/audio', () => ({
       getCurrentTime: vi.fn(() => 0),
       getDuration: vi.fn(() => 300),
       seekTo: vi.fn(),
+      playSegment: vi.fn(),
       onTimeUpdate: vi.fn((cb: (t: number) => void) => {
         m._time = cb;
         return () => {};
@@ -116,6 +118,62 @@ describe('useShadowingPlayer', () => {
     expect(lastManager.seekTo).toHaveBeenCalledWith(11);
     expect(result.current.currentTime).toBe(11);
     expect(result.current.currentSegmentIndex).toBe(2);
+  });
+
+  it('[정상] next() should seek to next segment start', () => {
+    const { result } = setup();
+    act(() => lastManager._time!(6)); // idx 1
+    act(() => result.current.next());
+    expect(lastManager.seekTo).toHaveBeenLastCalledWith(10);
+    expect(result.current.currentSegmentIndex).toBe(2);
+  });
+
+  it('[정상] prev() should seek to previous segment start', () => {
+    const { result } = setup();
+    act(() => lastManager._time!(6)); // idx 1
+    act(() => result.current.prev());
+    expect(lastManager.seekTo).toHaveBeenLastCalledWith(0);
+    expect(result.current.currentSegmentIndex).toBe(0);
+  });
+
+  it('[경계] next() at last segment should clamp', () => {
+    const { result } = setup();
+    act(() => lastManager._time!(12)); // idx 2 (last)
+    act(() => result.current.next());
+    expect(result.current.currentSegmentIndex).toBe(2);
+  });
+
+  it('[경계] prev() at first segment should clamp', () => {
+    const { result } = setup();
+    act(() => lastManager._time!(2)); // idx 0
+    act(() => result.current.prev());
+    expect(result.current.currentSegmentIndex).toBe(0);
+  });
+
+  it('[정상] goToSegment(i) should seek to segment start and play', () => {
+    const { result } = setup();
+    act(() => result.current.goToSegment(2));
+    expect(lastManager.seekTo).toHaveBeenCalledWith(10);
+    expect(lastManager.play).toHaveBeenCalled();
+    expect(result.current.isPlaying).toBe(true);
+    expect(result.current.currentSegmentIndex).toBe(2);
+  });
+
+  it('[경계] next() should preserve playing state (no pause)', () => {
+    const { result } = setup();
+    act(() => result.current.play());
+    act(() => lastManager._time!(2));
+    act(() => result.current.next());
+    expect(result.current.isPlaying).toBe(true);
+    expect(lastManager.pause).not.toHaveBeenCalled();
+  });
+
+  it('[경계] goToSegment out-of-range should be a no-op', () => {
+    const { result } = setup();
+    act(() => result.current.goToSegment(99));
+    act(() => result.current.goToSegment(-1));
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+    expect(lastManager.play).not.toHaveBeenCalled();
   });
 
   it('[경계] should keep previous segment active during inter-segment gap', () => {
