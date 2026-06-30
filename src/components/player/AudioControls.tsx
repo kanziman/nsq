@@ -9,6 +9,8 @@ interface AudioControlsProps {
   currentTime: number;
   duration: number;
   onSeek: (time: number) => void;
+  onPrev: () => void;
+  onNext: () => void;
 }
 
 export default function AudioControls({
@@ -17,9 +19,19 @@ export default function AudioControls({
   currentTime,
   duration,
   onSeek,
+  onPrev,
+  onNext,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex items-center gap-3">
+      <Button
+        variant="secondaryOnDark"
+        size="icon"
+        aria-label="이전 세그먼트"
+        onClick={onPrev}
+      >
+        ⏮
+      </Button>
       <Button
         variant="primary"
         size="icon"
@@ -28,6 +40,14 @@ export default function AudioControls({
         onClick={onToggle}
       >
         {isPlaying ? '⏸' : '▶'}
+      </Button>
+      <Button
+        variant="secondaryOnDark"
+        size="icon"
+        aria-label="다음 세그먼트"
+        onClick={onNext}
+      >
+        ⏭
       </Button>
 
       <span className="font-mono text-xs text-on-dark-soft">
