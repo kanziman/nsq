@@ -1,6 +1,6 @@
 'use client';
 
-import { memo } from 'react';
+import { memo, useEffect, useRef } from 'react';
 import type { Segment } from '@/lib/types';
 import { SPEAKER_COLORS } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
@@ -16,6 +16,12 @@ function ScriptView({
   currentSegmentIndex,
   onSegmentClick,
 }: ScriptViewProps): React.ReactElement {
+  const activeRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, [currentSegmentIndex]);
+
   return (
     <div className="space-y-3">
       {segments.map((seg, i) => {
@@ -24,6 +30,7 @@ function ScriptView({
         return (
           <div
             key={seg.id}
+            ref={active ? activeRef : undefined}
             data-active={active || undefined}
             onClick={onSegmentClick ? () => onSegmentClick(i) : undefined}
             className={[

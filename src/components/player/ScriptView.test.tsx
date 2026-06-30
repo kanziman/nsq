@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { describe, it, expect, afterEach } from 'vitest';
+import { describe, it, expect, afterEach, beforeEach, vi } from 'vitest';
 import { render, screen, cleanup } from '@testing-library/react';
 import ScriptView from './ScriptView';
 import { SPEAKER_COLORS } from '@/lib/constants/speakers';
@@ -10,6 +10,9 @@ const SEGMENTS: Segment[] = [
   { id: 's2', start: 70, end: 75, speaker: 'DUBNER', text: 'How are you?' },
 ];
 
+beforeEach(() => {
+  Element.prototype.scrollIntoView = vi.fn();
+});
 afterEach(() => cleanup());
 
 describe('ScriptView', () => {
@@ -40,6 +43,22 @@ describe('ScriptView', () => {
     render(<ScriptView segments={SEGMENTS} currentSegmentIndex={1} />);
     const active = document.querySelector('[data-active="true"]');
     expect(active?.textContent).toContain('How are you?');
+  });
+
+  it('[정상] should scrollIntoView the active segment when currentSegmentIndex changes', () => {
+    const spy = vi.spyOn(Element.prototype, 'scrollIntoView');
+    const { rerender } = render(
+      <ScriptView segments={SEGMENTS} currentSegmentIndex={0} />,
+    );
+    spy.mockClear();
+    rerender(<ScriptView segments={SEGMENTS} currentSegmentIndex={1} />);
+    expect(spy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'center' });
+  });
+
+  it('[경계] should not throw when there is no active segment (-1)', () => {
+    expect(() =>
+      render(<ScriptView segments={SEGMENTS} currentSegmentIndex={-1} />),
+    ).not.toThrow();
   });
 
   it('[경계] should apply color class for BOTH and NARRATOR speakers', () => {
