@@ -2,6 +2,8 @@ export interface AudioManager {
   play(): void;
   pause(): void;
   getCurrentTime(): number;
+  getDuration(): number;
+  seekTo(time: number): void;
   onTimeUpdate(cb: (currentTime: number) => void): () => void;
   onEnded(cb: () => void): () => void;
   destroy(): void;
@@ -29,6 +31,12 @@ export function createAudioManager(
     },
     getCurrentTime() {
       return el.currentTime;
+    },
+    getDuration() {
+      return el.duration;
+    },
+    seekTo(time) {
+      el.currentTime = time;
     },
     onTimeUpdate(cb) {
       const handler = () => cb(el.currentTime);

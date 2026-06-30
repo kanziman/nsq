@@ -14,18 +14,25 @@ export function ShadowingPlayer({
   episode,
   segments,
 }: ShadowingPlayerProps): React.ReactElement {
-  const { isPlaying, currentSegmentIndex, toggle } = useShadowingPlayer({
-    episodeId: episode.id,
-    segments,
-  });
+  const { isPlaying, currentSegmentIndex, currentTime, toggle, seekTo } =
+    useShadowingPlayer({
+      episodeId: episode.id,
+      segments,
+    });
 
   return (
     <div className="space-y-6">
       {/* 상단 dark 플레이어 영역 */}
       <section className="sticky top-4 z-10 rounded-lg bg-surface-dark p-6 text-on-dark">
         <h2 className="font-serif text-xl">{episode.title}</h2>
-        <div className="mt-4 flex items-center justify-center">
-          <AudioControls isPlaying={isPlaying} onToggle={toggle} />
+        <div className="mt-4">
+          <AudioControls
+            isPlaying={isPlaying}
+            onToggle={toggle}
+            currentTime={currentTime}
+            duration={episode.duration}
+            onSeek={seekTo}
+          />
         </div>
       </section>
 

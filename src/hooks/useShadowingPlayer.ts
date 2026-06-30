@@ -9,9 +9,11 @@ export interface UseShadowingPlayerArgs {
 export interface UseShadowingPlayerResult {
   isPlaying: boolean;
   currentSegmentIndex: number;
+  currentTime: number;
   play(): void;
   pause(): void;
   toggle(): void;
+  seekTo(time: number): void;
 }
 
 /** start <= t 인 마지막 세그먼트 인덱스. t가 첫 세그먼트 시작 이전이면 -1. */
@@ -35,6 +37,7 @@ export function useShadowingPlayer({
   const isPlayingRef = useRef(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(-1);
+  const [currentTime, setCurrentTime] = useState(0);
 
   // 콜백에서 최신 segments를 참조하기 위한 ref (effect 재구독 방지)
   const segmentsRef = useRef(segments);
@@ -45,6 +48,7 @@ export function useShadowingPlayer({
     managerRef.current = manager;
 
     const offTime = manager.onTimeUpdate((t) => {
+      setCurrentTime(t);
       setCurrentSegmentIndex(computeSegmentIndex(segmentsRef.current, t));
     });
     // 연속 재생: 세그먼트 경계에서 멈추지 않고, 오디오 종료 시에만 정지
@@ -81,5 +85,19 @@ export function useShadowingPlayer({
     }
   }, [play, pause]);
 
-  return { isPlaying, currentSegmentIndex, play, pause, toggle };
+  const seekTo = useCallback((time: number) => {
+    managerRef.current?.seekTo(time);
+    setCurrentTime(time);
+    setCurrentSegmentIndex(computeSegmentIndex(segmentsRef.current, time));
+  }, []);
+
+  return {
+    isPlaying,
+    currentSegmentIndex,
+    currentTime,
+    play,
+    pause,
+    toggle,
+    seekTo,
+  };
 }

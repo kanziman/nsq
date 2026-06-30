@@ -7,6 +7,8 @@ type FakeManager = {
   play: ReturnType<typeof vi.fn>;
   pause: ReturnType<typeof vi.fn>;
   getCurrentTime: ReturnType<typeof vi.fn>;
+  getDuration: ReturnType<typeof vi.fn>;
+  seekTo: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
@@ -22,6 +24,8 @@ vi.mock('@/lib/utils/audio', () => ({
       play: vi.fn(),
       pause: vi.fn(),
       getCurrentTime: vi.fn(() => 0),
+      getDuration: vi.fn(() => 300),
+      seekTo: vi.fn(),
       onTimeUpdate: vi.fn((cb: (t: number) => void) => {
         m._time = cb;
         return () => {};
@@ -98,6 +102,20 @@ describe('useShadowingPlayer', () => {
     act(() => lastManager._time!(10.1));
     expect(lastManager.pause).not.toHaveBeenCalled();
     expect(result.current.isPlaying).toBe(true);
+  });
+
+  it('[정상] currentTime should update from timeupdate', () => {
+    const { result } = setup();
+    act(() => lastManager._time!(8));
+    expect(result.current.currentTime).toBe(8);
+  });
+
+  it('[정상] seekTo should call manager.seekTo and update currentTime/index', () => {
+    const { result } = setup();
+    act(() => result.current.seekTo(11));
+    expect(lastManager.seekTo).toHaveBeenCalledWith(11);
+    expect(result.current.currentTime).toBe(11);
+    expect(result.current.currentSegmentIndex).toBe(2);
   });
 
   it('[경계] should keep previous segment active during inter-segment gap', () => {
