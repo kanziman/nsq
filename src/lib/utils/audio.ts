@@ -1,9 +1,13 @@
+/** 세그먼트/구간 경계에서 다음 세그먼트로 새는 것을 막기 위한 back-off(초). */
+export const BOUNDARY_PARK_BACKOFF_SEC = 0.05;
+
 export interface AudioManager {
   play(): void;
   pause(): void;
   getCurrentTime(): number;
   getDuration(): number;
   seekTo(time: number): void;
+  playSegment(start: number, end: number): void;
   onTimeUpdate(cb: (currentTime: number) => void): () => void;
   onEnded(cb: () => void): () => void;
   destroy(): void;
@@ -21,6 +25,7 @@ export function createAudioManager(
     el.src = src;
   }
   const offs: Array<() => void> = [];
+  let segmentWatcherOff: (() => void) | null = null;
 
   return {
     play() {
@@ -37,6 +42,32 @@ export function createAudioManager(
     },
     seekTo(time) {
       el.currentTime = time;
+    },
+    playSegment(start, end) {
+      // 이전 구간 watcher가 남아 다음 구간 재생에 간섭하지 않도록 먼저 해제
+      if (segmentWatcherOff) {
+        segmentWatcherOff();
+        segmentWatcherOff = null;
+      }
+      const parkAt = Math.max(start, end - BOUNDARY_PARK_BACKOFF_SEC);
+      el.currentTime = start;
+      const watcher = () => {
+        if (el.currentTime >= parkAt) {
+          el.pause();
+          el.currentTime = parkAt;
+          off();
+        }
+      };
+      const off = () => {
+        el.removeEventListener('timeupdate', watcher);
+        if (segmentWatcherOff === off) {
+          segmentWatcherOff = null;
+        }
+      };
+      el.addEventListener('timeupdate', watcher);
+      segmentWatcherOff = off;
+      offs.push(off);
+      void el.play();
     },
     onTimeUpdate(cb) {
       const handler = () => cb(el.currentTime);

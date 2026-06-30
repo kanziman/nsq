@@ -14,6 +14,9 @@ export interface UseShadowingPlayerResult {
   pause(): void;
   toggle(): void;
   seekTo(time: number): void;
+  next(): void;
+  prev(): void;
+  goToSegment(index: number): void;
 }
 
 /** start <= t 인 마지막 세그먼트 인덱스. t가 첫 세그먼트 시작 이전이면 -1. */
@@ -35,6 +38,7 @@ export function useShadowingPlayer({
 }: UseShadowingPlayerArgs): UseShadowingPlayerResult {
   const managerRef = useRef<AudioManager | null>(null);
   const isPlayingRef = useRef(false);
+  const indexRef = useRef(-1);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(-1);
   const [currentTime, setCurrentTime] = useState(0);
@@ -43,13 +47,18 @@ export function useShadowingPlayer({
   const segmentsRef = useRef(segments);
   segmentsRef.current = segments;
 
+  const applyIndex = useCallback((i: number) => {
+    indexRef.current = i;
+    setCurrentSegmentIndex(i);
+  }, []);
+
   useEffect(() => {
     const manager = createAudioManager(`/api/episodes/${episodeId}/audio`);
     managerRef.current = manager;
 
     const offTime = manager.onTimeUpdate((t) => {
       setCurrentTime(t);
-      setCurrentSegmentIndex(computeSegmentIndex(segmentsRef.current, t));
+      applyIndex(computeSegmentIndex(segmentsRef.current, t));
     });
     // 연속 재생: 세그먼트 경계에서 멈추지 않고, 오디오 종료 시에만 정지
     const offEnded = manager.onEnded(() => {
@@ -63,7 +72,7 @@ export function useShadowingPlayer({
       manager.destroy();
       managerRef.current = null;
     };
-  }, [episodeId]);
+  }, [episodeId, applyIndex]);
 
   const play = useCallback(() => {
     managerRef.current?.play();
@@ -85,11 +94,38 @@ export function useShadowingPlayer({
     }
   }, [play, pause]);
 
-  const seekTo = useCallback((time: number) => {
-    managerRef.current?.seekTo(time);
-    setCurrentTime(time);
-    setCurrentSegmentIndex(computeSegmentIndex(segmentsRef.current, time));
-  }, []);
+  const seekTo = useCallback(
+    (time: number) => {
+      managerRef.current?.seekTo(time);
+      setCurrentTime(time);
+      applyIndex(computeSegmentIndex(segmentsRef.current, time));
+    },
+    [applyIndex],
+  );
+
+  const next = useCallback(() => {
+    const segs = segmentsRef.current;
+    if (segs.length === 0) return;
+    const target = Math.min(indexRef.current + 1, segs.length - 1);
+    seekTo(segs[Math.max(target, 0)].start);
+  }, [seekTo]);
+
+  const prev = useCallback(() => {
+    const segs = segmentsRef.current;
+    if (segs.length === 0) return;
+    const target = Math.max(indexRef.current - 1, 0);
+    seekTo(segs[target].start);
+  }, [seekTo]);
+
+  const goToSegment = useCallback(
+    (index: number) => {
+      const segs = segmentsRef.current;
+      if (index < 0 || index >= segs.length) return;
+      seekTo(segs[index].start);
+      play();
+    },
+    [seekTo, play],
+  );
 
   return {
     isPlaying,
@@ -99,5 +135,8 @@ export function useShadowingPlayer({
     pause,
     toggle,
     seekTo,
+    next,
+    prev,
+    goToSegment,
   };
 }

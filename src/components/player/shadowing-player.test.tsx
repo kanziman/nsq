@@ -15,6 +15,7 @@ type FakeManager = {
   getCurrentTime: ReturnType<typeof vi.fn>;
   getDuration: ReturnType<typeof vi.fn>;
   seekTo: ReturnType<typeof vi.fn>;
+  playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
@@ -31,6 +32,7 @@ vi.mock('@/lib/utils/audio', () => ({
       getCurrentTime: vi.fn(() => 0),
       getDuration: vi.fn(() => 15),
       seekTo: vi.fn(),
+      playSegment: vi.fn(),
       onTimeUpdate: vi.fn((cb: (t: number) => void) => {
         m._time = cb;
         return () => {};
@@ -131,6 +133,24 @@ describe('ShadowingPlayer', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
     act(() => lastManager._time!(6));
     expect(screen.getByText('00:06')).toBeInTheDocument();
+  });
+
+  it('[정상] clicking a segment should seek to its start and start playback', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByText('second line'));
+    });
+    expect(lastManager.seekTo).toHaveBeenCalledWith(5); // s2.start
+    expect(lastManager.play).toHaveBeenCalled();
+  });
+
+  it('[정상] ⏭ should advance highlight to the next segment', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '다음 세그먼트' }));
+    });
+    const active = document.querySelector('[data-active="true"]');
+    expect(active?.textContent).toContain('first line'); // -1 → 0
   });
 
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {

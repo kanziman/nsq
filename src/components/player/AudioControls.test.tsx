@@ -11,6 +11,8 @@ const baseProps = {
   currentTime: 65,
   duration: 320,
   onSeek: vi.fn(),
+  onPrev: vi.fn(),
+  onNext: vi.fn(),
 };
 
 describe('AudioControls', () => {
@@ -40,5 +42,15 @@ describe('AudioControls', () => {
     const slider = screen.getByRole('slider', { name: '탐색' });
     fireEvent.change(slider, { target: { value: '100' } });
     expect(onSeek).toHaveBeenCalledWith(100);
+  });
+
+  it('[정상] should call onPrev/onNext when ⏮/⏭ clicked', () => {
+    const onPrev = vi.fn();
+    const onNext = vi.fn();
+    render(<AudioControls {...baseProps} onPrev={onPrev} onNext={onNext} />);
+    fireEvent.click(screen.getByRole('button', { name: '이전 세그먼트' }));
+    fireEvent.click(screen.getByRole('button', { name: '다음 세그먼트' }));
+    expect(onPrev).toHaveBeenCalledTimes(1);
+    expect(onNext).toHaveBeenCalledTimes(1);
   });
 });

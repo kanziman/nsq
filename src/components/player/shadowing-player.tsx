@@ -14,11 +14,19 @@ export function ShadowingPlayer({
   episode,
   segments,
 }: ShadowingPlayerProps): React.ReactElement {
-  const { isPlaying, currentSegmentIndex, currentTime, toggle, seekTo } =
-    useShadowingPlayer({
-      episodeId: episode.id,
-      segments,
-    });
+  const {
+    isPlaying,
+    currentSegmentIndex,
+    currentTime,
+    toggle,
+    seekTo,
+    next,
+    prev,
+    goToSegment,
+  } = useShadowingPlayer({
+    episodeId: episode.id,
+    segments,
+  });
 
   return (
     <div className="space-y-6">
@@ -32,6 +40,8 @@ export function ShadowingPlayer({
             currentTime={currentTime}
             duration={episode.duration}
             onSeek={seekTo}
+            onPrev={prev}
+            onNext={next}
           />
         </div>
       </section>
@@ -40,6 +50,7 @@ export function ShadowingPlayer({
       <ScriptView
         segments={segments}
         currentSegmentIndex={currentSegmentIndex}
+        onSegmentClick={goToSegment}
       />
     </div>
   );
