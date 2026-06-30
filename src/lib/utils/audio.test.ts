@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { createAudioManager } from './audio';
+import { createAudioManager, BOUNDARY_PARK_BACKOFF_SEC } from './audio';
 
 // 최소 HTMLAudioElement 페이크 (DI 주입용)
 function makeFakeElement() {
@@ -80,6 +80,44 @@ describe('createAudioManager', () => {
     (el as unknown as { duration: number }).duration = 300;
     const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
     expect(m.getDuration()).toBe(300);
+  });
+
+  it('[정상] playSegment should seek to start and play', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.playSegment(2, 5);
+    expect(el.currentTime).toBe(2);
+    expect(el.play).toHaveBeenCalled();
+  });
+
+  it('[정상] playSegment should pause and park at end - BACKOFF on boundary', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.playSegment(0, 5);
+    el.currentTime = 4.96;
+    el.emit('timeupdate');
+    expect(el.pause).toHaveBeenCalled();
+    expect(el.currentTime).toBeCloseTo(5 - BOUNDARY_PARK_BACKOFF_SEC, 5);
+  });
+
+  it('[경계] playSegment should not bleed into next when end === next.start', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.playSegment(0, 5); // 다음 세그먼트 start=5
+    el.currentTime = 5.0;
+    el.emit('timeupdate');
+    expect(el.currentTime).toBeLessThan(5);
+  });
+
+  it('[경계] consecutive playSegment should deactivate the previous watcher', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.playSegment(0, 5); // parkAt 4.95
+    m.playSegment(10, 15); // 새 구간, 이전 watcher 해제되어야
+    el.pause.mockClear();
+    el.currentTime = 4.95; // 첫 구간 park 지점 — 이전 watcher가 살아있으면 pause됨
+    el.emit('timeupdate');
+    expect(el.pause).not.toHaveBeenCalled();
   });
 
   it('[정상] destroy should pause and detach listeners', () => {
