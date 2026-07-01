@@ -1,13 +1,28 @@
 'use client';
 
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
 import SpeakerFilter from './SpeakerFilter';
 import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
+import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
 
 const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
+
+/** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
+function stepPlaybackRate(current: number, dir: 1 | -1): number {
+  const base = PLAYBACK_RATE_PRESETS.indexOf(
+    current as (typeof PLAYBACK_RATE_PRESETS)[number],
+  );
+  const from = base === -1 ? PLAYBACK_RATE_PRESETS.indexOf(1) : base;
+  const nextIdx = Math.min(
+    PLAYBACK_RATE_PRESETS.length - 1,
+    Math.max(0, from + dir),
+  );
+  return PLAYBACK_RATE_PRESETS[nextIdx];
+}
 
 export interface ShadowingPlayerProps {
   episode: Episode;
@@ -48,6 +63,15 @@ export function ShadowingPlayer({
   const dimmedSpeakers = isSpeakerFilterActive
     ? ALL_SPEAKERS.filter((s) => !enabledSpeakers.includes(s))
     : [];
+
+  useKeyboardShortcuts({
+    onTogglePlay: toggle,
+    onPrev: prev,
+    onNext: next,
+    onToggleLoop: toggleLoop,
+    onSpeedUp: () => setPlaybackRate(stepPlaybackRate(playbackRate, 1)),
+    onSpeedDown: () => setPlaybackRate(stepPlaybackRate(playbackRate, -1)),
+  });
 
   return (
     <div className="space-y-6">
