@@ -230,6 +230,48 @@ describe('ShadowingPlayer', () => {
     expect(document.querySelectorAll('[data-dimmed="true"]')).toHaveLength(0);
   });
 
+  it('[정상] Space key should toggle playback (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', {
+          key: ' ',
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+    });
+    expect(lastManager.play).toHaveBeenCalled();
+  });
+
+  it('[정상] +/- keys should step playbackRate through presets (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', { key: '+', bubbles: true }),
+      );
+    });
+    expect(screen.getByRole('status')).toHaveTextContent('1.25x');
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', { key: '-', bubbles: true }),
+      );
+    });
+    expect(screen.getByRole('status')).toHaveTextContent('1x');
+  });
+
+  it('[경계] repeated + should cap playbackRate at the max preset (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    for (let i = 0; i < 6; i++) {
+      act(() => {
+        window.dispatchEvent(
+          new KeyboardEvent('keydown', { key: '+', bubbles: true }),
+        );
+      });
+    }
+    expect(screen.getByRole('status')).toHaveTextContent('2x');
+  });
+
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
     fireEvent.click(screen.getByRole('button', { name: '재생' }));
