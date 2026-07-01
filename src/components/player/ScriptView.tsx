@@ -4,10 +4,12 @@ import { memo, useEffect, useRef, useState } from 'react';
 import type { Segment } from '@/lib/types';
 import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
+import { SegmentText } from './SegmentText';
 
 interface ScriptViewProps {
   segments: Segment[];
   currentSegmentIndex?: number;
+  currentTime?: number;
   selection?: { start: number; end: number } | null;
   onSegmentClick?: (index: number, shiftKey: boolean) => void;
   dimmedSpeakers?: SpeakerKey[];
@@ -16,6 +18,7 @@ interface ScriptViewProps {
 function ScriptView({
   segments,
   currentSegmentIndex,
+  currentTime,
   selection,
   onSegmentClick,
   dimmedSpeakers,
@@ -94,7 +97,12 @@ function ScriptView({
                 {formatTime(seg.start)}
               </span>
             </div>
-            <p className="text-body leading-relaxed">{seg.text}</p>
+            <SegmentText
+              segment={seg}
+              highlightWords={active}
+              currentTime={currentTime}
+              className="text-body leading-relaxed"
+            />
             {seg.translation
               ? (() => {
                   const blurred = !(revealAll || revealed.has(i));

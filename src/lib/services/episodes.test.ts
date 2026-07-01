@@ -1,8 +1,12 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import fs from 'fs/promises';
 import path from 'path';
-import { getImportState, saveImportState } from './episodes';
-import type { ImportState } from '../types';
+import {
+  getImportState,
+  saveImportState,
+  getEpisodeSegments,
+} from './episodes';
+import type { ImportState, Segment } from '../types';
 
 const BASE = path.join(process.cwd(), '.shadowing', 'episodes');
 const TEST_VIDEO_ID = 'test-episodes-vid';
@@ -63,5 +67,47 @@ describe('getImportState', () => {
     const result = await getImportState(TEST_VIDEO_ID);
 
     expect(result).toBeNull();
+  });
+});
+
+describe('getEpisodeSegments (VTT 단어 매핑)', () => {
+  const SEGMENTS: Segment[] = [
+    { id: 's1', start: 0, end: 3, speaker: 'DUCKWORTH', text: 'hello there' },
+  ];
+
+  async function writeSegments(): Promise<void> {
+    await fs.mkdir(episodeDir(TEST_VIDEO_ID), { recursive: true });
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'segments.json'),
+      JSON.stringify(SEGMENTS),
+    );
+  }
+
+  it('[경계] should return raw segments (no words) when no VTT file exists (AC2)', async () => {
+    await writeSegments();
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].words).toBeUndefined();
+    expect(result[0].text).toBe('hello there');
+  });
+
+  it('[예외] should fall back to raw segments when subtitle.en.vtt is malformed (AC2)', async () => {
+    await writeSegments();
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'NOT VALID VTT CONTENT @@@@',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].words).toBeUndefined();
+    expect(result[0].text).toBe('hello there');
+  });
+
+  it('[정상] should map VTT words into segments when subtitle.en.vtt exists (AC1)', async () => {
+    await writeSegments();
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].words?.length).toBeGreaterThan(0);
   });
 });

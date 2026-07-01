@@ -1,6 +1,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { Episode, Segment, ImportState } from '../types';
+import { parseVtt } from './import/vtt/parse';
+import { mapWordsToSegments } from '../utils/words';
 
 const BASE_DIR = path.join(process.cwd(), '.shadowing', 'episodes');
 
@@ -109,7 +111,19 @@ export async function getEpisodeById(id: string): Promise<Episode | null> {
 export async function getEpisodeSegments(id: string): Promise<Segment[]> {
   const segmentsPath = path.join(BASE_DIR, id, 'segments.json');
   const segments = await readJson<Segment[]>(segmentsPath);
-  return segments || [];
+  if (!segments) return [];
+
+  // subtitle.en.vtt가 있으면 단어 타이밍을 매핑한다. 부재/실패 시 세그먼트 원본으로 폴백.
+  try {
+    const vttPath = path.join(BASE_DIR, id, 'subtitle.en.vtt');
+    if (await exists(vttPath)) {
+      const vtt = await fs.readFile(vttPath, 'utf-8');
+      return mapWordsToSegments(segments, parseVtt(vtt));
+    }
+  } catch (error) {
+    console.error('Failed to map VTT words:', error);
+  }
+  return segments;
 }
 
 /**
