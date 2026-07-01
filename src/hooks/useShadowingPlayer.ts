@@ -1,11 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   createAudioManager,
   BOUNDARY_PARK_BACKOFF_SEC,
   DEFAULT_PLAYBACK_RATE,
   type AudioManager,
 } from '@/lib/utils/audio';
+import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import type { Segment } from '@/lib/types';
+
+const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
+const EMPTY_TARGET_NOTICE = '선택한 화자의 대사가 없어 필터를 해제했어요.';
 
 export interface Selection {
   start: number;
@@ -24,6 +28,9 @@ export interface UseShadowingPlayerResult {
   isLooping: boolean;
   repeatCount: number;
   playbackRate: number;
+  enabledSpeakers: SpeakerKey[];
+  isSpeakerFilterActive: boolean;
+  filterNotice: string | null;
   play(): void;
   pause(): void;
   toggle(): void;
@@ -35,6 +42,8 @@ export interface UseShadowingPlayerResult {
   extendSelectionTo(index: number): void;
   toggleLoop(): void;
   setPlaybackRate(rate: number): void;
+  toggleSpeaker(speaker: SpeakerKey): void;
+  dismissFilterNotice(): void;
 }
 
 /** start <= t 인 마지막 세그먼트 인덱스. t가 첫 세그먼트 시작 이전이면 -1. */
@@ -61,6 +70,7 @@ export function useShadowingPlayer({
   const loopingRef = useRef(false);
   const anchorRef = useRef(-1);
   const rateRef = useRef(DEFAULT_PLAYBACK_RATE);
+  const enabledSpeakersRef = useRef<SpeakerKey[]>(ALL_SPEAKERS);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(-1);
   const [currentTime, setCurrentTime] = useState(0);
@@ -68,6 +78,19 @@ export function useShadowingPlayer({
   const [isLooping, setIsLooping] = useState(false);
   const [repeatCount, setRepeatCount] = useState(0);
   const [playbackRate, setPlaybackRateState] = useState(DEFAULT_PLAYBACK_RATE);
+  const [enabledSpeakers, setEnabledSpeakers] =
+    useState<SpeakerKey[]>(ALL_SPEAKERS);
+  const [filterNotice, setFilterNotice] = useState<string | null>(null);
+
+  const presentSpeakers = useMemo(() => {
+    const set = new Set<SpeakerKey>();
+    segments.forEach((seg) => set.add(seg.speaker));
+    return set;
+  }, [segments]);
+  const isSpeakerFilterActive = useMemo(
+    () => [...presentSpeakers].some((s) => !enabledSpeakers.includes(s)),
+    [presentSpeakers, enabledSpeakers],
+  );
 
   // 콜백에서 최신 segments를 참조하기 위한 ref (effect 재구독 방지)
   const segmentsRef = useRef(segments);
@@ -100,7 +123,31 @@ export function useShadowingPlayer({
           return;
         }
       }
-      applyIndex(computeSegmentIndex(segmentsRef.current, t));
+      const segs = segmentsRef.current;
+      const idx = computeSegmentIndex(segs, t);
+      // 화자 필터: 재생 중 비대상 세그먼트 진입 시 다음 대상으로 스킵, 없으면 정지 (AC1)
+      // A-B 루프 중에는 루프 범위가 우선이므로 필터 스킵을 억제한다.
+      if (isPlayingRef.current && !loopingRef.current && idx >= 0) {
+        const enabled = enabledSpeakersRef.current;
+        const seg = segs[idx];
+        if (seg && !enabled.includes(seg.speaker)) {
+          const nextIdx = segs.findIndex(
+            (s, i) => i > idx && enabled.includes(s.speaker),
+          );
+          if (nextIdx >= 0) {
+            manager.seekTo(segs[nextIdx].start);
+            setCurrentTime(segs[nextIdx].start);
+            applyIndex(nextIdx);
+          } else {
+            manager.pause();
+            isPlayingRef.current = false;
+            setIsPlaying(false);
+            applyIndex(idx);
+          }
+          return;
+        }
+      }
+      applyIndex(idx);
     });
     // 연속 재생: 세그먼트 경계에서 멈추지 않고, 오디오 종료 시에만 정지
     const offEnded = manager.onEnded(() => {
@@ -193,6 +240,28 @@ export function useShadowingPlayer({
     setPlaybackRateState(rate);
   }, []);
 
+  const toggleSpeaker = useCallback((speaker: SpeakerKey) => {
+    const current = enabledSpeakersRef.current;
+    const next = current.includes(speaker)
+      ? current.filter((s) => s !== speaker)
+      : [...current, speaker];
+    // 존재 화자 중 대상이 0개면 전체 복원 + 안내 (AC3)
+    const hasTarget = segmentsRef.current.some((seg) =>
+      next.includes(seg.speaker),
+    );
+    if (!hasTarget) {
+      enabledSpeakersRef.current = ALL_SPEAKERS;
+      setEnabledSpeakers(ALL_SPEAKERS);
+      setFilterNotice(EMPTY_TARGET_NOTICE);
+      return;
+    }
+    enabledSpeakersRef.current = next;
+    setEnabledSpeakers(next);
+    setFilterNotice(null);
+  }, []);
+
+  const dismissFilterNotice = useCallback(() => setFilterNotice(null), []);
+
   const toggleLoop = useCallback(() => {
     const sel = selectionRef.current;
     if (!sel) return;
@@ -214,6 +283,9 @@ export function useShadowingPlayer({
     isLooping,
     repeatCount,
     playbackRate,
+    enabledSpeakers,
+    isSpeakerFilterActive,
+    filterNotice,
     play,
     pause,
     toggle,
@@ -225,5 +297,7 @@ export function useShadowingPlayer({
     extendSelectionTo,
     toggleLoop,
     setPlaybackRate,
+    toggleSpeaker,
+    dismissFilterNotice,
   };
 }

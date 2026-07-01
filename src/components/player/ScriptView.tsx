@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useRef } from 'react';
 import type { Segment } from '@/lib/types';
-import { SPEAKER_COLORS } from '@/lib/constants/speakers';
+import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
 
 interface ScriptViewProps {
@@ -10,6 +10,7 @@ interface ScriptViewProps {
   currentSegmentIndex?: number;
   selection?: { start: number; end: number } | null;
   onSegmentClick?: (index: number, shiftKey: boolean) => void;
+  dimmedSpeakers?: SpeakerKey[];
 }
 
 function ScriptView({
@@ -17,6 +18,7 @@ function ScriptView({
   currentSegmentIndex,
   selection,
   onSegmentClick,
+  dimmedSpeakers,
 }: ScriptViewProps): React.ReactElement {
   const activeRef = useRef<HTMLDivElement | null>(null);
 
@@ -31,12 +33,14 @@ function ScriptView({
         const active = i === currentSegmentIndex;
         const selected =
           !!selection && i >= selection.start && i <= selection.end;
+        const dimmed = !!dimmedSpeakers?.includes(seg.speaker);
         return (
           <div
             key={seg.id}
             ref={active ? activeRef : undefined}
             data-active={active || undefined}
             data-selected={selected || undefined}
+            data-dimmed={dimmed || undefined}
             onClick={
               onSegmentClick ? (e) => onSegmentClick(i, e.shiftKey) : undefined
             }
@@ -46,6 +50,7 @@ function ScriptView({
                 ? `${sp.bgClass} ${sp.borderClass}`
                 : 'border-hairline bg-transparent',
               selected ? 'ring-2 ring-primary/40' : '',
+              dimmed ? 'opacity-40' : '',
               onSegmentClick ? 'cursor-pointer hover:bg-surface-card' : '',
             ]
               .filter(Boolean)

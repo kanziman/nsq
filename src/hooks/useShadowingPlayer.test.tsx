@@ -326,6 +326,97 @@ describe('useShadowingPlayer', () => {
     expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(0.75);
   });
 
+  it('[정상] enabledSpeakers should default to all four speakers', () => {
+    const { result } = setup();
+    expect([...result.current.enabledSpeakers].sort()).toEqual([
+      'BOTH',
+      'DUBNER',
+      'DUCKWORTH',
+      'NARRATOR',
+    ]);
+  });
+
+  it('[정상] isSpeakerFilterActive should be false by default', () => {
+    const { result } = setup();
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[정상] toggleSpeaker should remove then re-add a speaker', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    expect(result.current.enabledSpeakers).not.toContain('DUBNER');
+    expect(result.current.isSpeakerFilterActive).toBe(true);
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    expect(result.current.enabledSpeakers).toContain('DUBNER');
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[정상] while playing, entering a disabled-speaker segment should seek to next enabled start (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.play());
+    act(() => result.current.toggleSpeaker('DUBNER')); // s2 화자 비활성
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6)); // s2(DUBNER) 진입
+    expect(lastManager.seekTo).toHaveBeenCalledWith(10); // s3.start
+  });
+
+  it('[경계] while playing, no enabled segment ahead should pause (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.play());
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH'));
+    lastManager.pause.mockClear();
+    act(() => lastManager._time!(6)); // s2·s3 모두 비활성 → 뒤에 대상 없음
+    expect(lastManager.pause).toHaveBeenCalled();
+  });
+
+  it('[경계] filter skip should not run while paused', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6));
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+  });
+
+  it('[정상] toggling all present speakers off should auto-restore all and set filterNotice (AC3)', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUCKWORTH'));
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH')); // 존재화자∩활성 = 0
+    expect(result.current.filterNotice).not.toBeNull();
+    expect([...result.current.enabledSpeakers].sort()).toEqual([
+      'BOTH',
+      'DUBNER',
+      'DUCKWORTH',
+      'NARRATOR',
+    ]);
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[경계] speaker filter skip should be suppressed while A-B looping (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(2)); // range {0,1,2}
+    act(() => result.current.toggleLoop()); // 루프 on → play
+    act(() => result.current.toggleSpeaker('DUBNER')); // 범위 내 s2 비대상
+    lastManager.pause.mockClear();
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6)); // s2(DUBNER) 진입, 하지만 루프 우선
+    expect(lastManager.pause).not.toHaveBeenCalled();
+    // 필터 스킵(s3.start=10으로 seek)이 일어나지 않아야 한다
+    expect(lastManager.seekTo).not.toHaveBeenCalledWith(10);
+  });
+
+  it('[정상] dismissFilterNotice should clear filterNotice', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUCKWORTH'));
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH'));
+    expect(result.current.filterNotice).not.toBeNull();
+    act(() => result.current.dismissFilterNotice());
+    expect(result.current.filterNotice).toBeNull();
+  });
+
   it('[정상] on ended should set isPlaying false and retain last segment index', () => {
     const { result } = setup();
     act(() => result.current.play());

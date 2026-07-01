@@ -3,7 +3,11 @@
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
 import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
+import SpeakerFilter from './SpeakerFilter';
+import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import type { Episode, Segment } from '@/lib/types';
+
+const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
 
 export interface ShadowingPlayerProps {
   episode: Episode;
@@ -22,6 +26,9 @@ export function ShadowingPlayer({
     isLooping,
     repeatCount,
     playbackRate,
+    enabledSpeakers,
+    isSpeakerFilterActive,
+    filterNotice,
     toggle,
     seekTo,
     next,
@@ -31,10 +38,16 @@ export function ShadowingPlayer({
     extendSelectionTo,
     toggleLoop,
     setPlaybackRate,
+    toggleSpeaker,
+    dismissFilterNotice,
   } = useShadowingPlayer({
     episodeId: episode.id,
     segments,
   });
+
+  const dimmedSpeakers = isSpeakerFilterActive
+    ? ALL_SPEAKERS.filter((s) => !enabledSpeakers.includes(s))
+    : [];
 
   return (
     <div className="space-y-6">
@@ -58,6 +71,28 @@ export function ShadowingPlayer({
             onSetPlaybackRate={setPlaybackRate}
           />
         </div>
+        <div className="mt-3">
+          <SpeakerFilter
+            enabledSpeakers={enabledSpeakers}
+            onToggleSpeaker={toggleSpeaker}
+          />
+        </div>
+        {filterNotice ? (
+          <div
+            role="alert"
+            className="mt-2 flex items-center gap-2 text-xs text-on-dark-soft"
+          >
+            <span>{filterNotice}</span>
+            <button
+              type="button"
+              aria-label="안내 닫기"
+              className="underline"
+              onClick={dismissFilterNotice}
+            >
+              닫기
+            </button>
+          </div>
+        ) : null}
       </section>
 
       {/* 하단 cream 스크립트 영역 */}
@@ -65,6 +100,7 @@ export function ShadowingPlayer({
         segments={segments}
         currentSegmentIndex={currentSegmentIndex}
         selection={selection}
+        dimmedSpeakers={dimmedSpeakers}
         onSegmentClick={(index, shiftKey) => {
           if (shiftKey) {
             extendSelectionTo(index);

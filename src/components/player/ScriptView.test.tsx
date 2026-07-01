@@ -79,6 +79,20 @@ describe('ScriptView', () => {
     ).not.toThrow();
   });
 
+  it('[정상] segments whose speaker is in dimmedSpeakers should be data-dimmed (AC2)', () => {
+    const { container } = render(
+      <ScriptView segments={SEGMENTS} dimmedSpeakers={['DUBNER']} />,
+    );
+    const dimmed = container.querySelectorAll('[data-dimmed="true"]');
+    expect(dimmed).toHaveLength(1);
+    expect(dimmed[0].textContent).toContain('How are you?');
+  });
+
+  it('[경계] no dimmedSpeakers should mark nothing as dimmed', () => {
+    const { container } = render(<ScriptView segments={SEGMENTS} />);
+    expect(container.querySelectorAll('[data-dimmed="true"]')).toHaveLength(0);
+  });
+
   it('[경계] should apply color class for BOTH and NARRATOR speakers', () => {
     const segs: Segment[] = [
       { id: 'b1', start: 0, end: 1, speaker: 'BOTH', text: 'Both speak.' },

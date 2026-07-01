@@ -58,6 +58,7 @@ beforeEach(() => {
 });
 
 import { ShadowingPlayer } from './shadowing-player';
+import { SPEAKER_COLORS } from '@/lib/constants/speakers';
 
 const EPISODE: Episode = {
   id: 'vid',
@@ -191,6 +192,42 @@ describe('ShadowingPlayer', () => {
     });
     expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.5);
     expect(screen.getByRole('status')).toHaveTextContent('1.5x');
+  });
+
+  it('[정상] toggling a speaker off should dim its segments in the script (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUBNER.name} 화자 필터`,
+        }),
+      );
+    });
+    const dimmed = document.querySelectorAll('[data-dimmed="true"]');
+    expect(dimmed).toHaveLength(1);
+    expect(dimmed[0].textContent).toContain('second line');
+  });
+
+  it('[정상] disabling all present speakers should show a notice and clear dim (AC3)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUCKWORTH.name} 화자 필터`,
+        }),
+      );
+    });
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUBNER.name} 화자 필터`,
+        }),
+      );
+    });
+    expect(screen.getByRole('alert').textContent).toContain(
+      '선택한 화자의 대사가 없어',
+    );
+    expect(document.querySelectorAll('[data-dimmed="true"]')).toHaveLength(0);
   });
 
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {
