@@ -417,6 +417,19 @@ describe('useShadowingPlayer', () => {
     expect(result.current.filterNotice).toBeNull();
   });
 
+  it("[정상] mode should default to 'list'", () => {
+    const { result } = setup();
+    expect(result.current.mode).toBe('list');
+  });
+
+  it('[정상] toggleMode should switch to focus and back to list', () => {
+    const { result } = setup();
+    act(() => result.current.toggleMode());
+    expect(result.current.mode).toBe('focus');
+    act(() => result.current.toggleMode());
+    expect(result.current.mode).toBe('list');
+  });
+
   it('[정상] on ended should set isPlaying false and retain last segment index', () => {
     const { result } = setup();
     act(() => result.current.play());

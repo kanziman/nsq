@@ -2,8 +2,10 @@
 
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
+import { Button } from '@/components/ui/button';
 import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
+import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
 import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
@@ -55,6 +57,8 @@ export function ShadowingPlayer({
     setPlaybackRate,
     toggleSpeaker,
     dismissFilterNotice,
+    mode,
+    toggleMode,
   } = useShadowingPlayer({
     episodeId: episode.id,
     segments,
@@ -95,11 +99,20 @@ export function ShadowingPlayer({
             onSetPlaybackRate={setPlaybackRate}
           />
         </div>
-        <div className="mt-3">
+        <div className="mt-3 flex items-center gap-2">
           <SpeakerFilter
             enabledSpeakers={enabledSpeakers}
             onToggleSpeaker={toggleSpeaker}
           />
+          <Button
+            variant="secondaryOnDark"
+            size="sm"
+            aria-label={mode === 'focus' ? '전체 모드' : '집중 모드'}
+            aria-pressed={mode === 'focus'}
+            onClick={toggleMode}
+          >
+            {mode === 'focus' ? '전체 모드' : '집중 모드'}
+          </Button>
         </div>
         {filterNotice ? (
           <div
@@ -119,21 +132,30 @@ export function ShadowingPlayer({
         ) : null}
       </section>
 
-      {/* 하단 cream 스크립트 영역 */}
-      <ScriptView
-        segments={segments}
-        currentSegmentIndex={currentSegmentIndex}
-        selection={selection}
-        dimmedSpeakers={dimmedSpeakers}
-        onSegmentClick={(index, shiftKey) => {
-          if (shiftKey) {
-            extendSelectionTo(index);
-          } else {
-            selectSegment(index);
-            goToSegment(index);
-          }
-        }}
-      />
+      {/* 하단 cream 영역: 모드에 따라 리스트 또는 집중 패널 */}
+      {mode === 'focus' ? (
+        <FocusPanel
+          segment={segments[currentSegmentIndex] ?? null}
+          onReplay={() => goToSegment(currentSegmentIndex)}
+          currentTime={currentTime}
+        />
+      ) : (
+        <ScriptView
+          segments={segments}
+          currentSegmentIndex={currentSegmentIndex}
+          currentTime={currentTime}
+          selection={selection}
+          dimmedSpeakers={dimmedSpeakers}
+          onSegmentClick={(index, shiftKey) => {
+            if (shiftKey) {
+              extendSelectionTo(index);
+            } else {
+              selectSegment(index);
+              goToSegment(index);
+            }
+          }}
+        />
+      )}
     </div>
   );
 }

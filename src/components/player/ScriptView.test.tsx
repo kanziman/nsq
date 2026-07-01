@@ -197,6 +197,45 @@ describe('ScriptView', () => {
     expect(toggle).toHaveAttribute('aria-pressed', 'true');
   });
 
+  it('[정상] active segment with words should mark the current word (AC1)', () => {
+    const withWords: Segment[] = [
+      {
+        id: 'w1',
+        start: 0,
+        end: 3,
+        speaker: 'DUCKWORTH',
+        text: 'a b c',
+        words: [
+          { word: 'a', start: 0, end: 1 },
+          { word: 'b', start: 1, end: 2 },
+          { word: 'c', start: 2, end: 3 },
+        ],
+      },
+    ];
+    const { container } = render(
+      <ScriptView
+        segments={withWords}
+        currentSegmentIndex={0}
+        currentTime={1.5}
+      />,
+    );
+    const current = container.querySelectorAll('[data-current-word="true"]');
+    expect(current).toHaveLength(1);
+    expect(current[0].textContent).toBe('b');
+  });
+
+  it('[경계] segment without words should fall back to plain text (AC2)', () => {
+    const { container } = render(
+      <ScriptView
+        segments={SEGMENTS}
+        currentSegmentIndex={0}
+        currentTime={1}
+      />,
+    );
+    expect(container.querySelectorAll('[data-current-word]')).toHaveLength(0);
+    expect(screen.getByText('Hello there.')).toBeInTheDocument();
+  });
+
   it('[경계] should apply color class for BOTH and NARRATOR speakers', () => {
     const segs: Segment[] = [
       { id: 'b1', start: 0, end: 1, speaker: 'BOTH', text: 'Both speak.' },
