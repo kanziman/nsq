@@ -1,9 +1,28 @@
 'use client';
 
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
+import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
+import SpeakerFilter from './SpeakerFilter';
+import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
+import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
+
+const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
+
+/** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
+function stepPlaybackRate(current: number, dir: 1 | -1): number {
+  const base = PLAYBACK_RATE_PRESETS.indexOf(
+    current as (typeof PLAYBACK_RATE_PRESETS)[number],
+  );
+  const from = base === -1 ? PLAYBACK_RATE_PRESETS.indexOf(1) : base;
+  const nextIdx = Math.min(
+    PLAYBACK_RATE_PRESETS.length - 1,
+    Math.max(0, from + dir),
+  );
+  return PLAYBACK_RATE_PRESETS[nextIdx];
+}
 
 export interface ShadowingPlayerProps {
   episode: Episode;
@@ -18,14 +37,40 @@ export function ShadowingPlayer({
     isPlaying,
     currentSegmentIndex,
     currentTime,
+    selection,
+    isLooping,
+    repeatCount,
+    playbackRate,
+    enabledSpeakers,
+    isSpeakerFilterActive,
+    filterNotice,
     toggle,
     seekTo,
     next,
     prev,
     goToSegment,
+    selectSegment,
+    extendSelectionTo,
+    toggleLoop,
+    setPlaybackRate,
+    toggleSpeaker,
+    dismissFilterNotice,
   } = useShadowingPlayer({
     episodeId: episode.id,
     segments,
+  });
+
+  const dimmedSpeakers = isSpeakerFilterActive
+    ? ALL_SPEAKERS.filter((s) => !enabledSpeakers.includes(s))
+    : [];
+
+  useKeyboardShortcuts({
+    onTogglePlay: toggle,
+    onPrev: prev,
+    onNext: next,
+    onToggleLoop: toggleLoop,
+    onSpeedUp: () => setPlaybackRate(stepPlaybackRate(playbackRate, 1)),
+    onSpeedDown: () => setPlaybackRate(stepPlaybackRate(playbackRate, -1)),
   });
 
   return (
@@ -42,15 +87,52 @@ export function ShadowingPlayer({
             onSeek={seekTo}
             onPrev={prev}
             onNext={next}
+            isLooping={isLooping}
+            onToggleLoop={toggleLoop}
+            repeatCount={repeatCount}
+            canLoop={selection !== null}
+            playbackRate={playbackRate}
+            onSetPlaybackRate={setPlaybackRate}
           />
         </div>
+        <div className="mt-3">
+          <SpeakerFilter
+            enabledSpeakers={enabledSpeakers}
+            onToggleSpeaker={toggleSpeaker}
+          />
+        </div>
+        {filterNotice ? (
+          <div
+            role="alert"
+            className="mt-2 flex items-center gap-2 text-xs text-on-dark-soft"
+          >
+            <span>{filterNotice}</span>
+            <button
+              type="button"
+              aria-label="안내 닫기"
+              className="underline"
+              onClick={dismissFilterNotice}
+            >
+              닫기
+            </button>
+          </div>
+        ) : null}
       </section>
 
       {/* 하단 cream 스크립트 영역 */}
       <ScriptView
         segments={segments}
         currentSegmentIndex={currentSegmentIndex}
-        onSegmentClick={goToSegment}
+        selection={selection}
+        dimmedSpeakers={dimmedSpeakers}
+        onSegmentClick={(index, shiftKey) => {
+          if (shiftKey) {
+            extendSelectionTo(index);
+          } else {
+            selectSegment(index);
+            goToSegment(index);
+          }
+        }}
       />
     </div>
   );

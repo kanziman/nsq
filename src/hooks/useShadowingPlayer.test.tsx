@@ -12,6 +12,7 @@ type FakeManager = {
   playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
+  setPlaybackRate: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
   _time?: (t: number) => void;
   _end?: () => void;
@@ -20,6 +21,9 @@ type FakeManager = {
 let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
+  BOUNDARY_PARK_BACKOFF_SEC: 0.05,
+  DEFAULT_PLAYBACK_RATE: 1,
+  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -36,6 +40,7 @@ vi.mock('@/lib/utils/audio', () => ({
         m._end = cb;
         return () => {};
       }),
+      setPlaybackRate: vi.fn(),
       destroy: vi.fn(),
     };
     lastManager = m;
@@ -176,6 +181,87 @@ describe('useShadowingPlayer', () => {
     expect(lastManager.play).not.toHaveBeenCalled();
   });
 
+  it('[정상] selectSegment should set single selection {i,i}', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(1));
+    expect(result.current.selection).toEqual({ start: 1, end: 1 });
+  });
+
+  it('[정상] extendSelectionTo should set sorted range from anchor', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(2));
+    act(() => result.current.extendSelectionTo(0));
+    expect(result.current.selection).toEqual({ start: 0, end: 2 });
+  });
+
+  it('[정상] toggleLoop should enable looping, reset count, seek to range start', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(1));
+    act(() => result.current.extendSelectionTo(2)); // range {1,2}
+    act(() => result.current.toggleLoop());
+    expect(result.current.isLooping).toBe(true);
+    expect(result.current.repeatCount).toBe(0);
+    expect(lastManager.seekTo).toHaveBeenLastCalledWith(5); // segs[1].start
+  });
+
+  it('[경계] toggleLoop with no selection should be a no-op', () => {
+    const { result } = setup();
+    act(() => result.current.toggleLoop());
+    expect(result.current.isLooping).toBe(false);
+  });
+
+  it('[정상] while looping, reaching range end should loop back and increment count', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1)); // range {0,1}, end = segs[1].end = 10
+    act(() => result.current.toggleLoop());
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(9.96)); // >= 10 - 0.05
+    expect(lastManager.seekTo).toHaveBeenCalledWith(0); // back to segs[0].start
+    expect(result.current.repeatCount).toBe(1);
+  });
+
+  it('[정상] repeatCount should accumulate across multiple loop-backs', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop());
+    act(() => lastManager._time!(9.96));
+    act(() => lastManager._time!(9.96));
+    act(() => lastManager._time!(9.96));
+    expect(result.current.repeatCount).toBe(3);
+  });
+
+  it('[경계] extendSelectionTo without prior anchor selects a single segment', () => {
+    const { result } = setup();
+    act(() => result.current.extendSelectionTo(2));
+    expect(result.current.selection).toEqual({ start: 2, end: 2 });
+  });
+
+  it('[경계] toggleLoop off should not seek and should preserve isPlaying', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop()); // on → plays
+    expect(result.current.isPlaying).toBe(true);
+    lastManager.seekTo.mockClear();
+    act(() => result.current.toggleLoop()); // off
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+    expect(result.current.isPlaying).toBe(true);
+  });
+
+  it('[정상] toggleLoop off should stop looping (AC3)', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop()); // on
+    act(() => result.current.toggleLoop()); // off
+    expect(result.current.isLooping).toBe(false);
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(9.96));
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+  });
+
   it('[경계] should keep previous segment active during inter-segment gap', () => {
     // spec-fixed §5: gap 구간에서는 직전 세그먼트 강조를 유지(연속 재생)
     const gapSegs: Segment[] = [
@@ -187,6 +273,148 @@ describe('useShadowingPlayer', () => {
     );
     act(() => lastManager._time!(4.5)); // 4~6 gap 내부
     expect(result.current.currentSegmentIndex).toBe(0);
+  });
+
+  it('[정상] playbackRate should default to 1', () => {
+    const { result } = setup();
+    expect(result.current.playbackRate).toBe(1);
+  });
+
+  it('[정상] setPlaybackRate should update state and call manager (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    expect(result.current.playbackRate).toBe(1.5);
+    expect(lastManager.setPlaybackRate).toHaveBeenLastCalledWith(1.5);
+  });
+
+  it('[정상] setPlaybackRate then next() should keep the selected rate (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    act(() => lastManager._time!(6));
+    act(() => result.current.next());
+    expect(result.current.playbackRate).toBe(1.5);
+  });
+
+  it('[경계] next() should not reset playbackRate on the manager (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    lastManager.setPlaybackRate.mockClear();
+    act(() => result.current.next());
+    expect(lastManager.setPlaybackRate).not.toHaveBeenCalled();
+  });
+
+  it('[정상] while looping, loop-back should preserve playbackRate (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop());
+    lastManager.setPlaybackRate.mockClear();
+    act(() => lastManager._time!(9.96)); // 루프 백 트리거
+    expect(result.current.playbackRate).toBe(1.5);
+    expect(lastManager.setPlaybackRate).not.toHaveBeenCalled();
+  });
+
+  it('[정상] switching episode should re-apply the selected playbackRate (AC2)', () => {
+    const { result, rerender } = renderHook(
+      ({ episodeId }) => useShadowingPlayer({ episodeId, segments: SEGMENTS }),
+      { initialProps: { episodeId: 'vid' } },
+    );
+    act(() => result.current.setPlaybackRate(0.75));
+    lastManager.setPlaybackRate.mockClear();
+    rerender({ episodeId: 'vid2' }); // 새 manager 생성
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(0.75);
+  });
+
+  it('[정상] enabledSpeakers should default to all four speakers', () => {
+    const { result } = setup();
+    expect([...result.current.enabledSpeakers].sort()).toEqual([
+      'BOTH',
+      'DUBNER',
+      'DUCKWORTH',
+      'NARRATOR',
+    ]);
+  });
+
+  it('[정상] isSpeakerFilterActive should be false by default', () => {
+    const { result } = setup();
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[정상] toggleSpeaker should remove then re-add a speaker', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    expect(result.current.enabledSpeakers).not.toContain('DUBNER');
+    expect(result.current.isSpeakerFilterActive).toBe(true);
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    expect(result.current.enabledSpeakers).toContain('DUBNER');
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[정상] while playing, entering a disabled-speaker segment should seek to next enabled start (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.play());
+    act(() => result.current.toggleSpeaker('DUBNER')); // s2 화자 비활성
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6)); // s2(DUBNER) 진입
+    expect(lastManager.seekTo).toHaveBeenCalledWith(10); // s3.start
+  });
+
+  it('[경계] while playing, no enabled segment ahead should pause (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.play());
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH'));
+    lastManager.pause.mockClear();
+    act(() => lastManager._time!(6)); // s2·s3 모두 비활성 → 뒤에 대상 없음
+    expect(lastManager.pause).toHaveBeenCalled();
+  });
+
+  it('[경계] filter skip should not run while paused', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6));
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+  });
+
+  it('[정상] toggling all present speakers off should auto-restore all and set filterNotice (AC3)', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUCKWORTH'));
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH')); // 존재화자∩활성 = 0
+    expect(result.current.filterNotice).not.toBeNull();
+    expect([...result.current.enabledSpeakers].sort()).toEqual([
+      'BOTH',
+      'DUBNER',
+      'DUCKWORTH',
+      'NARRATOR',
+    ]);
+    expect(result.current.isSpeakerFilterActive).toBe(false);
+  });
+
+  it('[경계] speaker filter skip should be suppressed while A-B looping (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(2)); // range {0,1,2}
+    act(() => result.current.toggleLoop()); // 루프 on → play
+    act(() => result.current.toggleSpeaker('DUBNER')); // 범위 내 s2 비대상
+    lastManager.pause.mockClear();
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(6)); // s2(DUBNER) 진입, 하지만 루프 우선
+    expect(lastManager.pause).not.toHaveBeenCalled();
+    // 필터 스킵(s3.start=10으로 seek)이 일어나지 않아야 한다
+    expect(lastManager.seekTo).not.toHaveBeenCalledWith(10);
+  });
+
+  it('[정상] dismissFilterNotice should clear filterNotice', () => {
+    const { result } = setup();
+    act(() => result.current.toggleSpeaker('DUCKWORTH'));
+    act(() => result.current.toggleSpeaker('DUBNER'));
+    act(() => result.current.toggleSpeaker('BOTH'));
+    expect(result.current.filterNotice).not.toBeNull();
+    act(() => result.current.dismissFilterNotice());
+    expect(result.current.filterNotice).toBeNull();
   });
 
   it('[정상] on ended should set isPlaying false and retain last segment index', () => {

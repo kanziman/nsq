@@ -18,6 +18,7 @@ type FakeManager = {
   playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
+  setPlaybackRate: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
   _time?: (t: number) => void;
   _end?: () => void;
@@ -25,6 +26,9 @@ type FakeManager = {
 let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
+  BOUNDARY_PARK_BACKOFF_SEC: 0.05,
+  DEFAULT_PLAYBACK_RATE: 1,
+  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -41,6 +45,7 @@ vi.mock('@/lib/utils/audio', () => ({
         m._end = cb;
         return () => {};
       }),
+      setPlaybackRate: vi.fn(),
       destroy: vi.fn(),
     };
     lastManager = m;
@@ -53,6 +58,7 @@ beforeEach(() => {
 });
 
 import { ShadowingPlayer } from './shadowing-player';
+import { SPEAKER_COLORS } from '@/lib/constants/speakers';
 
 const EPISODE: Episode = {
   id: 'vid',
@@ -151,6 +157,119 @@ describe('ShadowingPlayer', () => {
     });
     const active = document.querySelector('[data-active="true"]');
     expect(active?.textContent).toContain('first line'); // -1 → 0
+  });
+
+  it('[정상] shift+click should extend selection across the range', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByText('first line')); // 단일 선택 idx0
+    });
+    act(() => {
+      fireEvent.click(screen.getByText('second line'), { shiftKey: true }); // 확장 idx1
+    });
+    expect(document.querySelectorAll('[data-selected="true"]')).toHaveLength(2);
+  });
+
+  it('[정상] enabling loop should start playback and keep selection highlighted', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByText('first line')); // 선택 idx0
+    });
+    lastManager.play.mockClear();
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '구간 반복' }));
+    });
+    expect(lastManager.play).toHaveBeenCalled();
+    expect(
+      document.querySelectorAll('[data-selected="true"]').length,
+    ).toBeGreaterThanOrEqual(1);
+  });
+
+  it('[정상] selecting a speed preset should update the badge and call manager (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
+    });
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.5);
+    expect(screen.getByRole('status')).toHaveTextContent('1.5x');
+  });
+
+  it('[정상] toggling a speaker off should dim its segments in the script (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUBNER.name} 화자 필터`,
+        }),
+      );
+    });
+    const dimmed = document.querySelectorAll('[data-dimmed="true"]');
+    expect(dimmed).toHaveLength(1);
+    expect(dimmed[0].textContent).toContain('second line');
+  });
+
+  it('[정상] disabling all present speakers should show a notice and clear dim (AC3)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUCKWORTH.name} 화자 필터`,
+        }),
+      );
+    });
+    act(() => {
+      fireEvent.click(
+        screen.getByRole('button', {
+          name: `${SPEAKER_COLORS.DUBNER.name} 화자 필터`,
+        }),
+      );
+    });
+    expect(screen.getByRole('alert').textContent).toContain(
+      '선택한 화자의 대사가 없어',
+    );
+    expect(document.querySelectorAll('[data-dimmed="true"]')).toHaveLength(0);
+  });
+
+  it('[정상] Space key should toggle playback (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', {
+          key: ' ',
+          bubbles: true,
+          cancelable: true,
+        }),
+      );
+    });
+    expect(lastManager.play).toHaveBeenCalled();
+  });
+
+  it('[정상] +/- keys should step playbackRate through presets (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', { key: '+', bubbles: true }),
+      );
+    });
+    expect(screen.getByRole('status')).toHaveTextContent('1.25x');
+    act(() => {
+      window.dispatchEvent(
+        new KeyboardEvent('keydown', { key: '-', bubbles: true }),
+      );
+    });
+    expect(screen.getByRole('status')).toHaveTextContent('1x');
+  });
+
+  it('[경계] repeated + should cap playbackRate at the max preset (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    for (let i = 0; i < 6; i++) {
+      act(() => {
+        window.dispatchEvent(
+          new KeyboardEvent('keydown', { key: '+', bubbles: true }),
+        );
+      });
+    }
+    expect(screen.getByRole('status')).toHaveTextContent('2x');
   });
 
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {
