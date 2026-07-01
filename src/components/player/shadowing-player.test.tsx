@@ -272,6 +272,68 @@ describe('ShadowingPlayer', () => {
     expect(screen.getByRole('status')).toHaveTextContent('2x');
   });
 
+  it('[정상] entering focus mode should show only current segment and keep controls (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => lastManager._time!(6)); // current = s2
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    expect(screen.getByText('second line')).toBeInTheDocument();
+    expect(screen.queryByText('first line')).toBeNull(); // 리스트 아님
+    expect(screen.getByRole('button', { name: '재생' })).toBeInTheDocument(); // 컨트롤 유지
+  });
+
+  it('[정상] focus mode should keep the speaker filter controls (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    expect(
+      screen.getByRole('button', {
+        name: `${SPEAKER_COLORS.DUCKWORTH.name} 화자 필터`,
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it('[경계] entering focus mode with no current segment shows a placeholder (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    // currentSegmentIndex = -1 (재생 전)
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    expect(
+      screen.getByText('재생할 세그먼트를 선택하세요.'),
+    ).toBeInTheDocument();
+  });
+
+  it('[정상] moving segment in focus mode should update the panel (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => lastManager._time!(2)); // current = s1
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    expect(screen.getByText('first line')).toBeInTheDocument();
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '다음 세그먼트' }));
+    });
+    expect(screen.getByText('second line')).toBeInTheDocument();
+    expect(screen.queryByText('first line')).toBeNull();
+  });
+
+  it('[정상] toggling back to list should restore the list with active highlight (AC3)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => lastManager._time!(6)); // s2 active
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '전체 모드' }));
+    });
+    expect(screen.getByText('first line')).toBeInTheDocument(); // 리스트 복귀
+    const active = document.querySelector('[data-active="true"]');
+    expect(active?.textContent).toContain('second line'); // 강조 유지
+  });
+
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
     fireEvent.click(screen.getByRole('button', { name: '재생' }));

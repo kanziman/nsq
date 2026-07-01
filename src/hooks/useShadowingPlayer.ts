@@ -16,6 +16,8 @@ export interface Selection {
   end: number;
 }
 
+export type PlayerMode = 'list' | 'focus';
+
 export interface UseShadowingPlayerArgs {
   episodeId: string;
   segments: Segment[];
@@ -31,6 +33,7 @@ export interface UseShadowingPlayerResult {
   enabledSpeakers: SpeakerKey[];
   isSpeakerFilterActive: boolean;
   filterNotice: string | null;
+  mode: PlayerMode;
   play(): void;
   pause(): void;
   toggle(): void;
@@ -44,6 +47,7 @@ export interface UseShadowingPlayerResult {
   setPlaybackRate(rate: number): void;
   toggleSpeaker(speaker: SpeakerKey): void;
   dismissFilterNotice(): void;
+  toggleMode(): void;
 }
 
 /** start <= t 인 마지막 세그먼트 인덱스. t가 첫 세그먼트 시작 이전이면 -1. */
@@ -81,6 +85,7 @@ export function useShadowingPlayer({
   const [enabledSpeakers, setEnabledSpeakers] =
     useState<SpeakerKey[]>(ALL_SPEAKERS);
   const [filterNotice, setFilterNotice] = useState<string | null>(null);
+  const [mode, setMode] = useState<PlayerMode>('list');
 
   const presentSpeakers = useMemo(() => {
     const set = new Set<SpeakerKey>();
@@ -262,6 +267,11 @@ export function useShadowingPlayer({
 
   const dismissFilterNotice = useCallback(() => setFilterNotice(null), []);
 
+  const toggleMode = useCallback(
+    () => setMode((m) => (m === 'list' ? 'focus' : 'list')),
+    [],
+  );
+
   const toggleLoop = useCallback(() => {
     const sel = selectionRef.current;
     if (!sel) return;
@@ -286,6 +296,7 @@ export function useShadowingPlayer({
     enabledSpeakers,
     isSpeakerFilterActive,
     filterNotice,
+    mode,
     play,
     pause,
     toggle,
@@ -299,5 +310,6 @@ export function useShadowingPlayer({
     setPlaybackRate,
     toggleSpeaker,
     dismissFilterNotice,
+    toggleMode,
   };
 }
