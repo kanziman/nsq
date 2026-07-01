@@ -58,6 +58,35 @@ describe('FocusPanel', () => {
     expect(screen.queryByText('Focus on this line.')).toBeNull();
   });
 
+  it('[정상] segment with words should mark the current word by currentTime (AC1)', () => {
+    const seg: Segment = {
+      id: 'w1',
+      start: 0,
+      end: 3,
+      speaker: 'DUCKWORTH',
+      text: 'a b c',
+      words: [
+        { word: 'a', start: 0, end: 1 },
+        { word: 'b', start: 1, end: 2 },
+        { word: 'c', start: 2, end: 3 },
+      ],
+    };
+    const { container } = render(
+      <FocusPanel segment={seg} onReplay={vi.fn()} currentTime={2.5} />,
+    );
+    const current = container.querySelectorAll('[data-current-word="true"]');
+    expect(current).toHaveLength(1);
+    expect(current[0].textContent).toBe('c');
+  });
+
+  it('[경계] segment without words should render plain text (AC2)', () => {
+    const { container } = render(
+      <FocusPanel segment={SEG} onReplay={vi.fn()} currentTime={1} />,
+    );
+    expect(container.querySelectorAll('[data-current-word]')).toHaveLength(0);
+    expect(screen.getByText('Focus on this line.')).toBeInTheDocument();
+  });
+
   it('[정상] should show an enabled record button when supported (AC1)', () => {
     render(<FocusPanel segment={SEG} onReplay={vi.fn()} />);
     expect(screen.getByRole('button', { name: '녹음' })).toBeEnabled();

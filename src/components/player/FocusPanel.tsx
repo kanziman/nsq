@@ -9,16 +9,19 @@ import {
   startRecording,
   type Recorder,
 } from '@/lib/utils/recorder';
+import { SegmentText } from './SegmentText';
 import type { Segment } from '@/lib/types';
 
 interface FocusPanelProps {
   segment: Segment | null;
   onReplay: () => void;
+  currentTime?: number;
 }
 
 export default function FocusPanel({
   segment,
   onReplay,
+  currentTime,
 }: FocusPanelProps): React.ReactElement {
   const supported = isRecordingSupported();
   const [recorder, setRecorder] = useState<Recorder | null>(null);
@@ -73,7 +76,12 @@ export default function FocusPanel({
           {formatTime(segment.start)}
         </span>
       </div>
-      <p className="font-serif text-2xl leading-relaxed">{segment.text}</p>
+      <SegmentText
+        segment={segment}
+        highlightWords
+        currentTime={currentTime}
+        className="font-serif text-2xl leading-relaxed"
+      />
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
         <Button

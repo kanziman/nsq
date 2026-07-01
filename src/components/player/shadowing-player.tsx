@@ -137,11 +137,13 @@ export function ShadowingPlayer({
         <FocusPanel
           segment={segments[currentSegmentIndex] ?? null}
           onReplay={() => goToSegment(currentSegmentIndex)}
+          currentTime={currentTime}
         />
       ) : (
         <ScriptView
           segments={segments}
           currentSegmentIndex={currentSegmentIndex}
+          currentTime={currentTime}
           selection={selection}
           dimmedSpeakers={dimmedSpeakers}
           onSegmentClick={(index, shiftKey) => {
