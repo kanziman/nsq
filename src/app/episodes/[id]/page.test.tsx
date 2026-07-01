@@ -15,6 +15,8 @@ vi.mock('next/navigation', () => ({
 // 라우팅/리다이렉트 검증에 집중 — 오디오 매니저는 가볍게 모킹
 vi.mock('@/lib/utils/audio', () => ({
   BOUNDARY_PARK_BACKOFF_SEC: 0.05,
+  DEFAULT_PLAYBACK_RATE: 1,
+  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
   createAudioManager: vi.fn(() => ({
     play: vi.fn(),
     pause: vi.fn(),
@@ -22,6 +24,7 @@ vi.mock('@/lib/utils/audio', () => ({
     getDuration: vi.fn(() => 0),
     seekTo: vi.fn(),
     playSegment: vi.fn(),
+    setPlaybackRate: vi.fn(),
     onTimeUpdate: vi.fn(() => () => {}),
     onEnded: vi.fn(() => () => {}),
     destroy: vi.fn(),

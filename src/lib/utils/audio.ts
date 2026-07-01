@@ -1,6 +1,12 @@
 /** 세그먼트/구간 경계에서 다음 세그먼트로 새는 것을 막기 위한 back-off(초). */
 export const BOUNDARY_PARK_BACKOFF_SEC = 0.05;
 
+/** 재생 속도 프리셋(0.5~2.0x). */
+export const PLAYBACK_RATE_PRESETS = [0.5, 0.75, 1, 1.25, 1.5, 2] as const;
+export const DEFAULT_PLAYBACK_RATE = 1;
+const MIN_PLAYBACK_RATE = 0.5;
+const MAX_PLAYBACK_RATE = 2;
+
 export interface AudioManager {
   play(): void;
   pause(): void;
@@ -8,6 +14,7 @@ export interface AudioManager {
   getDuration(): number;
   seekTo(time: number): void;
   playSegment(start: number, end: number): void;
+  setPlaybackRate(rate: number): void;
   onTimeUpdate(cb: (currentTime: number) => void): () => void;
   onEnded(cb: () => void): () => void;
   destroy(): void;
@@ -42,6 +49,12 @@ export function createAudioManager(
     },
     seekTo(time) {
       el.currentTime = time;
+    },
+    setPlaybackRate(rate) {
+      el.playbackRate = Math.min(
+        MAX_PLAYBACK_RATE,
+        Math.max(MIN_PLAYBACK_RATE, rate),
+      );
     },
     playSegment(start, end) {
       // 이전 구간 watcher가 남아 다음 구간 재생에 간섭하지 않도록 먼저 해제

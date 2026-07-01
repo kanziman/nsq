@@ -18,6 +18,7 @@ type FakeManager = {
   playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
+  setPlaybackRate: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
   _time?: (t: number) => void;
   _end?: () => void;
@@ -26,6 +27,8 @@ let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
   BOUNDARY_PARK_BACKOFF_SEC: 0.05,
+  DEFAULT_PLAYBACK_RATE: 1,
+  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -42,6 +45,7 @@ vi.mock('@/lib/utils/audio', () => ({
         m._end = cb;
         return () => {};
       }),
+      setPlaybackRate: vi.fn(),
       destroy: vi.fn(),
     };
     lastManager = m;
@@ -178,6 +182,15 @@ describe('ShadowingPlayer', () => {
     expect(
       document.querySelectorAll('[data-selected="true"]').length,
     ).toBeGreaterThanOrEqual(1);
+  });
+
+  it('[정상] selecting a speed preset should update the badge and call manager (AC1)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
+    });
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.5);
+    expect(screen.getByRole('status')).toHaveTextContent('1.5x');
   });
 
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {

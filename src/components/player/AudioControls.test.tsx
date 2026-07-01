@@ -17,6 +17,8 @@ const baseProps = {
   onToggleLoop: vi.fn(),
   repeatCount: 0,
   canLoop: true,
+  playbackRate: 1,
+  onSetPlaybackRate: vi.fn(),
 };
 
 describe('AudioControls', () => {
@@ -73,5 +75,22 @@ describe('AudioControls', () => {
   it('[경계] loop toggle should be disabled when canLoop is false', () => {
     render(<AudioControls {...baseProps} canLoop={false} />);
     expect(screen.getByRole('button', { name: '구간 반복' })).toBeDisabled();
+  });
+
+  it('[정상] preset click should call onSetPlaybackRate with preset value (AC1)', () => {
+    const onSetPlaybackRate = vi.fn();
+    render(
+      <AudioControls {...baseProps} onSetPlaybackRate={onSetPlaybackRate} />,
+    );
+    fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
+    expect(onSetPlaybackRate).toHaveBeenCalledWith(1.5);
+  });
+
+  it('[정상] active preset should be aria-pressed and badge reflects rate (AC1)', () => {
+    render(<AudioControls {...baseProps} playbackRate={1.25} />);
+    expect(
+      screen.getByRole('button', { name: '재생 속도 1.25x' }),
+    ).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('status')).toHaveTextContent('1.25x');
   });
 });
