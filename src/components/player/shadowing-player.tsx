@@ -18,11 +18,17 @@ export function ShadowingPlayer({
     isPlaying,
     currentSegmentIndex,
     currentTime,
+    selection,
+    isLooping,
+    repeatCount,
     toggle,
     seekTo,
     next,
     prev,
     goToSegment,
+    selectSegment,
+    extendSelectionTo,
+    toggleLoop,
   } = useShadowingPlayer({
     episodeId: episode.id,
     segments,
@@ -42,6 +48,10 @@ export function ShadowingPlayer({
             onSeek={seekTo}
             onPrev={prev}
             onNext={next}
+            isLooping={isLooping}
+            onToggleLoop={toggleLoop}
+            repeatCount={repeatCount}
+            canLoop={selection !== null}
           />
         </div>
       </section>
@@ -50,7 +60,15 @@ export function ShadowingPlayer({
       <ScriptView
         segments={segments}
         currentSegmentIndex={currentSegmentIndex}
-        onSegmentClick={goToSegment}
+        selection={selection}
+        onSegmentClick={(index, shiftKey) => {
+          if (shiftKey) {
+            extendSelectionTo(index);
+          } else {
+            selectSegment(index);
+            goToSegment(index);
+          }
+        }}
       />
     </div>
   );

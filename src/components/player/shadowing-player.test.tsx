@@ -25,6 +25,7 @@ type FakeManager = {
 let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
+  BOUNDARY_PARK_BACKOFF_SEC: 0.05,
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -151,6 +152,32 @@ describe('ShadowingPlayer', () => {
     });
     const active = document.querySelector('[data-active="true"]');
     expect(active?.textContent).toContain('first line'); // -1 → 0
+  });
+
+  it('[정상] shift+click should extend selection across the range', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByText('first line')); // 단일 선택 idx0
+    });
+    act(() => {
+      fireEvent.click(screen.getByText('second line'), { shiftKey: true }); // 확장 idx1
+    });
+    expect(document.querySelectorAll('[data-selected="true"]')).toHaveLength(2);
+  });
+
+  it('[정상] enabling loop should start playback and keep selection highlighted', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    act(() => {
+      fireEvent.click(screen.getByText('first line')); // 선택 idx0
+    });
+    lastManager.play.mockClear();
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '구간 반복' }));
+    });
+    expect(lastManager.play).toHaveBeenCalled();
+    expect(
+      document.querySelectorAll('[data-selected="true"]').length,
+    ).toBeGreaterThanOrEqual(1);
   });
 
   it('[정상] should return control to 재생 after ended (AC3 UI)', () => {

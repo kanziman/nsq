@@ -11,6 +11,10 @@ interface AudioControlsProps {
   onSeek: (time: number) => void;
   onPrev: () => void;
   onNext: () => void;
+  isLooping: boolean;
+  onToggleLoop: () => void;
+  repeatCount: number;
+  canLoop: boolean;
 }
 
 export default function AudioControls({
@@ -21,6 +25,10 @@ export default function AudioControls({
   onSeek,
   onPrev,
   onNext,
+  isLooping,
+  onToggleLoop,
+  repeatCount,
+  canLoop,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex items-center gap-3">
@@ -68,6 +76,17 @@ export default function AudioControls({
       <span className="font-mono text-xs text-on-dark-soft">
         {formatTime(duration)}
       </span>
+
+      <Button
+        variant={isLooping ? 'primary' : 'secondaryOnDark'}
+        size="sm"
+        aria-label="구간 반복"
+        aria-pressed={isLooping}
+        disabled={!canLoop}
+        onClick={onToggleLoop}
+      >
+        🔁{isLooping ? <span className="ml-1">{repeatCount}회</span> : null}
+      </Button>
     </div>
   );
 }
