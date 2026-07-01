@@ -8,12 +8,14 @@ import { formatTime } from '@/lib/utils/time';
 interface ScriptViewProps {
   segments: Segment[];
   currentSegmentIndex?: number;
-  onSegmentClick?: (index: number) => void;
+  selection?: { start: number; end: number } | null;
+  onSegmentClick?: (index: number, shiftKey: boolean) => void;
 }
 
 function ScriptView({
   segments,
   currentSegmentIndex,
+  selection,
   onSegmentClick,
 }: ScriptViewProps): React.ReactElement {
   const activeRef = useRef<HTMLDivElement | null>(null);
@@ -27,17 +29,23 @@ function ScriptView({
       {segments.map((seg, i) => {
         const sp = SPEAKER_COLORS[seg.speaker];
         const active = i === currentSegmentIndex;
+        const selected =
+          !!selection && i >= selection.start && i <= selection.end;
         return (
           <div
             key={seg.id}
             ref={active ? activeRef : undefined}
             data-active={active || undefined}
-            onClick={onSegmentClick ? () => onSegmentClick(i) : undefined}
+            data-selected={selected || undefined}
+            onClick={
+              onSegmentClick ? (e) => onSegmentClick(i, e.shiftKey) : undefined
+            }
             className={[
               'rounded-md border p-4 transition-colors',
               active
                 ? `${sp.bgClass} ${sp.borderClass}`
                 : 'border-hairline bg-transparent',
+              selected ? 'ring-2 ring-primary/40' : '',
               onSegmentClick ? 'cursor-pointer hover:bg-surface-card' : '',
             ]
               .filter(Boolean)

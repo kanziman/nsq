@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { describe, it, expect, afterEach, beforeEach, vi } from 'vitest';
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import ScriptView from './ScriptView';
 import { SPEAKER_COLORS } from '@/lib/constants/speakers';
 import type { Segment } from '@/lib/types';
@@ -37,6 +37,24 @@ describe('ScriptView', () => {
 
   it('[경계] should render without error when optional props are omitted', () => {
     expect(() => render(<ScriptView segments={SEGMENTS} />)).not.toThrow();
+  });
+
+  it('[정상] onSegmentClick should receive (index, shiftKey)', () => {
+    const onSegmentClick = vi.fn();
+    render(<ScriptView segments={SEGMENTS} onSegmentClick={onSegmentClick} />);
+    fireEvent.click(screen.getByText('Hello there.'));
+    expect(onSegmentClick).toHaveBeenLastCalledWith(0, false);
+    fireEvent.click(screen.getByText('How are you?'), { shiftKey: true });
+    expect(onSegmentClick).toHaveBeenLastCalledWith(1, true);
+  });
+
+  it('[정상] selection range segments should be marked data-selected', () => {
+    const { container } = render(
+      <ScriptView segments={SEGMENTS} selection={{ start: 0, end: 1 }} />,
+    );
+    expect(container.querySelectorAll('[data-selected="true"]')).toHaveLength(
+      2,
+    );
   });
 
   it('[정상] should mark the segment at currentSegmentIndex as active', () => {

@@ -20,6 +20,7 @@ type FakeManager = {
 let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
+  BOUNDARY_PARK_BACKOFF_SEC: 0.05,
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -174,6 +175,87 @@ describe('useShadowingPlayer', () => {
     act(() => result.current.goToSegment(-1));
     expect(lastManager.seekTo).not.toHaveBeenCalled();
     expect(lastManager.play).not.toHaveBeenCalled();
+  });
+
+  it('[정상] selectSegment should set single selection {i,i}', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(1));
+    expect(result.current.selection).toEqual({ start: 1, end: 1 });
+  });
+
+  it('[정상] extendSelectionTo should set sorted range from anchor', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(2));
+    act(() => result.current.extendSelectionTo(0));
+    expect(result.current.selection).toEqual({ start: 0, end: 2 });
+  });
+
+  it('[정상] toggleLoop should enable looping, reset count, seek to range start', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(1));
+    act(() => result.current.extendSelectionTo(2)); // range {1,2}
+    act(() => result.current.toggleLoop());
+    expect(result.current.isLooping).toBe(true);
+    expect(result.current.repeatCount).toBe(0);
+    expect(lastManager.seekTo).toHaveBeenLastCalledWith(5); // segs[1].start
+  });
+
+  it('[경계] toggleLoop with no selection should be a no-op', () => {
+    const { result } = setup();
+    act(() => result.current.toggleLoop());
+    expect(result.current.isLooping).toBe(false);
+  });
+
+  it('[정상] while looping, reaching range end should loop back and increment count', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1)); // range {0,1}, end = segs[1].end = 10
+    act(() => result.current.toggleLoop());
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(9.96)); // >= 10 - 0.05
+    expect(lastManager.seekTo).toHaveBeenCalledWith(0); // back to segs[0].start
+    expect(result.current.repeatCount).toBe(1);
+  });
+
+  it('[정상] repeatCount should accumulate across multiple loop-backs', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop());
+    act(() => lastManager._time!(9.96));
+    act(() => lastManager._time!(9.96));
+    act(() => lastManager._time!(9.96));
+    expect(result.current.repeatCount).toBe(3);
+  });
+
+  it('[경계] extendSelectionTo without prior anchor selects a single segment', () => {
+    const { result } = setup();
+    act(() => result.current.extendSelectionTo(2));
+    expect(result.current.selection).toEqual({ start: 2, end: 2 });
+  });
+
+  it('[경계] toggleLoop off should not seek and should preserve isPlaying', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop()); // on → plays
+    expect(result.current.isPlaying).toBe(true);
+    lastManager.seekTo.mockClear();
+    act(() => result.current.toggleLoop()); // off
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
+    expect(result.current.isPlaying).toBe(true);
+  });
+
+  it('[정상] toggleLoop off should stop looping (AC3)', () => {
+    const { result } = setup();
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop()); // on
+    act(() => result.current.toggleLoop()); // off
+    expect(result.current.isLooping).toBe(false);
+    lastManager.seekTo.mockClear();
+    act(() => lastManager._time!(9.96));
+    expect(lastManager.seekTo).not.toHaveBeenCalled();
   });
 
   it('[경계] should keep previous segment active during inter-segment gap', () => {

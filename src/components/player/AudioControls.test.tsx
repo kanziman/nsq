@@ -13,6 +13,10 @@ const baseProps = {
   onSeek: vi.fn(),
   onPrev: vi.fn(),
   onNext: vi.fn(),
+  isLooping: false,
+  onToggleLoop: vi.fn(),
+  repeatCount: 0,
+  canLoop: true,
 };
 
 describe('AudioControls', () => {
@@ -52,5 +56,22 @@ describe('AudioControls', () => {
     fireEvent.click(screen.getByRole('button', { name: '다음 세그먼트' }));
     expect(onPrev).toHaveBeenCalledTimes(1);
     expect(onNext).toHaveBeenCalledTimes(1);
+  });
+
+  it('[정상] loop toggle should call onToggleLoop', () => {
+    const onToggleLoop = vi.fn();
+    render(<AudioControls {...baseProps} onToggleLoop={onToggleLoop} />);
+    fireEvent.click(screen.getByRole('button', { name: '구간 반복' }));
+    expect(onToggleLoop).toHaveBeenCalledTimes(1);
+  });
+
+  it('[정상] should show repeat count badge when looping', () => {
+    render(<AudioControls {...baseProps} isLooping={true} repeatCount={3} />);
+    expect(screen.getByText('3회')).toBeInTheDocument();
+  });
+
+  it('[경계] loop toggle should be disabled when canLoop is false', () => {
+    render(<AudioControls {...baseProps} canLoop={false} />);
+    expect(screen.getByRole('button', { name: '구간 반복' })).toBeDisabled();
   });
 });
