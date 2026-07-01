@@ -12,6 +12,7 @@ type FakeManager = {
   playSegment: ReturnType<typeof vi.fn>;
   onTimeUpdate: ReturnType<typeof vi.fn>;
   onEnded: ReturnType<typeof vi.fn>;
+  setPlaybackRate: ReturnType<typeof vi.fn>;
   destroy: ReturnType<typeof vi.fn>;
   _time?: (t: number) => void;
   _end?: () => void;
@@ -21,6 +22,8 @@ let lastManager: FakeManager;
 
 vi.mock('@/lib/utils/audio', () => ({
   BOUNDARY_PARK_BACKOFF_SEC: 0.05,
+  DEFAULT_PLAYBACK_RATE: 1,
+  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
   createAudioManager: vi.fn(() => {
     const m: FakeManager = {
       play: vi.fn(),
@@ -37,6 +40,7 @@ vi.mock('@/lib/utils/audio', () => ({
         m._end = cb;
         return () => {};
       }),
+      setPlaybackRate: vi.fn(),
       destroy: vi.fn(),
     };
     lastManager = m;
@@ -269,6 +273,57 @@ describe('useShadowingPlayer', () => {
     );
     act(() => lastManager._time!(4.5)); // 4~6 gap 내부
     expect(result.current.currentSegmentIndex).toBe(0);
+  });
+
+  it('[정상] playbackRate should default to 1', () => {
+    const { result } = setup();
+    expect(result.current.playbackRate).toBe(1);
+  });
+
+  it('[정상] setPlaybackRate should update state and call manager (AC1)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    expect(result.current.playbackRate).toBe(1.5);
+    expect(lastManager.setPlaybackRate).toHaveBeenLastCalledWith(1.5);
+  });
+
+  it('[정상] setPlaybackRate then next() should keep the selected rate (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    act(() => lastManager._time!(6));
+    act(() => result.current.next());
+    expect(result.current.playbackRate).toBe(1.5);
+  });
+
+  it('[경계] next() should not reset playbackRate on the manager (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    lastManager.setPlaybackRate.mockClear();
+    act(() => result.current.next());
+    expect(lastManager.setPlaybackRate).not.toHaveBeenCalled();
+  });
+
+  it('[정상] while looping, loop-back should preserve playbackRate (AC2)', () => {
+    const { result } = setup();
+    act(() => result.current.setPlaybackRate(1.5));
+    act(() => result.current.selectSegment(0));
+    act(() => result.current.extendSelectionTo(1));
+    act(() => result.current.toggleLoop());
+    lastManager.setPlaybackRate.mockClear();
+    act(() => lastManager._time!(9.96)); // 루프 백 트리거
+    expect(result.current.playbackRate).toBe(1.5);
+    expect(lastManager.setPlaybackRate).not.toHaveBeenCalled();
+  });
+
+  it('[정상] switching episode should re-apply the selected playbackRate (AC2)', () => {
+    const { result, rerender } = renderHook(
+      ({ episodeId }) => useShadowingPlayer({ episodeId, segments: SEGMENTS }),
+      { initialProps: { episodeId: 'vid' } },
+    );
+    act(() => result.current.setPlaybackRate(0.75));
+    lastManager.setPlaybackRate.mockClear();
+    rerender({ episodeId: 'vid2' }); // 새 manager 생성
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(0.75);
   });
 
   it('[정상] on ended should set isPlaying false and retain last segment index', () => {

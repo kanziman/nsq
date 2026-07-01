@@ -21,6 +21,7 @@ export function ShadowingPlayer({
     selection,
     isLooping,
     repeatCount,
+    playbackRate,
     toggle,
     seekTo,
     next,
@@ -29,6 +30,7 @@ export function ShadowingPlayer({
     selectSegment,
     extendSelectionTo,
     toggleLoop,
+    setPlaybackRate,
   } = useShadowingPlayer({
     episodeId: episode.id,
     segments,
@@ -52,6 +54,8 @@ export function ShadowingPlayer({
             onToggleLoop={toggleLoop}
             repeatCount={repeatCount}
             canLoop={selection !== null}
+            playbackRate={playbackRate}
+            onSetPlaybackRate={setPlaybackRate}
           />
         </div>
       </section>

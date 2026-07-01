@@ -6,6 +6,7 @@ function makeFakeElement() {
   const listeners: Record<string, Array<(e?: unknown) => void>> = {};
   return {
     currentTime: 0,
+    playbackRate: 1,
     play: vi.fn(),
     pause: vi.fn(),
     src: '',
@@ -118,6 +119,35 @@ describe('createAudioManager', () => {
     el.currentTime = 4.95; // 첫 구간 park 지점 — 이전 watcher가 살아있으면 pause됨
     el.emit('timeupdate');
     expect(el.pause).not.toHaveBeenCalled();
+  });
+
+  it('[정상] setPlaybackRate should set element.playbackRate', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.setPlaybackRate(1.5);
+    expect(el.playbackRate).toBe(1.5);
+  });
+
+  it('[경계] setPlaybackRate should clamp to 2.0 when above max', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.setPlaybackRate(3);
+    expect(el.playbackRate).toBe(2);
+  });
+
+  it('[경계] setPlaybackRate should clamp to 0.5 when below min', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.setPlaybackRate(0.1);
+    expect(el.playbackRate).toBe(0.5);
+  });
+
+  it('[정상] playSegment should preserve a previously set playbackRate (AC2)', () => {
+    const el = makeFakeElement();
+    const m = createAudioManager('/audio', el as unknown as HTMLAudioElement);
+    m.setPlaybackRate(1.5);
+    m.playSegment(2, 5);
+    expect(el.playbackRate).toBe(1.5);
   });
 
   it('[정상] destroy should pause and detach listeners', () => {

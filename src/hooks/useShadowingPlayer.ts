@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   createAudioManager,
   BOUNDARY_PARK_BACKOFF_SEC,
+  DEFAULT_PLAYBACK_RATE,
   type AudioManager,
 } from '@/lib/utils/audio';
 import type { Segment } from '@/lib/types';
@@ -22,6 +23,7 @@ export interface UseShadowingPlayerResult {
   selection: Selection | null;
   isLooping: boolean;
   repeatCount: number;
+  playbackRate: number;
   play(): void;
   pause(): void;
   toggle(): void;
@@ -32,6 +34,7 @@ export interface UseShadowingPlayerResult {
   selectSegment(index: number): void;
   extendSelectionTo(index: number): void;
   toggleLoop(): void;
+  setPlaybackRate(rate: number): void;
 }
 
 /** start <= t 인 마지막 세그먼트 인덱스. t가 첫 세그먼트 시작 이전이면 -1. */
@@ -57,12 +60,14 @@ export function useShadowingPlayer({
   const selectionRef = useRef<Selection | null>(null);
   const loopingRef = useRef(false);
   const anchorRef = useRef(-1);
+  const rateRef = useRef(DEFAULT_PLAYBACK_RATE);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(-1);
   const [currentTime, setCurrentTime] = useState(0);
   const [selection, setSelection] = useState<Selection | null>(null);
   const [isLooping, setIsLooping] = useState(false);
   const [repeatCount, setRepeatCount] = useState(0);
+  const [playbackRate, setPlaybackRateState] = useState(DEFAULT_PLAYBACK_RATE);
 
   // 콜백에서 최신 segments를 참조하기 위한 ref (effect 재구독 방지)
   const segmentsRef = useRef(segments);
@@ -76,6 +81,8 @@ export function useShadowingPlayer({
   useEffect(() => {
     const manager = createAudioManager(`/api/episodes/${episodeId}/audio`);
     managerRef.current = manager;
+    // 에피소드 전환/재마운트 시에도 선택한 속도를 유지
+    manager.setPlaybackRate(rateRef.current);
 
     const offTime = manager.onTimeUpdate((t) => {
       setCurrentTime(t);
@@ -180,6 +187,12 @@ export function useShadowingPlayer({
     setSelection(sel);
   }, []);
 
+  const setPlaybackRate = useCallback((rate: number) => {
+    rateRef.current = rate;
+    managerRef.current?.setPlaybackRate(rate);
+    setPlaybackRateState(rate);
+  }, []);
+
   const toggleLoop = useCallback(() => {
     const sel = selectionRef.current;
     if (!sel) return;
@@ -200,6 +213,7 @@ export function useShadowingPlayer({
     selection,
     isLooping,
     repeatCount,
+    playbackRate,
     play,
     pause,
     toggle,
@@ -210,5 +224,6 @@ export function useShadowingPlayer({
     selectSegment,
     extendSelectionTo,
     toggleLoop,
+    setPlaybackRate,
   };
 }

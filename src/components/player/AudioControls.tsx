@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { formatTime } from '@/lib/utils/time';
+import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 
 interface AudioControlsProps {
   isPlaying: boolean;
@@ -15,6 +16,8 @@ interface AudioControlsProps {
   onToggleLoop: () => void;
   repeatCount: number;
   canLoop: boolean;
+  playbackRate: number;
+  onSetPlaybackRate: (rate: number) => void;
 }
 
 export default function AudioControls({
@@ -29,6 +32,8 @@ export default function AudioControls({
   onToggleLoop,
   repeatCount,
   canLoop,
+  playbackRate,
+  onSetPlaybackRate,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex items-center gap-3">
@@ -87,6 +92,33 @@ export default function AudioControls({
       >
         🔁{isLooping ? <span className="ml-1">{repeatCount}회</span> : null}
       </Button>
+
+      <div
+        className="flex items-center gap-1"
+        role="group"
+        aria-label="재생 속도"
+      >
+        {PLAYBACK_RATE_PRESETS.map((rate) => (
+          <Button
+            key={rate}
+            variant={rate === playbackRate ? 'primary' : 'secondaryOnDark'}
+            size="sm"
+            aria-label={`재생 속도 ${rate}x`}
+            aria-pressed={rate === playbackRate}
+            onClick={() => onSetPlaybackRate(rate)}
+          >
+            {rate}x
+          </Button>
+        ))}
+      </div>
+
+      <span
+        role="status"
+        aria-label="현재 재생 속도"
+        className="font-mono text-xs text-on-dark-soft"
+      >
+        {playbackRate}x
+      </span>
     </div>
   );
 }
