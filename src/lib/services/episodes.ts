@@ -84,12 +84,14 @@ export async function getEpisodeById(id: string): Promise<Episode | null> {
   const meta = await readJson<any>(metaPath);
   const importState = await readJson<ImportState>(statePath);
 
-  // meta.json이 존재하지 않지만 임포트 상태가 있는 경우 (임포트 진행 중)
+  // meta.json이 존재하지 않지만 임포트 상태가 있는 경우.
+  // 완료된 임포트는 '(임포트 중)'을 붙이지 않는다(완료 후 meta 미기록 시에도 상태를 정확히 반영).
   if (!meta) {
     if (importState) {
+      const inProgress = importState.status !== 'completed';
       return {
         id,
-        title: `Episode: ${id} (임포트 중)`,
+        title: inProgress ? `Episode: ${id} (임포트 중)` : `Episode: ${id}`,
         duration: 0,
         youtubeUrl: `https://youtube.com/watch?v=${id}`,
         addedAt: importState.updatedAt || new Date().toISOString(),

@@ -4,6 +4,7 @@ import path from 'path';
 import {
   getImportState,
   saveImportState,
+  getEpisodeById,
   getEpisodeSegments,
 } from './episodes';
 import type { ImportState, Segment } from '../types';
@@ -67,6 +68,35 @@ describe('getImportState', () => {
     const result = await getImportState(TEST_VIDEO_ID);
 
     expect(result).toBeNull();
+  });
+});
+
+describe('getEpisodeById (meta.json 부재 폴백)', () => {
+  async function writeState(status: ImportState['status']): Promise<void> {
+    await fs.mkdir(episodeDir(TEST_VIDEO_ID), { recursive: true });
+    await fs.writeFile(
+      statePath(TEST_VIDEO_ID),
+      JSON.stringify({
+        videoId: TEST_VIDEO_ID,
+        status,
+        progress: status === 'completed' ? 100 : 50,
+        currentStep: status,
+        updatedAt: new Date().toISOString(),
+      }),
+    );
+  }
+
+  it("[정상] meta 부재 + status 'completed'이면 제목에 '(임포트 중)'을 붙이지 않는다", async () => {
+    await writeState('completed');
+    const ep = await getEpisodeById(TEST_VIDEO_ID);
+    expect(ep).not.toBeNull();
+    expect(ep!.title).not.toContain('임포트 중');
+  });
+
+  it("[정상] meta 부재 + 진행 중 status이면 '(임포트 중)'을 표시한다", async () => {
+    await writeState('aligning');
+    const ep = await getEpisodeById(TEST_VIDEO_ID);
+    expect(ep!.title).toContain('임포트 중');
   });
 });
 
