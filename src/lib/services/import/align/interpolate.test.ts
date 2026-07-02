@@ -71,6 +71,32 @@ describe('buildAlignment', () => {
     }
   });
 
+  it('should spread leading segments from 0 instead of clamping to the first anchor', () => {
+    // 첫 앵커가 대본 중간(index 3, time 12)에만 있으면, 앞선 콜드오픈 문장들이
+    // 전부 12초로 겹쳐서는 안 된다.
+    const leading: Sentence[] = [
+      { speaker: 'DUBNER', text: 'one' }, // word 0
+      { speaker: 'DUCKWORTH', text: 'two' }, // word 1
+      { speaker: 'DUBNER', text: 'three' }, // word 2
+      { speaker: 'DUCKWORTH', text: 'four five' }, // word 3,4
+    ];
+    const { segments } = buildAlignment({
+      sentences: leading,
+      wordToSentence: [0, 1, 2, 3, 3],
+      anchorPoints: [{ transcriptIndex: 3, time: 12 }],
+      candidateCount: 1,
+      anchoredCount: 1,
+    });
+    // 앞선 3문장이 0→12 사이에 단조 증가하며 서로 겹치지 않는다.
+    expect(segments[0].start).toBe(0);
+    expect(segments[0].start).toBeLessThan(segments[1].start);
+    expect(segments[1].start).toBeLessThan(segments[2].start);
+    expect(segments[2].start).toBeLessThan(12);
+    for (let i = 1; i < segments.length; i++) {
+      expect(segments[i].start).toBeGreaterThanOrEqual(segments[i - 1].end);
+    }
+  });
+
   it('should return matchRate 0 when there are no candidates', () => {
     const { matchRate } = buildAlignment({
       sentences,
