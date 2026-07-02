@@ -19,8 +19,9 @@ const SKIP_ROLES = new Set([
 ]);
 // 인라인 비발화 큐: 대괄호 [LAUGHTER], 소괄호 (MUSIC) 등.
 const CUE = /\[[^\]]*\]|\([^)]*\)/g;
-// 대사 앞에 붙는 화자 라벨(예: "DUBNER:", "ANGELA DUCKWORTH:") — <strong> 없는 페이지 대응.
-const INLINE_LABEL = /^([A-Z][A-Z .'&-]{1,30}):\s+/;
+// 대사 앞에 붙는 화자 라벨(예: "DUBNER:", "ANGELA DUCKWORTH:", "DUCKWORTH + DUBNER:")
+// — <strong> 없는 페이지 대응. 복합 라벨의 '+' 결합자도 허용한다.
+const INLINE_LABEL = /^([A-Z][A-Z .'&+-]{1,30}):\s+/;
 // 별표 구분선(예: "* * *")은 발화가 아니므로 제외.
 const DIVIDER = /^\*(\s*\*)+$/;
 // 팩트체크·엔딩 크레딧 아웃트로 시작 표지. 이 지점부터는 실제 대사가 아니므로 수집 중단.
