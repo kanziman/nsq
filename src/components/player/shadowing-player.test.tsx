@@ -72,6 +72,12 @@ const SEGMENTS: Segment[] = [
   { id: 's2', start: 5, end: 10, speaker: 'DUBNER', text: 'second line' },
 ];
 
+// 강조 중인 세그먼트는 텍스트가 단어별 span으로 쪼개지므로, <p> 전체 textContent로 매칭한다.
+const byParagraphText =
+  (text: string) =>
+  (_content: string, el: Element | null): boolean =>
+    el?.tagName === 'P' && el.textContent === text;
+
 beforeEach(() => vi.clearAllMocks());
 afterEach(cleanup);
 
@@ -278,7 +284,9 @@ describe('ShadowingPlayer', () => {
     act(() => {
       fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
     });
-    expect(screen.getByText('second line')).toBeInTheDocument();
+    expect(
+      screen.getByText(byParagraphText('second line')),
+    ).toBeInTheDocument();
     expect(screen.queryByText('first line')).toBeNull(); // 리스트 아님
     expect(screen.getByRole('button', { name: '재생' })).toBeInTheDocument(); // 컨트롤 유지
   });
@@ -312,11 +320,13 @@ describe('ShadowingPlayer', () => {
     act(() => {
       fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
     });
-    expect(screen.getByText('first line')).toBeInTheDocument();
+    expect(screen.getByText(byParagraphText('first line'))).toBeInTheDocument();
     act(() => {
       fireEvent.click(screen.getByRole('button', { name: '다음 세그먼트' }));
     });
-    expect(screen.getByText('second line')).toBeInTheDocument();
+    expect(
+      screen.getByText(byParagraphText('second line')),
+    ).toBeInTheDocument();
     expect(screen.queryByText('first line')).toBeNull();
   });
 
