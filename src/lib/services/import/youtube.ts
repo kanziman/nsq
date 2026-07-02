@@ -7,6 +7,7 @@
 import { spawn } from 'child_process';
 import fs from 'fs/promises';
 import path from 'path';
+import { EpisodeMeta } from '../../types';
 
 /** 외부 프로세스(yt-dlp) 실행 결과. */
 export interface RunnerResult {
@@ -14,6 +15,8 @@ export interface RunnerResult {
   code: number;
   /** 캡처된 표준 에러 (실패 진단용). */
   stderr: string;
+  /** 캡처된 표준 출력 (--dump-single-json 등 데이터 취득용). */
+  stdout?: string;
 }
 
 /** 외부 프로세스 실행 추상. 기본 child_process.spawn 래퍼, 테스트는 fake 주입. */
@@ -47,6 +50,7 @@ const defaultRunner: Runner = (command, args) => {
   return new Promise<RunnerResult>((resolve, reject) => {
     const child = spawn(command, args);
     let stderr = '';
+    let stdout = '';
     const timer = setTimeout(() => {
       child.kill();
       reject(new Error(`yt-dlp timed out after ${timeoutMs}ms`));
@@ -55,13 +59,16 @@ const defaultRunner: Runner = (command, args) => {
     child.stderr?.on('data', (chunk) => {
       stderr += chunk.toString();
     });
+    child.stdout?.on('data', (chunk) => {
+      stdout += chunk.toString();
+    });
     child.on('error', (err) => {
       clearTimeout(timer);
       reject(err);
     });
     child.on('close', (code) => {
       clearTimeout(timer);
-      resolve({ code: code ?? 1, stderr });
+      resolve({ code: code ?? 1, stderr, stdout });
     });
   });
 };
@@ -100,6 +107,47 @@ export async function downloadAudio(
       `yt-dlp exited 0 but expected artifact not found: ${outputPath}`,
     );
   }
+}
+
+/**
+ * yt-dlp --dump-single-json 으로 영상 메타(title/duration/thumbnail)를 취득해 meta.json 기록.
+ * 실패(비정상 종료·출력 없음·파싱 실패) 시 throw — 호출측(파이프라인)이 best-effort로 흡수한다.
+ */
+export async function writeEpisodeMeta(
+  videoId: string,
+  youtubeUrl: string,
+  runner: Runner = defaultRunner,
+): Promise<void> {
+  const outDir = path.join(EPISODES_DIR, videoId);
+  await fs.mkdir(outDir, { recursive: true });
+
+  const command = resolveYtDlpCommand();
+  const args = ['--dump-single-json', '--skip-download', youtubeUrl];
+  const { code, stderr, stdout } = await runner(command, args);
+  if (code !== 0 || !stdout) {
+    throw new Error(
+      `yt-dlp meta failed (exit ${code}): ${stderr.slice(-STDERR_TAIL_LEN)}`,
+    );
+  }
+
+  const info = JSON.parse(stdout) as {
+    title?: string;
+    duration?: number;
+    thumbnail?: string;
+  };
+  const meta: EpisodeMeta = {
+    id: videoId,
+    title: info.title || `Episode: ${videoId}`,
+    duration: typeof info.duration === 'number' ? info.duration : 0,
+    youtubeUrl,
+    thumbnailUrl: info.thumbnail,
+    addedAt: new Date().toISOString(),
+  };
+  await fs.writeFile(
+    path.join(outDir, 'meta.json'),
+    JSON.stringify(meta, null, 2),
+    'utf-8',
+  );
 }
 
 export async function fetchSubtitle(

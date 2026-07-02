@@ -2,7 +2,11 @@ import fs from 'fs/promises';
 import path from 'path';
 import { ImportState, RetryStep } from '../types';
 import { saveImportState } from './episodes';
-import { downloadAudio, fetchSubtitle } from './import/youtube';
+import {
+  downloadAudio,
+  fetchSubtitle,
+  writeEpisodeMeta,
+} from './import/youtube';
 import { fetchTranscript } from './import/transcript';
 import { alignTranscript } from './import/alignment';
 
@@ -20,6 +24,8 @@ export interface PipelineSteps {
   fetchTranscript(videoId: string, transcriptUrl: string): Promise<void>;
   /** alignment: subtitle.en.vtt + transcript.txt → segments.json, matchRate 반환 */
   alignTranscript(videoId: string): Promise<{ matchRate: number }>;
+  /** meta: youtubeUrl → meta.json (best-effort, 실패해도 임포트 완료 유지) */
+  fetchMeta?(videoId: string, youtubeUrl: string): Promise<void>;
 }
 
 // matchRate가 이 값 이상이면 정합 성공 (spec-fixed §5 / CLAUDE.md 정책)
@@ -67,6 +73,7 @@ const defaultSteps: PipelineSteps = {
   fetchSubtitle,
   fetchTranscript,
   alignTranscript,
+  fetchMeta: writeEpisodeMeta,
 };
 
 async function writeState(
@@ -179,6 +186,13 @@ export async function runImportPipeline(
         matchRate,
       );
       return;
+    }
+
+    // 메타(제목·재생시간·썸네일)는 best-effort — 실패해도 임포트 완료를 막지 않는다 (#74 AC3).
+    try {
+      await steps.fetchMeta?.(videoId, youtubeUrl);
+    } catch {
+      // 폴백: meta.json 없이도 episodes.ts가 status 기반으로 안전 처리.
     }
 
     await write('completed', 'completed', 100, undefined, matchRate);

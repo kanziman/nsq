@@ -98,6 +98,24 @@ describe('getEpisodeById (meta.json 부재 폴백)', () => {
     const ep = await getEpisodeById(TEST_VIDEO_ID);
     expect(ep!.title).toContain('임포트 중');
   });
+
+  it('[정상] meta.json 존재 시 실제 제목·재생시간을 사용한다 (AC1/AC2 #74)', async () => {
+    await fs.mkdir(episodeDir(TEST_VIDEO_ID), { recursive: true });
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'meta.json'),
+      JSON.stringify({
+        id: TEST_VIDEO_ID,
+        title: 'What Is the Optimal Way to Be Angry?',
+        duration: 2078,
+        youtubeUrl: 'https://youtu.be/x',
+        addedAt: new Date().toISOString(),
+      }),
+    );
+    await writeState('completed');
+    const ep = await getEpisodeById(TEST_VIDEO_ID);
+    expect(ep!.title).toBe('What Is the Optimal Way to Be Angry?');
+    expect(ep!.duration).toBe(2078);
+  });
 });
 
 describe('getEpisodeSegments (VTT 단어 매핑)', () => {

@@ -92,6 +92,19 @@ describe('runImportPipeline', () => {
     expect(state?.progress).toBe(100);
   });
 
+  it('should call fetchMeta after a successful alignment (#74)', async () => {
+    const fetchMeta = vi.fn().mockResolvedValue(undefined);
+    await runImportPipeline(TEST_VIDEO_ID, URLS, makeSteps({ fetchMeta }));
+    expect(fetchMeta).toHaveBeenCalledWith(TEST_VIDEO_ID, URLS.youtubeUrl);
+  });
+
+  it('should still complete when fetchMeta throws (best-effort, AC3 #74)', async () => {
+    const fetchMeta = vi.fn().mockRejectedValue(new Error('meta boom'));
+    await runImportPipeline(TEST_VIDEO_ID, URLS, makeSteps({ fetchMeta }));
+    const state = await readState(TEST_VIDEO_ID);
+    expect(state?.status).toBe('completed');
+  });
+
   it('should call each step exactly once in download→subtitle→transcript→alignment order when all steps succeed', async () => {
     const order: string[] = [];
     const steps = makeSteps({
