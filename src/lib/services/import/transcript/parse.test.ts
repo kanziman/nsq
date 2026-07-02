@@ -76,6 +76,15 @@ describe('parseTranscriptHtml', () => {
     ]);
   });
 
+  it('should strip a compound inline "NAME + NAME:" label and map it to BOTH', () => {
+    const html = `<div id="transcript_inner">
+      <p><span>DUCKWORTH + DUBNER: “there are no stupid questions.”</span></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'BOTH', text: '“there are no stupid questions.”' },
+    ]);
+  });
+
   it('should drop the fact-check/credits outro from the Radio Network marker onward', () => {
     const html = `<div id="transcript_inner">
       <p><span>DUCKWORTH: Real dialogue.</span></p>
