@@ -4,6 +4,7 @@ import path from 'path';
 import {
   downloadAudio,
   fetchSubtitle,
+  writeEpisodeMeta,
   type Runner,
   type RunnerResult,
 } from './youtube';
@@ -11,6 +12,10 @@ import {
 const BASE = path.join(process.cwd(), '.shadowing', 'episodes');
 const VID = 'test-issue9-vid';
 const URL = 'https://www.youtube.com/watch?v=test9';
+
+function metaPath(id: string): string {
+  return path.join(BASE, id, 'meta.json');
+}
 
 function audioPath(id: string): string {
   return path.join(BASE, id, 'audio.mp3');
@@ -245,5 +250,55 @@ describe('fetchSubtitle', () => {
     await expect(fetchSubtitle(VID, URL, runner)).rejects.toThrow(
       /distinctive-sub-fail-zzz/,
     );
+  });
+});
+
+describe('writeEpisodeMeta', () => {
+  afterEach(async () => {
+    await fs.rm(path.join(BASE, VID), { recursive: true, force: true });
+  });
+
+  function jsonRunner(payload: unknown): Runner {
+    return vi.fn(
+      async (): Promise<RunnerResult> => ({
+        code: 0,
+        stderr: '',
+        stdout: JSON.stringify(payload),
+      }),
+    );
+  }
+
+  it('[정상] should write meta.json with title/duration/thumbnail from yt-dlp JSON (AC1/AC2)', async () => {
+    const runner = jsonRunner({
+      title: 'What Is the Optimal Way to Be Angry?',
+      duration: 2078,
+      thumbnail: 'https://img.youtube.com/vi/x/hq.jpg',
+    });
+    await writeEpisodeMeta(VID, URL, runner);
+    const meta = JSON.parse(await fs.readFile(metaPath(VID), 'utf-8'));
+    expect(meta.id).toBe(VID);
+    expect(meta.title).toBe('What Is the Optimal Way to Be Angry?');
+    expect(meta.duration).toBe(2078);
+    expect(meta.thumbnailUrl).toBe('https://img.youtube.com/vi/x/hq.jpg');
+    expect(meta.youtubeUrl).toBe(URL);
+    expect(typeof meta.addedAt).toBe('string');
+  });
+
+  it('[경계] should fall back title/duration when JSON fields are missing', async () => {
+    const runner = jsonRunner({});
+    await writeEpisodeMeta(VID, URL, runner);
+    const meta = JSON.parse(await fs.readFile(metaPath(VID), 'utf-8'));
+    expect(meta.title).toContain(VID);
+    expect(meta.duration).toBe(0);
+  });
+
+  it('[예외] should throw when yt-dlp exits non-zero (pipeline absorbs) (AC3)', async () => {
+    const runner: Runner = vi.fn(async () => ({
+      code: 1,
+      stderr: 'boom',
+      stdout: '',
+    }));
+    await expect(writeEpisodeMeta(VID, URL, runner)).rejects.toThrow();
+    expect(await fileExists(metaPath(VID))).toBe(false);
   });
 });
