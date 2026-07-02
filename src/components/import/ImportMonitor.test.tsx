@@ -291,14 +291,14 @@ describe('ImportMonitor completed actions', () => {
     };
   }
 
-  it("should render '새 임포트' and '에피소드 보기' buttons when status is 'completed'", () => {
+  it("should render '새 임포트' and '에피소드 보기' when status is 'completed'", () => {
     setState(completedState());
     render(<ImportMonitor videoId="v" />);
     expect(
       screen.getByRole('button', { name: '새 임포트' }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole('button', { name: '에피소드 보기' }),
+      screen.getByRole('link', { name: '에피소드 보기' }),
     ).toBeInTheDocument();
   });
 
@@ -310,12 +310,13 @@ describe('ImportMonitor completed actions', () => {
     expect(onNewImport).toHaveBeenCalledTimes(1);
   });
 
-  it("should render '에피소드 보기' as a disabled placeholder", () => {
+  it("should link '에피소드 보기' to the episode player page", () => {
     setState(completedState());
     render(<ImportMonitor videoId="v" />);
-    expect(
-      screen.getByRole('button', { name: '에피소드 보기' }),
-    ).toBeDisabled();
+    expect(screen.getByRole('link', { name: '에피소드 보기' })).toHaveAttribute(
+      'href',
+      '/episodes/v',
+    );
   });
 
   it("should not render '새 임포트'/'에피소드 보기' when status is not 'completed'", () => {
@@ -331,7 +332,7 @@ describe('ImportMonitor completed actions', () => {
       screen.queryByRole('button', { name: '새 임포트' }),
     ).not.toBeInTheDocument();
     expect(
-      screen.queryByRole('button', { name: '에피소드 보기' }),
+      screen.queryByRole('link', { name: '에피소드 보기' }),
     ).not.toBeInTheDocument();
   });
 });

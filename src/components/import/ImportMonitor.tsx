@@ -1,9 +1,10 @@
 'use client';
 
 import * as React from 'react';
+import Link from 'next/link';
 import type { ImportState, RetryStep } from '@/lib/types';
 import { useImportStatus } from '@/hooks/use-import-status';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { StepTimeline } from './StepTimeline';
 
 export interface ImportMonitorProps {
@@ -104,9 +105,12 @@ export function ImportMonitor({
             <Button type="button" variant="primary" onClick={onNewImport}>
               새 임포트
             </Button>
-            <Button type="button" variant="secondary" disabled>
+            <Link
+              href={`/episodes/${videoId}`}
+              className={buttonVariants({ variant: 'secondary' })}
+            >
               에피소드 보기
-            </Button>
+            </Link>
           </div>
         </div>
       )}
