@@ -21,4 +21,28 @@ three four`;
       expect(tokens[i].start).toBeLessThan(tokens[i].end);
     }
   });
+
+  it('should dedupe YouTube rolling auto-captions via inline word timestamps', () => {
+    const vtt = `WEBVTT
+Kind: captions
+
+00:00:00.080 --> 00:00:01.910
+do<00:00:00.240><c> I</c><00:00:00.560><c> seem</c>
+
+00:00:01.910 --> 00:00:01.920
+do I seem
+
+00:00:01.920 --> 00:00:04.870
+do I seem<00:00:02.000><c> like</c>`;
+    const tokens = parseVtt(vtt);
+    // 롤링 스냅샷/이월 중복을 타임스탬프로 제거 → 발화 단어당 1회.
+    expect(tokens.map((t) => t.word)).toEqual(['I', 'seem', 'like']);
+    expect(tokens[0].start).toBeCloseTo(0.24);
+    expect(tokens[1].start).toBeCloseTo(0.56);
+    expect(tokens[2].start).toBeCloseTo(2.0);
+    for (let i = 1; i < tokens.length; i++) {
+      expect(tokens[i].start).toBeGreaterThan(tokens[i - 1].start);
+      expect(tokens[i].end).toBeGreaterThan(tokens[i].start);
+    }
+  });
 });
