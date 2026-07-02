@@ -59,6 +59,48 @@ describe('parseTranscriptHtml', () => {
     ]);
   });
 
+  it('should scope to #transcript_inner and parse inline "NAME:" speaker labels', () => {
+    const html = `
+      <p><a class="comments_link">Comments</a></p>
+      <nav><p>Share this episode</p></nav>
+      <section id="transcript"><div id="transcript_inner">
+        <blockquote><p><i><span style="font-weight:400;">DUBNER: Do I seem like an anti-mindfulness person?</span></i></p></blockquote>
+        <p><span>DUCKWORTH: Too crotchety to be mindful.</span></p>
+      </div></section>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      {
+        speaker: 'DUBNER',
+        text: 'Do I seem like an anti-mindfulness person?',
+      },
+      { speaker: 'DUCKWORTH', text: 'Too crotchety to be mindful.' },
+    ]);
+  });
+
+  it('should drop the fact-check/credits outro from the Radio Network marker onward', () => {
+    const html = `<div id="transcript_inner">
+      <p><span>DUCKWORTH: Real dialogue.</span></p>
+      <p style="text-align:center">*      *      *</p>
+      <p>No Stupid Questions is part of the Freakonomics Radio Network. This episode was produced by Rebecca Lee Douglas.</p>
+      <p>Our staff includes Alison Craiglow.</p>
+      <p><span>DUBNER: Outro joke after credits.</span></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'DUCKWORTH', text: 'Real dialogue.' },
+    ]);
+  });
+
+  it('should drop asterisk divider paragraphs', () => {
+    const html = `<div id="transcript_inner">
+      <p><span>DUCKWORTH: Before.</span></p>
+      <p style="text-align:center">*      *      *</p>
+      <p><span>DUBNER: After.</span></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'DUCKWORTH', text: 'Before.' },
+      { speaker: 'DUBNER', text: 'After.' },
+    ]);
+  });
+
   it('should split a multi-sentence paragraph and propagate the same speaker', () => {
     const html = `<p><strong>Angela DUCKWORTH:</strong> First sentence. Second one? Third!</p>`;
     expect(parseTranscriptHtml(html)).toEqual([
