@@ -118,7 +118,7 @@ describe('getEpisodeById (meta.json 부재 폴백)', () => {
   });
 });
 
-describe('getEpisodeSegments (VTT 단어 매핑)', () => {
+describe('getEpisodeSegments', () => {
   const SEGMENTS: Segment[] = [
     { id: 's1', start: 0, end: 3, speaker: 'DUCKWORTH', text: 'hello there' },
   ];
@@ -131,31 +131,15 @@ describe('getEpisodeSegments (VTT 단어 매핑)', () => {
     );
   }
 
-  it('[경계] should return raw segments (no words) when no VTT file exists (AC2)', async () => {
+  it('[정상] should return the stored official-text segments as-is', async () => {
     await writeSegments();
     const result = await getEpisodeSegments(TEST_VIDEO_ID);
-    expect(result[0].words).toBeUndefined();
+    expect(result).toHaveLength(1);
     expect(result[0].text).toBe('hello there');
   });
 
-  it('[예외] should fall back to raw segments when subtitle.en.vtt is malformed (AC2)', async () => {
-    await writeSegments();
-    await fs.writeFile(
-      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
-      'NOT VALID VTT CONTENT @@@@',
-    );
+  it('[경계] should return [] when segments.json does not exist', async () => {
     const result = await getEpisodeSegments(TEST_VIDEO_ID);
-    expect(result[0].words).toBeUndefined();
-    expect(result[0].text).toBe('hello there');
-  });
-
-  it('[정상] should map VTT words into segments when subtitle.en.vtt exists (AC1)', async () => {
-    await writeSegments();
-    await fs.writeFile(
-      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
-      'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
-    );
-    const result = await getEpisodeSegments(TEST_VIDEO_ID);
-    expect(result[0].words?.length).toBeGreaterThan(0);
+    expect(result).toEqual([]);
   });
 });

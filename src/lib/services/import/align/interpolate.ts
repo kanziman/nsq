@@ -47,6 +47,14 @@ export function buildAlignment(input: AlignInput): {
   const { sentences, wordToSentence, anchorPoints } = input;
   const totalWords = wordToSentence.length;
 
+  // 첫 앵커가 대본 시작(index 0)보다 뒤에 있으면, 앞쪽 문장들이 모두 첫 앵커 시각으로
+  // 클램프되어 겹친다(예: 콜드오픈 5문장이 전부 11.28초). 합성 시작 앵커(0, 0)를 앞에 붙여
+  // 첫 앵커까지 선형 분포시킨다.
+  const anchors =
+    anchorPoints.length > 0 && anchorPoints[0].transcriptIndex > 0
+      ? [{ transcriptIndex: 0, time: 0 }, ...anchorPoints]
+      : anchorPoints;
+
   const segments: Segment[] = [];
   let prevEnd = 0;
   for (let k = 0; k < sentences.length; k++) {
@@ -56,8 +64,8 @@ export function buildAlignment(input: AlignInput): {
     const boundary = nextWord === -1 ? totalWords : nextWord;
 
     const rawStart =
-      firstWord === -1 ? prevEnd : interpolateTime(anchorPoints, firstWord);
-    const rawEnd = interpolateTime(anchorPoints, boundary);
+      firstWord === -1 ? prevEnd : interpolateTime(anchors, firstWord);
+    const rawEnd = interpolateTime(anchors, boundary);
 
     const start = Math.max(rawStart, prevEnd);
     const end = Math.max(rawEnd, start + MIN_DURATION);

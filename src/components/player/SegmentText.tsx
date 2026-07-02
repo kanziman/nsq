@@ -1,18 +1,19 @@
 import { Fragment } from 'react';
 import type { Segment } from '@/lib/types';
-import { findCurrentWordIndex } from '@/lib/utils/words';
+import { splitWords, findCurrentWordIndex } from '@/lib/utils/words';
 
 interface SegmentTextProps {
   segment: Segment;
-  /** true이고 words가 있으면 현재 단어를 개별 강조한다. */
+  /** true이고 currentTime이 주어지면 공식 텍스트의 현재 단어를 강조한다. */
   highlightWords?: boolean;
   currentTime?: number;
   className?: string;
 }
 
 /**
- * 세그먼트 텍스트 렌더러. words 타이밍이 있고 강조 대상이면 단어별 span으로 그려
- * 현재 단어를 강조하고, 아니면 plain text로 폴백한다.
+ * 세그먼트 텍스트 렌더러. 항상 공식 대본 텍스트(segment.text)를 표시하며, 강조 대상이고
+ * currentTime이 있으면 텍스트를 단어로 분해해 [start, end) 균등 분포로 현재 단어를 강조한다.
+ * (VTT 자동 캡션 단어는 대본과 불일치하므로 표시에 쓰지 않는다.)
  */
 export function SegmentText({
   segment,
@@ -20,23 +21,28 @@ export function SegmentText({
   currentTime,
   className,
 }: SegmentTextProps): React.ReactElement {
-  const words = segment.words;
-  if (!highlightWords || !words || words.length === 0) {
+  const words = splitWords(segment.text);
+  if (!highlightWords || currentTime == null || words.length === 0) {
     return <p className={className}>{segment.text}</p>;
   }
 
-  const currentIdx = findCurrentWordIndex(words, currentTime ?? -1);
+  const currentIdx = findCurrentWordIndex(
+    words.length,
+    segment.start,
+    segment.end,
+    currentTime,
+  );
   return (
     <p className={className}>
       {words.map((w, j) => {
         const current = j === currentIdx;
         return (
-          <Fragment key={`${w.start}-${j}`}>
+          <Fragment key={j}>
             <span
               data-current-word={current || undefined}
               className={current ? 'rounded bg-primary/15 text-primary' : ''}
             >
-              {w.word}
+              {w}
             </span>
             {j < words.length - 1 ? ' ' : ''}
           </Fragment>

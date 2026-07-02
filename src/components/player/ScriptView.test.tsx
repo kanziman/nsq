@@ -197,24 +197,19 @@ describe('ScriptView', () => {
     expect(toggle).toHaveAttribute('aria-pressed', 'true');
   });
 
-  it('[정상] active segment with words should mark the current word (AC1)', () => {
-    const withWords: Segment[] = [
+  it('[정상] active segment should mark the current official-text word (AC1)', () => {
+    const active: Segment[] = [
       {
         id: 'w1',
         start: 0,
         end: 3,
         speaker: 'DUCKWORTH',
         text: 'a b c',
-        words: [
-          { word: 'a', start: 0, end: 1 },
-          { word: 'b', start: 1, end: 2 },
-          { word: 'c', start: 2, end: 3 },
-        ],
       },
     ];
     const { container } = render(
       <ScriptView
-        segments={withWords}
+        segments={active}
         currentSegmentIndex={0}
         currentTime={1.5}
       />,
@@ -224,11 +219,11 @@ describe('ScriptView', () => {
     expect(current[0].textContent).toBe('b');
   });
 
-  it('[경계] segment without words should fall back to plain text (AC2)', () => {
+  it('[경계] inactive segment should fall back to plain text (AC2)', () => {
     const { container } = render(
       <ScriptView
         segments={SEGMENTS}
-        currentSegmentIndex={0}
+        currentSegmentIndex={-1}
         currentTime={1}
       />,
     );

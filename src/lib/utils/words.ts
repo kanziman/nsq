@@ -1,37 +1,31 @@
-import type { Segment, VttToken } from '@/lib/types';
-
 /**
- * VTT 토큰을 각 세그먼트의 [start, end) 시간 범위로 매핑해 words를 채운다.
- * 매칭되는 토큰이 없는 세그먼트는 words를 부여하지 않는다(폴백 대상).
+ * 세그먼트 텍스트의 단어 단위 강조를 위한 유틸.
+ *
+ * 자막(VTT) 자동 캡션은 공식 대본과 단어가 일치하지 않으므로(누락/치환) 화면 텍스트로
+ * 쓰지 않는다. 대신 공식 대본 텍스트를 단어로 분해하고, 세그먼트 [start, end) 구간에
+ * 균등 분포시켜 현재 시간에 해당하는 단어를 근사 강조한다.
  */
-export function mapWordsToSegments(
-  segments: Segment[],
-  tokens: VttToken[],
-): Segment[] {
-  return segments.map((seg) => {
-    const words = tokens.filter(
-      (t) => t.start >= seg.start && t.start < seg.end,
-    );
-    return words.length > 0 ? { ...seg, words } : seg;
-  });
+
+// 0 division 방지용 최소 구간 길이.
+const MIN_DURATION = 0.001;
+
+/** 공백 기준 단어 분해(빈 토큰 제거). */
+export function splitWords(text: string): string[] {
+  return text.split(/\s+/).filter(Boolean);
 }
 
 /**
- * 현재 시간(t)에 해당하는 단어 인덱스. start <= t 인 마지막 단어를 반환한다.
- * 첫 단어 시작 이전이거나 words가 없으면 -1.
+ * 세그먼트 [start, end) 구간에 wordCount개 단어를 균등 분포시켜, 현재 시간 t의 단어
+ * 인덱스를 반환한다. start 이전이면 -1, end 이후이거나 구간을 벗어나면 마지막 단어로 클램프.
  */
 export function findCurrentWordIndex(
-  words: VttToken[] | undefined,
+  wordCount: number,
+  start: number,
+  end: number,
   t: number,
 ): number {
-  if (!words || words.length === 0) return -1;
-  let idx = -1;
-  for (let i = 0; i < words.length; i++) {
-    if (t >= words[i].start) {
-      idx = i;
-    } else {
-      break;
-    }
-  }
-  return idx;
+  if (wordCount <= 0 || t < start) return -1;
+  const dur = Math.max(end - start, MIN_DURATION);
+  const idx = Math.floor(((t - start) / dur) * wordCount);
+  return Math.min(wordCount - 1, Math.max(0, idx));
 }

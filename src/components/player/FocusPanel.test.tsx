@@ -58,18 +58,13 @@ describe('FocusPanel', () => {
     expect(screen.queryByText('Focus on this line.')).toBeNull();
   });
 
-  it('[정상] segment with words should mark the current word by currentTime (AC1)', () => {
+  it('[정상] should mark the current official-text word by currentTime (AC1)', () => {
     const seg: Segment = {
       id: 'w1',
       start: 0,
       end: 3,
       speaker: 'DUCKWORTH',
       text: 'a b c',
-      words: [
-        { word: 'a', start: 0, end: 1 },
-        { word: 'b', start: 1, end: 2 },
-        { word: 'c', start: 2, end: 3 },
-      ],
     };
     const { container } = render(
       <FocusPanel segment={seg} onReplay={vi.fn()} currentTime={2.5} />,
@@ -79,9 +74,24 @@ describe('FocusPanel', () => {
     expect(current[0].textContent).toBe('c');
   });
 
-  it('[경계] segment without words should render plain text (AC2)', () => {
+  it('[정상] should always render the full official text, not degraded caption words', () => {
+    const seg: Segment = {
+      id: 'w2',
+      start: 0,
+      end: 3,
+      speaker: 'DUCKWORTH',
+      text: 'I run an educational non-profit called Character Lab.',
+    };
     const { container } = render(
-      <FocusPanel segment={SEG} onReplay={vi.fn()} currentTime={1} />,
+      <FocusPanel segment={seg} onReplay={vi.fn()} currentTime={1} />,
+    );
+    // 강조 중이어도 화면 텍스트는 공식 대본 전체와 동일해야 한다.
+    expect(container.querySelector('p')?.textContent).toBe(seg.text);
+  });
+
+  it('[경계] should render plain text when currentTime is not provided (AC2)', () => {
+    const { container } = render(
+      <FocusPanel segment={SEG} onReplay={vi.fn()} />,
     );
     expect(container.querySelectorAll('[data-current-word]')).toHaveLength(0);
     expect(screen.getByText('Focus on this line.')).toBeInTheDocument();

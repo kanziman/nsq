@@ -5,11 +5,6 @@ export interface Segment {
   speaker: 'DUCKWORTH' | 'DUBNER' | 'BOTH' | 'NARRATOR';
   text: string;
   translation?: string;
-  words?: {
-    word: string;
-    start: number;
-    end: number;
-  }[];
 }
 
 export interface EpisodeMeta {
