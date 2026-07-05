@@ -8,6 +8,7 @@ import { Sentence } from '@/lib/types';
 import { parseVtt } from './vtt/parse';
 import { normalizeWord, findAnchorCandidates } from './align/anchor';
 import { longestIncreasingSubsequence } from './align/lis';
+import { findDenseAnchors } from './align/dense';
 import { buildAlignment, AnchorPoint } from './align/interpolate';
 
 const EPISODES_DIR = path.join(process.cwd(), '.shadowing', 'episodes');
@@ -56,15 +57,19 @@ export async function alignTranscript(
   const vttTokens = parseVtt(vttRaw);
   const vttWords = vttTokens.map((token) => normalizeWord(token.word));
 
-  // 앵커 후보 → LIS로 단조 증가 앵커 확정.
+  // 품질 지표(matchRate)는 기존 고유 단어 앵커 기준을 유지한다(0.85 게이트 안정성).
   const candidates = findAnchorCandidates(vttWords, transcriptWords);
   const lisIndices = longestIncreasingSubsequence(
     candidates.map((c) => c.vttIndex),
   );
   const confirmed = lisIndices.map((i) => candidates[i]);
-  const anchorPoints: AnchorPoint[] = confirmed.map((c) => ({
-    transcriptIndex: c.transcriptIndex,
-    time: vttTokens[c.vttIndex].start,
+
+  // 보간용 앵커는 반복 단어까지 포함한 LCS 조밀 앵커를 사용해 드리프트를 줄인다.
+  // (LCS는 고유 단어 앵커를 부분집합으로 포함하므로 전역 정합과 모순되지 않는다.)
+  const densePairs = findDenseAnchors(vttWords, transcriptWords);
+  const anchorPoints: AnchorPoint[] = densePairs.map((p) => ({
+    transcriptIndex: p.transcriptIndex,
+    time: vttTokens[p.vttIndex].start,
   }));
 
   const { segments, matchRate } = buildAlignment({
