@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { Episode, Segment, ImportState } from '../types';
-import { parseVtt } from './import/vtt/parse';
+import { parseVtt } from '../utils/vtt-parser';
 import { computeWordStarts, splitWords } from '../utils/words';
 
 const BASE_DIR = path.join(process.cwd(), '.shadowing', 'episodes');

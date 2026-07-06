@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseVtt } from './parse';
+import { parseVtt } from './vtt-parser';
 
 describe('parseVtt', () => {
   it('should produce word tokens with monotonic times distributed across each cue', () => {
