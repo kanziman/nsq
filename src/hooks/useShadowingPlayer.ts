@@ -11,6 +11,12 @@ import type { Segment } from '@/lib/types';
 const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
 const EMPTY_TARGET_NOTICE = '선택한 화자의 대사가 없어 필터를 해제했어요.';
 
+// 세그먼트 탐색 대상 시각: 실제 첫 발화 단어(audioStart)가 있으면 그것, 없으면 경계(start).
+// 경계는 보간값이라 실제 첫 단어보다 이를 수 있어(이전 단어 꼬리), 직접 탐색엔 audioStart를 쓴다.
+function segmentSeekTime(seg: Segment): number {
+  return seg.audioStart ?? seg.start;
+}
+
 export interface Selection {
   start: number;
   end: number;
@@ -201,21 +207,21 @@ export function useShadowingPlayer({
     const segs = segmentsRef.current;
     if (segs.length === 0) return;
     const target = Math.min(indexRef.current + 1, segs.length - 1);
-    seekTo(segs[Math.max(target, 0)].start);
+    seekTo(segmentSeekTime(segs[Math.max(target, 0)]));
   }, [seekTo]);
 
   const prev = useCallback(() => {
     const segs = segmentsRef.current;
     if (segs.length === 0) return;
     const target = Math.max(indexRef.current - 1, 0);
-    seekTo(segs[target].start);
+    seekTo(segmentSeekTime(segs[target]));
   }, [seekTo]);
 
   const goToSegment = useCallback(
     (index: number) => {
       const segs = segmentsRef.current;
       if (index < 0 || index >= segs.length) return;
-      seekTo(segs[index].start);
+      seekTo(segmentSeekTime(segs[index]));
       play();
     },
     [seekTo, play],

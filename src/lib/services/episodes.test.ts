@@ -173,6 +173,35 @@ describe('getEpisodeSegments', () => {
     expect(result[0].wordStarts).toBeUndefined();
   });
 
+  it('[정상] should attach audioStart = first VTT token time in the segment window (AC1)', async () => {
+    await writeSegments(); // s1: start 0, end 3, text "hello there"
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      // 큐가 0.5초에 시작 → 실제 첫 단어는 세그먼트 시작(0)보다 늦다.
+      'WEBVTT\n\n00:00.500 --> 00:03.000\nhello there\n',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].audioStart).toBeCloseTo(0.5);
+  });
+
+  it('[경계] should not attach audioStart when the segment window has no VTT tokens (AC1)', async () => {
+    const twoSegs: Segment[] = [
+      { id: 's1', start: 0, end: 3, speaker: 'DUCKWORTH', text: 'hello there' },
+      { id: 's2', start: 10, end: 13, speaker: 'DUBNER', text: 'goodbye now' },
+    ];
+    await fs.mkdir(episodeDir(TEST_VIDEO_ID), { recursive: true });
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'segments.json'),
+      JSON.stringify(twoSegs),
+    );
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[1].audioStart).toBeUndefined();
+  });
+
   it('[경계] should attach wordStarts only to segments whose window has VTT tokens (AC2)', async () => {
     // VTT는 존재하지만 s2 구간(10~13s)엔 겹치는 토큰이 없다 → s1만 부착.
     const twoSegs: Segment[] = [

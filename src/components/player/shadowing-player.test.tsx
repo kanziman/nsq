@@ -156,6 +156,26 @@ describe('ShadowingPlayer', () => {
     expect(lastManager.play).toHaveBeenCalled();
   });
 
+  it('[정상] clicking a segment should seek to its audioStart when present (AC2)', () => {
+    // 실제 첫 단어(audioStart=6.2)로 탐색해야 한다. 경계(5)가 아님.
+    const withAudio: Segment[] = [
+      { id: 's1', start: 0, end: 5, speaker: 'DUCKWORTH', text: 'first line' },
+      {
+        id: 's2',
+        start: 5,
+        end: 10,
+        speaker: 'DUBNER',
+        text: 'second line',
+        audioStart: 6.2,
+      },
+    ];
+    render(<ShadowingPlayer episode={EPISODE} segments={withAudio} />);
+    act(() => {
+      fireEvent.click(screen.getByText('second line'));
+    });
+    expect(lastManager.seekTo).toHaveBeenCalledWith(6.2);
+  });
+
   it('[정상] ⏭ should advance highlight to the next segment', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
     act(() => {
