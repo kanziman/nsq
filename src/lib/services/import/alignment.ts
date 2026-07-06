@@ -5,7 +5,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { Sentence } from '@/lib/types';
-import { parseVtt } from './vtt/parse';
+import { parseVtt } from '@/lib/utils/vtt-parser';
 import { normalizeWord, findAnchorCandidates } from './align/anchor';
 import { longestIncreasingSubsequence } from './align/lis';
 import { findDenseAnchors } from './align/dense';
