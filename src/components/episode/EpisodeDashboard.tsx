@@ -83,14 +83,14 @@ export default function EpisodeDashboard() {
   // 3. 에러 발생 시 처리
   if (error && !loading) {
     return (
-      <div className="max-w-md mx-auto p-8 text-center space-y-6 border border-primary/20 rounded-lg bg-surface-card">
-        <p className="text-ink font-serif text-lg">
+      <div className="max-w-md mx-auto p-[32px] text-center space-y-6 border border-primary/20 rounded-xl bg-surface-card">
+        <p className="text-ink font-serif text-lg tracking-[-0.3px]">
           에피소드를 불러오는데 에러가 발생했습니다.
         </p>
         {error && <p className="text-xs text-muted-soft font-mono">{error}</p>}
         <button
           onClick={() => fetchEpisodes(true)}
-          className="h-10 px-6 rounded bg-primary text-primary-foreground font-medium hover:bg-primary-active transition-colors cursor-pointer"
+          className="h-10 px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary-active transition-colors cursor-pointer"
         >
           다시 시도
         </button>
@@ -118,19 +118,19 @@ export default function EpisodeDashboard() {
   // 5. 빈 목록 상태 (Empty State)
   if (episodes && episodes.length === 0) {
     return (
-      <div className="max-w-md mx-auto p-12 text-center border border-dashed border-hairline rounded-lg space-y-6">
+      <div className="max-w-md mx-auto p-[48px] text-center border border-dashed border-hairline rounded-xl space-y-6">
         <div className="space-y-2">
-          <h3 className="font-serif text-xl text-ink">
+          <h3 className="font-serif text-xl text-ink tracking-[-0.3px]">
             등록된 에피소드가 없습니다.
           </h3>
-          <p className="text-sm text-muted-soft leading-relaxed">
+          <p className="text-sm text-muted-soft leading-[1.55]">
             YouTube 비디오 주소와 대본 링크를 기입해 나만의 첫 쉐도잉 에피소드를
             임포트해보세요!
           </p>
         </div>
         <Link
           href="/import"
-          className="inline-flex h-10 items-center justify-center px-6 rounded bg-primary text-primary-foreground font-medium hover:bg-primary-active transition-colors"
+          className="inline-flex h-10 items-center justify-center px-6 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary-active transition-colors"
         >
           첫 에피소드 임포트하기
         </Link>

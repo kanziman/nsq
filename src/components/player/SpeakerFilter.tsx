@@ -27,6 +27,7 @@ export default function SpeakerFilter({
             key={key}
             variant={enabled ? 'primary' : 'secondaryOnDark'}
             size="sm"
+            className="rounded-full"
             aria-label={`${SPEAKER_COLORS[key].name} 화자 필터`}
             aria-pressed={enabled}
             onClick={() => onToggleSpeaker(key)}

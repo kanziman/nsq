@@ -174,6 +174,23 @@ export function useShadowingPlayer({
     };
   }, [episodeId, applyIndex]);
 
+  // 집중모드에선 selection을 현재 문장과 동기화한다. 집중모드 이동(다음 세그먼트·연속재생)은
+  // currentSegmentIndex만 갱신하므로, 이 동기화가 없으면 구간반복이 전체모드에서 마지막으로
+  // 클릭한(오래된) 문장을 반복한다. 전체모드에선 사용자의 수동 선택을 보존한다.
+  useEffect(() => {
+    if (mode !== 'focus' || currentSegmentIndex < 0) return;
+    const cur = selectionRef.current;
+    if (
+      cur &&
+      cur.start === currentSegmentIndex &&
+      cur.end === currentSegmentIndex
+    )
+      return;
+    const sel = { start: currentSegmentIndex, end: currentSegmentIndex };
+    selectionRef.current = sel;
+    setSelection(sel);
+  }, [mode, currentSegmentIndex]);
+
   const play = useCallback(() => {
     managerRef.current?.play();
     isPlayingRef.current = true;
