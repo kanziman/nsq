@@ -104,7 +104,15 @@ export interface OpenRouterConfig {
 const SYSTEM_PROMPT =
   '너는 팟캐스트 대본 번역가다. 각 줄의 영어 대사를 자연스러운 한국어 구어체로 번역한다. ' +
   '화자와 인접 문맥을 참고하되, 입력과 같은 개수·같은 순서의 한국어 문자열 JSON 배열로만 응답한다. ' +
+  '각 배열 원소에는 번역문만 담고, 화자 표기([DUBNER] 등)나 줄 번호(1. 등)는 절대 포함하지 마라. ' +
   '설명·코드펜스 없이 순수 JSON 배열만 출력한다. (Respond ONLY with a JSON array of Korean strings.)';
+
+// 모델이 프롬프트 형식을 되받아 붙인 선행 번호·화자 표기를 제거한다(flash 응답 오염 방어).
+const ECHOED_PREFIX =
+  /^\s*(?:\d+\.\s*)?(?:\[(?:DUCKWORTH|DUBNER|BOTH|NARRATOR)\]\s*)?/;
+function stripEchoedPrefix(s: string): string {
+  return s.replace(ECHOED_PREFIX, '');
+}
 
 // 배치 세그먼트를 화자·원문이 순서대로 담긴 사용자 메시지로 직렬화.
 function buildUserContent(batch: Segment[]): string {
@@ -181,6 +189,7 @@ export function createOpenRouterTranslator(
 
     // 길이 불일치·파싱 실패는 빈 배열로 신호 → translate가 해당 배치 스킵.
     if (!parsed || parsed.length !== batch.length) return [];
-    return parsed;
+    // 모델이 되받아 붙인 화자/번호 접두사를 제거해 순수 번역문만 반환.
+    return parsed.map(stripEchoedPrefix);
   };
 }

@@ -97,6 +97,21 @@ describe('createOpenRouterTranslator (import-translation 이슈 #104)', () => {
     expect(out).toEqual(['가', '나']);
   });
 
+  it('[경계] #112: 모델이 [화자]/번호 접두사를 붙여 응답해도 순수 번역문만 반환', async () => {
+    const fetchFn = vi.fn(async () =>
+      chatResponse(
+        JSON.stringify(['[DUBNER] 안녕하세요', '2. [DUCKWORTH] 반가워요']),
+      ),
+    );
+    const translator = createOpenRouterTranslator({
+      apiKey: 'k',
+      fetchFn: fetchFn as unknown as typeof fetch,
+    });
+
+    const out = await translator([seg(0), seg(1)]);
+    expect(out).toEqual(['안녕하세요', '반가워요']);
+  });
+
   it('[경계] AC4: 응답 길이≠입력이면 빈 배열 반환(이슈1이 스킵)', async () => {
     const fetchFn = vi.fn(async () => chatResponse(JSON.stringify(['하나만'])));
     const translator = createOpenRouterTranslator({
