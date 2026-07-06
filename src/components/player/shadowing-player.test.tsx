@@ -217,7 +217,10 @@ describe('ShadowingPlayer', () => {
       fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
     });
     expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.5);
-    expect(screen.getByRole('status')).toHaveTextContent('1.5x');
+    // 선택된 배속은 해당 프리셋 버튼의 aria-pressed로 반영된다.
+    expect(
+      screen.getByRole('button', { name: '재생 속도 1.5x' }),
+    ).toHaveAttribute('aria-pressed', 'true');
   });
 
   it('[정상] toggling a speaker off should dim its segments in the script (AC2)', () => {
@@ -277,13 +280,17 @@ describe('ShadowingPlayer', () => {
         new KeyboardEvent('keydown', { key: '+', bubbles: true }),
       );
     });
-    expect(screen.getByRole('status')).toHaveTextContent('1.25x');
+    expect(
+      screen.getByRole('button', { name: '재생 속도 1.25x' }),
+    ).toHaveAttribute('aria-pressed', 'true');
     act(() => {
       window.dispatchEvent(
         new KeyboardEvent('keydown', { key: '-', bubbles: true }),
       );
     });
-    expect(screen.getByRole('status')).toHaveTextContent('1x');
+    expect(
+      screen.getByRole('button', { name: '재생 속도 1x' }),
+    ).toHaveAttribute('aria-pressed', 'true');
   });
 
   it('[경계] repeated + should cap playbackRate at the max preset (AC2)', () => {
@@ -295,7 +302,9 @@ describe('ShadowingPlayer', () => {
         );
       });
     }
-    expect(screen.getByRole('status')).toHaveTextContent('2x');
+    expect(
+      screen.getByRole('button', { name: '재생 속도 2x' }),
+    ).toHaveAttribute('aria-pressed', 'true');
   });
 
   it('[정상] entering focus mode should show only current segment and keep controls (AC1)', () => {
