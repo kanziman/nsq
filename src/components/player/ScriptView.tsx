@@ -140,7 +140,7 @@ function ScriptView({
                         className={[
                           'text-sm leading-[1.55] text-muted-soft transition-all duration-300',
                           blurred
-                            ? 'blur-sm hover:blur-none group-hover/translation:blur-none text-muted-soft/40'
+                            ? 'blur-sm hover:blur-none group-hover/translation:blur-none'
                             : '',
                         ]
                           .filter(Boolean)
