@@ -131,6 +131,8 @@ export async function getEpisodeSegments(id: string): Promise<Segment[]> {
         return {
           ...seg,
           wordStarts: computeWordStarts(wordCount, seg.start, seg.end, times),
+          // 실제 첫 발화 단어 시각 — 직접 클릭 탐색이 경계 대신 이 지점으로 향한다.
+          audioStart: times[0],
         };
       });
     }

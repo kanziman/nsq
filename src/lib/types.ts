@@ -7,6 +7,8 @@ export interface Segment {
   translation?: string;
   /** 공식 단어별 시작 시각(초). 있으면 단어 강조에 사용, 없으면 균등분할 폴백. */
   wordStarts?: number[];
+  /** 실제 첫 발화 단어 시각(초). 직접 클릭/이동 탐색 대상(경계 대신). 없으면 start 폴백. */
+  audioStart?: number;
 }
 
 export interface EpisodeMeta {
