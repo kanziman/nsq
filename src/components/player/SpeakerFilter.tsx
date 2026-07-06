@@ -1,16 +1,17 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
-
-const SPEAKER_KEYS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
+import { resolveSpeaker } from '@/lib/constants/speakers';
 
 interface SpeakerFilterProps {
-  enabledSpeakers: SpeakerKey[];
-  onToggleSpeaker: (speaker: SpeakerKey) => void;
+  /** 이 에피소드에 실제 등장하는 화자 키 목록(등장 순서). */
+  speakers: string[];
+  enabledSpeakers: string[];
+  onToggleSpeaker: (speaker: string) => void;
 }
 
 export default function SpeakerFilter({
+  speakers,
   enabledSpeakers,
   onToggleSpeaker,
 }: SpeakerFilterProps): React.ReactElement {
@@ -20,19 +21,20 @@ export default function SpeakerFilter({
       role="group"
       aria-label="화자 필터"
     >
-      {SPEAKER_KEYS.map((key) => {
+      {speakers.map((key) => {
         const enabled = enabledSpeakers.includes(key);
+        const { name } = resolveSpeaker(key);
         return (
           <Button
             key={key}
             variant={enabled ? 'primary' : 'secondaryOnDark'}
             size="sm"
             className="rounded-full"
-            aria-label={`${SPEAKER_COLORS[key].name} 화자 필터`}
+            aria-label={`${name} 화자 필터`}
             aria-pressed={enabled}
             onClick={() => onToggleSpeaker(key)}
           >
-            {SPEAKER_COLORS[key].name}
+            {name}
           </Button>
         );
       })}

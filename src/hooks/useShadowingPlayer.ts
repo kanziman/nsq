@@ -5,11 +5,22 @@ import {
   DEFAULT_PLAYBACK_RATE,
   type AudioManager,
 } from '@/lib/utils/audio';
-import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import type { Segment } from '@/lib/types';
 
-const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
 const EMPTY_TARGET_NOTICE = '선택한 화자의 대사가 없어 필터를 해제했어요.';
+
+// 세그먼트에서 화자 키를 등장 순서대로 중복 없이 추출(멀티 팟캐스트: 임의 화자 허용).
+function distinctSpeakers(segments: Segment[]): string[] {
+  const seen = new Set<string>();
+  const list: string[] = [];
+  for (const seg of segments) {
+    if (!seen.has(seg.speaker)) {
+      seen.add(seg.speaker);
+      list.push(seg.speaker);
+    }
+  }
+  return list;
+}
 
 // 세그먼트 탐색 대상 시각: 실제 첫 발화 단어(audioStart)가 있으면 그것, 없으면 경계(start).
 // 경계는 보간값이라 실제 첫 단어보다 이를 수 있어(이전 단어 꼬리), 직접 탐색엔 audioStart를 쓴다.
@@ -36,7 +47,8 @@ export interface UseShadowingPlayerResult {
   isLooping: boolean;
   repeatCount: number;
   playbackRate: number;
-  enabledSpeakers: SpeakerKey[];
+  enabledSpeakers: string[];
+  presentSpeakers: string[];
   isSpeakerFilterActive: boolean;
   filterNotice: string | null;
   mode: PlayerMode;
@@ -51,7 +63,7 @@ export interface UseShadowingPlayerResult {
   extendSelectionTo(index: number): void;
   toggleLoop(): void;
   setPlaybackRate(rate: number): void;
-  toggleSpeaker(speaker: SpeakerKey): void;
+  toggleSpeaker(speaker: string): void;
   dismissFilterNotice(): void;
   toggleMode(): void;
 }
@@ -80,7 +92,8 @@ export function useShadowingPlayer({
   const loopingRef = useRef(false);
   const anchorRef = useRef(-1);
   const rateRef = useRef(DEFAULT_PLAYBACK_RATE);
-  const enabledSpeakersRef = useRef<SpeakerKey[]>(ALL_SPEAKERS);
+  const presentSpeakers = useMemo(() => distinctSpeakers(segments), [segments]);
+  const enabledSpeakersRef = useRef<string[]>(presentSpeakers);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSegmentIndex, setCurrentSegmentIndex] = useState(-1);
   const [currentTime, setCurrentTime] = useState(0);
@@ -89,17 +102,12 @@ export function useShadowingPlayer({
   const [repeatCount, setRepeatCount] = useState(0);
   const [playbackRate, setPlaybackRateState] = useState(DEFAULT_PLAYBACK_RATE);
   const [enabledSpeakers, setEnabledSpeakers] =
-    useState<SpeakerKey[]>(ALL_SPEAKERS);
+    useState<string[]>(presentSpeakers);
   const [filterNotice, setFilterNotice] = useState<string | null>(null);
   const [mode, setMode] = useState<PlayerMode>('list');
 
-  const presentSpeakers = useMemo(() => {
-    const set = new Set<SpeakerKey>();
-    segments.forEach((seg) => set.add(seg.speaker));
-    return set;
-  }, [segments]);
   const isSpeakerFilterActive = useMemo(
-    () => [...presentSpeakers].some((s) => !enabledSpeakers.includes(s)),
+    () => presentSpeakers.some((s) => !enabledSpeakers.includes(s)),
     [presentSpeakers, enabledSpeakers],
   );
 
@@ -268,25 +276,28 @@ export function useShadowingPlayer({
     setPlaybackRateState(rate);
   }, []);
 
-  const toggleSpeaker = useCallback((speaker: SpeakerKey) => {
-    const current = enabledSpeakersRef.current;
-    const next = current.includes(speaker)
-      ? current.filter((s) => s !== speaker)
-      : [...current, speaker];
-    // 존재 화자 중 대상이 0개면 전체 복원 + 안내 (AC3)
-    const hasTarget = segmentsRef.current.some((seg) =>
-      next.includes(seg.speaker),
-    );
-    if (!hasTarget) {
-      enabledSpeakersRef.current = ALL_SPEAKERS;
-      setEnabledSpeakers(ALL_SPEAKERS);
-      setFilterNotice(EMPTY_TARGET_NOTICE);
-      return;
-    }
-    enabledSpeakersRef.current = next;
-    setEnabledSpeakers(next);
-    setFilterNotice(null);
-  }, []);
+  const toggleSpeaker = useCallback(
+    (speaker: string) => {
+      const current = enabledSpeakersRef.current;
+      const next = current.includes(speaker)
+        ? current.filter((s) => s !== speaker)
+        : [...current, speaker];
+      // 존재 화자 중 대상이 0개면 전체(등장 화자) 복원 + 안내 (AC3)
+      const hasTarget = segmentsRef.current.some((seg) =>
+        next.includes(seg.speaker),
+      );
+      if (!hasTarget) {
+        enabledSpeakersRef.current = presentSpeakers;
+        setEnabledSpeakers(presentSpeakers);
+        setFilterNotice(EMPTY_TARGET_NOTICE);
+        return;
+      }
+      enabledSpeakersRef.current = next;
+      setEnabledSpeakers(next);
+      setFilterNotice(null);
+    },
+    [presentSpeakers],
+  );
 
   const dismissFilterNotice = useCallback(() => setFilterNotice(null), []);
 
@@ -317,6 +328,7 @@ export function useShadowingPlayer({
     repeatCount,
     playbackRate,
     enabledSpeakers,
+    presentSpeakers,
     isSpeakerFilterActive,
     filterNotice,
     mode,
