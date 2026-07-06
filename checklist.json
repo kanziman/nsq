@@ -288,7 +288,7 @@
           "feature": "쉐도잉 플레이어 페이지",
           "path": "app/episodes/[id]/page.tsx",
           "relatedPaths": ["components/tutor-chat.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "에피소드 상세 페이지: 플레이어 + 스크립트 뷰 + AI 튜터 우측 채팅 레이아웃"
         },
         {
@@ -296,7 +296,7 @@
           "feature": "학습 모드 선택 기능",
           "path": "components/player/shadowing-player.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "전체 모드(스크립트 전체 학습) 및 집중 모드(세그먼트 반복 및 음성 녹음) 전환 UI"
         },
         {
@@ -304,7 +304,7 @@
           "feature": "집중 모드 음성 녹음",
           "path": "components/player/recorder.tsx",
           "relatedPaths": ["lib/utils/recorder.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "집중 모드에서 현재 세그먼트에 대해 사용자의 음성을 녹음하고 재생(들어보기)하는 UI 및 기능"
         },
         {
@@ -312,7 +312,7 @@
           "feature": "쉐도잉 플레이어 코어",
           "path": "components/player/shadowing-player.tsx",
           "relatedPaths": ["lib/utils/audio.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "HTML5 Audio 기반 세그먼트 단위 재생 엔진"
         },
         {
@@ -323,7 +323,7 @@
             "components/ui/button.tsx",
             "components/ui/slider.tsx"
           ],
-          "status": "pending",
+          "status": "completed",
           "description": "재생/정지, 이전/다음 세그먼트, 진행바, 타임코드 표시"
         },
         {
@@ -331,7 +331,7 @@
           "feature": "A-B 구간 반복",
           "path": "components/player/shadowing-player.tsx",
           "relatedPaths": ["components/player/audio-controls.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "선택한 세그먼트(들) 구간 반복 재생 + 반복 횟수 표시"
         },
         {
@@ -339,7 +339,7 @@
           "feature": "재생 속도 조절",
           "path": "components/player/audio-controls.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "0.5x ~ 2.0x 재생 속도 조절 UI"
         },
         {
@@ -347,7 +347,7 @@
           "feature": "화자 필터링",
           "path": "components/player/speaker-filter.tsx",
           "relatedPaths": ["components/player/shadowing-player.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "특정 화자만 선택하여 해당 세그먼트만 재생"
         },
         {
@@ -371,7 +371,7 @@
           "feature": "재생 경계 처리 (Boundary Back-off)",
           "path": "app/episodes/[id]/page.tsx",
           "relatedPaths": ["components/player/shadowing-player.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "인접 세그먼트 간 start/end 경계 공유 시 재생 오판정 및 역행 방지를 위해 BOUNDARY_PARK_BACKOFF_SEC(0.05s) 기반 경계 직전 park 처리"
         }
       ]
@@ -387,7 +387,7 @@
           "feature": "스크립트 뷰 코어",
           "path": "components/script-view.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "세그먼트 목록을 화자별 색상으로 렌더링"
         },
         {
@@ -395,7 +395,7 @@
           "feature": "현재 재생 하이라이트",
           "path": "components/script-view.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "현재 재생 중인 세그먼트 시각적 강조 + 자동 스크롤"
         },
         {
@@ -403,7 +403,7 @@
           "feature": "번역 블러 처리 및 전체 토글",
           "path": "components/script-view.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "한국어 번역 기본 블러(blur) 처리, 개별 해제 기능 및 스크립트 전체 번역 일괄 보이기/숨기기 토글 버튼 제공"
         },
         {
@@ -419,7 +419,7 @@
           "feature": "구간 선택",
           "path": "components/script-view.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "클릭으로 세그먼트 선택, 드래그로 범위 선택 → A-B 반복 연결"
         }
       ]
@@ -435,7 +435,7 @@
           "feature": "Audio API 유틸",
           "path": "lib/utils/audio.ts",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "HTML5 Audio 래퍼: 시간 이동, 구간 재생, 속도 제어"
         },
         {
@@ -443,7 +443,7 @@
           "feature": "시간 포맷 유틸",
           "path": "lib/utils/time.ts",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "초 → mm:ss, VTT 타임코드 파싱 등 시간 관련 헬퍼"
         },
         {
@@ -459,7 +459,7 @@
           "feature": "웹 오디오 녹음 유틸",
           "path": "lib/utils/recorder.ts",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "MediaRecorder API를 래핑하여 오디오 녹음, 정지, Blob 파일 생성 기능 지원"
         }
       ]
