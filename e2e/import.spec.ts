@@ -100,8 +100,8 @@ test.describe('import-ui 전체 흐름', () => {
     await expect(page.getByText(/정합 품질/)).toContainText('90%');
     await expect(page.getByRole('button', { name: '새 임포트' })).toBeVisible();
     await expect(
-      page.getByRole('button', { name: '에피소드 보기' }),
-    ).toBeDisabled();
+      page.getByRole('link', { name: '에피소드 보기' }),
+    ).toBeVisible();
   });
 
   test('재시도: failed → 컨텍스트 재시도 → retryStep 재접수 → 모니터 재시작', async ({
