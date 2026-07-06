@@ -20,7 +20,7 @@
 
 ---
 
-## 이슈 1 — 번역 스텝 코어: segments.json에 translation 멱등 주입
+## 이슈 1 (GH #103) — 번역 스텝 코어: segments.json에 translation 멱등 주입
 
 **목표**: `translate(videoId, deps)`가 `segments.json`을 읽어 번역이 없는 세그먼트만 배치로 묶어 주입 translator를 호출하고, 결과를 병합해 **같은 파일에 재기록**한다. OpenRouter 없이 스텁 translator로 완결 검증.
 
@@ -47,7 +47,7 @@ export function translate(videoId: string, deps: TranslateDeps): Promise<void>;
 
 ---
 
-## 이슈 2 — OpenRouter 배치 번역기 (문맥·화자 프롬프트 → 한국어 JSON 배열)
+## 이슈 2 (GH #104) — OpenRouter 배치 번역기 (문맥·화자 프롬프트 → 한국어 JSON 배열)
 
 **목표**: 이슈1의 `SegmentTranslator` 계약을 만족하는 실제 OpenRouter 구현. 배치 세그먼트를 화자·인접 문맥과 함께 프롬프트로 구성해 `google/gemini-2.5-pro`에 요청하고, 한국어 문자열 JSON 배열을 파싱·검증해 반환한다. 주입형 `fetch`로 네트워크 없이 검증.
 
@@ -80,7 +80,7 @@ export function createOpenRouterTranslator(
 
 ---
 
-## 이슈 3 — 파이프라인 통합: translating 스텝 + retryStep 'translation' + best-effort 마무리
+## 이슈 3 (GH #105) — 파이프라인 통합: translating 스텝 + retryStep 'translation' + best-effort 마무리
 
 **목표**: `runImportPipeline`에 번역 스텝을 배선한다. alignment 성공 직후 `translating(95)`로 `steps.translate` 실행(best-effort), `PipelineSteps.translate` 추가, `RetryStep`에 `'translation'` 추가 및 재사용 아티팩트(`segments.json`) 검증. `.env.example`·기본 모델 상수·checklist 상태를 마무리한다.
 

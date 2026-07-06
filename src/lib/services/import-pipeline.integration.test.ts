@@ -112,6 +112,7 @@ describe('runImportPipeline — engine integration (#14)', () => {
       'processing_subtitles',
       'processing_transcript',
       'aligning',
+      'translating',
       'completed',
     ]);
     expect(stateLog[stateLog.length - 1]).toEqual({
