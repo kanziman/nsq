@@ -11,8 +11,8 @@ interface SpeakerFilterProps {
 }
 
 export default function SpeakerFilter({
-  speakers,
-  enabledSpeakers,
+  speakers = [],
+  enabledSpeakers = [],
   onToggleSpeaker,
 }: SpeakerFilterProps): React.ReactElement {
   return (

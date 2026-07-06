@@ -8,9 +8,10 @@ import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
 import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
+import { TutorChat } from '@/components/tutor/TutorChat';
 import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
-import { Languages } from 'lucide-react';
+import { Languages, Sparkles } from 'lucide-react';
 
 /** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
 function stepPlaybackRate(current: number, dir: 1 | -1): number {
@@ -79,8 +80,10 @@ export function ShadowingPlayer({
   });
 
   return (
-    <div className="space-y-6">
-      {/* 상단 dark 플레이어 영역 */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-[24px] lg:gap-[32px]">
+      {/* 좌측: 플레이어 + 스크립트 */}
+      <div className="lg:col-span-7 space-y-6">
+        {/* 상단 dark 플레이어 영역 */}
       <section className="sticky top-4 z-10 rounded-xl bg-surface-dark p-[32px] text-on-dark">
         <h2 className="font-serif text-xl">{episode.title}</h2>
         <div className="mt-4">
@@ -171,6 +174,22 @@ export function ShadowingPlayer({
           }}
         />
       )}
+      </div>
+
+      {/* 우측 AI 튜터 패널 */}
+      <aside className="lg:col-span-5 rounded-xl border border-hairline bg-surface-card p-[32px] h-[calc(100vh-64px)] sticky top-4 flex flex-col">
+        <div className="flex items-center gap-2 mb-4">
+          <Sparkles className="w-5 h-5 text-primary" />
+          <h2 className="font-serif text-xl text-ink tracking-[-0.3px]">
+            AI Tutor
+          </h2>
+        </div>
+        <TutorChat 
+          context={segments[currentSegmentIndex]} 
+          speakers={presentSpeakers}
+          className="flex-1 overflow-hidden flex flex-col" 
+        />
+      </aside>
     </div>
   );
 }
