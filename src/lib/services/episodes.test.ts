@@ -142,4 +142,54 @@ describe('getEpisodeSegments', () => {
     const result = await getEpisodeSegments(TEST_VIDEO_ID);
     expect(result).toEqual([]);
   });
+
+  it('[정상] should attach wordStarts from VTT tokens within each segment window (AC1)', async () => {
+    await writeSegments();
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].wordStarts).toHaveLength(2);
+    // 첫 단어는 세그먼트 시작(0) 근처의 첫 토큰 시각에서 시작한다.
+    expect(result[0].wordStarts![0]).toBeGreaterThanOrEqual(0);
+    expect(result[0].wordStarts![1]).toBeGreaterThan(result[0].wordStarts![0]);
+    expect(result[0].text).toBe('hello there'); // AC3: 텍스트는 공식 대본 그대로
+  });
+
+  it('[경계] should not attach wordStarts when subtitle.en.vtt is missing (AC2)', async () => {
+    await writeSegments();
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].wordStarts).toBeUndefined();
+  });
+
+  it('[예외] should fall back (no wordStarts) when subtitle.en.vtt is malformed (AC2)', async () => {
+    await writeSegments();
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'NOT VALID VTT CONTENT @@@@',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].wordStarts).toBeUndefined();
+  });
+
+  it('[경계] should attach wordStarts only to segments whose window has VTT tokens (AC2)', async () => {
+    // VTT는 존재하지만 s2 구간(10~13s)엔 겹치는 토큰이 없다 → s1만 부착.
+    const twoSegs: Segment[] = [
+      { id: 's1', start: 0, end: 3, speaker: 'DUCKWORTH', text: 'hello there' },
+      { id: 's2', start: 10, end: 13, speaker: 'DUBNER', text: 'goodbye now' },
+    ];
+    await fs.mkdir(episodeDir(TEST_VIDEO_ID), { recursive: true });
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'segments.json'),
+      JSON.stringify(twoSegs),
+    );
+    await fs.writeFile(
+      path.join(episodeDir(TEST_VIDEO_ID), 'subtitle.en.vtt'),
+      'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
+    );
+    const result = await getEpisodeSegments(TEST_VIDEO_ID);
+    expect(result[0].wordStarts).toHaveLength(2);
+    expect(result[1].wordStarts).toBeUndefined();
+  });
 });
