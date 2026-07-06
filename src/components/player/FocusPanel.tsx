@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { RotateCcw, Square, Mic, Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { SPEAKER_COLORS } from '@/lib/constants/speakers';
+import { resolveSpeaker } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
 import {
   isRecordingSupported,
@@ -93,7 +93,7 @@ export default function FocusPanel({
     );
   }
 
-  const sp = SPEAKER_COLORS[segment.speaker];
+  const sp = resolveSpeaker(segment.speaker);
   return (
     <div className="rounded-xl border border-hairline p-[32px] bg-canvas">
       <div className="mb-[16px] flex items-center gap-[12px]">

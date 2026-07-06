@@ -2,7 +2,9 @@ export interface Segment {
   id: string;
   start: number; // 초 단위 시작 시간
   end: number; // 초 단위 종료 시간
-  speaker: 'DUCKWORTH' | 'DUBNER' | 'BOTH' | 'NARRATOR';
+  // 화자 키. NSQ는 DUCKWORTH/DUBNER/BOTH/NARRATOR이지만, 멀티 팟캐스트 지원을 위해
+  // 임의 문자열을 허용한다(표시 색·이름은 resolveSpeaker가 처리).
+  speaker: string;
   text: string;
   translation?: string;
   /** 공식 단어별 시작 시각(초). 있으면 단어 강조에 사용, 없으면 균등분할 폴백. */
@@ -62,5 +64,5 @@ export interface VttToken {
 
 export interface Sentence {
   text: string;
-  speaker: 'DUCKWORTH' | 'DUBNER' | 'BOTH' | 'NARRATOR';
+  speaker: string;
 }

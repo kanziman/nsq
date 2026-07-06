@@ -2,7 +2,7 @@
 
 import { memo, useEffect, useRef, useState } from 'react';
 import type { Segment } from '@/lib/types';
-import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
+import { resolveSpeaker } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
 import { SegmentText } from './SegmentText';
 import { Languages } from 'lucide-react';
@@ -13,7 +13,7 @@ interface ScriptViewProps {
   currentTime?: number;
   selection?: { start: number; end: number } | null;
   onSegmentClick?: (index: number, shiftKey: boolean) => void;
-  dimmedSpeakers?: SpeakerKey[];
+  dimmedSpeakers?: string[];
   revealAll?: boolean;
 }
 
@@ -71,7 +71,7 @@ function ScriptView({
         </button>
       ) : null}
       {segments.map((seg, i) => {
-        const sp = SPEAKER_COLORS[seg.speaker];
+        const sp = resolveSpeaker(seg.speaker);
         const active = i === currentSegmentIndex;
         const selected =
           !!selection && i >= selection.start && i <= selection.end;

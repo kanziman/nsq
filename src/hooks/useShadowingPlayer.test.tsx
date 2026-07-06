@@ -326,13 +326,18 @@ describe('useShadowingPlayer', () => {
     expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(0.75);
   });
 
-  it('[정상] enabledSpeakers should default to all four speakers', () => {
+  it('[정상] enabledSpeakers should default to the speakers present in the episode', () => {
     const { result } = setup();
+    // 픽스처엔 DUCKWORTH/DUBNER/BOTH만 등장(NARRATOR 없음) → 기본값도 등장 화자만.
     expect([...result.current.enabledSpeakers].sort()).toEqual([
       'BOTH',
       'DUBNER',
       'DUCKWORTH',
-      'NARRATOR',
+    ]);
+    expect([...result.current.presentSpeakers].sort()).toEqual([
+      'BOTH',
+      'DUBNER',
+      'DUCKWORTH',
     ]);
   });
 
@@ -384,11 +389,11 @@ describe('useShadowingPlayer', () => {
     act(() => result.current.toggleSpeaker('DUBNER'));
     act(() => result.current.toggleSpeaker('BOTH')); // 존재화자∩활성 = 0
     expect(result.current.filterNotice).not.toBeNull();
+    // 복원은 등장 화자(3명) 기준.
     expect([...result.current.enabledSpeakers].sort()).toEqual([
       'BOTH',
       'DUBNER',
       'DUCKWORTH',
-      'NARRATOR',
     ]);
     expect(result.current.isSpeakerFilterActive).toBe(false);
   });
