@@ -69,7 +69,8 @@ describe('AudioControls', () => {
 
   it('[정상] should show repeat count badge when looping', () => {
     render(<AudioControls {...baseProps} isLooping={true} repeatCount={3} />);
-    expect(screen.getByText('3회')).toBeInTheDocument();
+    // 반복 카운트는 구간 반복 버튼 내부 인라인 텍스트로 표시된다.
+    expect(screen.getByText('3회 반복 중')).toBeInTheDocument();
   });
 
   it('[경계] loop toggle should be disabled when canLoop is false', () => {
@@ -86,11 +87,11 @@ describe('AudioControls', () => {
     expect(onSetPlaybackRate).toHaveBeenCalledWith(1.5);
   });
 
-  it('[정상] active preset should be aria-pressed and badge reflects rate (AC1)', () => {
+  it('[정상] active preset should be aria-pressed and reflect current rate (AC1)', () => {
     render(<AudioControls {...baseProps} playbackRate={1.25} />);
-    expect(
-      screen.getByRole('button', { name: '재생 속도 1.25x' }),
-    ).toHaveAttribute('aria-pressed', 'true');
-    expect(screen.getByRole('status')).toHaveTextContent('1.25x');
+    // 현재 배속은 세그먼트 프리셋 버튼의 aria-pressed로 반영된다.
+    const active = screen.getByRole('button', { name: '재생 속도 1.25x' });
+    expect(active).toHaveAttribute('aria-pressed', 'true');
+    expect(active).toHaveTextContent('1.25x');
   });
 });
