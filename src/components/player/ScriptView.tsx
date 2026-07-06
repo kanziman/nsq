@@ -14,6 +14,7 @@ interface ScriptViewProps {
   selection?: { start: number; end: number } | null;
   onSegmentClick?: (index: number, shiftKey: boolean) => void;
   dimmedSpeakers?: SpeakerKey[];
+  revealAll?: boolean;
 }
 
 function ScriptView({
@@ -23,15 +24,22 @@ function ScriptView({
   selection,
   onSegmentClick,
   dimmedSpeakers,
+  revealAll: revealAllProp,
 }: ScriptViewProps): React.ReactElement {
   const activeRef = useRef<HTMLDivElement | null>(null);
-  const [revealAll, setRevealAll] = useState(false);
+  const [localRevealAll, setLocalRevealAll] = useState(false);
+  const revealAll =
+    revealAllProp !== undefined ? revealAllProp : localRevealAll;
   const [revealed, setRevealed] = useState<Set<number>>(new Set());
   const hasTranslation = segments.some((s) => s.translation);
 
   useEffect(() => {
     activeRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, [currentSegmentIndex]);
+
+  useEffect(() => {
+    setRevealed(new Set());
+  }, [revealAll]);
 
   const toggleRevealed = (i: number): void => {
     setRevealed((prev) => {
@@ -47,7 +55,7 @@ function ScriptView({
 
   return (
     <div className="space-y-3">
-      {hasTranslation ? (
+      {hasTranslation && revealAllProp === undefined ? (
         <button
           type="button"
           aria-label="번역 전체 토글"
@@ -55,7 +63,7 @@ function ScriptView({
           onClick={() => {
             // 전체 토글은 개별 reveal 상태를 초기화하여 일괄 표시/숨김을 보장 (AC3)
             setRevealed(new Set());
-            setRevealAll((v) => !v);
+            setLocalRevealAll((v) => !v);
           }}
           className="text-xs text-muted underline"
         >

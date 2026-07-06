@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
 import { Button } from '@/components/ui/button';
@@ -10,6 +11,7 @@ import SpeakerFilter from './SpeakerFilter';
 import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
+import { Languages } from 'lucide-react';
 
 const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
 
@@ -35,6 +37,7 @@ export function ShadowingPlayer({
   episode,
   segments,
 }: ShadowingPlayerProps): React.ReactElement {
+  const [revealAll, setRevealAll] = useState(false);
   const {
     isPlaying,
     currentSegmentIndex,
@@ -99,19 +102,31 @@ export function ShadowingPlayer({
             onSetPlaybackRate={setPlaybackRate}
           />
         </div>
-        <div className="mt-[12px] flex items-center gap-[8px]">
-          <SpeakerFilter
-            enabledSpeakers={enabledSpeakers}
-            onToggleSpeaker={toggleSpeaker}
-          />
+        <div className="mt-[12px] flex items-center justify-between gap-[8px]">
+          <div className="flex items-center gap-[8px]">
+            <SpeakerFilter
+              enabledSpeakers={enabledSpeakers}
+              onToggleSpeaker={toggleSpeaker}
+            />
+            <Button
+              variant="secondaryOnDark"
+              size="sm"
+              aria-label={mode === 'focus' ? '전체 모드' : '집중 모드'}
+              aria-pressed={mode === 'focus'}
+              onClick={toggleMode}
+            >
+              {mode === 'focus' ? '전체 모드' : '집중 모드'}
+            </Button>
+          </div>
           <Button
             variant="secondaryOnDark"
             size="sm"
-            aria-label={mode === 'focus' ? '전체 모드' : '집중 모드'}
-            aria-pressed={mode === 'focus'}
-            onClick={toggleMode}
+            onClick={() => setRevealAll((v) => !v)}
+            aria-label={revealAll ? '번역 숨기기' : '번역 보기'}
+            className="flex items-center gap-1.5"
           >
-            {mode === 'focus' ? '전체 모드' : '집중 모드'}
+            <Languages className="h-4 w-4" strokeWidth={1.5} />
+            {revealAll ? '번역 숨기기' : '번역 보기'}
           </Button>
         </div>
         {filterNotice ? (
@@ -146,6 +161,7 @@ export function ShadowingPlayer({
           currentTime={currentTime}
           selection={selection}
           dimmedSpeakers={dimmedSpeakers}
+          revealAll={revealAll}
           onSegmentClick={(index, shiftKey) => {
             if (shiftKey) {
               extendSelectionTo(index);
