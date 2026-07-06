@@ -1,7 +1,7 @@
 {
   "project": "nsq-shadowing",
   "version": "0.1.0",
-  "updatedAt": "2026-06-29",
+  "updatedAt": "2026-07-06",
 
   "phases": [
     {
@@ -160,7 +160,7 @@
           "path": "src/app/api/import/route.ts",
           "relatedPaths": ["src/lib/services/import-pipeline.ts"],
           "status": "completed",
-          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API(202 접수/400/409/500). retryStep(all, transcript, subtitles) 지원, GET(?videoId=)으로 import-state 조회, 재시도 컨텍스트 URL 영속"
+          "description": "YouTube URL + Freakonomics 대본 URL을 받아 파이프라인 실행하는 POST API(202 접수/400/409/500). retryStep(all, transcript, subtitles, translation) 지원, GET(?videoId=)으로 import-state 조회, 재시도 컨텍스트 URL 영속"
         },
         {
           "id": "import-youtube",
@@ -189,7 +189,7 @@
           "feature": "대본 ↔ VTT 토큰 정렬",
           "path": "src/lib/services/import/alignment.ts",
           "relatedPaths": [
-            "src/lib/services/import/vtt/parse.ts",
+            "src/lib/utils/vtt-parser.ts",
             "src/lib/services/import/align/anchor.ts",
             "src/lib/services/import/align/lis.ts",
             "src/lib/services/import/align/interpolate.ts",
@@ -208,7 +208,7 @@
             ".shadowing/episodes/{videoId}/import-state.json"
           ],
           "status": "completed",
-          "description": "runImportPipeline 오케스트레이터: download → subtitle → transcript → alignment 단계별 상태(ImportState) 추적·영속. matchRate·youtubeUrl·transcriptUrl 보존, fire-and-forget 안전"
+          "description": "runImportPipeline 오케스트레이터: download → subtitle → transcript → alignment → translation 단계별 상태(ImportState) 추적·영속. matchRate·youtubeUrl·transcriptUrl 보존, fire-and-forget 안전"
         },
         {
           "id": "import-form-ui",
@@ -241,7 +241,7 @@
           "path": "src/lib/services/import/translation.ts",
           "relatedPaths": ["src/lib/services/import-pipeline.ts"],
           "status": "completed",
-          "description": "정합된 segments.json 대본의 영어 문장들을 한글로 번역하여 translation 필드 주입 (LLM 또는 외부 번역 API 연동)"
+          "description": "정합 직후 OpenRouter(google/gemini-3.5-flash, reasoning effort low)로 segments.json 영어 문장을 한국어로 배치 번역해 translation 필드 주입. best-effort·멱등, retryStep 'translation' 재보충, 배치별 증분 저장 및 실패 로깅, 화자/번호 접두사 제거"
         }
       ]
     },
@@ -417,10 +417,13 @@
         {
           "id": "script-view-word-highlight",
           "feature": "단어 레벨 하이라이트",
-          "path": "components/script-view.tsx",
-          "relatedPaths": ["lib/utils/vtt-parser.ts"],
-          "status": "pending",
-          "description": "VTT word-level timing을 활용한 단어 단위 하이라이트"
+          "path": "src/components/player/SegmentText.tsx",
+          "relatedPaths": [
+            "src/lib/utils/vtt-parser.ts",
+            "src/lib/utils/words.ts"
+          ],
+          "status": "completed",
+          "description": "wordStarts(실제 VTT 발화 시각)로 현재 재생 단어를 강조. 데이터 없으면 균등분할 폴백"
         },
         {
           "id": "script-view-segment-select",
@@ -457,10 +460,10 @@
         {
           "id": "utils-vtt-parser",
           "feature": "VTT 파서",
-          "path": "lib/utils/vtt-parser.ts",
+          "path": "src/lib/utils/vtt-parser.ts",
           "relatedPaths": [],
-          "status": "pending",
-          "description": "VTT 자막 파일 파싱: 타임코드 + 단어 레벨 타이밍 추출"
+          "status": "completed",
+          "description": "WebVTT 파싱: 큐 타임코드 + YouTube 인라인 단어 타임스탬프(롤링 중복 제거) → VttToken[]. 서비스 계층에서 공용 유틸로 이전"
         },
         {
           "id": "utils-recorder",
@@ -635,9 +638,9 @@
   ],
 
   "stats": {
-    "totalTasks": 55,
-    "mvpTasks": 48,
-    "postMvpTasks": 7,
-    "completedTasks": 26
+    "totalTasks": 62,
+    "mvpTasks": 54,
+    "postMvpTasks": 8,
+    "completedTasks": 45
   }
 }
