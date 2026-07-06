@@ -19,9 +19,15 @@ const SKIP_ROLES = new Set([
 ]);
 // 인라인 비발화 큐: 대괄호 [LAUGHTER], 소괄호 (MUSIC) 등.
 const CUE = /\[[^\]]*\]|\([^)]*\)/g;
-// 대사 앞에 붙는 화자 라벨(예: "DUBNER:", "ANGELA DUCKWORTH:", "DUCKWORTH + DUBNER:")
-// — <strong> 없는 페이지 대응. 복합 라벨의 '+' 결합자도 허용한다.
-const INLINE_LABEL = /^([A-Z][A-Z .'&+-]{1,30}):\s+/;
+// 대사 앞에 붙는 화자 라벨 — <strong> 없는 페이지 대응.
+// 이름 토큰(대문자 시작 혼합대소문자 / 전부 대문자 / 이니셜, +·& 결합) 시퀀스 뒤 콜론.
+// 예: "DUBNER:", "DUCKWORTH + DUBNER:", "Stephen J. DUBNER:", "Angela DUCKWORTH:".
+const NAME_TOKEN = "(?:[A-Z][A-Za-z.'-]*|[A-Z.'+&-]+)";
+const INLINE_LABEL = new RegExp(
+  `^(${NAME_TOKEN}(?:[ +&]+${NAME_TOKEN})*):\\s+`,
+);
+// 전부 대문자 라벨(미지의 화자라도 라벨로 인정해 스트립).
+const ALL_CAPS_LABEL = /^[A-Z][A-Z .'&+-]*$/;
 // 별표 구분선(예: "* * *")은 발화가 아니므로 제외.
 const DIVIDER = /^\*(\s*\*)+$/;
 // 팩트체크·엔딩 크레딧 아웃트로 시작 표지. 이 지점부터는 실제 대사가 아니므로 수집 중단.
@@ -84,14 +90,28 @@ export function parseTranscriptHtml(html: string): Sentence[] {
     const labelEl = p.querySelector('strong') ?? p.querySelector('b');
     let speaker: Speaker = 'NARRATOR';
     let body = p.text;
-    if (labelEl) {
-      speaker = normalizeSpeaker(labelEl.text.replace(/:\s*$/, ''));
-      body = p.text.replace(labelEl.text, '');
+
+    // <strong>/<b>는 문단 맨 앞의 콜론 라벨일 때만 화자 라벨로 사용한다.
+    // 본문 중간의 인명 강조(<b>James Gross</b> 등)를 라벨로 오인하지 않기 위함.
+    const labelText = labelEl?.text ?? '';
+    const isLeadingLabel =
+      !!labelEl &&
+      /:\s*$/.test(labelText.trim()) &&
+      p.text.trimStart().startsWith(labelText.trim());
+
+    if (isLeadingLabel) {
+      speaker = normalizeSpeaker(labelText.replace(/:\s*$/, ''));
+      body = p.text.replace(labelText, '');
     } else {
       const inline = body.match(INLINE_LABEL);
       if (inline) {
-        speaker = normalizeSpeaker(inline[1]);
-        body = body.slice(inline[0].length);
+        // 구조적으로 이름 라벨이더라도, 알려진 화자로 매핑되거나 전부 대문자일 때만
+        // 라벨로 인정한다("New York:" 같은 일반 문장 오탐 방지).
+        const sp = normalizeSpeaker(inline[1]);
+        if (sp !== 'NARRATOR' || ALL_CAPS_LABEL.test(inline[1])) {
+          speaker = sp;
+          body = body.slice(inline[0].length);
+        }
       }
     }
 

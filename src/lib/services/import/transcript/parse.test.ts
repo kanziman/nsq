@@ -85,6 +85,48 @@ describe('parseTranscriptHtml', () => {
     ]);
   });
 
+  it('should strip a mixed-case inline label with a middle initial (Stephen J. DUBNER:)', () => {
+    const html = `<div id="transcript_inner">
+      <p><i><span style="font-weight: 400;">Stephen J. DUBNER: Angela Duckworth, I have a question to ask you. May I?</span></i></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      {
+        speaker: 'DUBNER',
+        text: 'Angela Duckworth, I have a question to ask you.',
+      },
+      { speaker: 'DUBNER', text: 'May I?' },
+    ]);
+  });
+
+  it('should strip a "First LASTNAME:" inline label (Angela DUCKWORTH:)', () => {
+    const html = `<div id="transcript_inner">
+      <p><i><span style="font-weight: 400;">Angela DUCKWORTH: Mmhmm.</span></i></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'DUCKWORTH', text: 'Mmhmm.' },
+    ]);
+  });
+
+  it('should ignore a mid-paragraph <b> emphasis and still strip the leading inline label', () => {
+    // 본문 중간의 인명 강조 <b>James Gross</b>를 화자 라벨로 오인하면 안 된다.
+    const html = `<div id="transcript_inner">
+      <p><i><span style="font-weight:400;">DUCKWORTH: Yeah. I talked to <b>James Gross</b> about it.</span></i></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'DUCKWORTH', text: 'Yeah.' },
+      { speaker: 'DUCKWORTH', text: 'I talked to James Gross about it.' },
+    ]);
+  });
+
+  it('should NOT treat a non-speaker "Word:" prefix as a speaker label', () => {
+    const html = `<div id="transcript_inner">
+      <p><span>New York: a great city.</span></p>
+    </div>`;
+    expect(parseTranscriptHtml(html)).toEqual([
+      { speaker: 'NARRATOR', text: 'New York: a great city.' },
+    ]);
+  });
+
   it('should drop the fact-check/credits outro from the Radio Network marker onward', () => {
     const html = `<div id="transcript_inner">
       <p><span>DUCKWORTH: Real dialogue.</span></p>
