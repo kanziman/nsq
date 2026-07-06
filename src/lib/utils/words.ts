@@ -29,3 +29,46 @@ export function findCurrentWordIndex(
   const idx = Math.floor(((t - start) / dur) * wordCount);
   return Math.min(wordCount - 1, Math.max(0, idx));
 }
+
+/**
+ * 세그먼트 [start,end) 구간의 VTT 토큰 시각(오름차순)을 공식 단어 수에 비례 매핑해
+ * 각 공식 단어의 시작 시각 배열을 만든다. 토큰이 없으면 균등분할로 폴백한다.
+ */
+export function computeWordStarts(
+  wordCount: number,
+  start: number,
+  end: number,
+  tokenTimes: number[],
+): number[] {
+  if (wordCount <= 0) return [];
+  const m = tokenTimes.length;
+  // 구간 내 토큰이 없으면 균등분할로 폴백.
+  if (m === 0) {
+    const dur = Math.max(end - start, MIN_DURATION);
+    return Array.from(
+      { length: wordCount },
+      (_, i) => start + (dur * i) / wordCount,
+    );
+  }
+  // 공식 단어 i를 토큰 시각에 비례 매핑(실제 발화 리듬 반영).
+  return Array.from({ length: wordCount }, (_, i) => {
+    const j = Math.min(m - 1, Math.floor((i * m) / wordCount));
+    return tokenTimes[j];
+  });
+}
+
+/**
+ * 명시적 시작 시각 배열에서 현재 시간 t의 단어 인덱스. starts[i] <= t 인 마지막 i,
+ * 첫 시작 이전이거나 비어 있으면 -1.
+ */
+export function currentWordIndexFromStarts(
+  starts: number[],
+  t: number,
+): number {
+  let idx = -1;
+  for (let i = 0; i < starts.length; i++) {
+    if (starts[i] <= t) idx = i;
+    else break;
+  }
+  return idx;
+}

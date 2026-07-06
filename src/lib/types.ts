@@ -5,6 +5,8 @@ export interface Segment {
   speaker: 'DUCKWORTH' | 'DUBNER' | 'BOTH' | 'NARRATOR';
   text: string;
   translation?: string;
+  /** 공식 단어별 시작 시각(초). 있으면 단어 강조에 사용, 없으면 균등분할 폴백. */
+  wordStarts?: number[];
 }
 
 export interface EpisodeMeta {

@@ -1,6 +1,10 @@
 import { Fragment } from 'react';
 import type { Segment } from '@/lib/types';
-import { splitWords, findCurrentWordIndex } from '@/lib/utils/words';
+import {
+  splitWords,
+  findCurrentWordIndex,
+  currentWordIndexFromStarts,
+} from '@/lib/utils/words';
 
 interface SegmentTextProps {
   segment: Segment;
@@ -26,12 +30,16 @@ export function SegmentText({
     return <p className={className}>{segment.text}</p>;
   }
 
-  const currentIdx = findCurrentWordIndex(
-    words.length,
-    segment.start,
-    segment.end,
-    currentTime,
-  );
+  // wordStarts(실제 VTT 발화 시각)가 있으면 그것으로, 없으면 균등분할로 현재 단어 판정.
+  const currentIdx =
+    segment.wordStarts && segment.wordStarts.length === words.length
+      ? currentWordIndexFromStarts(segment.wordStarts, currentTime)
+      : findCurrentWordIndex(
+          words.length,
+          segment.start,
+          segment.end,
+          currentTime,
+        );
   return (
     <p className={className}>
       {words.map((w, j) => {
