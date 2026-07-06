@@ -5,6 +5,7 @@ import type { Segment } from '@/lib/types';
 import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
 import { SegmentText } from './SegmentText';
+import { Languages } from 'lucide-react';
 
 interface ScriptViewProps {
   segments: Segment[];
@@ -67,10 +68,21 @@ function ScriptView({
         const selected =
           !!selection && i >= selection.start && i <= selection.end;
         const dimmed = !!dimmedSpeakers?.includes(seg.speaker);
+
+        const opacityClass = dimmed
+          ? 'opacity-40'
+          : active
+            ? 'opacity-100'
+            : 'opacity-45 hover:opacity-100';
+
+        const bgBorderClass = active
+          ? `${sp.bgClass} ${sp.borderClass}`
+          : 'border-hairline bg-transparent hover:bg-surface-soft/40 hover:border-hairline-strong';
+
         return (
           <div
             key={seg.id}
-            ref={active ? activeRef : undefined}
+            ref={active ? activeRef : null}
             data-active={active || undefined}
             data-selected={selected || undefined}
             data-dimmed={dimmed || undefined}
@@ -78,13 +90,11 @@ function ScriptView({
               onSegmentClick ? (e) => onSegmentClick(i, e.shiftKey) : undefined
             }
             className={[
-              'rounded-[--radius-md] border p-[16px] transition-colors',
-              active
-                ? `${sp.bgClass} ${sp.borderClass}`
-                : 'border-hairline bg-transparent',
+              'rounded-[--radius-md] border p-[16px] transition-all duration-300',
+              bgBorderClass,
+              opacityClass,
               selected ? 'ring-2 ring-primary/40' : '',
-              dimmed ? 'opacity-40' : '',
-              onSegmentClick ? 'cursor-pointer hover:bg-surface-card' : '',
+              onSegmentClick ? 'cursor-pointer' : '',
             ]
               .filter(Boolean)
               .join(' ')}
@@ -95,7 +105,9 @@ function ScriptView({
               >
                 {sp.name}
               </span>
-              <span className="font-mono text-xs text-muted-soft">
+              <span
+                className={`font-mono text-xs transition-colors duration-300 ${active ? sp.textClass + ' opacity-80' : 'text-muted-soft'}`}
+              >
                 {formatTime(seg.start)}
               </span>
             </div>
@@ -109,22 +121,34 @@ function ScriptView({
               ? (() => {
                   const blurred = !(revealAll || revealed.has(i));
                   return (
-                    <p
-                      data-translation
-                      data-blurred={blurred || undefined}
+                    <div
                       onClick={(e) => {
                         e.stopPropagation();
                         toggleRevealed(i);
                       }}
-                      className={[
-                        'mt-[4px] cursor-pointer text-sm leading-[1.55] text-muted-soft transition',
-                        blurred ? 'blur-sm hover:blur-none' : '',
-                      ]
-                        .filter(Boolean)
-                        .join(' ')}
+                      className="mt-[6px] flex items-start gap-1.5 cursor-pointer group/translation"
                     >
-                      {seg.translation}
-                    </p>
+                      {blurred && (
+                        <Languages
+                          className="h-3.5 w-3.5 text-muted-soft/60 mt-[3px] flex-shrink-0 group-hover/translation:text-primary transition-colors"
+                          strokeWidth={1.5}
+                        />
+                      )}
+                      <p
+                        data-translation
+                        data-blurred={blurred || undefined}
+                        className={[
+                          'text-sm leading-[1.55] text-muted-soft transition-all duration-300',
+                          blurred
+                            ? 'blur-sm hover:blur-none group-hover/translation:blur-none text-muted-soft/40'
+                            : '',
+                        ]
+                          .filter(Boolean)
+                          .join(' ')}
+                      >
+                        {seg.translation}
+                      </p>
+                    </div>
                   );
                 })()
               : null}

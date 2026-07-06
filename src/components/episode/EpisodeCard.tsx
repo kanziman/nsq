@@ -114,25 +114,25 @@ export default function EpisodeCard({
             alt={title}
             className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
+          <button
+            aria-label="삭제"
+            onClick={handleDeleteClick}
+            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer"
+          >
+            <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
+          </button>
           <div className="absolute bottom-2 right-2 bg-ink/75 text-white px-2 py-0.5 text-xs font-mono rounded">
             {formattedDuration}
           </div>
         </div>
         <div className="p-[24px] flex-grow flex flex-col justify-between space-y-3">
-          <h3 className="font-serif text-ink font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2 min-h-[3.25rem] group-hover:text-primary-active transition-colors">
+          <h3 className="font-sans text-ink font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem] group-hover:text-primary-active transition-colors">
             {title}
           </h3>
 
           <div className="flex items-center justify-between text-xs text-muted-soft pt-2 border-t border-hairline">
             <span>{formattedDate}</span>
-            <div className="flex items-center gap-3">
-              <button
-                aria-label="삭제"
-                onClick={handleDeleteClick}
-                className="w-9 h-9 flex items-center justify-center bg-canvas text-ink border border-hairline rounded-full p-0 hover:bg-secondary active:bg-secondary transition-colors cursor-pointer"
-              >
-                <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
-              </button>
+            <div className="flex items-center">
               <Link
                 href={`/episodes/${episode.id}`}
                 className="font-medium text-primary hover:text-primary-active"
@@ -146,19 +146,23 @@ export default function EpisodeCard({
     );
   }
 
-  // -------------------------------------------------------------
-  // 3. 진행 중 상태 (In Progress)
-  // -------------------------------------------------------------
   if (status !== 'failed') {
     return (
       <div className="border border-hairline rounded-xl overflow-hidden bg-surface-card/60 max-w-sm flex flex-col justify-between relative">
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
+          <button
+            aria-label="삭제"
+            disabled
+            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/40 text-ink/40 border border-hairline/40 rounded-full shadow-sm backdrop-blur-sm cursor-not-allowed"
+          >
+            <Trash2 className="h-4 w-4 text-ink/40" strokeWidth={1.5} />
+          </button>
           <div className="absolute inset-0 bg-ink/5" />
           <div className="z-10 animate-spin h-6 w-6 border-2 border-primary border-t-transparent rounded-full" />
         </div>
         <div className="p-[24px] space-y-4 flex-grow flex flex-col justify-between">
           <div className="space-y-2">
-            <h3 className="font-serif text-muted font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2">
+            <h3 className="font-sans text-muted font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem]">
               {title || '새 에피소드 임포트 중...'}
             </h3>
             <p className="text-xs text-primary font-medium">
@@ -181,13 +185,6 @@ export default function EpisodeCard({
               />
             </div>
             <div className="flex items-center justify-between pt-1">
-              <button
-                aria-label="삭제"
-                disabled
-                className="p-1.5 rounded text-muted-soft/40 cursor-not-allowed"
-              >
-                🗑️
-              </button>
               <div className="text-[10px] text-muted-soft">{formattedDate}</div>
             </div>
           </div>
@@ -203,13 +200,20 @@ export default function EpisodeCard({
     <div className="border border-primary/20 rounded-xl overflow-hidden bg-surface-card/90 max-w-sm flex flex-col justify-between relative">
       {renderConfirmModal()}
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
+        <button
+          aria-label="삭제"
+          onClick={handleDeleteClick}
+          className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer"
+        >
+          <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
+        </button>
         <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-xs tracking-[1.5px] uppercase">
           Failed
         </span>
       </div>
       <div className="p-[24px] space-y-4 flex-grow flex flex-col justify-between">
         <div className="space-y-2">
-          <h3 className="font-serif text-ink font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2">
+          <h3 className="font-sans text-ink font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem]">
             {title || '알 수 없는 비디오'}
           </h3>
           <div className="group relative p-2.5 rounded-md bg-surface-dark border border-hairline text-xs text-muted-soft leading-[1.55] min-h-[3rem] overflow-hidden">
@@ -221,14 +225,7 @@ export default function EpisodeCard({
 
         <div className="flex items-center justify-between pt-3 border-t border-hairline">
           <span className="text-[10px] text-muted-soft">{formattedDate}</span>
-          <div className="flex items-center gap-3">
-            <button
-              aria-label="삭제"
-              onClick={handleDeleteClick}
-              className="w-9 h-9 flex items-center justify-center bg-canvas text-ink border border-hairline rounded-full p-0 hover:bg-secondary active:bg-secondary transition-colors cursor-pointer"
-            >
-              <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
-            </button>
+          <div className="flex items-center">
             <Link
               href={`/import?videoId=${episode.id}`}
               className="inline-flex h-8 items-center justify-center px-4 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
