@@ -350,6 +350,25 @@ describe('ShadowingPlayer', () => {
     expect(screen.queryByText('first line')).toBeNull();
   });
 
+  it('[정상] focus mode loop should repeat the current segment, not a stale selection (AC2)', () => {
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    // 전체모드에서 s1 클릭 → 오래된 selection = s1
+    act(() => {
+      fireEvent.click(screen.getByText('first line'));
+    });
+    // 집중모드 진입 후 s2로 이동
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    });
+    act(() => lastManager._time!(6)); // current = s2
+    lastManager.seekTo.mockClear();
+    // 구간 반복 ON → 현재 문장(s2.start=5)을 반복해야 한다 (오래된 s1=0 아님)
+    act(() => {
+      fireEvent.click(screen.getByRole('button', { name: '구간 반복' }));
+    });
+    expect(lastManager.seekTo).toHaveBeenCalledWith(5);
+  });
+
   it('[정상] toggling back to list should restore the list with active highlight (AC3)', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
     act(() => lastManager._time!(6)); // s2 active
