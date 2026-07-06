@@ -48,26 +48,40 @@ export async function translate(
     .map((segment, index) => ({ segment, index }))
     .filter(({ segment }) => needsTranslation(segment));
 
-  let mutated = false;
+  let translatedCount = 0;
+  const batchCount = Math.ceil(targets.length / batchSize);
   for (let i = 0; i < targets.length; i += batchSize) {
+    const batchNo = Math.floor(i / batchSize) + 1;
     const batch = targets.slice(i, i + batchSize);
     try {
       const results = await translator(batch.map((t) => t.segment));
       // 길이 불일치 응답은 비결정성 방어로 그 배치 전체 스킵(spec-fixed §B5).
-      if (results.length !== batch.length) continue;
+      if (results.length !== batch.length) {
+        console.warn(
+          `translation: batch ${batchNo}/${batchCount} length mismatch ` +
+            `(${results.length} != ${batch.length}), skipped`,
+        );
+        continue;
+      }
       batch.forEach((t, j) => {
         segments[t.index].translation = results[j];
       });
-      mutated = true;
-    } catch {
-      // 배치 실패 격리: 이 배치만 건너뛰고 계속 진행(best-effort).
+      // 증분 저장(#109): 배치 성공 즉시 누적 반영해 중간 중단에도 완료분을 보존한다.
+      await fs.writeFile(segPath, JSON.stringify(segments, null, 2), 'utf-8');
+      translatedCount += batch.length;
+    } catch (err) {
+      // 배치 실패 격리: 이 배치만 건너뛰고 계속 진행(best-effort). 사유는 로깅한다.
+      const message = err instanceof Error ? err.message : String(err);
+      console.warn(
+        `translation: batch ${batchNo}/${batchCount} failed (${message}), skipped`,
+      );
       continue;
     }
   }
 
-  if (mutated) {
-    await fs.writeFile(segPath, JSON.stringify(segments, null, 2), 'utf-8');
-  }
+  console.log(
+    `translation: ${translatedCount}/${targets.length} segments translated for ${videoId}`,
+  );
 }
 
 // ── OpenRouter 배치 번역기 (이슈 #104) ──────────────────────────────

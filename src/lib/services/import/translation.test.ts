@@ -1,4 +1,4 @@
-import { describe, it, expect, afterEach } from 'vitest';
+import { describe, it, expect, afterEach, vi } from 'vitest';
 import fs from 'fs/promises';
 import path from 'path';
 import { translate, type SegmentTranslator } from './translation';
@@ -129,6 +129,38 @@ describe('translate (import-translation 이슈 #103)', () => {
     const out = await readSegments();
     expect(out[0].translation).toBeUndefined();
     expect(out[1].translation).toBeUndefined();
+  });
+
+  it('[정상] 증분 저장: 각 배치 성공 직후 즉시 segments.json에 누적 반영 (#109 AC1)', async () => {
+    await writeSegments([seg(0), seg(1), seg(2), seg(3)]); // batchSize 2 → 2배치
+    let diskWhenBatch2Runs: Segment[] | null = null;
+    const translator: SegmentTranslator = async (batch) => {
+      // 2번째 배치(seg-2 포함) 실행 시점에 1번째 배치가 이미 디스크에 저장돼 있어야 한다.
+      if (batch.some((s) => s.id === 'seg-2')) {
+        diskWhenBatch2Runs = await readSegments();
+      }
+      return batch.map((s) => `[KO] ${s.text}`);
+    };
+
+    await translate(VID, { translator, batchSize: 2 });
+
+    // 끝에 한 번만 저장하는 구현이라면 여기서 translation이 undefined다(→ 실패).
+    expect(diskWhenBatch2Runs).not.toBeNull();
+    expect(diskWhenBatch2Runs![0].translation).toBe('[KO] line 0');
+    expect(diskWhenBatch2Runs![1].translation).toBe('[KO] line 1');
+  });
+
+  it('[예외] 배치 실패/길이불일치는 console.warn으로 사유 로깅 (#109 AC2)', async () => {
+    await writeSegments([seg(0), seg(1)]);
+    const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const translator: SegmentTranslator = async () => {
+      throw new Error('boom');
+    };
+
+    await translate(VID, { translator, batchSize: 2 });
+
+    expect(warn).toHaveBeenCalled();
+    warn.mockRestore();
   });
 
   it('[경계] AC6: 공백/빈 text는 번역 대상 제외·통과', async () => {
