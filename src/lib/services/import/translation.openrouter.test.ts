@@ -48,10 +48,28 @@ describe('createOpenRouterTranslator (import-translation 이슈 #104)', () => {
     // 한국어 JSON 배열 지시
     expect(prompt).toMatch(/JSON/i);
     expect(prompt).toMatch(/한국어|Korean/);
+    // reasoning effort 최소화 — 지연·비용 절감(모델이 완전 비활성화를 막으므로 low)
+    expect(body.reasoning).toEqual({ effort: 'low' });
     // Authorization 헤더
     expect((init.headers as Record<string, string>).Authorization).toContain(
       'k',
     );
+  });
+
+  it('[정상] 모델·env 미지정 시 기본 모델은 gemini-2.5-flash', async () => {
+    vi.stubEnv('OPENROUTER_MODEL', '');
+    const fetchFn = vi.fn(async () => chatResponse(JSON.stringify(['가'])));
+    const translator = createOpenRouterTranslator({
+      apiKey: 'k',
+      fetchFn: fetchFn as unknown as typeof fetch,
+    });
+
+    await translator([seg(0)]);
+
+    const [, init] = fetchFn.mock.calls[0] as unknown as [string, RequestInit];
+    const body = JSON.parse(String(init.body));
+    expect(body.model).toBe('google/gemini-3.5-flash');
+    vi.unstubAllEnvs();
   });
 
   it('[정상] AC2: 유효한 JSON 배열 응답을 입력과 동일 길이 string[]로 반환', async () => {

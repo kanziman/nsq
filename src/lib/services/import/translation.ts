@@ -72,7 +72,9 @@ export async function translate(
 
 // ── OpenRouter 배치 번역기 (이슈 #104) ──────────────────────────────
 
-const DEFAULT_MODEL = 'google/gemini-2.5-pro';
+// 번역엔 무거운 사고가 불필요하므로 flash를 기본값으로 쓰고, reasoning effort를 최저로 낮춘다.
+// (flash가 pro 대비 지연 ~7배·비용 ~4배 절감. reasoning 자체는 이 모델에서 필수라 끄지 않고 낮춘다.)
+const DEFAULT_MODEL = 'google/gemini-3.5-flash';
 const DEFAULT_BASE_URL = 'https://openrouter.ai/api/v1';
 const DEFAULT_TIMEOUT_MS = 60_000;
 
@@ -146,6 +148,9 @@ export function createOpenRouterTranslator(
           { role: 'system', content: SYSTEM_PROMPT },
           { role: 'user', content: buildUserContent(batch) },
         ],
+        // 번역엔 사고가 거의 불필요하다. reasoning effort를 최저로 낮춰 지연·비용을 크게 줄인다.
+        // (gemini-3.5-flash는 reasoning 완전 비활성화가 불가(400)라 effort:'low'로 최소화한다.)
+        reasoning: { effort: 'low' },
       }),
       signal: AbortSignal.timeout(timeoutMs),
     });
