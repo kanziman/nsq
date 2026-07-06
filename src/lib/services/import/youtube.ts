@@ -8,6 +8,7 @@ import { spawn } from 'child_process';
 import fs from 'fs/promises';
 import path from 'path';
 import { EpisodeMeta } from '../../types';
+import { transcodeToCbrInPlace } from './transcode';
 
 /** 외부 프로세스(yt-dlp) 실행 결과. */
 export interface RunnerResult {
@@ -77,6 +78,7 @@ export async function downloadAudio(
   videoId: string,
   youtubeUrl: string,
   runner: Runner = defaultRunner,
+  transcode: (filePath: string) => Promise<void> = transcodeToCbrInPlace,
 ): Promise<void> {
   const outDir = path.join(EPISODES_DIR, videoId);
   const outputPath = path.join(outDir, 'audio.mp3');
@@ -107,6 +109,10 @@ export async function downloadAudio(
       `yt-dlp exited 0 but expected artifact not found: ${outputPath}`,
     );
   }
+
+  // yt-dlp는 VBR mp3를 산출한다. 브라우저 seek 정확도(개별 클릭 재생)를 위해 CBR로 변환한다.
+  // 이미 CBR이거나 비-VBR이면 자동으로 건너뛴다(멱등).
+  await transcode(outputPath);
 }
 
 /**

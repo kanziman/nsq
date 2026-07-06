@@ -87,6 +87,12 @@ describe('downloadAudio', () => {
     expect(args[qIdx + 1]).toBe('0');
   });
 
+  it('should transcode the produced audio to CBR after a successful download (AC4)', async () => {
+    const transcode = vi.fn(async () => {});
+    await downloadAudio(VID, URL, successRunner(), transcode);
+    expect(transcode).toHaveBeenCalledWith(audioPath(VID));
+  });
+
   // [경계]
   it('should re-run and overwrite (no skip) when audio.mp3 already exists', async () => {
     await fs.mkdir(path.join(BASE, VID), { recursive: true });
