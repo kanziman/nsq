@@ -8,12 +8,9 @@ import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
 import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
-import { SPEAKER_COLORS, type SpeakerKey } from '@/lib/constants/speakers';
 import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
 import { Languages } from 'lucide-react';
-
-const ALL_SPEAKERS = Object.keys(SPEAKER_COLORS) as SpeakerKey[];
 
 /** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
 function stepPlaybackRate(current: number, dir: 1 | -1): number {
@@ -47,6 +44,7 @@ export function ShadowingPlayer({
     repeatCount,
     playbackRate,
     enabledSpeakers,
+    presentSpeakers,
     isSpeakerFilterActive,
     filterNotice,
     toggle,
@@ -68,7 +66,7 @@ export function ShadowingPlayer({
   });
 
   const dimmedSpeakers = isSpeakerFilterActive
-    ? ALL_SPEAKERS.filter((s) => !enabledSpeakers.includes(s))
+    ? presentSpeakers.filter((s) => !enabledSpeakers.includes(s))
     : [];
 
   useKeyboardShortcuts({
@@ -105,6 +103,7 @@ export function ShadowingPlayer({
         <div className="mt-[12px] flex items-center justify-between gap-[8px]">
           <div className="flex items-center gap-[8px]">
             <SpeakerFilter
+              speakers={presentSpeakers}
               enabledSpeakers={enabledSpeakers}
               onToggleSpeaker={toggleSpeaker}
             />
