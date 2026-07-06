@@ -234,6 +234,14 @@
           ],
           "status": "completed",
           "description": "임포트 전용 client 페이지. useSearchParams(Suspense) 기반 videoId 새로고침 복원으로 폼/모니터 분기, DESIGN.md 준수 레이아웃, Playwright E2E 검증"
+        },
+        {
+          "id": "import-translation",
+          "feature": "대본 한글 번역 단계 추가",
+          "path": "src/lib/services/import/translation.ts",
+          "relatedPaths": ["src/lib/services/import-pipeline.ts"],
+          "status": "pending",
+          "description": "정합된 segments.json 대본의 영어 문장들을 한글로 번역하여 translation 필드 주입 (LLM 또는 외부 번역 API 연동)"
         }
       ]
     },
