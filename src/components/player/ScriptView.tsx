@@ -83,6 +83,9 @@ function ScriptView({
           <div
             key={seg.id}
             ref={active ? activeRef : null}
+            data-active={active || undefined}
+            data-selected={selected || undefined}
+            data-dimmed={dimmed || undefined}
             onClick={
               onSegmentClick ? (e) => onSegmentClick(i, e.shiftKey) : undefined
             }
@@ -137,7 +140,7 @@ function ScriptView({
                         className={[
                           'text-sm leading-[1.55] text-muted-soft transition-all duration-300',
                           blurred
-                            ? 'blur-sm group-hover/translation:blur-none text-muted-soft/40'
+                            ? 'blur-sm hover:blur-none group-hover/translation:blur-none text-muted-soft/40'
                             : '',
                         ]
                           .filter(Boolean)
