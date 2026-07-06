@@ -9,6 +9,7 @@ import {
 } from './import/youtube';
 import { fetchTranscript } from './import/transcript';
 import { alignTranscript } from './import/alignment';
+import { translate, createOpenRouterTranslator } from './import/translation';
 
 /**
  * 임포트 파이프라인의 단계(step) 모듈 계약.
@@ -24,6 +25,8 @@ export interface PipelineSteps {
   fetchTranscript(videoId: string, transcriptUrl: string): Promise<void>;
   /** alignment: subtitle.en.vtt + transcript.txt → segments.json, matchRate 반환 */
   alignTranscript(videoId: string): Promise<{ matchRate: number }>;
+  /** translation: segments.json의 영어 text → 한국어 translation 주입 (best-effort) */
+  translate?(videoId: string): Promise<void>;
   /** meta: youtubeUrl → meta.json (best-effort, 실패해도 임포트 완료 유지) */
   fetchMeta?(videoId: string, youtubeUrl: string): Promise<void>;
 }
@@ -38,6 +41,7 @@ const REQUIRED_REUSE: Record<string, string[]> = {
   all: [],
   transcript: ['audio.mp3', 'subtitle.en.vtt'],
   subtitles: ['audio.mp3', 'transcript.txt'],
+  translation: ['segments.json'],
 };
 
 // retryStep별 첫 실행 단계 (재사용 아티펙트 누락 시 currentStep)
@@ -45,6 +49,7 @@ const FIRST_STEP: Record<string, string> = {
   all: 'download',
   transcript: 'transcript',
   subtitles: 'subtitle',
+  translation: 'translation',
 };
 
 async function artifactExists(videoId: string, name: string): Promise<boolean> {
@@ -67,12 +72,22 @@ async function findMissingReusedArtifact(
   return null;
 }
 
+// 기본 번역 스텝: 환경변수 기반 OpenRouter 번역기로 segments.json을 채운다.
+// 키가 없으면 배치 호출이 throw되고 translate가 배치별로 흡수해 no-op이 된다(best-effort).
+async function translateStep(videoId: string): Promise<void> {
+  const translator = createOpenRouterTranslator({
+    apiKey: process.env.OPENROUTER_API_KEY ?? '',
+  });
+  await translate(videoId, { translator });
+}
+
 // steps 미주입 시 사용하는 실제 단계 모듈
 const defaultSteps: PipelineSteps = {
   downloadAudio,
   fetchSubtitle,
   fetchTranscript,
   alignTranscript,
+  translate: translateStep,
   fetchMeta: writeEpisodeMeta,
 };
 
@@ -146,10 +161,13 @@ export async function runImportPipeline(
       return;
     }
 
-    // retryStep(plan)에 따라 실행할 단계 결정 (alignment는 항상 실행)
+    // retryStep(plan)에 따라 실행할 단계 결정.
+    // translation 재시도는 정합 산출물(segments.json)을 재사용하므로 alignment까지 건너뛰고
+    // 번역만 실행한다. 그 외 계획은 alignment를 항상 수행한다.
     const runDownload = plan === 'all';
     const runSubtitle = runDownload || plan === 'subtitles';
     const runTranscript = runDownload || plan === 'transcript';
+    const runAlignment = plan !== 'translation';
 
     if (runDownload) {
       currentStep = 'download';
@@ -172,20 +190,35 @@ export async function runImportPipeline(
       await steps.fetchTranscript(videoId, transcriptUrl);
     }
 
-    currentStep = 'alignment';
-    progress = 90;
-    await write('aligning', currentStep, progress);
-    const { matchRate } = await steps.alignTranscript(videoId);
+    let matchRate: number | undefined;
+    if (runAlignment) {
+      currentStep = 'alignment';
+      progress = 90;
+      await write('aligning', currentStep, progress);
+      const result = await steps.alignTranscript(videoId);
+      matchRate = result.matchRate;
 
-    if (matchRate < MATCH_RATE_THRESHOLD) {
-      await write(
-        'failed',
-        currentStep,
-        progress,
-        `matchRate ${matchRate} < ${MATCH_RATE_THRESHOLD}`,
-        matchRate,
-      );
-      return;
+      if (matchRate < MATCH_RATE_THRESHOLD) {
+        await write(
+          'failed',
+          currentStep,
+          progress,
+          `matchRate ${matchRate} < ${MATCH_RATE_THRESHOLD}`,
+          matchRate,
+        );
+        return;
+      }
+    }
+
+    // 번역(한국어 translation 주입)은 best-effort — 실패해도 임포트 완료를 막지 않는다.
+    // segments.json을 입력으로 하며, translation 재시도 시엔 이 단계만 실행된다.
+    currentStep = 'translation';
+    progress = 95;
+    await write('translating', currentStep, progress, undefined, matchRate);
+    try {
+      await steps.translate?.(videoId);
+    } catch {
+      // 폴백: 번역 없이도 재생·정합은 정상. 이후 retryStep 'translation'으로 보충 가능.
     }
 
     // 메타(제목·재생시간·썸네일)는 best-effort — 실패해도 임포트 완료를 막지 않는다 (#74 AC3).

@@ -21,7 +21,7 @@ export interface EpisodeMeta {
   addedAt: string;
 }
 
-export type RetryStep = 'all' | 'transcript' | 'subtitles';
+export type RetryStep = 'all' | 'transcript' | 'subtitles' | 'translation';
 
 export interface ImportRequestBody {
   youtubeUrl: string; // 필수
