@@ -78,7 +78,7 @@ function ScriptView({
               onSegmentClick ? (e) => onSegmentClick(i, e.shiftKey) : undefined
             }
             className={[
-              'rounded-md border p-4 transition-colors',
+              'rounded-[--radius-md] border p-[16px] transition-colors',
               active
                 ? `${sp.bgClass} ${sp.borderClass}`
                 : 'border-hairline bg-transparent',
@@ -89,8 +89,10 @@ function ScriptView({
               .filter(Boolean)
               .join(' ')}
           >
-            <div className="mb-1 flex items-center gap-3">
-              <span className={`text-sm font-medium ${sp.textClass}`}>
+            <div className="mb-[4px] flex items-center gap-[12px]">
+              <span
+                className={`text-[12px] font-medium px-[12px] py-[4px] rounded-full ${sp.bgClass} ${sp.textClass}`}
+              >
                 {sp.name}
               </span>
               <span className="font-mono text-xs text-muted-soft">
@@ -101,7 +103,7 @@ function ScriptView({
               segment={seg}
               highlightWords={active}
               currentTime={currentTime}
-              className="text-body leading-relaxed"
+              className="text-[16px] text-body leading-[1.55]"
             />
             {seg.translation
               ? (() => {
@@ -115,7 +117,7 @@ function ScriptView({
                         toggleRevealed(i);
                       }}
                       className={[
-                        'mt-1 cursor-pointer text-sm text-muted transition',
+                        'mt-[4px] cursor-pointer text-sm leading-[1.55] text-muted-soft transition',
                         blurred ? 'blur-sm hover:blur-none' : '',
                       ]
                         .filter(Boolean)

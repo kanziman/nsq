@@ -80,7 +80,7 @@ export function ShadowingPlayer({
   return (
     <div className="space-y-6">
       {/* 상단 dark 플레이어 영역 */}
-      <section className="sticky top-4 z-10 rounded-lg bg-surface-dark p-6 text-on-dark">
+      <section className="sticky top-4 z-10 rounded-xl bg-surface-dark p-[32px] text-on-dark">
         <h2 className="font-serif text-xl">{episode.title}</h2>
         <div className="mt-4">
           <AudioControls
@@ -99,7 +99,7 @@ export function ShadowingPlayer({
             onSetPlaybackRate={setPlaybackRate}
           />
         </div>
-        <div className="mt-3 flex items-center gap-2">
+        <div className="mt-[12px] flex items-center gap-[8px]">
           <SpeakerFilter
             enabledSpeakers={enabledSpeakers}
             onToggleSpeaker={toggleSpeaker}

@@ -20,15 +20,21 @@ export default async function EpisodePlayerPage({
   }
 
   return (
-    <main className="mx-auto min-h-screen max-w-6xl p-6 md:p-10">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_320px]">
+    <main className="mx-auto min-h-screen max-w-6xl px-4 md:px-8 py-[32px] md:py-[48px]">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-[24px] lg:gap-[32px]">
         {/* 좌측: 플레이어 + 스크립트 */}
-        <ShadowingPlayer episode={episode} segments={segments} />
+        <div className="lg:col-span-8">
+          <ShadowingPlayer episode={episode} segments={segments} />
+        </div>
 
         {/* 우측 AI 튜터 패널 (골격) */}
-        <aside className="rounded-lg border border-hairline bg-surface-card p-5">
-          <h2 className="font-serif text-lg text-ink">AI 튜터</h2>
-          <p className="mt-2 text-sm text-muted-soft">준비 중입니다.</p>
+        <aside className="lg:col-span-4 rounded-xl border border-hairline bg-surface-card p-[32px] h-fit">
+          <h2 className="font-serif text-lg text-ink tracking-[-0.3px]">
+            AI 튜터
+          </h2>
+          <p className="mt-[8px] text-sm text-muted-soft leading-[1.55]">
+            준비 중입니다.
+          </p>
         </aside>
       </div>
     </main>

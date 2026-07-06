@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { Trash2 } from 'lucide-react';
 import type { Episode } from '@/lib/types';
 
 function formatDuration(sec: number): string {
@@ -72,25 +73,25 @@ export default function EpisodeCard({
     if (!showConfirm) return null;
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-xs">
-        <div className="bg-surface-card border border-hairline p-6 rounded-lg max-w-sm w-full mx-4 shadow-xl space-y-6 animate-in fade-in-50 zoom-in-95 duration-200">
+        <div className="bg-surface-card border border-hairline p-6 rounded-xl max-w-sm w-full mx-4 shadow-xl space-y-6 animate-in fade-in-50 zoom-in-95 duration-200">
           <div className="space-y-2">
-            <h4 className="font-serif text-lg text-ink font-semibold">
+            <h4 className="font-serif text-lg text-ink font-medium tracking-[-0.3px]">
               에피소드를 삭제하시겠습니까?
             </h4>
-            <p className="text-xs text-muted-soft leading-relaxed">
+            <p className="text-xs text-muted-soft leading-[1.55]">
               다운로드된 오디오 및 대본 정보가 컴퓨터에서 영구적으로 삭제됩니다.
             </p>
           </div>
           <div className="flex justify-end gap-3">
             <button
               onClick={handleCancelDelete}
-              className="h-9 px-4 rounded border border-hairline text-xs font-medium text-muted hover:bg-hairline/10 transition-colors cursor-pointer"
+              className="h-9 px-4 rounded-md border border-hairline text-xs font-medium text-muted hover:bg-hairline/10 transition-colors cursor-pointer"
             >
               취소
             </button>
             <button
               onClick={handleConfirmDelete}
-              className="h-9 px-4 rounded bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
+              className="h-9 px-4 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
             >
               진짜 삭제
             </button>
@@ -105,7 +106,7 @@ export default function EpisodeCard({
   // -------------------------------------------------------------
   if (status === 'completed') {
     return (
-      <div className="group relative border border-hairline rounded-lg overflow-hidden bg-surface-card hover:border-primary-active transition-all duration-300 flex flex-col">
+      <div className="group relative border border-hairline rounded-xl overflow-hidden bg-surface-card hover:border-primary-active transition-all duration-300 flex flex-col">
         {renderConfirmModal()}
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/10">
           <img
@@ -117,8 +118,8 @@ export default function EpisodeCard({
             {formattedDuration}
           </div>
         </div>
-        <div className="p-5 flex-grow flex flex-col justify-between space-y-3">
-          <h3 className="font-serif text-ink font-normal text-lg leading-snug line-clamp-2 min-h-[3.25rem] group-hover:text-primary-active transition-colors">
+        <div className="p-[24px] flex-grow flex flex-col justify-between space-y-3">
+          <h3 className="font-serif text-ink font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2 min-h-[3.25rem] group-hover:text-primary-active transition-colors">
             {title}
           </h3>
 
@@ -128,9 +129,9 @@ export default function EpisodeCard({
               <button
                 aria-label="삭제"
                 onClick={handleDeleteClick}
-                className="p-1.5 rounded hover:bg-primary/10 text-muted hover:text-primary transition-colors cursor-pointer"
+                className="w-9 h-9 flex items-center justify-center bg-canvas text-ink border border-hairline rounded-full p-0 hover:bg-secondary active:bg-secondary transition-colors cursor-pointer"
               >
-                🗑️
+                <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
               </button>
               <Link
                 href={`/episodes/${episode.id}`}
@@ -150,14 +151,14 @@ export default function EpisodeCard({
   // -------------------------------------------------------------
   if (status !== 'failed') {
     return (
-      <div className="border border-hairline rounded-lg overflow-hidden bg-surface-card/60 max-w-sm flex flex-col justify-between relative">
+      <div className="border border-hairline rounded-xl overflow-hidden bg-surface-card/60 max-w-sm flex flex-col justify-between relative">
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
           <div className="absolute inset-0 bg-ink/5" />
           <div className="z-10 animate-spin h-6 w-6 border-2 border-primary border-t-transparent rounded-full" />
         </div>
-        <div className="p-5 space-y-4 flex-grow flex flex-col justify-between">
+        <div className="p-[24px] space-y-4 flex-grow flex flex-col justify-between">
           <div className="space-y-2">
-            <h3 className="font-serif text-muted font-normal text-lg leading-snug line-clamp-2">
+            <h3 className="font-serif text-muted font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2">
               {title || '새 에피소드 임포트 중...'}
             </h3>
             <p className="text-xs text-primary font-medium">
@@ -199,19 +200,19 @@ export default function EpisodeCard({
   // 4. 실패 상태 (Failed)
   // -------------------------------------------------------------
   return (
-    <div className="border border-primary/20 rounded-lg overflow-hidden bg-surface-card/90 max-w-sm flex flex-col justify-between relative">
+    <div className="border border-primary/20 rounded-xl overflow-hidden bg-surface-card/90 max-w-sm flex flex-col justify-between relative">
       {renderConfirmModal()}
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
-        <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase">
+        <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-xs tracking-[1.5px] uppercase">
           Failed
         </span>
       </div>
-      <div className="p-5 space-y-4 flex-grow flex flex-col justify-between">
+      <div className="p-[24px] space-y-4 flex-grow flex flex-col justify-between">
         <div className="space-y-2">
-          <h3 className="font-serif text-ink font-normal text-lg leading-snug line-clamp-2">
+          <h3 className="font-serif text-ink font-normal text-lg leading-[1.4] tracking-[-0.3px] line-clamp-2">
             {title || '알 수 없는 비디오'}
           </h3>
-          <div className="group relative p-2.5 rounded bg-surface-dark border border-hairline text-xs text-muted-soft leading-relaxed min-h-[3rem] overflow-hidden">
+          <div className="group relative p-2.5 rounded-md bg-surface-dark border border-hairline text-xs text-muted-soft leading-[1.55] min-h-[3rem] overflow-hidden">
             <span className="line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
               {errorMsg || '임포트 중 상세 불명의 오류가 발생했습니다.'}
             </span>
@@ -224,13 +225,13 @@ export default function EpisodeCard({
             <button
               aria-label="삭제"
               onClick={handleDeleteClick}
-              className="p-1.5 rounded hover:bg-primary/10 text-muted hover:text-primary transition-colors cursor-pointer"
+              className="w-9 h-9 flex items-center justify-center bg-canvas text-ink border border-hairline rounded-full p-0 hover:bg-secondary active:bg-secondary transition-colors cursor-pointer"
             >
-              🗑️
+              <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
             </button>
             <Link
               href={`/import?videoId=${episode.id}`}
-              className="inline-flex h-8 items-center justify-center px-4 rounded bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
+              className="inline-flex h-8 items-center justify-center px-4 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
             >
               재시도
             </Link>
