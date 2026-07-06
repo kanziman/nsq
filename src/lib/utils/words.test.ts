@@ -50,14 +50,14 @@ describe('computeWordStarts', () => {
     expect(computeWordStarts(4, 0, 4, [0, 1, 2, 3])).toEqual([0, 1, 2, 3]);
   });
 
-  it('[정상] should place the first word at the first token time, not the segment start (AC1)', () => {
-    // 세그먼트 시작(0)과 무관하게 첫 단어는 첫 토큰(1.0)에 강조된다.
-    expect(computeWordStarts(3, 0, 6, [1, 3, 5])).toEqual([1, 3, 5]);
+  it('[정상] should anchor the first word to the segment start (no highlight dead zone) (AC1)', () => {
+    // 첫 토큰이 6이라도 첫 단어는 세그먼트 시작(5)부터 강조돼야 한다. 나머지는 토큰을 따른다.
+    expect(computeWordStarts(3, 5, 11, [6, 8, 10])).toEqual([5, 8, 10]);
   });
 
-  it('[정상] should proportionally sample when token/word counts differ', () => {
-    // n=2, m=4 → i=0→tokens[0], i=1→tokens[2]
-    expect(computeWordStarts(2, 0, 4, [10, 20, 30, 40])).toEqual([10, 30]);
+  it('[정상] should proportionally sample the rest when token/word counts differ', () => {
+    // start(=10)==tokens[0]. n=2, m=4 → i=1→tokens[floor(4/2)]=tokens[2]=30
+    expect(computeWordStarts(2, 10, 44, [10, 20, 30, 40])).toEqual([10, 30]);
   });
 
   it('[경계] should fall back to even distribution when no tokens in the window (AC2)', () => {

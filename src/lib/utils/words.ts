@@ -51,10 +51,15 @@ export function computeWordStarts(
     );
   }
   // 공식 단어 i를 토큰 시각에 비례 매핑(실제 발화 리듬 반영).
-  return Array.from({ length: wordCount }, (_, i) => {
+  const starts = Array.from({ length: wordCount }, (_, i) => {
     const j = Math.min(m - 1, Math.floor((i * m) / wordCount));
     return tokenTimes[j];
   });
+  // 첫 단어는 세그먼트 시작부터 강조되게 앵커링한다. VTT가 큐 선두 단어를 누락하면
+  // 첫 토큰이 실제 첫 단어보다 늦어 [start, firstToken) 구간에 첫 단어가 강조 안 되는
+  // 사각(dead zone)이 생긴다. tokenTimes[j] >= start이므로 단조성은 유지된다.
+  starts[0] = start;
+  return starts;
 }
 
 /**
