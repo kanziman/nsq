@@ -27,7 +27,12 @@ export interface EpisodeMeta {
   language?: LanguageCode;
 }
 
-export type RetryStep = 'all' | 'transcript' | 'subtitles' | 'translation';
+export type RetryStep =
+  | 'all'
+  | 'transcript'
+  | 'subtitles'
+  | 'sentences'
+  | 'translation';
 
 export interface ImportRequestBody {
   youtubeUrl: string; // 필수
@@ -44,6 +49,7 @@ export interface ImportState {
     | 'processing_subtitles'
     | 'processing_transcript'
     | 'aligning'
+    | 'building_sentences'
     | 'translating'
     | 'completed'
     | 'failed';

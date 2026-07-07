@@ -102,4 +102,32 @@ describe('POST /api/import (language / subtitle-only)', () => {
     const [, state] = mockSaveState.mock.calls[0];
     expect(state.language).toBe('ja');
   });
+
+  // #125 [예외] sentences 재시도는 자막 전용 전용 — transcriptUrl 동시 전달 시 400
+  it("should return 400 when retryStep 'sentences' is combined with transcriptUrl", async () => {
+    const res = await POST(
+      makeRequest({
+        youtubeUrl: YT,
+        transcriptUrl: TR,
+        language: 'en',
+        retryStep: 'sentences',
+      }),
+    );
+    expect(res.status).toBe(400);
+    expect(mockRunPipeline).not.toHaveBeenCalled();
+  });
+
+  // #125 [정상] building_sentences는 진행중 상태 — 신규 임포트 409 차단
+  it("should return 409 for a new import when existing status is 'building_sentences'", async () => {
+    mockGetState.mockResolvedValue({
+      videoId: 'vid124',
+      status: 'building_sentences',
+      progress: 92,
+      currentStep: 'sentences',
+      updatedAt: new Date().toISOString(),
+    });
+    const res = await POST(makeRequest({ youtubeUrl: YT, language: 'ja' }));
+    expect(res.status).toBe(409);
+    expect(mockRunPipeline).not.toHaveBeenCalled();
+  });
 });
