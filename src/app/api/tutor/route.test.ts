@@ -10,9 +10,9 @@ vi.mock('@/lib/services/tutor', () => ({
       start(controller) {
         controller.enqueue(encoder.encode('Mock stream'));
         controller.close();
-      }
+      },
     });
-  })
+  }),
 }));
 
 describe('POST /api/tutor', () => {
@@ -66,17 +66,30 @@ describe('POST /api/tutor', () => {
     const mockContext = { text: 'Context text' };
     const req = new Request('http://localhost/api/tutor', {
       method: 'POST',
-      body: JSON.stringify({ speakerId: 'General', message: 'Hello', context: mockContext }),
+      body: JSON.stringify({
+        speakerId: 'General',
+        message: 'Hello',
+        context: mockContext,
+      }),
     });
     await POST(req);
-    expect(getTutorResponse).toHaveBeenCalledWith('General', 'Hello', mockContext);
+    expect(getTutorResponse).toHaveBeenCalledWith(
+      'General',
+      'Hello',
+      mockContext,
+      'en',
+    );
   });
 
   it('should return 400 Bad Request if context object is malformed', async () => {
     const req = new Request('http://localhost/api/tutor', {
       method: 'POST',
       // passing string instead of object for context
-      body: JSON.stringify({ speakerId: 'General', message: 'Hello', context: 'invalid' }),
+      body: JSON.stringify({
+        speakerId: 'General',
+        message: 'Hello',
+        context: 'invalid',
+      }),
     });
     const res = await POST(req);
     expect(res.status).toBe(400);
