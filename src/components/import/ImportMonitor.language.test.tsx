@@ -83,6 +83,37 @@ describe('ImportMonitor (language retry context)', () => {
     ).toBeInTheDocument();
   });
 
+  // #125 [정상] building_sentences 상태 라벨 표시
+  it("should show '문장 복원 중' when status is 'building_sentences'", () => {
+    setState({
+      videoId: 'v',
+      status: 'building_sentences',
+      progress: 92,
+      currentStep: 'sentences',
+      youtubeUrl: 'https://youtube.com/watch?v=v',
+      language: 'ja',
+      updatedAt: '',
+    });
+    render(<ImportMonitor videoId="v" />);
+    expect(screen.getByText('문장 복원 중')).toBeInTheDocument();
+  });
+
+  // #125 [정상] transcriptUrl 없는 상태 → 타임라인이 자막 전용 단계로 표시
+  it('should render subtitle-only timeline steps when state has no transcriptUrl', () => {
+    setState({
+      videoId: 'v',
+      status: 'building_sentences',
+      progress: 92,
+      currentStep: 'sentences',
+      youtubeUrl: 'https://youtube.com/watch?v=v',
+      language: 'ja',
+      updatedAt: '',
+    });
+    render(<ImportMonitor videoId="v" />);
+    expect(screen.getByText('문장')).toBeInTheDocument();
+    expect(screen.queryByText('정합')).not.toBeInTheDocument();
+  });
+
   // [예외] 큐 세그먼트 생성 실패(currentStep 'segments') → 재시도 경로 제공(AC 검증 갭 보완)
   it('should show 전체 재시도(all) for failed segments step in subtitle-only import', () => {
     setState({

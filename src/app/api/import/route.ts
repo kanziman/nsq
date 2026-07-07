@@ -9,6 +9,7 @@ const IN_PROGRESS: ImportState['status'][] = [
   'processing_subtitles',
   'processing_transcript',
   'aligning',
+  'building_sentences',
 ];
 
 // retryStep 없이 들어온 신규 임포트를 409로 막아야 하는 상태들 (진행중 + 완료)
@@ -91,6 +92,14 @@ export async function POST(request: Request): Promise<Response> {
     if (lang === 'ja' && transcript) {
       return jsonError(
         "language 'ja' does not support transcript alignment; omit transcriptUrl",
+        400,
+      );
+    }
+    // sentences 재시도는 자막 전용 임포트 전용 — transcriptUrl과 함께 오면
+    // 파이프라인이 아무 것도 재구성하지 않고 completed로 끝나므로 접수 자체를 차단(#125).
+    if (retryStep === 'sentences' && transcript) {
+      return jsonError(
+        "retryStep 'sentences' applies to subtitle-only imports; omit transcriptUrl",
         400,
       );
     }

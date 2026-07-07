@@ -39,6 +39,7 @@ describe('ImportMonitor', () => {
       progress: 100,
       currentStep: 'completed',
       matchRate: 0.91,
+      transcriptUrl: 'https://freakonomics.com/x',
       updatedAt: '',
     });
     render(<ImportMonitor videoId="v" />);
