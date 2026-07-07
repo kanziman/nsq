@@ -36,6 +36,8 @@ export function ShadowingPlayer({
   segments,
 }: ShadowingPlayerProps): React.ReactElement {
   const [revealAll, setRevealAll] = useState(false);
+  // 후리가나 토글(#128) — ja 에피소드에서만 노출, 기본 ON.
+  const [showFurigana, setShowFurigana] = useState(true);
   const {
     isPlaying,
     currentSegmentIndex,
@@ -123,16 +125,31 @@ export function ShadowingPlayer({
                 {mode === 'focus' ? '전체 모드' : '집중 모드'}
               </Button>
             </div>
-            <Button
-              variant="secondaryOnDark"
-              size="sm"
-              onClick={() => setRevealAll((v) => !v)}
-              aria-label={revealAll ? '번역 숨기기' : '번역 보기'}
-              className="flex items-center gap-1.5"
-            >
-              <Languages className="h-4 w-4" strokeWidth={1.5} />
-              {revealAll ? '번역 숨기기' : '번역 보기'}
-            </Button>
+            <div className="flex items-center gap-[8px]">
+              {language === 'ja' && (
+                <Button
+                  variant="secondaryOnDark"
+                  size="sm"
+                  aria-pressed={showFurigana}
+                  aria-label={
+                    showFurigana ? '후리가나 숨기기' : '후리가나 보기'
+                  }
+                  onClick={() => setShowFurigana((v) => !v)}
+                >
+                  후리가나
+                </Button>
+              )}
+              <Button
+                variant="secondaryOnDark"
+                size="sm"
+                onClick={() => setRevealAll((v) => !v)}
+                aria-label={revealAll ? '번역 숨기기' : '번역 보기'}
+                className="flex items-center gap-1.5"
+              >
+                <Languages className="h-4 w-4" strokeWidth={1.5} />
+                {revealAll ? '번역 숨기기' : '번역 보기'}
+              </Button>
+            </div>
           </div>
           {filterNotice ? (
             <div
@@ -159,6 +176,7 @@ export function ShadowingPlayer({
             onReplay={() => goToSegment(currentSegmentIndex)}
             currentTime={currentTime}
             language={language}
+            showRuby={showFurigana}
           />
         ) : (
           <ScriptView
@@ -169,6 +187,7 @@ export function ShadowingPlayer({
             dimmedSpeakers={dimmedSpeakers}
             revealAll={revealAll}
             language={language}
+            showRuby={showFurigana}
             onSegmentClick={(index, shiftKey) => {
               if (shiftKey) {
                 extendSelectionTo(index);
