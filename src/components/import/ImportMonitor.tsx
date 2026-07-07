@@ -14,13 +14,18 @@ export interface ImportMonitorProps {
 
 /**
  * 실패한 currentStep을 안전한 재시도 계획(retryStep + 버튼 라벨)으로 매핑한다.
- * download/subtitle 실패 → 처음부터(all), transcript/alignment 실패 → 대본·정합부터(transcript).
+ * download/subtitle/segments(자막 전용, #124) 실패 → 처음부터(all),
+ * transcript/alignment 실패 → 대본·정합부터(transcript).
  * 매핑되지 않는 단계는 null(재시도 버튼 미노출).
  */
 export function retryPlanFor(
   currentStep: string,
 ): { retryStep: RetryStep; label: string } | null {
-  if (currentStep === 'download' || currentStep === 'subtitle') {
+  if (
+    currentStep === 'download' ||
+    currentStep === 'subtitle' ||
+    currentStep === 'segments'
+  ) {
     return { retryStep: 'all', label: '전체 재시도' };
   }
   if (currentStep === 'transcript' || currentStep === 'alignment') {
@@ -48,14 +53,17 @@ export function ImportMonitor({
 
   async function handleRetry(retryStep: RetryStep): Promise<void> {
     if (!state) return;
+    // 재접수 컨텍스트(#24·#124): language 포함, 자막 전용 임포트는 transcriptUrl 생략.
+    const body: Record<string, unknown> = {
+      youtubeUrl: state.youtubeUrl,
+      language: state.language ?? 'en',
+      retryStep,
+    };
+    if (state.transcriptUrl) body.transcriptUrl = state.transcriptUrl;
     const res = await fetch('/api/import', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        youtubeUrl: state.youtubeUrl,
-        transcriptUrl: state.transcriptUrl,
-        retryStep,
-      }),
+      body: JSON.stringify(body),
     });
     if (res.status === 202) {
       restart();

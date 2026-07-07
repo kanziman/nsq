@@ -198,6 +198,7 @@ describe('ImportMonitor retry', () => {
     expect(JSON.parse(init.body as string)).toEqual({
       youtubeUrl: 'https://youtu.be/v',
       transcriptUrl: 'https://freakonomics.com/x',
+      language: 'en',
       retryStep: 'all',
     });
   });
