@@ -95,7 +95,7 @@ describe('runImportPipeline (sentences step)', () => {
     expect(steps.fetchSubtitle).not.toHaveBeenCalled();
     expect(steps.buildCueSegments).toHaveBeenCalledWith(VID, 'ja');
     expect(steps.buildSentences).toHaveBeenCalledWith(VID);
-    expect(steps.translate).toHaveBeenCalledWith(VID);
+    expect(steps.translate).toHaveBeenCalledWith(VID, 'ja');
     expect((await readState())?.status).toBe('completed');
   });
 

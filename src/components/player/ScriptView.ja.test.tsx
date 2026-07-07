@@ -41,6 +41,28 @@ describe('ScriptView (subtitle-only ja cue segments)', () => {
   });
 });
 
+describe('ScriptView (ja translation blur/toggle)', () => {
+  // #126 AC1: ja 번역도 기존 blur 기본 + 전체 토글이 언어 무관하게 동작
+  it('should blur ja translations by default and reveal all via global toggle', async () => {
+    const { default: userEvent } = await import('@testing-library/user-event');
+    const withTranslation: Segment[] = JA_SEGMENTS.map((s, i) => ({
+      ...s,
+      translation: i === 0 ? '안녕하세요 여러분' : '오늘은 날씨가 좋네요',
+    }));
+    render(<ScriptView segments={withTranslation} />);
+
+    expect(screen.getByText('안녕하세요 여러분')).toHaveAttribute(
+      'data-blurred',
+    );
+    await userEvent.click(
+      screen.getByRole('button', { name: '번역 전체 토글' }),
+    );
+    expect(screen.getByText('안녕하세요 여러분')).not.toHaveAttribute(
+      'data-blurred',
+    );
+  });
+});
+
 describe('SegmentText (ja fallback, no wordStarts)', () => {
   // [경계] wordStarts 부재 + 무공백 텍스트 → 단일 토큰 균등분할 폴백(세그먼트 전체 강조)
   it('should fall back to a single highlighted token when text has no spaces and no wordStarts', () => {

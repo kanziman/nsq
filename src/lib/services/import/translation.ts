@@ -10,7 +10,7 @@
  */
 import fs from 'fs/promises';
 import path from 'path';
-import { Segment } from '@/lib/types';
+import { LanguageCode, Segment } from '@/lib/types';
 
 const EPISODES_DIR = path.join(process.cwd(), '.shadowing', 'episodes');
 
@@ -100,18 +100,35 @@ export interface OpenRouterConfig {
   timeoutMs?: number;
 }
 
-// 배치를 한국어 JSON 배열로만 번역하도록 지시하는 시스템 프롬프트.
-const SYSTEM_PROMPT =
-  '너는 팟캐스트 대본 번역가다. 각 줄의 영어 대사를 자연스러운 한국어 구어체로 번역한다. ' +
-  '화자와 인접 문맥을 참고하되, 입력과 같은 개수·같은 순서의 한국어 문자열 JSON 배열로만 응답한다. ' +
-  '각 배열 원소에는 번역문만 담고, 화자 표기([DUBNER] 등)나 줄 번호(1. 등)는 절대 포함하지 마라. ' +
-  '설명·코드펜스 없이 순수 JSON 배열만 출력한다. (Respond ONLY with a JSON array of Korean strings.)';
+// 배치를 한국어 JSON 배열로만 번역하도록 지시하는 언어별 시스템 프롬프트 (#126).
+const SYSTEM_PROMPT_BY_LANGUAGE: Record<LanguageCode, string> = {
+  en:
+    '너는 팟캐스트 대본 번역가다. 각 줄의 영어 대사를 자연스러운 한국어 구어체로 번역한다. ' +
+    '화자와 인접 문맥을 참고하되, 입력과 같은 개수·같은 순서의 한국어 문자열 JSON 배열로만 응답한다. ' +
+    '각 배열 원소에는 번역문만 담고, 화자 표기([DUBNER] 등)나 줄 번호(1. 등)는 절대 포함하지 마라. ' +
+    '설명·코드펜스 없이 순수 JSON 배열만 출력한다. (Respond ONLY with a JSON array of Korean strings.)',
+  ja:
+    '너는 일본어 콘텐츠 번역가다. 각 줄의 일본어 대사를 자연스러운 한국어 구어체로 번역한다. ' +
+    '화자와 인접 문맥을 참고하되, 입력과 같은 개수·같은 순서의 한국어 문자열 JSON 배열로만 응답한다. ' +
+    '각 배열 원소에는 번역문만 담고, 화자 표기([SPEAKER] 등)나 줄 번호(1. 등)는 절대 포함하지 마라. ' +
+    '설명·코드펜스 없이 순수 JSON 배열만 출력한다. (Respond ONLY with a JSON array of Korean strings.)',
+};
 
-// 모델이 프롬프트 형식을 되받아 붙인 선행 번호·화자 표기를 제거한다(flash 응답 오염 방어).
-const ECHOED_PREFIX =
-  /^\s*(?:\d+\.\s*)?(?:\[(?:DUCKWORTH|DUBNER|BOTH|NARRATOR)\]\s*)?/;
-function stripEchoedPrefix(s: string): string {
-  return s.replace(ECHOED_PREFIX, '');
+// 정규식 메타문자 이스케이프(화자 키를 패턴에 안전하게 삽입).
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * 모델이 프롬프트 형식을 되받아 붙인 선행 번호·화자 표기를 제거하는 정규식을 만든다
+ * (flash 응답 오염 방어). 화자 키는 임의 문자열이지만(멀티 팟캐스트·자막 전용 'SPEAKER'),
+ * `[웃음]` 같은 정당한 대괄호 서두를 오삭제하지 않도록 **배치에 실재하는 화자 키만** 대상으로 한다.
+ */
+function buildEchoedPrefixRe(batch: Segment[]): RegExp {
+  const keys = [...new Set(batch.map((s) => s.speaker))].map(escapeRegExp);
+  const speakerAlt =
+    keys.length > 0 ? `(?:\\[(?:${keys.join('|')})\\]\\s*)?` : '';
+  return new RegExp(`^\\s*(?:\\d+\\.\\s*)?${speakerAlt}`);
 }
 
 // 배치 세그먼트를 화자·원문이 순서대로 담긴 사용자 메시지로 직렬화.
@@ -144,6 +161,7 @@ function parseKoreanArray(content: string): string[] | null {
  */
 export function createOpenRouterTranslator(
   config: OpenRouterConfig,
+  language: LanguageCode = 'en',
 ): SegmentTranslator {
   const {
     apiKey,
@@ -167,7 +185,7 @@ export function createOpenRouterTranslator(
       body: JSON.stringify({
         model,
         messages: [
-          { role: 'system', content: SYSTEM_PROMPT },
+          { role: 'system', content: SYSTEM_PROMPT_BY_LANGUAGE[language] },
           { role: 'user', content: buildUserContent(batch) },
         ],
         // 번역엔 사고가 거의 불필요하다. reasoning effort를 최저로 낮춰 지연·비용을 크게 줄인다.
@@ -189,7 +207,8 @@ export function createOpenRouterTranslator(
 
     // 길이 불일치·파싱 실패는 빈 배열로 신호 → translate가 해당 배치 스킵.
     if (!parsed || parsed.length !== batch.length) return [];
-    // 모델이 되받아 붙인 화자/번호 접두사를 제거해 순수 번역문만 반환.
-    return parsed.map(stripEchoedPrefix);
+    // 모델이 되받아 붙인 화자/번호 접두사를 제거해 순수 번역문만 반환(배치 화자 키 한정).
+    const echoedPrefixRe = buildEchoedPrefixRe(batch);
+    return parsed.map((s) => s.replace(echoedPrefixRe, ''));
   };
 }
