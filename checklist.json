@@ -1,8 +1,7 @@
 {
   "project": "nsq-shadowing",
   "version": "0.1.0",
-  "updatedAt": "2026-07-06",
-
+  "updatedAt": "2026-07-08",
   "phases": [
     {
       "id": "setup",
@@ -43,7 +42,6 @@
         }
       ]
     },
-
     {
       "id": "design-system",
       "name": "디자인 시스템 통합",
@@ -124,7 +122,6 @@
         }
       ]
     },
-
     {
       "id": "data",
       "name": "데이터 레이어",
@@ -148,7 +145,6 @@
         }
       ]
     },
-
     {
       "id": "import-pipeline",
       "name": "임포트 파이프라인",
@@ -245,7 +241,6 @@
         }
       ]
     },
-
     {
       "id": "episodes",
       "name": "에피소드 관리",
@@ -285,7 +280,6 @@
         }
       ]
     },
-
     {
       "id": "player",
       "name": "쉐도잉 플레이어",
@@ -384,7 +378,6 @@
         }
       ]
     },
-
     {
       "id": "script-view",
       "name": "스크립트 뷰",
@@ -435,7 +428,6 @@
         }
       ]
     },
-
     {
       "id": "utils",
       "name": "유틸리티",
@@ -475,7 +467,6 @@
         }
       ]
     },
-
     {
       "id": "learning",
       "name": "학습 보조",
@@ -515,7 +506,6 @@
         }
       ]
     },
-
     {
       "id": "ai-tutor",
       "name": "AI 튜터 피드백",
@@ -547,7 +537,6 @@
         }
       ]
     },
-
     {
       "id": "phase2-multilingual",
       "name": "다국어 및 유튜브 자동자막 지원 (일본어 등)",
@@ -558,7 +547,7 @@
           "feature": "유튜브 자동 자막(VTT) 추출",
           "path": "src/lib/services/import/youtube.ts",
           "relatedPaths": ["src/lib/services/import-pipeline.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "수동 스크립트가 없을 경우 yt-dlp --write-auto-subs를 통해 자동 자막 추출"
         },
         {
@@ -566,7 +555,7 @@
           "feature": "AI 기반 문장 복원 및 구두점 생성",
           "path": "src/lib/services/import/sentence-builder.ts",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "파편화된 자동 자막을 LLM을 통해 자연스러운 문장으로 병합 및 마침표 복원"
         },
         {
@@ -577,7 +566,7 @@
             "src/lib/types.ts",
             "src/components/import/ImportForm.tsx"
           ],
-          "status": "pending",
+          "status": "completed",
           "description": "언어 속성(ja/en) 추가 및 일본어→한국어 번역 등 프롬프트 동적 라우팅"
         },
         {
@@ -585,7 +574,7 @@
           "feature": "후리가나(Furigana) 렌더링 지원",
           "path": "src/components/player/RubyText.tsx",
           "relatedPaths": [],
-          "status": "pending",
+          "status": "completed",
           "description": "한자에 루비 태그(<ruby>) 렌더링 지원"
         },
         {
@@ -593,7 +582,7 @@
           "feature": "띄어쓰기 없는 언어의 단어 하이라이트",
           "path": "src/components/player/SegmentText.tsx",
           "relatedPaths": ["src/lib/utils/japanese-tokenizer.ts"],
-          "status": "pending",
+          "status": "completed",
           "description": "형태소 분석(Kuromoji/LLM)을 통한 단어 구분 및 단어별 클릭(사전 연동) 지원"
         },
         {
@@ -601,12 +590,11 @@
           "feature": "다국어 튜터 페르소나 적용",
           "path": "src/lib/services/tutor.ts",
           "relatedPaths": ["src/components/tutor/TutorChat.tsx"],
-          "status": "pending",
+          "status": "completed",
           "description": "언어(ja)에 따라 문법(조사 등) 설명 및 일본어 튜터로 프롬프트 전환"
         }
       ]
     },
-
     {
       "id": "phase2-auth",
       "name": "사용자 시스템",
@@ -638,7 +626,6 @@
         }
       ]
     },
-
     {
       "id": "phase3-advanced",
       "name": "고급 학습 기능",
@@ -662,7 +649,6 @@
         }
       ]
     },
-
     {
       "id": "phase4-mobile",
       "name": "모바일 / PWA",
@@ -695,11 +681,10 @@
       ]
     }
   ],
-
   "stats": {
     "totalTasks": 68,
     "mvpTasks": 54,
     "postMvpTasks": 14,
-    "completedTasks": 45
+    "completedTasks": 51
   }
 }
