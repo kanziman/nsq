@@ -3,18 +3,22 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, Sparkles, Bot, User } from 'lucide-react';
 import { resolveSpeaker } from '@/lib/constants/speakers';
+import type { LanguageCode } from '@/lib/types';
 import ReactMarkdown from 'react-markdown';
 
 export interface TutorChatProps {
   className?: string;
   context?: { text: string; translation?: string };
   speakers?: string[];
+  /** 에피소드 언어(#129). 튜터 요청 바디에 포함. 기본 'en'. */
+  language?: LanguageCode;
 }
 
 export function TutorChat({
   className,
   context,
   speakers = [],
+  language = 'en',
 }: TutorChatProps) {
   const [activeTab, setActiveTab] = useState<string>('General');
   const [messages, setMessages] = useState<
@@ -43,7 +47,12 @@ export function TutorChat({
       const res = await fetch('/api/tutor', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ speakerId: activeTab, message: text, context }),
+        body: JSON.stringify({
+          speakerId: activeTab,
+          message: text,
+          context,
+          language,
+        }),
       });
 
       if (!res.ok) {
