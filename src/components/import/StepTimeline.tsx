@@ -1,26 +1,38 @@
 import * as React from 'react';
 import type { ImportState } from '@/lib/types';
 
+/** 임포트 모드별 타임라인 단계 구성 (#125). */
+export type TimelineMode = 'transcript' | 'subtitle-only';
+
 export interface StepTimelineProps {
   status: ImportState['status'];
   currentStep: string;
   progress: number;
+  mode?: TimelineMode; // 기본 'transcript'
 }
 
 type StepState = 'done' | 'active' | 'pending' | 'failed';
 
-// 파이프라인 4단계 (currentStep 키 → 라벨).
-const STEPS: { key: string; label: string }[] = [
-  { key: 'download', label: '다운로드' },
-  { key: 'subtitle', label: '자막' },
-  { key: 'transcript', label: '대본' },
-  { key: 'alignment', label: '정합' },
-];
+// 모드별 파이프라인 4단계 (currentStep 키 → 라벨).
+const STEPS_BY_MODE: Record<TimelineMode, { key: string; label: string }[]> = {
+  transcript: [
+    { key: 'download', label: '다운로드' },
+    { key: 'subtitle', label: '자막' },
+    { key: 'transcript', label: '대본' },
+    { key: 'alignment', label: '정합' },
+  ],
+  'subtitle-only': [
+    { key: 'download', label: '다운로드' },
+    { key: 'subtitle', label: '자막' },
+    { key: 'segments', label: '세그먼트' },
+    { key: 'sentences', label: '문장' },
+  ],
+};
 
-function activeIndex(currentStep: string): number {
-  const i = STEPS.findIndex((s) => s.key === currentStep);
+function activeIndex(steps: { key: string }[], currentStep: string): number {
+  const i = steps.findIndex((s) => s.key === currentStep);
   // completed 등 단계 외 값이면 모든 단계를 지난 것으로 간주.
-  return i === -1 ? STEPS.length : i;
+  return i === -1 ? steps.length : i;
 }
 
 function stepStateAt(
@@ -45,13 +57,15 @@ export function StepTimeline({
   status,
   currentStep,
   progress,
+  mode = 'transcript',
 }: StepTimelineProps): React.JSX.Element {
-  const current = activeIndex(currentStep);
+  const steps = STEPS_BY_MODE[mode];
+  const current = activeIndex(steps, currentStep);
 
   return (
     <div className="space-y-4">
       <ol className="flex items-center gap-3">
-        {STEPS.map((step, i) => {
+        {steps.map((step, i) => {
           const state = stepStateAt(i, current, status);
           return (
             <li

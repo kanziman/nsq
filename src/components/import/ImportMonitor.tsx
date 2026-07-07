@@ -40,6 +40,7 @@ const STATUS_LABEL: Record<ImportState['status'], string> = {
   processing_subtitles: '자막 처리 중',
   processing_transcript: '대본 처리 중',
   aligning: '정합 중',
+  building_sentences: '문장 복원 중',
   translating: '번역 중',
   completed: '완료',
   failed: '실패',
@@ -93,6 +94,8 @@ export function ImportMonitor({
         status={state.status}
         currentStep={state.currentStep}
         progress={state.progress}
+        // 재시도 컨텍스트에 transcriptUrl이 없으면 자막 전용 임포트(#125 단계 라벨).
+        mode={state.transcriptUrl ? 'transcript' : 'subtitle-only'}
       />
 
       <p className="text-sm font-medium text-ink">

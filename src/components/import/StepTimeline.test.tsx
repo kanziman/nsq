@@ -50,7 +50,6 @@ describe('StepTimeline', () => {
   });
 
   // #124: 자막 전용 모드의 currentStep 'segments'(미등록 단계)에도 크래시 없이 렌더.
-  // 모드별 단계 라벨 정비는 #125 범위 — 여기서는 회귀 방지만 고정한다.
   it('should render without crashing when currentStep is an unmapped step (segments)', () => {
     expect(() =>
       render(
@@ -61,5 +60,35 @@ describe('StepTimeline', () => {
       'aria-valuenow',
       '90',
     );
+  });
+
+  // #125: 자막 전용 모드 단계 라벨 매핑
+  it("should render subtitle-only steps 다운로드/자막/세그먼트/문장 when mode is 'subtitle-only'", () => {
+    render(
+      <StepTimeline
+        status="processing_subtitles"
+        currentStep="subtitle"
+        progress={40}
+        mode="subtitle-only"
+      />,
+    );
+    for (const label of ['다운로드', '자막', '세그먼트', '문장']) {
+      expect(screen.getByText(label)).toBeInTheDocument();
+    }
+    expect(screen.queryByText('대본')).not.toBeInTheDocument();
+    expect(screen.queryByText('정합')).not.toBeInTheDocument();
+  });
+
+  it("should mark 문장 active when currentStep 'sentences' in subtitle-only mode", () => {
+    render(
+      <StepTimeline
+        status="building_sentences"
+        currentStep="sentences"
+        progress={92}
+        mode="subtitle-only"
+      />,
+    );
+    expect(stateOf('세그먼트')).toBe('done');
+    expect(stateOf('문장')).toBe('active');
   });
 });
