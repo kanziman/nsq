@@ -427,3 +427,59 @@ describe('ShadowingPlayer (language wiring)', () => {
     expect(String(open.mock.calls[0][0])).toContain('ja.dict.naver.com');
   });
 });
+
+// #128: 후리가나 토글 — ja에서만 노출, 기본 ON
+describe('ShadowingPlayer (furigana toggle)', () => {
+  const jaEpisode: Episode = { ...EPISODE, language: 'ja' };
+  const rubySegments: Segment[] = [
+    {
+      id: 'cue-1',
+      start: 0,
+      end: 4,
+      speaker: 'SPEAKER',
+      text: '今日は天気。',
+      ruby: [
+        { text: '今日', rt: 'きょう' },
+        { text: 'は' },
+        { text: '天気', rt: 'てんき' },
+        { text: '。' },
+      ],
+    },
+  ];
+
+  it('should show 후리가나 toggle only for ja episodes with default ON', () => {
+    const { container, unmount } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    const toggle = screen.getByRole('button', { name: /후리가나/ });
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+    unmount();
+
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    expect(screen.queryByRole('button', { name: /후리가나/ })).toBeNull();
+  });
+
+  it('should hide all rt when toggle turned OFF and restore when ON', () => {
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    const toggle = screen.getByRole('button', { name: /후리가나/ });
+    fireEvent.click(toggle);
+    expect(container.querySelectorAll('rt')).toHaveLength(0);
+    fireEvent.click(toggle);
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+  });
+  // #128 AC2: 집중 모드(FocusPanel) 경로에서도 토글이 적용된다
+  it('should apply furigana toggle in focus mode as well', () => {
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    // 재생 틱으로 현재 세그먼트를 만든 뒤 집중 모드로 전환한다.
+    act(() => lastManager._time?.(1));
+    fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: /후리가나/ }));
+    expect(container.querySelectorAll('rt')).toHaveLength(0);
+  });
+});

@@ -8,8 +8,10 @@ import {
 import {
   tokenizeJa,
   naverJaDictUrl,
-  type WordToken,
+  composeRuby,
+  type ComposedWord,
 } from '@/lib/utils/tokenize';
+import { RubyText } from './RubyText';
 
 interface SegmentTextProps {
   segment: Segment;
@@ -19,14 +21,17 @@ interface SegmentTextProps {
   className?: string;
   /** 에피소드 언어(#127). 'ja'면 Intl.Segmenter 토큰 렌더 + 단어 사전 링크. 기본 'en'. */
   language?: LanguageCode;
+  /** 후리가나 표시(#128). false면 segment.ruby를 무시한다. 기본 true. */
+  showRuby?: boolean;
 }
 
 // ja 단어 토큰 스팬. 클릭 시 네이버 일본어사전 새 탭(세그먼트 클릭 탐색과 분리).
+// 루비 조각(#128)은 스팬 내부에서 <ruby><rt>로 렌더된다.
 function JaWordSpan({
-  token,
+  word,
   current,
 }: {
-  token: WordToken;
+  word: ComposedWord;
   current: boolean;
 }): React.ReactElement {
   return (
@@ -41,14 +46,10 @@ function JaWordSpan({
         .join(' ')}
       onClick={(e) => {
         e.stopPropagation();
-        window.open(
-          naverJaDictUrl(token.text),
-          '_blank',
-          'noopener,noreferrer',
-        );
+        window.open(naverJaDictUrl(word.word), '_blank', 'noopener,noreferrer');
       }}
     >
-      {token.text}
+      <RubyText pieces={word.pieces} />
     </span>
   );
 }
@@ -65,18 +66,26 @@ export function SegmentText({
   currentTime,
   className,
   language = 'en',
+  showRuby = true,
 }: SegmentTextProps): React.ReactElement {
-  // ja 토큰 분해는 세그먼트 단위 메모(재생 틱마다 재분해 금지 — spec-fixed §8).
-  const jaTokens = useMemo(
-    () => (language === 'ja' ? tokenizeJa(segment.text) : null),
-    [language, segment.text],
+  // ja 토큰 분해·루비 병합은 세그먼트 단위 메모(재생 틱마다 재분해 금지 — spec-fixed §8).
+  const composed = useMemo(
+    () =>
+      language === 'ja'
+        ? composeRuby(
+            tokenizeJa(segment.text),
+            showRuby ? segment.ruby : undefined,
+            segment.text,
+          )
+        : null,
+    [language, segment.text, segment.ruby, showRuby],
   );
 
-  if (jaTokens) {
-    // 단어 토큰 서수 목록(하이라이트는 단어 토큰 수 기준 균등분할 — B9, wordStarts 없음 전제).
+  if (composed) {
+    // 단어 서수 목록(하이라이트는 단어 수 기준 균등분할 — B9, wordStarts 없음 전제).
     const wordOrdinalByIndex = new Map<number, number>();
-    jaTokens.forEach((t, i) => {
-      if (t.isWord) wordOrdinalByIndex.set(i, wordOrdinalByIndex.size);
+    composed.forEach((w, i) => {
+      if (w.isWord) wordOrdinalByIndex.set(i, wordOrdinalByIndex.size);
     });
     const currentOrdinal =
       highlightWords && currentTime != null && wordOrdinalByIndex.size > 0
@@ -90,15 +99,17 @@ export function SegmentText({
 
     return (
       <p className={className}>
-        {jaTokens.map((token, i) =>
-          token.isWord ? (
+        {composed.map((word, i) =>
+          word.isWord ? (
             <JaWordSpan
               key={i}
-              token={token}
+              word={word}
               current={wordOrdinalByIndex.get(i) === currentOrdinal}
             />
           ) : (
-            <Fragment key={i}>{token.text}</Fragment>
+            <Fragment key={i}>
+              <RubyText pieces={word.pieces} />
+            </Fragment>
           ),
         )}
       </p>

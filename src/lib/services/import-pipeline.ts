@@ -14,6 +14,10 @@ import {
   buildSentences,
   createOpenRouterSentenceBuilder,
 } from './import/sentence-builder';
+import {
+  annotateFurigana,
+  createOpenRouterFuriganaAnnotator,
+} from './import/furigana';
 import { translate, createOpenRouterTranslator } from './import/translation';
 
 /**
@@ -40,6 +44,8 @@ export interface PipelineSteps {
   buildSentences?(videoId: string): Promise<void>;
   /** translation: segments.json의 text → 한국어 translation 주입 (best-effort, 언어 라우팅 #126) */
   translate?(videoId: string, language: LanguageCode): Promise<void>;
+  /** furigana(자막 전용 ja): Segment.ruby 주입 (best-effort, 상태 슬롯 없음 #128) */
+  annotateFurigana?(videoId: string): Promise<void>;
   /** meta: youtubeUrl → meta.json (best-effort, 실패해도 임포트 완료 유지) */
   fetchMeta?(
     videoId: string,
@@ -113,6 +119,14 @@ async function translateStep(
   await translate(videoId, { translator });
 }
 
+// 기본 후리가나 스텝: 환경변수 기반 OpenRouter 주석기로 ja 세그먼트에 루비를 단다(#128).
+async function annotateFuriganaStep(videoId: string): Promise<void> {
+  const annotator = createOpenRouterFuriganaAnnotator({
+    apiKey: process.env.OPENROUTER_API_KEY ?? '',
+  });
+  await annotateFurigana(videoId, { annotator });
+}
+
 // 기본 문장 복원 스텝: 환경변수 기반 OpenRouter 빌더로 큐 세그먼트를 문장 단위로 재구성.
 // 키가 없으면 배치 호출이 throw되고 buildSentences가 배치별로 흡수해 큐 폴백이 유지된다.
 async function buildSentencesStep(videoId: string): Promise<void> {
@@ -131,6 +145,7 @@ const defaultSteps: PipelineSteps = {
   buildCueSegments,
   buildSentences: buildSentencesStep,
   translate: translateStep,
+  annotateFurigana: annotateFuriganaStep,
   fetchMeta: writeEpisodeMeta,
 };
 
@@ -309,6 +324,16 @@ export async function runImportPipeline(
       await steps.translate?.(videoId, language);
     } catch {
       // 폴백: 번역 없이도 재생·정합은 정상. 이후 retryStep 'translation'으로 보충 가능.
+    }
+
+    // 후리가나(ja 자막 전용)는 best-effort — 실패해도 원문 표시로 완주(#128).
+    if (subtitleOnly && language === 'ja' && plan !== 'translation') {
+      try {
+        await steps.annotateFurigana?.(videoId);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        console.warn(`furigana: step failed (${message}), kept plain text`);
+      }
     }
 
     // 메타(제목·재생시간·썸네일)는 best-effort — 실패해도 임포트 완료를 막지 않는다 (#74 AC3).
