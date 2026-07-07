@@ -211,6 +211,7 @@ export function ShadowingPlayer({
         <TutorChat
           context={segments[currentSegmentIndex]}
           speakers={presentSpeakers}
+          language={language}
           className="flex-1 overflow-hidden flex flex-col"
         />
       </aside>

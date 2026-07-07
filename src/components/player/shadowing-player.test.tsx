@@ -482,4 +482,33 @@ describe('ShadowingPlayer (furigana toggle)', () => {
     fireEvent.click(screen.getByRole('button', { name: /후리가나/ }));
     expect(container.querySelectorAll('rt')).toHaveLength(0);
   });
+  // #129: episode.language가 TutorChat까지 전달된다(튜터 요청 바디 language)
+  it('should pass episode language to TutorChat', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      body: { getReader: () => ({ read: async () => ({ done: true }) }) },
+    } as unknown as Response);
+    vi.stubGlobal('fetch', fetchMock);
+    const translated = rubySegments.map((seg) => ({
+      ...seg,
+      translation: '오늘은 날씨가 좋네요.',
+    }));
+    render(<ShadowingPlayer episode={jaEpisode} segments={translated} />);
+    // 재생 틱으로 활성 세그먼트를 만들어 컨텍스트(#120)가 주입되게 한다.
+    act(() => lastManager._time?.(1));
+
+    const input = screen.getByPlaceholderText(/메시지를 입력하세요/i);
+    fireEvent.change(input, { target: { value: '질문' } });
+    fireEvent.submit(input);
+
+    const [, init] = fetchMock.mock.calls[0] as [string, RequestInit];
+    const body = JSON.parse(init.body as string);
+    expect(body).toMatchObject({ language: 'ja' });
+    // ja 원문+번역 컨텍스트가 language와 동시에 전달된다(AC3 종단).
+    expect(body.context).toMatchObject({
+      text: '今日は天気。',
+      translation: '오늘은 날씨가 좋네요.',
+    });
+    vi.unstubAllGlobals();
+  });
 });
