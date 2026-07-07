@@ -1,7 +1,7 @@
 'use client';
 
 import { memo, useEffect, useRef, useState } from 'react';
-import type { Segment } from '@/lib/types';
+import type { LanguageCode, Segment } from '@/lib/types';
 import { resolveSpeaker } from '@/lib/constants/speakers';
 import { formatTime } from '@/lib/utils/time';
 import { SegmentText } from './SegmentText';
@@ -15,6 +15,8 @@ interface ScriptViewProps {
   onSegmentClick?: (index: number, shiftKey: boolean) => void;
   dimmedSpeakers?: string[];
   revealAll?: boolean;
+  /** 에피소드 언어(#127). SegmentText의 ja 토큰 렌더·사전 링크에 전달. */
+  language?: LanguageCode;
 }
 
 function ScriptView({
@@ -25,6 +27,7 @@ function ScriptView({
   onSegmentClick,
   dimmedSpeakers,
   revealAll: revealAllProp,
+  language,
 }: ScriptViewProps): React.ReactElement {
   const activeRef = useRef<HTMLDivElement | null>(null);
   const [localRevealAll, setLocalRevealAll] = useState(false);
@@ -123,6 +126,7 @@ function ScriptView({
               segment={seg}
               highlightWords={active}
               currentTime={currentTime}
+              language={language}
               className="text-[16px] text-body leading-[1.55]"
             />
             {seg.translation

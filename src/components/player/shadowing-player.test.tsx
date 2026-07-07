@@ -402,3 +402,28 @@ describe('ShadowingPlayer', () => {
     expect(screen.getByRole('button', { name: '재생' })).toBeInTheDocument();
   });
 });
+
+// #127: episode.language 파생 → ja 단어 사전 링크 배선
+describe('ShadowingPlayer (language wiring)', () => {
+  it('should derive language from episode.language and enable ja word links', () => {
+    const open = vi.spyOn(window, 'open').mockImplementation(() => null);
+    const jaEpisode: Episode = { ...EPISODE, language: 'ja' };
+    const jaSegments: Segment[] = [
+      {
+        id: 'cue-1',
+        start: 0,
+        end: 4,
+        speaker: 'SPEAKER',
+        text: '今日はいい天気ですね。',
+      },
+    ];
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={jaSegments} />,
+    );
+    const word = container.querySelector('[data-word]') as HTMLElement;
+    expect(word).not.toBeNull();
+    fireEvent.click(word);
+    expect(open).toHaveBeenCalledTimes(1);
+    expect(String(open.mock.calls[0][0])).toContain('ja.dict.naver.com');
+  });
+});
