@@ -98,6 +98,7 @@ describe('createOpenRouterTranslator (import-translation 이슈 #104)', () => {
   });
 
   it('[경계] #112: 모델이 [화자]/번호 접두사를 붙여 응답해도 순수 번역문만 반환', async () => {
+    // 에코 제거는 배치에 실재하는 화자 키에 한정한다(#126 — [웃음] 등 정당한 대괄호 보존).
     const fetchFn = vi.fn(async () =>
       chatResponse(
         JSON.stringify(['[DUBNER] 안녕하세요', '2. [DUCKWORTH] 반가워요']),
@@ -108,7 +109,7 @@ describe('createOpenRouterTranslator (import-translation 이슈 #104)', () => {
       fetchFn: fetchFn as unknown as typeof fetch,
     });
 
-    const out = await translator([seg(0), seg(1)]);
+    const out = await translator([seg(0), seg(1, { speaker: 'DUCKWORTH' })]);
     expect(out).toEqual(['안녕하세요', '반가워요']);
   });
 

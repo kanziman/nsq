@@ -61,7 +61,7 @@ describe('runImportPipeline — translation step (이슈 #105)', () => {
     await runImportPipeline(VID, URLS, steps);
 
     expect(steps.translate).toHaveBeenCalledTimes(1);
-    expect(steps.translate).toHaveBeenCalledWith(VID);
+    expect(steps.translate).toHaveBeenCalledWith(VID, 'en');
     expect(translatingSeen).toBe(true);
     const state = await readState(VID);
     expect(state?.status).toBe('completed');

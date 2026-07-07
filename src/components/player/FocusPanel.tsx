@@ -11,17 +11,23 @@ import {
   type Recorder,
 } from '@/lib/utils/recorder';
 import { SegmentText } from './SegmentText';
-import type { Segment } from '@/lib/types';
+import type { LanguageCode, Segment } from '@/lib/types';
 
 interface FocusPanelProps {
   segment: Segment | null;
   onReplay: () => void;
   currentTime?: number;
+  /** 에피소드 언어(#127). SegmentText의 ja 토큰 렌더·사전 링크에 전달. */
+  language?: LanguageCode;
+  /** 후리가나 표시(#128). SegmentText로 전달. */
+  showRuby?: boolean;
 }
 
 export default function FocusPanel({
   segment,
   onReplay,
+  language,
+  showRuby,
   currentTime,
 }: FocusPanelProps): React.ReactElement {
   const supported = isRecordingSupported();
@@ -110,6 +116,8 @@ export default function FocusPanel({
         segment={segment}
         highlightWords
         currentTime={currentTime}
+        language={language}
+        showRuby={showRuby}
         className="font-sans text-2xl leading-relaxed tracking-[-0.3px]"
       />
 

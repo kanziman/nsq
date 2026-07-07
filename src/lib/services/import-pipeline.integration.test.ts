@@ -81,7 +81,7 @@ function realSteps(): PipelineSteps {
       downloadAudio(vid, url, fakeRunner),
     ),
     fetchSubtitle: vi.fn((vid: string, url: string) =>
-      fetchSubtitle(vid, url, fakeRunner),
+      fetchSubtitle(vid, url, 'en', fakeRunner),
     ),
     fetchTranscript: vi.fn((vid: string, url: string) =>
       fetchTranscript(vid, url, fakeFetcher),

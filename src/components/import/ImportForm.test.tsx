@@ -30,12 +30,19 @@ afterEach(() => {
 });
 
 describe('ImportForm', () => {
-  it('should disable submit until both urls are valid', async () => {
+  // #124: 대본 URL 선택화 — youtube URL만 유효하면 제출 가능, 유효하지 않은 대본은 차단.
+  it('should disable submit until youtube url is valid (transcript optional)', async () => {
     render(<ImportForm />);
     const submit = screen.getByRole('button', { name: SUBMIT });
     expect(submit).toBeDisabled();
     await userEvent.type(screen.getByLabelText(/youtube/i), YT);
+    expect(submit).toBeEnabled();
+    await userEvent.type(
+      screen.getByLabelText(/대본|transcript/i),
+      'not a url',
+    );
     expect(submit).toBeDisabled();
+    await userEvent.clear(screen.getByLabelText(/대본|transcript/i));
     await userEvent.type(screen.getByLabelText(/대본|transcript/i), TR);
     expect(submit).toBeEnabled();
   });

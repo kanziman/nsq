@@ -187,7 +187,7 @@ describe('fetchSubtitle', () => {
   // [정상]
   it('should produce subtitle.en.vtt from manual step and not call auto fallback when manual subs exist', async () => {
     const runner = manualOnlyRunner();
-    await fetchSubtitle(VID, URL, runner);
+    await fetchSubtitle(VID, URL, 'en', runner);
     expect(await fileExists(subPath(VID))).toBe(true);
     expect(runner).toHaveBeenCalledTimes(1);
     const calls = (
@@ -200,7 +200,7 @@ describe('fetchSubtitle', () => {
 
   it('should pass --write-subs and --sub-langs en/--sub-format vtt on the manual step', async () => {
     const runner = manualOnlyRunner();
-    await fetchSubtitle(VID, URL, runner);
+    await fetchSubtitle(VID, URL, 'en', runner);
     const [, args] = callArgs(runner);
     expect(args).toContain('--write-subs');
     expect(args).not.toContain('--write-auto-subs');
@@ -218,7 +218,7 @@ describe('fetchSubtitle', () => {
   // [경계]
   it('should run auto fallback (--write-auto-subs) and produce subtitle.en.vtt when manual subs are absent', async () => {
     const runner = autoOnlyRunner();
-    await fetchSubtitle(VID, URL, runner);
+    await fetchSubtitle(VID, URL, 'en', runner);
     expect(await fileExists(subPath(VID))).toBe(true);
     expect(runner).toHaveBeenCalledTimes(2);
     const secondArgs = (
@@ -236,7 +236,7 @@ describe('fetchSubtitle', () => {
     await fs.mkdir(path.join(BASE, VID), { recursive: true });
     await fs.writeFile(subPath(VID), 'OLD_VTT');
     const runner = manualOnlyRunner('NEW_VTT');
-    await fetchSubtitle(VID, URL, runner);
+    await fetchSubtitle(VID, URL, 'en', runner);
     expect(await fs.readFile(subPath(VID), 'utf-8')).toBe('NEW_VTT');
     // 스킵 없이 새로 fetch했음을 보장(runner 실제 호출).
     expect(runner).toHaveBeenCalledTimes(1);
@@ -245,7 +245,7 @@ describe('fetchSubtitle', () => {
   // [예외]
   it('should throw Error and leave no subtitle.en.vtt when neither manual nor auto subs exist', async () => {
     const runner = noSubsRunner();
-    await expect(fetchSubtitle(VID, URL, runner)).rejects.toThrow();
+    await expect(fetchSubtitle(VID, URL, 'en', runner)).rejects.toThrow();
     expect(await fileExists(subPath(VID))).toBe(false);
     // 수동·자동 두 단계 모두 시도했음을 보장(폴백까지 호출).
     expect(runner).toHaveBeenCalledTimes(2);
@@ -253,7 +253,7 @@ describe('fetchSubtitle', () => {
 
   it('should include stderr tail in the error when both steps fail', async () => {
     const runner = noSubsRunner('ERROR: distinctive-sub-fail-zzz');
-    await expect(fetchSubtitle(VID, URL, runner)).rejects.toThrow(
+    await expect(fetchSubtitle(VID, URL, 'en', runner)).rejects.toThrow(
       /distinctive-sub-fail-zzz/,
     );
   });
@@ -280,7 +280,7 @@ describe('writeEpisodeMeta', () => {
       duration: 2078,
       thumbnail: 'https://img.youtube.com/vi/x/hq.jpg',
     });
-    await writeEpisodeMeta(VID, URL, runner);
+    await writeEpisodeMeta(VID, URL, 'en', runner);
     const meta = JSON.parse(await fs.readFile(metaPath(VID), 'utf-8'));
     expect(meta.id).toBe(VID);
     expect(meta.title).toBe('What Is the Optimal Way to Be Angry?');
@@ -292,7 +292,7 @@ describe('writeEpisodeMeta', () => {
 
   it('[경계] should fall back title/duration when JSON fields are missing', async () => {
     const runner = jsonRunner({});
-    await writeEpisodeMeta(VID, URL, runner);
+    await writeEpisodeMeta(VID, URL, 'en', runner);
     const meta = JSON.parse(await fs.readFile(metaPath(VID), 'utf-8'));
     expect(meta.title).toContain(VID);
     expect(meta.duration).toBe(0);
@@ -304,7 +304,7 @@ describe('writeEpisodeMeta', () => {
       stderr: 'boom',
       stdout: '',
     }));
-    await expect(writeEpisodeMeta(VID, URL, runner)).rejects.toThrow();
+    await expect(writeEpisodeMeta(VID, URL, 'en', runner)).rejects.toThrow();
     expect(await fileExists(metaPath(VID))).toBe(false);
   });
 });

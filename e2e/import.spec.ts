@@ -15,6 +15,11 @@ function state(partial: Partial<ImportState>): ImportState {
     status: 'downloading',
     progress: 0,
     currentStep: 'download',
+    // 실제 API는 접수 URL·언어를 모든 상태 쓰기에서 보존한다(#24·#124).
+    // transcriptUrl 부재는 자막 전용 모드로 해석되므로(#125) 대본 정합 목은 항상 포함한다.
+    youtubeUrl: YT,
+    transcriptUrl: TR,
+    language: 'en',
     updatedAt: new Date().toISOString(),
     ...partial,
   };

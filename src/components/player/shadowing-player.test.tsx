@@ -402,3 +402,113 @@ describe('ShadowingPlayer', () => {
     expect(screen.getByRole('button', { name: '재생' })).toBeInTheDocument();
   });
 });
+
+// #127: episode.language 파생 → ja 단어 사전 링크 배선
+describe('ShadowingPlayer (language wiring)', () => {
+  it('should derive language from episode.language and enable ja word links', () => {
+    const open = vi.spyOn(window, 'open').mockImplementation(() => null);
+    const jaEpisode: Episode = { ...EPISODE, language: 'ja' };
+    const jaSegments: Segment[] = [
+      {
+        id: 'cue-1',
+        start: 0,
+        end: 4,
+        speaker: 'SPEAKER',
+        text: '今日はいい天気ですね。',
+      },
+    ];
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={jaSegments} />,
+    );
+    const word = container.querySelector('[data-word]') as HTMLElement;
+    expect(word).not.toBeNull();
+    fireEvent.click(word);
+    expect(open).toHaveBeenCalledTimes(1);
+    expect(String(open.mock.calls[0][0])).toContain('ja.dict.naver.com');
+  });
+});
+
+// #128: 후리가나 토글 — ja에서만 노출, 기본 ON
+describe('ShadowingPlayer (furigana toggle)', () => {
+  const jaEpisode: Episode = { ...EPISODE, language: 'ja' };
+  const rubySegments: Segment[] = [
+    {
+      id: 'cue-1',
+      start: 0,
+      end: 4,
+      speaker: 'SPEAKER',
+      text: '今日は天気。',
+      ruby: [
+        { text: '今日', rt: 'きょう' },
+        { text: 'は' },
+        { text: '天気', rt: 'てんき' },
+        { text: '。' },
+      ],
+    },
+  ];
+
+  it('should show 후리가나 toggle only for ja episodes with default ON', () => {
+    const { container, unmount } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    const toggle = screen.getByRole('button', { name: /후리가나/ });
+    expect(toggle).toHaveAttribute('aria-pressed', 'true');
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+    unmount();
+
+    render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    expect(screen.queryByRole('button', { name: /후리가나/ })).toBeNull();
+  });
+
+  it('should hide all rt when toggle turned OFF and restore when ON', () => {
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    const toggle = screen.getByRole('button', { name: /후리가나/ });
+    fireEvent.click(toggle);
+    expect(container.querySelectorAll('rt')).toHaveLength(0);
+    fireEvent.click(toggle);
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+  });
+  // #128 AC2: 집중 모드(FocusPanel) 경로에서도 토글이 적용된다
+  it('should apply furigana toggle in focus mode as well', () => {
+    const { container } = render(
+      <ShadowingPlayer episode={jaEpisode} segments={rubySegments} />,
+    );
+    // 재생 틱으로 현재 세그먼트를 만든 뒤 집중 모드로 전환한다.
+    act(() => lastManager._time?.(1));
+    fireEvent.click(screen.getByRole('button', { name: '집중 모드' }));
+    expect(container.querySelectorAll('rt').length).toBeGreaterThan(0);
+    fireEvent.click(screen.getByRole('button', { name: /후리가나/ }));
+    expect(container.querySelectorAll('rt')).toHaveLength(0);
+  });
+  // #129: episode.language가 TutorChat까지 전달된다(튜터 요청 바디 language)
+  it('should pass episode language to TutorChat', async () => {
+    const fetchMock = vi.fn().mockResolvedValue({
+      ok: true,
+      body: { getReader: () => ({ read: async () => ({ done: true }) }) },
+    } as unknown as Response);
+    vi.stubGlobal('fetch', fetchMock);
+    const translated = rubySegments.map((seg) => ({
+      ...seg,
+      translation: '오늘은 날씨가 좋네요.',
+    }));
+    render(<ShadowingPlayer episode={jaEpisode} segments={translated} />);
+    // 재생 틱으로 활성 세그먼트를 만들어 컨텍스트(#120)가 주입되게 한다.
+    act(() => lastManager._time?.(1));
+
+    const input = screen.getByPlaceholderText(/메시지를 입력하세요/i);
+    fireEvent.change(input, { target: { value: '질문' } });
+    fireEvent.submit(input);
+
+    const [, init] = fetchMock.mock.calls[0] as [string, RequestInit];
+    const body = JSON.parse(init.body as string);
+    expect(body).toMatchObject({ language: 'ja' });
+    // ja 원문+번역 컨텍스트가 language와 동시에 전달된다(AC3 종단).
+    expect(body.context).toMatchObject({
+      text: '今日は天気。',
+      translation: '오늘은 날씨가 좋네요.',
+    });
+    vi.unstubAllGlobals();
+  });
+});
