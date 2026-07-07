@@ -1,6 +1,12 @@
 /** 에피소드 콘텐츠 언어. 부재 시 'en' 간주(기존 에피소드 하위호환). */
 export type LanguageCode = 'en' | 'ja';
 
+/** 루비 토큰 — 세그먼트 text 전체를 덮는 시퀀스 조각. 한자 조각만 rt(요미가나) 보유. */
+export interface RubyToken {
+  text: string;
+  rt?: string;
+}
+
 export interface Segment {
   id: string;
   start: number; // 초 단위 시작 시간
@@ -14,6 +20,8 @@ export interface Segment {
   wordStarts?: number[];
   /** 실제 첫 발화 단어 시각(초). 직접 클릭/이동 탐색 대상(경계 대신). 없으면 start 폴백. */
   audioStart?: number;
+  /** 후리가나 루비 시퀀스(#128). 렌더 시 join(text)===text 검증 실패면 무시. */
+  ruby?: RubyToken[];
 }
 
 export interface EpisodeMeta {
