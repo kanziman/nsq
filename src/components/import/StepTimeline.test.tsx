@@ -48,4 +48,18 @@ describe('StepTimeline', () => {
     expect(stateOf('대본')).toBe('done');
     expect(stateOf('정합')).toBe('failed');
   });
+
+  // #124: 자막 전용 모드의 currentStep 'segments'(미등록 단계)에도 크래시 없이 렌더.
+  // 모드별 단계 라벨 정비는 #125 범위 — 여기서는 회귀 방지만 고정한다.
+  it('should render without crashing when currentStep is an unmapped step (segments)', () => {
+    expect(() =>
+      render(
+        <StepTimeline status="aligning" currentStep="segments" progress={90} />,
+      ),
+    ).not.toThrow();
+    expect(screen.getByRole('progressbar')).toHaveAttribute(
+      'aria-valuenow',
+      '90',
+    );
+  });
 });

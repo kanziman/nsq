@@ -126,11 +126,12 @@ describe('POST /api/import', () => {
     }
   });
 
-  it('should return 400 when transcriptUrl is whitespace-only (treated as empty)', async () => {
+  // #124: transcriptUrl 선택화 — 공백은 부재 취급되어 자막 전용 모드로 접수된다.
+  it('should return 202 (subtitle-only) when transcriptUrl is whitespace-only (treated as absent)', async () => {
     const res = await POST(
       makeRequest({ ...VALID_BODY, transcriptUrl: '   ' }),
     );
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(202);
   });
 
   it("should bypass 409 and proceed when retryStep is present even though existing state is 'completed'", async () => {
@@ -151,9 +152,10 @@ describe('POST /api/import', () => {
     expect(mockSaveState).not.toHaveBeenCalled();
   });
 
-  it('should return 400 when transcriptUrl is an empty string', async () => {
+  // #124: transcriptUrl 선택화 — 빈 문자열은 부재 취급되어 자막 전용 모드로 접수된다.
+  it('should return 202 (subtitle-only) when transcriptUrl is an empty string', async () => {
     const res = await POST(makeRequest({ ...VALID_BODY, transcriptUrl: '' }));
-    expect(res.status).toBe(400);
+    expect(res.status).toBe(202);
   });
 
   it('should return 400 when youtubeUrl is missing or non-string', async () => {
@@ -165,11 +167,12 @@ describe('POST /api/import', () => {
     expect(nonString.status).toBe(400);
   });
 
-  it('should return 400 when transcriptUrl is missing or non-string', async () => {
+  // #124: 부재는 자막 전용 모드로 허용(202), 문자열이 아닌 값은 여전히 400.
+  it('should return 202 when transcriptUrl is missing and 400 when non-string', async () => {
     const missing = await POST(
       makeRequest({ youtubeUrl: VALID_BODY.youtubeUrl }),
     );
-    expect(missing.status).toBe(400);
+    expect(missing.status).toBe(202);
     const nonString = await POST(
       makeRequest({ ...VALID_BODY, transcriptUrl: 123 }),
     );

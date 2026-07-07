@@ -95,7 +95,11 @@ describe('runImportPipeline', () => {
   it('should call fetchMeta after a successful alignment (#74)', async () => {
     const fetchMeta = vi.fn().mockResolvedValue(undefined);
     await runImportPipeline(TEST_VIDEO_ID, URLS, makeSteps({ fetchMeta }));
-    expect(fetchMeta).toHaveBeenCalledWith(TEST_VIDEO_ID, URLS.youtubeUrl);
+    expect(fetchMeta).toHaveBeenCalledWith(
+      TEST_VIDEO_ID,
+      URLS.youtubeUrl,
+      'en',
+    );
   });
 
   it('should still complete when fetchMeta throws (best-effort, AC3 #74)', async () => {
