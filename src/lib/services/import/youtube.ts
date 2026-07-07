@@ -7,7 +7,7 @@
 import { spawn } from 'child_process';
 import fs from 'fs/promises';
 import path from 'path';
-import { EpisodeMeta } from '../../types';
+import { EpisodeMeta, LanguageCode } from '@/lib/types';
 import { transcodeToCbrInPlace } from './transcode';
 
 /** 외부 프로세스(yt-dlp) 실행 결과. */
@@ -122,6 +122,7 @@ export async function downloadAudio(
 export async function writeEpisodeMeta(
   videoId: string,
   youtubeUrl: string,
+  language: LanguageCode = 'en',
   runner: Runner = defaultRunner,
 ): Promise<void> {
   const outDir = path.join(EPISODES_DIR, videoId);
@@ -148,6 +149,7 @@ export async function writeEpisodeMeta(
     youtubeUrl,
     thumbnailUrl: info.thumbnail,
     addedAt: new Date().toISOString(),
+    language,
   };
   await fs.writeFile(
     path.join(outDir, 'meta.json'),
@@ -159,10 +161,11 @@ export async function writeEpisodeMeta(
 export async function fetchSubtitle(
   videoId: string,
   youtubeUrl: string,
+  lang: LanguageCode = 'en',
   runner: Runner = defaultRunner,
 ): Promise<void> {
   const outDir = path.join(EPISODES_DIR, videoId);
-  const outputPath = path.join(outDir, 'subtitle.en.vtt');
+  const outputPath = path.join(outDir, `subtitle.${lang}.vtt`);
   const outputTemplate = path.join(outDir, 'subtitle.%(ext)s');
   await fs.mkdir(outDir, { recursive: true });
   // 멱등 재생성 + 수동/자동 산출 판별 정확성을 위해 기존 파일 제거.
@@ -171,7 +174,7 @@ export async function fetchSubtitle(
   const command = resolveYtDlpCommand();
   const commonArgs = [
     '--sub-langs',
-    'en',
+    lang,
     '--sub-format',
     'vtt',
     '--convert-subs',

@@ -1,7 +1,7 @@
 /**
  * WebVTT 텍스트 → 단어 토큰(VttToken). 큐 구간을 단어 수로 균등 분배.
  */
-import { VttToken } from '@/lib/types';
+import { VttCue, VttToken } from '@/lib/types';
 
 // 큐 타이밍 라인: HH:MM:SS.mmm 또는 MM:SS.mmm (쉼표 소수점도 허용).
 const TIMING =
@@ -64,6 +64,44 @@ function parseYoutubeAutoCaptions(vtt: string): VttToken[] {
     start,
     end: i + 1 < entries.length ? entries[i + 1][0] : start + 0.5,
   }));
+}
+
+/**
+ * WebVTT → 큐 목록. 자동자막(롤링)은 활성 라인(인라인 태그 보유)만 취해 이월 중복을
+ * 제거하고, 인라인 태그는 공백 삽입 없이 제거한다(ja 무공백 보존). 빈 텍스트 큐는 스킵.
+ */
+export function parseVttCues(vtt: string): VttCue[] {
+  const rolling = hasInlineWordTimings(vtt);
+  const cues: VttCue[] = [];
+
+  for (const block of vtt.split(/\r?\n\r?\n/)) {
+    const lines = block.split(/\r?\n/);
+    const timingLine = lines.find((l) => TIMING.test(l));
+    if (!timingLine) continue;
+    const match = TIMING.exec(timingLine);
+    if (!match) continue;
+
+    const contentLines = lines.slice(lines.indexOf(timingLine) + 1);
+    // 롤링 자동자막: 활성 라인이 없는 블록은 이월 스냅샷이므로 통째로 건너뛴다.
+    const sourceLines = rolling
+      ? contentLines.filter((l) => INLINE_TAG.test(l))
+      : contentLines;
+    if (rolling && sourceLines.length === 0) continue;
+
+    const text = sourceLines
+      .join(rolling ? '' : ' ')
+      .replace(/<[^>]*>/g, '')
+      .trim();
+    if (!text) continue;
+
+    cues.push({
+      start: toSeconds(match[1]),
+      end: toSeconds(match[2]),
+      text,
+    });
+  }
+
+  return cues;
 }
 
 export function parseVtt(vtt: string): VttToken[] {

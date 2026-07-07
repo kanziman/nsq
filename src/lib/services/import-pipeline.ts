@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { ImportState, RetryStep } from '../types';
+import { ImportState, LanguageCode, RetryStep } from '@/lib/types';
 import { saveImportState } from './episodes';
 import {
   downloadAudio,
@@ -9,6 +9,7 @@ import {
 } from './import/youtube';
 import { fetchTranscript } from './import/transcript';
 import { alignTranscript } from './import/alignment';
+import { buildCueSegments } from './import/cue-segments';
 import { translate, createOpenRouterTranslator } from './import/translation';
 
 /**
@@ -19,16 +20,26 @@ import { translate, createOpenRouterTranslator } from './import/translation';
 export interface PipelineSteps {
   /** download: youtubeUrl → audio.mp3 */
   downloadAudio(videoId: string, youtubeUrl: string): Promise<void>;
-  /** subtitle: youtubeUrl → subtitle.en.vtt */
-  fetchSubtitle(videoId: string, youtubeUrl: string): Promise<void>;
+  /** subtitle: youtubeUrl → subtitle.{lang}.vtt */
+  fetchSubtitle(
+    videoId: string,
+    youtubeUrl: string,
+    lang: LanguageCode,
+  ): Promise<void>;
   /** transcript: transcriptUrl → transcript.txt */
   fetchTranscript(videoId: string, transcriptUrl: string): Promise<void>;
   /** alignment: subtitle.en.vtt + transcript.txt → segments.json, matchRate 반환 */
   alignTranscript(videoId: string): Promise<{ matchRate: number }>;
-  /** translation: segments.json의 영어 text → 한국어 translation 주입 (best-effort) */
+  /** segments(자막 전용 모드): subtitle.{lang}.vtt → 큐 단위 segments.json */
+  buildCueSegments?(videoId: string, lang: LanguageCode): Promise<void>;
+  /** translation: segments.json의 text → 한국어 translation 주입 (best-effort) */
   translate?(videoId: string): Promise<void>;
   /** meta: youtubeUrl → meta.json (best-effort, 실패해도 임포트 완료 유지) */
-  fetchMeta?(videoId: string, youtubeUrl: string): Promise<void>;
+  fetchMeta?(
+    videoId: string,
+    youtubeUrl: string,
+    language: LanguageCode,
+  ): Promise<void>;
 }
 
 // matchRate가 이 값 이상이면 정합 성공 (spec-fixed §5 / CLAUDE.md 정책)
@@ -87,6 +98,7 @@ const defaultSteps: PipelineSteps = {
   fetchSubtitle,
   fetchTranscript,
   alignTranscript,
+  buildCueSegments,
   translate: translateStep,
   fetchMeta: writeEpisodeMeta,
 };
@@ -98,7 +110,11 @@ async function writeState(
   progress: number,
   error?: string,
   matchRate?: number,
-  urls?: { youtubeUrl: string; transcriptUrl: string },
+  urls?: {
+    youtubeUrl: string;
+    transcriptUrl?: string;
+    language: LanguageCode;
+  },
 ): Promise<void> {
   const state: ImportState = {
     videoId,
@@ -109,10 +125,14 @@ async function writeState(
   };
   if (error !== undefined) state.error = error;
   if (matchRate !== undefined) state.matchRate = matchRate;
-  // 재시도 컨텍스트(#24): 모든 상태 쓰기에서 접수 URL을 보존해 failed에서도 재접수 가능.
+  // 재시도 컨텍스트(#24·#124): 모든 상태 쓰기에서 접수 URL·language를 보존해
+  // failed에서도 재접수 가능.
   if (urls) {
     state.youtubeUrl = urls.youtubeUrl;
-    state.transcriptUrl = urls.transcriptUrl;
+    if (urls.transcriptUrl !== undefined) {
+      state.transcriptUrl = urls.transcriptUrl;
+    }
+    state.language = urls.language;
   }
   await saveImportState(videoId, state);
 }
@@ -127,15 +147,26 @@ async function writeState(
  */
 export async function runImportPipeline(
   videoId: string,
-  urls: { youtubeUrl: string; transcriptUrl: string; retryStep?: RetryStep },
+  urls: {
+    youtubeUrl: string;
+    transcriptUrl?: string;
+    language?: LanguageCode;
+    retryStep?: RetryStep;
+  },
   steps: PipelineSteps = defaultSteps,
 ): Promise<void> {
-  const { youtubeUrl, transcriptUrl, retryStep } = urls;
+  const { youtubeUrl, retryStep } = urls;
+  const language = urls.language ?? 'en';
+  // 공백/빈 문자열 transcriptUrl은 부재로 취급 → 자막 전용(subtitle-only) 모드 (#124)
+  const transcriptUrl = urls.transcriptUrl?.trim()
+    ? urls.transcriptUrl
+    : undefined;
+  const subtitleOnly = transcriptUrl === undefined;
   const plan = retryStep ?? 'all';
   let currentStep = FIRST_STEP[plan];
   let progress = 0;
 
-  // 모든 상태 쓰기에서 접수 URL을 보존하는 로컬 래퍼 (#24)
+  // 모든 상태 쓰기에서 접수 URL·language를 보존하는 로컬 래퍼 (#24·#124)
   const write = (
     status: ImportState['status'],
     step: string,
@@ -146,6 +177,7 @@ export async function runImportPipeline(
     writeState(videoId, status, step, prog, error, matchRate, {
       youtubeUrl,
       transcriptUrl,
+      language,
     });
 
   try {
@@ -163,11 +195,13 @@ export async function runImportPipeline(
 
     // retryStep(plan)에 따라 실행할 단계 결정.
     // translation 재시도는 정합 산출물(segments.json)을 재사용하므로 alignment까지 건너뛰고
-    // 번역만 실행한다. 그 외 계획은 alignment를 항상 수행한다.
+    // 번역만 실행한다. 자막 전용 모드는 transcript·alignment 대신 큐 세그먼트를 생성한다(#124).
     const runDownload = plan === 'all';
     const runSubtitle = runDownload || plan === 'subtitles';
-    const runTranscript = runDownload || plan === 'transcript';
-    const runAlignment = plan !== 'translation';
+    const runTranscript =
+      (runDownload || plan === 'transcript') && !subtitleOnly;
+    const runAlignment = plan !== 'translation' && !subtitleOnly;
+    const runCueSegments = plan !== 'translation' && subtitleOnly;
 
     if (runDownload) {
       currentStep = 'download';
@@ -180,10 +214,10 @@ export async function runImportPipeline(
       currentStep = 'subtitle';
       progress = 40;
       await write('processing_subtitles', currentStep, progress);
-      await steps.fetchSubtitle(videoId, youtubeUrl);
+      await steps.fetchSubtitle(videoId, youtubeUrl, language);
     }
 
-    if (runTranscript) {
+    if (runTranscript && transcriptUrl) {
       currentStep = 'transcript';
       progress = 70;
       await write('processing_transcript', currentStep, progress);
@@ -210,6 +244,15 @@ export async function runImportPipeline(
       }
     }
 
+    // 자막 전용 모드: 큐 단위 세그먼트 생성(필수 단계 — 실패 시 failed).
+    // 상태 슬롯은 'aligning'을 재사용한다(모드별 모니터 라벨 정비는 #125).
+    if (runCueSegments) {
+      currentStep = 'segments';
+      progress = 90;
+      await write('aligning', currentStep, progress);
+      await steps.buildCueSegments?.(videoId, language);
+    }
+
     // 번역(한국어 translation 주입)은 best-effort — 실패해도 임포트 완료를 막지 않는다.
     // segments.json을 입력으로 하며, translation 재시도 시엔 이 단계만 실행된다.
     currentStep = 'translation';
@@ -223,7 +266,7 @@ export async function runImportPipeline(
 
     // 메타(제목·재생시간·썸네일)는 best-effort — 실패해도 임포트 완료를 막지 않는다 (#74 AC3).
     try {
-      await steps.fetchMeta?.(videoId, youtubeUrl);
+      await steps.fetchMeta?.(videoId, youtubeUrl, language);
     } catch {
       // 폴백: meta.json 없이도 episodes.ts가 status 기반으로 안전 처리.
     }
