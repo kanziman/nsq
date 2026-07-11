@@ -3,7 +3,7 @@
 import { Play, Pause, SkipBack, SkipForward, Repeat } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { formatTime } from '@/lib/utils/time';
-import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
+import SpeedSlider from './SpeedSlider';
 
 interface AudioControlsProps {
   isPlaying: boolean;
@@ -118,29 +118,10 @@ export default function AudioControls({
             )}
           </Button>
 
-          <div
-            className="flex items-center gap-[4px] bg-surface-dark-soft p-[4px] rounded-md"
-            role="group"
-            aria-label="재생 속도"
-          >
-            {PLAYBACK_RATE_PRESETS.map((rate) => (
-              <Button
-                key={rate}
-                variant={rate === playbackRate ? 'primary' : 'secondaryOnDark'}
-                size="sm"
-                className={`h-7 px-2.5 text-xs rounded-sm ${
-                  rate === playbackRate
-                    ? ''
-                    : 'bg-transparent hover:bg-surface-dark-elevated text-on-dark-soft hover:text-on-dark'
-                }`}
-                aria-label={`재생 속도 ${rate}x`}
-                aria-pressed={rate === playbackRate}
-                onClick={() => onSetPlaybackRate(rate)}
-              >
-                {rate}x
-              </Button>
-            ))}
-          </div>
+          <SpeedSlider
+            playbackRate={playbackRate}
+            onSetPlaybackRate={onSetPlaybackRate}
+          />
         </div>
       </div>
     </div>

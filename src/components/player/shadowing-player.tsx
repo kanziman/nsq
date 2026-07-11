@@ -9,21 +9,20 @@ import ScriptView from './ScriptView';
 import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
 import { TutorChat } from '@/components/tutor/TutorChat';
-import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
 import { Languages, Sparkles } from 'lucide-react';
 
-/** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
+import { MIN_PLAYBACK_RATE, MAX_PLAYBACK_RATE } from '@/lib/utils/audio';
+
+/** 현재 속도에서 0.05 스텝 단위로 증감한 속도를 반환한다. */
 function stepPlaybackRate(current: number, dir: 1 | -1): number {
-  const base = PLAYBACK_RATE_PRESETS.indexOf(
-    current as (typeof PLAYBACK_RATE_PRESETS)[number],
+  const step = 0.05;
+  const nextRate = current + dir * step;
+  return Number(
+    Math.min(MAX_PLAYBACK_RATE, Math.max(MIN_PLAYBACK_RATE, nextRate)).toFixed(
+      2,
+    ),
   );
-  const from = base === -1 ? PLAYBACK_RATE_PRESETS.indexOf(1) : base;
-  const nextIdx = Math.min(
-    PLAYBACK_RATE_PRESETS.length - 1,
-    Math.max(0, from + dir),
-  );
-  return PLAYBACK_RATE_PRESETS[nextIdx];
 }
 
 export interface ShadowingPlayerProps {
