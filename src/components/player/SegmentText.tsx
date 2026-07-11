@@ -25,6 +25,18 @@ interface SegmentTextProps {
   showRuby?: boolean;
 }
 
+// 현재 단어 인덱스 판정: wordStarts(실측 VTT 발화 시각)가 단어 수와 일치하면 그것으로,
+// 없거나 길이가 어긋나면 [start, end) 균등분할로 폴백한다(ja·en 공통 계약).
+function resolveWordIndex(
+  segment: Segment,
+  wordCount: number,
+  currentTime: number,
+): number {
+  return segment.wordStarts && segment.wordStarts.length === wordCount
+    ? currentWordIndexFromStarts(segment.wordStarts, currentTime)
+    : findCurrentWordIndex(wordCount, segment.start, segment.end, currentTime);
+}
+
 // ja 단어 토큰 스팬. 클릭 시 네이버 일본어사전 새 탭(세그먼트 클릭 탐색과 분리).
 // 루비 조각(#128)은 스팬 내부에서 <ruby><rt>로 렌더된다.
 function JaWordSpan({
@@ -82,19 +94,15 @@ export function SegmentText({
   );
 
   if (composed) {
-    // 단어 서수 목록(하이라이트는 단어 수 기준 균등분할 — B9, wordStarts 없음 전제).
+    // 단어 서수 목록. wordStarts(실측 발화 시각)가 서수 수와 일치하면 그것으로,
+    // 없거나 길이가 어긋나면 단어 수 기준 균등분할 폴백(B9).
     const wordOrdinalByIndex = new Map<number, number>();
     composed.forEach((w, i) => {
       if (w.isWord) wordOrdinalByIndex.set(i, wordOrdinalByIndex.size);
     });
     const currentOrdinal =
       highlightWords && currentTime != null && wordOrdinalByIndex.size > 0
-        ? findCurrentWordIndex(
-            wordOrdinalByIndex.size,
-            segment.start,
-            segment.end,
-            currentTime,
-          )
+        ? resolveWordIndex(segment, wordOrdinalByIndex.size, currentTime)
         : -1;
 
     return (
@@ -122,15 +130,7 @@ export function SegmentText({
   }
 
   // wordStarts(실제 VTT 발화 시각)가 있으면 그것으로, 없으면 균등분할로 현재 단어 판정.
-  const currentIdx =
-    segment.wordStarts && segment.wordStarts.length === words.length
-      ? currentWordIndexFromStarts(segment.wordStarts, currentTime)
-      : findCurrentWordIndex(
-          words.length,
-          segment.start,
-          segment.end,
-          currentTime,
-        );
+  const currentIdx = resolveWordIndex(segment, words.length, currentTime);
   return (
     <p className={className}>
       {words.map((w, j) => {

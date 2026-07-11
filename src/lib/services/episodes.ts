@@ -1,8 +1,9 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { Episode, Segment, ImportState } from '../types';
+import { Episode, Segment, ImportState, LanguageCode } from '../types';
 import { parseVtt } from '../utils/vtt-parser';
-import { computeWordStarts, splitWords } from '../utils/words';
+import { computeWordStartsAligned, splitWords } from '../utils/words';
+import { tokenizeJa } from '../utils/tokenize';
 
 const BASE_DIR = path.join(process.cwd(), '.shadowing', 'episodes');
 
@@ -115,24 +116,42 @@ export async function getEpisodeSegments(id: string): Promise<Segment[]> {
   const segments = await readJson<Segment[]>(segmentsPath);
   if (!segments) return [];
 
-  // subtitle.en.vtt가 있으면 단어별 실제 발화 시각(wordStarts)을 부착한다(표시가 아닌 강조 타이밍 전용).
-  // 부재/파싱 실패/구간 토큰 없음 시 부착하지 않고 균등분할 폴백에 맡긴다.
+  // subtitle.{language}.vtt가 있으면 단어별 실제 발화 시각(wordStarts)을 부착한다
+  // (표시가 아닌 강조 타이밍 전용). 부재/파싱 실패/구간 토큰 없음 시 부착하지 않고
+  // 균등분할 폴백에 맡긴다. 언어는 meta.language(부재 시 'en')로 결정한다.
   try {
-    const vttPath = path.join(BASE_DIR, id, 'subtitle.en.vtt');
+    const meta = await readJson<{ language?: LanguageCode }>(
+      path.join(BASE_DIR, id, 'meta.json'),
+    );
+    const language: LanguageCode = meta?.language ?? 'en';
+    const vttPath = path.join(BASE_DIR, id, `subtitle.${language}.vtt`);
     if (await exists(vttPath)) {
       const vtt = await fs.readFile(vttPath, 'utf-8');
       const tokens = parseVtt(vtt);
       return segments.map((seg) => {
-        const times = tokens
-          .filter((t) => t.start >= seg.start && t.start < seg.end)
-          .map((t) => t.start);
-        if (times.length === 0) return seg;
-        const wordCount = splitWords(seg.text).length;
+        const winTokens = tokens.filter(
+          (t) => t.start >= seg.start && t.start < seg.end,
+        );
+        if (winTokens.length === 0) return seg;
+        // 대본 단어 표면형. ja는 공백이 없어 Intl.Segmenter 단어 토큰 기준(SegmentText
+        // ja 렌더 서수 수와 일치). 표면형을 넘겨 VTT 토큰과 앵커 정렬한다(#139).
+        const officialWords =
+          language === 'ja'
+            ? tokenizeJa(seg.text)
+                .filter((t) => t.isWord)
+                .map((t) => t.text)
+            : splitWords(seg.text);
+        if (officialWords.length === 0) return seg;
         return {
           ...seg,
-          wordStarts: computeWordStarts(wordCount, seg.start, seg.end, times),
+          wordStarts: computeWordStartsAligned(
+            officialWords,
+            seg.start,
+            seg.end,
+            winTokens,
+          ),
           // 실제 첫 발화 단어 시각 — 직접 클릭 탐색이 경계 대신 이 지점으로 향한다.
-          audioStart: times[0],
+          audioStart: winTokens[0].start,
         };
       });
     }
