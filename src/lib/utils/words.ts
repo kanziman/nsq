@@ -77,3 +77,111 @@ export function currentWordIndexFromStarts(
   }
   return idx;
 }
+
+/**
+ * 대본 단어와 VTT 토큰의 표면형 최장 공통 부분수열(LCS DP)을 구해, 정확 일치 토큰을
+ * 앵커 `(wordIdx, time)`로 오름차순 추출한다. 반복 공통 토큰(の·は)도 in-order로 일관 매칭.
+ */
+function findSurfaceAnchors(
+  officialWords: string[],
+  vttTokens: { word: string; start: number }[],
+): { wordIdx: number; time: number }[] {
+  const n = officialWords.length;
+  const m = vttTokens.length;
+  const anchors: { wordIdx: number; time: number }[] = [];
+  if (n === 0 || m === 0) return anchors;
+
+  const dp: number[][] = Array.from({ length: n + 1 }, () =>
+    new Array<number>(m + 1).fill(0),
+  );
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      dp[i][j] =
+        officialWords[i] === vttTokens[j].word
+          ? dp[i + 1][j + 1] + 1
+          : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+  let i = 0;
+  let j = 0;
+  while (i < n && j < m) {
+    if (officialWords[i] === vttTokens[j].word) {
+      anchors.push({ wordIdx: i, time: vttTokens[j].start });
+      i++;
+      j++;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+  return anchors;
+}
+
+/**
+ * (#139) 대본 단어와 VTT 토큰의 표면형을 앵커로 정렬해 각 대본 단어의 시작 시각을 만든다.
+ * LCS(경량 DP)로 정확 일치 토큰을 앵커로 잡고, 앵커 사이/전/후 단어는 인접 앵커(및 경계
+ * start/end) 사이 인덱스 비례로 선형 보간한다. 앵커가 하나도 없으면 위치-비례(computeWordStarts)
+ * 폴백. 자동자막(ASR) 오인식·토큰 개수 발산에 강건하다. word[0]은 세그먼트 시작에 앵커한다.
+ */
+export function computeWordStartsAligned(
+  officialWords: string[],
+  start: number,
+  end: number,
+  vttTokens: { word: string; start: number }[],
+): number[] {
+  const n = officialWords.length;
+  if (n === 0) return [];
+
+  const anchors = findSurfaceAnchors(officialWords, vttTokens);
+
+  // 앵커가 없으면 위치-비례로 폴백(기존 계약).
+  if (anchors.length === 0) {
+    return computeWordStarts(
+      n,
+      start,
+      end,
+      vttTokens.map((t) => t.start),
+    );
+  }
+
+  const starts = new Array<number>(n);
+  // [loIdx, hiIdx] 구간을 [loTime, hiTime]으로 인덱스 비례 채운다(양 끝 포함).
+  const fill = (
+    loIdx: number,
+    hiIdx: number,
+    loTime: number,
+    hiTime: number,
+  ) => {
+    const span = hiIdx - loIdx;
+    for (let k = loIdx; k <= hiIdx; k++) {
+      starts[k] =
+        span === 0 ? loTime : loTime + ((hiTime - loTime) * (k - loIdx)) / span;
+    }
+  };
+
+  // 첫 앵커 전: start → 첫 앵커.
+  fill(0, anchors[0].wordIdx, start, anchors[0].time);
+  // 앵커 사이.
+  for (let a = 0; a < anchors.length - 1; a++) {
+    fill(
+      anchors[a].wordIdx,
+      anchors[a + 1].wordIdx,
+      anchors[a].time,
+      anchors[a + 1].time,
+    );
+  }
+  // 마지막 앵커 후: 가상 종점 end(인덱스 n)까지 비례. 마지막 단어가 end에 닿지 않게 한다.
+  const last = anchors[anchors.length - 1];
+  const tailSpan = n - last.wordIdx;
+  for (let k = last.wordIdx; k < n; k++) {
+    starts[k] =
+      tailSpan === 0
+        ? last.time
+        : last.time + ((end - last.time) * (k - last.wordIdx)) / tailSpan;
+  }
+
+  // 첫 단어는 세그먼트 시작에 앵커(첫 강조 사각 제거 — 기존 계약 유지).
+  starts[0] = start;
+  return starts;
+}
