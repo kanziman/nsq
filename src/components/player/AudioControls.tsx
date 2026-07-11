@@ -4,6 +4,7 @@ import { Play, Pause, SkipBack, SkipForward, Repeat } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { formatTime } from '@/lib/utils/time';
 import SpeedSlider from './SpeedSlider';
+import AudioWaveform from './AudioWaveform';
 
 interface AudioControlsProps {
   isPlaying: boolean;
@@ -19,6 +20,9 @@ interface AudioControlsProps {
   canLoop: boolean;
   playbackRate: number;
   onSetPlaybackRate: (rate: number) => void;
+  waveform?: number[];
+  segmentStart?: number;
+  segmentEnd?: number;
 }
 
 export default function AudioControls({
@@ -35,6 +39,9 @@ export default function AudioControls({
   canLoop,
   playbackRate,
   onSetPlaybackRate,
+  waveform = [],
+  segmentStart = 0,
+  segmentEnd = 0,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex flex-col gap-[24px]">
@@ -56,6 +63,17 @@ export default function AudioControls({
         <span className="font-mono text-xs text-on-dark-soft min-w-[36px]">
           {formatTime(duration)}
         </span>
+      </div>
+
+      {/* 1.5단: 오디오 파형 (세그먼트 파형) */}
+      <div className="w-full">
+        <AudioWaveform
+          waveform={waveform}
+          currentTime={currentTime}
+          segmentStart={segmentStart}
+          segmentEnd={segmentEnd}
+          onSeek={onSeek}
+        />
       </div>
 
       {/* 2단: 플레이어 제어 버튼부 (xxl: 48px 이상의 물리 여백 리듬감 확보를 위해 mt-md 추가) */}
