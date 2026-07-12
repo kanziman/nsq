@@ -25,10 +25,19 @@ export type SentenceBuilder = (
 export interface BuildSentencesDeps {
   builder: SentenceBuilder;
   batchSize?: number; // 기본 SENTENCE_BATCH_SIZE
+  minChunk?: number; // 기본 MIN_MERGE_CHUNK — 적응 분할 하한
 }
 
-// 한 번의 LLM 호출로 묶는 큐 수(spec-fixed B5).
-export const SENTENCE_BATCH_SIZE = 60;
+// 한 번의 LLM 호출로 묶는 큐 수. 카운트 오류의 폭발 반경을 줄이려 축소했다(#143, was 60).
+export const SENTENCE_BATCH_SIZE = 20;
+
+// 파티션 불일치 시 이 크기 이하로는 더 쪼개지 않고 원본 큐를 유지한다(#143).
+export const MIN_MERGE_CHUNK = 5;
+
+// 재병합 대상(원본 자동자막 큐) 판별. 이미 병합된 sent-*는 재시도 시 그대로 통과시킨다.
+function isRawCue(seg: Segment): boolean {
+  return typeof seg.id === 'string' && seg.id.startsWith('cue-');
+}
 
 // 그룹 목록이 배치를 정확히 파티션하는지(합·양의 정수·비어있지 않은 문장) 검증.
 function isValidPartition(groups: SentenceGroup[], batchLen: number): boolean {
@@ -42,71 +51,129 @@ function isValidPartition(groups: SentenceGroup[], batchLen: number): boolean {
   return sum === batchLen;
 }
 
+// 유효 파티션 그룹을 큐 시각에 매핑해 문장 세그먼트로 만든다. id는 빈 문자열('')로 두고
+// 최종 renumber에서 sent-N을 부여한다(재번호 대상 표식).
+function groupsToSegments(groups: SentenceGroup[], cues: Segment[]): Segment[] {
+  const segs: Segment[] = [];
+  let offset = 0;
+  for (const group of groups) {
+    const first = cues[offset];
+    const last = cues[offset + group.cueCount - 1];
+    segs.push({
+      id: '',
+      start: first.start,
+      end: last.end,
+      speaker: first.speaker,
+      text: group.text,
+    });
+    offset += group.cueCount;
+  }
+  return segs;
+}
+
+/**
+ * 큐 청크를 적응적으로 병합한다(#143). builder 결과가 유효 파티션이면 문장으로 매핑하고,
+ * 파티션 불일치면 절반으로 분할해 재귀한다(왼쪽 먼저 → 오른쪽은 왼쪽 마지막 문장을 hint로).
+ * minChunk 이하에서도 불일치면 원본 큐를 유지한다. builder throw(API 오류)는 분할해도
+ * 소용없으므로 원본 큐 유지. ⇒ 불일치 격리 범위가 배치 전체가 아니라 ≤minChunk로 축소된다.
+ */
+async function mergeChunk(
+  cues: Segment[],
+  builder: SentenceBuilder,
+  contextHint: string | undefined,
+  minChunk: number,
+): Promise<Segment[]> {
+  if (cues.length === 0) return [];
+  try {
+    const groups = await builder(cues, contextHint);
+    if (isValidPartition(groups, cues.length)) {
+      return groupsToSegments(groups, cues);
+    }
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    console.warn(
+      `sentence-builder: chunk(${cues.length}) failed (${message}), kept cues`,
+    );
+    return cues;
+  }
+  // 파티션 불일치: 하한 이하면 원본 유지, 아니면 절반 분할 재귀.
+  if (cues.length <= minChunk) {
+    console.warn(
+      `sentence-builder: chunk(${cues.length}) invalid partition at floor, kept cues`,
+    );
+    return cues;
+  }
+  const mid = Math.floor(cues.length / 2);
+  const left = await mergeChunk(
+    cues.slice(0, mid),
+    builder,
+    contextHint,
+    minChunk,
+  );
+  const hint = left.length ? left[left.length - 1].text : contextHint;
+  const right = await mergeChunk(cues.slice(mid), builder, hint, minChunk);
+  return [...left, ...right];
+}
+
+// 문장 세그먼트(비-cue)에 sent-N을 순차 부여한다. 원본 큐(cue-*)는 id를 보존한다.
+function renumber(segs: Segment[]): Segment[] {
+  let n = 0;
+  return segs.map((s) => (isRawCue(s) ? s : { ...s, id: `sent-${(n += 1)}` }));
+}
+
 export async function buildSentences(
   videoId: string,
   deps: BuildSentencesDeps,
 ): Promise<void> {
-  const { builder, batchSize = SENTENCE_BATCH_SIZE } = deps;
+  const {
+    builder,
+    batchSize = SENTENCE_BATCH_SIZE,
+    minChunk = MIN_MERGE_CHUNK,
+  } = deps;
   const segPath = path.join(EPISODES_DIR, videoId, 'segments.json');
 
   const raw = await fs.readFile(segPath, 'utf-8');
-  const cues = JSON.parse(raw) as Segment[];
+  const entries = JSON.parse(raw) as Segment[];
 
   const out: Segment[] = [];
-  let sentNo = 0;
-  let mergedCount = 0;
   let lastSentence: string | undefined;
-  const batchCount = Math.ceil(cues.length / batchSize);
+  let cueTotal = 0;
 
-  for (let i = 0; i < cues.length; i += batchSize) {
-    const batchNo = Math.floor(i / batchSize) + 1;
-    const batch = cues.slice(i, i + batchSize);
-    try {
-      const groups = await builder(batch, lastSentence);
-      // 파티션 불일치는 비결정성 방어로 그 배치 전체를 원본 큐로 유지한다.
-      if (!isValidPartition(groups, batch.length)) {
-        console.warn(
-          `sentence-builder: batch ${batchNo}/${batchCount} invalid partition, kept cues`,
-        );
-        out.push(...batch);
-        continue;
-      }
-      let offset = 0;
-      for (const group of groups) {
-        sentNo += 1;
-        const first = batch[offset];
-        const last = batch[offset + group.cueCount - 1];
-        out.push({
-          id: `sent-${sentNo}`,
-          start: first.start,
-          end: last.end,
-          speaker: first.speaker,
-          text: group.text,
-        });
-        offset += group.cueCount;
-      }
-      lastSentence = groups[groups.length - 1].text;
-      mergedCount += batch.length;
-      // 증분 저장: 배치 성공 즉시 (완료분 + 남은 원본 큐)를 반영해 중간 중단에도 보존.
-      await fs.writeFile(
-        segPath,
-        JSON.stringify([...out, ...cues.slice(i + batchSize)], null, 2),
-        'utf-8',
-      );
-    } catch (err) {
-      // 배치 실패 격리: 이 배치만 원본 큐로 두고 계속 진행(best-effort).
-      const message = err instanceof Error ? err.message : String(err);
-      console.warn(
-        `sentence-builder: batch ${batchNo}/${batchCount} failed (${message}), kept cues`,
-      );
-      out.push(...batch);
+  let i = 0;
+  while (i < entries.length) {
+    // 이미 병합된 sent-* 등은 그대로 통과(재시도 시 보존, #143 AC3).
+    if (!isRawCue(entries[i])) {
+      out.push(entries[i]);
+      lastSentence = entries[i].text;
+      i += 1;
       continue;
     }
+    // 연속한 cue-* 런을 모아 batchSize 청크로 적응 병합.
+    let j = i;
+    while (j < entries.length && isRawCue(entries[j])) j += 1;
+    const run = entries.slice(i, j);
+    cueTotal += run.length;
+    for (let k = 0; k < run.length; k += batchSize) {
+      const chunk = run.slice(k, k + batchSize);
+      const merged = await mergeChunk(chunk, builder, lastSentence, minChunk);
+      out.push(...merged);
+      if (merged.length) lastSentence = merged[merged.length - 1].text;
+      // 증분 저장: (완료분 + 런 잔여 + 남은 원본 항목)을 반영해 중간 중단에도 보존.
+      const remaining = [...run.slice(k + batchSize), ...entries.slice(j)];
+      await fs.writeFile(
+        segPath,
+        JSON.stringify(renumber([...out, ...remaining]), null, 2),
+        'utf-8',
+      );
+    }
+    i = j;
   }
 
-  await fs.writeFile(segPath, JSON.stringify(out, null, 2), 'utf-8');
+  const final = renumber(out);
+  await fs.writeFile(segPath, JSON.stringify(final, null, 2), 'utf-8');
+  const sentCount = final.filter((s) => !isRawCue(s)).length;
   console.log(
-    `sentence-builder: ${mergedCount}/${cues.length} cues merged into ${sentNo} sentences for ${videoId}`,
+    `sentence-builder: ${cueTotal} cues → ${sentCount} sentences for ${videoId}`,
   );
 }
 
