@@ -119,6 +119,31 @@ function findSurfaceAnchors(
 }
 
 /**
+ * (#142) 선두 붕괴 제거: starts[0]===start이고 그 뒤로 값이 start와 같은 선두 런이
+ * 이어지면(자동자막 선두 단어에 실측 토큰이 없어 첫 앵커 시각이 start와 겹치는 경우),
+ * 런의 단어들을 (start, hiTime) 사이로 순증 재배치한다. hiTime은 런 다음의 첫 구별 시각,
+ * 없으면 end. 이로써 진입 시점(t≈start)에 currentWordIndexFromStarts가 0을 반환한다.
+ */
+function decollapseLeadingRun(
+  starts: number[],
+  start: number,
+  end: number,
+): number[] {
+  const n = starts.length;
+  // start와 값이 같은 최대 선두 런의 마지막 인덱스 k를 찾는다.
+  let k = 0;
+  while (k + 1 < n && starts[k + 1] === start) k += 1;
+  if (k === 0) return starts; // 붕괴 없음.
+  // 런 다음의 첫 구별 시각(없으면 end)을 상한으로 삼는다.
+  const hiTime = k + 1 < n ? starts[k + 1] : end;
+  // 런 단어 1..k를 (start, hiTime)로 인덱스 비례 순증 배치(끝점 미포함, last<hiTime).
+  for (let i = 1; i <= k; i += 1) {
+    starts[i] = start + ((hiTime - start) * i) / (k + 1);
+  }
+  return starts;
+}
+
+/**
  * (#139) 대본 단어와 VTT 토큰의 표면형을 앵커로 정렬해 각 대본 단어의 시작 시각을 만든다.
  * LCS(경량 DP)로 정확 일치 토큰을 앵커로 잡고, 앵커 사이/전/후 단어는 인접 앵커(및 경계
  * start/end) 사이 인덱스 비례로 선형 보간한다. 앵커가 하나도 없으면 위치-비례(computeWordStarts)
@@ -183,5 +208,6 @@ export function computeWordStartsAligned(
 
   // 첫 단어는 세그먼트 시작에 앵커(첫 강조 사각 제거 — 기존 계약 유지).
   starts[0] = start;
-  return starts;
+  // 선두 무타임스탬프 단어가 start로 붕괴한 경우 순증 재배치(#142).
+  return decollapseLeadingRun(starts, start, end);
 }
