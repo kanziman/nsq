@@ -60,6 +60,7 @@ export default function AudioWaveform({
 
     // 곡선 경로 생성 (sign: 1 = 위, -1 = 아래)
     function buildCurvePath(pts: { x: number; y: number }[], sign: number) {
+      if (!ctx) return;
       const amplitude = (midY - 4) * sign;
       ctx.moveTo(pts[0].x, midY - pts[0].y * amplitude);
       for (let i = 1; i < pts.length; i++) {
