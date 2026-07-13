@@ -3,7 +3,8 @@
 import { Play, Pause, SkipBack, SkipForward, Repeat } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { formatTime } from '@/lib/utils/time';
-import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
+import SpeedSlider from './SpeedSlider';
+import AudioWaveform from './AudioWaveform';
 
 interface AudioControlsProps {
   isPlaying: boolean;
@@ -19,6 +20,9 @@ interface AudioControlsProps {
   canLoop: boolean;
   playbackRate: number;
   onSetPlaybackRate: (rate: number) => void;
+  waveform?: number[];
+  segmentStart?: number;
+  segmentEnd?: number;
 }
 
 export default function AudioControls({
@@ -35,6 +39,9 @@ export default function AudioControls({
   canLoop,
   playbackRate,
   onSetPlaybackRate,
+  waveform = [],
+  segmentStart = 0,
+  segmentEnd = 0,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex flex-col gap-[24px]">
@@ -56,6 +63,17 @@ export default function AudioControls({
         <span className="font-mono text-xs text-on-dark-soft min-w-[36px]">
           {formatTime(duration)}
         </span>
+      </div>
+
+      {/* 1.5단: 오디오 파형 (세그먼트 파형) */}
+      <div className="w-full">
+        <AudioWaveform
+          waveform={waveform}
+          currentTime={currentTime}
+          segmentStart={segmentStart}
+          segmentEnd={segmentEnd}
+          onSeek={onSeek}
+        />
       </div>
 
       {/* 2단: 플레이어 제어 버튼부 (xxl: 48px 이상의 물리 여백 리듬감 확보를 위해 mt-md 추가) */}
@@ -118,29 +136,10 @@ export default function AudioControls({
             )}
           </Button>
 
-          <div
-            className="flex items-center gap-[4px] bg-surface-dark-soft p-[4px] rounded-md"
-            role="group"
-            aria-label="재생 속도"
-          >
-            {PLAYBACK_RATE_PRESETS.map((rate) => (
-              <Button
-                key={rate}
-                variant={rate === playbackRate ? 'primary' : 'secondaryOnDark'}
-                size="sm"
-                className={`h-7 px-2.5 text-xs rounded-sm ${
-                  rate === playbackRate
-                    ? ''
-                    : 'bg-transparent hover:bg-surface-dark-elevated text-on-dark-soft hover:text-on-dark'
-                }`}
-                aria-label={`재생 속도 ${rate}x`}
-                aria-pressed={rate === playbackRate}
-                onClick={() => onSetPlaybackRate(rate)}
-              >
-                {rate}x
-              </Button>
-            ))}
-          </div>
+          <SpeedSlider
+            playbackRate={playbackRate}
+            onSetPlaybackRate={onSetPlaybackRate}
+          />
         </div>
       </div>
     </div>

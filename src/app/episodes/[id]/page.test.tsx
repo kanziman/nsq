@@ -17,6 +17,8 @@ vi.mock('@/lib/utils/audio', () => ({
   BOUNDARY_PARK_BACKOFF_SEC: 0.05,
   DEFAULT_PLAYBACK_RATE: 1,
   PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
+  MIN_PLAYBACK_RATE: 0.5,
+  MAX_PLAYBACK_RATE: 2.0,
   createAudioManager: vi.fn(() => ({
     play: vi.fn(),
     pause: vi.fn(),
