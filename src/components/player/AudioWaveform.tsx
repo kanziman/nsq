@@ -6,6 +6,7 @@ export interface AudioWaveformProps {
   segmentStart: number;
   segmentEnd: number;
   onSeek: (time: number) => void;
+  isLoading?: boolean;
 }
 
 export default function AudioWaveform({
@@ -14,6 +15,7 @@ export default function AudioWaveform({
   segmentStart,
   segmentEnd,
   onSeek,
+  isLoading = false,
 }: AudioWaveformProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,7 +24,7 @@ export default function AudioWaveform({
   const clampedProgress = Math.max(0, Math.min(1, progress));
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (duration <= 0) return;
+    if (isLoading || duration <= 0) return;
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const ratio = x / rect.width;
@@ -30,7 +32,7 @@ export default function AudioWaveform({
   };
 
   const displayWaveform =
-    waveform.length > 0 ? waveform : new Array(80).fill(0.08);
+    !isLoading && waveform.length > 0 ? waveform : new Array(80).fill(0.08);
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -139,7 +141,7 @@ export default function AudioWaveform({
     ctx.stroke();
 
     // ── 플레이헤드 ──
-    if (clampedProgress > 0 && clampedProgress < 1) {
+    if (!isLoading && clampedProgress > 0 && clampedProgress < 1) {
       ctx.fillStyle = 'rgba(99, 179, 237, 0.6)';
       ctx.fillRect(px - 0.5, 4, 1, H - 8);
       // 플레이헤드 도트
@@ -152,7 +154,7 @@ export default function AudioWaveform({
       ctx.fillStyle = '#63b3ed';
       ctx.fill();
     }
-  }, [displayWaveform, clampedProgress]);
+  }, [displayWaveform, clampedProgress, isLoading]);
 
   useEffect(() => {
     draw();
@@ -174,7 +176,9 @@ export default function AudioWaveform({
       aria-valuemin={0}
       aria-valuemax={100}
       aria-valuenow={Math.round(clampedProgress * 100)}
-      className="w-full h-14 cursor-pointer"
+      className={`w-full h-14 cursor-pointer ${
+        isLoading ? 'animate-pulse pointer-events-none opacity-50' : ''
+      }`}
       onClick={handleClick}
     >
       <canvas

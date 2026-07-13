@@ -76,7 +76,7 @@ export function ShadowingPlayer({
     ? presentSpeakers.filter((s) => !enabledSpeakers.includes(s))
     : [];
 
-  const { waveform } = useWaveform(
+  const { waveform, isLoading: isWaveformLoading } = useWaveform(
     `/api/episodes/${episode.id}/audio`,
     currentSegmentIndex >= 0 ? segments[currentSegmentIndex] : undefined,
   );
@@ -135,6 +135,7 @@ export function ShadowingPlayer({
               segmentEnd={
                 currentSegmentIndex >= 0 ? segments[currentSegmentIndex].end : 0
               }
+              isWaveformLoading={isWaveformLoading}
             />
           </div>
           <div className="mt-[12px] flex items-center justify-between gap-[8px]">

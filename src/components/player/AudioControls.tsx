@@ -23,6 +23,7 @@ interface AudioControlsProps {
   waveform?: number[];
   segmentStart?: number;
   segmentEnd?: number;
+  isWaveformLoading?: boolean;
 }
 
 export default function AudioControls({
@@ -42,6 +43,7 @@ export default function AudioControls({
   waveform = [],
   segmentStart = 0,
   segmentEnd = 0,
+  isWaveformLoading = false,
 }: AudioControlsProps): React.ReactElement {
   return (
     <div className="flex flex-col gap-[24px]">
@@ -73,6 +75,7 @@ export default function AudioControls({
           segmentStart={segmentStart}
           segmentEnd={segmentEnd}
           onSeek={onSeek}
+          isLoading={isWaveformLoading}
         />
       </div>
 

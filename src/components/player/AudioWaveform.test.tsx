@@ -68,4 +68,24 @@ describe('AudioWaveform', () => {
       screen.getByRole('slider', { name: '오디오 파형' }),
     ).toBeInTheDocument();
   });
+
+  it('[정상] should show animate-pulse and disable click when isLoading is true', () => {
+    const onSeek = vi.fn();
+    render(
+      <AudioWaveform
+        waveform={dummyWaveform}
+        currentTime={1.0}
+        segmentStart={0.0}
+        segmentEnd={2.0}
+        onSeek={onSeek}
+        isLoading={true}
+      />,
+    );
+    const container = screen.getByRole('slider', { name: '오디오 파형' });
+    expect(container.className).toContain('animate-pulse');
+    expect(container.className).toContain('pointer-events-none');
+
+    fireEvent.click(container, { clientX: 50 });
+    expect(onSeek).not.toHaveBeenCalled();
+  });
 });
