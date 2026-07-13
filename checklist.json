@@ -596,6 +596,41 @@
       ]
     },
     {
+      "id": "waveform-speed",
+      "name": "파형 기능 및 재생 속도 세밀 제어",
+      "phase": "Phase 2",
+      "tasks": [
+        {
+          "id": "waveform-font",
+          "feature": "CJK Serif 폰트 폴백",
+          "path": "app/globals.css",
+          "status": "completed",
+          "description": "다국어 렌더링을 위한 폰트 설정"
+        },
+        {
+          "id": "waveform-back-button",
+          "feature": "에피소드 보드 복귀 버튼",
+          "path": "components/header.tsx",
+          "status": "completed",
+          "description": "학습 화면에서 대시보드로 이동"
+        },
+        {
+          "id": "waveform-speed-slider",
+          "feature": "속도 슬라이더 (0.05 단위)",
+          "path": "components/player/speed-control.tsx",
+          "status": "completed",
+          "description": "재생 속도 세밀 제어"
+        },
+        {
+          "id": "waveform-visualization",
+          "feature": "세그먼트 파형 시각화",
+          "path": "components/player/waveform.tsx",
+          "status": "completed",
+          "description": "오디오 파형 시각화"
+        }
+      ]
+    },
+    {
       "id": "phase2-auth",
       "name": "사용자 시스템",
       "phase": "Phase 2",
