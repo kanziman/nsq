@@ -117,7 +117,7 @@ export default function EpisodeCard({
           <button
             aria-label="삭제"
             onClick={handleDeleteClick}
-            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer"
+            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
           >
             <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
           </button>
@@ -203,7 +203,7 @@ export default function EpisodeCard({
         <button
           aria-label="삭제"
           onClick={handleDeleteClick}
-          className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer"
+          className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
         >
           <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
         </button>
