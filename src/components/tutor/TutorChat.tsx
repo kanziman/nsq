@@ -118,7 +118,7 @@ export function TutorChat({
               className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors flex items-center gap-1.5 ${
                 activeTab === tab
                   ? 'bg-primary text-white shadow-sm'
-                  : 'bg-canvas text-muted-soft hover:text-ink border border-hairline hover:border-primary/30'
+                  : 'bg-canvas text-muted hover:text-ink border border-hairline hover:border-primary/30'
               }`}
             >
               {isGeneral ? (
@@ -131,7 +131,7 @@ export function TutorChat({
           );
         })}
 
-        <p className="w-full text-xs text-muted-soft mt-1.5 leading-[1.5]">
+        <p className="w-full text-xs text-body mt-1.5 leading-[1.5]">
           {activeTab === 'General'
             ? '문법 구조 분석, 뉘앙스 차이, 유사 표현 등 깊이 있는 영어 학습을 돕습니다.'
             : `${resolveSpeaker(activeTab).name}의 관점에서 문맥과 의도, 배경지식을 설명합니다.`}
@@ -144,7 +144,7 @@ export function TutorChat({
         className="flex-1 overflow-y-auto space-y-6 scroll-smooth pr-2 pb-4"
       >
         {messages.length === 0 && !showSuggestions && (
-          <div className="h-full flex flex-col items-center justify-center text-muted-soft space-y-3">
+          <div className="h-full flex flex-col items-center justify-center text-body space-y-3">
             <Sparkles className="w-8 h-8 opacity-20" />
             <p className="text-sm">궁금한 점을 자유롭게 물어보세요.</p>
           </div>
@@ -246,7 +246,7 @@ export function TutorChat({
         {showSuggestions && (
           <div className="absolute bottom-full left-0 w-full pb-4 pt-12 bg-gradient-to-t from-surface-card via-surface-card/80 to-transparent pointer-events-none flex flex-col gap-2 items-start justify-end">
             <div className="pointer-events-auto flex flex-wrap gap-2 w-full">
-              <span className="w-full text-xs font-medium text-muted-soft mb-1 flex items-center gap-1.5">
+              <span className="w-full text-xs font-medium text-body mb-1 flex items-center gap-1.5">
                 <Sparkles className="w-3 h-3" />
                 현재 문장에 대해 물어보기
               </span>

@@ -3,8 +3,8 @@
 
 @theme {
   --color-canvas: #faf9f5;
-  --color-primary: #cc785c;
-  --color-primary-active: #a9583e;
+  --color-primary: #b5583d;
+  --color-primary-active: #94462f;
   --color-primary-disabled: #e6dfd8;
   --color-secondary: #efe9de;
   --color-success: #5db872;
@@ -16,7 +16,7 @@
   --color-body: #3d3d3a;
   --color-body-strong: #252523;
   --color-muted: #6c6a64;
-  --color-muted-soft: #8e8b82;
+  --color-muted-soft: #737068;
   --color-hairline: #e6dfd8;
   --color-hairline-soft: #ebe6df;
   --color-surface-soft: #f5f0e8;
