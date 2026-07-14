@@ -61,8 +61,11 @@
      Pretendard는 Latin+Hangul+가나를 덮지만 한자(U+4E00–9FFF)는 0자다.
      따라서 일본어 한자는 반드시 뒤의 JP 폴백에서 그려진다 — 가나는 Pretendard,
      한자는 JP 폴백으로 한 문장 안에서 서체가 섞이는 것은 의도된 동작이다. */
+  /* 세리프 헤드라인은 전부 한글이라 실제로 그리는 건 Noto Serif KR이다(Cormorant엔
+     한글이 없다). Noto Serif KR이 가나·한자까지 덮으므로 JP 세리프는 도달 불가 —
+     싣지 않는다. 뒤의 명조 폴백은 웹폰트 로드 실패 시의 안전망이다. */
   --font-serif:
-    var(--font-cormorant), var(--font-serif-kr), var(--font-serif-jp), Garamond,
+    var(--font-cormorant), var(--font-serif-kr), Garamond,
     'Hiragino Mincho ProN', 'MS Mincho', serif;
   --font-sans:
     'Pretendard Variable', 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', Meiryo,
