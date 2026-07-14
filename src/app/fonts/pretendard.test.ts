@@ -36,6 +36,14 @@ describe('#148 Pretendard 전역 폰트', () => {
     expect(sans).not.toMatch(/inter/i);
   });
 
+  // 세리프 자리는 전부 한글이라 Noto Serif KR이 그리고, 이 폰트가 가나·한자까지 덮는다.
+  // JP 세리프를 다시 실으면 한 글자도 렌더하지 않으면서 preload만 잡아먹는다.
+  it('도달 불가능한 JP 세리프를 싣지 않는다', () => {
+    const layout = readFileSync(root('../layout.tsx'), 'utf-8');
+    expect(layout).not.toContain('Noto_Serif_JP');
+    expect(themeVar('font-serif')).not.toContain('--font-serif-jp');
+  });
+
   // AC2: 일본어가 폴백으로 정상 렌더 (Pretendard에 한자가 0자이므로 필수)
   it('AC2: 한자를 덮는 JP 폴백이 스택에 있다', () => {
     const sans = themeVar('font-sans');

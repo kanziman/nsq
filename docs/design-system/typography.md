@@ -6,11 +6,11 @@ NSQ Shadowing 웹 애플리케이션의 타이포그래피는 **잡지나 신문
 
 ## 1. Font Family (서체 정의)
 
-| Type                | Target Fonts                                   | Fallback Stack                                                                       | Use Case                                       |
-| :------------------ | :--------------------------------------------- | :----------------------------------------------------------------------------------- | :--------------------------------------------- |
-| **Display (Serif)** | **Cormorant Garamond** (Tiempos Headline 대체) | `Noto Serif KR, Noto Serif JP, Garamond, "Hiragino Mincho ProN", serif`              | h1, h2, h3, 에피소드 제목, 히어로 헤드라인     |
-| **Body (Sans)**     | **Pretendard** (Inter 대체, #148)              | `"Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, -apple-system, …, sans-serif` | 본문 러닝 텍스트, 네비게이션, 버튼, 입력 폼    |
-| **Code (Mono)**     | **JetBrains Mono**                             | `ui-monospace, monospace`                                                            | 단어 발음 타임코드, 설정 변수, 코드 하이라이트 |
+| Type                | Target Fonts                               | Fallback Stack                                                                       | Use Case                                       |
+| :------------------ | :----------------------------------------- | :----------------------------------------------------------------------------------- | :--------------------------------------------- |
+| **Display (Serif)** | **Cormorant Garamond** + **Noto Serif KR** | `Garamond, "Hiragino Mincho ProN", "MS Mincho", serif`                               | h1, h2, h3, 히어로 헤드라인                    |
+| **Body (Sans)**     | **Pretendard** (Inter 대체, #148)          | `"Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, -apple-system, …, sans-serif` | 본문 러닝 텍스트, 네비게이션, 버튼, 입력 폼    |
+| **Code (Mono)**     | **JetBrains Mono**                         | `ui-monospace, monospace`                                                            | 단어 발음 타임코드, 설정 변수, 코드 하이라이트 |
 
 폰트 스택은 `src/app/globals.css`의 `@theme` 블록(`--font-sans` / `--font-serif` / `--font-mono`)이
 **단일 진실 공급원**입니다. 컴포넌트나 `tailwind.config.ts`에서 폴백을 중복 정의하지 마세요.
@@ -22,7 +22,17 @@ NSQ Shadowing 웹 애플리케이션의 타이포그래피는 **잡지나 신문
   브라우저는 **실제로 쓰이는 청크만** 내려받습니다(초기 약 35KB 수준).
 - **외부 CDN(jsdelivr 등)에 의존하지 않습니다.** 오프라인·엄격한 CSP 환경에서도 안정적으로 로드됩니다.
 
-### 1-2. ⚠️ 일본어와 한자 폴백
+### 1-2. 세리프 디스플레이의 실제 동작
+
+현재 `font-serif`가 붙은 텍스트는 **전부 한글**입니다("내 에피소드 보드", "학습 길잡이" 등).
+Cormorant Garamond에는 한글이 없으므로 그 글자들을 실제로 그리는 것은 **Noto Serif KR**입니다.
+Cormorant는 향후 영문 세리프 헤드라인을 위해 스택 앞에 남겨 둡니다.
+
+Noto Serif KR은 **한글·가나·한자를 모두 덮는 CJK 폰트**입니다. 따라서 별도의 JP 세리프
+(Noto Serif JP)는 스택에서 **도달조차 하지 못하며**, 실으면 한 글자도 렌더하지 않으면서
+preload 대역폭만 소모합니다. **다시 추가하지 마세요** — 회귀 테스트가 막습니다.
+
+### 1-3. ⚠️ 일본어와 한자 폴백
 
 Pretendard는 **Latin + Hangul + 가나(184/192자)** 를 덮지만 **한자(U+4E00–9FFF)는 0자**입니다.
 따라서 일본어 문장에서 **가나는 Pretendard, 한자는 JP 폴백 서체**(Hiragino Sans → Noto Sans JP →
