@@ -39,7 +39,7 @@ AI의 기계적인 인상을 걷어내고 인간적인 온기를 전하기 위�
   - 기본 크림-코랄 팔레트 헥사코드 및 시맨틱 맵핑(Background, Primary, Border 등) 규격
   - 화자(Speaker) 고유 색상 및 오디오 웨이브폼/채팅 도메인 특화 컬러 정의
 - **[Typography Guide (글꼴 시스템)](file:///Users/zorba/projects/nsq/docs/design-system/typography.md)**
-  - Cormorant Garamond, Inter, JetBrains Mono 폰트 패밀리 구성
+  - Pretendard(본문 산세리프), Cormorant Garamond(디스플레이 세리프), JetBrains Mono 폰트 패밀리 구성
   - `display-xl`부터 `code`까지의 14단계 사이즈/줄높이/자간 스케일 계층 구조
 - **[Spacing & Grid Guide (여백 및 그리드)](file:///Users/zorba/projects/nsq/docs/design-system/spacing.md)**
   - 4px 단위의 간격 스케일 (`xxs` ~ `section`)

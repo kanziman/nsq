@@ -81,23 +81,12 @@ const config: Config = {
         input: 'var(--input)',
         ring: 'var(--ring)',
       },
+      // 폴백 스택은 globals.css의 @theme이 단일 진실 공급원이다(#148).
+      // 여기서 폴백을 중복 정의하면 드리프트가 생기므로 변수만 참조한다.
       fontFamily: {
-        serif: ['var(--font-serif)', 'Garamond', 'Times New Roman', 'serif'],
-        sans: [
-          'var(--font-sans)',
-          'Inter',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'Segoe UI',
-          'Roboto',
-          'sans-serif',
-        ],
-        mono: [
-          'var(--font-mono)',
-          'JetBrains Mono',
-          'ui-monospace',
-          'monospace',
-        ],
+        serif: ['var(--font-serif)'],
+        sans: ['var(--font-sans)'],
+        mono: ['var(--font-mono)'],
       },
       borderRadius: {
         xs: 'var(--radius-xs)',

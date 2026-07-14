@@ -1,4 +1,4 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+@import './fonts/pretendard.css';
 @import 'tailwindcss';
 
 @theme {
@@ -57,13 +57,17 @@
   --radius-xl: 16px;
   --radius-pill: 9999px;
 
-  /* Fonts */
+  /* Fonts — 폰트 스택의 단일 진실 공급원(#148).
+     Pretendard는 Latin+Hangul+가나를 덮지만 한자(U+4E00–9FFF)는 0자다.
+     따라서 일본어 한자는 반드시 뒤의 JP 폴백에서 그려진다 — 가나는 Pretendard,
+     한자는 JP 폴백으로 한 문장 안에서 서체가 섞이는 것은 의도된 동작이다. */
   --font-serif:
-    Pretendard, 'Cormorant Garamond', Garamond, Times New Roman, serif;
+    var(--font-cormorant), var(--font-serif-kr), var(--font-serif-jp), Garamond,
+    'Hiragino Mincho ProN', 'MS Mincho', serif;
   --font-sans:
-    Pretendard, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    sans-serif;
-  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    'Pretendard Variable', 'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', Meiryo,
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
 /* 디자인 시스템 spacing 스케일 (docs/design-system/spacing.md).

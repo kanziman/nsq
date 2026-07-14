@@ -6,11 +6,28 @@ NSQ Shadowing 웹 애플리케이션의 타이포그래피는 **잡지나 신문
 
 ## 1. Font Family (서체 정의)
 
-| Type                | Target Fonts                                   | Fallback Stack                                                      | Use Case                                       |
-| :------------------ | :--------------------------------------------- | :------------------------------------------------------------------ | :--------------------------------------------- |
-| **Display (Serif)** | **Cormorant Garamond** (Tiempos Headline 대체) | `Garamond, "Times New Roman", serif`                                | h1, h2, h3, 에피소드 제목, 히어로 헤드라인     |
-| **Body (Sans)**     | **Inter** (StyreneB 대체)                      | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif` | 본문 러닝 텍스트, 네비게이션, 버튼, 입력 폼    |
-| **Code (Mono)**     | **JetBrains Mono**                             | `ui-monospace, monospace`                                           | 단어 발음 타임코드, 설정 변수, 코드 하이라이트 |
+| Type                | Target Fonts                                   | Fallback Stack                                                                       | Use Case                                       |
+| :------------------ | :--------------------------------------------- | :----------------------------------------------------------------------------------- | :--------------------------------------------- |
+| **Display (Serif)** | **Cormorant Garamond** (Tiempos Headline 대체) | `Noto Serif KR, Noto Serif JP, Garamond, "Hiragino Mincho ProN", serif`              | h1, h2, h3, 에피소드 제목, 히어로 헤드라인     |
+| **Body (Sans)**     | **Pretendard** (Inter 대체, #148)              | `"Hiragino Sans", "Noto Sans JP", "Yu Gothic", Meiryo, -apple-system, …, sans-serif` | 본문 러닝 텍스트, 네비게이션, 버튼, 입력 폼    |
+| **Code (Mono)**     | **JetBrains Mono**                             | `ui-monospace, monospace`                                                            | 단어 발음 타임코드, 설정 변수, 코드 하이라이트 |
+
+폰트 스택은 `src/app/globals.css`의 `@theme` 블록(`--font-sans` / `--font-serif` / `--font-mono`)이
+**단일 진실 공급원**입니다. 컴포넌트나 `tailwind.config.ts`에서 폴백을 중복 정의하지 마세요.
+
+### 1-1. Pretendard 셀프호스트 (#148)
+
+- **동적 서브셋**으로 셀프호스트합니다: `public/fonts/pretendard/` 에 `unicode-range`로 분할된
+  woff2 92개를 벤더링하고, `src/app/fonts/pretendard.css`가 `@font-face`를 선언합니다.
+  브라우저는 **실제로 쓰이는 청크만** 내려받습니다(초기 약 35KB 수준).
+- **외부 CDN(jsdelivr 등)에 의존하지 않습니다.** 오프라인·엄격한 CSP 환경에서도 안정적으로 로드됩니다.
+
+### 1-2. ⚠️ 일본어와 한자 폴백
+
+Pretendard는 **Latin + Hangul + 가나(184/192자)** 를 덮지만 **한자(U+4E00–9FFF)는 0자**입니다.
+따라서 일본어 문장에서 **가나는 Pretendard, 한자는 JP 폴백 서체**(Hiragino Sans → Noto Sans JP →
+Yu Gothic → Meiryo)로 그려지며, **한 문장 안에서 서체가 섞이는 것은 의도된 동작**입니다.
+두부(tofu)는 발생하지 않습니다. JP 폴백을 스택에서 제거하면 한자가 전부 깨지므로 절대 지우지 마세요.
 
 ---
 
