@@ -4,8 +4,8 @@ export const BOUNDARY_PARK_BACKOFF_SEC = 0.05;
 /** 재생 속도 프리셋(0.5~2.0x). */
 export const PLAYBACK_RATE_PRESETS = [0.5, 0.75, 1, 1.25, 1.5, 2] as const;
 export const DEFAULT_PLAYBACK_RATE = 1;
-const MIN_PLAYBACK_RATE = 0.5;
-const MAX_PLAYBACK_RATE = 2;
+export const MIN_PLAYBACK_RATE = 0.5;
+export const MAX_PLAYBACK_RATE = 2;
 
 export interface AudioManager {
   play(): void;

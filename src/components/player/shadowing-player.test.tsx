@@ -25,33 +25,34 @@ type FakeManager = {
 };
 let lastManager: FakeManager;
 
-vi.mock('@/lib/utils/audio', () => ({
-  BOUNDARY_PARK_BACKOFF_SEC: 0.05,
-  DEFAULT_PLAYBACK_RATE: 1,
-  PLAYBACK_RATE_PRESETS: [0.5, 0.75, 1, 1.25, 1.5, 2],
-  createAudioManager: vi.fn(() => {
-    const m: FakeManager = {
-      play: vi.fn(),
-      pause: vi.fn(),
-      getCurrentTime: vi.fn(() => 0),
-      getDuration: vi.fn(() => 15),
-      seekTo: vi.fn(),
-      playSegment: vi.fn(),
-      onTimeUpdate: vi.fn((cb: (t: number) => void) => {
-        m._time = cb;
-        return () => {};
-      }),
-      onEnded: vi.fn((cb: () => void) => {
-        m._end = cb;
-        return () => {};
-      }),
-      setPlaybackRate: vi.fn(),
-      destroy: vi.fn(),
-    };
-    lastManager = m;
-    return m;
-  }),
-}));
+vi.mock('@/lib/utils/audio', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@/lib/utils/audio')>();
+  return {
+    ...actual,
+    createAudioManager: vi.fn(() => {
+      const m: FakeManager = {
+        play: vi.fn(),
+        pause: vi.fn(),
+        getCurrentTime: vi.fn(() => 0),
+        getDuration: vi.fn(() => 15),
+        seekTo: vi.fn(),
+        playSegment: vi.fn(),
+        onTimeUpdate: vi.fn((cb: (t: number) => void) => {
+          m._time = cb;
+          return () => {};
+        }),
+        onEnded: vi.fn((cb: () => void) => {
+          m._end = cb;
+          return () => {};
+        }),
+        setPlaybackRate: vi.fn(),
+        destroy: vi.fn(),
+      };
+      lastManager = m;
+      return m;
+    }),
+  };
+});
 
 beforeEach(() => {
   Element.prototype.scrollIntoView = vi.fn();
@@ -211,16 +212,16 @@ describe('ShadowingPlayer', () => {
     ).toBeGreaterThanOrEqual(1);
   });
 
-  it('[정상] selecting a speed preset should update the badge and call manager (AC1)', () => {
+  it('[정상] keyboard +/- should step playback rate by 0.05', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
-    act(() => {
-      fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
-    });
-    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.5);
-    // 선택된 배속은 해당 프리셋 버튼의 aria-pressed로 반영된다.
-    expect(
-      screen.getByRole('button', { name: '재생 속도 1.5x' }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    // 1.0x -> 1.05x -> 1.10x
+    fireEvent.keyDown(window, { key: '+' });
+    fireEvent.keyDown(window, { key: '+' });
+    expect(lastManager.setPlaybackRate).toHaveBeenLastCalledWith(1.1);
+
+    // 1.10x -> 1.05x
+    fireEvent.keyDown(window, { key: '-' });
+    expect(lastManager.setPlaybackRate).toHaveBeenLastCalledWith(1.05);
   });
 
   it('[정상] toggling a speaker off should dim its segments in the script (AC2)', () => {
@@ -273,38 +274,31 @@ describe('ShadowingPlayer', () => {
     expect(lastManager.play).toHaveBeenCalled();
   });
 
-  it('[정상] +/- keys should step playbackRate through presets (AC2)', () => {
+  it('[정상] +/- keys should step playbackRate (AC2)', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
+    // 초기 1.0x -> +키 입력 시 1.05x -> +키 한 번 더 1.10x
     act(() => {
       window.dispatchEvent(
         new KeyboardEvent('keydown', { key: '+', bubbles: true }),
       );
     });
-    expect(
-      screen.getByRole('button', { name: '재생 속도 1.25x' }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.05);
+
     act(() => {
       window.dispatchEvent(
         new KeyboardEvent('keydown', { key: '-', bubbles: true }),
       );
     });
-    expect(
-      screen.getByRole('button', { name: '재생 속도 1x' }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    expect(lastManager.setPlaybackRate).toHaveBeenCalledWith(1.0);
   });
 
-  it('[경계] repeated + should cap playbackRate at the max preset (AC2)', () => {
+  it('[경계] repeated + should cap playbackRate at the max (AC2)', () => {
     render(<ShadowingPlayer episode={EPISODE} segments={SEGMENTS} />);
-    for (let i = 0; i < 6; i++) {
-      act(() => {
-        window.dispatchEvent(
-          new KeyboardEvent('keydown', { key: '+', bubbles: true }),
-        );
-      });
+    // 1.0x -> max(2.0x)를 초과하도록 많이 + 입력
+    for (let i = 0; i < 30; i++) {
+      fireEvent.keyDown(window, { key: '+' });
     }
-    expect(
-      screen.getByRole('button', { name: '재생 속도 2x' }),
-    ).toHaveAttribute('aria-pressed', 'true');
+    expect(lastManager.setPlaybackRate).toHaveBeenLastCalledWith(2.0);
   });
 
   it('[정상] entering focus mode should show only current segment and keep controls (AC1)', () => {

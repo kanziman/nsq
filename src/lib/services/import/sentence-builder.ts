@@ -51,21 +51,53 @@ function isValidPartition(groups: SentenceGroup[], batchLen: number): boolean {
   return sum === batchLen;
 }
 
-// 유효 파티션 그룹을 큐 시각에 매핑해 문장 세그먼트로 만든다. id는 빈 문자열('')로 두고
-// 최종 renumber에서 sent-N을 부여한다(재번호 대상 표식).
+// 완결 문장 종결부호(。！？) 경계로 분할한다. 부호는 앞 문장에 유지, trim·빈 조각 제거(#147).
+function splitIntoSentences(text: string): string[] {
+  return text
+    .split(/(?<=[。！？])/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+// 여러 완결 문장을 담은 세그먼트를 문장별로 분할한다(#147). 그룹 [start,end)를 글자수
+// 비례로 재분배(첫 조각.start=base.start, 마지막.end=base.end, 단조), speaker 계승.
+// 짧은 완결 문장도 흡수 없이 독립 유지한다(최소길이 병합 없음).
+function splitSegmentBySentences(base: Segment): Segment[] {
+  const parts = splitIntoSentences(base.text);
+  // 단일 문장이면 분할 없이(부호·공백만 정돈된) 세그먼트 하나로 둔다.
+  if (parts.length <= 1) return [{ ...base, text: parts[0] ?? base.text }];
+  const totalChars = parts.reduce((sum, p) => sum + p.length, 0);
+  const span = base.end - base.start;
+  const segs: Segment[] = [];
+  let cum = 0;
+  for (let idx = 0; idx < parts.length; idx += 1) {
+    const start = base.start + (span * cum) / totalChars;
+    cum += parts[idx].length;
+    const end =
+      idx === parts.length - 1
+        ? base.end
+        : base.start + (span * cum) / totalChars;
+    segs.push({ id: '', start, end, speaker: base.speaker, text: parts[idx] });
+  }
+  return segs;
+}
+
+// 유효 파티션 그룹을 큐 시각에 매핑해 문장 세그먼트로 만든다. 그룹이 여러 완결 문장을
+// 담으면 문장별로 분할한다(#147). id는 빈 문자열('')로 두고 최종 renumber에서 sent-N 부여.
 function groupsToSegments(groups: SentenceGroup[], cues: Segment[]): Segment[] {
   const segs: Segment[] = [];
   let offset = 0;
   for (const group of groups) {
     const first = cues[offset];
     const last = cues[offset + group.cueCount - 1];
-    segs.push({
+    const base: Segment = {
       id: '',
       start: first.start,
       end: last.end,
       speaker: first.speaker,
       text: group.text,
-    });
+    };
+    segs.push(...splitSegmentBySentences(base));
     offset += group.cueCount;
   }
   return segs;
@@ -148,9 +180,15 @@ export async function buildSentences(
       i += 1;
       continue;
     }
-    // 연속한 cue-* 런을 모아 batchSize 청크로 적응 병합.
+    // 연속한 cue-* 런을 모아 batchSize 청크로 적응 병합. 단, speaker가 바뀌면 런을 끊어
+    // 병합이 화자 경계를 넘지 않게 한다(턴 보존, #147 AC5).
     let j = i;
-    while (j < entries.length && isRawCue(entries[j])) j += 1;
+    while (
+      j < entries.length &&
+      isRawCue(entries[j]) &&
+      entries[j].speaker === entries[i].speaker
+    )
+      j += 1;
     const run = entries.slice(i, j);
     cueTotal += run.length;
     for (let k = 0; k < run.length; k += batchSize) {
@@ -186,7 +224,8 @@ const DEFAULT_TIMEOUT_MS = 60_000;
 // 파편 큐를 원문 언어 그대로 완결 문장으로 병합하도록 지시하는 시스템 프롬프트.
 const SYSTEM_PROMPT =
   '너는 자막 편집자다. 파편화된 자막 큐들을 원문 언어 그대로 자연스러운 완결 문장으로 병합하고 ' +
-  '구두점을 복원한다. 큐 순서를 유지하고 내용을 요약·창작·번역하지 마라. ' +
+  '구두점을 복원한다. 각 완결 문장(。！？로 끝나는 단위)마다 별도 그룹으로 반환하고, 여러 문장을 한 그룹에 묶지 마라. ' +
+  '큐 순서를 유지하고 내용을 요약·창작·번역하지 마라. ' +
   '각 문장이 소비한 연속 큐 개수(cueCount)를 함께 반환하며, cueCount의 합은 입력 큐 수와 정확히 같아야 한다. ' +
   '설명·코드펜스 없이 JSON 배열 [{"text":"...","cueCount":n}] 만 출력한다. ' +
   '(Respond ONLY with a JSON array of {text, cueCount} objects.)';

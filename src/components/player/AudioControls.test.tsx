@@ -78,20 +78,20 @@ describe('AudioControls', () => {
     expect(screen.getByRole('button', { name: '구간 반복' })).toBeDisabled();
   });
 
-  it('[정상] preset click should call onSetPlaybackRate with preset value (AC1)', () => {
+  it('[정상] slider change should call onSetPlaybackRate with new value', () => {
     const onSetPlaybackRate = vi.fn();
     render(
       <AudioControls {...baseProps} onSetPlaybackRate={onSetPlaybackRate} />,
     );
-    fireEvent.click(screen.getByRole('button', { name: '재생 속도 1.5x' }));
-    expect(onSetPlaybackRate).toHaveBeenCalledWith(1.5);
+    const slider = screen.getByRole('slider', { name: '재생 속도 조절' });
+    fireEvent.change(slider, { target: { value: '1.25' } });
+    expect(onSetPlaybackRate).toHaveBeenCalledWith(1.25);
   });
 
-  it('[정상] active preset should be aria-pressed and reflect current rate (AC1)', () => {
+  it('[정상] speed slider should reflect current rate', () => {
     render(<AudioControls {...baseProps} playbackRate={1.25} />);
-    // 현재 배속은 세그먼트 프리셋 버튼의 aria-pressed로 반영된다.
-    const active = screen.getByRole('button', { name: '재생 속도 1.25x' });
-    expect(active).toHaveAttribute('aria-pressed', 'true');
-    expect(active).toHaveTextContent('1.25x');
+    const slider = screen.getByRole('slider', { name: '재생 속도 조절' });
+    expect(slider).toHaveValue('1.25');
+    expect(screen.getByText('1.25x')).toBeInTheDocument();
   });
 });

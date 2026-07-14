@@ -3,27 +3,28 @@
 import { useState } from 'react';
 import { useShadowingPlayer } from '@/hooks/useShadowingPlayer';
 import { useKeyboardShortcuts } from '@/hooks/useKeyboardShortcuts';
-import { Button } from '@/components/ui/button';
+import { useWaveform } from '@/hooks/useWaveform';
+import { Button, buttonVariants } from '@/components/ui/button';
 import AudioControls from './AudioControls';
 import ScriptView from './ScriptView';
 import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
 import { TutorChat } from '@/components/tutor/TutorChat';
-import { PLAYBACK_RATE_PRESETS } from '@/lib/utils/audio';
 import type { Episode, Segment } from '@/lib/types';
-import { Languages, Sparkles } from 'lucide-react';
+import { Languages, Sparkles, ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
 
-/** 현재 속도에서 프리셋 인덱스 기준 ±1 스텝한 속도를 반환한다. */
+import { MIN_PLAYBACK_RATE, MAX_PLAYBACK_RATE } from '@/lib/utils/audio';
+
+/** 현재 속도에서 0.05 스텝 단위로 증감한 속도를 반환한다. */
 function stepPlaybackRate(current: number, dir: 1 | -1): number {
-  const base = PLAYBACK_RATE_PRESETS.indexOf(
-    current as (typeof PLAYBACK_RATE_PRESETS)[number],
+  const step = 0.05;
+  const nextRate = current + dir * step;
+  return Number(
+    Math.min(MAX_PLAYBACK_RATE, Math.max(MIN_PLAYBACK_RATE, nextRate)).toFixed(
+      2,
+    ),
   );
-  const from = base === -1 ? PLAYBACK_RATE_PRESETS.indexOf(1) : base;
-  const nextIdx = Math.min(
-    PLAYBACK_RATE_PRESETS.length - 1,
-    Math.max(0, from + dir),
-  );
-  return PLAYBACK_RATE_PRESETS[nextIdx];
 }
 
 export interface ShadowingPlayerProps {
@@ -75,6 +76,11 @@ export function ShadowingPlayer({
     ? presentSpeakers.filter((s) => !enabledSpeakers.includes(s))
     : [];
 
+  const { waveform, isLoading: isWaveformLoading } = useWaveform(
+    `/api/episodes/${episode.id}/audio`,
+    currentSegmentIndex >= 0 ? segments[currentSegmentIndex] : undefined,
+  );
+
   useKeyboardShortcuts({
     onTogglePlay: toggle,
     onPrev: prev,
@@ -90,22 +96,46 @@ export function ShadowingPlayer({
       <div className="lg:col-span-7 space-y-6">
         {/* 상단 dark 플레이어 영역 */}
         <section className="sticky top-4 z-10 rounded-xl bg-surface-dark p-[32px] text-on-dark">
-          <h2 className="font-serif text-xl">{episode.title}</h2>
+          <div className="flex items-center gap-[12px]">
+            <Link
+              href="/"
+              className={buttonVariants({
+                variant: 'secondaryOnDark',
+                size: 'icon',
+                className: 'w-8 h-8 rounded-full shrink-0',
+              })}
+              aria-label="에피소드 목록으로"
+            >
+              <ArrowLeft className="w-4 h-4" />
+            </Link>
+            <h2 className="font-serif text-xl">{episode.title}</h2>
+          </div>
           <div className="mt-4">
             <AudioControls
               isPlaying={isPlaying}
               onToggle={toggle}
               currentTime={currentTime}
-              duration={episode.duration}
+              duration={episode.duration ?? 0}
               onSeek={seekTo}
               onPrev={prev}
               onNext={next}
               isLooping={isLooping}
               onToggleLoop={toggleLoop}
               repeatCount={repeatCount}
-              canLoop={selection !== null}
+              canLoop={currentSegmentIndex !== -1}
               playbackRate={playbackRate}
               onSetPlaybackRate={setPlaybackRate}
+              waveform={waveform}
+              segmentStart={
+                currentSegmentIndex >= 0
+                  ? (segments[currentSegmentIndex].audioStart ??
+                    segments[currentSegmentIndex].start)
+                  : 0
+              }
+              segmentEnd={
+                currentSegmentIndex >= 0 ? segments[currentSegmentIndex].end : 0
+              }
+              isWaveformLoading={isWaveformLoading}
             />
           </div>
           <div className="mt-[12px] flex items-center justify-between gap-[8px]">

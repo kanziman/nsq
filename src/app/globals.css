@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
 @import 'tailwindcss';
 
 @theme {
@@ -57,9 +58,11 @@
   --radius-pill: 9999px;
 
   /* Fonts */
-  --font-serif: 'Cormorant Garamond', Garamond, Times New Roman, serif;
+  --font-serif:
+    Pretendard, 'Cormorant Garamond', Garamond, Times New Roman, serif;
   --font-sans:
-    Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    Pretendard, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
