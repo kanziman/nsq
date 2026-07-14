@@ -11,7 +11,7 @@ import FocusPanel from './FocusPanel';
 import SpeakerFilter from './SpeakerFilter';
 import { TutorChat } from '@/components/tutor/TutorChat';
 import type { Episode, Segment } from '@/lib/types';
-import { Languages, Sparkles, ArrowLeft } from 'lucide-react';
+import { Languages, BookOpen, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 import { MIN_PLAYBACK_RATE, MAX_PLAYBACK_RATE } from '@/lib/utils/audio';
@@ -108,7 +108,9 @@ export function ShadowingPlayer({
             >
               <ArrowLeft className="w-4 h-4" />
             </Link>
-            <h2 className="font-serif text-xl">{episode.title}</h2>
+            <h2 className="font-sans font-normal text-lg tracking-tight text-on-dark/90">
+              {episode.title}
+            </h2>
           </div>
           <div className="mt-4">
             <AudioControls
@@ -232,10 +234,10 @@ export function ShadowingPlayer({
 
       {/* 우측 AI 튜터 패널 */}
       <aside className="lg:col-span-5 rounded-xl border border-hairline bg-surface-card p-[32px] h-[calc(100vh-64px)] sticky top-4 flex flex-col">
-        <div className="flex items-center gap-2 mb-4">
-          <Sparkles className="w-5 h-5 text-primary" />
-          <h2 className="font-serif text-xl text-ink tracking-[-0.3px]">
-            AI Tutor
+        <div className="flex items-center gap-2.5 mb-4 border-b border-hairline/60 pb-3">
+          <BookOpen className="w-5 h-5 text-primary/80" strokeWidth={1.5} />
+          <h2 className="font-serif text-lg font-normal text-body tracking-[0.5px]">
+            학습 길잡이
           </h2>
         </div>
         <TutorChat

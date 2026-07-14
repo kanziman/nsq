@@ -91,4 +91,8 @@
   body {
     @apply bg-[--color-background] text-[--color-foreground] antialiased;
   }
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+  }
 }
