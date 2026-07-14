@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useCallback } from 'react';
+import { resolveWaveformPalette } from '@/lib/utils/waveform-colors';
 
 export interface AudioWaveformProps {
   waveform: number[];
@@ -50,6 +51,12 @@ export default function AudioWaveform({
     const midY = H / 2;
     ctx.clearRect(0, 0, W, H);
 
+    // 디자인 토큰에서 팔레트 해석(리터럴 금지). draw 시점 해석이라 테마 변수 변경 반영.
+    const cs = getComputedStyle(canvas);
+    const pal = resolveWaveformPalette((name) => cs.getPropertyValue(name));
+    const accent = pal.accent.join(', ');
+    const base = pal.base.join(', ');
+
     // 포인트 생성
     const count = displayWaveform.length;
     const points: { x: number; y: number }[] = [];
@@ -83,7 +90,7 @@ export default function AudioWaveform({
     ctx.lineTo(W, midY);
     ctx.lineTo(0, midY);
     ctx.closePath();
-    ctx.fillStyle = 'rgba(100, 120, 160, 0.18)';
+    ctx.fillStyle = `rgba(${base}, 0.18)`;
     ctx.fill();
 
     // 아래쪽 (반전, 축소)
@@ -92,7 +99,7 @@ export default function AudioWaveform({
     ctx.lineTo(W, midY);
     ctx.lineTo(0, midY);
     ctx.closePath();
-    ctx.fillStyle = 'rgba(100, 120, 160, 0.10)';
+    ctx.fillStyle = `rgba(${base}, 0.10)`;
     ctx.fill();
 
     // ── 재생된 영역 (클리핑) ──
@@ -104,8 +111,8 @@ export default function AudioWaveform({
 
     // 위쪽 fill (재생됨) — 그라데이션
     const grad = ctx.createLinearGradient(0, 0, 0, midY);
-    grad.addColorStop(0, 'rgba(99, 179, 237, 0.7)');
-    grad.addColorStop(1, 'rgba(99, 179, 237, 0.12)');
+    grad.addColorStop(0, `rgba(${accent}, 0.7)`);
+    grad.addColorStop(1, `rgba(${accent}, 0.12)`);
     ctx.beginPath();
     buildCurvePath(points, 1);
     ctx.lineTo(px, midY);
@@ -117,7 +124,7 @@ export default function AudioWaveform({
     // 위쪽 stroke (재생됨)
     ctx.beginPath();
     buildCurvePath(points, 1);
-    ctx.strokeStyle = 'rgba(99, 179, 237, 0.85)';
+    ctx.strokeStyle = `rgba(${accent}, 0.85)`;
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
@@ -127,13 +134,13 @@ export default function AudioWaveform({
     ctx.lineTo(px, midY);
     ctx.lineTo(0, midY);
     ctx.closePath();
-    ctx.fillStyle = 'rgba(99, 179, 237, 0.10)';
+    ctx.fillStyle = `rgba(${accent}, 0.10)`;
     ctx.fill();
 
     ctx.restore();
 
     // ── 중앙 라인 ──
-    ctx.strokeStyle = 'rgba(100, 120, 160, 0.15)';
+    ctx.strokeStyle = `rgba(${base}, 0.15)`;
     ctx.lineWidth = 0.5;
     ctx.beginPath();
     ctx.moveTo(0, midY);
@@ -142,16 +149,16 @@ export default function AudioWaveform({
 
     // ── 플레이헤드 ──
     if (!isLoading && clampedProgress > 0 && clampedProgress < 1) {
-      ctx.fillStyle = 'rgba(99, 179, 237, 0.6)';
+      ctx.fillStyle = `rgba(${accent}, 0.6)`;
       ctx.fillRect(px - 0.5, 4, 1, H - 8);
       // 플레이헤드 도트
       ctx.beginPath();
       ctx.arc(px, midY, 3.5, 0, Math.PI * 2);
-      ctx.fillStyle = '#fff';
+      ctx.fillStyle = pal.dot;
       ctx.fill();
       ctx.beginPath();
       ctx.arc(px, midY, 2, 0, Math.PI * 2);
-      ctx.fillStyle = '#63b3ed';
+      ctx.fillStyle = `rgb(${accent})`;
       ctx.fill();
     }
   }, [displayWaveform, clampedProgress, isLoading]);
