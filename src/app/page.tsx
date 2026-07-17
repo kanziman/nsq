@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import EpisodeDashboard from '@/components/episode/EpisodeDashboard';
+import { isProductionDeploy } from '@/lib/utils/env';
 
 export default function HomePage() {
+  // 배포(조회 전용)에서는 임포트 진입점을 노출하지 않는다(#162).
+  const isLocal = !isProductionDeploy();
   return (
     <main className="min-h-screen p-8 md:p-24 max-w-5xl mx-auto space-y-12">
       {/* Header section (Editorial Display style) */}
@@ -18,17 +21,19 @@ export default function HomePage() {
             학습 콘텐츠를 등록하세요.
           </p>
         </div>
-        <Link
-          href="/import"
-          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
-        >
-          임포트하기
-        </Link>
+        {isLocal && (
+          <Link
+            href="/import"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-active"
+          >
+            임포트하기
+          </Link>
+        )}
       </header>
 
       {/* Dashboard list Section */}
       <section className="space-y-6">
-        <EpisodeDashboard />
+        <EpisodeDashboard isLocal={isLocal} />
       </section>
 
       {/* Bottom Footer block */}
