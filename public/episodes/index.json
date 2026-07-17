@@ -1,0 +1,73 @@
+[
+  {
+    "id": "C9VabhxOPbA",
+    "title": "会話のアドバイス/Get better slowly (Japanese Podcast for Listening Practice)",
+    "duration": 1033,
+    "youtubeUrl": "https://youtu.be/C9VabhxOPbA",
+    "thumbnailUrl": "https://i.ytimg.com/vi/C9VabhxOPbA/maxresdefault.jpg",
+    "addedAt": "2026-07-17T01:53:05.332Z",
+    "language": "ja",
+    "importState": {
+      "videoId": "C9VabhxOPbA",
+      "status": "completed",
+      "progress": 100,
+      "currentStep": "completed",
+      "updatedAt": "2026-07-17T01:53:05.333Z",
+      "youtubeUrl": "https://youtu.be/C9VabhxOPbA",
+      "language": "ja"
+    }
+  },
+  {
+    "id": "oFyi4GTeWYc",
+    "title": "4. Does All Creativity Come From Pain? | No Stupid Questions",
+    "duration": 1897,
+    "youtubeUrl": "https://youtu.be/oFyi4GTeWYc?si=2nseewk7BKRhcOs_",
+    "thumbnailUrl": "https://i.ytimg.com/vi/oFyi4GTeWYc/maxresdefault.jpg",
+    "addedAt": "2026-07-07T10:05:21.042Z",
+    "importState": {
+      "videoId": "oFyi4GTeWYc",
+      "status": "completed",
+      "progress": 100,
+      "currentStep": "completed",
+      "updatedAt": "2026-07-07T10:05:21.043Z",
+      "matchRate": 1,
+      "youtubeUrl": "https://youtu.be/oFyi4GTeWYc?si=2nseewk7BKRhcOs_",
+      "transcriptUrl": "https://freakonomics.com/podcast/does-all-creativity-come-from-pain-nsq-ep-4/"
+    }
+  },
+  {
+    "id": "rz8iB0Id7M4",
+    "title": "3. What Does It Mean to Be a “Hard Worker”? | No Stupid Questions",
+    "duration": 1591,
+    "youtubeUrl": "https://youtu.be/rz8iB0Id7M4?si=1zjXiQc7fUbTlITr",
+    "thumbnailUrl": "https://i.ytimg.com/vi/rz8iB0Id7M4/maxresdefault.jpg",
+    "addedAt": "2026-07-07T10:01:28.991Z",
+    "importState": {
+      "videoId": "rz8iB0Id7M4",
+      "status": "completed",
+      "progress": 100,
+      "currentStep": "completed",
+      "updatedAt": "2026-07-07T10:01:28.992Z",
+      "matchRate": 1,
+      "youtubeUrl": "https://youtu.be/rz8iB0Id7M4?si=1zjXiQc7fUbTlITr",
+      "transcriptUrl": "https://freakonomics.com/podcast/what-does-it-mean-to-be-a-hard-worker-nsq-ep-3/"
+    }
+  },
+  {
+    "id": "CaJbYldje98",
+    "title": "2. What is the Optimal Way to Be Angry? | No Stupid Questions",
+    "duration": 2083,
+    "youtubeUrl": "https://youtu.be/CaJbYldje98?si=K2y5gvM57bdQjB03",
+    "thumbnailUrl": "https://i.ytimg.com/vi/CaJbYldje98/maxresdefault.jpg",
+    "addedAt": "2026-07-06T10:57:31.794Z",
+    "importState": {
+      "videoId": "CaJbYldje98",
+      "status": "completed",
+      "progress": 100,
+      "currentStep": "completed",
+      "updatedAt": "2026-07-06T10:57:31.794Z",
+      "youtubeUrl": "https://youtu.be/CaJbYldje98?si=K2y5gvM57bdQjB03",
+      "transcriptUrl": "https://freakonomics.com/podcast/what-is-the-optimal-way-to-be-angry/"
+    }
+  }
+]

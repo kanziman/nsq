@@ -1,0 +1,478 @@
+{"speaker":"DUBNER","text":"Do I seem like an anti-mindfulness person?"}
+{"speaker":"DUCKWORTH","text":"Too crotchety to be mindful."}
+{"speaker":"DUCKWORTH","text":"Because all the mindfulness people are, like, so nice."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"And I’m Stephen Dubner."}
+{"speaker":"DUCKWORTH","text":"I’m a psychologist at Penn and I run an educational non-profit called Character Lab."}
+{"speaker":"DUBNER","text":"You also wrote the book Grit."}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUBNER","text":"And I’m a writer and I host a podcast called Freakonomics Radio."}
+{"speaker":"DUCKWORTH","text":"And you wrote the book Freakonomics, among quite a few others."}
+{"speaker":"DUBNER","text":"I did."}
+{"speaker":"DUCKWORTH","text":"And you and I became friends."}
+{"speaker":"DUBNER","text":"We did."}
+{"speaker":"DUBNER","text":"And we discovered that both of us really like to ask each other questions."}
+{"speaker":"DUCKWORTH","text":"And there’s only one rule."}
+{"speaker":"DUBNER","text":"The rule is:"}
+{"speaker":"BOTH","text":"“there are no stupid questions.”"}
+{"speaker":"NARRATOR","text":"Today on No Stupid Questions: how do you keep from losing your temper over things that just don’t matter?"}
+{"speaker":"DUCKWORTH","text":"I have a terrible temper."}
+{"speaker":"DUCKWORTH","text":"And when it erupts, it’s pretty bad."}
+{"speaker":"DUBNER","text":"I’m so angry."}
+{"speaker":"DUBNER","text":"I’m going to go read poetry!"}
+{"speaker":"NARRATOR","text":"Also: why do so many of us have greater sympathy for dogs than humans?"}
+{"speaker":"DUBNER","text":"I superimpose onto the face of every person who’s annoying me, the face of some dog."}
+{"speaker":"DUCKWORTH","text":"This makes you nicer to them?"}
+{"speaker":"DUBNER","text":"Suddenly, I’m empathetic toward every person."}
+{"speaker":"DUBNER","text":"Angela Duckworth, I have a question to ask you."}
+{"speaker":"DUBNER","text":"May I?"}
+{"speaker":"DUCKWORTH","text":"Mmhmm."}
+{"speaker":"DUBNER","text":"So, it strikes me that many people, at least in the U.S., at least in the year 2020, are very quick to anger, often about relatively trivial things."}
+{"speaker":"DUBNER","text":"I may be wrong."}
+{"speaker":"DUBNER","text":"And it may also just be that the avenues for expressing anger are so available, social media and so on."}
+{"speaker":"DUBNER","text":"But I’ve been reading a little bit of Seneca lately — the ancient stoic Roman philosopher who had a lot to say about a lot of things."}
+{"speaker":"DUBNER","text":"He wrote about the detriments of anger and basically how to keep your cool."}
+{"speaker":"DUBNER","text":"And he had some advice: shifting your perspective, empathize with the other person, or to spend more time with less angry people."}
+{"speaker":"DUBNER","text":"So let me just ask: do you also believe that too many people get angry over too many quotidian things?"}
+{"speaker":"DUBNER","text":"And do you find Seneca’s dusty advice for how to keep your cool still valid?"}
+{"speaker":"DUBNER","text":"And what’s your advice for keeping your cool?"}
+{"speaker":"DUCKWORTH","text":"So I’m not sure that there is more anger going around these days than in the past."}
+{"speaker":"DUCKWORTH","text":"If you look at research on violence, in general, those trends over the last few hundred years are all toward being a much more gentle society."}
+{"speaker":"DUBNER","text":"It could also be that we just get angry over smaller things now."}
+{"speaker":"DUBNER","text":"That we’re not concerned so much about murder and mayhem as in the past."}
+{"speaker":"DUBNER","text":"We have that luxury."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"Regardless of trends over centuries, I, first of all, would agree with you, that some of the technologies that we have available for immediately expressing and amplifying our anger, like Twitter, or you read an op-ed or an article and you are incensed and write an all-caps comment."}
+{"speaker":"DUCKWORTH","text":"I mean, think about it in the past."}
+{"speaker":"DUCKWORTH","text":"You had to get out a piece of paper, and a pen, and find a stamp, and an envelope."}
+{"speaker":"DUCKWORTH","text":"And these are things that probably made 99 percent of the angry comments like, “Yeah, but I don’t have enough energy to do that.” So we might be getting immediate expression of anger in a way that we didn’t before."}
+{"speaker":"DUCKWORTH","text":"In terms of dusty old advice, I think some of that dusty old advice is fantastic — and I’m not an expert on the Stoics or Seneca in particular — they had a lot of great advice."}
+{"speaker":"DUCKWORTH","text":"And the modern incarnation of this anger-management advice is probably best communicated by a Stanford psychologist that I know very well named James Gross."}
+{"speaker":"DUCKWORTH","text":"Who was, no coincidence — well, it’s total coincidence, I guess — he was a philosophy major."}
+{"speaker":"DUCKWORTH","text":"So we’ve actually had conversations about how the Stoics talked about anger management."}
+{"speaker":"DUCKWORTH","text":"And I think by and large, it matches up pretty nicely with some of the modern theorizing of how we regulate emotions, including anger."}
+{"speaker":"DUBNER","text":"What was the phrase you used?"}
+{"speaker":"DUBNER","text":"Emotional what?"}
+{"speaker":"DUBNER","text":"Regulation?"}
+{"speaker":"DUCKWORTH","text":"Emotion regulation is the phrase that psychologists use."}
+{"speaker":"DUCKWORTH","text":"But you could say anger management, emotion regulation."}
+{"speaker":"DUCKWORTH","text":"The idea is that you have an emotion, and then you decide whether you want to have that emotion more or less."}
+{"speaker":"DUCKWORTH","text":"And then you do something about it."}
+{"speaker":"DUBNER","text":"Wait a minute."}
+{"speaker":"DUBNER","text":"You already lost most of us there."}
+{"speaker":"DUCKWORTH","text":"Exactly!"}
+{"speaker":"DUCKWORTH","text":"Right?"}
+{"speaker":"DUCKWORTH","text":"You probably think you can’t really do anything about your emotions."}
+{"speaker":"DUCKWORTH","text":"They come and go, and they’re not things that can be controlled."}
+{"speaker":"DUCKWORTH","text":"Is that what you think?"}
+{"speaker":"DUBNER","text":"Well, yes."}
+{"speaker":"DUBNER","text":"And also that there is necessarily a time lapse between experiencing the emotion and acting on the emotion."}
+{"speaker":"DUBNER","text":"I think that’s what we see a lot, is that people experience an emotion and immediately respond to it without thinking, “Oh, what is this emotion?"}
+{"speaker":"DUBNER","text":"What are the possible outcomes if I express my response in such and such a way?” And so on."}
+{"speaker":"DUCKWORTH","text":"And is this emotion desirable?"}
+{"speaker":"DUCKWORTH","text":"Do I want more of it?"}
+{"speaker":"DUCKWORTH","text":"Do I not want more of it?"}
+{"speaker":"DUCKWORTH","text":"Which, by the way, is making you sound a lot like a mindfulness person, Stephen."}
+{"speaker":"DUCKWORTH","text":"I don’t know if you want that honorific."}
+{"speaker":"DUBNER","text":"I’m pro-mindfulness."}
+{"speaker":"DUCKWORTH","text":"Oh, you’re pro-mindfulness?"}
+{"speaker":"DUBNER","text":"Do I seem like an anti-mindfulness person?"}
+{"speaker":"DUCKWORTH","text":"Sort of too crotchety to be mindful."}
+{"speaker":"DUCKWORTH","text":"Because all the mindfulness people are so nice."}
+{"speaker":"DUBNER","text":"I find a lot of that is, I don’t want to say a veneer, quite."}
+{"speaker":"DUBNER","text":"I used to spend a lot of time in a place where there was a big Buddhist monastery that a lot of people from New York City would go up to."}
+{"speaker":"DUBNER","text":"But there were a lot of what we used to call temporary and angry Buddhists there, people who had come up for their fix, and then walk away thinking that they had mastered a certain form of emotion regulation."}
+{"speaker":"DUBNER","text":"They would just project a slight veneer of sangfroid, whereas in fact they were so angry."}
+{"speaker":"DUCKWORTH","text":"Just below the surface their blood was boiling."}
+{"speaker":"DUBNER","text":"So I actually feel like I’m a pretty unangry person."}
+{"speaker":"DUBNER","text":"But when I do experience a strong response to something, I do tend to not tamp it down."}
+{"speaker":"DUBNER","text":"“Crotchety” is how you defined it."}
+{"speaker":"DUCKWORTH","text":"It’s okay, by the way, to feel angry."}
+{"speaker":"DUCKWORTH","text":"I’m not saying that you should regulate every emotion and that when you experience something like anger, you should immediately tamp it down."}
+{"speaker":"DUCKWORTH","text":"Anger is an emotion that is observed across all cultures."}
+{"speaker":"DUBNER","text":"And useful, yes?"}
+{"speaker":"DUCKWORTH","text":"And useful."}
+{"speaker":"DUCKWORTH","text":"Like most emotions, you could argue all emotions, evolved for survival purposes."}
+{"speaker":"DUCKWORTH","text":"I think the consensus is, in the scientific community, that anger is the feeling when you think that your rights have been violated and you have a goal that’s being blocked."}
+{"speaker":"DUCKWORTH","text":"And that is why when somebody cuts you off in traffic or says something that’s contra your political beliefs, you feel a kind of indignation that your right has been grievously violated."}
+{"speaker":"DUCKWORTH","text":"So it’s okay to feel angry sometimes."}
+{"speaker":"DUCKWORTH","text":"I think, for a lot of us, we feel like we’re angry too long, or we get angry over the stupid things."}
+{"speaker":"DUCKWORTH","text":"You know, if somebody does cut you off in traffic, or says something on Twitter that makes you mad, it’s not clear to me how expressing that anger is useful."}
+{"speaker":"DUCKWORTH","text":"You know, I’m a pedestrian, not a driver."}
+{"speaker":"DUCKWORTH","text":"But I would walk around shaking my fist and pretending to take photos of cars who had done illegal things and— Do you do that?!"}
+{"speaker":"DUBNER","text":"I mean, when I used to walk around New York City with my kids when they were little, my best idea— I’ve never done this."}
+{"speaker":"DUBNER","text":"Do you know, those price sticker guns that you use in a grocery store to put $4.99 on the—"}
+{"speaker":"DUCKWORTH","text":"You mean the labels?"}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"Label gun."}
+{"speaker":"DUBNER","text":"So it’s basically a bumper-sticker gun."}
+{"speaker":"DUBNER","text":"You could put it on any part of a car, and it would basically say on it something to the effect of “I am an a**hole” in big letters."}
+{"speaker":"DUCKWORTH","text":"I was thinking, “I’m a jerk,” but yeah."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"We’ll say, I am a jerk."}
+{"speaker":"DUCKWORTH","text":"Fewer letters too."}
+{"speaker":"DUBNER","text":"And then in smaller letters, it would say, “because I like to run over people with my car.” And whenever somebody would actually drive across an intersection where I was walking, I would just have my bumper-sticker gun in my holster."}
+{"speaker":"DUBNER","text":"And just put it on their car, and then at some point they would see it."}
+{"speaker":"DUBNER","text":"And then think, “Oh, wow, somebody really thought I was a jerk.”"}
+{"speaker":"DUCKWORTH","text":"You’re going to be like the traffic vigilante."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"So let’s say this."}
+{"speaker":"DUBNER","text":"I have anger toward them."}
+{"speaker":"DUBNER","text":"But I haven’t done anything about it."}
+{"speaker":"DUBNER","text":"And I don’t bang on their car or anything."}
+{"speaker":"DUCKWORTH","text":"I have done that once by the way."}
+{"speaker":"DUCKWORTH","text":"I have slapped someone’s roof of their car."}
+{"speaker":"DUBNER","text":"And how did you feel afterwards?"}
+{"speaker":"DUCKWORTH","text":"Well the thing about anger is that in general, emotion researchers don’t think that catharsis like — express it, you’ll get it out — in general, that’s not the consensus of the scientific community."}
+{"speaker":"DUCKWORTH","text":"It does not actually reduce your negative emotions."}
+{"speaker":"DUCKWORTH","text":"It often increases them."}
+{"speaker":"DUCKWORTH","text":"So we probably shouldn’t do things like slam our palm on cars."}
+{"speaker":"DUCKWORTH","text":"And by the way, my husband thinks I’m going to get killed one day."}
+{"speaker":"DUCKWORTH","text":"One of these motorists is going to feel like their rights have been violated, because somebody is now banging on their car, and then they’re going to pull over and kill me."}
+{"speaker":"DUCKWORTH","text":"So, I think that the question is: what is the optimal way to be angry?"}
+{"speaker":"DUCKWORTH","text":"Seneca did have some good advice, I think."}
+{"speaker":"DUCKWORTH","text":"So, one of his words of wisdom was to try to nip it in the bud."}
+{"speaker":"DUCKWORTH","text":"And the idea that you would not want to deal with anger when you have fully lost it, but when you’re just a little irritated, is good advice, and it’s consistent with modern scientific research on emotion regulation."}
+{"speaker":"DUBNER","text":"So that sounds perfectly sensible."}
+{"speaker":"DUBNER","text":"I know Seneca also advised that you should read poetry and history to amuse yourself and to be diverted."}
+{"speaker":"DUCKWORTH","text":"Was he selling a book?"}
+{"speaker":"DUCKWORTH","text":"Was he like, you should read my poetry?"}
+{"speaker":"DUBNER","text":"I don’t know."}
+{"speaker":"DUBNER","text":"But I will say this."}
+{"speaker":"DUBNER","text":"Sometimes when I come home at the end of a day, and I’ve had a particularly difficult day, one of the first things I do is I just reach — there’s a particular volume of poetry that I happen to like a lot these days."}
+{"speaker":"DUBNER","text":"I’d read a few poems, and I feel great."}
+{"speaker":"DUBNER","text":"It really works for me."}
+{"speaker":"DUCKWORTH","text":"When’s the last time you were angry?"}
+{"speaker":"DUCKWORTH","text":"Tell me about it, and then did you reach for that volume of poetry?"}
+{"speaker":"DUBNER","text":"Well, I’ve been in lockdown with my family for the past, gosh, two months or longer."}
+{"speaker":"DUBNER","text":"You know, living in New York City."}
+{"speaker":"DUBNER","text":"And my wife was sick."}
+{"speaker":"DUBNER","text":"And we were very, very worried."}
+{"speaker":"DUBNER","text":"And there were periods in there where one of my kids — honestly, they were being great and very helpful and so on."}
+{"speaker":"DUBNER","text":"But still, they’re teenagers."}
+{"speaker":"DUBNER","text":"They’re locked up."}
+{"speaker":"DUBNER","text":"They both got yanked out of school."}
+{"speaker":"DUBNER","text":"And they would do or say something that I would get really angry with."}
+{"speaker":"DUBNER","text":"And I would recognize it wasn’t an offense deserving the level of my anger."}
+{"speaker":"DUBNER","text":"And I would just remove myself from the situation."}
+{"speaker":"DUBNER","text":"I wouldn’t say, “I’m so angry."}
+{"speaker":"DUBNER","text":"I’m going to go read poetry.” I’d just leave the room."}
+{"speaker":"DUBNER","text":"And I would just then go sit and close the door, and for 10 or 15 minutes, read some, in this case, Yehuda Amichai poetry."}
+{"speaker":"DUBNER","text":"And it would make me feel like part of the human family again in a way that I hadn’t 10 minutes ago."}
+{"speaker":"DUCKWORTH","text":"That’s very evolved."}
+{"speaker":"DUCKWORTH","text":"I’m going to give you an “A,” Stephen, for that."}
+{"speaker":"DUBNER","text":"For a crotchety person."}
+{"speaker":"DUCKWORTH","text":"It’s curved."}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUCKWORTH","text":"I think it’s a really evolved response to anger, because I mentioned this psychologist, James Gross."}
+{"speaker":"DUCKWORTH","text":"And his advice when you’re angry is, first and foremost, to change your situation."}
+{"speaker":"DUCKWORTH","text":"Leave the room, change the actual circumstances that are making you angry."}
+{"speaker":"DUCKWORTH","text":"The second thing when you drew your attention to something else, I mean, that’s why a lot of people read."}
+{"speaker":"DUCKWORTH","text":"I read before bed every night."}
+{"speaker":"DUCKWORTH","text":"And it’s specifically to take my mind off of everything that is bothering me."}
+{"speaker":"DUCKWORTH","text":"So you distracted yourself."}
+{"speaker":"DUCKWORTH","text":"He calls that “selective attention.” And then, finally, you get some points for just having some strategy at all."}
+{"speaker":"DUCKWORTH","text":"Because I think the problem with anger is that even though Seneca wants us to nip it in the bud, for me, when I lose my temper, it is like the horse is leaving the barn."}
+{"speaker":"DUCKWORTH","text":"And the idea that you would have some kind of intentional strategy so that this doesn’t happen too often or too badly — yeah, I’m going to give you an A."}
+{"speaker":"DUBNER","text":"Have you gotten better over time?"}
+{"speaker":"DUCKWORTH","text":"You know, I actually had to call James Gross for some personal and professional advice."}
+{"speaker":"DUCKWORTH","text":"Because that is probably my one greatest Achilles’ heel."}
+{"speaker":"DUCKWORTH","text":"I have a terrible temper."}
+{"speaker":"DUCKWORTH","text":"And when it erupts, it’s pretty bad."}
+{"speaker":"DUCKWORTH","text":"And yeah, I have gotten better at it, because I think when you notice this pattern of losing your temper, I started being really proactive."}
+{"speaker":"DUCKWORTH","text":"Like, for me, it’s holiday time."}
+{"speaker":"DUCKWORTH","text":"It’s in-law stuff."}
+{"speaker":"DUCKWORTH","text":"So I preventively looked to find ways to reduce stress around those times of the year, where well, in the last 20 years, I’ve consistently lost my temper."}
+{"speaker":"DUCKWORTH","text":"So, what can I do differently?"}
+{"speaker":"DUBNER","text":"We’ve talked about dealing with your own anger, and how to modulate."}
+{"speaker":"DUBNER","text":"What about dealing with another person’s anger?"}
+{"speaker":"DUBNER","text":"Do you have any advice for the best way to interact with an angry person?"}
+{"speaker":"DUCKWORTH","text":"Well, there’s an idea that’s not mine."}
+{"speaker":"DUCKWORTH","text":"It came from some friends of mine in psychology, Barbara Mellors and Phil Tetlock."}
+{"speaker":"DUCKWORTH","text":"And they had the idea that instead of doing what we reflexively would want to do, which is just to argue the opposite position, we “gist” what the other person said."}
+{"speaker":"DUCKWORTH","text":"You know, what’s the gist of what you’re saying?"}
+{"speaker":"DUCKWORTH","text":"So they’re using it as a verb."}
+{"speaker":"DUCKWORTH","text":"Try to repeat what the position is of the person who you think is a flaming idiot, and you do it in a dispassionate, non-judgmental way."}
+{"speaker":"DUBNER","text":"Is the idea that if you gist them well, then they will hear the gist and say, “Oh, god, that’s idiotic."}
+{"speaker":"DUBNER","text":"What was I thinking?”"}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUCKWORTH","text":"It’s kind of a perspective-taking or an empathy exercise, so that you can really appreciate the full extent of their argument."}
+{"speaker":"DUCKWORTH","text":"That’s one step in any resolution anyway."}
+{"speaker":"DUCKWORTH","text":"The second thing is it makes that other person feel respected and heard."}
+{"speaker":"DUCKWORTH","text":"One of the problems, when you get into arguments, is that you scream louder, but you feel like you’re being heard even less."}
+{"speaker":"DUCKWORTH","text":"And I think that this goes in the opposite direction."}
+{"speaker":"DUCKWORTH","text":"Like you actually feel heard, and then you de-escalate a little bit your own emotion and your oppositional stance."}
+{"speaker":"DUCKWORTH","text":"So the idea was very simple, which is that if people were asked to gist each others’— Would it de-escalate some of these angry interactions?"}
+{"speaker":"DUCKWORTH","text":"Because don’t you feel, Stephen, like nobody’s really listening to anybody else?"}
+{"speaker":"DUCKWORTH","text":"They’re just trying to ram through their own point of view."}
+{"speaker":"DUBNER","text":"I’m sorry."}
+{"speaker":"DUBNER","text":"I wasn’t paying attention to what you said."}
+{"speaker":"DUBNER","text":"Sorry, I was thinking my own thoughts."}
+{"speaker":"DUBNER","text":"Yes."}
+{"speaker":"DUBNER","text":"I do feel that a lot."}
+{"speaker":"DUBNER","text":"And where I see a lot of people going wrong is that they get very upset."}
+{"speaker":"DUBNER","text":"They spend a lot of emotional currency on things that so don’t matter in their lives."}
+{"speaker":"DUBNER","text":"It’s ether."}
+{"speaker":"DUBNER","text":"It’s smoke."}
+{"speaker":"DUBNER","text":"It means absolutely nothing."}
+{"speaker":"DUCKWORTH","text":"Now, do you see that mostly in online exchanges, or do you see that in other ways too?"}
+{"speaker":"DUBNER","text":"I see it in other ways."}
+{"speaker":"DUBNER","text":"These days, if you’re walking down the street in New York City, I’d say probably 90 to 95 percent of people are wearing masks."}
+{"speaker":"DUBNER","text":"Then there’s a couple people who are not wearing a mask."}
+{"speaker":"DUBNER","text":"And you can see in the body language of the people who are wearing masks the way that they veer from that person and shoot them dirty looks— And I’m not saying I don’t feel those instincts as well."}
+{"speaker":"DUCKWORTH","text":"But you don’t look contemptuously at them."}
+{"speaker":"DUBNER","text":"So what would you do in that case?"}
+{"speaker":"DUBNER","text":"Someone’s walking down the street without the mask?"}
+{"speaker":"DUCKWORTH","text":"Oh, I, this is not a hypothetical."}
+{"speaker":"DUCKWORTH","text":"I have had, on more than one occasion, unfortunately, people who I really feel like, hello?!"}
+{"speaker":"DUCKWORTH","text":"I was recently at the grocery store."}
+{"speaker":"DUCKWORTH","text":"There’s an arrow on the floor."}
+{"speaker":"DUCKWORTH","text":"And I was going with the arrow because I’m a law-abiding grocery shopper, and a woman carrying lots of stuff, she was going against the arrow."}
+{"speaker":"DUCKWORTH","text":"And first, I shot her a dirty look."}
+{"speaker":"DUBNER","text":"It’s harder with a mask."}
+{"speaker":"DUCKWORTH","text":"Well, it is because I asked Paul Rozin, the psychologist who studies disgust, you know, “What is the facial expression of contempt?” And he said, “It’s a lopsided sneer."}
+{"speaker":"DUCKWORTH","text":"It’s an asymmetric sneer.” So, I can’t do that with my mask on."}
+{"speaker":"DUBNER","text":"You have to work out your eyebrows."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"So I tried to knit my eyebrows together, and then I realized no, I’m going to go with a verbal expression."}
+{"speaker":"DUCKWORTH","text":"I was like, “Excuse me, the arrow’s pointing the other way.” She looked at me, she looked at the arrow, she looked at me, she looked at the arrow, and then she just kept going against the arrow, which only made me more angry."}
+{"speaker":"DUBNER","text":"And that’s when you wished you were carrying a star of death and you would have nailed her in the back with it."}
+{"speaker":"DUCKWORTH","text":"Well, I have to say, yes, this feeling that you want to avenge, you want to punish this other person."}
+{"speaker":"DUCKWORTH","text":"I will be honest."}
+{"speaker":"DUCKWORTH","text":"I felt that."}
+{"speaker":"DUBNER","text":"Let me ask you this."}
+{"speaker":"DUBNER","text":"Having had this grocery store encounter and having discussed Seneca and James Gross and others today, what will you do the next time you’re in that situation?"}
+{"speaker":"DUBNER","text":"Will you change your behavior?"}
+{"speaker":"DUCKWORTH","text":"The next time I am in a grocery store and somebody is going against the arrow."}
+{"speaker":"DUCKWORTH","text":"You know what?"}
+{"speaker":"DUCKWORTH","text":"I will not flash them a look of contempt."}
+{"speaker":"DUCKWORTH","text":"I will move to a different aisle."}
+{"speaker":"DUCKWORTH","text":"If I put it in perspective, it’s a tiny little part of my reality."}
+{"speaker":"DUBNER","text":"Now, let me just ask you about the costs and benefits of your action."}
+{"speaker":"DUBNER","text":"So you’re moving yourself, which is at some cost, probably not very much in this case, unless you were on a short line, you have to move to a much longer line, etc., etc."}
+{"speaker":"DUBNER","text":"And then the benefits of what you did to her, do you think it actually changed her behavior maybe long-term?"}
+{"speaker":"DUBNER","text":"I mean, was it worth it?"}
+{"speaker":"DUCKWORTH","text":"Well that’s the interesting thing."}
+{"speaker":"DUCKWORTH","text":"I do wonder whether if you get shot 100 dirty looks by strangers in the grocery store, on the street, maybe you’ll reform, but it doesn’t feel like that, does it?"}
+{"speaker":"DUCKWORTH","text":"When you shake your fist at a motorist for running the red light, you don’t really feel like that person’s like, “Oh, I’m going to stop doing that.”"}
+{"speaker":"DUBNER","text":"My reckoning is the kind of person who would do a behavior that would get me that upset is not the kind of person who is going to take my fist-shaking as a serious reprimand."}
+{"speaker":"DUCKWORTH","text":"I think that’s right."}
+{"speaker":"DUBNER","text":"Let me ask you finally, do you feel any less potentially angry, in general, having had this conversation about anger?"}
+{"speaker":"DUCKWORTH","text":"Well, I’m going to certainly feel angry again in the next 24 hours."}
+{"speaker":"DUCKWORTH","text":"Even in some small form, and I feel pretty good about having a little Seneca in the back pocket, to think what would Seneca do?"}
+{"speaker":"DUBNER","text":"You know, I feel this has been helpful to me because the next time I have a situation like that, I’m going to say, “Well, Angie was in the grocery store, the lady going against the arrow, and she got really pissed."}
+{"speaker":"DUBNER","text":"And I’m not going to do that.” Anything I do shy of that is going to be a victory."}
+{"speaker":"DUCKWORTH","text":"So for me, I’ll say what would Seneca do?"}
+{"speaker":"DUCKWORTH","text":"And you could say, what would Angela not do?"}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions."}
+{"speaker":"DUBNER","text":"You’re handling all the dog poop for your neighborhood, and you’re the people who don’t have a dog?"}
+{"speaker":"DUBNER","text":"No wonder you hate dogs."}
+{"speaker":"DUCKWORTH","text":"Stephen, you have a dog."}
+{"speaker":"DUBNER","text":"I do."}
+{"speaker":"DUCKWORTH","text":"And I do not have a dog."}
+{"speaker":"DUBNER","text":"You don’t."}
+{"speaker":"DUBNER","text":"You’re a cat person, apparently."}
+{"speaker":"DUCKWORTH","text":"I don’t have a cat either."}
+{"speaker":"DUCKWORTH","text":"I am in the one out of three American households that doesn’t have any pet."}
+{"speaker":"DUCKWORTH","text":"But here’s my curiosity about dogs and dog owners."}
+{"speaker":"DUCKWORTH","text":"I get that this provides some kind of comfort to you."}
+{"speaker":"DUCKWORTH","text":"But I guess I’m wondering, how far does this go?"}
+{"speaker":"DUCKWORTH","text":"Is there anything that you wouldn’t do for this canine that you love so much?"}
+{"speaker":"DUBNER","text":"So I do love the dog."}
+{"speaker":"DUBNER","text":"The dog is named Fifi."}
+{"speaker":"DUBNER","text":"If you’re of a certain age, it’s a ridiculous name."}
+{"speaker":"DUBNER","text":"Because Fifi is the stereotypical name of the French poodle."}
+{"speaker":"DUCKWORTH","text":"In Looney Tunes or something, yeah?"}
+{"speaker":"DUBNER","text":"What happened is, when we got our puppy, our daughter, Anya, who’s kind of a Francophile, she really wanted a French name."}
+{"speaker":"DUBNER","text":"And all the French names we could think of were beautiful, female names that didn’t sound at all like dog names."}
+{"speaker":"DUCKWORTH","text":"Like Adele or Claudette or something."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"Just not dog names at all."}
+{"speaker":"DUBNER","text":"And so I said, kind of jokingly, “Fifi,” which is like the equivalent of Rover or Fido."}
+{"speaker":"DUBNER","text":"But Anya, my kid, she’d never heard of Fifi."}
+{"speaker":"DUBNER","text":"So she thought, “Oh, my God."}
+{"speaker":"DUBNER","text":"That’s so beautiful, and elegant, and French.” So we went with it."}
+{"speaker":"DUCKWORTH","text":"Now you have a dog named Fifi."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"And she looks like a Fifi."}
+{"speaker":"DUBNER","text":"She’s a small, white dog, very adorable."}
+{"speaker":"DUBNER","text":"Love her very much."}
+{"speaker":"DUBNER","text":"But the question is what would I not do for —."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"How far would you go for Fifi?"}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"So, if what you’re trying to get at here is do I treat her better than I treat people, which I gather is your subtext."}
+{"speaker":"DUCKWORTH","text":"People do seem to treat their pets, dogs especially, better than they treat other humans, in some cases."}
+{"speaker":"DUBNER","text":"I totally agree."}
+{"speaker":"DUBNER","text":"And I do think it’s kind of tragic, honestly."}
+{"speaker":"DUBNER","text":"And yet, I participate."}
+{"speaker":"DUCKWORTH","text":"And yet."}
+{"speaker":"DUBNER","text":"I’m empathetic toward almost every dog."}
+{"speaker":"DUBNER","text":"And I think, “Wait a minute."}
+{"speaker":"DUBNER","text":"Why would I be empathetic to a strange dog and think ill of some strange person?"}
+{"speaker":"DUBNER","text":"Isn’t the person higher order, capable of more, more deserving of empathy?” And yet, I feel that my association is probably not so uncommon."}
+{"speaker":"DUBNER","text":"And I’m glad you asked me about it, because I think about it a lot."}
+{"speaker":"DUBNER","text":"And it bothers me."}
+{"speaker":"DUBNER","text":"I’m so guilty of being dog-centric or pro-dog, that when I’m in a foul mood, and let’s say I’m walking down the street, and it’s a crowded sidewalk."}
+{"speaker":"DUBNER","text":"You know, there’s just a lot of people."}
+{"speaker":"DUBNER","text":"And they’re weaving in and out, or getting in the way, and I feel myself getting annoyed."}
+{"speaker":"DUBNER","text":"And I think, “What am I doing?"}
+{"speaker":"DUBNER","text":"These people are doing nothing wrong."}
+{"speaker":"DUBNER","text":"They’re just walking down the street."}
+{"speaker":"DUBNER","text":"Why am I getting annoyed at them?” And I realize it’s just because I’m a little impatient or cranky, whatever."}
+{"speaker":"DUBNER","text":"So, what I do, I have this trick, which is, I superimpose onto the face of every person who’s annoying me, the face of some dog."}
+{"speaker":"DUCKWORTH","text":"This makes you nicer to them?"}
+{"speaker":"DUBNER","text":"It does."}
+{"speaker":"DUBNER","text":"Okay, it does sound pretty ridiculous now that I say it out loud."}
+{"speaker":"DUBNER","text":"But, I put dog faces on all the people, and then I find, suddenly, I’m empathetic toward every person."}
+{"speaker":"DUCKWORTH","text":"I find the whole thing puzzling, honestly."}
+{"speaker":"DUCKWORTH","text":"If I were pitching a venture capitalist in a hypothetical world that didn’t have pets, and I’m like, “Okay, we’re going to have these animals."}
+{"speaker":"DUCKWORTH","text":"They’re going to be domesticated."}
+{"speaker":"DUCKWORTH","text":"They’re going to s***."}
+{"speaker":"DUCKWORTH","text":"They’re going to pee."}
+{"speaker":"DUCKWORTH","text":"They’re going to, of course, die before you do."}
+{"speaker":"DUCKWORTH","text":"So you’re going to be really unhappy, even desperately depressed after your pet dies.” Nobody would invest in that idea."}
+{"speaker":"DUCKWORTH","text":"It’s so ridiculous."}
+{"speaker":"DUCKWORTH","text":"Also, There is a problem in my neighborhood where the dog owners will tie up their tidy little bag of dog poo, but then just leave it."}
+{"speaker":"DUCKWORTH","text":"And my husband installed this industrial-sized trash can right outside our house."}
+{"speaker":"DUCKWORTH","text":"And then we personally are basically curbing the dogs for the entire neighborhood."}
+{"speaker":"DUBNER","text":"You’re handling all the dog poop for your neighborhood, and you’re the people who don’t have a dog?"}
+{"speaker":"DUBNER","text":"No wonder you hate dogs."}
+{"speaker":"DUCKWORTH","text":"I know."}
+{"speaker":"DUCKWORTH","text":"I got a little chip on my shoulder with that."}
+{"speaker":"DUBNER","text":"We once did a Freakonomics Radio episode about this theme."}
+{"speaker":"DUBNER","text":"It was called “Which Came First, the Chicken or the Avocado?” And it was about the moral outrage that people feel about the mistreatment of animals when they often don’t feel outrage over the mistreatment of humans."}
+{"speaker":"DUBNER","text":"And I’ll start with the animal in the story."}
+{"speaker":"DUBNER","text":"It wasn’t actually chicken."}
+{"speaker":"DUBNER","text":"It was a giraffe."}
+{"speaker":"DUBNER","text":"Do you remember there was a giraffe named Marius who lived in a zoo in Copenhagen?"}
+{"speaker":"DUBNER","text":"And he was dissected in front of a bunch of children who were visiting the zoo."}
+{"speaker":"DUBNER","text":"Now, he was dead."}
+{"speaker":"DUBNER","text":"And they were cutting him up to show an autopsy or a dissection."}
+{"speaker":"DUCKWORTH","text":"Just like a biology study, or something."}
+{"speaker":"DUBNER","text":"Yeah, something like that."}
+{"speaker":"DUBNER","text":"And it became a huge global outcry and a kind of outpouring of sympathy for poor Marius, the giraffe."}
+{"speaker":"DUBNER","text":"And at the same time, I’d become aware that the avocados that most Americans eat are primarily imported from Mexico, in places where criminals extort, and kill, and do other things to the farmers who grow them."}
+{"speaker":"DUBNER","text":"In other words, our avocados are blood avocados."}
+{"speaker":"DUCKWORTH","text":"There’s blood on our hands."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUBNER","text":"But nobody seems to care when they’re having guacamole that oh, the actual people who work to grow these things are being beat up, and ransomed, and things like this."}
+{"speaker":"DUBNER","text":"Whereas poor Marius, there was so much empathy."}
+{"speaker":"DUBNER","text":"And to go beyond the avocados, what about a million Syrian refugees?"}
+{"speaker":"DUBNER","text":"Yeah, there’s a lot of hand-wringing and teeth-gnashing, but Marius the giraffe seemed to gather more sympathy."}
+{"speaker":"DUBNER","text":"And that depresses me, but it also doesn’t surprise me."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"So there’s a lot of things going on with Marius the giraffe."}
+{"speaker":"DUCKWORTH","text":"First of all, what an adorable name."}
+{"speaker":"DUCKWORTH","text":"I mean, maybe the name was part of it."}
+{"speaker":"DUCKWORTH","text":"And then also one giraffe is probably somehow more compelling than plurality."}
+{"speaker":"DUCKWORTH","text":"You know, all the research showing that we’re more sympathetic to a story of one particular individual."}
+{"speaker":"DUCKWORTH","text":"I guess, in this case, an individual giraffe."}
+{"speaker":"DUCKWORTH","text":"But let me make a comparison, which I think is even more direct."}
+{"speaker":"DUCKWORTH","text":"So you’ve got this dog, Fifi, that costs you some amount of money."}
+{"speaker":"DUCKWORTH","text":"Why don’t we donate the equivalent amount of money that we spend for extraordinary, and even ordinary, expenses that have to do with caring for our pets?"}
+{"speaker":"DUCKWORTH","text":"Like, thousands of dollars."}
+{"speaker":"DUCKWORTH","text":"Why don’t we donate that amount of money to very worthy human causes: education, hunger?"}
+{"speaker":"DUBNER","text":"There was a study by these sociologists at Northeastern who were looking into the question of whether people, human subjects, are more emotionally disturbed by abuse of animals versus people."}
+{"speaker":"DUBNER","text":"And they found— Let me see, here."}
+{"speaker":"DUBNER","text":"I’ll read a bit."}
+{"speaker":"DUBNER","text":"“We found more empathy for victims who are human children” — so children — “puppies, and full-grown dogs than for victims who are adult humans.” Okay?"}
+{"speaker":"DUBNER","text":"So it doesn’t even have to be a puppy."}
+{"speaker":"DUBNER","text":"Full-grown dogs."}
+{"speaker":"DUCKWORTH","text":"The full-grown dogs come in before the full-grown humans."}
+{"speaker":"DUBNER","text":"I do find it troubling."}
+{"speaker":"DUBNER","text":"But I think the simplest explanation is that it’s easier to feel empathy or to exhibit kindness toward pets, even strange pets, than to strange people, or sometimes even people we know well."}
+{"speaker":"DUBNER","text":"And I think the answer lies in your field somehow, in psychology, in that we tabulate the wrongdoing of other humans."}
+{"speaker":"DUBNER","text":"Moral failings, or behaviors we disapprove of in some way."}
+{"speaker":"DUCKWORTH","text":"So we have mixed feelings, maybe, about our fellow human."}
+{"speaker":"DUBNER","text":"Mixed at best."}
+{"speaker":"DUCKWORTH","text":"But the dogs, you’re like, “Nah, they’re pretty good.”"}
+{"speaker":"DUBNER","text":"I think it’s the paradox of the dog."}
+{"speaker":"DUBNER","text":"They aren’t capable of that much, so we can’t blame them for that much."}
+{"speaker":"DUBNER","text":"You know, what’s the worst thing a dog can do?"}
+{"speaker":"DUBNER","text":"It can chew up your couch, or maybe poop on your floor."}
+{"speaker":"DUBNER","text":"And those are pretty forgivable."}
+{"speaker":"DUBNER","text":"But the person you know can do something a lot worse than that."}
+{"speaker":"DUCKWORTH","text":"They certainly haven’t schemed in a really sophisticated, evil way."}
+{"speaker":"DUBNER","text":"But it does disturb me how baseline empathetic I am toward any dog on the street versus any person on the street."}
+{"speaker":"DUBNER","text":"And I would like to change, so can you help me?"}
+{"speaker":"DUCKWORTH","text":"Other than just thinking of people as dogs, which seems to help you."}
+{"speaker":"DUCKWORTH","text":"Well, to be a little nitpicky, I don’t think you really mean empathy, right?"}
+{"speaker":"DUCKWORTH","text":"You don’t mean it in the kind of narrow sense that like, I’m feeling what you’re feeling."}
+{"speaker":"DUCKWORTH","text":"Because, that’s one of the classic philosophical questions."}
+{"speaker":"DUCKWORTH","text":"Can you really feel what a dog might feel or a goldfinch or something?"}
+{"speaker":"DUCKWORTH","text":"Because you really will never know what it feels like to be a dog, right?"}
+{"speaker":"DUBNER","text":"Well, maybe sympathy rather than empathy."}
+{"speaker":"DUCKWORTH","text":"What do you mean when you say that?"}
+{"speaker":"DUBNER","text":"I guess the word I would use is sympathy in that, if I see a dog out in the rain, I’m like, “Oh, poor dog.” If I see a person out in the rain, I think, “What are the circumstances that led to that person being there?"}
+{"speaker":"DUBNER","text":"Did they make bad choices?”"}
+{"speaker":"DUCKWORTH","text":"This is revealing."}
+{"speaker":"DUCKWORTH","text":"You feel like a dog is innocent."}
+{"speaker":"DUCKWORTH","text":"And a little bit like they have certain limitations that would make you feel more moved, I guess, when you see them suffering, and maybe more responsible to help them, right?"}
+{"speaker":"DUBNER","text":"And they have less agency and fewer opportunities to do things that might upset other humans."}
+{"speaker":"DUCKWORTH","text":"I mean, here’s the thing that might be an explanation for this, but I think it’s controversial, which is that dogs are one of the things that make people happy, like happier than almost anything."}
+{"speaker":"DUCKWORTH","text":"That would be an explanation for why you would want to privilege them in a moral dilemma."}
+{"speaker":"DUCKWORTH","text":"Or why walking down a crowded sidewalk in New York, it helps to think about other people as dogs."}
+{"speaker":"DUCKWORTH","text":"Because they’re such a source of happiness."}
+{"speaker":"DUCKWORTH","text":"If Fifi were not in your life, if you could just imagine that counterfactual, do you think you would be a little less happy than you are today?"}
+{"speaker":"DUBNER","text":"Yeah, I probably would."}
+{"speaker":"DUBNER","text":"I mean, I grew up with dogs."}
+{"speaker":"DUBNER","text":"But then I lived for many, many, many years without a dog and was totally fine."}
+{"speaker":"DUBNER","text":"So I like Fifi."}
+{"speaker":"DUBNER","text":"If she disappeared tomorrow, I would miss her."}
+{"speaker":"DUBNER","text":"I would mourn her."}
+{"speaker":"DUBNER","text":"But no, I’d be fine."}
+{"speaker":"DUBNER","text":"It’s not like with a person."}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"Well, that’s good."}
+{"speaker":"DUCKWORTH","text":"That was the right answer."}
+{"speaker":"DUCKWORTH","text":"You pass."}
+{"speaker":"DUCKWORTH","text":"But Stephen Dubner plus Fifi is happier than Stephen Dubner without any kind of Fifi."}
+{"speaker":"DUBNER","text":"Yes."}
+{"speaker":"DUBNER","text":"Every pet owner will say, “Of course."}
+{"speaker":"DUBNER","text":"Yes.” But the research on whether pet ownership improves human satisfaction and happiness is mixed."}
+{"speaker":"DUBNER","text":"There’s disputed evidence."}
+{"speaker":"DUBNER","text":"And I will say this: I am the primary caregiver of this dog."}
+{"speaker":"DUBNER","text":"And it’s quite a bit sometimes."}
+{"speaker":"DUBNER","text":"So she works— I was going to say she works with me; she’s doing some filing right now."}
+{"speaker":"DUBNER","text":"But she comes to my office with me every day, which is about a 15, 20-minute walk."}
+{"speaker":"DUBNER","text":"And we’re alone all day."}
+{"speaker":"DUBNER","text":"So I literally spend more time with Fifi than I do with any human."}
+{"speaker":"DUBNER","text":"Sometimes it’s a pain in the neck."}
+{"speaker":"DUBNER","text":"On the occasions when I travel, and I leave the dog behind, it’s kind of nice to have a breather from the dog."}
+{"speaker":"DUCKWORTH","text":"Well, I would say this."}
+{"speaker":"DUCKWORTH","text":"Yeah, the data are mixed in part because you can’t really easily randomly assign people to have dogs and not have dogs."}
+{"speaker":"DUBNER","text":"And you can’t just kidnap, take away their dogs."}
+{"speaker":"DUCKWORTH","text":"Thank goodness."}
+{"speaker":"DUCKWORTH","text":"I do find it really interesting."}
+{"speaker":"DUCKWORTH","text":"Even though the data aren’t there, my hypothesis is: that for some people this living creature that is just always happy to see you, and is a little simpler than human beings and is more predictably affectionate, and I’m not the first to say this, but the need to be needed."}
+{"speaker":"DUCKWORTH","text":"I mean, take pigeons in the park."}
+{"speaker":"DUCKWORTH","text":"There are a fair number of human beings who seem to really enjoy feeding the pigeons."}
+{"speaker":"DUCKWORTH","text":"Even against the better judgment of some of their fellow humans who say, “Stop doing that."}
+{"speaker":"DUCKWORTH","text":"They’re crapping all over the place.” But when you see somebody feeding the pigeons and you ask yourself, why do they do that?"}
+{"speaker":"DUCKWORTH","text":"I think it’s at least partly because we need to be needed."}
+{"speaker":"DUCKWORTH","text":"And a pigeon is in need of your breadcrumbs."}
+{"speaker":"DUCKWORTH","text":"And so Fifi is in need of you."}
+{"speaker":"DUCKWORTH","text":"She depends on you."}
+{"speaker":"DUCKWORTH","text":"And I think human beings like to matter in that way."}
+{"speaker":"DUBNER","text":"I agree."}
+{"speaker":"DUBNER","text":"As I’m sure you know, there’s a lot of evidence that service to others, whether it’s charitable contributions, or taking care of things for people, etc., etc., makes you feel a lot better, makes you feel needed, makes you feel worthy."}
+{"speaker":"DUCKWORTH","text":"Reliably."}
+{"speaker":"DUBNER","text":"And I will say this, that really works for me and the dog."}
+{"speaker":"DUBNER","text":"I feel that little shot of whatever it is that I get when you feel temporarily good about yourself when I just do whatever, feed her, walk her."}
+{"speaker":"DUBNER","text":"Yeah, I think there is an interesting reciprocity, which is not a coincidence."}
+{"speaker":"DUBNER","text":"The reason that they are the primary domesticated pet is because they give us that and we give them that."}
+{"speaker":"DUBNER","text":"But if we’re looking for long-term wisdom or guidance on the value of human versus animal, one of my favorite passages from the Talmud deals with this directly."}
+{"speaker":"DUBNER","text":"There was a famous line in Ecclesiastes that said that a living dog is better than a dead lion, which is about status and rank."}
+{"speaker":"DUBNER","text":"But then in the Talmud, the Talmud is telling the story about when King David dies and his son, Solomon, referring to that line, says something like, “Is it not true that a live dog is better than a dead lion?” And this was referring to Solomon’s question of what should be done about his father."}
+{"speaker":"DUBNER","text":"King David had died and was out in the sun and the dogs were coming around wanting to eat him."}
+{"speaker":"DUBNER","text":"So he had to ask, what should be done?"}
+{"speaker":"DUBNER","text":"What takes precedence here?"}
+{"speaker":"DUBNER","text":"And it was interesting because most Jews throughout history did not have dogs."}
+{"speaker":"DUBNER","text":"It was just not a very Jewish thing to have."}
+{"speaker":"DUBNER","text":"And yet, for me, as a dog owner and someone who’s Jewish, I find it very nice to know that even as far back as the Talmud, there was this notion that a dog as a living thing had more value on some dimensions than a person who happened to be dead, who was even a king."}
+{"speaker":"DUCKWORTH","text":"Well, I think all rationalization to make the habit of having a dog seem like the right thing to do is completely legitimate."}
+{"speaker":"DUCKWORTH","text":"Go for it."}
+{"speaker":"DUBNER","text":"Even if you have to go back 2000 years to a religious text."}
+{"speaker":"DUCKWORTH","text":"Right."}

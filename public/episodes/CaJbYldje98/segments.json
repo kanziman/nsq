@@ -1,0 +1,3826 @@
+[
+  {
+    "id": "seg-0",
+    "start": 0,
+    "end": 2.393166666666666,
+    "speaker": "DUBNER",
+    "text": "Do I seem like an anti-mindfulness person?",
+    "translation": "제가 마음챙김을 싫어하는 사람처럼 보이나요?"
+  },
+  {
+    "id": "seg-1",
+    "start": 2.393166666666666,
+    "end": 4.22975,
+    "speaker": "DUCKWORTH",
+    "text": "Too crotchety to be mindful.",
+    "translation": "마음챙김을 하기엔 너무 까칠하시죠."
+  },
+  {
+    "id": "seg-2",
+    "start": 4.22975,
+    "end": 7.939500000000001,
+    "speaker": "DUCKWORTH",
+    "text": "Because all the mindfulness people are, like, so nice.",
+    "translation": "마음챙김 하시는 분들은 다들 엄청 착하시거든요."
+  },
+  {
+    "id": "seg-3",
+    "start": 7.939500000000001,
+    "end": 9.120000000000001,
+    "speaker": "DUCKWORTH",
+    "text": "I’m Angela Duckworth.",
+    "translation": "저는 앤절라 더크워스고요."
+  },
+  {
+    "id": "seg-4",
+    "start": 9.120000000000001,
+    "end": 10.066333333333333,
+    "speaker": "DUBNER",
+    "text": "And I’m Stephen Dubner.",
+    "translation": "저는 스티븐 더브너입니다."
+  },
+  {
+    "id": "seg-5",
+    "start": 10.066333333333333,
+    "end": 14.293,
+    "speaker": "DUCKWORTH",
+    "text": "I’m a psychologist at Penn and I run an educational non-profit called Character Lab.",
+    "translation": "저는 펜실베이니아 대학의 심리학자이자 '캐릭터 랩'이라는 교육 비영리 단체를 운영하고 있습니다."
+  },
+  {
+    "id": "seg-6",
+    "start": 14.293,
+    "end": 15.839,
+    "speaker": "DUBNER",
+    "text": "You also wrote the book Grit.",
+    "translation": "책 《그릿》을 쓰시기도 했죠."
+  },
+  {
+    "id": "seg-7",
+    "start": 15.839,
+    "end": 16.12925,
+    "speaker": "DUCKWORTH",
+    "text": "Yes.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-8",
+    "start": 16.12925,
+    "end": 19.479333333333333,
+    "speaker": "DUBNER",
+    "text": "And I’m a writer and I host a podcast called Freakonomics Radio.",
+    "translation": "저는 작가이자 '프리코노믹스 라디오'라는 팟캐스트를 진행하고 있습니다."
+  },
+  {
+    "id": "seg-9",
+    "start": 19.479333333333333,
+    "end": 22.005714285714287,
+    "speaker": "DUCKWORTH",
+    "text": "And you wrote the book Freakonomics, among quite a few others.",
+    "translation": "그리고 다른 책들도 많지만, 《괴짜경제학》을 쓰셨죠."
+  },
+  {
+    "id": "seg-10",
+    "start": 22.005714285714287,
+    "end": 22.417142857142856,
+    "speaker": "DUBNER",
+    "text": "I did.",
+    "translation": "그랬죠."
+  },
+  {
+    "id": "seg-11",
+    "start": 22.417142857142856,
+    "end": 23.895999999999997,
+    "speaker": "DUCKWORTH",
+    "text": "And you and I became friends.",
+    "translation": "그렇게 저희는 친구가 되었습니다."
+  },
+  {
+    "id": "seg-12",
+    "start": 23.895999999999997,
+    "end": 24.567999999999998,
+    "speaker": "DUBNER",
+    "text": "We did.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-13",
+    "start": 24.567999999999998,
+    "end": 28.4876,
+    "speaker": "DUBNER",
+    "text": "And we discovered that both of us really like to ask each other questions.",
+    "translation": "그리고 저희 둘 다 서로에게 질문하는 걸 정말 좋아한다는 걸 발견했죠."
+  },
+  {
+    "id": "seg-14",
+    "start": 28.4876,
+    "end": 29.8795,
+    "speaker": "DUCKWORTH",
+    "text": "And there’s only one rule.",
+    "translation": "규칙은 딱 하나예요."
+  },
+  {
+    "id": "seg-15",
+    "start": 29.8795,
+    "end": 31.039599999999997,
+    "speaker": "DUBNER",
+    "text": "The rule is:",
+    "translation": "그 규칙은 바로,"
+  },
+  {
+    "id": "seg-16",
+    "start": 31.039599999999997,
+    "end": 34.6,
+    "speaker": "BOTH",
+    "text": "“there are no stupid questions.”",
+    "translation": "\"바보 같은 질문은 없다.\""
+  },
+  {
+    "id": "seg-17",
+    "start": 34.6,
+    "end": 40.21,
+    "speaker": "NARRATOR",
+    "text": "Today on No Stupid Questions: how do you keep from losing your temper over things that just don’t matter?",
+    "translation": "오늘 '바보 같은 질문은 없다' 프로그램에서는: 정말 사소한 일에 화를 내지 않는 방법에 대해 이야기해 봅니다."
+  },
+  {
+    "id": "seg-18",
+    "start": 40.21,
+    "end": 42.00975,
+    "speaker": "DUCKWORTH",
+    "text": "I have a terrible temper.",
+    "translation": "저는 성질이 엄청 더러워요."
+  },
+  {
+    "id": "seg-19",
+    "start": 42.00975,
+    "end": 44.25244444444444,
+    "speaker": "DUCKWORTH",
+    "text": "And when it erupts, it’s pretty bad.",
+    "translation": "한 번 폭발하면 정말 장난 아니거든요."
+  },
+  {
+    "id": "seg-20",
+    "start": 44.25244444444444,
+    "end": 44.89277777777778,
+    "speaker": "DUBNER",
+    "text": "I’m so angry.",
+    "translation": "아, 정말 화나네요."
+  },
+  {
+    "id": "seg-21",
+    "start": 44.89277777777778,
+    "end": 46.29714285714286,
+    "speaker": "DUBNER",
+    "text": "I’m going to go read poetry!",
+    "translation": "가서 시나 읽어야겠어요!"
+  },
+  {
+    "id": "seg-22",
+    "start": 46.29714285714286,
+    "end": 50.9195,
+    "speaker": "NARRATOR",
+    "text": "Also: why do so many of us have greater sympathy for dogs than humans?",
+    "translation": "그리고 또, 왜 우리는 사람보다 개에게 더 큰 연민을 느끼는 걸까요?"
+  },
+  {
+    "id": "seg-23",
+    "start": 50.9195,
+    "end": 56.455799999999996,
+    "speaker": "DUBNER",
+    "text": "I superimpose onto the face of every person who’s annoying me, the face of some dog.",
+    "translation": "저를 짜증나게 하는 모든 사람 얼굴에 강아지 얼굴을 겹쳐서 생각하는 거예요."
+  },
+  {
+    "id": "seg-24",
+    "start": 56.455799999999996,
+    "end": 58.28,
+    "speaker": "DUCKWORTH",
+    "text": "This makes you nicer to them?",
+    "translation": "그러면 그 사람들한테 더 잘해주게 되나요?"
+  },
+  {
+    "id": "seg-25",
+    "start": 58.28,
+    "end": 62.559,
+    "speaker": "DUBNER",
+    "text": "Suddenly, I’m empathetic toward every person.",
+    "translation": "갑자기 모든 사람에게 공감이 가더라고요."
+  },
+  {
+    "id": "seg-26",
+    "start": 62.559,
+    "end": 64.76,
+    "speaker": "DUBNER",
+    "text": "Angela Duckworth, I have a question to ask you.",
+    "translation": "앤절라 더크워스, 질문이 하나 있는데요."
+  },
+  {
+    "id": "seg-27",
+    "start": 64.76,
+    "end": 66.04,
+    "speaker": "DUBNER",
+    "text": "May I?",
+    "translation": "괜찮을까요?"
+  },
+  {
+    "id": "seg-28",
+    "start": 66.04,
+    "end": 66.67999999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Mmhmm.",
+    "translation": "음흠."
+  },
+  {
+    "id": "seg-29",
+    "start": 66.67999999999999,
+    "end": 78.54666666666667,
+    "speaker": "DUBNER",
+    "text": "So, it strikes me that many people, at least in the U.S., at least in the year 2020, are very quick to anger, often about relatively trivial things.",
+    "translation": "제 생각엔 많은 사람들이, 적어도 미국에서는, 또 적어도 2020년 현재는, 비교적 사소한 일에 너무 쉽게 화를 내는 것 같아요."
+  },
+  {
+    "id": "seg-30",
+    "start": 78.54666666666667,
+    "end": 79.386,
+    "speaker": "DUBNER",
+    "text": "I may be wrong.",
+    "translation": "제가 틀렸을 수도 있고요."
+  },
+  {
+    "id": "seg-31",
+    "start": 79.386,
+    "end": 85.91999999999999,
+    "speaker": "DUBNER",
+    "text": "And it may also just be that the avenues for expressing anger are so available, social media and so on.",
+    "translation": "아니면 그냥 소셜 미디어나 뭐 그런, 화를 표출할 창구가 너무 많아져서 그럴 수도 있고요."
+  },
+  {
+    "id": "seg-32",
+    "start": 85.91999999999999,
+    "end": 93.64,
+    "speaker": "DUBNER",
+    "text": "But I’ve been reading a little bit of Seneca lately — the ancient stoic Roman philosopher who had a lot to say about a lot of things.",
+    "translation": "그런데 제가 요즘 세네카를 좀 읽고 있거든요. 이것저것에 대해 할 말이 아주 많았던 고대 로마의 스토아학파 철학자 말이에요."
+  },
+  {
+    "id": "seg-33",
+    "start": 93.64,
+    "end": 96.98666666666666,
+    "speaker": "DUBNER",
+    "text": "He wrote about the detriments of anger and basically how to keep your cool.",
+    "translation": "그가 분노의 해로움과 기본적으로 평정심을 유지하는 법에 대해 썼더라고요."
+  },
+  {
+    "id": "seg-34",
+    "start": 96.98666666666666,
+    "end": 105.43975,
+    "speaker": "DUBNER",
+    "text": "And he had some advice: shifting your perspective, empathize with the other person, or to spend more time with less angry people.",
+    "translation": "몇 가지 조언을 했는데, 관점을 바꿔보거나 상대방에게 공감하거나, 아니면 화를 덜 내는 사람들과 시간을 더 많이 보내라는 것이었죠."
+  },
+  {
+    "id": "seg-35",
+    "start": 105.43975,
+    "end": 112.90857142857143,
+    "speaker": "DUBNER",
+    "text": "So let me just ask: do you also believe that too many people get angry over too many quotidian things?",
+    "translation": "그래서 여쭤볼게요. 앤절라도 너무 많은 사람들이 너무 일상적인 일들에 화를 낸다고 생각하세요?"
+  },
+  {
+    "id": "seg-36",
+    "start": 112.90857142857143,
+    "end": 119.8595,
+    "speaker": "DUBNER",
+    "text": "And do you find Seneca’s dusty advice for how to keep your cool still valid?",
+    "translation": "그리고 평정심을 유지하는 법에 대한 세네카의 케케묵은 조언이 지금도 유효하다고 보세요?"
+  },
+  {
+    "id": "seg-37",
+    "start": 119.8595,
+    "end": 123.589,
+    "speaker": "DUBNER",
+    "text": "And what’s your advice for keeping your cool?",
+    "translation": "앤절라가 조언하는 평정심 유지법은 뭔가요?"
+  },
+  {
+    "id": "seg-38",
+    "start": 123.589,
+    "end": 130.34633333333332,
+    "speaker": "DUCKWORTH",
+    "text": "So I’m not sure that there is more anger going around these days than in the past.",
+    "translation": "글쎄요, 요즘 사람들이 과거보다 더 많이 화를 내는지는 잘 모르겠어요."
+  },
+  {
+    "id": "seg-39",
+    "start": 130.34633333333332,
+    "end": 140.3595,
+    "speaker": "DUCKWORTH",
+    "text": "If you look at research on violence, in general, those trends over the last few hundred years are all toward being a much more gentle society.",
+    "translation": "폭력에 관한 연구를 보면, 대체로 지난 수백 년간 추세는 훨씬 더 온화한 사회로 나아가는 쪽이었거든요."
+  },
+  {
+    "id": "seg-40",
+    "start": 140.3595,
+    "end": 144.61925,
+    "speaker": "DUBNER",
+    "text": "It could also be that we just get angry over smaller things now.",
+    "translation": "어쩌면 이제는 그냥 더 사소한 일에 화를 내는 걸지도 몰라요."
+  },
+  {
+    "id": "seg-41",
+    "start": 144.61925,
+    "end": 148.00975,
+    "speaker": "DUBNER",
+    "text": "That we’re not concerned so much about murder and mayhem as in the past.",
+    "translation": "예전만큼 살인이나 신체적 위해 같은 일에는 덜 대면하니까요."
+  },
+  {
+    "id": "seg-42",
+    "start": 148.00975,
+    "end": 149.00925,
+    "speaker": "DUBNER",
+    "text": "We have that luxury.",
+    "translation": "우리에겐 그럴 만한 여유가 있는 거죠."
+  },
+  {
+    "id": "seg-43",
+    "start": 149.00925,
+    "end": 149.4995,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-44",
+    "start": 149.4995,
+    "end": 168.96,
+    "speaker": "DUCKWORTH",
+    "text": "Regardless of trends over centuries, I, first of all, would agree with you, that some of the technologies that we have available for immediately expressing and amplifying our anger, like Twitter, or you read an op-ed or an article and you are incensed and write an all-caps comment.",
+    "translation": "수세기에 걸친 트렌드가 어떻든 간에, 우선 저도 동의하는 부분이 있어요. 우리의 분노를 즉각적으로 표출하고 증폭시킬 수 있는 트위터 같은 기술들 말이죠. 아니면 사설이나 기사를 읽고 격분해서 격양된 댓글을 다는 것처럼요."
+  },
+  {
+    "id": "seg-45",
+    "start": 168.96,
+    "end": 170.81699999999998,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, think about it in the past.",
+    "translation": "제 말은, 예전엔 어땠는지 한번 생각해보세요."
+  },
+  {
+    "id": "seg-46",
+    "start": 170.81699999999998,
+    "end": 175.14842857142858,
+    "speaker": "DUCKWORTH",
+    "text": "You had to get out a piece of paper, and a pen, and find a stamp, and an envelope.",
+    "translation": "종이랑 펜을 꺼내고, 우표와 봉투를 찾아야 했잖아요."
+  },
+  {
+    "id": "seg-47",
+    "start": 175.14842857142858,
+    "end": 187.98000000000002,
+    "speaker": "DUCKWORTH",
+    "text": "And these are things that probably made 99 percent of the angry comments like, “Yeah, but I don’t have enough energy to do that.” So we might be getting immediate expression of anger in a way that we didn’t before.",
+    "translation": "이런 과정 때문에 화가 난 사람들의 99%는 '아, 귀찮아서 못 하겠다' 하고 넘어갔을 거예요. 그래서 지금은 예전에는 없었던 방식으로 분노를 즉각적으로 표출하고 있는 걸지도 모릅니다."
+  },
+  {
+    "id": "seg-48",
+    "start": 187.98000000000002,
+    "end": 198.65949999999998,
+    "speaker": "DUCKWORTH",
+    "text": "In terms of dusty old advice, I think some of that dusty old advice is fantastic — and I’m not an expert on the Stoics or Seneca in particular — they had a lot of great advice.",
+    "translation": "오래된 가르침에 대해서 말씀드리자면, 저는 그런 오래된 조언 중 일부는 정말 훌륭하다고 생각해요. 제가 스토학파나 특히 세네카에 대한 전문가는 아니지만, 그들은 정말 좋은 조언을 많이 남겼거든요."
+  },
+  {
+    "id": "seg-49",
+    "start": 198.65949999999998,
+    "end": 209.43,
+    "speaker": "DUCKWORTH",
+    "text": "And the modern incarnation of this anger-management advice is probably best communicated by a Stanford psychologist that I know very well named James Gross.",
+    "translation": "이러한 분노 조절 조언의 현대적 버전은 제가 잘 아는 스탠퍼드 대학교의 심리학자 제임스 그로스가 가장 잘 이야기하고 있을 거예요."
+  },
+  {
+    "id": "seg-50",
+    "start": 209.43,
+    "end": 213.83950000000002,
+    "speaker": "DUCKWORTH",
+    "text": "Who was, no coincidence — well, it’s total coincidence, I guess — he was a philosophy major.",
+    "translation": "우연의 일치인지는 모르겠지만, 사실 완전히 우연이겠죠, 그 사람 대학 전공이 철학이었거든요."
+  },
+  {
+    "id": "seg-51",
+    "start": 213.83950000000002,
+    "end": 217.64000000000001,
+    "speaker": "DUCKWORTH",
+    "text": "So we’ve actually had conversations about how the Stoics talked about anger management.",
+    "translation": "그래서 저희는 스토학파가 분노 조절에 대해 어떻게 대화했는지 실제로 이야기를 나누기도 했습니다."
+  },
+  {
+    "id": "seg-52",
+    "start": 217.64000000000001,
+    "end": 225.46359999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And I think by and large, it matches up pretty nicely with some of the modern theorizing of how we regulate emotions, including anger.",
+    "translation": "그리고 대체로 그들의 생각은 분노를 포함한 감정을 조절하는 방식에 대한 현대적 이론들과 꽤 잘 맞아떨어집니다."
+  },
+  {
+    "id": "seg-53",
+    "start": 225.46359999999999,
+    "end": 226.64,
+    "speaker": "DUBNER",
+    "text": "What was the phrase you used?",
+    "translation": "방금 뭐라고 하셨죠?"
+  },
+  {
+    "id": "seg-54",
+    "start": 226.64,
+    "end": 227.31900000000002,
+    "speaker": "DUBNER",
+    "text": "Emotional what?",
+    "translation": "감정 뭐라고요?"
+  },
+  {
+    "id": "seg-55",
+    "start": 227.31900000000002,
+    "end": 227.919,
+    "speaker": "DUBNER",
+    "text": "Regulation?",
+    "translation": "조절이요?"
+  },
+  {
+    "id": "seg-56",
+    "start": 227.919,
+    "end": 230.88,
+    "speaker": "DUCKWORTH",
+    "text": "Emotion regulation is the phrase that psychologists use.",
+    "translation": "심리학자들이 쓰는 용어는 '감정 조절'이에요."
+  },
+  {
+    "id": "seg-57",
+    "start": 230.88,
+    "end": 233.66,
+    "speaker": "DUCKWORTH",
+    "text": "But you could say anger management, emotion regulation.",
+    "translation": "하지만 분노 조절이라고 하든 감정 조절이라고 하든 상관없어요."
+  },
+  {
+    "id": "seg-58",
+    "start": 233.66,
+    "end": 240.44400000000002,
+    "speaker": "DUCKWORTH",
+    "text": "The idea is that you have an emotion, and then you decide whether you want to have that emotion more or less.",
+    "translation": "핵심은 어떤 감정이 생겼을 때, 그 감정을 더 키우고 싶은지 아니면 가라앉히고 싶은지 스스로 결정한다는 것입니다."
+  },
+  {
+    "id": "seg-59",
+    "start": 240.44400000000002,
+    "end": 241.879,
+    "speaker": "DUCKWORTH",
+    "text": "And then you do something about it.",
+    "translation": "그리고 그에 맞춰 어떤 행동을 하는 거죠."
+  },
+  {
+    "id": "seg-60",
+    "start": 241.879,
+    "end": 242.3195,
+    "speaker": "DUBNER",
+    "text": "Wait a minute.",
+    "translation": "잠깐만요."
+  },
+  {
+    "id": "seg-61",
+    "start": 242.3195,
+    "end": 244.439,
+    "speaker": "DUBNER",
+    "text": "You already lost most of us there.",
+    "translation": "벌써 무슨 말인지 이해하기 힘든데요."
+  },
+  {
+    "id": "seg-62",
+    "start": 244.439,
+    "end": 244.739,
+    "speaker": "DUCKWORTH",
+    "text": "Exactly!",
+    "translation": "맞아요!"
+  },
+  {
+    "id": "seg-63",
+    "start": 244.739,
+    "end": 245.039,
+    "speaker": "DUCKWORTH",
+    "text": "Right?",
+    "translation": "그렇죠?"
+  },
+  {
+    "id": "seg-64",
+    "start": 245.039,
+    "end": 248.1795,
+    "speaker": "DUCKWORTH",
+    "text": "You probably think you can’t really do anything about your emotions.",
+    "translation": "아마 다들 감정은 어떻게 조절할 수 없는 거라고 생각하실 거예요."
+  },
+  {
+    "id": "seg-65",
+    "start": 248.1795,
+    "end": 251.21057142857143,
+    "speaker": "DUCKWORTH",
+    "text": "They come and go, and they’re not things that can be controlled.",
+    "translation": "감정은 그냥 찾아왔다 떠나는 거고, 우리가 통제할 수 있는 게 아니라고요."
+  },
+  {
+    "id": "seg-66",
+    "start": 251.21057142857143,
+    "end": 252.86842857142855,
+    "speaker": "DUCKWORTH",
+    "text": "Is that what you think?",
+    "translation": "스티븐도 그렇게 생각하시나요?"
+  },
+  {
+    "id": "seg-67",
+    "start": 252.86842857142855,
+    "end": 253.59983333333332,
+    "speaker": "DUBNER",
+    "text": "Well, yes.",
+    "translation": "음, 네."
+  },
+  {
+    "id": "seg-68",
+    "start": 253.59983333333332,
+    "end": 260.392,
+    "speaker": "DUBNER",
+    "text": "And also that there is necessarily a time lapse between experiencing the emotion and acting on the emotion.",
+    "translation": "그리고 감정을 느끼는 것과 그 감정에 따라 행동하는 것 사이에는 어쩔 수 없이 시간 차가 존재한다는 생각도 들고요."
+  },
+  {
+    "id": "seg-69",
+    "start": 260.392,
+    "end": 268.5196666666667,
+    "speaker": "DUBNER",
+    "text": "I think that’s what we see a lot, is that people experience an emotion and immediately respond to it without thinking, “Oh, what is this emotion?",
+    "translation": "우리가 흔히 보는 게 그런 거잖아요. 사람들이 감정을 느끼면, '어, 이게 무슨 감정이지?'라고 생각할 겨를도 없이 즉각적으로 반응해 버리는 거요."
+  },
+  {
+    "id": "seg-70",
+    "start": 268.5196666666667,
+    "end": 274.1916,
+    "speaker": "DUBNER",
+    "text": "What are the possible outcomes if I express my response in such and such a way?” And so on.",
+    "translation": "'내가 이런 식으로 반응하면 어떤 결과가 생길까?' 같은 고민도 안 하고 말이죠."
+  },
+  {
+    "id": "seg-71",
+    "start": 274.1916,
+    "end": 275.1515789473684,
+    "speaker": "DUCKWORTH",
+    "text": "And is this emotion desirable?",
+    "translation": "그리고 '이 감정이 나한테 바람직한가?'"
+  },
+  {
+    "id": "seg-72",
+    "start": 275.1515789473684,
+    "end": 276.30105263157895,
+    "speaker": "DUCKWORTH",
+    "text": "Do I want more of it?",
+    "translation": "'이 감정을 더 느끼고 싶은가?'"
+  },
+  {
+    "id": "seg-73",
+    "start": 276.30105263157895,
+    "end": 277.64210526315793,
+    "speaker": "DUCKWORTH",
+    "text": "Do I not want more of it?",
+    "translation": "'아니면 그만 느끼고 싶은가?' 같은 거요."
+  },
+  {
+    "id": "seg-74",
+    "start": 277.64210526315793,
+    "end": 281.09912499999996,
+    "speaker": "DUCKWORTH",
+    "text": "Which, by the way, is making you sound a lot like a mindfulness person, Stephen.",
+    "translation": "그런데 방금 하신 말씀은 꼭 마음챙김 예찬론자처럼 들리네요, 스티븐."
+  },
+  {
+    "id": "seg-75",
+    "start": 281.09912499999996,
+    "end": 282.8,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t know if you want that honorific.",
+    "translation": "그런 타이틀을 좋아하실지는 모르겠지만요."
+  },
+  {
+    "id": "seg-76",
+    "start": 282.8,
+    "end": 283.68,
+    "speaker": "DUBNER",
+    "text": "I’m pro-mindfulness.",
+    "translation": "저 마음챙김 찬성해요."
+  },
+  {
+    "id": "seg-77",
+    "start": 283.68,
+    "end": 285,
+    "speaker": "DUCKWORTH",
+    "text": "Oh, you’re pro-mindfulness?",
+    "translation": "오, 마음챙김 찬성파시라고요?"
+  },
+  {
+    "id": "seg-78",
+    "start": 285,
+    "end": 287.88,
+    "speaker": "DUBNER",
+    "text": "Do I seem like an anti-mindfulness person?",
+    "translation": "제가 마음챙김을 싫어할 사람처럼 보이나요?"
+  },
+  {
+    "id": "seg-79",
+    "start": 287.88,
+    "end": 291.54925000000003,
+    "speaker": "DUCKWORTH",
+    "text": "Sort of too crotchety to be mindful.",
+    "translation": "마음챙김을 하기에는 성격이 좀 까칠하신 편이잖아요."
+  },
+  {
+    "id": "seg-80",
+    "start": 291.54925000000003,
+    "end": 294.26192857142854,
+    "speaker": "DUCKWORTH",
+    "text": "Because all the mindfulness people are so nice.",
+    "translation": "마음챙김 하는 사람들은 다들 너무 착하잖아요."
+  },
+  {
+    "id": "seg-81",
+    "start": 294.26192857142854,
+    "end": 298.15999999999997,
+    "speaker": "DUBNER",
+    "text": "I find a lot of that is, I don’t want to say a veneer, quite.",
+    "translation": "저는 그 상당수가, 뭐랄까, 딱 겉치레라고 말하고 싶지는 않은데요."
+  },
+  {
+    "id": "seg-82",
+    "start": 298.15999999999997,
+    "end": 304.6738461538461,
+    "speaker": "DUBNER",
+    "text": "I used to spend a lot of time in a place where there was a big Buddhist monastery that a lot of people from New York City would go up to.",
+    "translation": "제가 예전에 뉴욕시 사람들이 많이들 올라가는 큰 불교 사원이 있는 곳에서 시간을 꽤 보냈거든요."
+  },
+  {
+    "id": "seg-83",
+    "start": 304.6738461538461,
+    "end": 317.72,
+    "speaker": "DUBNER",
+    "text": "But there were a lot of what we used to call temporary and angry Buddhists there, people who had come up for their fix, and then walk away thinking that they had mastered a certain form of emotion regulation.",
+    "translation": "그런데 거기에는 저희가 '임시방편의 분노한 불교 신자'라고 부르던 사람들이 많았어요. 잠깐 치유받으러 왔다가, 어떤 감정 조절 방법을 통달했다고 생각하며 돌아가는 사람들이요."
+  },
+  {
+    "id": "seg-84",
+    "start": 317.72,
+    "end": 324.37333333333333,
+    "speaker": "DUBNER",
+    "text": "They would just project a slight veneer of sangfroid, whereas in fact they were so angry.",
+    "translation": "그들은 그저 약간의 침착함을 가장할 뿐이었죠, 사실 속으로는 엄청나게 화가 나 있으면서요."
+  },
+  {
+    "id": "seg-85",
+    "start": 324.37333333333333,
+    "end": 326.569,
+    "speaker": "DUCKWORTH",
+    "text": "Just below the surface their blood was boiling.",
+    "translation": "겉으로만 그렇지 속으로는 피가 끓고 있었던 거죠."
+  },
+  {
+    "id": "seg-86",
+    "start": 326.569,
+    "end": 329.468,
+    "speaker": "DUBNER",
+    "text": "So I actually feel like I’m a pretty unangry person.",
+    "translation": "그래서 저는 사실 스스로 꽤 화를 안 내는 사람이라고 생각해요."
+  },
+  {
+    "id": "seg-87",
+    "start": 329.468,
+    "end": 335.199,
+    "speaker": "DUBNER",
+    "text": "But when I do experience a strong response to something, I do tend to not tamp it down.",
+    "translation": "하지만 뭔가에 대해 강한 반응이 올 때면, 그걸 억누르지 않는 경향이 있어요."
+  },
+  {
+    "id": "seg-88",
+    "start": 335.199,
+    "end": 336.95233333333334,
+    "speaker": "DUBNER",
+    "text": "“Crotchety” is how you defined it.",
+    "translation": "아까 '괴팍하다'고 정의하셨잖아요."
+  },
+  {
+    "id": "seg-89",
+    "start": 336.95233333333334,
+    "end": 338.84566666666666,
+    "speaker": "DUCKWORTH",
+    "text": "It’s okay, by the way, to feel angry.",
+    "translation": "참고로, 화를 느끼는 건 괜찮아요."
+  },
+  {
+    "id": "seg-90",
+    "start": 338.84566666666666,
+    "end": 346.1314285714286,
+    "speaker": "DUCKWORTH",
+    "text": "I’m not saying that you should regulate every emotion and that when you experience something like anger, you should immediately tamp it down.",
+    "translation": "모든 감정을 조절해야 한다거나, 분노 같은 감정을 느꼈을 때 즉시 억눌러야 한다고 말하는 건 아니에요."
+  },
+  {
+    "id": "seg-91",
+    "start": 346.1314285714286,
+    "end": 349.86,
+    "speaker": "DUCKWORTH",
+    "text": "Anger is an emotion that is observed across all cultures.",
+    "translation": "분노는 모든 문화권에서 관찰되는 감정이죠."
+  },
+  {
+    "id": "seg-92",
+    "start": 349.86,
+    "end": 351.48,
+    "speaker": "DUBNER",
+    "text": "And useful, yes?",
+    "translation": "그리고 유용하기도 하고요, 그렇죠?"
+  },
+  {
+    "id": "seg-93",
+    "start": 351.48,
+    "end": 352.24,
+    "speaker": "DUCKWORTH",
+    "text": "And useful.",
+    "translation": "네, 유용하죠."
+  },
+  {
+    "id": "seg-94",
+    "start": 352.24,
+    "end": 357.399,
+    "speaker": "DUCKWORTH",
+    "text": "Like most emotions, you could argue all emotions, evolved for survival purposes.",
+    "translation": "대부분의 감정처럼, 아니 모든 감정이 그렇다고 할 수 있는데, 생존을 목적으로 진화했어요."
+  },
+  {
+    "id": "seg-95",
+    "start": 357.399,
+    "end": 369.6066666666667,
+    "speaker": "DUCKWORTH",
+    "text": "I think the consensus is, in the scientific community, that anger is the feeling when you think that your rights have been violated and you have a goal that’s being blocked.",
+    "translation": "과학계의 중론은, 분노란 자신의 권리가 침해당했고 목표 달성이 저지당했다고 생각할 때 느끼는 감정이라는 거예요."
+  },
+  {
+    "id": "seg-96",
+    "start": 369.6066666666667,
+    "end": 384.3712857142857,
+    "speaker": "DUCKWORTH",
+    "text": "And that is why when somebody cuts you off in traffic or says something that’s contra your political beliefs, you feel a kind of indignation that your right has been grievously violated.",
+    "translation": "그래서 누군가 운전 중에 끼어들거나 당신의 정치적 신념에 반하는 말을 할 때, 당신의 권리가 심각하게 침해당했다는 생각에 일종의 분노를 느끼게 되는 거죠."
+  },
+  {
+    "id": "seg-97",
+    "start": 384.3712857142857,
+    "end": 386.7305714285714,
+    "speaker": "DUCKWORTH",
+    "text": "So it’s okay to feel angry sometimes.",
+    "translation": "그러니 때로는 화를 느껴도 괜찮다는 거죠."
+  },
+  {
+    "id": "seg-98",
+    "start": 386.7305714285714,
+    "end": 392.264,
+    "speaker": "DUCKWORTH",
+    "text": "I think, for a lot of us, we feel like we’re angry too long, or we get angry over the stupid things.",
+    "translation": "제 생각에 우리 대부분은 너무 오랫동안 화를 내거나, 혹은 어리석은 일에 화를 낸다고 느끼는 것 같아요."
+  },
+  {
+    "id": "seg-99",
+    "start": 392.264,
+    "end": 402.728,
+    "speaker": "DUCKWORTH",
+    "text": "You know, if somebody does cut you off in traffic, or says something on Twitter that makes you mad, it’s not clear to me how expressing that anger is useful.",
+    "translation": "있잖아요, 누군가 운전할 때 끼어들거나 트위터에서 화나게 만드는 말을 할 때, 그 분노를 표현하는 게 과연 얼마나 유용한지는 잘 모르겠어요."
+  },
+  {
+    "id": "seg-100",
+    "start": 402.728,
+    "end": 405.299,
+    "speaker": "DUCKWORTH",
+    "text": "You know, I’m a pedestrian, not a driver.",
+    "translation": "알다시피, 전 운전자가 아니라 보행자잖아요."
+  },
+  {
+    "id": "seg-101",
+    "start": 405.299,
+    "end": 414.0981818181818,
+    "speaker": "DUCKWORTH",
+    "text": "But I would walk around shaking my fist and pretending to take photos of cars who had done illegal things and— Do you do that?!",
+    "translation": "그래서 전 걸어 다닐 때 불법 운전을 한 차들을 향해 주먹을 흔들며 사진을 찍는 척하곤 했어요. 혹시 당신도 그러시나요?"
+  },
+  {
+    "id": "seg-102",
+    "start": 414.0981818181818,
+    "end": 419.44800000000004,
+    "speaker": "DUBNER",
+    "text": "I mean, when I used to walk around New York City with my kids when they were little, my best idea— I’ve never done this.",
+    "translation": "말하자면, 예전에 아이들이 어렸을 때 뉴욕에서 같이 걸어 다닐 때 생각한 최고 아이디어가 있는데요, 실제로 해보진 않았어요."
+  },
+  {
+    "id": "seg-103",
+    "start": 419.44800000000004,
+    "end": 424.34000000000003,
+    "speaker": "DUBNER",
+    "text": "Do you know, those price sticker guns that you use in a grocery store to put $4.99 on the—",
+    "translation": "마트에서 물건에 4.99달러짜리 가격표 붙일 때 쓰는 가격 표시기 아시죠?"
+  },
+  {
+    "id": "seg-104",
+    "start": 424.34000000000003,
+    "end": 425.6,
+    "speaker": "DUCKWORTH",
+    "text": "You mean the labels?",
+    "translation": "라벨기 말씀이시죠?"
+  },
+  {
+    "id": "seg-105",
+    "start": 425.6,
+    "end": 426.08,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-106",
+    "start": 426.08,
+    "end": 426.71999999999997,
+    "speaker": "DUBNER",
+    "text": "Label gun.",
+    "translation": "라벨기요."
+  },
+  {
+    "id": "seg-107",
+    "start": 426.71999999999997,
+    "end": 429.09950000000003,
+    "speaker": "DUBNER",
+    "text": "So it’s basically a bumper-sticker gun.",
+    "translation": "그러니까 기본적으로 범퍼 스티커 총 같은 거죠."
+  },
+  {
+    "id": "seg-108",
+    "start": 429.09950000000003,
+    "end": 438.12,
+    "speaker": "DUBNER",
+    "text": "You could put it on any part of a car, and it would basically say on it something to the effect of “I am an a**hole” in big letters.",
+    "translation": "차 아무 데나 붙일 수 있고, 거기엔 굵은 글씨로 \"나는 얼빠진 놈이다\" 같은 내용이 적혀 있는 거예요."
+  },
+  {
+    "id": "seg-109",
+    "start": 438.12,
+    "end": 439.92,
+    "speaker": "DUCKWORTH",
+    "text": "I was thinking, “I’m a jerk,” but yeah.",
+    "translation": "저는 \"난 양아치다\" 정도로 생각했지만, 그래요, 맞아요."
+  },
+  {
+    "id": "seg-110",
+    "start": 439.92,
+    "end": 440.14666666666665,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-111",
+    "start": 440.14666666666665,
+    "end": 441.96,
+    "speaker": "DUBNER",
+    "text": "We’ll say, I am a jerk.",
+    "translation": "\"난 양아치다\"로 하죠."
+  },
+  {
+    "id": "seg-112",
+    "start": 441.96,
+    "end": 442.6476,
+    "speaker": "DUCKWORTH",
+    "text": "Fewer letters too.",
+    "translation": "글자 수도 더 적네요."
+  },
+  {
+    "id": "seg-113",
+    "start": 442.6476,
+    "end": 456.226,
+    "speaker": "DUBNER",
+    "text": "And then in smaller letters, it would say, “because I like to run over people with my car.” And whenever somebody would actually drive across an intersection where I was walking, I would just have my bumper-sticker gun in my holster.",
+    "translation": "그리고 그 밑에 작은 글씨로 \"차가 사람을 치려 하는데도 그냥 달리기 때문이다\"라고 쓰는 거죠. 제가 길을 건너고 있는데 교차로를 그냥 지나가는 차가 있으면, 전 집총 벨트에 찬 범퍼 스티커 총을 꺼내 드는 거예요."
+  },
+  {
+    "id": "seg-114",
+    "start": 456.226,
+    "end": 460.115,
+    "speaker": "DUBNER",
+    "text": "And just put it on their car, and then at some point they would see it.",
+    "translation": "그리고 그 차에 찰칵 붙여버리면, 운전자는 나중에 그걸 보게 되겠죠."
+  },
+  {
+    "id": "seg-115",
+    "start": 460.115,
+    "end": 463.68,
+    "speaker": "DUBNER",
+    "text": "And then think, “Oh, wow, somebody really thought I was a jerk.”",
+    "translation": "그러고는 '오, 세상에, 누군가 날 정말 양아치라고 생각했구나' 하고 느끼겠죠."
+  },
+  {
+    "id": "seg-116",
+    "start": 463.68,
+    "end": 466.0656666666667,
+    "speaker": "DUCKWORTH",
+    "text": "You’re going to be like the traffic vigilante.",
+    "translation": "무슨 교통 자경단이라도 되실 기세네요."
+  },
+  {
+    "id": "seg-117",
+    "start": 466.0656666666667,
+    "end": 466.4923333333333,
+    "speaker": "DUBNER",
+    "text": "Okay.",
+    "translation": "그쵸."
+  },
+  {
+    "id": "seg-118",
+    "start": 466.4923333333333,
+    "end": 467.759,
+    "speaker": "DUBNER",
+    "text": "So let’s say this.",
+    "translation": "그러니까 이거예요."
+  },
+  {
+    "id": "seg-119",
+    "start": 467.759,
+    "end": 468.9995,
+    "speaker": "DUBNER",
+    "text": "I have anger toward them.",
+    "translation": "저도 그 사람들에게 화가 나 있어요."
+  },
+  {
+    "id": "seg-120",
+    "start": 468.9995,
+    "end": 470.5995,
+    "speaker": "DUBNER",
+    "text": "But I haven’t done anything about it.",
+    "translation": "하지만 전 행동으로 옮기진 않아요."
+  },
+  {
+    "id": "seg-121",
+    "start": 470.5995,
+    "end": 472.52,
+    "speaker": "DUBNER",
+    "text": "And I don’t bang on their car or anything.",
+    "translation": "남의 차를 막 두드리거나 그러지도 않고요."
+  },
+  {
+    "id": "seg-122",
+    "start": 472.52,
+    "end": 474.25300000000004,
+    "speaker": "DUCKWORTH",
+    "text": "I have done that once by the way.",
+    "translation": "참고로 전 한번 그런 적 있어요."
+  },
+  {
+    "id": "seg-123",
+    "start": 474.25300000000004,
+    "end": 476.8523333333333,
+    "speaker": "DUCKWORTH",
+    "text": "I have slapped someone’s roof of their car.",
+    "translation": "남의 차 지붕을 손바닥으로 친 적이 있어요."
+  },
+  {
+    "id": "seg-124",
+    "start": 476.8523333333333,
+    "end": 478.30133333333333,
+    "speaker": "DUBNER",
+    "text": "And how did you feel afterwards?",
+    "translation": "그러고 나서 기분은 어땠어요?"
+  },
+  {
+    "id": "seg-125",
+    "start": 478.30133333333333,
+    "end": 490.18,
+    "speaker": "DUCKWORTH",
+    "text": "Well the thing about anger is that in general, emotion researchers don’t think that catharsis like — express it, you’ll get it out — in general, that’s not the consensus of the scientific community.",
+    "translation": "음, 분노에 관해서는요, 보통 감정 연구자들은 카타르시스, 그러니까 '표출하면 해소된다'는 걸 믿지 않아요. 그게 과학계의 정설은 아니거든요."
+  },
+  {
+    "id": "seg-126",
+    "start": 490.18,
+    "end": 493.46,
+    "speaker": "DUCKWORTH",
+    "text": "It does not actually reduce your negative emotions.",
+    "translation": "그게 실제로 부정적인 감정을 줄여주지는 않아요."
+  },
+  {
+    "id": "seg-127",
+    "start": 493.46,
+    "end": 494.928,
+    "speaker": "DUCKWORTH",
+    "text": "It often increases them.",
+    "translation": "오히려 더 키우는 경우가 많죠."
+  },
+  {
+    "id": "seg-128",
+    "start": 494.928,
+    "end": 498.8,
+    "speaker": "DUCKWORTH",
+    "text": "So we probably shouldn’t do things like slam our palm on cars.",
+    "translation": "그러니까 차에다 손바닥을 내리치는 것 같은 행동은 안 하는 게 좋겠죠."
+  },
+  {
+    "id": "seg-129",
+    "start": 498.8,
+    "end": 502.31925,
+    "speaker": "DUCKWORTH",
+    "text": "And by the way, my husband thinks I’m going to get killed one day.",
+    "translation": "아, 그리고 제 남편은 제가 언젠가 맞아 죽을 거래요."
+  },
+  {
+    "id": "seg-130",
+    "start": 502.31925,
+    "end": 511.3885714285714,
+    "speaker": "DUCKWORTH",
+    "text": "One of these motorists is going to feel like their rights have been violated, because somebody is now banging on their car, and then they’re going to pull over and kill me.",
+    "translation": "운전자 중 누군가가 자기 차를 두드리니까 자기 권리가 침해당했다고 느껴서, 차를 세우고는 저를 죽일 거라는 거죠."
+  },
+  {
+    "id": "seg-131",
+    "start": 511.3885714285714,
+    "end": 515.963888888889,
+    "speaker": "DUCKWORTH",
+    "text": "So, I think that the question is: what is the optimal way to be angry?",
+    "translation": "그래서 제 생각엔 질문은 이거예요. 화를 내는 최적의 방법은 뭘까?"
+  },
+  {
+    "id": "seg-132",
+    "start": 515.963888888889,
+    "end": 519.0167142857143,
+    "speaker": "DUCKWORTH",
+    "text": "Seneca did have some good advice, I think.",
+    "translation": "세네카가 좋은 조언을 좀 했던 것 같아요."
+  },
+  {
+    "id": "seg-133",
+    "start": 519.0167142857143,
+    "end": 524.0559999999999,
+    "speaker": "DUCKWORTH",
+    "text": "So, one of his words of wisdom was to try to nip it in the bud.",
+    "translation": "그의 조언 중 하나가 바로 싹을 잘라버리라는 거였어요."
+  },
+  {
+    "id": "seg-134",
+    "start": 524.0559999999999,
+    "end": 535.9733333333332,
+    "speaker": "DUCKWORTH",
+    "text": "And the idea that you would not want to deal with anger when you have fully lost it, but when you’re just a little irritated, is good advice, and it’s consistent with modern scientific research on emotion regulation.",
+    "translation": "완전히 이성을 잃었을 때가 아니라, 살짝 짜증이 났을 때 분노에 대처하라는 생각은 아주 좋은 조언이고, 감정 조절에 대한 현대 과학 연구와도 일치해요."
+  },
+  {
+    "id": "seg-135",
+    "start": 535.9733333333332,
+    "end": 538.032,
+    "speaker": "DUBNER",
+    "text": "So that sounds perfectly sensible.",
+    "translation": "정말 지당한 말씀이네요."
+  },
+  {
+    "id": "seg-136",
+    "start": 538.032,
+    "end": 544.5733333333334,
+    "speaker": "DUBNER",
+    "text": "I know Seneca also advised that you should read poetry and history to amuse yourself and to be diverted.",
+    "translation": "세네카가 또 기분 전환을 위해 시와 역사를 읽어서 즐거움을 찾으라고 조언한 걸로 알아요."
+  },
+  {
+    "id": "seg-137",
+    "start": 544.5733333333334,
+    "end": 545.872,
+    "speaker": "DUCKWORTH",
+    "text": "Was he selling a book?",
+    "translation": "그 사람 책 팔던 사람이었어요?"
+  },
+  {
+    "id": "seg-138",
+    "start": 545.872,
+    "end": 548.2266666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Was he like, you should read my poetry?",
+    "translation": "‘제 시를 읽으셔야 합니다’ 뭐 이런 거 아니었고요?"
+  },
+  {
+    "id": "seg-139",
+    "start": 548.2266666666667,
+    "end": 549.2666666666667,
+    "speaker": "DUBNER",
+    "text": "I don’t know.",
+    "translation": "글쎄요."
+  },
+  {
+    "id": "seg-140",
+    "start": 549.2666666666667,
+    "end": 551,
+    "speaker": "DUBNER",
+    "text": "But I will say this.",
+    "translation": "하지만 이 말은 하고 싶네요."
+  },
+  {
+    "id": "seg-141",
+    "start": 551,
+    "end": 563.8,
+    "speaker": "DUBNER",
+    "text": "Sometimes when I come home at the end of a day, and I’ve had a particularly difficult day, one of the first things I do is I just reach — there’s a particular volume of poetry that I happen to like a lot these days.",
+    "translation": "가끔 하루 끝에 집에 돌아왔을 때, 특히나 힘든 날이었으면요, 제가 제일 먼저 하는 일 중 하나가 바로 손을 뻗는 거예요, 요즘 제가 마침 아주 좋아하는 특정 시집이 있거든요."
+  },
+  {
+    "id": "seg-142",
+    "start": 563.8,
+    "end": 566.0396666666667,
+    "speaker": "DUBNER",
+    "text": "I’d read a few poems, and I feel great.",
+    "translation": "시 몇 편을 읽고 나면 기분이 아주 좋아져요."
+  },
+  {
+    "id": "seg-143",
+    "start": 566.0396666666667,
+    "end": 567.64,
+    "speaker": "DUBNER",
+    "text": "It really works for me.",
+    "translation": "저한테는 정말 효과가 좋더라고요."
+  },
+  {
+    "id": "seg-144",
+    "start": 567.64,
+    "end": 569.399,
+    "speaker": "DUCKWORTH",
+    "text": "When’s the last time you were angry?",
+    "translation": "마지막으로 화냈던 게 언제예요?"
+  },
+  {
+    "id": "seg-145",
+    "start": 569.399,
+    "end": 573.12,
+    "speaker": "DUCKWORTH",
+    "text": "Tell me about it, and then did you reach for that volume of poetry?",
+    "translation": "얘기 좀 해주세요. 그리고 그때도 그 시집에 손을 뻗었나요?"
+  },
+  {
+    "id": "seg-146",
+    "start": 573.12,
+    "end": 578.6666666666667,
+    "speaker": "DUBNER",
+    "text": "Well, I’ve been in lockdown with my family for the past, gosh, two months or longer.",
+    "translation": "글쎄요, 전 지난, 어휴, 두 달 넘게 가족이랑 같이 봉쇄 상태로 있었어요."
+  },
+  {
+    "id": "seg-147",
+    "start": 578.6666666666667,
+    "end": 580.1866666666666,
+    "speaker": "DUBNER",
+    "text": "You know, living in New York City.",
+    "translation": "뉴욕시에 살면서 말이죠."
+  },
+  {
+    "id": "seg-148",
+    "start": 580.1866666666666,
+    "end": 581.3591666666666,
+    "speaker": "DUBNER",
+    "text": "And my wife was sick.",
+    "translation": "그리고 아내가 아팠어요."
+  },
+  {
+    "id": "seg-149",
+    "start": 581.3591666666666,
+    "end": 583.25,
+    "speaker": "DUBNER",
+    "text": "And we were very, very worried.",
+    "translation": "그래서 저희는 정말, 정말 걱정을 많이 했죠."
+  },
+  {
+    "id": "seg-150",
+    "start": 583.25,
+    "end": 590.8159999999999,
+    "speaker": "DUBNER",
+    "text": "And there were periods in there where one of my kids — honestly, they were being great and very helpful and so on.",
+    "translation": "그 와중에도 아이들이... 솔직히 애들은 참 잘해주고, 많이 도와주고 그랬어요."
+  },
+  {
+    "id": "seg-151",
+    "start": 590.8159999999999,
+    "end": 591.9000000000001,
+    "speaker": "DUBNER",
+    "text": "But still, they’re teenagers.",
+    "translation": "하지만 그래도 걔들은 십 대잖아요."
+  },
+  {
+    "id": "seg-152",
+    "start": 591.9000000000001,
+    "end": 593.0393333333334,
+    "speaker": "DUBNER",
+    "text": "They’re locked up.",
+    "translation": "집에 갇혀 있고요."
+  },
+  {
+    "id": "seg-153",
+    "start": 593.0393333333334,
+    "end": 594.4879444444445,
+    "speaker": "DUBNER",
+    "text": "They both got yanked out of school.",
+    "translation": "둘 다 학교도 갑자기 못 가게 됐고요."
+  },
+  {
+    "id": "seg-154",
+    "start": 594.4879444444445,
+    "end": 597.4131666666666,
+    "speaker": "DUBNER",
+    "text": "And they would do or say something that I would get really angry with.",
+    "translation": "그러다 애들이 제가 정말 화날 만한 행동이나 말을 하곤 했어요."
+  },
+  {
+    "id": "seg-155",
+    "start": 597.4131666666666,
+    "end": 602.5395,
+    "speaker": "DUBNER",
+    "text": "And I would recognize it wasn’t an offense deserving the level of my anger.",
+    "translation": "그러면 저는 그게 제가 그렇게까지 화낼 일은 아니라는 걸 알았죠."
+  },
+  {
+    "id": "seg-156",
+    "start": 602.5395,
+    "end": 605.7194999999999,
+    "speaker": "DUBNER",
+    "text": "And I would just remove myself from the situation.",
+    "translation": "그리고는 그냥 그 자리를 피했어요."
+  },
+  {
+    "id": "seg-157",
+    "start": 605.7194999999999,
+    "end": 607.299,
+    "speaker": "DUBNER",
+    "text": "I wouldn’t say, “I’m so angry.",
+    "translation": "제가 '나 너무 화났어."
+  },
+  {
+    "id": "seg-158",
+    "start": 607.299,
+    "end": 610.4857142857144,
+    "speaker": "DUBNER",
+    "text": "I’m going to go read poetry.” I’d just leave the room.",
+    "translation": "시 읽으러 갈 거야.'라고 말하는 대신 그냥 방을 나왔죠."
+  },
+  {
+    "id": "seg-159",
+    "start": 610.4857142857144,
+    "end": 618.36,
+    "speaker": "DUBNER",
+    "text": "And I would just then go sit and close the door, and for 10 or 15 minutes, read some, in this case, Yehuda Amichai poetry.",
+    "translation": "그리고는 그냥 가서 앉아 문을 닫고, 한 10분에서 15분 정도, 그 경우에는 예후다 아미하이의 시를 좀 읽었어요."
+  },
+  {
+    "id": "seg-160",
+    "start": 618.36,
+    "end": 625.5993333333333,
+    "speaker": "DUBNER",
+    "text": "And it would make me feel like part of the human family again in a way that I hadn’t 10 minutes ago.",
+    "translation": "그러면 10분 전엔 안 그랬는데, 다시 사람들과 어우러져 사는 기분이 들더라고요."
+  },
+  {
+    "id": "seg-161",
+    "start": 625.5993333333333,
+    "end": 626.44,
+    "speaker": "DUCKWORTH",
+    "text": "That’s very evolved.",
+    "translation": "아주 발전된 방법이네요."
+  },
+  {
+    "id": "seg-162",
+    "start": 626.44,
+    "end": 629.444375,
+    "speaker": "DUCKWORTH",
+    "text": "I’m going to give you an “A,” Stephen, for that.",
+    "translation": "스티븐, 그 점은 A 드릴게요."
+  },
+  {
+    "id": "seg-163",
+    "start": 629.444375,
+    "end": 631.2648750000001,
+    "speaker": "DUBNER",
+    "text": "For a crotchety person.",
+    "translation": "괴팍한 사람치고는요."
+  },
+  {
+    "id": "seg-164",
+    "start": 631.2648750000001,
+    "end": 632.0057142857144,
+    "speaker": "DUCKWORTH",
+    "text": "It’s curved.",
+    "translation": "상대평가라서 그래요."
+  },
+  {
+    "id": "seg-165",
+    "start": 632.0057142857144,
+    "end": 632.2914285714286,
+    "speaker": "DUCKWORTH",
+    "text": "No.",
+    "translation": "아니에요."
+  },
+  {
+    "id": "seg-166",
+    "start": 632.2914285714286,
+    "end": 638.7,
+    "speaker": "DUCKWORTH",
+    "text": "I think it’s a really evolved response to anger, because I mentioned this psychologist, James Gross.",
+    "translation": "제가 제임스 그로스라는 심리학자를 언급했었는데, 정말 분노에 대한 아주 발전된 반응이라고 생각해요."
+  },
+  {
+    "id": "seg-167",
+    "start": 638.7,
+    "end": 644.36,
+    "speaker": "DUCKWORTH",
+    "text": "And his advice when you’re angry is, first and foremost, to change your situation.",
+    "translation": "화가 났을 때 그가 하는 조언이, 무엇보다도 먼저, 상황을 바꾸라는 거거든요."
+  },
+  {
+    "id": "seg-168",
+    "start": 644.36,
+    "end": 649,
+    "speaker": "DUCKWORTH",
+    "text": "Leave the room, change the actual circumstances that are making you angry.",
+    "translation": "방을 나가거나, 본인을 화나게 만드는 실제 상황을 바꾸라는 거죠."
+  },
+  {
+    "id": "seg-169",
+    "start": 649,
+    "end": 654.9533333333334,
+    "speaker": "DUCKWORTH",
+    "text": "The second thing when you drew your attention to something else, I mean, that’s why a lot of people read.",
+    "translation": "그리고 두 번째로 다른 데로 주의를 돌리셨잖아요. 사실 많은 사람이 독서하는 이유가 바로 그거예요."
+  },
+  {
+    "id": "seg-170",
+    "start": 654.9533333333334,
+    "end": 656.3996666666667,
+    "speaker": "DUCKWORTH",
+    "text": "I read before bed every night.",
+    "translation": "저도 매일 밤 자기 전에 책을 읽어요."
+  },
+  {
+    "id": "seg-171",
+    "start": 656.3996666666667,
+    "end": 662.2194999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And it’s specifically to take my mind off of everything that is bothering me.",
+    "translation": "저를 괴롭히는 모든 일들에서 잠시 벗어나기 위해서죠."
+  },
+  {
+    "id": "seg-172",
+    "start": 662.2194999999999,
+    "end": 663.74,
+    "speaker": "DUCKWORTH",
+    "text": "So you distracted yourself.",
+    "translation": "그러니까 스스로 주의를 분산시킨 거죠."
+  },
+  {
+    "id": "seg-173",
+    "start": 663.74,
+    "end": 669.9885714285715,
+    "speaker": "DUCKWORTH",
+    "text": "He calls that “selective attention.” And then, finally, you get some points for just having some strategy at all.",
+    "translation": "그는 그걸 '선택적 주의'라고 불러요. 그리고 마지막으로, 일단 전략이란 게 있다는 것만으로도 점수를 좀 받으실 수 있어요."
+  },
+  {
+    "id": "seg-174",
+    "start": 669.9885714285715,
+    "end": 678.7890909090909,
+    "speaker": "DUCKWORTH",
+    "text": "Because I think the problem with anger is that even though Seneca wants us to nip it in the bud, for me, when I lose my temper, it is like the horse is leaving the barn.",
+    "translation": "왜냐하면 제 생각에 분노의 문제는, 세네카는 싹을 잘라버리라고 했지만, 저 같은 경우 일단 화가 나면 이미 엎질러진 물 같거든요."
+  },
+  {
+    "id": "seg-175",
+    "start": 678.7890909090909,
+    "end": 688.8971428571429,
+    "speaker": "DUCKWORTH",
+    "text": "And the idea that you would have some kind of intentional strategy so that this doesn’t happen too often or too badly — yeah, I’m going to give you an A.",
+    "translation": "그런 일이 너무 자주, 혹은 너무 심하게 일어나지 않도록 일종의 의도적인 전략을 가지고 있다는 점, 네, 그래서 A를 드리는 거예요."
+  },
+  {
+    "id": "seg-176",
+    "start": 688.8971428571429,
+    "end": 690.1996666666666,
+    "speaker": "DUBNER",
+    "text": "Have you gotten better over time?",
+    "translation": "교수님은 시간이 지나면서 좀 나아지셨어요?"
+  },
+  {
+    "id": "seg-177",
+    "start": 690.1996666666666,
+    "end": 694.87,
+    "speaker": "DUCKWORTH",
+    "text": "You know, I actually had to call James Gross for some personal and professional advice.",
+    "translation": "음, 사실 제가 개인적이면서도 직업적인 조언을 구하려고 제임스 그로스에게 직접 전화한 적이 있어요."
+  },
+  {
+    "id": "seg-178",
+    "start": 694.87,
+    "end": 698.69925,
+    "speaker": "DUCKWORTH",
+    "text": "Because that is probably my one greatest Achilles’ heel.",
+    "translation": "그게 아마 저의 가장 큰 아킬레스건이거든요."
+  },
+  {
+    "id": "seg-179",
+    "start": 698.69925,
+    "end": 700.65,
+    "speaker": "DUCKWORTH",
+    "text": "I have a terrible temper.",
+    "translation": "제가 성질이 아주 못됐거든요."
+  },
+  {
+    "id": "seg-180",
+    "start": 700.65,
+    "end": 702.928,
+    "speaker": "DUCKWORTH",
+    "text": "And when it erupts, it’s pretty bad.",
+    "translation": "그리고 한 번 폭발하면 꽤 심각해요."
+  },
+  {
+    "id": "seg-181",
+    "start": 702.928,
+    "end": 711.3439999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And yeah, I have gotten better at it, because I think when you notice this pattern of losing your temper, I started being really proactive.",
+    "translation": "맞아요, 저도 이제는 좀 나아졌어요. 화를 잘 내는 성격을 스스로 알아차린 뒤부터는 아주 선제적으로 대처하기 시작했거든요."
+  },
+  {
+    "id": "seg-182",
+    "start": 711.3439999999999,
+    "end": 713.4666666666666,
+    "speaker": "DUCKWORTH",
+    "text": "Like, for me, it’s holiday time.",
+    "translation": "예를 들어 저한테는 명절 때가 그래요."
+  },
+  {
+    "id": "seg-183",
+    "start": 713.4666666666666,
+    "end": 715.1596666666667,
+    "speaker": "DUCKWORTH",
+    "text": "It’s in-law stuff.",
+    "translation": "시댁이나 처가 식구들과 관련된 문제요."
+  },
+  {
+    "id": "seg-184",
+    "start": 715.1596666666667,
+    "end": 725.6198333333334,
+    "speaker": "DUCKWORTH",
+    "text": "So I preventively looked to find ways to reduce stress around those times of the year, where well, in the last 20 years, I’ve consistently lost my temper.",
+    "translation": "그래서 지난 20년 동안 변함없이 화를 냈던 그 시기가 오기 전에, 스트레스를 줄일 방법을 예방 차원에서 미리 찾아봤죠."
+  },
+  {
+    "id": "seg-185",
+    "start": 725.6198333333334,
+    "end": 727.32,
+    "speaker": "DUCKWORTH",
+    "text": "So, what can I do differently?",
+    "translation": "'내가 이번에는 어떻게 다르게 행동할 수 있을까?' 하고요."
+  },
+  {
+    "id": "seg-186",
+    "start": 727.32,
+    "end": 730.1999999999999,
+    "speaker": "DUBNER",
+    "text": "We’ve talked about dealing with your own anger, and how to modulate.",
+    "translation": "지금까지는 스스로의 분노를 다스리고 조절하는 법에 대해 얘기해 봤는데요."
+  },
+  {
+    "id": "seg-187",
+    "start": 730.1999999999999,
+    "end": 732.3767777777778,
+    "speaker": "DUBNER",
+    "text": "What about dealing with another person’s anger?",
+    "translation": "다른 사람의 분노를 대할 때는 어떻게 해야 할까요?"
+  },
+  {
+    "id": "seg-188",
+    "start": 732.3767777777778,
+    "end": 735.84,
+    "speaker": "DUBNER",
+    "text": "Do you have any advice for the best way to interact with an angry person?",
+    "translation": "화가 난 사람과 대화할 때 가장 좋은 방법에 대해 조언해 주실 게 있나요?"
+  },
+  {
+    "id": "seg-189",
+    "start": 735.84,
+    "end": 738.04,
+    "speaker": "DUCKWORTH",
+    "text": "Well, there’s an idea that’s not mine.",
+    "translation": "음, 제 생각은 아니고 다른 좋은 아이디어가 있어요."
+  },
+  {
+    "id": "seg-190",
+    "start": 738.04,
+    "end": 743.1028571428571,
+    "speaker": "DUCKWORTH",
+    "text": "It came from some friends of mine in psychology, Barbara Mellors and Phil Tetlock.",
+    "translation": "심리학계에 있는 제 친구들인 바바라 멜러스와 필 테틀록의 생각인데요."
+  },
+  {
+    "id": "seg-191",
+    "start": 743.1028571428571,
+    "end": 753.946,
+    "speaker": "DUCKWORTH",
+    "text": "And they had the idea that instead of doing what we reflexively would want to do, which is just to argue the opposite position, we “gist” what the other person said.",
+    "translation": "우리가 본능적으로 하려고 하는 행동, 그러니까 상대방 의견에 바로 반박하는 대신에, 상대방이 한 말의 '핵심 요약(gist)'을 해보자는 거예요."
+  },
+  {
+    "id": "seg-192",
+    "start": 753.946,
+    "end": 755.7596666666667,
+    "speaker": "DUCKWORTH",
+    "text": "You know, what’s the gist of what you’re saying?",
+    "translation": "그러니까 '당신이 하는 말의 요지가 이거죠?' 하고 확인하는 거예요."
+  },
+  {
+    "id": "seg-193",
+    "start": 755.7596666666667,
+    "end": 757.24,
+    "speaker": "DUCKWORTH",
+    "text": "So they’re using it as a verb.",
+    "translation": "그 친구들은 이 단어를 동사처럼 썼어요."
+  },
+  {
+    "id": "seg-194",
+    "start": 757.24,
+    "end": 764.07925,
+    "speaker": "DUCKWORTH",
+    "text": "Try to repeat what the position is of the person who you think is a flaming idiot, and you do it in a dispassionate, non-judgmental way.",
+    "translation": "대책 없는 바보라고 생각하는 그 사람의 입장이 무엇인지, 감정을 배제하고 객관적인 태도로 다시 한번 읊어주는 거죠."
+  },
+  {
+    "id": "seg-195",
+    "start": 764.07925,
+    "end": 770.82,
+    "speaker": "DUBNER",
+    "text": "Is the idea that if you gist them well, then they will hear the gist and say, “Oh, god, that’s idiotic.",
+    "translation": "상대방의 말을 잘 정리해서 들려주면, 본인도 그걸 듣고 '어라, 내가 생각해도 진짜 바보 같네.' 하고 깨닫게 된다는 건가요?"
+  },
+  {
+    "id": "seg-196",
+    "start": 770.82,
+    "end": 771.791,
+    "speaker": "DUBNER",
+    "text": "What was I thinking?”",
+    "translation": "'내가 대체 무슨 생각을 했던 거지?' 하면서요?"
+  },
+  {
+    "id": "seg-197",
+    "start": 771.791,
+    "end": 772.102,
+    "speaker": "DUCKWORTH",
+    "text": "No.",
+    "translation": "아뇨, 그건 아니에요."
+  },
+  {
+    "id": "seg-198",
+    "start": 772.102,
+    "end": 778.7193333333333,
+    "speaker": "DUCKWORTH",
+    "text": "It’s kind of a perspective-taking or an empathy exercise, so that you can really appreciate the full extent of their argument.",
+    "translation": "일종의 역지사지나 공감 훈련 같은 거예요. 상대방의 논리가 어떤 맥락에서 나온 건지 제대로 온전히 이해해 보는 거죠."
+  },
+  {
+    "id": "seg-199",
+    "start": 778.7193333333333,
+    "end": 781.3195000000001,
+    "speaker": "DUCKWORTH",
+    "text": "That’s one step in any resolution anyway.",
+    "translation": "그게 어떤 갈등이든 해결하기 위한 첫걸음이니까요."
+  },
+  {
+    "id": "seg-200",
+    "start": 781.3195000000001,
+    "end": 785.1392500000001,
+    "speaker": "DUCKWORTH",
+    "text": "The second thing is it makes that other person feel respected and heard.",
+    "translation": "두 번째는, 상대방이 존중받고 자기 의견을 들어준다고 느끼게 만든다는 거예요."
+  },
+  {
+    "id": "seg-201",
+    "start": 785.1392500000001,
+    "end": 791.8998333333334,
+    "speaker": "DUCKWORTH",
+    "text": "One of the problems, when you get into arguments, is that you scream louder, but you feel like you’re being heard even less.",
+    "translation": "언쟁을 할 때 문제 중 하나는, 목소리는 더 커지는데 정작 자기 말은 더 안 통한다고 느끼는 거거든요."
+  },
+  {
+    "id": "seg-202",
+    "start": 791.8998333333334,
+    "end": 794.504,
+    "speaker": "DUCKWORTH",
+    "text": "And I think that this goes in the opposite direction.",
+    "translation": "그리고 저는 이게 정반대 효과를 낳는다고 생각해요."
+  },
+  {
+    "id": "seg-203",
+    "start": 794.504,
+    "end": 800.8791666666666,
+    "speaker": "DUCKWORTH",
+    "text": "Like you actually feel heard, and then you de-escalate a little bit your own emotion and your oppositional stance.",
+    "translation": "그러니까, 상대가 내 말을 들어준다고 느끼게 되면, 자신의 감정도 좀 누그러뜨리고 반대 입장도 좀 완화하게 되는 거죠."
+  },
+  {
+    "id": "seg-204",
+    "start": 800.8791666666666,
+    "end": 809.6742857142857,
+    "speaker": "DUCKWORTH",
+    "text": "So the idea was very simple, which is that if people were asked to gist each others’— Would it de-escalate some of these angry interactions?",
+    "translation": "그래서 아이디어는 아주 간단했어요. 사람들한테 서로의 의견을 요약해 보라고 하면, 이런 격한 감정의 대화가 좀 진정되지 않을까 하는 거였죠."
+  },
+  {
+    "id": "seg-205",
+    "start": 809.6742857142857,
+    "end": 814.1856666666666,
+    "speaker": "DUCKWORTH",
+    "text": "Because don’t you feel, Stephen, like nobody’s really listening to anybody else?",
+    "translation": "왜냐하면 스티븐, 정말 아무도 다른 사람 말을 안 듣는 것 같지 않아요?"
+  },
+  {
+    "id": "seg-206",
+    "start": 814.1856666666666,
+    "end": 819.9795,
+    "speaker": "DUCKWORTH",
+    "text": "They’re just trying to ram through their own point of view.",
+    "translation": "다들 자기 관점만 밀어붙이려고 하잖아요."
+  },
+  {
+    "id": "seg-207",
+    "start": 819.9795,
+    "end": 820.5,
+    "speaker": "DUBNER",
+    "text": "I’m sorry.",
+    "translation": "아, 미안해요."
+  },
+  {
+    "id": "seg-208",
+    "start": 820.5,
+    "end": 822,
+    "speaker": "DUBNER",
+    "text": "I wasn’t paying attention to what you said.",
+    "translation": "방금 뭐라고 하셨는지 집중을 안 하고 있었네요."
+  },
+  {
+    "id": "seg-209",
+    "start": 822,
+    "end": 823.92,
+    "speaker": "DUBNER",
+    "text": "Sorry, I was thinking my own thoughts.",
+    "translation": "미안해요, 딴생각을 좀 하느라구요."
+  },
+  {
+    "id": "seg-210",
+    "start": 823.92,
+    "end": 824.1999999999999,
+    "speaker": "DUBNER",
+    "text": "Yes.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-211",
+    "start": 824.1999999999999,
+    "end": 825.88,
+    "speaker": "DUBNER",
+    "text": "I do feel that a lot.",
+    "translation": "정말 많이 그렇게 느껴요."
+  },
+  {
+    "id": "seg-212",
+    "start": 825.88,
+    "end": 831.14,
+    "speaker": "DUBNER",
+    "text": "And where I see a lot of people going wrong is that they get very upset.",
+    "translation": "그리고 제가 볼 때 많은 사람이 잘못하는 지점이, 너무 쉽게 화를 낸다는 거예요."
+  },
+  {
+    "id": "seg-213",
+    "start": 831.14,
+    "end": 837.1595,
+    "speaker": "DUBNER",
+    "text": "They spend a lot of emotional currency on things that so don’t matter in their lives.",
+    "translation": "자기 인생에 전혀 중요하지도 않은 일에 너무 많은 감정을 소모해요."
+  },
+  {
+    "id": "seg-214",
+    "start": 837.1595,
+    "end": 838.4395,
+    "speaker": "DUBNER",
+    "text": "It’s ether.",
+    "translation": "그냥 허공 같은 거예요."
+  },
+  {
+    "id": "seg-215",
+    "start": 838.4395,
+    "end": 839.3795,
+    "speaker": "DUBNER",
+    "text": "It’s smoke.",
+    "translation": "연기 같은 거고요."
+  },
+  {
+    "id": "seg-216",
+    "start": 839.3795,
+    "end": 841.12,
+    "speaker": "DUBNER",
+    "text": "It means absolutely nothing.",
+    "translation": "정말 아무 의미도 없는 일이죠."
+  },
+  {
+    "id": "seg-217",
+    "start": 841.12,
+    "end": 846.1082857142857,
+    "speaker": "DUCKWORTH",
+    "text": "Now, do you see that mostly in online exchanges, or do you see that in other ways too?",
+    "translation": "근데 그런 건 주로 온라인상에서 보이나요, 아니면 다른 상황에서도 그런가요?"
+  },
+  {
+    "id": "seg-218",
+    "start": 846.1082857142857,
+    "end": 847.5395,
+    "speaker": "DUBNER",
+    "text": "I see it in other ways.",
+    "translation": "다른 상황에서도 보이죠."
+  },
+  {
+    "id": "seg-219",
+    "start": 847.5395,
+    "end": 854.34975,
+    "speaker": "DUBNER",
+    "text": "These days, if you’re walking down the street in New York City, I’d say probably 90 to 95 percent of people are wearing masks.",
+    "translation": "요즘 뉴욕 시내를 걷다 보면, 아마 90에서 95퍼센트의 사람들이 마스크를 쓰고 있을 거예요."
+  },
+  {
+    "id": "seg-220",
+    "start": 854.34975,
+    "end": 856.8228571428572,
+    "speaker": "DUBNER",
+    "text": "Then there’s a couple people who are not wearing a mask.",
+    "translation": "그런데 마스크를 안 쓴 사람이 두어 명 있는 거예요."
+  },
+  {
+    "id": "seg-221",
+    "start": 856.8228571428572,
+    "end": 865.079,
+    "speaker": "DUBNER",
+    "text": "And you can see in the body language of the people who are wearing masks the way that they veer from that person and shoot them dirty looks— And I’m not saying I don’t feel those instincts as well.",
+    "translation": "그러면 마스크 쓴 사람들의 몸짓에서 그 사람을 피하면서 곁눈질로 째려보는 게 보이거든요. 저라고 그런 본능적인 충동을 안 느낀다는 건 아니고요."
+  },
+  {
+    "id": "seg-222",
+    "start": 865.079,
+    "end": 866.844,
+    "speaker": "DUCKWORTH",
+    "text": "But you don’t look contemptuously at them.",
+    "translation": "하지만 그렇다고 경멸하듯이 쳐다보진 않잖아요."
+  },
+  {
+    "id": "seg-223",
+    "start": 866.844,
+    "end": 868.8,
+    "speaker": "DUBNER",
+    "text": "So what would you do in that case?",
+    "translation": "그럼 그럴 땐 어떻게 하세요?"
+  },
+  {
+    "id": "seg-224",
+    "start": 868.8,
+    "end": 870.6741428571429,
+    "speaker": "DUBNER",
+    "text": "Someone’s walking down the street without the mask?",
+    "translation": "누가 길에서 마스크 안 쓰고 걸어가면요?"
+  },
+  {
+    "id": "seg-225",
+    "start": 870.6741428571429,
+    "end": 872.194125,
+    "speaker": "DUCKWORTH",
+    "text": "Oh, I, this is not a hypothetical.",
+    "translation": "아, 저요? 이건 뭐 가정할 필요도 없는 일이죠."
+  },
+  {
+    "id": "seg-226",
+    "start": 872.194125,
+    "end": 878.7196666666667,
+    "speaker": "DUCKWORTH",
+    "text": "I have had, on more than one occasion, unfortunately, people who I really feel like, hello?!",
+    "translation": "안타깝게도 한두 번이 아니에요, 정말 '아니, 이보세요?!' 소리가 절로 나오는 사람들을 만난 게요."
+  },
+  {
+    "id": "seg-227",
+    "start": 878.7196666666667,
+    "end": 880.8665,
+    "speaker": "DUCKWORTH",
+    "text": "I was recently at the grocery store.",
+    "translation": "최근에 식료품점에 갔었는데요."
+  },
+  {
+    "id": "seg-228",
+    "start": 880.8665,
+    "end": 883.6535454545455,
+    "speaker": "DUCKWORTH",
+    "text": "There’s an arrow on the floor.",
+    "translation": "바닥에 화살표 표시가 있잖아요."
+  },
+  {
+    "id": "seg-229",
+    "start": 883.6535454545455,
+    "end": 892.5,
+    "speaker": "DUCKWORTH",
+    "text": "And I was going with the arrow because I’m a law-abiding grocery shopper, and a woman carrying lots of stuff, she was going against the arrow.",
+    "translation": "저는 규칙을 잘 지키는 쇼핑객이라 화살표 방향대로 가고 있었는데, 짐을 잔뜩 든 어떤 아주머니가 화살표를 거슬러서 오더라고요."
+  },
+  {
+    "id": "seg-230",
+    "start": 892.5,
+    "end": 894.3195000000001,
+    "speaker": "DUCKWORTH",
+    "text": "And first, I shot her a dirty look.",
+    "translation": "그래서 일단 한번 싹 째려봤죠."
+  },
+  {
+    "id": "seg-231",
+    "start": 894.3195000000001,
+    "end": 895.4791666666666,
+    "speaker": "DUBNER",
+    "text": "It’s harder with a mask.",
+    "translation": "마스크 쓰면 그게 더 힘들잖아요."
+  },
+  {
+    "id": "seg-232",
+    "start": 895.4791666666666,
+    "end": 904.6793333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Well, it is because I asked Paul Rozin, the psychologist who studies disgust, you know, “What is the facial expression of contempt?” And he said, “It’s a lopsided sneer.",
+    "translation": "네, 맞아요. 제가 혐오감을 연구하는 심리학자 폴 로진한테 '경멸을 나타내는 얼굴 표정이 뭔가요?'라고 물어봤더니 '한쪽으로만 짓는 냉소'라고 하더라고요."
+  },
+  {
+    "id": "seg-233",
+    "start": 904.6793333333334,
+    "end": 908.1834,
+    "speaker": "DUCKWORTH",
+    "text": "It’s an asymmetric sneer.” So, I can’t do that with my mask on.",
+    "translation": "'비대칭적인 비웃음'이라는 거죠. 그러니 마스크를 쓴 채로는 그걸 할 수가 없죠."
+  },
+  {
+    "id": "seg-234",
+    "start": 908.1834,
+    "end": 909.8199999999999,
+    "speaker": "DUBNER",
+    "text": "You have to work out your eyebrows.",
+    "translation": "눈썹으로 연기하셔야겠네요."
+  },
+  {
+    "id": "seg-235",
+    "start": 909.8199999999999,
+    "end": 910.0799999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-236",
+    "start": 910.0799999999999,
+    "end": 915.88925,
+    "speaker": "DUCKWORTH",
+    "text": "So I tried to knit my eyebrows together, and then I realized no, I’m going to go with a verbal expression.",
+    "translation": "그래서 미간을 찌푸려 봤는데, 아 아니다, 그냥 말로 해야겠다 싶더라고요."
+  },
+  {
+    "id": "seg-237",
+    "start": 915.88925,
+    "end": 927.9200000000001,
+    "speaker": "DUCKWORTH",
+    "text": "I was like, “Excuse me, the arrow’s pointing the other way.” She looked at me, she looked at the arrow, she looked at me, she looked at the arrow, and then she just kept going against the arrow, which only made me more angry.",
+    "translation": "제가 '저기요, 화살표는 반대 방향인데요.'라고 말했어요. 그랬더니 그 여자가 저를 쳐다보고, 바닥 화살표를 쳐다보고, 다시 저를 보고, 또 화살표를 보더니, 그냥 역주행해서 가버리더라고요. 그래서 더 화가 났죠."
+  },
+  {
+    "id": "seg-238",
+    "start": 927.9200000000001,
+    "end": 933.569,
+    "speaker": "DUBNER",
+    "text": "And that’s when you wished you were carrying a star of death and you would have nailed her in the back with it.",
+    "translation": "바로 그때 죽음의 표창이라도 들고 있었으면 등 뒤에다 확 박아버리고 싶으셨겠네요."
+  },
+  {
+    "id": "seg-239",
+    "start": 933.569,
+    "end": 939.5932857142857,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I have to say, yes, this feeling that you want to avenge, you want to punish this other person.",
+    "translation": "아, 정말, 네, 맞아요. 복수하고 싶고, 상대방을 응징하고 싶다는 그런 감정이 들죠."
+  },
+  {
+    "id": "seg-240",
+    "start": 939.5932857142857,
+    "end": 940.8589999999999,
+    "speaker": "DUCKWORTH",
+    "text": "I will be honest.",
+    "translation": "솔직히 말씀드리면요."
+  },
+  {
+    "id": "seg-241",
+    "start": 940.8589999999999,
+    "end": 942.04,
+    "speaker": "DUCKWORTH",
+    "text": "I felt that.",
+    "translation": "확 와닿네요."
+  },
+  {
+    "id": "seg-242",
+    "start": 942.04,
+    "end": 943.12,
+    "speaker": "DUBNER",
+    "text": "Let me ask you this.",
+    "translation": "이거 하나 여쭤볼게요."
+  },
+  {
+    "id": "seg-243",
+    "start": 943.12,
+    "end": 952.906,
+    "speaker": "DUBNER",
+    "text": "Having had this grocery store encounter and having discussed Seneca and James Gross and others today, what will you do the next time you’re in that situation?",
+    "translation": "식료품점에서 그런 일을 겪으셨고 오늘 세네카나 제임스 그로스 같은 사람들에 대해 이야기도 나눴는데, 다음에 또 그런 상황이 오면 어떻게 하실 건가요?"
+  },
+  {
+    "id": "seg-244",
+    "start": 952.906,
+    "end": 955.1,
+    "speaker": "DUBNER",
+    "text": "Will you change your behavior?",
+    "translation": "행동을 바꾸실 건가요?"
+  },
+  {
+    "id": "seg-245",
+    "start": 955.1,
+    "end": 961.626,
+    "speaker": "DUCKWORTH",
+    "text": "The next time I am in a grocery store and somebody is going against the arrow.",
+    "translation": "다음에 마트에서 누가 또 화살표 방향을 어기고 반대로 오면요."
+  },
+  {
+    "id": "seg-246",
+    "start": 961.626,
+    "end": 962.933,
+    "speaker": "DUCKWORTH",
+    "text": "You know what?",
+    "translation": "있잖아요,"
+  },
+  {
+    "id": "seg-247",
+    "start": 962.933,
+    "end": 966.173,
+    "speaker": "DUCKWORTH",
+    "text": "I will not flash them a look of contempt.",
+    "translation": "경멸의 눈초리로 쳐다보지는 않을 거예요."
+  },
+  {
+    "id": "seg-248",
+    "start": 966.173,
+    "end": 968.9066666666666,
+    "speaker": "DUCKWORTH",
+    "text": "I will move to a different aisle.",
+    "translation": "제가 다른 통로로 갈 거예요."
+  },
+  {
+    "id": "seg-249",
+    "start": 968.9066666666666,
+    "end": 973.839,
+    "speaker": "DUCKWORTH",
+    "text": "If I put it in perspective, it’s a tiny little part of my reality.",
+    "translation": "크게 보면 그건 제 현실에서 아주 사소한 부분이잖아요."
+  },
+  {
+    "id": "seg-250",
+    "start": 973.839,
+    "end": 977.16,
+    "speaker": "DUBNER",
+    "text": "Now, let me just ask you about the costs and benefits of your action.",
+    "translation": "자, 그럼 교수님 행동의 득과 실에 대해 한번 여쭤볼게요."
+  },
+  {
+    "id": "seg-251",
+    "start": 977.16,
+    "end": 985.55975,
+    "speaker": "DUBNER",
+    "text": "So you’re moving yourself, which is at some cost, probably not very much in this case, unless you were on a short line, you have to move to a much longer line, etc., etc.",
+    "translation": "그러니까 직접 자리를 피하는 데에도 비용이 따르겠죠. 물론, 짧은 줄에 있다가 훨씬 긴 줄로 옮겨야 하는 식의 큰 비용이 아니라면 이 경우엔 아주 적겠지만요."
+  },
+  {
+    "id": "seg-252",
+    "start": 985.55975,
+    "end": 992.3056666666666,
+    "speaker": "DUBNER",
+    "text": "And then the benefits of what you did to her, do you think it actually changed her behavior maybe long-term?",
+    "translation": "그리고 그분에게 했던 행동으로 얻은 이득은요, 그 행동 때문에 장기적으로 그분의 행동이 바뀌었을 거라고 생각하세요?"
+  },
+  {
+    "id": "seg-253",
+    "start": 992.3056666666666,
+    "end": 993.9594000000001,
+    "speaker": "DUBNER",
+    "text": "I mean, was it worth it?",
+    "translation": "그러니까, 그럴 만한 가치가 있었냐는 거죠."
+  },
+  {
+    "id": "seg-254",
+    "start": 993.9594000000001,
+    "end": 995.02,
+    "speaker": "DUCKWORTH",
+    "text": "Well that’s the interesting thing.",
+    "translation": "음, 그게 바로 흥미로운 지점이죠."
+  },
+  {
+    "id": "seg-255",
+    "start": 995.02,
+    "end": 1005.039,
+    "speaker": "DUCKWORTH",
+    "text": "I do wonder whether if you get shot 100 dirty looks by strangers in the grocery store, on the street, maybe you’ll reform, but it doesn’t feel like that, does it?",
+    "translation": "마트나 길에서 모르는 사람한테 100번쯤 째려봄을 당하면 행동이 고쳐질까 싶기도 한데, 그럴 것 같지는 않잖아요, 그렇죠?"
+  },
+  {
+    "id": "seg-256",
+    "start": 1005.039,
+    "end": 1014.053,
+    "speaker": "DUCKWORTH",
+    "text": "When you shake your fist at a motorist for running the red light, you don’t really feel like that person’s like, “Oh, I’m going to stop doing that.”",
+    "translation": "신호 위반하는 운전자에게 주먹을 흔들 때, 그 사람이 '아, 이제 그러지 말아야지' 하고 생각할 것 같진 않잖아요."
+  },
+  {
+    "id": "seg-257",
+    "start": 1014.053,
+    "end": 1025.64,
+    "speaker": "DUBNER",
+    "text": "My reckoning is the kind of person who would do a behavior that would get me that upset is not the kind of person who is going to take my fist-shaking as a serious reprimand.",
+    "translation": "제 생각엔 저를 그 정도로 화나게 만드는 사람은, 제가 주먹을 흔든다고 그걸 심각한 꾸지람으로 받아들이지 않을 것 같아요."
+  },
+  {
+    "id": "seg-258",
+    "start": 1025.64,
+    "end": 1027.24,
+    "speaker": "DUCKWORTH",
+    "text": "I think that’s right.",
+    "translation": "그 말이 맞는 것 같아요."
+  },
+  {
+    "id": "seg-259",
+    "start": 1027.24,
+    "end": 1034.9994285714286,
+    "speaker": "DUBNER",
+    "text": "Let me ask you finally, do you feel any less potentially angry, in general, having had this conversation about anger?",
+    "translation": "마지막으로 여쭤볼게요. 이렇게 분노에 대한 대화를 나누고 나니, 전반적으로 화를 낼 가능성이 좀 줄어든 것 같으세요?"
+  },
+  {
+    "id": "seg-260",
+    "start": 1034.9994285714286,
+    "end": 1038.92,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I’m going to certainly feel angry again in the next 24 hours.",
+    "translation": "글쎄요, 분명 저도 앞으로 24시간 안에 또 화가 나는 일이 생기겠죠."
+  },
+  {
+    "id": "seg-261",
+    "start": 1038.92,
+    "end": 1047.25,
+    "speaker": "DUCKWORTH",
+    "text": "Even in some small form, and I feel pretty good about having a little Seneca in the back pocket, to think what would Seneca do?",
+    "translation": "아무리 사소한 일이라도 말이에요. 그럴 때 주머니 속에 세네카를 모셔둔 것처럼 '세네카라면 어떻게 했을까?'라고 생각하면 마음이 든든해질 것 같아요."
+  },
+  {
+    "id": "seg-262",
+    "start": 1047.25,
+    "end": 1059.4099999999999,
+    "speaker": "DUBNER",
+    "text": "You know, I feel this has been helpful to me because the next time I have a situation like that, I’m going to say, “Well, Angie was in the grocery store, the lady going against the arrow, and she got really pissed.",
+    "translation": "있잖아요, 이거 정말 도움이 되는 것 같아요. 다음에 비슷한 상황이 오면 저는 이렇게 말할 거거든요. \"앤지가 마트에서 화살표 역방향으로 가던 여자 때문에 진짜 빡쳤었지.\""
+  },
+  {
+    "id": "seg-263",
+    "start": 1059.4099999999999,
+    "end": 1064.99925,
+    "speaker": "DUBNER",
+    "text": "And I’m not going to do that.” Anything I do shy of that is going to be a victory.",
+    "translation": "\"난 그러지 말아야지\" 하고 말이에요. 그것보다 덜 화내는 건 다 성공인 거죠."
+  },
+  {
+    "id": "seg-264",
+    "start": 1064.99925,
+    "end": 1067.46,
+    "speaker": "DUCKWORTH",
+    "text": "So for me, I’ll say what would Seneca do?",
+    "translation": "그러니까 저는 '세네카라면 어떻게 했을까?'라고 하고,"
+  },
+  {
+    "id": "seg-265",
+    "start": 1067.46,
+    "end": 1072.52,
+    "speaker": "DUCKWORTH",
+    "text": "And you could say, what would Angela not do?",
+    "translation": "스티븐은 '앤지라면 안 했을 행동이 뭘까?'라고 하면 되겠네요."
+  },
+  {
+    "id": "seg-266",
+    "start": 1072.52,
+    "end": 1075.5063333333333,
+    "speaker": "NARRATOR",
+    "text": "Still to come on No Stupid Questions.",
+    "translation": "잠시 후 '바보 같은 질문은 없어'가 계속됩니다."
+  },
+  {
+    "id": "seg-267",
+    "start": 1075.5063333333333,
+    "end": 1080.7662727272727,
+    "speaker": "DUBNER",
+    "text": "You’re handling all the dog poop for your neighborhood, and you’re the people who don’t have a dog?",
+    "translation": "온 동네 개똥을 다 치우고 계신다고요? 정작 본인은 반려견도 안 키우시면서요?"
+  },
+  {
+    "id": "seg-268",
+    "start": 1080.7662727272727,
+    "end": 1086.88,
+    "speaker": "DUBNER",
+    "text": "No wonder you hate dogs.",
+    "translation": "개를 싫어하실 만도 하네요."
+  },
+  {
+    "id": "seg-269",
+    "start": 1086.88,
+    "end": 1088.391111111111,
+    "speaker": "DUCKWORTH",
+    "text": "Stephen, you have a dog.",
+    "translation": "스티븐, 당신은 개를 키우시죠."
+  },
+  {
+    "id": "seg-270",
+    "start": 1088.391111111111,
+    "end": 1088.9955555555557,
+    "speaker": "DUBNER",
+    "text": "I do.",
+    "translation": "네, 키우죠."
+  },
+  {
+    "id": "seg-271",
+    "start": 1088.9955555555557,
+    "end": 1091.111111111111,
+    "speaker": "DUCKWORTH",
+    "text": "And I do not have a dog.",
+    "translation": "전 안 키우거든요."
+  },
+  {
+    "id": "seg-272",
+    "start": 1091.111111111111,
+    "end": 1091.7155555555555,
+    "speaker": "DUBNER",
+    "text": "You don’t.",
+    "translation": "안 키우시죠."
+  },
+  {
+    "id": "seg-273",
+    "start": 1091.7155555555555,
+    "end": 1093.144,
+    "speaker": "DUBNER",
+    "text": "You’re a cat person, apparently.",
+    "translation": "보아하니 고양이파이신가 봐요."
+  },
+  {
+    "id": "seg-274",
+    "start": 1093.144,
+    "end": 1094.799875,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t have a cat either.",
+    "translation": "고양이도 안 키워요."
+  },
+  {
+    "id": "seg-275",
+    "start": 1094.799875,
+    "end": 1099.44,
+    "speaker": "DUCKWORTH",
+    "text": "I am in the one out of three American households that doesn’t have any pet.",
+    "translation": "저는 반려동물을 전혀 키우지 않는 미국인 3분의 1 가구 중 하나에 속해요."
+  },
+  {
+    "id": "seg-276",
+    "start": 1099.44,
+    "end": 1103.2152,
+    "speaker": "DUCKWORTH",
+    "text": "But here’s my curiosity about dogs and dog owners.",
+    "translation": "그런데 개와 반려인들에 대해 궁금한 점이 있어요."
+  },
+  {
+    "id": "seg-277",
+    "start": 1103.2152,
+    "end": 1105.984,
+    "speaker": "DUCKWORTH",
+    "text": "I get that this provides some kind of comfort to you.",
+    "translation": "개가 어떤 위안을 준다는 건 이해하거든요."
+  },
+  {
+    "id": "seg-278",
+    "start": 1105.984,
+    "end": 1108.944,
+    "speaker": "DUCKWORTH",
+    "text": "But I guess I’m wondering, how far does this go?",
+    "translation": "그런데 그 사랑이 어디까지 갈 수 있는 건지 궁금해요."
+  },
+  {
+    "id": "seg-279",
+    "start": 1108.944,
+    "end": 1113.56,
+    "speaker": "DUCKWORTH",
+    "text": "Is there anything that you wouldn’t do for this canine that you love so much?",
+    "translation": "그렇게 사랑하는 반려견을 위해서라면 못 할 일은 전혀 없으신가요?"
+  },
+  {
+    "id": "seg-280",
+    "start": 1113.56,
+    "end": 1115.5,
+    "speaker": "DUBNER",
+    "text": "So I do love the dog.",
+    "translation": "그래서 저는 그 개를 정말 사랑해요."
+  },
+  {
+    "id": "seg-281",
+    "start": 1115.5,
+    "end": 1117.9333333333332,
+    "speaker": "DUBNER",
+    "text": "The dog is named Fifi.",
+    "translation": "그 개 이름은 피피예요."
+  },
+  {
+    "id": "seg-282",
+    "start": 1117.9333333333332,
+    "end": 1123.2878,
+    "speaker": "DUBNER",
+    "text": "If you’re of a certain age, it’s a ridiculous name.",
+    "translation": "나이가 좀 있으신 분이라면, 우스꽝스러운 이름이죠."
+  },
+  {
+    "id": "seg-283",
+    "start": 1123.2878,
+    "end": 1128,
+    "speaker": "DUBNER",
+    "text": "Because Fifi is the stereotypical name of the French poodle.",
+    "translation": "왜냐하면 피피는 프랑스 푸들의 전형적인 이름이니까요."
+  },
+  {
+    "id": "seg-284",
+    "start": 1128,
+    "end": 1129.7758,
+    "speaker": "DUCKWORTH",
+    "text": "In Looney Tunes or something, yeah?",
+    "translation": "'루니 툰' 같은 데서 나오는 거요, 그렇죠?"
+  },
+  {
+    "id": "seg-285",
+    "start": 1129.7758,
+    "end": 1135.6,
+    "speaker": "DUBNER",
+    "text": "What happened is, when we got our puppy, our daughter, Anya, who’s kind of a Francophile, she really wanted a French name.",
+    "translation": "사연이 뭐냐면, 저희가 강아지를 데려왔을 때, 프랑스 문화를 좀 좋아하는 저희 딸 아냐가 프랑스식 이름을 정말 원했어요."
+  },
+  {
+    "id": "seg-286",
+    "start": 1135.6,
+    "end": 1142.3195,
+    "speaker": "DUBNER",
+    "text": "And all the French names we could think of were beautiful, female names that didn’t sound at all like dog names.",
+    "translation": "근데 저희가 생각할 수 있는 프랑스 이름들은 다 예쁜 여자 이름이라, 전혀 개 이름 같지 않았어요."
+  },
+  {
+    "id": "seg-287",
+    "start": 1142.3195,
+    "end": 1144.7777777777778,
+    "speaker": "DUCKWORTH",
+    "text": "Like Adele or Claudette or something.",
+    "translation": "아델이나 클로데트 뭐 그런 거요."
+  },
+  {
+    "id": "seg-288",
+    "start": 1144.7777777777778,
+    "end": 1145.2133333333334,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-289",
+    "start": 1145.2133333333334,
+    "end": 1147.12,
+    "speaker": "DUBNER",
+    "text": "Just not dog names at all.",
+    "translation": "전혀 개 이름 같지가 않았죠."
+  },
+  {
+    "id": "seg-290",
+    "start": 1147.12,
+    "end": 1152.06,
+    "speaker": "DUBNER",
+    "text": "And so I said, kind of jokingly, “Fifi,” which is like the equivalent of Rover or Fido.",
+    "translation": "그래서 제가 농담조로 '피피'라고 했는데, 그게 '로버'나 '파이도' 같은 이름이거든요."
+  },
+  {
+    "id": "seg-291",
+    "start": 1152.06,
+    "end": 1154.4794,
+    "speaker": "DUBNER",
+    "text": "But Anya, my kid, she’d never heard of Fifi.",
+    "translation": "그런데 제 딸 아냐는 '피피'라는 이름을 들어본 적이 없었던 거예요."
+  },
+  {
+    "id": "seg-292",
+    "start": 1154.4794,
+    "end": 1155.7863333333332,
+    "speaker": "DUBNER",
+    "text": "So she thought, “Oh, my God.",
+    "translation": "그래서 딸애가 '어머나, 세상에."
+  },
+  {
+    "id": "seg-293",
+    "start": 1155.7863333333332,
+    "end": 1159.08,
+    "speaker": "DUBNER",
+    "text": "That’s so beautiful, and elegant, and French.” So we went with it.",
+    "translation": "너무 아름답고, 우아하고, 프랑스 이름 같다.'고 생각한 거죠. 그래서 그걸로 정했어요."
+  },
+  {
+    "id": "seg-294",
+    "start": 1159.08,
+    "end": 1160.472,
+    "speaker": "DUCKWORTH",
+    "text": "Now you have a dog named Fifi.",
+    "translation": "그래서 이제 '피피'라는 개를 키우시는 거군요."
+  },
+  {
+    "id": "seg-295",
+    "start": 1160.472,
+    "end": 1160.768,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-296",
+    "start": 1160.768,
+    "end": 1162.08,
+    "speaker": "DUBNER",
+    "text": "And she looks like a Fifi.",
+    "translation": "그리고 생긴 것도 딱 피피 같아요."
+  },
+  {
+    "id": "seg-297",
+    "start": 1162.08,
+    "end": 1163.96,
+    "speaker": "DUBNER",
+    "text": "She’s a small, white dog, very adorable.",
+    "translation": "작고 하얀 강아진데, 아주 사랑스러워요."
+  },
+  {
+    "id": "seg-298",
+    "start": 1163.96,
+    "end": 1165.0800000000002,
+    "speaker": "DUBNER",
+    "text": "Love her very much.",
+    "translation": "정말 많이 사랑하죠."
+  },
+  {
+    "id": "seg-299",
+    "start": 1165.0800000000002,
+    "end": 1167.2763636363638,
+    "speaker": "DUBNER",
+    "text": "But the question is what would I not do for —.",
+    "translation": "하지만 문제는 제가 뭘 못 해주겠냐는 거죠…"
+  },
+  {
+    "id": "seg-300",
+    "start": 1167.2763636363638,
+    "end": 1167.4581818181819,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "[덕워스] 네."
+  },
+  {
+    "id": "seg-301",
+    "start": 1167.4581818181819,
+    "end": 1169.4940000000001,
+    "speaker": "DUCKWORTH",
+    "text": "How far would you go for Fifi?",
+    "translation": "[덕워스] 피피를 위해서라면 어디까지 할 수 있어요?"
+  },
+  {
+    "id": "seg-302",
+    "start": 1169.4940000000001,
+    "end": 1169.803,
+    "speaker": "DUBNER",
+    "text": "Okay.",
+    "translation": "[더브너] 좋아요."
+  },
+  {
+    "id": "seg-303",
+    "start": 1169.803,
+    "end": 1176.8533333333332,
+    "speaker": "DUBNER",
+    "text": "So, if what you’re trying to get at here is do I treat her better than I treat people, which I gather is your subtext.",
+    "translation": "[더브너] 아, 그러니까 제가 피피를 사람들보다 더 잘 대해주냐, 그게 숨은 질문이신 것 같은데요."
+  },
+  {
+    "id": "seg-304",
+    "start": 1176.8533333333332,
+    "end": 1183.46,
+    "speaker": "DUCKWORTH",
+    "text": "People do seem to treat their pets, dogs especially, better than they treat other humans, in some cases.",
+    "translation": "[덕워스] 사람들이 반려동물, 특히 개는 다른 사람보다 더 잘 대해주는 것 같긴 해요, 어떤 경우에는요."
+  },
+  {
+    "id": "seg-305",
+    "start": 1183.46,
+    "end": 1184.645,
+    "speaker": "DUBNER",
+    "text": "I totally agree.",
+    "translation": "[더브너] 전적으로 동의합니다."
+  },
+  {
+    "id": "seg-306",
+    "start": 1184.645,
+    "end": 1188.78,
+    "speaker": "DUBNER",
+    "text": "And I do think it’s kind of tragic, honestly.",
+    "translation": "[더브너] 그리고 솔직히 그게 좀 비극적인 일이라고 생각해요."
+  },
+  {
+    "id": "seg-307",
+    "start": 1188.78,
+    "end": 1190.7395000000001,
+    "speaker": "DUBNER",
+    "text": "And yet, I participate.",
+    "translation": "[더브너] 그런데 저도 그러고 있네요."
+  },
+  {
+    "id": "seg-308",
+    "start": 1190.7395000000001,
+    "end": 1191.5595,
+    "speaker": "DUCKWORTH",
+    "text": "And yet.",
+    "translation": "[덕워스] 그런데도요."
+  },
+  {
+    "id": "seg-309",
+    "start": 1191.5595,
+    "end": 1193.6799999999998,
+    "speaker": "DUBNER",
+    "text": "I’m empathetic toward almost every dog.",
+    "translation": "[더브너] 저는 거의 모든 개한테 공감을 해요."
+  },
+  {
+    "id": "seg-310",
+    "start": 1193.6799999999998,
+    "end": 1195.0232,
+    "speaker": "DUBNER",
+    "text": "And I think, “Wait a minute.",
+    "translation": "[더브너] 그러다 이런 생각이 들죠. \"잠깐만."
+  },
+  {
+    "id": "seg-311",
+    "start": 1195.0232,
+    "end": 1201.12,
+    "speaker": "DUBNER",
+    "text": "Why would I be empathetic to a strange dog and think ill of some strange person?",
+    "translation": "[더브너] 왜 나는 낯선 개한테는 공감하면서 낯선 사람은 나쁘게 생각하는 걸까?"
+  },
+  {
+    "id": "seg-312",
+    "start": 1201.12,
+    "end": 1211.426,
+    "speaker": "DUBNER",
+    "text": "Isn’t the person higher order, capable of more, more deserving of empathy?” And yet, I feel that my association is probably not so uncommon.",
+    "translation": "[더브너] 사람이 더 고등한 존재고, 능력도 더 많고, 공감받을 자격도 더 있는 거 아닌가?\" 그런데도 저만 그런 건 아닌 것 같아요."
+  },
+  {
+    "id": "seg-313",
+    "start": 1211.426,
+    "end": 1214.2391538461538,
+    "speaker": "DUBNER",
+    "text": "And I’m glad you asked me about it, because I think about it a lot.",
+    "translation": "[더브너] 물어봐 주셔서 좋네요. 저도 그 생각을 많이 하거든요."
+  },
+  {
+    "id": "seg-314",
+    "start": 1214.2391538461538,
+    "end": 1215.2795,
+    "speaker": "DUBNER",
+    "text": "And it bothers me.",
+    "translation": "[더브너] 그리고 이게 좀 마음에 걸려요."
+  },
+  {
+    "id": "seg-315",
+    "start": 1215.2795,
+    "end": 1227.4827272727273,
+    "speaker": "DUBNER",
+    "text": "I’m so guilty of being dog-centric or pro-dog, that when I’m in a foul mood, and let’s say I’m walking down the street, and it’s a crowded sidewalk.",
+    "translation": "[더브너] 제가 좀 심할 정도로 개 중심적이라서, 가령 기분이 안 좋을 때 붐비는 길을 걷고 있다고 해보죠."
+  },
+  {
+    "id": "seg-316",
+    "start": 1227.4827272727273,
+    "end": 1230.0725454545454,
+    "speaker": "DUBNER",
+    "text": "You know, there’s just a lot of people.",
+    "translation": "[더브너] 아시다시피 사람이 정말 많잖아요."
+  },
+  {
+    "id": "seg-317",
+    "start": 1230.0725454545454,
+    "end": 1234.3828571428571,
+    "speaker": "DUBNER",
+    "text": "And they’re weaving in and out, or getting in the way, and I feel myself getting annoyed.",
+    "translation": "[더브너] 사람들이 막 이리저리 오가거나 길을 막으면, 저도 모르게 짜증이 나요."
+  },
+  {
+    "id": "seg-318",
+    "start": 1234.3828571428571,
+    "end": 1235.46975,
+    "speaker": "DUBNER",
+    "text": "And I think, “What am I doing?",
+    "translation": "[더브너] 그러면서 생각하죠. \"내가 지금 뭐 하는 거지?"
+  },
+  {
+    "id": "seg-319",
+    "start": 1235.46975,
+    "end": 1236.9066666666668,
+    "speaker": "DUBNER",
+    "text": "These people are doing nothing wrong.",
+    "translation": "[더브너] 이 사람들은 아무 잘못도 없는데.\""
+  },
+  {
+    "id": "seg-320",
+    "start": 1236.9066666666668,
+    "end": 1238.02925,
+    "speaker": "DUBNER",
+    "text": "They’re just walking down the street.",
+    "translation": "그냥 길을 걸어가고 있을 뿐인데요."
+  },
+  {
+    "id": "seg-321",
+    "start": 1238.02925,
+    "end": 1243.845,
+    "speaker": "DUBNER",
+    "text": "Why am I getting annoyed at them?” And I realize it’s just because I’m a little impatient or cranky, whatever.",
+    "translation": "내가 왜 저 사람들한테 짜증이 날까? 생각해 보면 그냥 제가 성격이 좀 급하고 까칠해서 그런 거더라고요, 뭐."
+  },
+  {
+    "id": "seg-322",
+    "start": 1243.845,
+    "end": 1252.8958,
+    "speaker": "DUBNER",
+    "text": "So, what I do, I have this trick, which is, I superimpose onto the face of every person who’s annoying me, the face of some dog.",
+    "translation": "그래서 제가 쓰는 방법이 있는데, 저만의 꼼수죠. 뭐냐면, 저를 짜증 나게 하는 모든 사람 얼굴에다가 강아지 얼굴을 겹쳐보는 거예요."
+  },
+  {
+    "id": "seg-323",
+    "start": 1252.8958,
+    "end": 1255.2,
+    "speaker": "DUCKWORTH",
+    "text": "This makes you nicer to them?",
+    "translation": "그렇게 하면 그 사람들한테 더 친절해져요?"
+  },
+  {
+    "id": "seg-324",
+    "start": 1255.2,
+    "end": 1256.1200000000001,
+    "speaker": "DUBNER",
+    "text": "It does.",
+    "translation": "네, 그래요."
+  },
+  {
+    "id": "seg-325",
+    "start": 1256.1200000000001,
+    "end": 1259.3955555555556,
+    "speaker": "DUBNER",
+    "text": "Okay, it does sound pretty ridiculous now that I say it out loud.",
+    "translation": "아, 막상 말하고 나니까 진짜 말도 안 되는 소리 같긴 하네요."
+  },
+  {
+    "id": "seg-326",
+    "start": 1259.3955555555556,
+    "end": 1264.9395,
+    "speaker": "DUBNER",
+    "text": "But, I put dog faces on all the people, and then I find, suddenly, I’m empathetic toward every person.",
+    "translation": "근데 사람들 얼굴에 강아지 얼굴을 씌워보면, 갑자기 모든 사람한테 공감이 되더라고요."
+  },
+  {
+    "id": "seg-327",
+    "start": 1264.9395,
+    "end": 1267.3590000000002,
+    "speaker": "DUCKWORTH",
+    "text": "I find the whole thing puzzling, honestly.",
+    "translation": "솔직히 저는 그게 다 좀 이해가 안 돼요."
+  },
+  {
+    "id": "seg-328",
+    "start": 1267.3590000000002,
+    "end": 1273.0320000000002,
+    "speaker": "DUCKWORTH",
+    "text": "If I were pitching a venture capitalist in a hypothetical world that didn’t have pets, and I’m like, “Okay, we’re going to have these animals.",
+    "translation": "만약에 반려동물이 없는 가상의 세계에서 제가 벤처 투자자한테 '자, 우리가 이런 동물들을 키울 건데요."
+  },
+  {
+    "id": "seg-329",
+    "start": 1273.0320000000002,
+    "end": 1273.89,
+    "speaker": "DUCKWORTH",
+    "text": "They’re going to be domesticated.",
+    "translation": "얘네는 길들여질 거고요."
+  },
+  {
+    "id": "seg-330",
+    "start": 1273.89,
+    "end": 1274.89,
+    "speaker": "DUCKWORTH",
+    "text": "They’re going to s***.",
+    "translation": "똥도 쌀 거고요."
+  },
+  {
+    "id": "seg-331",
+    "start": 1274.89,
+    "end": 1275.8880000000001,
+    "speaker": "DUCKWORTH",
+    "text": "They’re going to pee.",
+    "translation": "오줌도 쌀 거고요."
+  },
+  {
+    "id": "seg-332",
+    "start": 1275.8880000000001,
+    "end": 1278,
+    "speaker": "DUCKWORTH",
+    "text": "They’re going to, of course, die before you do.",
+    "translation": "그리고 당연히, 당신보다 먼저 죽을 겁니다."
+  },
+  {
+    "id": "seg-333",
+    "start": 1278,
+    "end": 1285.7866666666666,
+    "speaker": "DUCKWORTH",
+    "text": "So you’re going to be really unhappy, even desperately depressed after your pet dies.” Nobody would invest in that idea.",
+    "translation": "그래서 반려동물이 죽고 나면 엄청 불행해지고, 심지어 절망적으로 우울해질 겁니다.' 라고 하면요. 아무도 그 아이디어에 투자 안 할 걸요."
+  },
+  {
+    "id": "seg-334",
+    "start": 1285.7866666666666,
+    "end": 1286.992,
+    "speaker": "DUCKWORTH",
+    "text": "It’s so ridiculous.",
+    "translation": "너무 말도 안 되잖아요."
+  },
+  {
+    "id": "seg-335",
+    "start": 1286.992,
+    "end": 1297.2195000000002,
+    "speaker": "DUCKWORTH",
+    "text": "Also, There is a problem in my neighborhood where the dog owners will tie up their tidy little bag of dog poo, but then just leave it.",
+    "translation": "그리고 저희 동네에 문제가 하나 있는데요, 견주들이 강아지 똥을 봉투에 예쁘게 잘 담아 묶어놓고는, 그냥 버리고 가요."
+  },
+  {
+    "id": "seg-336",
+    "start": 1297.2195000000002,
+    "end": 1303.19975,
+    "speaker": "DUCKWORTH",
+    "text": "And my husband installed this industrial-sized trash can right outside our house.",
+    "translation": "그래서 저희 남편이 집 바로 앞에다가 업소용 대형 쓰레기통을 설치했어요."
+  },
+  {
+    "id": "seg-337",
+    "start": 1303.19975,
+    "end": 1308.24,
+    "speaker": "DUCKWORTH",
+    "text": "And then we personally are basically curbing the dogs for the entire neighborhood.",
+    "translation": "그랬더니 저희가 동네 개들 뒤처리를 다 해주고 있는 셈이 됐어요."
+  },
+  {
+    "id": "seg-338",
+    "start": 1308.24,
+    "end": 1313.5454545454545,
+    "speaker": "DUBNER",
+    "text": "You’re handling all the dog poop for your neighborhood, and you’re the people who don’t have a dog?",
+    "translation": "아니, 동네 개똥은 다 치우면서 정작 두 분은 개를 안 키우신다고요?"
+  },
+  {
+    "id": "seg-339",
+    "start": 1313.5454545454545,
+    "end": 1315.072,
+    "speaker": "DUBNER",
+    "text": "No wonder you hate dogs.",
+    "translation": "개를 싫어하실 만하네요."
+  },
+  {
+    "id": "seg-340",
+    "start": 1315.072,
+    "end": 1315.824,
+    "speaker": "DUCKWORTH",
+    "text": "I know.",
+    "translation": "알아요."
+  },
+  {
+    "id": "seg-341",
+    "start": 1315.824,
+    "end": 1318.0796249999999,
+    "speaker": "DUCKWORTH",
+    "text": "I got a little chip on my shoulder with that.",
+    "translation": "저도 그 점에 대해서는 좀 억하심정이 있어요."
+  },
+  {
+    "id": "seg-342",
+    "start": 1318.0796249999999,
+    "end": 1320.92,
+    "speaker": "DUBNER",
+    "text": "We once did a Freakonomics Radio episode about this theme.",
+    "translation": "저희가 예전에 프리코노믹스 라디오에서 이 주제로 에피소드를 한 적이 있어요."
+  },
+  {
+    "id": "seg-343",
+    "start": 1320.92,
+    "end": 1334.7395000000001,
+    "speaker": "DUBNER",
+    "text": "It was called “Which Came First, the Chicken or the Avocado?” And it was about the moral outrage that people feel about the mistreatment of animals when they often don’t feel outrage over the mistreatment of humans.",
+    "translation": "제목이 \"닭이 먼저냐, 아보카도가 먼저냐?\"였는데요. 사람들이 동물이 학대받는 것에 대해서는 도덕적 분노를 느끼면서, 정작 인간이 학대받는 것에 대해서는 분노하지 않는 현상에 대한 이야기였어요."
+  },
+  {
+    "id": "seg-344",
+    "start": 1334.7395000000001,
+    "end": 1336.48,
+    "speaker": "DUBNER",
+    "text": "And I’ll start with the animal in the story.",
+    "translation": "우선 이야기 속 동물부터 시작해 볼게요."
+  },
+  {
+    "id": "seg-345",
+    "start": 1336.48,
+    "end": 1337.2685714285715,
+    "speaker": "DUBNER",
+    "text": "It wasn’t actually chicken.",
+    "translation": "사실 닭은 아니었고요."
+  },
+  {
+    "id": "seg-346",
+    "start": 1337.2685714285715,
+    "end": 1338.0228571428572,
+    "speaker": "DUBNER",
+    "text": "It was a giraffe.",
+    "translation": "기린이었어요."
+  },
+  {
+    "id": "seg-347",
+    "start": 1338.0228571428572,
+    "end": 1344.38,
+    "speaker": "DUBNER",
+    "text": "Do you remember there was a giraffe named Marius who lived in a zoo in Copenhagen?",
+    "translation": "혹시 코펜하겐 동물원에 살던 마리우스라는 이름의 기린 기억하세요?"
+  },
+  {
+    "id": "seg-348",
+    "start": 1344.38,
+    "end": 1352.32,
+    "speaker": "DUBNER",
+    "text": "And he was dissected in front of a bunch of children who were visiting the zoo.",
+    "translation": "그 기린이 동물원에 구경 온 아이들 무리 앞에서 해부됐거든요."
+  },
+  {
+    "id": "seg-349",
+    "start": 1352.32,
+    "end": 1353.91,
+    "speaker": "DUBNER",
+    "text": "Now, he was dead.",
+    "translation": "물론 죽은 상태였죠."
+  },
+  {
+    "id": "seg-350",
+    "start": 1353.91,
+    "end": 1357.7797500000001,
+    "speaker": "DUBNER",
+    "text": "And they were cutting him up to show an autopsy or a dissection.",
+    "translation": "부검이나 해부하는 걸 보여주려고 자른 거였어요."
+  },
+  {
+    "id": "seg-351",
+    "start": 1357.7797500000001,
+    "end": 1360.6133333333332,
+    "speaker": "DUCKWORTH",
+    "text": "Just like a biology study, or something.",
+    "translation": "뭐 생물학 실습 같은 거였겠네요."
+  },
+  {
+    "id": "seg-352",
+    "start": 1360.6133333333332,
+    "end": 1361.751111111111,
+    "speaker": "DUBNER",
+    "text": "Yeah, something like that.",
+    "translation": "네, 뭐 그런 거였죠."
+  },
+  {
+    "id": "seg-353",
+    "start": 1361.751111111111,
+    "end": 1370.6995000000002,
+    "speaker": "DUBNER",
+    "text": "And it became a huge global outcry and a kind of outpouring of sympathy for poor Marius, the giraffe.",
+    "translation": "그런데 이게 전 세계적으로 엄청난 항의를 불러일으켰고, 불쌍한 기린 마리우스에 대한 동정심이 쏟아져 나왔어요."
+  },
+  {
+    "id": "seg-354",
+    "start": 1370.6995000000002,
+    "end": 1385.2199999999998,
+    "speaker": "DUBNER",
+    "text": "And at the same time, I’d become aware that the avocados that most Americans eat are primarily imported from Mexico, in places where criminals extort, and kill, and do other things to the farmers who grow them.",
+    "translation": "그리고 비슷한 시기에, 저는 대부분의 미국인이 먹는 아보카도가 주로 멕시코에서 수입되는데, 그곳에서는 범죄자들이 농부들을 갈취하고, 살해하고, 온갖 나쁜 짓을 한다는 사실을 알게 됐어요."
+  },
+  {
+    "id": "seg-355",
+    "start": 1385.2199999999998,
+    "end": 1388.8200000000002,
+    "speaker": "DUBNER",
+    "text": "In other words, our avocados are blood avocados.",
+    "translation": "다시 말해, 우리가 먹는 아보카도는 피의 아보카도인 셈이죠."
+  },
+  {
+    "id": "seg-356",
+    "start": 1388.8200000000002,
+    "end": 1390.146,
+    "speaker": "DUCKWORTH",
+    "text": "There’s blood on our hands.",
+    "translation": "우리 손에 피를 묻히는 거네요."
+  },
+  {
+    "id": "seg-357",
+    "start": 1390.146,
+    "end": 1390.493,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-358",
+    "start": 1390.493,
+    "end": 1401.08,
+    "speaker": "DUBNER",
+    "text": "But nobody seems to care when they’re having guacamole that oh, the actual people who work to grow these things are being beat up, and ransomed, and things like this.",
+    "translation": "하지만 과카몰리를 먹을 때면, 이걸 재배하느라 애쓴 실제 사람들이 구타당하고, 몸값을 요구당하고, 이런저런 일을 당한다는 사실에는 아무도 신경 쓰지 않는 것 같아요."
+  },
+  {
+    "id": "seg-359",
+    "start": 1401.08,
+    "end": 1403.88,
+    "speaker": "DUBNER",
+    "text": "Whereas poor Marius, there was so much empathy.",
+    "translation": "반면에 불쌍한 마리우스에게는 그토록 많은 공감이 쏟아졌죠."
+  },
+  {
+    "id": "seg-360",
+    "start": 1403.88,
+    "end": 1409.2719000000002,
+    "speaker": "DUBNER",
+    "text": "And to go beyond the avocados, what about a million Syrian refugees?",
+    "translation": "아보카도를 넘어서, 100만 명의 시리아 난민은 어떤가요?"
+  },
+  {
+    "id": "seg-361",
+    "start": 1409.2719000000002,
+    "end": 1416.0133333333333,
+    "speaker": "DUBNER",
+    "text": "Yeah, there’s a lot of hand-wringing and teeth-gnashing, but Marius the giraffe seemed to gather more sympathy.",
+    "translation": "맞아요, 걱정하고 분통을 터뜨리는 일은 많지만, 기린 마리우스가 훨씬 더 많은 동정을 얻은 것 같아요."
+  },
+  {
+    "id": "seg-362",
+    "start": 1416.0133333333333,
+    "end": 1418.8666666666668,
+    "speaker": "DUBNER",
+    "text": "And that depresses me, but it also doesn’t surprise me.",
+    "translation": "그게 참 우울하면서도, 그리 놀라운 일은 아닙니다."
+  },
+  {
+    "id": "seg-363",
+    "start": 1418.8666666666668,
+    "end": 1419.1000000000001,
+    "speaker": "DUCKWORTH",
+    "text": "Okay.",
+    "translation": "그렇군요."
+  },
+  {
+    "id": "seg-364",
+    "start": 1419.1000000000001,
+    "end": 1422.919,
+    "speaker": "DUCKWORTH",
+    "text": "So there’s a lot of things going on with Marius the giraffe.",
+    "translation": "그러니까, 기린 마리우스 사건에는 여러 가지 요인이 얽혀 있어요."
+  },
+  {
+    "id": "seg-365",
+    "start": 1422.919,
+    "end": 1425.3593333333333,
+    "speaker": "DUCKWORTH",
+    "text": "First of all, what an adorable name.",
+    "translation": "일단 이름이 정말 사랑스럽잖아요."
+  },
+  {
+    "id": "seg-366",
+    "start": 1425.3593333333333,
+    "end": 1427.7676999999999,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, maybe the name was part of it.",
+    "translation": "제 말은, 이름도 한몫했을 거란 뜻이에요."
+  },
+  {
+    "id": "seg-367",
+    "start": 1427.7676999999999,
+    "end": 1431.8398,
+    "speaker": "DUCKWORTH",
+    "text": "And then also one giraffe is probably somehow more compelling than plurality.",
+    "translation": "그리고 다수보다는 기린 한 마리가 왠지 더 마음을 끄는 구석이 있죠."
+  },
+  {
+    "id": "seg-368",
+    "start": 1431.8398,
+    "end": 1437.7595000000001,
+    "speaker": "DUCKWORTH",
+    "text": "You know, all the research showing that we’re more sympathetic to a story of one particular individual.",
+    "translation": "우리가 특정 개인 한 사람의 이야기에 더 많이 공감한다는 연구 결과들 있잖아요."
+  },
+  {
+    "id": "seg-369",
+    "start": 1437.7595000000001,
+    "end": 1440.2396666666666,
+    "speaker": "DUCKWORTH",
+    "text": "I guess, in this case, an individual giraffe.",
+    "translation": "이번 경우에는 그게 기린 한 마리가 되겠네요."
+  },
+  {
+    "id": "seg-370",
+    "start": 1440.2396666666666,
+    "end": 1444.0395,
+    "speaker": "DUCKWORTH",
+    "text": "But let me make a comparison, which I think is even more direct.",
+    "translation": "하지만 좀 더 직접적인 비교를 하나 해볼게요."
+  },
+  {
+    "id": "seg-371",
+    "start": 1444.0395,
+    "end": 1448.5900000000001,
+    "speaker": "DUCKWORTH",
+    "text": "So you’ve got this dog, Fifi, that costs you some amount of money.",
+    "translation": "자, 키우는 반려견 피피가 있고, 여기에 돈이 꽤 든다고 해봅시다."
+  },
+  {
+    "id": "seg-372",
+    "start": 1448.5900000000001,
+    "end": 1458.3200000000002,
+    "speaker": "DUCKWORTH",
+    "text": "Why don’t we donate the equivalent amount of money that we spend for extraordinary, and even ordinary, expenses that have to do with caring for our pets?",
+    "translation": "우리는 왜 반려동물을 돌보는 데 들어가는 특별 비용이나 심지어 일상적인 비용만큼의 돈을 기부하지 않을까요?"
+  },
+  {
+    "id": "seg-373",
+    "start": 1458.3200000000002,
+    "end": 1459.7,
+    "speaker": "DUCKWORTH",
+    "text": "Like, thousands of dollars.",
+    "translation": "수천 달러에 달하는 돈 말이죠."
+  },
+  {
+    "id": "seg-374",
+    "start": 1459.7,
+    "end": 1465.98,
+    "speaker": "DUCKWORTH",
+    "text": "Why don’t we donate that amount of money to very worthy human causes: education, hunger?",
+    "translation": "왜 그만큼의 돈을 교육이나 기아 해결 같은 정말 가치 있는 인간적 명분에 기부하지 않는 걸까요?"
+  },
+  {
+    "id": "seg-375",
+    "start": 1465.98,
+    "end": 1480.5390000000002,
+    "speaker": "DUBNER",
+    "text": "There was a study by these sociologists at Northeastern who were looking into the question of whether people, human subjects, are more emotionally disturbed by abuse of animals versus people.",
+    "translation": "노스이스트 대학교의 사회학자들이 진행한 연구가 있었는데요, 사람들이 동물에 대한 학대와 인간에 대한 학대 중 어느 쪽에 더 감정적으로 동요하는지 조사했습니다."
+  },
+  {
+    "id": "seg-376",
+    "start": 1480.5390000000002,
+    "end": 1482.12,
+    "speaker": "DUBNER",
+    "text": "And they found— Let me see, here.",
+    "translation": "그 결과가 어땠냐면... 잠시만요, 여기 있네요."
+  },
+  {
+    "id": "seg-377",
+    "start": 1482.12,
+    "end": 1482.6799999999998,
+    "speaker": "DUBNER",
+    "text": "I’ll read a bit.",
+    "translation": "조금 읽어드릴게요."
+  },
+  {
+    "id": "seg-378",
+    "start": 1482.6799999999998,
+    "end": 1491.6799999999998,
+    "speaker": "DUBNER",
+    "text": "“We found more empathy for victims who are human children” — so children — “puppies, and full-grown dogs than for victims who are adult humans.” Okay?",
+    "translation": "\"우리는 성인 인간 피해자보다 인간 어린이(그러니까 아이들), 강아지, 그리고 다 자른 개들에게 더 많은 공감을 느낀다는 사실을 발견했다.\" 아시겠어요?"
+  },
+  {
+    "id": "seg-379",
+    "start": 1491.6799999999998,
+    "end": 1493.3398333333334,
+    "speaker": "DUBNER",
+    "text": "So it doesn’t even have to be a puppy.",
+    "translation": "그러니까 꼭 새끼 강아지일 필요도 없는 거죠."
+  },
+  {
+    "id": "seg-380",
+    "start": 1493.3398333333334,
+    "end": 1494.0194999999999,
+    "speaker": "DUBNER",
+    "text": "Full-grown dogs.",
+    "translation": "다 큰 개들이요."
+  },
+  {
+    "id": "seg-381",
+    "start": 1494.0194999999999,
+    "end": 1496.88,
+    "speaker": "DUCKWORTH",
+    "text": "The full-grown dogs come in before the full-grown humans.",
+    "translation": "다 큰 개들이 다 큰 사람보다 먼저 들어온다는 거네요."
+  },
+  {
+    "id": "seg-382",
+    "start": 1496.88,
+    "end": 1498.6638,
+    "speaker": "DUBNER",
+    "text": "I do find it troubling.",
+    "translation": "저는 그게 좀 심란하더라고요."
+  },
+  {
+    "id": "seg-383",
+    "start": 1498.6638,
+    "end": 1510.464,
+    "speaker": "DUBNER",
+    "text": "But I think the simplest explanation is that it’s easier to feel empathy or to exhibit kindness toward pets, even strange pets, than to strange people, or sometimes even people we know well.",
+    "translation": "하지만 제 생각에 가장 간단한 설명은, 낯선 사람이나 심지어 우리가 잘 아는 사람보다도 반려동물, 심지어 모르는 반려동물에게 공감하거나 친절을 베풀기가 더 쉽다는 거예요."
+  },
+  {
+    "id": "seg-384",
+    "start": 1510.464,
+    "end": 1518.679,
+    "speaker": "DUBNER",
+    "text": "And I think the answer lies in your field somehow, in psychology, in that we tabulate the wrongdoing of other humans.",
+    "translation": "그리고 제 생각에 해답은 어쩐지 교수님 분야, 즉 심리학에 있는 것 같아요. 우리는 다른 사람들의 잘못을 하나하나 따지잖아요."
+  },
+  {
+    "id": "seg-385",
+    "start": 1518.679,
+    "end": 1522.55,
+    "speaker": "DUBNER",
+    "text": "Moral failings, or behaviors we disapprove of in some way.",
+    "translation": "도덕적인 결함이라든가, 어떤 식으로든 우리가 못마땅하게 여기는 행동들 말이죠."
+  },
+  {
+    "id": "seg-386",
+    "start": 1522.55,
+    "end": 1525.6,
+    "speaker": "DUCKWORTH",
+    "text": "So we have mixed feelings, maybe, about our fellow human.",
+    "translation": "그러니까 우리 동료 인간에 대해서는, 어쩌면 복잡한 감정을 갖고 있는 거군요."
+  },
+  {
+    "id": "seg-387",
+    "start": 1525.6,
+    "end": 1526.4099999999999,
+    "speaker": "DUBNER",
+    "text": "Mixed at best.",
+    "translation": "기껏해야 복잡한 감정이죠."
+  },
+  {
+    "id": "seg-388",
+    "start": 1526.4099999999999,
+    "end": 1528.904,
+    "speaker": "DUCKWORTH",
+    "text": "But the dogs, you’re like, “Nah, they’re pretty good.”",
+    "translation": "하지만 개들에 대해서는 '아니, 쟤들은 꽤 착해' 이렇게 생각하는 거고요."
+  },
+  {
+    "id": "seg-389",
+    "start": 1528.904,
+    "end": 1530.92,
+    "speaker": "DUBNER",
+    "text": "I think it’s the paradox of the dog.",
+    "translation": "이게 바로 개의 역설인 것 같아요."
+  },
+  {
+    "id": "seg-390",
+    "start": 1530.92,
+    "end": 1534.7942857142857,
+    "speaker": "DUBNER",
+    "text": "They aren’t capable of that much, so we can’t blame them for that much.",
+    "translation": "개들은 그렇게 대단한 걸 할 능력이 없으니, 우리가 그렇게 많이 탓할 수도 없죠."
+  },
+  {
+    "id": "seg-391",
+    "start": 1534.7942857142857,
+    "end": 1536.56,
+    "speaker": "DUBNER",
+    "text": "You know, what’s the worst thing a dog can do?",
+    "translation": "있잖아요, 개가 할 수 있는 최악의 일이 뭘까요?"
+  },
+  {
+    "id": "seg-392",
+    "start": 1536.56,
+    "end": 1539.38,
+    "speaker": "DUBNER",
+    "text": "It can chew up your couch, or maybe poop on your floor.",
+    "translation": "소파를 물어뜯거나, 아니면 바닥에 똥을 싸는 정도겠죠."
+  },
+  {
+    "id": "seg-393",
+    "start": 1539.38,
+    "end": 1540.8181818181818,
+    "speaker": "DUBNER",
+    "text": "And those are pretty forgivable.",
+    "translation": "그리고 그런 건 꽤 용서할 만하잖아요."
+  },
+  {
+    "id": "seg-394",
+    "start": 1540.8181818181818,
+    "end": 1545.47,
+    "speaker": "DUBNER",
+    "text": "But the person you know can do something a lot worse than that.",
+    "translation": "하지만 당신이 아는 사람은 그것보다 훨씬 더 나쁜 짓을 할 수 있죠."
+  },
+  {
+    "id": "seg-395",
+    "start": 1545.47,
+    "end": 1549,
+    "speaker": "DUCKWORTH",
+    "text": "They certainly haven’t schemed in a really sophisticated, evil way.",
+    "translation": "아주 정교하고 사악한 방식으로 음모를 꾸미지는 않으니까요, 확실히."
+  },
+  {
+    "id": "seg-396",
+    "start": 1549,
+    "end": 1556.68,
+    "speaker": "DUBNER",
+    "text": "But it does disturb me how baseline empathetic I am toward any dog on the street versus any person on the street.",
+    "translation": "하지만 제가 길에서 마주치는 어떤 사람보다 어떤 개에게 기본적으로 더 공감하는 이 사실이 저를 불편하게 만들어요."
+  },
+  {
+    "id": "seg-397",
+    "start": 1556.68,
+    "end": 1558.904,
+    "speaker": "DUBNER",
+    "text": "And I would like to change, so can you help me?",
+    "translation": "그래서 저는 좀 변하고 싶은데, 저 좀 도와주시겠어요?"
+  },
+  {
+    "id": "seg-398",
+    "start": 1558.904,
+    "end": 1563.52,
+    "speaker": "DUCKWORTH",
+    "text": "Other than just thinking of people as dogs, which seems to help you.",
+    "translation": "사람을 개라고 생각하는 것 말고는 말이죠. 그건 도움이 되는 것 같지만요."
+  },
+  {
+    "id": "seg-399",
+    "start": 1563.52,
+    "end": 1566.6472,
+    "speaker": "DUCKWORTH",
+    "text": "Well, to be a little nitpicky, I don’t think you really mean empathy, right?",
+    "translation": "음, 조금 꼬치꼬치 따지자면, 그게 정말 공감을 의미하는 건 아닌 것 같은데요, 그렇죠?"
+  },
+  {
+    "id": "seg-400",
+    "start": 1566.6472,
+    "end": 1570.6723333333332,
+    "speaker": "DUCKWORTH",
+    "text": "You don’t mean it in the kind of narrow sense that like, I’m feeling what you’re feeling.",
+    "translation": "그러니까, '내가 당신의 감정을 똑같이 느낀다'는 식의 좁은 의미로 말하는 건 아니라는 거죠."
+  },
+  {
+    "id": "seg-401",
+    "start": 1570.6723333333332,
+    "end": 1573.0036666666665,
+    "speaker": "DUCKWORTH",
+    "text": "Because, that’s one of the classic philosophical questions.",
+    "translation": "왜냐하면 그게 고전적인 철학 질문 중 하나거든요."
+  },
+  {
+    "id": "seg-402",
+    "start": 1573.0036666666665,
+    "end": 1577.5537142857142,
+    "speaker": "DUCKWORTH",
+    "text": "Can you really feel what a dog might feel or a goldfinch or something?",
+    "translation": "개가 뭘 느낄지, 아니면 뭐 작은 새가 뭘 느낄지, 그런 걸 정말 느낄 수 있을까요?"
+  },
+  {
+    "id": "seg-403",
+    "start": 1577.5537142857142,
+    "end": 1581.665,
+    "speaker": "DUCKWORTH",
+    "text": "Because you really will never know what it feels like to be a dog, right?",
+    "translation": "개가 된다는 게 어떤 기분일지 절대 알 수 없으니까요, 그렇죠?"
+  },
+  {
+    "id": "seg-404",
+    "start": 1581.665,
+    "end": 1583.2839999999999,
+    "speaker": "DUBNER",
+    "text": "Well, maybe sympathy rather than empathy.",
+    "translation": "글쎄요, 공감이라기보다는 연민이라고 해야 할 것 같네요."
+  },
+  {
+    "id": "seg-405",
+    "start": 1583.2839999999999,
+    "end": 1584.916,
+    "speaker": "DUCKWORTH",
+    "text": "What do you mean when you say that?",
+    "translation": "그렇게 말씀하시는 건 무슨 뜻이죠?"
+  },
+  {
+    "id": "seg-406",
+    "start": 1584.916,
+    "end": 1596.8200000000002,
+    "speaker": "DUBNER",
+    "text": "I guess the word I would use is sympathy in that, if I see a dog out in the rain, I’m like, “Oh, poor dog.” If I see a person out in the rain, I think, “What are the circumstances that led to that person being there?",
+    "translation": "제가 연민이라는 단어를 쓰는 이유는, 만약 비를 맞고 있는 개를 보면 '아, 불쌍한 강아지'라고 생각하거든요. 그런데 비를 맞고 있는 사람을 보면, '저 사람이 저기 있게 된 사정이 뭘까?'라고 생각하게 돼요."
+  },
+  {
+    "id": "seg-407",
+    "start": 1596.8200000000002,
+    "end": 1598.0396666666666,
+    "speaker": "DUBNER",
+    "text": "Did they make bad choices?”",
+    "translation": "'잘못된 선택을 한 걸까?' 하고요."
+  },
+  {
+    "id": "seg-408",
+    "start": 1598.0396666666666,
+    "end": 1599.2448571428572,
+    "speaker": "DUCKWORTH",
+    "text": "This is revealing.",
+    "translation": "이거 많은 걸 보여주네요."
+  },
+  {
+    "id": "seg-409",
+    "start": 1599.2448571428572,
+    "end": 1601.53,
+    "speaker": "DUCKWORTH",
+    "text": "You feel like a dog is innocent.",
+    "translation": "개는 순수하다고 느끼시는 거군요."
+  },
+  {
+    "id": "seg-410",
+    "start": 1601.53,
+    "end": 1611.3795,
+    "speaker": "DUCKWORTH",
+    "text": "And a little bit like they have certain limitations that would make you feel more moved, I guess, when you see them suffering, and maybe more responsible to help them, right?",
+    "translation": "그리고 개에게는 어떤 한계가 있어서, 그들이 고통받는 걸 보면 더 마음이 움직이고, 도와줘야 한다는 책임감을 더 느끼게 되는 것 같기도 하고요. 그렇죠?"
+  },
+  {
+    "id": "seg-411",
+    "start": 1611.3795,
+    "end": 1616.3466666666666,
+    "speaker": "DUBNER",
+    "text": "And they have less agency and fewer opportunities to do things that might upset other humans.",
+    "translation": "그리고 개들은 주체성도 부족하고, 다른 사람들을 화나게 할 만한 일을 할 기회도 적죠."
+  },
+  {
+    "id": "seg-412",
+    "start": 1616.3466666666666,
+    "end": 1626.5758,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, here’s the thing that might be an explanation for this, but I think it’s controversial, which is that dogs are one of the things that make people happy, like happier than almost anything.",
+    "translation": "제 말은, 이걸 설명할 수 있는 게 하나 있긴 한데, 좀 논란의 여지가 있을 것 같아요. 바로 개가 사람을 행복하게 만드는 존재 중 하나라는 거죠. 거의 다른 무엇보다도 더요."
+  },
+  {
+    "id": "seg-413",
+    "start": 1626.5758,
+    "end": 1631.7866666666666,
+    "speaker": "DUCKWORTH",
+    "text": "That would be an explanation for why you would want to privilege them in a moral dilemma.",
+    "translation": "그게 바로 당신이 도덕적 딜레마 상황에서 개를 특별 대우하려는 이유를 설명해 줄 수 있겠네요."
+  },
+  {
+    "id": "seg-414",
+    "start": 1631.7866666666666,
+    "end": 1637.3992,
+    "speaker": "DUCKWORTH",
+    "text": "Or why walking down a crowded sidewalk in New York, it helps to think about other people as dogs.",
+    "translation": "혹은 뉴욕의 붐비는 길을 걸을 때, 다른 사람들을 개라고 생각하면 도움이 되는 이유이기도 하고요."
+  },
+  {
+    "id": "seg-415",
+    "start": 1637.3992,
+    "end": 1640.1541428571427,
+    "speaker": "DUCKWORTH",
+    "text": "Because they’re such a source of happiness.",
+    "translation": "워낙 행복의 원천이니까요."
+  },
+  {
+    "id": "seg-416",
+    "start": 1640.1541428571427,
+    "end": 1647.395,
+    "speaker": "DUCKWORTH",
+    "text": "If Fifi were not in your life, if you could just imagine that counterfactual, do you think you would be a little less happy than you are today?",
+    "translation": "만약 피피가 당신 삶에 없다면, 그런 반사실적 가정을 해볼 수 있다면요, 지금보다 조금 덜 행복할 거라고 생각하세요?"
+  },
+  {
+    "id": "seg-417",
+    "start": 1647.395,
+    "end": 1648.495,
+    "speaker": "DUBNER",
+    "text": "Yeah, I probably would.",
+    "translation": "네, 아마 그럴 것 같아요."
+  },
+  {
+    "id": "seg-418",
+    "start": 1648.495,
+    "end": 1650.12,
+    "speaker": "DUBNER",
+    "text": "I mean, I grew up with dogs.",
+    "translation": "그러니까, 저는 개와 함께 자랐거든요."
+  },
+  {
+    "id": "seg-419",
+    "start": 1650.12,
+    "end": 1653.6228571428571,
+    "speaker": "DUBNER",
+    "text": "But then I lived for many, many, many years without a dog and was totally fine.",
+    "translation": "하지만 그 후로 아주, 아주, 아주 오랫동안 개 없이 살았는데도 전혀 괜찮았어요."
+  },
+  {
+    "id": "seg-420",
+    "start": 1653.6228571428571,
+    "end": 1654.8342857142857,
+    "speaker": "DUBNER",
+    "text": "So I like Fifi.",
+    "translation": "저는 피피가 좋아요."
+  },
+  {
+    "id": "seg-421",
+    "start": 1654.8342857142857,
+    "end": 1657.3995,
+    "speaker": "DUBNER",
+    "text": "If she disappeared tomorrow, I would miss her.",
+    "translation": "피피가 내일 당장 사라진다면 그리울 거예요."
+  },
+  {
+    "id": "seg-422",
+    "start": 1657.3995,
+    "end": 1658.3200000000002,
+    "speaker": "DUBNER",
+    "text": "I would mourn her.",
+    "translation": "슬퍼하기도 하겠죠."
+  },
+  {
+    "id": "seg-423",
+    "start": 1658.3200000000002,
+    "end": 1659.3314285714284,
+    "speaker": "DUBNER",
+    "text": "But no, I’d be fine.",
+    "translation": "하지만 뭐, 괜찮을 겁니다."
+  },
+  {
+    "id": "seg-424",
+    "start": 1659.3314285714284,
+    "end": 1660.84,
+    "speaker": "DUBNER",
+    "text": "It’s not like with a person.",
+    "translation": "사람만큼은 아니니까요."
+  },
+  {
+    "id": "seg-425",
+    "start": 1660.84,
+    "end": 1661.09,
+    "speaker": "DUCKWORTH",
+    "text": "Yes.",
+    "translation": "그렇군요."
+  },
+  {
+    "id": "seg-426",
+    "start": 1661.09,
+    "end": 1661.34,
+    "speaker": "DUCKWORTH",
+    "text": "Okay.",
+    "translation": "알겠어요."
+  },
+  {
+    "id": "seg-427",
+    "start": 1661.34,
+    "end": 1662.1278,
+    "speaker": "DUCKWORTH",
+    "text": "Well, that’s good.",
+    "translation": "뭐, 다행이네요."
+  },
+  {
+    "id": "seg-428",
+    "start": 1662.1278,
+    "end": 1664.0990000000002,
+    "speaker": "DUCKWORTH",
+    "text": "That was the right answer.",
+    "translation": "정답이었어요."
+  },
+  {
+    "id": "seg-429",
+    "start": 1664.0990000000002,
+    "end": 1665.3593333333333,
+    "speaker": "DUCKWORTH",
+    "text": "You pass.",
+    "translation": "합격입니다."
+  },
+  {
+    "id": "seg-430",
+    "start": 1665.3593333333333,
+    "end": 1670.88,
+    "speaker": "DUCKWORTH",
+    "text": "But Stephen Dubner plus Fifi is happier than Stephen Dubner without any kind of Fifi.",
+    "translation": "하지만 피피가 있는 스티븐 더브너는 피피가 아예 없는 스티븐 더브너보다 더 행복하겠죠."
+  },
+  {
+    "id": "seg-431",
+    "start": 1670.88,
+    "end": 1671.56,
+    "speaker": "DUBNER",
+    "text": "Yes.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-432",
+    "start": 1671.56,
+    "end": 1673.76,
+    "speaker": "DUBNER",
+    "text": "Every pet owner will say, “Of course.",
+    "translation": "반려동물을 키우는 사람이라면 누구나 \"당연하죠. "
+  },
+  {
+    "id": "seg-433",
+    "start": 1673.76,
+    "end": 1679.6599999999999,
+    "speaker": "DUBNER",
+    "text": "Yes.” But the research on whether pet ownership improves human satisfaction and happiness is mixed.",
+    "translation": "그렇고말고요\"라고 하겠지만, 반려동물을 키우는 것이 인간의 만족감과 행복을 높여주는지에 대한 연구 결과는 분분해요."
+  },
+  {
+    "id": "seg-434",
+    "start": 1679.6599999999999,
+    "end": 1680.8035555555555,
+    "speaker": "DUBNER",
+    "text": "There’s disputed evidence.",
+    "translation": "의견이 엇갈리는 증거들이 있죠."
+  },
+  {
+    "id": "seg-435",
+    "start": 1680.8035555555555,
+    "end": 1684.3193333333334,
+    "speaker": "DUBNER",
+    "text": "And I will say this: I am the primary caregiver of this dog.",
+    "translation": "그리고 이것도 말씀드릴게요. 제가 이 개의 주 양육자거든요."
+  },
+  {
+    "id": "seg-436",
+    "start": 1684.3193333333334,
+    "end": 1686.0123333333333,
+    "speaker": "DUBNER",
+    "text": "And it’s quite a bit sometimes.",
+    "translation": "그리고 그게 가끔은 꽤 힘들어요."
+  },
+  {
+    "id": "seg-437",
+    "start": 1686.0123333333333,
+    "end": 1690.933,
+    "speaker": "DUBNER",
+    "text": "So she works— I was going to say she works with me; she’s doing some filing right now.",
+    "translation": "피피는 저랑 같이 일을— 저랑 같이 일한다고 하려 했네요. 지금 서류 정리라도 하고 있는 것처럼요."
+  },
+  {
+    "id": "seg-438",
+    "start": 1690.933,
+    "end": 1695.1063333333334,
+    "speaker": "DUBNER",
+    "text": "But she comes to my office with me every day, which is about a 15, 20-minute walk.",
+    "translation": "아무튼 매일 저랑 같이 사무실로 출근하는데, 걸어서 15분에서 20분 정도 걸려요."
+  },
+  {
+    "id": "seg-439",
+    "start": 1695.1063333333334,
+    "end": 1696.3723333333335,
+    "speaker": "DUBNER",
+    "text": "And we’re alone all day.",
+    "translation": "그리고 하루 종일 둘이 같이 있죠."
+  },
+  {
+    "id": "seg-440",
+    "start": 1696.3723333333335,
+    "end": 1701.279,
+    "speaker": "DUBNER",
+    "text": "So I literally spend more time with Fifi than I do with any human.",
+    "translation": "그래서 말 그대로, 어떤 사람보다도 피피랑 더 많은 시간을 보내요."
+  },
+  {
+    "id": "seg-441",
+    "start": 1701.279,
+    "end": 1702.72,
+    "speaker": "DUBNER",
+    "text": "Sometimes it’s a pain in the neck.",
+    "translation": "가끔은 좀 귀찮기도 해요."
+  },
+  {
+    "id": "seg-442",
+    "start": 1702.72,
+    "end": 1708.1109999999999,
+    "speaker": "DUBNER",
+    "text": "On the occasions when I travel, and I leave the dog behind, it’s kind of nice to have a breather from the dog.",
+    "translation": "제가 출장을 가서 개를 두고 오면, 개한테서 벗어나 한숨 돌리는 게 좋기도 해요."
+  },
+  {
+    "id": "seg-443",
+    "start": 1708.1109999999999,
+    "end": 1709.031,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I would say this.",
+    "translation": "글쎄요, 저는 이렇게 말하고 싶어요."
+  },
+  {
+    "id": "seg-444",
+    "start": 1709.031,
+    "end": 1714.4363636363637,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, the data are mixed in part because you can’t really easily randomly assign people to have dogs and not have dogs.",
+    "translation": "네, 관련 데이터가 좀 뒤죽박죽인 이유 중 하나가, 사람들을 무작위로 배정해서 개를 키우게 하거나 못 키우게 하기가 쉽지 않기 때문이거든요."
+  },
+  {
+    "id": "seg-445",
+    "start": 1714.4363636363637,
+    "end": 1717.12,
+    "speaker": "DUBNER",
+    "text": "And you can’t just kidnap, take away their dogs.",
+    "translation": "개를 납치하듯이 뺏어올 수도 없고요."
+  },
+  {
+    "id": "seg-446",
+    "start": 1717.12,
+    "end": 1717.5258333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Thank goodness.",
+    "translation": "천만다행이죠."
+  },
+  {
+    "id": "seg-447",
+    "start": 1717.5258333333334,
+    "end": 1719.1799999999998,
+    "speaker": "DUCKWORTH",
+    "text": "I do find it really interesting.",
+    "translation": "저는 그게 정말 흥미롭다고 생각해요."
+  },
+  {
+    "id": "seg-448",
+    "start": 1719.1799999999998,
+    "end": 1735.2663333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Even though the data aren’t there, my hypothesis is: that for some people this living creature that is just always happy to see you, and is a little simpler than human beings and is more predictably affectionate, and I’m not the first to say this, but the need to be needed.",
+    "translation": "데이터가 뒷받침되는 건 아니지만 제 가설은 이래요. 어떤 사람들에게는 자기를 보면 항상 기뻐하고, 인간보다 좀 더 단순하고, 또 예측 가능하게 애정을 주는 이 생명체가… 이건 저만 하는 얘기는 아니지만, ‘필요한 존재가 되고 싶은 욕구’를 채워준다는 거죠."
+  },
+  {
+    "id": "seg-449",
+    "start": 1735.2663333333333,
+    "end": 1737.13,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, take pigeons in the park.",
+    "translation": "그러니까, 공원에 있는 비둘기를 한번 생각해보세요."
+  },
+  {
+    "id": "seg-450",
+    "start": 1737.13,
+    "end": 1742.7995,
+    "speaker": "DUCKWORTH",
+    "text": "There are a fair number of human beings who seem to really enjoy feeding the pigeons.",
+    "translation": "비둘기에게 먹이 주는 걸 정말 즐기는 사람들이 꽤 많아요."
+  },
+  {
+    "id": "seg-451",
+    "start": 1742.7995,
+    "end": 1747.64,
+    "speaker": "DUCKWORTH",
+    "text": "Even against the better judgment of some of their fellow humans who say, “Stop doing that.",
+    "translation": "‘그런 짓 좀 그만둬요.’ 하는 다른 사람들의 만류에도 불구하고 말이죠."
+  },
+  {
+    "id": "seg-452",
+    "start": 1747.64,
+    "end": 1753.9994,
+    "speaker": "DUCKWORTH",
+    "text": "They’re crapping all over the place.” But when you see somebody feeding the pigeons and you ask yourself, why do they do that?",
+    "translation": "‘온 사방에 똥을 싸고 다니잖아요.’ 그런데 비둘기에게 먹이를 주는 사람들을 보면서, 왜 저러는 걸까? 하고 스스로에게 물어보면요,"
+  },
+  {
+    "id": "seg-453",
+    "start": 1753.9994,
+    "end": 1757.6796666666667,
+    "speaker": "DUCKWORTH",
+    "text": "I think it’s at least partly because we need to be needed.",
+    "translation": "저는 그게 적어도 부분적으로는 우리가 필요한 존재가 되고 싶어 하기 때문이라고 생각해요."
+  },
+  {
+    "id": "seg-454",
+    "start": 1757.6796666666667,
+    "end": 1761.6458333333335,
+    "speaker": "DUCKWORTH",
+    "text": "And a pigeon is in need of your breadcrumbs.",
+    "translation": "그리고 비둘기는 당신이 주는 빵 부스러기를 필요로 하잖아요."
+  },
+  {
+    "id": "seg-455",
+    "start": 1761.6458333333335,
+    "end": 1765.54925,
+    "speaker": "DUCKWORTH",
+    "text": "And so Fifi is in need of you.",
+    "translation": "그런 것처럼 피피도 당신을 필요로 하는 거죠."
+  },
+  {
+    "id": "seg-456",
+    "start": 1765.54925,
+    "end": 1766.6394285714287,
+    "speaker": "DUCKWORTH",
+    "text": "She depends on you.",
+    "translation": "당신에게 의지하잖아요."
+  },
+  {
+    "id": "seg-457",
+    "start": 1766.6394285714287,
+    "end": 1769.3678,
+    "speaker": "DUCKWORTH",
+    "text": "And I think human beings like to matter in that way.",
+    "translation": "그리고 저는 인간이 그런 식으로 중요한 존재가 되는 걸 좋아한다고 생각해요."
+  },
+  {
+    "id": "seg-458",
+    "start": 1769.3678,
+    "end": 1769.88,
+    "speaker": "DUBNER",
+    "text": "I agree.",
+    "translation": "동의해요."
+  },
+  {
+    "id": "seg-459",
+    "start": 1769.88,
+    "end": 1784.159,
+    "speaker": "DUBNER",
+    "text": "As I’m sure you know, there’s a lot of evidence that service to others, whether it’s charitable contributions, or taking care of things for people, etc., etc., makes you feel a lot better, makes you feel needed, makes you feel worthy.",
+    "translation": "교수님도 잘 아시겠지만, 자선 기부를 하든 다른 사람들을 돌봐주든, 다른 사람을 위한 봉사가 우리 기분을 훨씬 나아지게 하고, 스스로를 필요한 존재이자 가치 있는 존재로 느끼게 한다는 증거가 많잖아요."
+  },
+  {
+    "id": "seg-460",
+    "start": 1784.159,
+    "end": 1784.4941250000002,
+    "speaker": "DUCKWORTH",
+    "text": "Reliably.",
+    "translation": "확실하게요."
+  },
+  {
+    "id": "seg-461",
+    "start": 1784.4941250000002,
+    "end": 1788.0874000000001,
+    "speaker": "DUBNER",
+    "text": "And I will say this, that really works for me and the dog.",
+    "translation": "그리고 말씀드리자면, 그 방법은 저랑 저희 반려견한테 정말 잘 맞아요."
+  },
+  {
+    "id": "seg-462",
+    "start": 1788.0874000000001,
+    "end": 1796.51925,
+    "speaker": "DUBNER",
+    "text": "I feel that little shot of whatever it is that I get when you feel temporarily good about yourself when I just do whatever, feed her, walk her.",
+    "translation": "밥을 주든, 산책을 시키든, 그냥 제가 뭘 해주고 나서 스스로에 대해 일시적으로 좋은 감정이 들 때 솟구치는 일종의 아드레날린 같은 게 느껴지거든요."
+  },
+  {
+    "id": "seg-463",
+    "start": 1796.51925,
+    "end": 1800.6999999999998,
+    "speaker": "DUBNER",
+    "text": "Yeah, I think there is an interesting reciprocity, which is not a coincidence.",
+    "translation": "맞아요, 흥미로운 상호 작용이 있는 것 같은데, 그게 우연은 아니라고 봐요."
+  },
+  {
+    "id": "seg-464",
+    "start": 1800.6999999999998,
+    "end": 1806.0595,
+    "speaker": "DUBNER",
+    "text": "The reason that they are the primary domesticated pet is because they give us that and we give them that.",
+    "translation": "개들이 대표적인 반려동물이 된 이유도 개가 우리에게 그걸 주고, 우리도 개에게 그걸 주기 때문이죠."
+  },
+  {
+    "id": "seg-465",
+    "start": 1806.0595,
+    "end": 1818.03925,
+    "speaker": "DUBNER",
+    "text": "But if we’re looking for long-term wisdom or guidance on the value of human versus animal, one of my favorite passages from the Talmud deals with this directly.",
+    "translation": "하지만 인간 대 동물의 가치에 대한 장기적인 지혜나 가르침을 찾고 있다면, 제가 아주 좋아하는 탈무드의 한 구절이 이 부분을 직접 다루고 있습니다."
+  },
+  {
+    "id": "seg-466",
+    "start": 1818.03925,
+    "end": 1827.4976666666666,
+    "speaker": "DUBNER",
+    "text": "There was a famous line in Ecclesiastes that said that a living dog is better than a dead lion, which is about status and rank.",
+    "translation": "전도서에 '살아 있는 개가 죽은 사자보다 낫다'는 유명한 구절이 있는데, 이건 신분과 지위에 관한 이야기입니다."
+  },
+  {
+    "id": "seg-467",
+    "start": 1827.4976666666666,
+    "end": 1847.559,
+    "speaker": "DUBNER",
+    "text": "But then in the Talmud, the Talmud is telling the story about when King David dies and his son, Solomon, referring to that line, says something like, “Is it not true that a live dog is better than a dead lion?” And this was referring to Solomon’s question of what should be done about his father.",
+    "translation": "그런데 탈무드를 보면, 다윗 왕이 죽었을 때 그의 아들 솔로몬이 그 구절을 언급하며 '살아 있는 개가 죽은 사자보다 낫다는 말이 맞지 않느냐?'라고 말하는 이야기가 나옵니다. 이건 아버지 처리를 어떻게 해야 하는지에 대한 솔로몬의 질문과 관련이 있었죠."
+  },
+  {
+    "id": "seg-468",
+    "start": 1847.559,
+    "end": 1852.7678,
+    "speaker": "DUBNER",
+    "text": "King David had died and was out in the sun and the dogs were coming around wanting to eat him.",
+    "translation": "다윗 왕은 사망한 채 햇볕 아래 놓여 있었고, 개들이 몰려와 시신을 먹으려던 참이었습니다."
+  },
+  {
+    "id": "seg-469",
+    "start": 1852.7678,
+    "end": 1854.94,
+    "speaker": "DUBNER",
+    "text": "So he had to ask, what should be done?",
+    "translation": "그래서 그는 '어떻게 해야 합니까?' 하고 물어야 했던 거죠."
+  },
+  {
+    "id": "seg-470",
+    "start": 1854.94,
+    "end": 1856.4299999999998,
+    "speaker": "DUBNER",
+    "text": "What takes precedence here?",
+    "translation": "여기서 무엇이 우선순위가 될까요?"
+  },
+  {
+    "id": "seg-471",
+    "start": 1856.4299999999998,
+    "end": 1860.1636363636364,
+    "speaker": "DUBNER",
+    "text": "And it was interesting because most Jews throughout history did not have dogs.",
+    "translation": "그리고 흥미로운 건, 역사적으로 대부분의 유대인들은 개를 기르지 않았다는 점이에요."
+  },
+  {
+    "id": "seg-472",
+    "start": 1860.1636363636364,
+    "end": 1863.656,
+    "speaker": "DUBNER",
+    "text": "It was just not a very Jewish thing to have.",
+    "translation": "유대인 문화에서 반려견을 키우는 건 그리 흔한 일이 아니었습니다."
+  },
+  {
+    "id": "seg-473",
+    "start": 1863.656,
+    "end": 1877.2792,
+    "speaker": "DUBNER",
+    "text": "And yet, for me, as a dog owner and someone who’s Jewish, I find it very nice to know that even as far back as the Talmud, there was this notion that a dog as a living thing had more value on some dimensions than a person who happened to be dead, who was even a king.",
+    "translation": "하지만 개의 주인인 동시에 유대인인 저로서는, 탈무드 시절로 거슬러 올라가도 살아 있는 개가 이미 세상을 떠난 사람, 그것도 왕이었던 사람보다 어떤 면에서는 더 가치 있다는 생각이 존재했다는 사실이 아주 반갑게 느껴집니다."
+  },
+  {
+    "id": "seg-474",
+    "start": 1877.2792,
+    "end": 1886.2359999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I think all rationalization to make the habit of having a dog seem like the right thing to do is completely legitimate.",
+    "translation": "글쎄요, 반려견을 키우는 습관이 옳다는 걸 증명하기 위한 온갖 합리화는 전적으로 정당하다고 봐요."
+  },
+  {
+    "id": "seg-475",
+    "start": 1886.2359999999999,
+    "end": 1886.944,
+    "speaker": "DUCKWORTH",
+    "text": "Go for it.",
+    "translation": "마음껏 하세요."
+  },
+  {
+    "id": "seg-476",
+    "start": 1886.944,
+    "end": 1890.2,
+    "speaker": "DUBNER",
+    "text": "Even if you have to go back 2000 years to a religious text.",
+    "translation": "심지어 2,000년 전 종교 경전까지 거슬러 올라가야 할지라도요?"
+  },
+  {
+    "id": "seg-477",
+    "start": 1890.2,
+    "end": 1890.201,
+    "speaker": "DUCKWORTH",
+    "text": "Right.",
+    "translation": "그럼요."
+  }
+]
