@@ -1,4 +1,8 @@
-import { getEpisodeById, deleteEpisode } from '@/lib/services/episodes';
+import {
+  getEpisodeById,
+  deleteEpisode,
+  WRITE_BASE,
+} from '@/lib/services/episodes';
 
 // 진행중으로 간주하여 삭제를 차단하는 상태들
 const IN_PROGRESS = new Set<string>([
@@ -15,8 +19,9 @@ export async function DELETE(
   try {
     const { id } = await context.params;
 
-    // 1. 에피소드 조회
-    const episode = await getEpisodeById(id);
+    // 1. 에피소드 조회 — 삭제 대상은 로컬 작업본(.shadowing)이므로 WRITE_BASE에서 존재확인한다.
+    //    (조회 기본값 public/READ_BASE로 확인하면 publish 전 에피소드가 404가 된다 #162)
+    const episode = await getEpisodeById(id, WRITE_BASE);
     if (!episode) {
       return Response.json({ error: 'Episode not found' }, { status: 404 });
     }

@@ -9,7 +9,8 @@ import { tokenizeJa } from '../utils/tokenize';
 // 조회는 git 추적 정적 자산 public/episodes를 읽어 Vercel outputFileTracing 문제를
 // 피한다. 임포트 쓰기는 로컬 작업본 .shadowing에 남고, publish(S4)가 public으로 복사한다.
 const READ_BASE = path.join(process.cwd(), 'public', 'episodes');
-const WRITE_BASE = path.join(process.cwd(), '.shadowing', 'episodes');
+// DELETE 라우트 등 로컬 작업본을 대상으로 하는 소비자가 존재확인에 사용하도록 export한다(#162).
+export const WRITE_BASE = path.join(process.cwd(), '.shadowing', 'episodes');
 
 // 디렉토리가 존재하는지 확인하고, 없으면 생성하는 헬퍼
 async function ensureDir(dirPath: string) {

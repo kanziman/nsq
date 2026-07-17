@@ -5,6 +5,8 @@ import type { Episode, ImportState } from '@/lib/types';
 vi.mock('@/lib/services/episodes', () => ({
   getEpisodeById: vi.fn(),
   deleteEpisode: vi.fn(),
+  // 삭제는 로컬 작업본(.shadowing)을 대상으로 하므로 라우트가 WRITE_BASE로 존재확인해야 한다.
+  WRITE_BASE: '/mock/.shadowing/episodes',
 }));
 
 import { DELETE } from './route';
@@ -58,6 +60,20 @@ describe('DELETE /api/episodes/[id]', () => {
     expect(res.status).toBe(200);
     expect(mockDelete).toHaveBeenCalledTimes(1);
     expect(mockDelete).toHaveBeenCalledWith(TEST_ID);
+  });
+
+  // S3(#162) AC3 — publish 전 .shadowing 전용 에피소드 삭제 시 404 방지.
+  // 존재확인 소스를 조회 기본값(public/READ_BASE)이 아닌 로컬 작업본(WRITE_BASE)으로 명시.
+  it('should look up episode via WRITE_BASE (.shadowing) before deleting', async () => {
+    mockGetById.mockResolvedValue(makeEpisodeWithStatus('completed'));
+    mockDelete.mockResolvedValue(undefined);
+
+    const res = await DELETE(makeRequest(), makeContext(TEST_ID));
+    expect(res.status).toBe(200);
+    expect(mockGetById).toHaveBeenCalledWith(
+      TEST_ID,
+      expect.stringContaining('.shadowing'),
+    );
   });
 
   it('should return 200 OK and call deleteEpisode when episode status is failed', async () => {
