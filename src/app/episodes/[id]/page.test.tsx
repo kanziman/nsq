@@ -114,7 +114,9 @@ describe('EpisodePlayerPage (RSC)', () => {
     );
   });
 
-  it('[경계] should redirect to / when importState is undefined', async () => {
+  // S3(#162) AC4 — public에는 완료본만 배포되며 import-state.json이 없을 수 있다.
+  // import-state 부재는 '완료'로 간주하여 redirect하지 않고 정상 렌더한다(반전).
+  it('[정상] should render player when importState is undefined but segments exist', async () => {
     mockGetById.mockResolvedValue({
       id: TEST_ID,
       title: 'No State',
@@ -123,8 +125,7 @@ describe('EpisodePlayerPage (RSC)', () => {
       addedAt: new Date().toISOString(),
     });
     mockGetSegments.mockResolvedValue(SAMPLE);
-    await expect(EpisodePlayerPage(makeParams(TEST_ID))).rejects.toThrow(
-      'REDIRECT:/',
-    );
+    render(await EpisodePlayerPage(makeParams(TEST_ID)));
+    expect(screen.getByText('Sample line one.')).toBeInTheDocument();
   });
 });

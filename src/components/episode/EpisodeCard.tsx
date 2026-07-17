@@ -22,7 +22,8 @@ export default function EpisodeCard({
   onDelete,
 }: {
   episode: Episode;
-  onDelete: (_id: string) => Promise<void>;
+  // 배포(조회 전용)에서는 삭제가 무의미하므로 미주입 시 삭제 버튼을 렌더하지 않는다(#162).
+  onDelete?: (_id: string) => Promise<void>;
 }) {
   const [showConfirm, setShowConfirm] = useState(false);
   const { title, duration, addedAt, importState } = episode;
@@ -52,7 +53,7 @@ export default function EpisodeCard({
     e.preventDefault();
     e.stopPropagation();
     try {
-      await onDelete(episode.id);
+      await onDelete?.(episode.id);
     } catch {
       // 대시보드 에러 전파 처리
     } finally {
@@ -114,13 +115,15 @@ export default function EpisodeCard({
             alt={title}
             className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
-          <button
-            aria-label="삭제"
-            onClick={handleDeleteClick}
-            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
-          >
-            <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
-          </button>
+          {onDelete && (
+            <button
+              aria-label="삭제"
+              onClick={handleDeleteClick}
+              className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
+            >
+              <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
+            </button>
+          )}
           <div className="absolute bottom-2 right-2 bg-ink/75 text-white px-2 py-0.5 text-xs font-mono rounded">
             {formattedDuration}
           </div>
@@ -150,13 +153,15 @@ export default function EpisodeCard({
     return (
       <div className="border border-hairline rounded-xl overflow-hidden bg-surface-card/60 max-w-sm flex flex-col justify-between relative">
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
-          <button
-            aria-label="삭제"
-            disabled
-            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/40 text-ink/40 border border-hairline/40 rounded-full shadow-sm backdrop-blur-sm cursor-not-allowed"
-          >
-            <Trash2 className="h-4 w-4 text-ink/40" strokeWidth={1.5} />
-          </button>
+          {onDelete && (
+            <button
+              aria-label="삭제"
+              disabled
+              className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/40 text-ink/40 border border-hairline/40 rounded-full shadow-sm backdrop-blur-sm cursor-not-allowed"
+            >
+              <Trash2 className="h-4 w-4 text-ink/40" strokeWidth={1.5} />
+            </button>
+          )}
           <div className="absolute inset-0 bg-ink/5" />
           <div className="z-10 animate-spin h-6 w-6 border-2 border-primary border-t-transparent rounded-full" />
         </div>
@@ -200,13 +205,15 @@ export default function EpisodeCard({
     <div className="border border-primary/20 rounded-xl overflow-hidden bg-surface-card/90 max-w-sm flex flex-col justify-between relative">
       {renderConfirmModal()}
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
-        <button
-          aria-label="삭제"
-          onClick={handleDeleteClick}
-          className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
-        >
-          <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
-        </button>
+        {onDelete && (
+          <button
+            aria-label="삭제"
+            onClick={handleDeleteClick}
+            className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
+          >
+            <Trash2 className="h-4 w-4 text-ink" strokeWidth={1.5} />
+          </button>
+        )}
         <span className="z-10 px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-xs tracking-[1.5px] uppercase">
           Failed
         </span>
