@@ -94,6 +94,9 @@ out/
 # Local shadowing data directory (stores audio/subtitles/segments)
 .shadowing/
 
+# 오디오 MP3는 R2에만 두고 git(public)에 커밋하지 않는다(#164, publish는 mp3를 복사하지 않음).
+public/episodes/**/*.mp3
+
 # Playwright
 /playwright-report/
 /test-results/
