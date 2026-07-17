@@ -15,6 +15,7 @@ import { Languages, BookOpen, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
 import { MIN_PLAYBACK_RATE, MAX_PLAYBACK_RATE } from '@/lib/utils/audio';
+import { buildAudioUrl } from '@/lib/utils/audio-url';
 
 /** 현재 속도에서 0.05 스텝 단위로 증감한 속도를 반환한다. */
 function stepPlaybackRate(current: number, dir: 1 | -1): number {
@@ -77,7 +78,7 @@ export function ShadowingPlayer({
     : [];
 
   const { waveform, isLoading: isWaveformLoading } = useWaveform(
-    `/api/episodes/${episode.id}/audio`,
+    buildAudioUrl(episode.id),
     currentSegmentIndex >= 0 ? segments[currentSegmentIndex] : undefined,
   );
 
