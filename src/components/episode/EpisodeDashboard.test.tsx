@@ -53,6 +53,20 @@ afterEach(() => {
 });
 
 describe('EpisodeDashboard Component', () => {
+  // S2(#160) AC3 — 목록을 조회 API가 아닌 정적 /episodes/index.json에서 로드한다.
+  it('should load episode list from /episodes/index.json', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: true,
+      json: async () => [],
+    } as Response);
+
+    await act(async () => {
+      render(<EpisodeDashboard />);
+    });
+
+    expect(global.fetch).toHaveBeenCalledWith('/episodes/index.json');
+  });
+
   it('should render skeleton while fetching episodes initially', async () => {
     vi.mocked(global.fetch).mockReturnValue(new Promise(() => {}));
 
