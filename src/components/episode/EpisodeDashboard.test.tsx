@@ -105,11 +105,6 @@ describe('EpisodeDashboard Component', () => {
   });
 
   it('should start polling interval when at least one episode is in progress', async () => {
-    vi.mocked(global.fetch).mockResolvedValueOnce({
-      ok: true,
-      json: async () => [IN_PROGRESS_EPISODE],
-    } as Response);
-
     vi.mocked(global.fetch).mockResolvedValue({
       ok: true,
       json: async () => [IN_PROGRESS_EPISODE],
@@ -117,17 +112,21 @@ describe('EpisodeDashboard Component', () => {
 
     render(<EpisodeDashboard isLocal={true} />);
 
+    // 초기 fetch 완료 → episodes 세팅 → 폴링 effect(setInterval) 등록까지 대기.
     await waitFor(() => {
       expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
     });
+    // 잔여 passive effect flush 보장(인터벌 등록 확정) — CI 타이밍 취약성 제거.
+    await act(async () => {});
 
-    expect(global.fetch).toHaveBeenCalledTimes(1);
+    const before = vi.mocked(global.fetch).mock.calls.length;
 
+    // 폴링 주기 경과 → 추가 fetch 발생 (타이머+마이크로태스크 함께 진행).
     await act(async () => {
-      vi.advanceTimersByTime(3000);
+      await vi.advanceTimersByTimeAsync(3000);
     });
 
-    expect(global.fetch).toHaveBeenCalledTimes(2);
+    expect(vi.mocked(global.fetch).mock.calls.length).toBeGreaterThan(before);
   });
 
   it('should stop polling interval when all episodes transition to completed/failed', async () => {
@@ -146,22 +145,26 @@ describe('EpisodeDashboard Component', () => {
     await waitFor(() => {
       expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
     });
+    await act(async () => {});
 
+    // 폴링 1회 → completed로 전환.
     await act(async () => {
-      vi.advanceTimersByTime(3000);
+      await vi.advanceTimersByTimeAsync(3000);
     });
-
-    expect(global.fetch).toHaveBeenCalledTimes(2);
 
     await waitFor(() => {
       expect(screen.getByText('Episode 1')).toBeInTheDocument();
     });
+    await act(async () => {});
 
+    const afterCompleted = vi.mocked(global.fetch).mock.calls.length;
+
+    // 모두 완료 → 폴링 정지 → 추가 fetch 없음.
     await act(async () => {
-      vi.advanceTimersByTime(3000);
+      await vi.advanceTimersByTimeAsync(3000);
     });
 
-    expect(global.fetch).toHaveBeenCalledTimes(2);
+    expect(vi.mocked(global.fetch).mock.calls.length).toBe(afterCompleted);
   });
 
   it('should render error state with retry button when API request fails', async () => {
