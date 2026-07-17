@@ -29,7 +29,7 @@ export default function EpisodeDashboard() {
       setError(null);
     }
     try {
-      const res = await fetch('/api/episodes');
+      const res = await fetch('/episodes/index.json');
       if (!res.ok) {
         throw new Error('Failed to fetch');
       }
