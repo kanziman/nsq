@@ -1,0 +1,377 @@
+{"speaker":"DUBNER","text":"Wow."}
+{"speaker":"DUBNER","text":"You really have lowered your expectations, haven’t you?"}
+{"speaker":"DUCKWORTH","text":"I guess that’s why I’m so happy."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"And I’m Stephen Dubner."}
+{"speaker":"DUCKWORTH","text":"I’m a psychologist at Penn and I run an educational non-profit called Character Lab."}
+{"speaker":"DUBNER","text":"You also wrote the book Grit."}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUBNER","text":"And I’m a writer and I host a podcast called Freakonomics Radio."}
+{"speaker":"DUCKWORTH","text":"And you wrote the book Freakonomics, among quite a few others."}
+{"speaker":"DUBNER","text":"I did."}
+{"speaker":"DUCKWORTH","text":"And you and I became friends."}
+{"speaker":"DUBNER","text":"We did."}
+{"speaker":"DUBNER","text":"And we discovered that both of us really like to ask each other questions."}
+{"speaker":"DUCKWORTH","text":"And there’s only one rule."}
+{"speaker":"BOTH","text":"The rule is “there are no stupid questions.”"}
+{"speaker":"NARRATOR","text":"Today on No Stupid Questions: How do you know if you’re a hard worker?"}
+{"speaker":"DUCKWORTH","text":"You come up with a few salient examples, right?"}
+{"speaker":"DUCKWORTH","text":"You think of your wife."}
+{"speaker":"DUBNER","text":"Lazy."}
+{"speaker":"DUCKWORTH","text":"No, she’s not."}
+{"speaker":"DUCKWORTH","text":"You think of me."}
+{"speaker":"DUBNER","text":"Super lazy."}
+{"speaker":"DUBNER","text":"Angie Duckworth never does anything."}
+{"speaker":"NARRATOR","text":"Also: why do happiness levels tend to start dropping around age 16, and not rise again until our late 40s?"}
+{"speaker":"DUCKWORTH","text":"To be precise, it’s about 47 to 48."}
+{"speaker":"DUCKWORTH","text":"And I, I only say that because I’m 49."}
+{"speaker":"DUCKWORTH","text":"So, this matters a lot to me."}
+{"speaker":"DUCKWORTH","text":"Stephen, I have a personal question for you, and I want you to be honest."}
+{"speaker":"DUCKWORTH","text":"Are you a hard worker?"}
+{"speaker":"DUBNER","text":"I like that question because it, first of all, feels like a trick."}
+{"speaker":"DUBNER","text":"Second of all, it is something I think about a lot."}
+{"speaker":"DUBNER","text":"But I think about it in terms of: did I work as hard as I was capable of working?"}
+{"speaker":"DUBNER","text":"Not: did I do a lot?"}
+{"speaker":"DUCKWORTH","text":"Okay so scale from one to 10, Stephen Dubner."}
+{"speaker":"DUBNER","text":"Am I a hard worker compared to myself and my potential?"}
+{"speaker":"DUBNER","text":"Or compared to the universe of people?"}
+{"speaker":"DUCKWORTH","text":"Let’s go with the universe of people."}
+{"speaker":"DUBNER","text":"So compared to the universe of people, I’m going to give myself 8.7."}
+{"speaker":"DUCKWORTH","text":"So, out of 100 people, you would be harder working than—."}
+{"speaker":"DUBNER","text":"Eighty-six of them."}
+{"speaker":"DUCKWORTH","text":"Eighty-six of them."}
+{"speaker":"DUCKWORTH","text":"And then yeah, there’s people in front of you."}
+{"speaker":"DUBNER","text":"That I ridicule for working too hard, the other people."}
+{"speaker":"DUCKWORTH","text":"Who are workaholics."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"And then what about compared to how hard you could work?"}
+{"speaker":"DUBNER","text":"I’m going to say 8.6."}
+{"speaker":"DUCKWORTH","text":"Pretty similar."}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUCKWORTH","text":"That’s right."}
+{"speaker":"DUBNER","text":"In other words, I feel like I could be in the top 10 percent, maybe top 5 percent."}
+{"speaker":"DUBNER","text":"I could work harder, but I don’t always push it as hard as I can."}
+{"speaker":"DUBNER","text":"But I’m curious why you’re asking this question, because you don’t really care about how hard I work."}
+{"speaker":"DUCKWORTH","text":"Well, I’m asking you in part because it’s a question I ask to measure grit."}
+{"speaker":"DUCKWORTH","text":"Being a hard worker predicts success outcomes."}
+{"speaker":"DUCKWORTH","text":"And I have, after 15 years of measuring whether someone’s a hard worker by asking them, “Are you a hard worker?”—."}
+{"speaker":"DUBNER","text":"Well does that work, asking them that question?"}
+{"speaker":"DUBNER","text":"I wouldn’t think so."}
+{"speaker":"DUCKWORTH","text":"Well, kind of."}
+{"speaker":"DUCKWORTH","text":"Somebody says, “Yeah, I’m absolutely a hard worker.” Then, all things being equal, it is more likely that they’re going to achieve something than not."}
+{"speaker":"DUBNER","text":"There isn’t grotesque inflation?"}
+{"speaker":"DUCKWORTH","text":"There’s certainly a possibility of faking."}
+{"speaker":"DUCKWORTH","text":"I mean, remember, I’m a researcher."}
+{"speaker":"DUCKWORTH","text":"So usually when I’m asking people, it’s not because I’m hiring them, right?"}
+{"speaker":"DUCKWORTH","text":"So there’s less of an incentive to fake with somebody who’s not holding your future in their hands."}
+{"speaker":"DUBNER","text":"But you still are holding a clipboard or some equivalent thereof, right?"}
+{"speaker":"DUBNER","text":"You’re an authority figure."}
+{"speaker":"DUCKWORTH","text":"Well, there’s something else people do that’s not flat-out faking."}
+{"speaker":"DUCKWORTH","text":"And it’s called social desirability bias."}
+{"speaker":"DUCKWORTH","text":"We like to appear in ways that are socially desirable."}
+{"speaker":"DUCKWORTH","text":"Actually, not only because we think, people with clipboards are watching us, or that anyone else is watching us."}
+{"speaker":"DUCKWORTH","text":"But turns out, there’s a form of social desirability bias where you just don’t want to look bad to yourself."}
+{"speaker":"DUCKWORTH","text":"People don’t like to think badly of themselves."}
+{"speaker":"DUCKWORTH","text":"They just don’t want to reckon in the most honest way with all their flaws and faults."}
+{"speaker":"DUCKWORTH","text":"So there’s all kinds of reasons why we might inflate our scores on something like on a scale from one to 10, how hard a worker are you?"}
+{"speaker":"DUBNER","text":"Now, how much of this is, what’s it called?"}
+{"speaker":"DUBNER","text":"”Illusory superiority,” whatever, the Lake Wobegon effect?"}
+{"speaker":"DUCKWORTH","text":"Oh, yeah, optimistic bias."}
+{"speaker":"DUBNER","text":"So, how much of it is a legitimate poor assessment because we think we’re better than we are?"}
+{"speaker":"DUCKWORTH","text":"A lot of this does fall into that category, that at some subconscious level, we just don’t want to think about ourselves in a negative way."}
+{"speaker":"DUCKWORTH","text":"We might actually think we’re being accurate, but we’re just fooling ourselves because we would like to think that we’re hard workers."}
+{"speaker":"DUBNER","text":"And how much of this is about— is it called reference bias?"}
+{"speaker":"DUBNER","text":"Is that what your people call this?"}
+{"speaker":"DUCKWORTH","text":"Yeah, I’m kind of obsessed with this other reason why “Are you a hard worker?” is not a perfect question."}
+{"speaker":"DUCKWORTH","text":"And that is the following—."}
+{"speaker":"DUBNER","text":"Can I just say, before you explain, I love that your question today is a question that you think is prima facie a bad question."}
+{"speaker":"DUBNER","text":"No, I do!"}
+{"speaker":"DUBNER","text":"I’m serious."}
+{"speaker":"DUBNER","text":"It makes it more fun to learn that the question was thought to be poor."}
+{"speaker":"DUBNER","text":"But now you’re going to tell us why it’s good that it’s a poor question."}
+{"speaker":"DUCKWORTH","text":"Yeah, well, at least I’ll tell you why it’s interesting."}
+{"speaker":"DUCKWORTH","text":"So, when I ask you, are you a hard worker?"}
+{"speaker":"DUCKWORTH","text":"What immediately comes to mind is, like you said, compared to whom?"}
+{"speaker":"DUCKWORTH","text":"And you might say the universe of people."}
+{"speaker":"DUCKWORTH","text":"In fact, you did."}
+{"speaker":"DUCKWORTH","text":"But guess what, Stephen, you cannot conjure up the universe of people."}
+{"speaker":"DUCKWORTH","text":"That would be more than seven billion, right?"}
+{"speaker":"DUCKWORTH","text":"You cannot imagine what the distribution of humanity looks like, and then place yourself somewhere in that distribution."}
+{"speaker":"DUCKWORTH","text":"What really you do is you come up with a few salient examples."}
+{"speaker":"DUCKWORTH","text":"You think of your wife."}
+{"speaker":"DUBNER","text":"Lazy."}
+{"speaker":"DUCKWORTH","text":"No, she’s not."}
+{"speaker":"DUCKWORTH","text":"You think of me."}
+{"speaker":"DUBNER","text":"Super lazy."}
+{"speaker":"DUBNER","text":"Angie Duckworth never does anything."}
+{"speaker":"DUCKWORTH","text":"You’re like, let me revise my score."}
+{"speaker":"DUCKWORTH","text":"9.9!"}
+{"speaker":"DUCKWORTH","text":"But you can see how these numbers move around, right?"}
+{"speaker":"DUCKWORTH","text":"And reference bias refers to the bias of having a given arbitrary frame of comparison that is idiosyncratic."}
+{"speaker":"DUCKWORTH","text":"You think you’re comparing yourself to the universe of all people, but you’re not."}
+{"speaker":"DUCKWORTH","text":"You’re comparing yourself to a very small number of people."}
+{"speaker":"DUCKWORTH","text":"And if you choose a comparison set that happens to be super hard-working, then you’re going to have artificially lower responses."}
+{"speaker":"NARRATOR","text":"One of my favorite studies on this is an international study of personality, okay?"}
+{"speaker":"NARRATOR","text":"And the personality trait that’s being studied is conscientiousness."}
+{"speaker":"NARRATOR","text":"Now, some countries, one might argue, are a little more conscientious in general."}
+{"speaker":"NARRATOR","text":"And I’m not biased because of my Asian back— some would say that the Far East, that the Chinese, the Koreans, and the Japanese, on questions like: are you a hard worker?"}
+{"speaker":"NARRATOR","text":"Are you dependable?"}
+{"speaker":"NARRATOR","text":"Are you punctual?"}
+{"speaker":"NARRATOR","text":"Are you orderly?"}
+{"speaker":"NARRATOR","text":"That they might do better."}
+{"speaker":"NARRATOR","text":"Well, the least conscientious people in the world, by self-report, are exactly those people from the Far East."}
+{"speaker":"NARRATOR","text":"And the authors of the study said, “Look, it’s theoretically possible that all of our stereotypes are 100 percent wrong, but it’s also possible that these individuals from these cultures have such high standards for hard work, and being orderly, and the trains running on time, that they have given themselves lower answers.”"}
+{"speaker":"DUBNER","text":"Is asking about how hard you work a particularly incisive or insightful question if you want to measure reference bias?"}
+{"speaker":"DUBNER","text":"Are you really going to learn a lot about a person by how much they may deviate from the norm by that question?"}
+{"speaker":"DUCKWORTH","text":"I don’t know that “are you a hard worker?” how good it is on its own."}
+{"speaker":"DUCKWORTH","text":"But, there is something you can do with asking someone if they’re a hard worker, and that is to give them little vignettes, little stories of other people."}
+{"speaker":"DUCKWORTH","text":"This person wakes up at 5:00 in the morning and then they start working at 7:00."}
+{"speaker":"DUCKWORTH","text":"And—."}
+{"speaker":"DUBNER","text":"You can manipulate the heck out of people."}
+{"speaker":"DUCKWORTH","text":"Well no, it’s not a manipulation."}
+{"speaker":"DUCKWORTH","text":"You ask them to then rate the person in the story."}
+{"speaker":"DUCKWORTH","text":"So, you give them a series of stories and then you can tell what their frame of reference is with some precision."}
+{"speaker":"DUCKWORTH","text":"But you can kind of get at whether this person is rating hard."}
+{"speaker":"DUCKWORTH","text":"Are they a strict rater, or do they have really lax standards?"}
+{"speaker":"NARRATOR","text":"Because when you give them a certain story, one person might say, “yeah, that person sounds like a seven out of 10.” And another person might say, “slacker."}
+{"speaker":"NARRATOR","text":"Two out of 10.” So the “are you a hard worker?” question coupled with asking the person to rate hypothetical others can get you a little closer."}
+{"speaker":"DUBNER","text":"All right."}
+{"speaker":"DUBNER","text":"So let’s say I take a room of 100 people."}
+{"speaker":"DUBNER","text":"I randomize them."}
+{"speaker":"DUBNER","text":"And for half of them, I give them examples of people who are demonstrably hard workers."}
+{"speaker":"DUBNER","text":"This person gets up at 4:00, da da da."}
+{"speaker":"DUBNER","text":"And the other ones I give stories that are demonstrably not hard workers."}
+{"speaker":"DUBNER","text":"Then I have these two sets of 50 people do a task."}
+{"speaker":"DUBNER","text":"Do I see their assessment of other people’s hard work rub off in any way in how well they perform?"}
+{"speaker":"DUCKWORTH","text":"So you’ve designed an experiment where you’re trying to prime, if you will, or encourage hard work or not hard work by giving them different comparison sets, right?"}
+{"speaker":"DUCKWORTH","text":"I’m not sure."}
+{"speaker":"DUCKWORTH","text":"But I am guessing that if you give people examples of really hard workers, that if they feel like those people you described are similar to them, and the hard work is within their grasp, it’s something that they can do, then you’ll get them to work harder."}
+{"speaker":"DUCKWORTH","text":"But on the contrary, if you have given them out-of-reach examples, like, “Do you know how hard Gandhi worked on this?"}
+{"speaker":"DUCKWORTH","text":"Let me tell you how hard Gandhi worked on this task.”"}
+{"speaker":"DUBNER","text":"They just lie down and take a nap."}
+{"speaker":"DUCKWORTH","text":"They just give up."}
+{"speaker":"DUCKWORTH","text":"You’ve held out these examples that actually diminish their confidence that they could do as well."}
+{"speaker":"DUBNER","text":"So reference bias, it can get complicated fast."}
+{"speaker":"DUBNER","text":"Am I wrong to think of it as essentially relativity?"}
+{"speaker":"DUCKWORTH","text":"It is a kind of bias that comes out of relativity."}
+{"speaker":"DUCKWORTH","text":"I actually think that whenever anybody makes any kind of statement like, “Was it a good restaurant?” “How was the movie?” “Was it a good day?” That actually there’s always a frame of reference."}
+{"speaker":"DUCKWORTH","text":"I mean, it doesn’t mean anything to say something without a comparison."}
+{"speaker":"DUCKWORTH","text":"And all reference bias is saying is that sometimes, those frames of comparison, those references, can be different depending on the person."}
+{"speaker":"DUCKWORTH","text":"And that’s why we get these paradoxical results."}
+{"speaker":"DUBNER","text":"Was Albert Einstein ever asked how hard a worker he was, do you think?"}
+{"speaker":"DUCKWORTH","text":"I wish he were."}
+{"speaker":"DUCKWORTH","text":"I don’t know."}
+{"speaker":"DUCKWORTH","text":"And I don’t know what Albert Einstein would say."}
+{"speaker":"DUCKWORTH","text":"I will say he was actually a not-so-bad psychologist."}
+{"speaker":"DUCKWORTH","text":"So, he might have had the psychological insight to know that his standards of hard work might be different than others."}
+{"speaker":"DUBNER","text":"I love— He was once asked to explain the theory of relativity to someone who didn’t know or care about science at all."}
+{"speaker":"DUBNER","text":"So, this is what he reportedly said."}
+{"speaker":"DUBNER","text":"He probably didn’t say this, but someone says he once said it."}
+{"speaker":"DUBNER","text":"He said, “Well, when you sit with a nice girl for two hours, you think it’s only a minute."}
+{"speaker":"DUBNER","text":"But when you sit on a hot stove for a minute, you think it’s two hours."}
+{"speaker":"DUBNER","text":"That’s relativity.”"}
+{"speaker":"DUCKWORTH","text":"Albert Einstein in no way said that."}
+{"speaker":"DUBNER","text":"Oh, I don’t know."}
+{"speaker":"DUBNER","text":"I will tell you this, in a book I’m reading about Jewish history, How Jews Changed the World, it’s said that five Jews changed how we see the world most significantly."}
+{"speaker":"DUBNER","text":"So, Moses said the law is everything."}
+{"speaker":"DUBNER","text":"And then Jesus said love is everything."}
+{"speaker":"DUBNER","text":"Marx said money is everything."}
+{"speaker":"DUBNER","text":"Freud said sex is everything."}
+{"speaker":"DUBNER","text":"And Einstein said everything is relative."}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions:"}
+{"speaker":"DUCKWORTH","text":"Of course, science says that we can actually derive pleasure from anticipated future rewards."}
+{"speaker":"DUBNER","text":"Oh yeah."}
+{"speaker":"DUBNER","text":"The vacation you haven’t had yet is way better than the one you just had."}
+{"speaker":"DUBNER","text":"Always."}
+{"speaker":"DUBNER","text":"Angela Duckworth."}
+{"speaker":"DUCKWORTH","text":"Stephen Dubner."}
+{"speaker":"DUBNER","text":"Here’s my question for you today."}
+{"speaker":"DUBNER","text":"It’s about happiness, which is an interesting and weirdly contentious subject, in a way."}
+{"speaker":"DUCKWORTH","text":"Because people disagree about what makes happiness."}
+{"speaker":"DUBNER","text":"And you don’t think about happiness the way many people do."}
+{"speaker":"DUBNER","text":"Many people think of happiness as goal number one in life."}
+{"speaker":"DUBNER","text":"And your father told you, “Hell no."}
+{"speaker":"DUBNER","text":"I don’t care if you’re happy, be successful."}
+{"speaker":"DUCKWORTH","text":"Yeah, I mostly care about achievement as a psychologist, and as the daughter of my father."}
+{"speaker":"DUCKWORTH","text":"But I will tell you, I grew up in the Positive Psychology Center."}
+{"speaker":"DUCKWORTH","text":"That’s where I did my Ph.D."}
+{"speaker":"DUCKWORTH","text":"So you can ask me a happiness question."}
+{"speaker":"DUBNER","text":"All right."}
+{"speaker":"DUBNER","text":"So, different disciplines look at happiness in different ways."}
+{"speaker":"DUBNER","text":"Different disciplines call it different things."}
+{"speaker":"DUBNER","text":"But happiness seems to be a word a lot of them have landed on."}
+{"speaker":"DUCKWORTH","text":"There’s really three aspects of happiness that are widely used."}
+{"speaker":"DUCKWORTH","text":"One is life satisfaction."}
+{"speaker":"DUCKWORTH","text":"And then the second is positive emotion, like feeling energetic or joyful."}
+{"speaker":"DUCKWORTH","text":"Now I know those sound like the same thing, but life satisfaction is thinking that your life is good."}
+{"speaker":"DUCKWORTH","text":"So overall you would say, “Oh, I wouldn’t want to trade my life with another’s.” Whereas this positive emotion thing is quite literally feeling positively."}
+{"speaker":"DUCKWORTH","text":"And those aren’t exactly the same thing."}
+{"speaker":"DUCKWORTH","text":"But the third aspect of happiness is actually very different, and that is the absence of negative emotion."}
+{"speaker":"DUCKWORTH","text":"So, the absence of anxiety and depression, worry and so forth."}
+{"speaker":"DUCKWORTH","text":"So anyway, those are three aspects."}
+{"speaker":"DUCKWORTH","text":"Economists tend to think about life satisfaction more."}
+{"speaker":"DUBNER","text":"And there are several economists who’ve been working on this for many years."}
+{"speaker":"DUBNER","text":"David Blanchflower who’s been one of the economists studying this, recently published a paper, the latest in a long line."}
+{"speaker":"DUBNER","text":"And he talks about the happiness curve."}
+{"speaker":"DUBNER","text":"And if you look at the curve, it’s a gigantic U, like a smile."}
+{"speaker":"DUBNER","text":"And basically, it starts measuring happiness at age 16."}
+{"speaker":"DUBNER","text":"And that’s when people are the happiest, in these data at least."}
+{"speaker":"DUBNER","text":"And then it drops, and drops, and drops, and drops."}
+{"speaker":"DUBNER","text":"And then it turns again at about age 50."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"And to be precise, I think it’s about 47 to 48."}
+{"speaker":"DUCKWORTH","text":"And I only say that because I’m 49."}
+{"speaker":"DUCKWORTH","text":"So, this matters a lot to me."}
+{"speaker":"DUBNER","text":"Okay, so you’re in for good times ahead."}
+{"speaker":"DUBNER","text":"So, here’s the question."}
+{"speaker":"DUBNER","text":"If you believe the happiness curve, and that our happiness basically drops from teenagerhood until whatever you want to call it, age 50: middle age, late-middle age, middle-middle age."}
+{"speaker":"DUBNER","text":"And then, it swings really hard upward for a long time."}
+{"speaker":"DUBNER","text":"If you do believe that, why do you think that is the case?"}
+{"speaker":"DUBNER","text":"Is it that there are things happening in there?"}
+{"speaker":"DUBNER","text":"Is it adjustments?"}
+{"speaker":"DUBNER","text":"Is it habituation?"}
+{"speaker":"DUBNER","text":"You’re the psychologist."}
+{"speaker":"DUBNER","text":"Tell us what."}
+{"speaker":"DUCKWORTH","text":"So, I’ve seen this work by Blanchflower, and I will tell you that it’s very thorough."}
+{"speaker":"DUCKWORTH","text":"I think there’s good reason to believe it’s real."}
+{"speaker":"DUCKWORTH","text":"So, generally what Blanchflower is using is survey data, self-report."}
+{"speaker":"DUCKWORTH","text":"Usually the phrasing is, “how satisfied are you with your life?” I think it may be because as you hit that midlife period, you’re maybe under a combination of family stress, because parenting is not easy."}
+{"speaker":"DUCKWORTH","text":"And work stress."}
+{"speaker":"DUBNER","text":"And could it be that age 48 to 52 is when many parents are seeing their teenagers move out of the house?"}
+{"speaker":"DUCKWORTH","text":"That is a possibility."}
+{"speaker":"DUCKWORTH","text":"These samples don’t only include married adults, but yes, one of the findings from marriage research is that so many married couples with children fear the empty-nest syndrome."}
+{"speaker":"DUCKWORTH","text":"But actually, on average, people tend to be happier once they’ve sort of gotten over the initial crying of your last kid being dropped off to college."}
+{"speaker":"DUCKWORTH","text":"I think there are other explanations, though."}
+{"speaker":"DUBNER","text":"That’s what I want to hear."}
+{"speaker":"DUCKWORTH","text":"So Blanchflower doesn’t actually say that he knows."}
+{"speaker":"DUCKWORTH","text":"And I think that’s right to be humble about, okay look, there’s this U-shaped happiness curve, but nobody really knows for sure what’s going on."}
+{"speaker":"DUCKWORTH","text":"I want to suggest that when you’re in the beginning of life — and this is what I think might account for the downward slope in happiness until you reach your late 40s — you are striving; you are trying to attain goals maybe that you’re not reaching."}
+{"speaker":"DUCKWORTH","text":"And if you think about what happiness is, it’s the achieving of the goals that you’ve set."}
+{"speaker":"DUCKWORTH","text":"And there are two ways to do that, right?"}
+{"speaker":"DUCKWORTH","text":"One is to achieve those goals, and the other one is to have lower goals."}
+{"speaker":"DUCKWORTH","text":"So, maybe the higher expectations that we have for what we hope for in life earlier, that accounts for why we’re downward sloping until a certain point, and then we reckon with what’s possible."}
+{"speaker":"DUCKWORTH","text":"And then, we’re happier."}
+{"speaker":"DUBNER","text":"Can I ask you to unpack that a tiny bit?"}
+{"speaker":"DUBNER","text":"Are you saying that there’s just less gap between our dream and reality?"}
+{"speaker":"DUBNER","text":"Or that we settle, that we habituate, and become more accepting of what we’ve got, even if it wasn’t what we hoped it might be?"}
+{"speaker":"DUCKWORTH","text":"Well, that’s a pretty nuanced distinction."}
+{"speaker":"DUCKWORTH","text":"But I agree, there’s setting lower goals, not having high expectations for your life."}
+{"speaker":"DUCKWORTH","text":"And then alternatively, there’s keeping those high expectations, but having this distanced perspective, and like very zen about the fact that you missed those goals."}
+{"speaker":"DUCKWORTH","text":"But either way, what it says is that the kind of increasing happiness that you are predicted to experience in your 50s, and your 60s, and so forth, are not because you’re actually objectively doing better, but because, in some way, you have subjectively changed the targets themselves."}
+{"speaker":"DUBNER","text":"Are you suggesting — and I think there is research that suggests this — that young people are unrealistically optimistic?"}
+{"speaker":"DUBNER","text":"And even if the answer to that is yes, can you really say that it is unwisely?"}
+{"speaker":"DUBNER","text":"Because maybe one of the things that you need a surplus of when you’re starting out is optimism, because in fact, it can be hard."}
+{"speaker":"DUCKWORTH","text":"There is a psychologist who I love named Don Moore."}
+{"speaker":"DUCKWORTH","text":"He’s a judgment and decision-making scientist."}
+{"speaker":"DUCKWORTH","text":"And he believes that not only the young, but people of all ages, can be recklessly optimistic."}
+{"speaker":"DUCKWORTH","text":"And he thinks that this overconfidence is actually a problem."}
+{"speaker":"DUCKWORTH","text":"I mean, when he says this, entrepreneurs just leap out of the woodwork and they say, “you got to be optimistic to get anything done!” And I think Don Moore would say, no, it’s just better to be accurate."}
+{"speaker":"DUCKWORTH","text":"And he has some experimental evidence to support that."}
+{"speaker":"DUCKWORTH","text":"I think that these high aspirations that young people have — rose-tinted movies in their head about what their wedding is going to be like, and how their children are going to be beautiful and perfect."}
+{"speaker":"DUCKWORTH","text":"And all these projections into the future, which are probably a little naive."}
+{"speaker":"DUCKWORTH","text":"I think you could ask the question whether they’re really unwise or not."}
+{"speaker":"DUCKWORTH","text":"I do think that if you reach higher, you’ll get farther, but you might be less happy doing it."}
+{"speaker":"DUBNER","text":"So let me ask you this."}
+{"speaker":"DUBNER","text":"Since we see that measured happiness is very high at 16, and since you’re talking about reckless optimism is a feature of that age."}
+{"speaker":"DUBNER","text":"How can you explain, then, the relatively very high and increasing suicide rate?"}
+{"speaker":"DUBNER","text":"Or maybe it does explain it."}
+{"speaker":"DUBNER","text":"Maybe it’s that the cohort that are prone towards suicidal thoughts are those who see that gap between expectations and reality."}
+{"speaker":"DUCKWORTH","text":"Well, first of all, I don’t want to say that optimism is inherently reckless."}
+{"speaker":"DUCKWORTH","text":"Some would say that it’s reckless."}
+{"speaker":"DUCKWORTH","text":"I wouldn’t use exactly that language."}
+{"speaker":"DUCKWORTH","text":"I might amend your question to say, look, if young people, have these optimistic aspirations, how do we explain increasing rates of suicide and depression?"}
+{"speaker":"DUCKWORTH","text":"And I think that’s an excellent question."}
+{"speaker":"DUBNER","text":"That’s the question I meant to ask."}
+{"speaker":"DUCKWORTH","text":"I really don’t think anyone knows."}
+{"speaker":"DUCKWORTH","text":"I mean, I think the mystery of increasing rates of anxiety, depression and suicide are still exactly that — a mystery."}
+{"speaker":"DUCKWORTH","text":"One hypothesis that has been advanced is the same hypothesis that’s been advanced for why a lot of other people, who are not just young adults or adolescents, are unhappy."}
+{"speaker":"DUCKWORTH","text":"And that is that we do have this ratcheting up of expectations."}
+{"speaker":"DUCKWORTH","text":"And so there is this gap between what we are achieving and our aspirations."}
+{"speaker":"DUCKWORTH","text":"Not because we’re achieving less."}
+{"speaker":"DUCKWORTH","text":"We’re probably achieving more."}
+{"speaker":"DUCKWORTH","text":"I mean, we’re learning more."}
+{"speaker":"DUCKWORTH","text":"We’re having, in some cases, higher-quality experiences."}
+{"speaker":"DUCKWORTH","text":"But our aspirations are growing faster than our objective achievements."}
+{"speaker":"DUCKWORTH","text":"By the way, another possibility, Stephen, is that the people who are happier are just different from the people who are depressed, and they’re both growing in number and the middle’s getting carved out."}
+{"speaker":"DUBNER","text":"If you do believe these data, what do you do with it?"}
+{"speaker":"DUBNER","text":"Let’s say you’re a 16-year-old person."}
+{"speaker":"DUBNER","text":"Let’s say you’re a 50-year-old person."}
+{"speaker":"DUBNER","text":"Let’s say, you’re a 75-year-old person."}
+{"speaker":"DUBNER","text":"By the way, happiness does start to decline when you’re older."}
+{"speaker":"DUBNER","text":"A lot of people around you are dying."}
+{"speaker":"DUBNER","text":"Your own health is not doing so well."}
+{"speaker":"DUBNER","text":"But if you see that big U in front of you, okay, if you’re 16 or if you’re in the middle of the upslope, how do you hack that happiness curve?"}
+{"speaker":"DUBNER","text":"What do you do with that information?"}
+{"speaker":"DUCKWORTH","text":"So, let’s start with the 16-year-old, because I have one."}
+{"speaker":"DUCKWORTH","text":"So, what would I say to one?"}
+{"speaker":"DUBNER","text":"Condolences."}
+{"speaker":"DUCKWORTH","text":"Oh, she’s so wonderful!"}
+{"speaker":"DUCKWORTH","text":"She’s actually a shockingly happy 16-year-old."}
+{"speaker":"DUBNER","text":"She’s all over the data."}
+{"speaker":"DUCKWORTH","text":"That’s right!"}
+{"speaker":"DUCKWORTH","text":"She’s at the top of the curve."}
+{"speaker":"DUCKWORTH","text":"She just doesn’t know what’s ahead."}
+{"speaker":"DUBNER","text":"Also, we should say, the teenager can be happy while making the parents miserable."}
+{"speaker":"DUCKWORTH","text":"Yeah, I think what teenagers experience is actually high highs and low lows."}
+{"speaker":"DUCKWORTH","text":"And there’s a lot of scientific evidence for that, too."}
+{"speaker":"DUCKWORTH","text":"I’m a university professor, so I see lots of 18 to 22-year-olds who have their fair share of angst."}
+{"speaker":"DUCKWORTH","text":"And they are experiencing the decrease in happiness."}
+{"speaker":"DUCKWORTH","text":"They have memories of being carefree children."}
+{"speaker":"DUCKWORTH","text":"And I think that downward slope, my guess is, kind of feeling the difference between what it was and what it is today."}
+{"speaker":"DUCKWORTH","text":"We’re very sensitive to changes."}
+{"speaker":"DUCKWORTH","text":"And so to feel that everything was so simple then, and you could eat an ice cream cone without guilt."}
+{"speaker":"DUCKWORTH","text":"And they’re all of a sudden burdened with the weighty responsibilities of adulthood."}
+{"speaker":"DUCKWORTH","text":"Their first career choices, their first disappointments professionally, or maybe major ones romantically."}
+{"speaker":"DUCKWORTH","text":"And when you’re sad it’s just — it’s really hard to be convinced that you’ll ever not be sad."}
+{"speaker":"DUCKWORTH","text":"So, I like to tell young people who are in emotional turmoil, or experiencing the decrease in their emotional well-being, that life is long, and that they won’t feel exactly this way forever."}
+{"speaker":"DUBNER","text":"Well let’s say you’re at the bottom right now."}
+{"speaker":"DUBNER","text":"Technically, you’re about there."}
+{"speaker":"DUBNER","text":"So, how do you exploit the oncoming onslaught of happiness you’re about to experience?"}
+{"speaker":"DUCKWORTH","text":"I mean, other than just looking forward, which, of course, science says that we can actually derive pleasure from anticipated future rewards."}
+{"speaker":"DUBNER","text":"Oh yeah."}
+{"speaker":"DUBNER","text":"The vacation you haven’t had yet is way better than the one you just had."}
+{"speaker":"DUBNER","text":"Always."}
+{"speaker":"DUCKWORTH","text":"Exactly."}
+{"speaker":"DUCKWORTH","text":"So, aside from anticipating the future, I mean, this shift in your mindset from: oh, what’s going to happen?"}
+{"speaker":"DUCKWORTH","text":"What could I do?"}
+{"speaker":"DUCKWORTH","text":"What I haven’t yet done?"}
+{"speaker":"DUCKWORTH","text":"To: life is complicated, and there’s a lot to be grateful for."}
+{"speaker":"DUBNER","text":"I know that Blanchflower and his colleagues do suggest that one potential reason for the upswing in happiness around midlife is that you’ve seen people that you grew up with having really bad fortune, dying and whatnot."}
+{"speaker":"DUBNER","text":"As you said, your gratitude may kind of start to kick in a little bit more."}
+{"speaker":"DUCKWORTH","text":"I mean, the cynical interpretation of that is, it’s all downward social comparison."}
+{"speaker":"DUCKWORTH","text":"You look at people who like, oh, my gosh, I can’t believe that happened."}
+{"speaker":"DUCKWORTH","text":"And that somehow makes you feel better."}
+{"speaker":"DUCKWORTH","text":"I mean, just having some perspective, right?"}
+{"speaker":"DUCKWORTH","text":"And that is something that 16-year-olds, God bless them, do not yet have in abundance."}
+{"speaker":"DUCKWORTH","text":"The wide-angle lens on life that allows you to appreciate a good cup of coffee and, wow, nothing went wrong today."}
+{"speaker":"DUBNER","text":"Wow."}
+{"speaker":"DUBNER","text":"You really have lowered your expectations, haven’t you?"}
+{"speaker":"DUCKWORTH","text":"I guess that’s why I’m so happy."}
+{"speaker":"DUBNER","text":"So, let me ask you one last question."}
+{"speaker":"DUBNER","text":"Let’s say that someone listening to this just wants to optimize their happiness, no matter how old they are, no matter what circumstances they’re in."}
+{"speaker":"DUBNER","text":"One thing that strikes me about looking at the curve is, it feels too imprecise to see it grouped just by year of age, right?"}
+{"speaker":"DUBNER","text":"But if I’m 52 and supposed to be at the bottom of my happiness, about to climb, that doesn’t really relate to the things that actually happen day to day."}
+{"speaker":"DUBNER","text":"So how would you suggest people try to get rid of the things that make them unhappy and increase the ones that work?"}
+{"speaker":"DUCKWORTH","text":"Anytime you see a pretty graph that has a nice U or a line, I mean, you know it’s an average."}
+{"speaker":"DUCKWORTH","text":"So, it’s not exactly the same curve for everyone."}
+{"speaker":"DUCKWORTH","text":"But more to the point, what can I do to actually make my slope a little more steep?"}
+{"speaker":"DUCKWORTH","text":"Or make my inflection point happen now and not a year from now?"}
+{"speaker":"DUCKWORTH","text":"I think the key to so much of our emotional well-being is attention."}
+{"speaker":"DUCKWORTH","text":"So, for example, if I think of what happened in the last 24 hours, I mean, gosh, the mental landscape is vast."}
+{"speaker":"DUCKWORTH","text":"Attention is central because I can choose to either think of all the things that happened that were good or I can choose to think about things that were bad."}
+{"speaker":"DUCKWORTH","text":"And if I make no choice at all, the default is to actually think of negative things."}
+{"speaker":"DUCKWORTH","text":"And that is why one of the most reliable interventions to increase happiness is called the “Three Blessings Exercise.” And you simply think of three good things that happened, usually in the last 24 hours."}
+{"speaker":"DUCKWORTH","text":"And you rattle them off."}
+{"speaker":"DUCKWORTH","text":"I’ve gotten so good at it, I can do it usually in 10 or 15 seconds."}
+{"speaker":"DUCKWORTH","text":"Lucy, Amanda, the avocado was ripe."}
+{"speaker":"DUBNER","text":"Wait."}
+{"speaker":"DUBNER","text":"Just naming your children fulfills the three?"}
+{"speaker":"DUBNER","text":"That’s what you’re saying?"}
+{"speaker":"DUCKWORTH","text":"I know you’re going to say “That’s a kind of a cheat,” or “How is that possible?” But yeah, when I bring my kids to mind, I’m like, Lucy’s healthy, Amanda finished her midterms."}
+{"speaker":"DUCKWORTH","text":"And yeah, I mentioned the avocado, I don’t want to put that on the same level as my children."}
+{"speaker":"DUCKWORTH","text":"But it was a miracle of God that the avocado was actually not too ripe and not under-ripe."}
+{"speaker":"DUBNER","text":"Just so you know, that avocado is probably grown in Mexico where the avocado ranch is run by a criminal cartel killing and extorting innocent people."}
+{"speaker":"DUCKWORTH","text":"I’ve got blood on my hands."}
+{"speaker":"DUBNER","text":"But if that makes you happy, Angela, that’s fine."}
+{"speaker":"DUCKWORTH","text":"There you go focusing on the negative, Stephen."}
+{"speaker":"DUCKWORTH","text":"You have so much to learn."}

@@ -1,0 +1,396 @@
+{"speaker":"DUCKWORTH","text":"You know, that’s a philosophical question, Stephen, right?"}
+{"speaker":"DUBNER","text":"I apologize for going all philosophy on the psychologist."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"I’m Stephen Dubner."}
+{"speaker":"BOTH","text":"And you’re listening to No Stupid Questions."}
+{"speaker":"NARRATOR","text":"Today on No Stupid Questions: Does Sigmund Freud’s concept of sublimation hold up?"}
+{"speaker":"DUBNER","text":"I did love my mother, but I never wanted to marry her."}
+{"speaker":"DUCKWORTH","text":"Well, Freud wouldn’t believe you, by the way."}
+{"speaker":"DUBNER","text":"I know he wouldn’t."}
+{"speaker":"DUCKWORTH","text":"He would say, “There he goes, coping.”"}
+{"speaker":"NARRATOR","text":"Also: how would your life be different if you knew you were going to live forever?"}
+{"speaker":"DUBNER","text":"The world would get very crowded — nobody’s dying."}
+{"speaker":"DUBNER","text":"On the other hand, you free up all that space from cemeteries."}
+{"speaker":"DUCKWORTH","text":"Yeah, exactly."}
+{"speaker":"DUCKWORTH","text":"You’d start building condos."}
+{"speaker":"DUCKWORTH","text":"Stephen."}
+{"speaker":"DUBNER","text":"Angela."}
+{"speaker":"DUCKWORTH","text":"You know, you do a lot of writing and podcasting."}
+{"speaker":"DUCKWORTH","text":"I would say these are creative pursuits."}
+{"speaker":"DUCKWORTH","text":"Are you sublimating?"}
+{"speaker":"DUCKWORTH","text":"And do you need me to define sublimating for you?"}
+{"speaker":"DUBNER","text":"This is the psychological form of sublimating and not the chemical form of sublimating, I assume?"}
+{"speaker":"DUCKWORTH","text":"I didn’t mean going from a solid to a gas."}
+{"speaker":"DUBNER","text":"Without bothering to stop and become a liquid along the way."}
+{"speaker":"DUCKWORTH","text":"You could say that you’re going right to gas form and bypassing liquid."}
+{"speaker":"DUCKWORTH","text":"You know, I wasn’t thinking that."}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUCKWORTH","text":"I meant like Freud."}
+{"speaker":"DUBNER","text":"Sure."}
+{"speaker":"DUBNER","text":"So why don’t you tell me what Freud meant by sublimation?"}
+{"speaker":"DUCKWORTH","text":"Well, this is what I think Freud meant."}
+{"speaker":"DUCKWORTH","text":"You know, having not known Freud personally, but, Freud had this idea that pretty much all of human behavior could be explained by these unconscious conflicts that we had deep in our psyche."}
+{"speaker":"DUCKWORTH","text":"And that when you had to deal with the pain of these conflicts, like wanting to marry your mother but not being able to, or wanting to do things that you couldn’t do, you would, in some cases, have a mature response and in some cases have a less mature response."}
+{"speaker":"DUCKWORTH","text":"But they were all coping mechanisms."}
+{"speaker":"DUCKWORTH","text":"And sublimation was a coping response that he would have said was a mature coping response that was essentially taking your pain and transforming it primarily through art or through creativity."}
+{"speaker":"DUCKWORTH","text":"Or more recently, as Carrie Fisher, the actress, said, “It is taking a broken heart and turning it into art.” Freud didn’t say that, but I think Freud would have endorsed that."}
+{"speaker":"DUBNER","text":"So let me say first, I did love my mother, but I never wanted to marry her."}
+{"speaker":"DUCKWORTH","text":"Well, Freud wouldn’t believe you, by the way."}
+{"speaker":"DUBNER","text":"I know he wouldn’t."}
+{"speaker":"DUBNER","text":"And I have my differences with Freud."}
+{"speaker":"DUCKWORTH","text":"He’d say, “There he goes coping.”"}
+{"speaker":"DUBNER","text":"But now the way you just described sublimation is, well, I don’t know if it’s a broader or different definition from my understanding of Freud’s definition of it, which I thought was more tied to sexual drive than just pain."}
+{"speaker":"DUBNER","text":"Are you asking me this question because Freakonomics Radio is such a sexy show and you’re wondering where that comes from?"}
+{"speaker":"DUCKWORTH","text":"Yes, of course that’s why I was asking you, Stephen."}
+{"speaker":"DUCKWORTH","text":"No, I wasn’t asking you that."}
+{"speaker":"DUCKWORTH","text":"I think Freud had it right that we have needs and drives and that sometimes in ways that we’re not fully aware of, we’re trying to meet them."}
+{"speaker":"DUCKWORTH","text":"But I don’t think it was all about sex."}
+{"speaker":"DUBNER","text":"Okay, so then, are you asking whether something like writing or a creative thing, podcasting, whatever, is my form of sublimation?"}
+{"speaker":"DUBNER","text":"Or just whether I kind of believe in sublimation?"}
+{"speaker":"DUCKWORTH","text":"I am asking you particularly about your creative process."}
+{"speaker":"DUCKWORTH","text":"Now, Freud would say that this is a waste of time, because Freud would say that you can’t ask somebody directly to introspect."}
+{"speaker":"DUCKWORTH","text":"But I think Freud was wrong, by the way."}
+{"speaker":"DUCKWORTH","text":"I think if Freud would have lived long enough to see modern psychotherapy, he would’ve seen that he’s wrong."}
+{"speaker":"DUBNER","text":"So, I would say I do often think about why it is that I, or anyone who is excited and passionate about doing what they do, where the drive comes from."}
+{"speaker":"DUBNER","text":"Why is this the thing that I do, basically?"}
+{"speaker":"DUBNER","text":"And why does this thing still drive me to want to do it after doing it for a long time?"}
+{"speaker":"DUBNER","text":"And the thing that is what I do is essentially ask questions."}
+{"speaker":"DUBNER","text":"In fact, the reason I started a podcast years and years ago was in part that my favorite part of reporting and research was often interviewing and speaking with people."}
+{"speaker":"DUBNER","text":"And it’s always heartbreaking."}
+{"speaker":"DUBNER","text":"When you write a magazine piece or a book, the vast majority of what people said was cut out, just because of the way the medium of text writing works."}
+{"speaker":"DUBNER","text":"And so, I really wanted more of the interview left intact, more of the conversation."}
+{"speaker":"DUBNER","text":"And the reason I’m so drawn to that is because the act of asking questions, it does feel like magic in that when I was a kid, I was really super, super shy."}
+{"speaker":"DUCKWORTH","text":"Really?"}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"I mean, honestly, I’m still shy."}
+{"speaker":"DUCKWORTH","text":"Some psychologist I am."}
+{"speaker":"DUBNER","text":"Well, I think I fake it pretty well."}
+{"speaker":"DUCKWORTH","text":"Yeah, you do."}
+{"speaker":"DUBNER","text":"But if you give me the choice between, here’s a group of people and you can go up to them and have a conversation or there’s a book or a bunch of golf balls and a fairway to hit, I’m always going to go for the solo thing."}
+{"speaker":"DUBNER","text":"But one thing about asking questions, because my dad was a journalist, my mom was a writer, although not professionally at all."}
+{"speaker":"DUBNER","text":"She was a full-time mom with eight kids."}
+{"speaker":"DUBNER","text":"But she’d been a ballerina, so she had a kind of way of looking at the world that had a creative angle to it."}
+{"speaker":"DUBNER","text":"And even in my little family, we had a family newspaper."}
+{"speaker":"DUBNER","text":"And the thing that I loved about journalism from the time I was about three was that it allowed you, in some cases for me force you, to go up to people and ask them questions that I simply wouldn’t have had the nerve to do otherwise."}
+{"speaker":"DUBNER","text":"So, all I’m saying is that I don’t know enough about sublimation to say whether what I do daily is an act of sublimation."}
+{"speaker":"DUBNER","text":"But I do know that I love what I do in part because it is connected to something that for me was a deep-rooted, I don’t know if I would call it pain or suffering necessarily, but something that wanted to be gotten over."}
+{"speaker":"DUBNER","text":"And so it’s one of the reasons that I’m most grateful that I get to have a living based on this thing that is actually mostly incredibly fun and scratches an itch that’s otherwise really hard to scratch."}
+{"speaker":"DUBNER","text":"So I don’t know if it’s about marrying my mother."}
+{"speaker":"DUBNER","text":"In fact, I think it’s quite not, but I’m probably doing a whole lot of sublimating without knowing it."}
+{"speaker":"DUCKWORTH","text":"Your desire to connect with other people, which shy people have as well as extroverted people have, you kind of found a way."}
+{"speaker":"DUCKWORTH","text":"You found a solution, which is being a question-asking journalist who gets very intimate with your subjects."}
+{"speaker":"DUCKWORTH","text":"You probably also love that the interview has an end and then you’re just like, “Okay, bye."}
+{"speaker":"DUCKWORTH","text":"That was great.” So you get to scratch the itch, but you don’t have to deal with the things that you felt uncomfortable with either at the beginning or the end of these interactions."}
+{"speaker":"DUBNER","text":"I also do probably 95 percent of my interviews remotely, which means that I’m in my home or office recording studio and somebody else is somewhere else."}
+{"speaker":"DUBNER","text":"So I don’t actually even have to make eye contact."}
+{"speaker":"DUBNER","text":"I mean, I know how to make eye contact."}
+{"speaker":"DUCKWORTH","text":"I’ve had conversations with you in-person."}
+{"speaker":"DUBNER","text":"I can replicate a normal human pretty well."}
+{"speaker":"DUBNER","text":"I’m adaptive in that way."}
+{"speaker":"DUBNER","text":"But it’s very costly to my immune system."}
+{"speaker":"DUBNER","text":"And I’m exhausted after an hour-long conversation with some other human."}
+{"speaker":"DUCKWORTH","text":"Even when you’re in journalism mode?"}
+{"speaker":"DUBNER","text":"Well, that’s a whole other level, because not only is it a conversation with a stranger, but your mind is constantly trying to process and then get to the next place, knowing that there’s a limited amount of time."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"So what’s more exhausting?"}
+{"speaker":"DUCKWORTH","text":"You’re having an interview."}
+{"speaker":"DUCKWORTH","text":"You’re kind of processing it on multiple levels."}
+{"speaker":"DUCKWORTH","text":"Also, there’s just a lot of information coming in and you’re synthesizing it in real time."}
+{"speaker":"DUCKWORTH","text":"Versus cocktail party conversation for the same amount of time with a stranger as well, but now in this very different setting and it’s no longer Stephen, the journalist."}
+{"speaker":"DUCKWORTH","text":"It’s just Stephen, the cocktail party invitee."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"I would say the cocktail party is more exhausting only because what you’re subtracting is usually the exhilaration of the conversation."}
+{"speaker":"DUBNER","text":"Not that every interview is exhilarating, but the conversations in the podcast aren’t just casual conversations with people I happen to want to talk to."}
+{"speaker":"DUBNER","text":"You’re trying to find out information."}
+{"speaker":"DUBNER","text":"You’re trying to learn something specific about some scenario or phenomenon or whatever."}
+{"speaker":"DUBNER","text":"And so you’ve got a goal."}
+{"speaker":"NARRATOR","text":"Plus you have to factor in if alcohol is a factor, which at cocktail parties it usually is and in interviews it’s usually not."}
+{"speaker":"NARRATOR","text":"That’s a big instrumental variable, honestly, in human interaction."}
+{"speaker":"NARRATOR","text":"So maybe I should drink more while interviewing or interview more while drinking less at cocktail parties."}
+{"speaker":"DUCKWORTH","text":"Yeah, you could try it."}
+{"speaker":"DUCKWORTH","text":"You could try a little experiment."}
+{"speaker":"DUBNER","text":"Yeah, but I feel that, as with many questions that are asked that the person asking the question really is interested in answering the question."}
+{"speaker":"DUBNER","text":"So what about you?"}
+{"speaker":"DUBNER","text":"I mean, for you, being a research psychologist, to what degree is that a form of sublimation?"}
+{"speaker":"DUBNER","text":"You chose to become a research psychologist, you teach too and you write, but most people, when they think of a psychologist, they think of a clinical psychologist, psychiatrist maybe."}
+{"speaker":"DUCKWORTH","text":"Or, as I like to say, a “real psychologist.”"}
+{"speaker":"DUBNER","text":"Well, okay."}
+{"speaker":"DUBNER","text":"You didn’t go that route."}
+{"speaker":"DUBNER","text":"You didn’t want to engage in therapy or clinical treatment, and you went this way."}
+{"speaker":"DUBNER","text":"So, is what you do a form of sublimation?"}
+{"speaker":"DUBNER","text":"And why did you go that route instead of the clinical route?"}
+{"speaker":"DUCKWORTH","text":"Well, before I was in graduate school, I remember filling out the application to go to graduate school."}
+{"speaker":"DUCKWORTH","text":"And there was a box that said, do you want clinical training?"}
+{"speaker":"DUCKWORTH","text":"Yes or no?"}
+{"speaker":"DUCKWORTH","text":"And I asked my soon-to-be adviser, Marty Seligman, famous psychologist and a clinical psychologist."}
+{"speaker":"DUCKWORTH","text":"I said, “What does this question mean?” And he said, “Oh, well, think of the most boring person you went to college with."}
+{"speaker":"DUCKWORTH","text":"Do you have a clear picture of that person in mind?"}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"Now think about being in a small room with them for 40 hours a week."}
+{"speaker":"DUCKWORTH","text":"If the answer is, ‘I would love to do that,’ then check yes, right?” That’s literally what he said."}
+{"speaker":"DUBNER","text":"That’s terrible."}
+{"speaker":"DUBNER","text":"I mean, it’s wonderful, but it’s terrible."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"So actually I was pretty prepared to still check yes, because he then elaborated like that’s also the box that you check “yes” if you really want to help people."}
+{"speaker":"DUCKWORTH","text":"I was like, oh, it seems like a good box to check."}
+{"speaker":"DUCKWORTH","text":"For me, it was partly logistical."}
+{"speaker":"DUCKWORTH","text":"Because when you become a clinical psychologist, you have to do your P.h.D."}
+{"speaker":"DUCKWORTH","text":"and then you have to go on a residency or an internship."}
+{"speaker":"DUCKWORTH","text":"And I was already 32 and pregnant with my second daughter."}
+{"speaker":"DUCKWORTH","text":"I knew we wouldn’t be able to move in four or five years."}
+{"speaker":"DUCKWORTH","text":"So I thought that wouldn’t be the right move for me."}
+{"speaker":"DUCKWORTH","text":"But I will tell you this, Stephen."}
+{"speaker":"DUCKWORTH","text":"I think in principle I would really have wanted to be a clinical psychologist and actually help people directly, but also that I’d be pretty bad at it."}
+{"speaker":"DUCKWORTH","text":"I’d probably spend the whole hour talking about myself."}
+{"speaker":"DUCKWORTH","text":"I’d be like, “Oh my God, that reminds me of a story."}
+{"speaker":"DUCKWORTH","text":"Just hold on!"}
+{"speaker":"DUCKWORTH","text":"Let me just—” I would be a terrible therapist."}
+{"speaker":"DUBNER","text":"Well, I disagree."}
+{"speaker":"DUBNER","text":"And maybe that’s only because you’ve had the last, whatever, bunch of years to be doing research that actually produces insights that I think are really practical."}
+{"speaker":"DUCKWORTH","text":"Don’t overestimate me."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"So, am I sublimating in my own career?"}
+{"speaker":"DUCKWORTH","text":"Am I redirecting some inner tension to some productive end like my research?"}
+{"speaker":"DUBNER","text":"I mean, is it possible to not be?"}
+{"speaker":"DUCKWORTH","text":"Well, let me start by saying I think Freud was right about a lot of things."}
+{"speaker":"DUCKWORTH","text":"In the broadest brushstrokes the idea that we do a lot of things to avoid psychological pain, I think he was spot on."}
+{"speaker":"DUCKWORTH","text":"So I do believe that a lot of things that I do are defense mechanisms, in a sense, right?"}
+{"speaker":"DUCKWORTH","text":"Things that avoid pain."}
+{"speaker":"DUCKWORTH","text":"So, I am sure that in my life that I have been coping with things, like trying to get needs met, but probably the explanations are a little less exciting than unresolved sexual conflict and much more in the realm of I grew up in a family where achievement was important."}
+{"speaker":"DUCKWORTH","text":"When I was a little girl and my dad would say things like, “The meaning of life is not to be happy, the meaning of life is to be successful.” So I think maybe you could argue that the fact that I grew up then to like study achievement and then, I am so obviously achievement-oriented."}
+{"speaker":"DUCKWORTH","text":"In my family, I felt anyway, like love was somewhat proportionately meted out according to your accomplishments."}
+{"speaker":"DUCKWORTH","text":"So, you get a little more love the day you get into Harvard."}
+{"speaker":"DUCKWORTH","text":"And I think that that probably did motivate me to please my father and to be more accomplished."}
+{"speaker":"DUCKWORTH","text":"Maybe that’s a form of sublimation."}
+{"speaker":"DUBNER","text":"Can you think of other professions that would have fulfilled you similarly?"}
+{"speaker":"DUCKWORTH","text":"So let’s see."}
+{"speaker":"DUCKWORTH","text":"I could have become a doctor."}
+{"speaker":"DUCKWORTH","text":"Freud said that so much of this happens below the level of awareness that we’ll never know."}
+{"speaker":"DUCKWORTH","text":"But I think I know why I really didn’t want to become a doctor."}
+{"speaker":"DUCKWORTH","text":"And that’s because my parents really wanted me to become a doctor."}
+{"speaker":"DUCKWORTH","text":"And I was trying to go contra-stereotype, I think partly."}
+{"speaker":"DUCKWORTH","text":"There was a point in my life — this is like in my late 20s where I was wrestling with what to do — I thought I might want to be something in human resources."}
+{"speaker":"DUBNER","text":"And in a way, H.R."}
+{"speaker":"DUBNER","text":"is very similar to some pieces of psychology, right?"}
+{"speaker":"DUCKWORTH","text":"Human impact."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"And human nature."}
+{"speaker":"DUBNER","text":"I don’t know if I ever told you this."}
+{"speaker":"DUBNER","text":"When I quit playing music, so that was my first profession, I had three things that I thought I might be not terrible at."}
+{"speaker":"DUBNER","text":"One, for some reason, was financial planner."}
+{"speaker":"DUBNER","text":"Because even though I didn’t really know much about the markets and economics, I was really interested in it."}
+{"speaker":"DUBNER","text":"And I thought there’s so much bad advice out there that if I could get even somewhere above terrible, it would be really fun to help people."}
+{"speaker":"DUCKWORTH","text":"A net positive."}
+{"speaker":"DUBNER","text":"Right."}
+{"speaker":"DUBNER","text":"So that was one, and I didn’t do that."}
+{"speaker":"DUBNER","text":"And then I went to grad school for writing and I thought I would teach writing in college."}
+{"speaker":"DUBNER","text":"So I did teach at Columbia for a year."}
+{"speaker":"DUBNER","text":"And it was super exhilarating because the students were brilliant."}
+{"speaker":"DUBNER","text":"And I just realized I was way too selfish."}
+{"speaker":"DUBNER","text":"I wanted to spend my time on my writing, not on other people’s writing."}
+{"speaker":"DUBNER","text":"But that was the reason also why I didn’t do number three, which was I thought really hard about becoming a psychologist, a therapist."}
+{"speaker":"DUCKWORTH","text":"You did?"}
+{"speaker":"DUBNER","text":"I did."}
+{"speaker":"DUCKWORTH","text":"What?"}
+{"speaker":"DUCKWORTH","text":"I did not know this."}
+{"speaker":"DUBNER","text":"And it was really number one on the list for quite a while."}
+{"speaker":"DUBNER","text":"I loved the idea that there was a methodology, and a huge canon, and a bunch of brilliant people who had spent their entire lives and careers in research trying to figure out how people think the way they do, how to change patterns, habits, etc., etc."}
+{"speaker":"DUBNER","text":"I thought, wouldn’t it be wonderful to read that for several years and then help people with that understanding?"}
+{"speaker":"DUBNER","text":"But I quickly came to the conclusion, as did you, that I would not want to be in that room with that person for more than like five minutes, just out of selfishness."}
+{"speaker":"DUCKWORTH","text":"I think we’re not nice enough."}
+{"speaker":"DUBNER","text":"I think you’re actually quite nice."}
+{"speaker":"DUCKWORTH","text":"Maybe we don’t have the patience, the temperament."}
+{"speaker":"DUBNER","text":"Can I just say in defense of us, most of the therapists I know are some of the wooliest bundle of anxieties, neuroses, misplaced dreams, and so on."}
+{"speaker":"DUBNER","text":"So— Because the way you were describing why we would fail was because basically we’re not the angels that therapists are."}
+{"speaker":"DUBNER","text":"And I’m just here to say that many of the therapists I know — and they would be the first to admit it — they’re not the angels either."}
+{"speaker":"DUCKWORTH","text":"Yeah, that’s fair enough."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"They’re just human."}
+{"speaker":"DUCKWORTH","text":"But, I don’t know if this counts as Freudian sublimation, but you do get to scratch the itch of connecting with people and exploring human nature."}
+{"speaker":"DUCKWORTH","text":"I frankly have no plausible explanation for your desire to be a financial planner, but everything else fits it."}
+{"speaker":"DUBNER","text":"Question: what is the opposite of sublimation?"}
+{"speaker":"DUCKWORTH","text":"Going directly from a gas to a solid without passing through liquid."}
+{"speaker":"DUCKWORTH","text":"Well, okay."}
+{"speaker":"DUCKWORTH","text":"So if you want to take the Freudian hierarchy of defenses, from the most mature, which is sublimation, but there are also some others: humor, altruism — you know, like turning your pain, not being able to have a child and then, for example, spending a lot of your energy in charity work for mothers or something."}
+{"speaker":"DUCKWORTH","text":"That would be altruism — and then there were the immature defenses, which are other coping mechanisms that had the effect of getting you into more trouble, right?"}
+{"speaker":"DUCKWORTH","text":"So narcissism, denial, famously passive aggression."}
+{"speaker":"DUCKWORTH","text":"I mean, people use this term vernacularly, without probably even knowing that that’s Freudian in its origins."}
+{"speaker":"DUBNER","text":"You haven’t named a thing that I don’t have."}
+{"speaker":"DUBNER","text":"So I guess I’m thinking that if I’m sublimating, I’m not doing it well enough."}
+{"speaker":"DUCKWORTH","text":"As a financial planner, you might want to move some of your assets out of the narcissism and passive aggression— ."}
+{"speaker":"DUBNER","text":"Into the sublimation column?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"That might be a better way to invest your psychological energy."}
+{"speaker":"DUBNER","text":"I’m going to make a note to call my broker on Monday."}
+{"speaker":"DUBNER","text":"Sell narcissism."}
+{"speaker":"DUBNER","text":"Buy some sublimation."}
+{"speaker":"DUBNER","text":"I appreciate that sage advice."}
+{"speaker":"DUCKWORTH","text":"I hope I get a commission on that."}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions:"}
+{"speaker":"DUBNER","text":"Every time I take a nap, which is every day —."}
+{"speaker":"DUCKWORTH","text":"Do you just say goodbye to everyone, in case?"}
+{"speaker":"DUBNER","text":"I usually nap at my office where I’m alone with my dog."}
+{"speaker":"DUBNER","text":"And I’ll say, “See you later, Fif."}
+{"speaker":"DUBNER","text":"Or at least I hope so.”"}
+{"speaker":"DUBNER","text":"Angela, my question for you today is this."}
+{"speaker":"DUBNER","text":"So not many people look forward to death, even if they’ve lived a long and satisfying life."}
+{"speaker":"DUBNER","text":"So, it would seem as if there’s a big appetite for the opposite of death, or immortality."}
+{"speaker":"DUBNER","text":"A lot of scientists are working on, if not immortality, per se, at least extending life by many years."}
+{"speaker":"DUBNER","text":"But here’s my question for you: Isn’t life precious in large part because it is so finite?"}
+{"speaker":"DUBNER","text":"And if there were an avenue toward immortality, how desirable would you find that?"}
+{"speaker":"DUCKWORTH","text":"You know, that’s a philosophical question, Stephen, right?"}
+{"speaker":"DUBNER","text":"I apologize for going all philosophy on the psychologist."}
+{"speaker":"DUCKWORTH","text":"That’s okay."}
+{"speaker":"DUCKWORTH","text":"I can go there."}
+{"speaker":"DUCKWORTH","text":"But I just want to make clear that this is not a question that has an empirical answer."}
+{"speaker":"DUBNER","text":"Well, fair enough."}
+{"speaker":"DUBNER","text":"It’s not quite an empirical question, but I’m asking how desirable would you find the notion of immortality?"}
+{"speaker":"DUCKWORTH","text":"Oh, me personally?"}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"And obviously, extrapolation is welcome."}
+{"speaker":"DUCKWORTH","text":"I’m kind of torn because I think about death a lot, actually."}
+{"speaker":"DUCKWORTH","text":"And if you ask anybody who knows me well, they will completely back me up on this."}
+{"speaker":"DUCKWORTH","text":"I bring it up a lot."}
+{"speaker":"DUCKWORTH","text":"I’m always calculating how many years it’s likely that I’ll live."}
+{"speaker":"DUCKWORTH","text":"And then go around the table and I just look at people and I’m like, “You’re not going to be here in 50 years."}
+{"speaker":"DUCKWORTH","text":"No way.”"}
+{"speaker":"NARRATOR","text":"DUBNER: Knowing you as I do, and based on some past conversations we’ve had, I’m guessing the reason that you think about death all the time is because you are driven to accomplish a lot, and you don’t want to waste time."}
+{"speaker":"NARRATOR","text":"Is that the idea or is there some other reason?"}
+{"speaker":"DUCKWORTH","text":"Yeah, I mean, because I know my life has an end and that the end is nigh."}
+{"speaker":"DUCKWORTH","text":"I mean, it’s still a blink of an eye in the grand scheme of things."}
+{"speaker":"DUCKWORTH","text":"When I think about my own mortality, I experience a sense of urgency."}
+{"speaker":"DUCKWORTH","text":"Like, oh those eight things on my to-do list, I better get them done."}
+{"speaker":"DUCKWORTH","text":"Who knows how long I have left?"}
+{"speaker":"DUCKWORTH","text":"I can see other people would have a different reaction, right?"}
+{"speaker":"DUCKWORTH","text":"If you said, “Look, your life is a blink of the eye.” They would say, “I’m going out to dinner immediately.” So, I have had my priorities accentuated."}
+{"speaker":"DUCKWORTH","text":"But when I was in high school, I think it was in high school, there was a book that came out called How We Die."}
+{"speaker":"DUCKWORTH","text":"And it actually got me on this whole thing where I started reading like all these books like Death Be Not Proud."}
+{"speaker":"DUCKWORTH","text":"So, fiction, nonfiction, I went on a death spree in a way, just reading about the mechanics of death."}
+{"speaker":"DUCKWORTH","text":"And, my summary conclusion was that death itself wasn’t as frightening to me as dying."}
+{"speaker":"DUCKWORTH","text":"Dying seemed to unequivocally suck."}
+{"speaker":"DUCKWORTH","text":"I was like, oh, dying sounds awful, painful, terrifying."}
+{"speaker":"DUCKWORTH","text":"Death is just the absence of life."}
+{"speaker":"DUCKWORTH","text":"And you’re not there anyway."}
+{"speaker":"DUBNER","text":"It’s a long nap."}
+{"speaker":"DUCKWORTH","text":"It’s a long nap from which you don’t wake up."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"But, when you’re napping, you don’t know that you’re going to wake up either."}
+{"speaker":"DUCKWORTH","text":"That’s true."}
+{"speaker":"DUBNER","text":"Do you?"}
+{"speaker":"DUBNER","text":"I don’t."}
+{"speaker":"DUBNER","text":"Every time I take a nap, which is every day—."}
+{"speaker":"DUCKWORTH","text":"Do you just say goodbye to everyone in case?"}
+{"speaker":"DUBNER","text":"I do say goodbye to the dog."}
+{"speaker":"DUBNER","text":"You know, I usually nap at my office where I’m alone with my dog."}
+{"speaker":"DUBNER","text":"And I’ll say, “See you later, Fif."}
+{"speaker":"DUBNER","text":"Or at least I hope so.” But let me go back to the original question."}
+{"speaker":"DUBNER","text":"The most interesting word I’ve ever heard applied to human life was when I had a conversation once with Steve Levitt, my Freakonomics friend and coauthor, who you know."}
+{"speaker":"DUBNER","text":"And we were talking about the value of a human life."}
+{"speaker":"DUBNER","text":"And he said very casually, as if it were not a profound thought, but I found it really profound."}
+{"speaker":"DUBNER","text":"He said, “well, to everyone, the value of their own life is infinite.” And I thought that was a really good way of putting it, because there is almost nothing that most of us would not do to save or extend our own lives."}
+{"speaker":"DUBNER","text":"There are many cases in which we will go to great lengths to extend or save someone else’s life."}
+{"speaker":"DUBNER","text":"But the notion of infinite as the value that we place on our own lives struck me as resonant."}
+{"speaker":"DUBNER","text":"And I began to think about that."}
+{"speaker":"DUBNER","text":"And then you begin to think about other things that are infinite."}
+{"speaker":"DUBNER","text":"You know, I got to thinking about like, well, let’s say you like M&M’s."}
+{"speaker":"DUBNER","text":"Let’s say you have a barrel of M&M’s — what seems to be a bottomless barrel."}
+{"speaker":"DUBNER","text":"And the way you treat that resource is going to be very different than if you have one bag of M&M’s."}
+{"speaker":"DUBNER","text":"And so to me, the notion of death and immortality is constrained by the fact that, A, there’s uncertainty."}
+{"speaker":"DUBNER","text":"And B, it is finite."}
+{"speaker":"DUBNER","text":"And so I got to thinking, well, what if you told me that I would live ‘til infinity?"}
+{"speaker":"DUBNER","text":"What would life feel like?"}
+{"speaker":"DUBNER","text":"And I don’t think it would feel very good."}
+{"speaker":"DUBNER","text":"And I wondered, well, how much of that is just because it’s so different, and how much of it is because it no longer has infinite value, because it actually is infinite?"}
+{"speaker":"DUCKWORTH","text":"Okay, well, I’m going to argue against that."}
+{"speaker":"DUCKWORTH","text":"I think that for sure, scarcity heightens value in every possible way."}
+{"speaker":"DUCKWORTH","text":"Like, hey, this is the last M&M on the planet."}
+{"speaker":"DUCKWORTH","text":"Suddenly that becomes more valuable than if there’s an infinite number of M&M’s."}
+{"speaker":"DUCKWORTH","text":"This is the last day of vacation."}
+{"speaker":"DUCKWORTH","text":"Well, that’s different than like, vacation is going to stretch on really, frankly, as long as you want it to."}
+{"speaker":"DUCKWORTH","text":"I agree that scarcity heightens value."}
+{"speaker":"DUCKWORTH","text":"But I don’t think it’s the only thing that makes something valuable."}
+{"speaker":"DUCKWORTH","text":"And just to answer your question directly, if it’s a multiple choice between immortality and just living my life I guess as it’s being lived right now, with an end, yeah, of course, I would pick immortality."}
+{"speaker":"DUCKWORTH","text":"I want to live forever."}
+{"speaker":"DUCKWORTH","text":"And I don’t think that the value of the days that I would be living, of course, an infinite number of them, would go to zero or even be negative, because I don’t have that boost from scarcity."}
+{"speaker":"DUCKWORTH","text":"Because there are other things that make your day valuable or even pleasurable that don’t depend on scarcity."}
+{"speaker":"DUBNER","text":"So I like your answer much better than mine."}
+{"speaker":"DUCKWORTH","text":"Good."}
+{"speaker":"DUCKWORTH","text":"You can change it if you want."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"So let’s say I change it."}
+{"speaker":"DUBNER","text":"Let’s say I too want to live forever."}
+{"speaker":"DUBNER","text":"Now my next question for you becomes how would my or your life be fundamentally different if you knew you were going to live forever?"}
+{"speaker":"DUBNER","text":"Because I can’t imagine it wouldn’t be wildly different."}
+{"speaker":"DUBNER","text":"First of all, just think of how long-lasting your friendships and relationships would be."}
+{"speaker":"DUBNER","text":"I’ve known him 850 years."}
+{"speaker":"DUBNER","text":"Also, the world would get very crowded — nobody’s dying."}
+{"speaker":"DUBNER","text":"On the other hand, you free up all that space from cemeteries."}
+{"speaker":"DUCKWORTH","text":"Yeah, exactly right."}
+{"speaker":"DUCKWORTH","text":"You’d start building condos."}
+{"speaker":"DUCKWORTH","text":"But okay, so, how would I live my life differently?"}
+{"speaker":"DUCKWORTH","text":"I think the way children live their lives is, in a way, the way somebody would live their life if they were immortal, right?"}
+{"speaker":"DUCKWORTH","text":"Because they are really not thinking about their impending doom."}
+{"speaker":"DUCKWORTH","text":"And that means two things."}
+{"speaker":"DUCKWORTH","text":"One is the obvious thing, which is they are able to be carefree in the moment and not have the future weigh on them."}
+{"speaker":"DUCKWORTH","text":"That’s the obvious stereotype of how children are."}
+{"speaker":"DUCKWORTH","text":"But the other thing that children do, which I think is very interesting, is they invest a lot in learning."}
+{"speaker":"DUCKWORTH","text":"And I think it’s developmentally adaptive."}
+{"speaker":"DUCKWORTH","text":"If you are a creature who does have a lifespan of X years that, at the very beginning of life, where you can get a lot of return on investment on your learning, you invest a lot in learning."}
+{"speaker":"DUCKWORTH","text":"Whereas, later on, who knows, I might only have six seconds left."}
+{"speaker":"DUCKWORTH","text":"You know, you’re not signing up for Coursera."}
+{"speaker":"DUCKWORTH","text":"By the way, there’s this whole theory in psychology called terror management theory."}
+{"speaker":"DUCKWORTH","text":"And it’s the idea that we have this conundrum as human beings uniquely, which is that like all other animals we want to avoid death."}
+{"speaker":"DUCKWORTH","text":"We try to survive."}
+{"speaker":"DUCKWORTH","text":"But unlike all other animals, we have conscious awareness of our impending mortality."}
+{"speaker":"DUCKWORTH","text":"And this is terrifying."}
+{"speaker":"DUBNER","text":"I’ve read that a million times."}
+{"speaker":"DUBNER","text":"It’s one of the many, many different things that people say when you ask them what is the one thing that distinguishes humans from all other animals."}
+{"speaker":"DUCKWORTH","text":"We use a fork."}
+{"speaker":"DUCKWORTH","text":"We make jokes."}
+{"speaker":"DUBNER","text":"Right."}
+{"speaker":"DUBNER","text":"There are a million that most of which are not really very accurate."}
+{"speaker":"DUBNER","text":"But one of them is that, which is we know we’re going to die."}
+{"speaker":"DUBNER","text":"And I think it’s a little presumptuous to not assume that animals know they’re going to die, if only because, A, sometimes you feel like you’re going to die."}
+{"speaker":"DUBNER","text":"But B, animals have seen other animals die, like they lie down and don’t get up."}
+{"speaker":"DUBNER","text":"And are they so dumb that they don’t understand that that’s something different than life?"}
+{"speaker":"DUCKWORTH","text":"I think that one could certainly make the case that animals have seen death."}
+{"speaker":"DUCKWORTH","text":"Probably they’ve seen death more than humans have, depending on the animal."}
+{"speaker":"DUCKWORTH","text":"But I do think you can make the argument that human beings have a certain kind of metacognitive awareness."}
+{"speaker":"DUCKWORTH","text":"Like, you can see lots of animals die, but not make the connection that you too are going to die."}
+{"speaker":"DUCKWORTH","text":"And then also, like just to ponder that."}
+{"speaker":"DUCKWORTH","text":"And I’m not sure that animals have that sophisticated level of— Even consciousness, people have argued, is uniquely human."}
+{"speaker":"DUCKWORTH","text":"The major prediction from terror management theory is that we have these unconscious coping mechanisms for ways to deal with this anxiety that are not obvious."}
+{"speaker":"DUCKWORTH","text":"So when people try to bolster their self-esteem, or reaffirm their worldview, like their belief in the afterlife, for example, that is really just a way of dealing with the anxiety of knowing you’re going to die."}
+{"speaker":"DUBNER","text":"The notion of the afterlife goes back a long, long, long time into our most ancient traditions."}
+{"speaker":"DUBNER","text":"And, from my reading of it, it was both, let’s say, an incentive, right, toward living a virtuous life, but also a means to respond to the uncertainty of death."}
+{"speaker":"DUBNER","text":"Because it was just so disturbing, as it still is for many people."}
+{"speaker":"DUBNER","text":"In fact, I don’t know if the ancients were any more disturbed by death than we are because we’re so removed from death now."}
+{"speaker":"DUCKWORTH","text":"We do seem to be pretty good at not really thinking about it too much, right?"}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"And you know, there has been a lot written about, including the Sherwin Nuland book you mentioned earlier, How We Die, about how modern society, but modern America in particular, has just removed death from life."}
+{"speaker":"DUBNER","text":"It’s made it a separate quarantined chapter, which is left to specialists."}
+{"speaker":"DUBNER","text":"You know, it used to be you’d be buried by your family."}
+{"speaker":"DUBNER","text":"You know, your body would be watched over by your loved ones."}
+{"speaker":"DUCKWORTH","text":"We had rituals."}
+{"speaker":"DUBNER","text":"Yeah, yeah."}
+{"speaker":"DUBNER","text":"And there is somewhat of a return to that."}
+{"speaker":"DUCKWORTH","text":"Is there?"}
+{"speaker":"DUCKWORTH","text":"How?"}
+{"speaker":"DUBNER","text":"Well there are people who promote and offer home burials and green burials and things like that."}
+{"speaker":"DUBNER","text":"It is a movement, but a small one."}
+{"speaker":"DUBNER","text":"But even cremation has grown a ton in the last I guess three, four, or five decades."}
+{"speaker":"DUBNER","text":"So, I think there are a lot of rituals that are shifting now, people wanting to get away from the formality of what has been for the last a hundred or so years."}
+{"speaker":"DUBNER","text":"But I do feel that as I get older and everyone around me, obviously, gets older—"}
+{"speaker":"DUCKWORTH","text":"At the same rate, it turns out."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"Isn’t that wild?"}
+{"speaker":"DUBNER","text":"As far as I know."}
+{"speaker":"DUBNER","text":"We might have to start carbon dating some of these people I know, because they seem to go much, much faster."}
+{"speaker":"DUBNER","text":"But, it does strike me that thinking and talking about death, which is mostly considered a gruesome and off-limits thing, is to me, prima facie, not gruesome, and should not be off-limits."}
+{"speaker":"DUBNER","text":"Maybe me asking you about it in the guise of immortality was not the best way to go."}
+{"speaker":"DUBNER","text":"Maybe what I really just wanted to talk about with you was death."}
+{"speaker":"DUBNER","text":"But the beauty part is you’re so good that you took my question about immortality and made it about death."}
+{"speaker":"DUBNER","text":"You helped me manage my terror just a little bit."}
+{"speaker":"DUBNER","text":"I really appreciate that, Angie."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"Well, you’re welcome, Stephen."}
