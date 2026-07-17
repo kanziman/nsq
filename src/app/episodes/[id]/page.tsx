@@ -26,10 +26,12 @@ export default async function EpisodePlayerPage({
   const episode = await getEpisodeById(id);
   const segments = await getEpisodeSegments(id);
 
+  // public에는 완료본만 배포되며 import-state.json이 없을 수 있다(#162 AC4).
+  // import-state 부재는 '완료'로 간주하고, 존재하면서 미완료(로컬 진행중)일 때만 redirect한다.
   if (
     !episode ||
-    episode.importState?.status !== 'completed' ||
-    segments.length === 0
+    segments.length === 0 ||
+    (episode.importState && episode.importState.status !== 'completed')
   ) {
     redirect('/');
   }
