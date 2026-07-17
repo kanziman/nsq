@@ -18,7 +18,14 @@ function hasInProgress(list: Episode[]): boolean {
   );
 }
 
-export default function EpisodeDashboard() {
+// 배포(조회 전용)에서는 로컬 임포트 관련 동작(3초 진행률 폴링·삭제)이 무의미하므로
+// isLocal=false일 때 비활성화한다. 기본값은 방어적으로 false(배포 안전측)이며,
+// 서버 컴포넌트(page.tsx)가 !isProductionDeploy() 값을 명시 주입한다(#162).
+export default function EpisodeDashboard({
+  isLocal = false,
+}: {
+  isLocal?: boolean;
+}) {
   const [episodes, setEpisodes] = useState<Episode[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -29,7 +36,7 @@ export default function EpisodeDashboard() {
       setError(null);
     }
     try {
-      const res = await fetch('/api/episodes');
+      const res = await fetch('/episodes/index.json');
       if (!res.ok) {
         throw new Error('Failed to fetch');
       }
@@ -68,9 +75,9 @@ export default function EpisodeDashboard() {
     fetchEpisodes();
   }, [fetchEpisodes]);
 
-  // 2. 진행 중인 에피소드 감지 시 3초 주기 조건부 폴링
+  // 2. 진행 중인 에피소드 감지 시 3초 주기 조건부 폴링 (로컬 전용 — 배포에선 비활성화)
   useEffect(() => {
-    if (!episodes || !hasInProgress(episodes) || error) {
+    if (!isLocal || !episodes || !hasInProgress(episodes) || error) {
       return;
     }
     const timer = setInterval(() => {
@@ -78,7 +85,7 @@ export default function EpisodeDashboard() {
     }, 3000);
 
     return () => clearInterval(timer);
-  }, [episodes, fetchEpisodes, error]);
+  }, [isLocal, episodes, fetchEpisodes, error]);
 
   // 3. 에러 발생 시 처리
   if (error && !loading) {
@@ -142,7 +149,11 @@ export default function EpisodeDashboard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {episodes?.map((ep) => (
-        <EpisodeCard key={ep.id} episode={ep} onDelete={handleCardDelete} />
+        <EpisodeCard
+          key={ep.id}
+          episode={ep}
+          onDelete={isLocal ? handleCardDelete : undefined}
+        />
       ))}
     </div>
   );

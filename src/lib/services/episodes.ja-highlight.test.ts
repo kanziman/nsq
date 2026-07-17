@@ -75,7 +75,7 @@ afterEach(async () => {
 describe('getEpisodeSegments (#137 ja wordStarts)', () => {
   it('should attach wordStarts from subtitle.ja.vtt inline word times when meta.language is ja', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja', jaVtt: JA_VTT });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toBeDefined();
     expect(result[0].wordStarts!.length).toBe(jaWordCount(JA_TEXT));
   });
@@ -87,13 +87,13 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       language: 'ja',
       enVtt: 'WEBVTT\n\n00:00:07.010 --> 00:00:15.340\nhello world\n',
     });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toBeUndefined();
   });
 
   it('should size wordStarts by tokenizeJa word tokens (not whitespace split)', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja', jaVtt: JA_VTT });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     // 공백 분해라면 무공백 ja는 1이 되지만, 토큰 기준이면 2개 이상이어야 한다.
     expect(result[0].wordStarts!.length).toBeGreaterThan(1);
     expect(result[0].wordStarts!.length).toBe(jaWordCount(JA_TEXT));
@@ -101,13 +101,13 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
 
   it('should attach audioStart = first ja VTT inline token time in the segment window', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja', jaVtt: JA_VTT });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].audioStart).toBeCloseTo(7.01);
   });
 
   it('should map wordStarts to the exact VTT inline times (issue 실측치)', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja', jaVtt: JA_VTT });
-    const ws = (await getEpisodeSegments(VID))[0].wordStarts!;
+    const ws = (await getEpisodeSegments(VID, BASE))[0].wordStarts!;
     // シェア(첫 단어는 세그먼트 시작에 앵커), する, プラットフォーム, 風.
     const expected = [7.01, 8.87, 12.14, 14.1];
     expect(ws).toHaveLength(expected.length);
@@ -122,13 +122,13 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       language: 'en',
       enVtt: 'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
     });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toHaveLength(2);
   });
 
   it('should produce monotonically non-decreasing wordStarts within [start, end)', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja', jaVtt: JA_VTT });
-    const ws = (await getEpisodeSegments(VID))[0].wordStarts!;
+    const ws = (await getEpisodeSegments(VID, BASE))[0].wordStarts!;
     for (let i = 0; i < ws.length; i++) {
       expect(ws[i]).toBeGreaterThanOrEqual(JA_SEG.start);
       expect(ws[i]).toBeLessThan(JA_SEG.end);
@@ -143,7 +143,7 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       ],
       enVtt: 'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
     });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toHaveLength(2);
   });
 
@@ -153,7 +153,7 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       { id: 'sent-3', start: 100, end: 103, speaker: 'SPEAKER', text: '猫犬' },
     ];
     await writeEpisode({ segments: segs, language: 'ja', jaVtt: JA_VTT });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[1].wordStarts).toBeUndefined();
   });
 
@@ -167,13 +167,13 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       text: '。、！',
     };
     await writeEpisode({ segments: [punctSeg], language: 'ja', jaVtt: JA_VTT });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toBeUndefined();
   });
 
   it('should fall back (no wordStarts) when subtitle.ja.vtt is missing', async () => {
     await writeEpisode({ segments: [JA_SEG], language: 'ja' });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toBeUndefined();
   });
 
@@ -183,7 +183,7 @@ describe('getEpisodeSegments (#137 ja wordStarts)', () => {
       language: 'ja',
       jaVtt: 'NOT VALID VTT @@@',
     });
-    const result = await getEpisodeSegments(VID);
+    const result = await getEpisodeSegments(VID, BASE);
     expect(result[0].wordStarts).toBeUndefined();
     expect(result[0].text).toBe(JA_TEXT);
   });

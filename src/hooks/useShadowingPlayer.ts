@@ -5,6 +5,7 @@ import {
   DEFAULT_PLAYBACK_RATE,
   type AudioManager,
 } from '@/lib/utils/audio';
+import { buildAudioUrl } from '@/lib/utils/audio-url';
 import type { Segment } from '@/lib/types';
 
 const EMPTY_TARGET_NOTICE = '선택한 화자의 대사가 없어 필터를 해제했어요.';
@@ -121,7 +122,7 @@ export function useShadowingPlayer({
   }, []);
 
   useEffect(() => {
-    const manager = createAudioManager(`/api/episodes/${episodeId}/audio`);
+    const manager = createAudioManager(buildAudioUrl(episodeId));
     managerRef.current = manager;
     // 에피소드 전환/재마운트 시에도 선택한 속도를 유지
     manager.setPlaybackRate(rateRef.current);

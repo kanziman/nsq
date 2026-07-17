@@ -20,8 +20,8 @@ test.describe('에피소드 목록 대시보드 UI E2E', () => {
   test('Empty State: 에피소드가 없을 때 안내 노출 및 임포트 이동', async ({
     page,
   }) => {
-    // API Mock: 에피소드 0개 반환
-    await page.route('**/api/episodes', async (route) => {
+    // 목록 소스 Mock: 정적 매니페스트 /episodes/index.json (S2 #160) — 0개 반환
+    await page.route('**/episodes/index.json', async (route) => {
       await route.fulfill({
         status: 200,
         contentType: 'application/json',
@@ -56,19 +56,16 @@ test.describe('에피소드 목록 대시보드 UI E2E', () => {
   }) => {
     let deleteCalled = false;
 
-    // GET /api/episodes API Mock
-    await page.route('**/api/episodes', async (route) => {
-      const method = route.request().method();
-      if (method === 'GET') {
-        const list = deleteCalled ? [] : [MOCK_EPISODE];
-        await route.fulfill({
-          status: 200,
-          contentType: 'application/json',
-          body: JSON.stringify(list),
-        });
-      } else {
-        await route.continue();
-      }
+    // 목록 소스 Mock: 정적 매니페스트 /episodes/index.json (S2 #160)
+    // 완료 에피소드는 폴링하지 않아 마운트 시 1회만 fetch → 초기 목록만 제공하면 된다.
+    // 삭제는 클라이언트에서 카드가 제거되고 재fetch하지 않는다.
+    await page.route('**/episodes/index.json', async (route) => {
+      const list = deleteCalled ? [] : [MOCK_EPISODE];
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify(list),
+      });
     });
 
     // DELETE /api/episodes/[id] API Mock

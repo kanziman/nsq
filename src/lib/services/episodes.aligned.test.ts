@@ -74,7 +74,7 @@ describe('getEpisodeSegments (#139 anchor alignment)', () => {
       language: 'ja',
       jaVtt: JA_VTT_WITH_GARBAGE,
     });
-    const [seg] = await getEpisodeSegments(VID);
+    const [seg] = await getEpisodeSegments(VID, BASE);
     expect(seg.wordStarts).toBeDefined();
     // 단어 순서: シェア(0) する(1) プラットフォーム(2) 風(3).
     expect(seg.wordStarts![2]).toBeCloseTo(12.14, 2);
@@ -88,7 +88,7 @@ describe('getEpisodeSegments (#139 anchor alignment)', () => {
       ],
       enVtt: 'WEBVTT\n\n00:00.000 --> 00:03.000\nhello there\n',
     });
-    const [seg] = await getEpisodeSegments(VID);
+    const [seg] = await getEpisodeSegments(VID, BASE);
     expect(seg.wordStarts).toHaveLength(2);
     expect(seg.wordStarts![0]).toBeGreaterThanOrEqual(0);
     expect(seg.wordStarts![1]).toBeGreaterThan(seg.wordStarts![0]);
@@ -117,7 +117,7 @@ describe('getEpisodeSegments (#139 anchor alignment)', () => {
       '<00:00:02.500><c>を</c>' +
       '<00:00:03.000><c>見る</c>\n';
     await writeEpisode({ segments: [seg], language: 'ja', jaVtt: vtt });
-    const [out] = await getEpisodeSegments(VID);
+    const [out] = await getEpisodeSegments(VID, BASE);
     expect(out.wordStarts).toBeDefined();
     // を/見る가 각자의 실측 시각(2.5/3.0)에 가깝게 앵커링되어, 앞으로 밀리지 않는다.
     const ws = out.wordStarts!;
@@ -132,7 +132,7 @@ describe('getEpisodeSegments (#139 anchor alignment)', () => {
       jaVtt:
         'WEBVTT\n\n00:00:07.010 --> 00:00:15.340\nアア<00:00:10.000><c>イイ</c><00:00:13.000><c>ウウ</c>\n',
     });
-    const [seg] = await getEpisodeSegments(VID);
+    const [seg] = await getEpisodeSegments(VID, BASE);
     expect(seg.wordStarts).toBeDefined();
     expect(seg.wordStarts!.length).toBeGreaterThan(0);
   });

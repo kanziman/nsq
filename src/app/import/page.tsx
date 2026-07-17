@@ -1,29 +1,10 @@
-'use client';
-
-import { Suspense } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { ImportForm } from '@/components/import/ImportForm';
-import { ImportMonitor } from '@/components/import/ImportMonitor';
-
-function ImportContent() {
-  const router = useRouter();
-  const videoId = useSearchParams().get('videoId');
-
-  if (videoId) {
-    return (
-      <ImportMonitor
-        videoId={videoId}
-        onNewImport={() => router.replace('/import')}
-      />
-    );
-  }
-
-  return (
-    <ImportForm onAccepted={(id) => router.replace(`/import?videoId=${id}`)} />
-  );
-}
+import { ImportClient } from '@/components/import/ImportClient';
+import { isProductionDeploy } from '@/lib/utils/env';
 
 export default function ImportPage() {
+  // 임포트는 로컬 개발 환경 전용 — 배포(Vercel)에서는 안내 화면만 노출한다(#162).
+  const production = isProductionDeploy();
+
   return (
     <main className="min-h-screen p-8 md:p-24 max-w-2xl mx-auto space-y-8">
       <header className="space-y-2 border-b border-hairline pb-6">
@@ -39,9 +20,14 @@ export default function ImportPage() {
         </p>
       </header>
 
-      <Suspense fallback={<p className="text-sm text-muted">불러오는 중…</p>}>
-        <ImportContent />
-      </Suspense>
+      {production ? (
+        <p className="font-sans text-muted-soft text-sm leading-relaxed">
+          임포트는 로컬 개발 환경에서만 동작합니다. 배포본에서는 이미 등록된
+          에피소드의 학습만 제공됩니다.
+        </p>
+      ) : (
+        <ImportClient />
+      )}
     </main>
   );
 }

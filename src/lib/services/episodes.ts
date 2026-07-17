@@ -5,7 +5,12 @@ import { parseVtt } from '../utils/vtt-parser';
 import { computeWordStartsAligned, splitWords } from '../utils/words';
 import { tokenizeJa } from '../utils/tokenize';
 
-const BASE_DIR = path.join(process.cwd(), '.shadowing', 'episodes');
+// 조회(read)와 임포트 쓰기(write)의 소스를 분리한다(#160, R2 하이브리드 배포).
+// 조회는 git 추적 정적 자산 public/episodes를 읽어 Vercel outputFileTracing 문제를
+// 피한다. 임포트 쓰기는 로컬 작업본 .shadowing에 남고, publish(S4)가 public으로 복사한다.
+const READ_BASE = path.join(process.cwd(), 'public', 'episodes');
+// DELETE 라우트 등 로컬 작업본을 대상으로 하는 소비자가 존재확인에 사용하도록 export한다(#162).
+export const WRITE_BASE = path.join(process.cwd(), '.shadowing', 'episodes');
 
 // 디렉토리가 존재하는지 확인하고, 없으면 생성하는 헬퍼
 async function ensureDir(dirPath: string) {
@@ -36,24 +41,26 @@ async function readJson<T>(filePath: string): Promise<T | null> {
   }
 }
 
-// videoId의 import-state.json 경로를 반환하는 헬퍼
+// videoId의 import-state.json 경로를 반환하는 헬퍼 (임포트 쓰기 소스)
 function importStatePath(videoId: string): string {
-  return path.join(BASE_DIR, videoId, 'import-state.json');
+  return path.join(WRITE_BASE, videoId, 'import-state.json');
 }
 
 /**
  * 로컬에 임포트된 모든 에피소드 목록을 반환합니다.
  */
-export async function getEpisodes(): Promise<Episode[]> {
+export async function getEpisodes(
+  baseDir: string = READ_BASE,
+): Promise<Episode[]> {
   try {
-    await ensureDir(BASE_DIR);
-    const dirs = await fs.readdir(BASE_DIR, { withFileTypes: true });
+    await ensureDir(baseDir);
+    const dirs = await fs.readdir(baseDir, { withFileTypes: true });
     const episodes: Episode[] = [];
 
     for (const dir of dirs) {
       if (dir.isDirectory()) {
         const episodeId = dir.name;
-        const episode = await getEpisodeById(episodeId);
+        const episode = await getEpisodeById(episodeId, baseDir);
         if (episode) {
           episodes.push(episode);
         }
@@ -73,10 +80,13 @@ export async function getEpisodes(): Promise<Episode[]> {
 /**
  * ID(유튜브 비디오 ID)로 에피소드를 조회합니다.
  */
-export async function getEpisodeById(id: string): Promise<Episode | null> {
-  const episodeDir = path.join(BASE_DIR, id);
+export async function getEpisodeById(
+  id: string,
+  baseDir: string = READ_BASE,
+): Promise<Episode | null> {
+  const episodeDir = path.join(baseDir, id);
   const metaPath = path.join(episodeDir, 'meta.json');
-  const statePath = importStatePath(id);
+  const statePath = path.join(episodeDir, 'import-state.json');
 
   if (!(await exists(episodeDir))) {
     return null;
@@ -111,8 +121,11 @@ export async function getEpisodeById(id: string): Promise<Episode | null> {
 /**
  * 에피소드에 해당하는 정합 완료된 세그먼트 배열을 조회합니다.
  */
-export async function getEpisodeSegments(id: string): Promise<Segment[]> {
-  const segmentsPath = path.join(BASE_DIR, id, 'segments.json');
+export async function getEpisodeSegments(
+  id: string,
+  baseDir: string = READ_BASE,
+): Promise<Segment[]> {
+  const segmentsPath = path.join(baseDir, id, 'segments.json');
   const segments = await readJson<Segment[]>(segmentsPath);
   if (!segments) return [];
 
@@ -121,10 +134,10 @@ export async function getEpisodeSegments(id: string): Promise<Segment[]> {
   // 균등분할 폴백에 맡긴다. 언어는 meta.language(부재 시 'en')로 결정한다.
   try {
     const meta = await readJson<{ language?: LanguageCode }>(
-      path.join(BASE_DIR, id, 'meta.json'),
+      path.join(baseDir, id, 'meta.json'),
     );
     const language: LanguageCode = meta?.language ?? 'en';
-    const vttPath = path.join(BASE_DIR, id, `subtitle.${language}.vtt`);
+    const vttPath = path.join(baseDir, id, `subtitle.${language}.vtt`);
     if (await exists(vttPath)) {
       const vtt = await fs.readFile(vttPath, 'utf-8');
       const tokens = parseVtt(vtt);
@@ -177,7 +190,7 @@ export async function saveImportState(
   videoId: string,
   state: ImportState,
 ): Promise<void> {
-  await ensureDir(path.join(BASE_DIR, videoId));
+  await ensureDir(path.join(WRITE_BASE, videoId));
   await fs.writeFile(
     importStatePath(videoId),
     JSON.stringify(state, null, 2),
@@ -189,7 +202,7 @@ export async function saveImportState(
  * 에피소드 저장소 디렉토리를 완전히 삭제합니다.
  */
 export async function deleteEpisode(id: string): Promise<void> {
-  const episodeDir = path.join(BASE_DIR, id);
+  const episodeDir = path.join(WRITE_BASE, id);
   if (await exists(episodeDir)) {
     await fs.rm(episodeDir, { recursive: true, force: true });
   }

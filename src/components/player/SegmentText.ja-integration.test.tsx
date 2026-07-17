@@ -58,7 +58,7 @@ describe('SegmentText #137 e2e (VTT → getEpisodeSegments → highlight)', () =
 
   it('should highlight プラットフォーム at the drift time using VTT-derived wordStarts', async () => {
     await writeJaEpisode();
-    const [seg] = await getEpisodeSegments(VID);
+    const [seg] = await getEpisodeSegments(VID, BASE);
     expect(seg.wordStarts).toBeDefined();
     const { container } = render(
       <SegmentText
@@ -74,7 +74,7 @@ describe('SegmentText #137 e2e (VTT → getEpisodeSegments → highlight)', () =
 
   it('should highlight a different (later) word at the same time when falling back to uniform split', async () => {
     await writeJaEpisode();
-    const [seg] = await getEpisodeSegments(VID);
+    const [seg] = await getEpisodeSegments(VID, BASE);
     // wordStarts를 제거해 균등분할 폴백을 강제 → 같은 시각에 プラットフォーム가 아니어야 한다.
     const uniform: Segment = { ...seg, wordStarts: undefined };
     const { container } = render(

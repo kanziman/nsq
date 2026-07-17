@@ -1,6 +1,7 @@
 import { extractVideoId } from '@/lib/utils/youtube';
 import { getImportState, saveImportState } from '@/lib/services/episodes';
 import { runImportPipeline } from '@/lib/services/import-pipeline';
+import { isProductionDeploy } from '@/lib/utils/env';
 import type { ImportState, LanguageCode, RetryStep } from '@/lib/types';
 
 // 진행중으로 간주되어 중복 접수를 차단하는 상태들
@@ -57,6 +58,11 @@ export async function GET(request: Request): Promise<Response> {
  * POST /api/import — 임포트 접수·검증·초기 상태 생성 라우트.
  */
 export async function POST(request: Request): Promise<Response> {
+  // 0. 임포트는 로컬 개발 환경 전용 — 배포(Vercel)에서는 차단한다(#162).
+  if (isProductionDeploy()) {
+    return jsonError('임포트는 로컬 개발 환경에서만 동작합니다.', 403);
+  }
+
   // 1. JSON 바디 파싱 → 실패 시 400
   let body: unknown;
   try {

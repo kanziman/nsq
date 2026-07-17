@@ -12,16 +12,22 @@ vi.mock('@/lib/services/episodes', () => ({
 vi.mock('@/lib/services/import-pipeline', () => ({
   runImportPipeline: vi.fn(),
 }));
+// 환경 판정은 케이스별로 제어 (기본 로컬).
+vi.mock('@/lib/utils/env', () => ({
+  isProductionDeploy: vi.fn(() => false),
+}));
 
 import { GET, POST } from './route';
 import { extractVideoId } from '@/lib/utils/youtube';
 import { getImportState, saveImportState } from '@/lib/services/episodes';
 import { runImportPipeline } from '@/lib/services/import-pipeline';
+import { isProductionDeploy } from '@/lib/utils/env';
 
 const mockExtract = vi.mocked(extractVideoId);
 const mockGetState = vi.mocked(getImportState);
 const mockSaveState = vi.mocked(saveImportState);
 const mockRunPipeline = vi.mocked(runImportPipeline);
+const mockIsProd = vi.mocked(isProductionDeploy);
 
 function makeRequest(body: unknown, rawBody?: string): Request {
   return new Request('http://localhost/api/import', {
@@ -53,6 +59,17 @@ beforeEach(() => {
   mockGetState.mockResolvedValue(null);
   mockSaveState.mockResolvedValue(undefined);
   mockRunPipeline.mockResolvedValue(undefined);
+  mockIsProd.mockReturnValue(false);
+});
+
+describe('POST /api/import production guard', () => {
+  it('should return 403 and NOT start pipeline when production deploy', async () => {
+    mockIsProd.mockReturnValue(true);
+    const res = await POST(makeRequest(VALID_BODY));
+    expect(res.status).toBe(403);
+    expect(mockSaveState).not.toHaveBeenCalled();
+    expect(mockRunPipeline).not.toHaveBeenCalled();
+  });
 });
 
 describe('POST /api/import', () => {

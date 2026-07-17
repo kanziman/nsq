@@ -48,6 +48,7 @@ vi.mock('@/lib/utils/audio', () => ({
   }),
 }));
 
+import { createAudioManager } from '@/lib/utils/audio';
 import { useShadowingPlayer } from './useShadowingPlayer';
 
 const SEGMENTS: Segment[] = [
@@ -65,6 +66,16 @@ function setup() {
 beforeEach(() => vi.clearAllMocks());
 
 describe('useShadowingPlayer', () => {
+  // AC1(#158) 회귀 가드 — 오디오를 내부 /api 라우트가 아닌 R2 URL로 요청해야 한다.
+  it('[정상] should create audio manager with R2 URL, not internal /api route', () => {
+    vi.stubEnv('NEXT_PUBLIC_R2_BASE_URL', 'https://cdn.example');
+    setup();
+    const arg = vi.mocked(createAudioManager).mock.calls[0]?.[0];
+    expect(arg).toBe('https://cdn.example/vid/audio.mp3');
+    expect(arg).not.toContain('/api/');
+    vi.unstubAllEnvs();
+  });
+
   it('[정상] play() should set isPlaying true and call manager.play', () => {
     const { result } = setup();
     act(() => result.current.play());
