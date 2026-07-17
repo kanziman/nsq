@@ -61,7 +61,7 @@ describe('EpisodeDashboard Component', () => {
     } as Response);
 
     await act(async () => {
-      render(<EpisodeDashboard />);
+      render(<EpisodeDashboard isLocal={true} />);
     });
 
     expect(global.fetch).toHaveBeenCalledWith('/episodes/index.json');
@@ -70,7 +70,7 @@ describe('EpisodeDashboard Component', () => {
   it('should render skeleton while fetching episodes initially', async () => {
     vi.mocked(global.fetch).mockReturnValue(new Promise(() => {}));
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
     expect(screen.getByTestId('skeleton-loader')).toBeInTheDocument();
   });
 
@@ -80,7 +80,7 @@ describe('EpisodeDashboard Component', () => {
       json: async () => [],
     } as Response);
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(
@@ -97,7 +97,7 @@ describe('EpisodeDashboard Component', () => {
       json: async () => [COMPLETED_EPISODE],
     } as Response);
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(screen.getByText('Episode 1')).toBeInTheDocument();
@@ -115,7 +115,7 @@ describe('EpisodeDashboard Component', () => {
       json: async () => [IN_PROGRESS_EPISODE],
     } as Response);
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
@@ -141,7 +141,7 @@ describe('EpisodeDashboard Component', () => {
       json: async () => [COMPLETED_EPISODE],
     } as Response);
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
@@ -167,7 +167,7 @@ describe('EpisodeDashboard Component', () => {
   it('should render error state with retry button when API request fails', async () => {
     vi.mocked(global.fetch).mockRejectedValue(new Error('API failure'));
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(
@@ -202,7 +202,7 @@ describe('EpisodeDashboard Component', () => {
       json: async () => [COMPLETED_EPISODE],
     } as Response);
 
-    render(<EpisodeDashboard />);
+    render(<EpisodeDashboard isLocal={true} />);
 
     await waitFor(() => {
       expect(screen.getByText('Episode 1')).toBeInTheDocument();
@@ -237,5 +237,45 @@ describe('EpisodeDashboard Component', () => {
     await waitFor(() => {
       expect(screen.queryByText('Episode 1')).toBeNull();
     });
+  });
+
+  // -------------------------------------------------------------
+  // S3(#162) — 배포(isLocal=false)에서 로컬 전용 동작(폴링·삭제) 비활성화
+  // -------------------------------------------------------------
+  it('should NOT set up 3s polling interval when isLocal is false even if an episode is in progress', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: true,
+      json: async () => [IN_PROGRESS_EPISODE],
+    } as Response);
+
+    render(<EpisodeDashboard isLocal={false} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Episode 2 (임포트 중)')).toBeInTheDocument();
+    });
+
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    await act(async () => {
+      vi.advanceTimersByTime(3000);
+    });
+
+    // 폴링이 없어야 하므로 추가 호출이 발생하지 않는다.
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+  });
+
+  it('should NOT render a delete button when isLocal is false', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: true,
+      json: async () => [COMPLETED_EPISODE],
+    } as Response);
+
+    render(<EpisodeDashboard isLocal={false} />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Episode 1')).toBeInTheDocument();
+    });
+
+    expect(screen.queryByRole('button', { name: /삭제/i })).toBeNull();
   });
 });

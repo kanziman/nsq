@@ -174,4 +174,10 @@ describe('EpisodeCard Component', () => {
     const deleteBtn = screen.getByRole('button', { name: /삭제/i });
     expect(deleteBtn).toBeDisabled();
   });
+
+  // S3(#162) — 배포에서는 onDelete를 주입하지 않으므로 삭제 버튼을 렌더하지 않는다.
+  it('should NOT render a delete button when onDelete is undefined', () => {
+    render(<EpisodeCard episode={COMPLETED_EPISODE} />);
+    expect(screen.queryByRole('button', { name: /삭제/i })).toBeNull();
+  });
 });
