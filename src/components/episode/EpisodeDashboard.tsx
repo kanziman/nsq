@@ -37,11 +37,23 @@ export default function EpisodeDashboard({
     }
     try {
       const res = await fetch('/episodes/index.json');
+      // 아직 퍼블리시된 에피소드가 없으면 index.json이 없어 404 또는 HTML(404 페이지)이
+      // 온다 → 하드 에러가 아니라 빈 목록으로 처리한다(#169). 진짜 네트워크 실패(fetch
+      // reject)는 아래 catch에서 에러 상태로 남는다.
       if (!res.ok) {
-        throw new Error('Failed to fetch');
+        setEpisodes([]);
+        setError(null);
+        return;
       }
-      const data = await res.json();
-      setEpisodes(data);
+      let data: unknown;
+      try {
+        data = await res.json();
+      } catch {
+        setEpisodes([]);
+        setError(null);
+        return;
+      }
+      setEpisodes(Array.isArray(data) ? (data as Episode[]) : []);
       setError(null);
     } catch (err) {
       setError(

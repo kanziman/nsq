@@ -91,6 +91,49 @@ describe('EpisodeDashboard Component', () => {
     expect(link).toHaveAttribute('href', '/import');
   });
 
+  // #169 — 아직 퍼블리시된 에피소드가 없어 index.json이 없을 때(404/HTML)
+  // 하드 에러 대신 빈 상태를 렌더한다.
+  it('should render empty state (not error) when index.json responds not-ok (404)', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: false,
+      status: 404,
+      json: async () => {
+        throw new Error('not json');
+      },
+    } as unknown as Response);
+
+    render(<EpisodeDashboard isLocal={true} />);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/등록된 에피소드가 없습니다/i),
+      ).toBeInTheDocument();
+    });
+    expect(
+      screen.queryByText(/에피소드를 불러오는데 에러가 발생했습니다/i),
+    ).toBeNull();
+  });
+
+  it('should render empty state (not error) when index.json returns non-JSON HTML', async () => {
+    vi.mocked(global.fetch).mockResolvedValue({
+      ok: true,
+      json: async () => {
+        throw new SyntaxError("Unexpected token '<'");
+      },
+    } as unknown as Response);
+
+    render(<EpisodeDashboard isLocal={true} />);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText(/등록된 에피소드가 없습니다/i),
+      ).toBeInTheDocument();
+    });
+    expect(
+      screen.queryByText(/에피소드를 불러오는데 에러가 발생했습니다/i),
+    ).toBeNull();
+  });
+
   it('should render episode cards when episodes exist', async () => {
     vi.mocked(global.fetch).mockResolvedValue({
       ok: true,
