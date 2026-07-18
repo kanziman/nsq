@@ -129,7 +129,7 @@ export default function EpisodeCard({
           </div>
         </div>
         <div className="p-[24px] flex-grow flex flex-col justify-between space-y-3">
-          <h3 className="font-sans text-ink font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem] group-hover:text-primary-active transition-colors">
+          <h3 className="font-sans text-muted font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem] group-hover:text-primary-active transition-colors">
             {title}
           </h3>
 
@@ -220,10 +220,10 @@ export default function EpisodeCard({
       </div>
       <div className="p-[24px] space-y-4 flex-grow flex flex-col justify-between">
         <div className="space-y-2">
-          <h3 className="font-sans text-ink font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem]">
+          <h3 className="font-sans text-muted font-medium text-[16px] leading-snug tracking-tight line-clamp-2 min-h-[2.75rem]">
             {title || '알 수 없는 비디오'}
           </h3>
-          <div className="group relative p-2.5 rounded-md bg-surface-dark border border-hairline text-xs text-muted-soft leading-[1.55] min-h-[3rem] overflow-hidden">
+          <div className="group relative p-2.5 rounded-md bg-surface-dark border border-hairline text-xs text-on-dark-soft leading-[1.55] min-h-[3rem] overflow-hidden">
             <span className="line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
               {errorMsg || '임포트 중 상세 불명의 오류가 발생했습니다.'}
             </span>

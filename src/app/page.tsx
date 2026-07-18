@@ -16,9 +16,9 @@ export default function HomePage() {
           <h1 className="font-serif text-4xl md:text-5xl text-ink font-normal tracking-[-0.5px] md:tracking-[-1px]">
             내 에피소드 보드
           </h1>
-          <p className="font-sans text-muted-soft text-sm leading-[1.55] max-w-md">
-            임포트된 유튜브 에피소드를 선택해 쉐도잉 훈련을 진행하거나 새로운
-            학습 콘텐츠를 등록하세요.
+          <p className="font-sans text-muted-soft text-sm leading-[1.55] max-w-md break-keep">
+            임포트된 유튜브 에피소드를 선택해 쉐도잉 훈련을 진행하거나,
+            <br className="hidden sm:inline" /> 새로운 학습 콘텐츠를 등록하세요.
           </p>
         </div>
         {isLocal && (
