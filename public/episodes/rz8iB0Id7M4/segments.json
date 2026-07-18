@@ -1,0 +1,2998 @@
+[
+  {
+    "id": "seg-0",
+    "start": 0.16,
+    "end": 0.31,
+    "speaker": "DUBNER",
+    "text": "Wow.",
+    "translation": "와우."
+  },
+  {
+    "id": "seg-1",
+    "start": 0.31,
+    "end": 2.62975,
+    "speaker": "DUBNER",
+    "text": "You really have lowered your expectations, haven’t you?",
+    "translation": "기대치를 정말 많이 낮추셨나 보네요, 그렇죠?"
+  },
+  {
+    "id": "seg-2",
+    "start": 2.62975,
+    "end": 5.3395,
+    "speaker": "DUCKWORTH",
+    "text": "I guess that’s why I’m so happy.",
+    "translation": "그래서 제가 이렇게 행복한가 봐요."
+  },
+  {
+    "id": "seg-3",
+    "start": 5.3395,
+    "end": 6.5192499999999995,
+    "speaker": "DUCKWORTH",
+    "text": "I’m Angela Duckworth.",
+    "translation": "저는 안젤라 더크워스이고요."
+  },
+  {
+    "id": "seg-4",
+    "start": 6.5192499999999995,
+    "end": 7.48,
+    "speaker": "DUBNER",
+    "text": "And I’m Stephen Dubner.",
+    "translation": "저는 스티븐 더브너입니다."
+  },
+  {
+    "id": "seg-5",
+    "start": 7.48,
+    "end": 11.72,
+    "speaker": "DUCKWORTH",
+    "text": "I’m a psychologist at Penn and I run an educational non-profit called Character Lab.",
+    "translation": "저는 펜실베이니아 대학의 심리학자이자 '캐릭터 랩'이라는 교육 비영리 단체를 운영하고 있습니다."
+  },
+  {
+    "id": "seg-6",
+    "start": 11.72,
+    "end": 13.32,
+    "speaker": "DUBNER",
+    "text": "You also wrote the book Grit.",
+    "translation": "대표작으로 『그릿』이라는 책도 쓰셨죠."
+  },
+  {
+    "id": "seg-7",
+    "start": 13.32,
+    "end": 13.59,
+    "speaker": "DUCKWORTH",
+    "text": "Yes.",
+    "translation": "네, 맞아요."
+  },
+  {
+    "id": "seg-8",
+    "start": 13.59,
+    "end": 16.879666666666665,
+    "speaker": "DUBNER",
+    "text": "And I’m a writer and I host a podcast called Freakonomics Radio.",
+    "translation": "그리고 저는 작가이자 '프리코노믹스 라디오'라는 팟캐스트 진행자입니다."
+  },
+  {
+    "id": "seg-9",
+    "start": 16.879666666666665,
+    "end": 19.4595,
+    "speaker": "DUCKWORTH",
+    "text": "And you wrote the book Freakonomics, among quite a few others.",
+    "translation": "그리고 다른 책들도 많지만, 『괴짜경제학』을 쓰셨죠."
+  },
+  {
+    "id": "seg-10",
+    "start": 19.4595,
+    "end": 19.904,
+    "speaker": "DUBNER",
+    "text": "I did.",
+    "translation": "그랬죠."
+  },
+  {
+    "id": "seg-11",
+    "start": 19.904,
+    "end": 21.34,
+    "speaker": "DUCKWORTH",
+    "text": "And you and I became friends.",
+    "translation": "그리고 우리 둘은 친구가 되었습니다."
+  },
+  {
+    "id": "seg-12",
+    "start": 21.34,
+    "end": 22.026666666666667,
+    "speaker": "DUBNER",
+    "text": "We did.",
+    "translation": "맞아요, 그랬죠."
+  },
+  {
+    "id": "seg-13",
+    "start": 22.026666666666667,
+    "end": 25.839333333333332,
+    "speaker": "DUBNER",
+    "text": "And we discovered that both of us really like to ask each other questions.",
+    "translation": "그리고 저희 둘 다 서로에게 질문하는 걸 정말 좋아한다는 사실을 발견했습니다."
+  },
+  {
+    "id": "seg-14",
+    "start": 25.839333333333332,
+    "end": 27.3395,
+    "speaker": "DUCKWORTH",
+    "text": "And there’s only one rule.",
+    "translation": "그리고 여기엔 단 한 가지 규칙이 있죠."
+  },
+  {
+    "id": "seg-15",
+    "start": 27.3395,
+    "end": 32.079,
+    "speaker": "BOTH",
+    "text": "The rule is “there are no stupid questions.”",
+    "translation": "그 규칙은 바로 \"세상에 바보 같은 질문은 없다\"입니다."
+  },
+  {
+    "id": "seg-16",
+    "start": 32.079,
+    "end": 36.16,
+    "speaker": "NARRATOR",
+    "text": "Today on No Stupid Questions: How do you know if you’re a hard worker?",
+    "translation": "오늘 '바보 같은 질문은 없다'에서는 다음 주제를 다룹니다. 자신이 열심히 일하는 사람인지 어떻게 알 수 있을까요?"
+  },
+  {
+    "id": "seg-17",
+    "start": 36.16,
+    "end": 38.346666666666664,
+    "speaker": "DUCKWORTH",
+    "text": "You come up with a few salient examples, right?",
+    "translation": "몇 가지 대표적인 예가 떠오르시죠?"
+  },
+  {
+    "id": "seg-18",
+    "start": 38.346666666666664,
+    "end": 40.28,
+    "speaker": "DUCKWORTH",
+    "text": "You think of your wife.",
+    "translation": "아내분을 생각하시겠죠."
+  },
+  {
+    "id": "seg-19",
+    "start": 40.28,
+    "end": 40.6595,
+    "speaker": "DUBNER",
+    "text": "Lazy.",
+    "translation": "게을러요."
+  },
+  {
+    "id": "seg-20",
+    "start": 40.6595,
+    "end": 41.65233333333333,
+    "speaker": "DUCKWORTH",
+    "text": "No, she’s not.",
+    "translation": "아니요, 그렇지 않아요."
+  },
+  {
+    "id": "seg-21",
+    "start": 41.65233333333333,
+    "end": 42.879,
+    "speaker": "DUCKWORTH",
+    "text": "You think of me.",
+    "translation": "저를 떠올리시나 보네요."
+  },
+  {
+    "id": "seg-22",
+    "start": 42.879,
+    "end": 43.6595,
+    "speaker": "DUBNER",
+    "text": "Super lazy.",
+    "translation": "엄청 게으르죠."
+  },
+  {
+    "id": "seg-23",
+    "start": 43.6595,
+    "end": 46.039,
+    "speaker": "DUBNER",
+    "text": "Angie Duckworth never does anything.",
+    "translation": "앤지 더크워스는 아무것도 안 하니까요."
+  },
+  {
+    "id": "seg-24",
+    "start": 46.039,
+    "end": 52.493,
+    "speaker": "NARRATOR",
+    "text": "Also: why do happiness levels tend to start dropping around age 16, and not rise again until our late 40s?",
+    "translation": "그리고 왜 행복지수는 16세 무렵부터 떨어지기 시작해서 40대 후반이 되어서야 다시 올라가는 걸까요?"
+  },
+  {
+    "id": "seg-25",
+    "start": 52.493,
+    "end": 56.429249999999996,
+    "speaker": "DUCKWORTH",
+    "text": "To be precise, it’s about 47 to 48.",
+    "translation": "정확히 말하면, 한 47세에서 48세쯤이에요."
+  },
+  {
+    "id": "seg-26",
+    "start": 56.429249999999996,
+    "end": 58.745666666666665,
+    "speaker": "DUCKWORTH",
+    "text": "And I, I only say that because I’m 49.",
+    "translation": "그걸 굳이 언급하는 이유는 제가 마흔아홉이기 때문이죠."
+  },
+  {
+    "id": "seg-27",
+    "start": 58.745666666666665,
+    "end": 62.68,
+    "speaker": "DUCKWORTH",
+    "text": "So, this matters a lot to me.",
+    "translation": "그래서 저한테는 아주 중요한 문제거든요."
+  },
+  {
+    "id": "seg-28",
+    "start": 62.68,
+    "end": 68.26333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Stephen, I have a personal question for you, and I want you to be honest.",
+    "translation": "스티븐, 개인적인 질문 하나 할게요, 솔직하게 답해 주세요."
+  },
+  {
+    "id": "seg-29",
+    "start": 68.26333333333334,
+    "end": 71.18,
+    "speaker": "DUCKWORTH",
+    "text": "Are you a hard worker?",
+    "translation": "본인은 열심히 일하는 사람인가요?"
+  },
+  {
+    "id": "seg-30",
+    "start": 71.18,
+    "end": 78.28,
+    "speaker": "DUBNER",
+    "text": "I like that question because it, first of all, feels like a trick.",
+    "translation": "그 질문 마음에 드네요. 우선 함정 질문 같은 느낌이 들거든요."
+  },
+  {
+    "id": "seg-31",
+    "start": 78.28,
+    "end": 80.9995,
+    "speaker": "DUBNER",
+    "text": "Second of all, it is something I think about a lot.",
+    "translation": "둘째로, 평소에 많이 고민하는 문제이기도 하고요."
+  },
+  {
+    "id": "seg-32",
+    "start": 80.9995,
+    "end": 86.38,
+    "speaker": "DUBNER",
+    "text": "But I think about it in terms of: did I work as hard as I was capable of working?",
+    "translation": "하지만 전 '내가 낼 수 있는 역량만큼 열심히 일했는가?'라는 관점으로 접근해요."
+  },
+  {
+    "id": "seg-33",
+    "start": 86.38,
+    "end": 88.479,
+    "speaker": "DUBNER",
+    "text": "Not: did I do a lot?",
+    "translation": "'일을 많이 했는가?'가 아니라요."
+  },
+  {
+    "id": "seg-34",
+    "start": 88.479,
+    "end": 91.4,
+    "speaker": "DUCKWORTH",
+    "text": "Okay so scale from one to 10, Stephen Dubner.",
+    "translation": "좋아요, 그럼 1부터 10까지의 척도로 본다면 어때요, 스티븐 더브너 씨?"
+  },
+  {
+    "id": "seg-35",
+    "start": 91.4,
+    "end": 94.53999999999999,
+    "speaker": "DUBNER",
+    "text": "Am I a hard worker compared to myself and my potential?",
+    "translation": "제 자신과 제 잠재력에 비교했을 때 열심히 일한다는 뜻인가요?"
+  },
+  {
+    "id": "seg-36",
+    "start": 94.53999999999999,
+    "end": 97,
+    "speaker": "DUBNER",
+    "text": "Or compared to the universe of people?",
+    "translation": "아니면 세상 모든 사람들과 비교했을 때인가요?"
+  },
+  {
+    "id": "seg-37",
+    "start": 97,
+    "end": 98.29974999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Let’s go with the universe of people.",
+    "translation": "세상 사람들하고 비교해 보죠."
+  },
+  {
+    "id": "seg-38",
+    "start": 98.29974999999999,
+    "end": 101.62975,
+    "speaker": "DUBNER",
+    "text": "So compared to the universe of people, I’m going to give myself 8.7.",
+    "translation": "그럼 세상 사람들과 비교했을 때, 전 저 자신에게 8.7점을 주겠어요."
+  },
+  {
+    "id": "seg-39",
+    "start": 101.62975,
+    "end": 105.22857142857143,
+    "speaker": "DUCKWORTH",
+    "text": "So, out of 100 people, you would be harder working than—.",
+    "translation": "그럼 100명 중에서 본인이 누구보다 더 열심히 일하는 편이라는—"
+  },
+  {
+    "id": "seg-40",
+    "start": 105.22857142857143,
+    "end": 106.17142857142856,
+    "speaker": "DUBNER",
+    "text": "Eighty-six of them.",
+    "translation": "86명이요."
+  },
+  {
+    "id": "seg-41",
+    "start": 106.17142857142856,
+    "end": 107.11428571428571,
+    "speaker": "DUCKWORTH",
+    "text": "Eighty-six of them.",
+    "translation": "86명이요."
+  },
+  {
+    "id": "seg-42",
+    "start": 107.11428571428571,
+    "end": 109.552,
+    "speaker": "DUCKWORTH",
+    "text": "And then yeah, there’s people in front of you.",
+    "translation": "그리고 맞아요, 자기보다 열심히 하는 사람들도 앞에 있죠."
+  },
+  {
+    "id": "seg-43",
+    "start": 109.552,
+    "end": 111.78214285714286,
+    "speaker": "DUBNER",
+    "text": "That I ridicule for working too hard, the other people.",
+    "translation": "내가 너무 열심히 일한다고 놀려대는 그 다른 사람들 말이죠."
+  },
+  {
+    "id": "seg-44",
+    "start": 111.78214285714286,
+    "end": 113.15899999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Who are workaholics.",
+    "translation": "일중독자들 말이에요."
+  },
+  {
+    "id": "seg-45",
+    "start": 113.15899999999999,
+    "end": 113.37519999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Okay.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-46",
+    "start": 113.37519999999999,
+    "end": 116.83636363636363,
+    "speaker": "DUCKWORTH",
+    "text": "And then what about compared to how hard you could work?",
+    "translation": "그러면 본인이 '얼마나 더 열심히 할 수 있는지'와 비교하면 어떤가요?"
+  },
+  {
+    "id": "seg-47",
+    "start": 116.83636363636363,
+    "end": 119.11966666666666,
+    "speaker": "DUBNER",
+    "text": "I’m going to say 8.6.",
+    "translation": "6 정도라고 할게요."
+  },
+  {
+    "id": "seg-48",
+    "start": 119.11966666666666,
+    "end": 120.719,
+    "speaker": "DUCKWORTH",
+    "text": "Pretty similar.",
+    "translation": "비슷하네요."
+  },
+  {
+    "id": "seg-49",
+    "start": 120.719,
+    "end": 120.94319999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Yes.",
+    "translation": "그렇죠."
+  },
+  {
+    "id": "seg-50",
+    "start": 120.94319999999999,
+    "end": 121.3916,
+    "speaker": "DUCKWORTH",
+    "text": "That’s right.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-51",
+    "start": 121.3916,
+    "end": 126.8874,
+    "speaker": "DUBNER",
+    "text": "In other words, I feel like I could be in the top 10 percent, maybe top 5 percent.",
+    "translation": "다시 말해서, 제가 상위 10%, 어쩌면 상위 5% 안에는 들 수 있을 것 같다는 느낌이에요."
+  },
+  {
+    "id": "seg-52",
+    "start": 126.8874,
+    "end": 130.57677777777778,
+    "speaker": "DUBNER",
+    "text": "I could work harder, but I don’t always push it as hard as I can.",
+    "translation": "더 열심히 일할 수도 있지만, 항상 제 한계까지 몰아붙이지는 않거든요."
+  },
+  {
+    "id": "seg-53",
+    "start": 130.57677777777778,
+    "end": 134.07975,
+    "speaker": "DUBNER",
+    "text": "But I’m curious why you’re asking this question, because you don’t really care about how hard I work.",
+    "translation": "그런데 왜 이런 질문을 하시는지 궁금하네요. 제가 얼마나 열심히 일하는지 진짜 관심 있으신 건 아닐 텐데요."
+  },
+  {
+    "id": "seg-54",
+    "start": 134.07975,
+    "end": 138.44,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I’m asking you in part because it’s a question I ask to measure grit.",
+    "translation": "아, 질문한 이유 중 하나는 이게 제가 '그릿(grit)'을 측정할 때 쓰는 질문이기 때문이에요."
+  },
+  {
+    "id": "seg-55",
+    "start": 138.44,
+    "end": 140.60975,
+    "speaker": "DUCKWORTH",
+    "text": "Being a hard worker predicts success outcomes.",
+    "translation": "열심히 일하는 사람은 성공할 확률이 높으니까요."
+  },
+  {
+    "id": "seg-56",
+    "start": 140.60975,
+    "end": 148.024,
+    "speaker": "DUCKWORTH",
+    "text": "And I have, after 15 years of measuring whether someone’s a hard worker by asking them, “Are you a hard worker?”—.",
+    "translation": "그리고 제가 15년 동안 사람들에게 \"당신은 열심히 일하는 사람인가요?\"라고 물어보면서 그걸 측정해 왔는데요..."
+  },
+  {
+    "id": "seg-57",
+    "start": 148.024,
+    "end": 150.232,
+    "speaker": "DUBNER",
+    "text": "Well does that work, asking them that question?",
+    "translation": "그런데 그렇게 물어보는 게 효과가 있나요?"
+  },
+  {
+    "id": "seg-58",
+    "start": 150.232,
+    "end": 151.5,
+    "speaker": "DUBNER",
+    "text": "I wouldn’t think so.",
+    "translation": "그렇지 않을 것 같은데요."
+  },
+  {
+    "id": "seg-59",
+    "start": 151.5,
+    "end": 152.56,
+    "speaker": "DUCKWORTH",
+    "text": "Well, kind of.",
+    "translation": "음, 어느 정도는요."
+  },
+  {
+    "id": "seg-60",
+    "start": 152.56,
+    "end": 160.22975,
+    "speaker": "DUCKWORTH",
+    "text": "Somebody says, “Yeah, I’m absolutely a hard worker.” Then, all things being equal, it is more likely that they’re going to achieve something than not.",
+    "translation": "누군가 “네, 저는 정말 열심히 일하는 사람입니다”라고 말한다면, 다른 조건이 동일할 때, 그 사람이 무언가를 성취할 가능성이 그렇지 않을 가능성보다 더 높습니다."
+  },
+  {
+    "id": "seg-61",
+    "start": 160.22975,
+    "end": 162.26,
+    "speaker": "DUBNER",
+    "text": "There isn’t grotesque inflation?",
+    "translation": "거품이 잔뜩 낀 왜곡 같은 건 없고요?"
+  },
+  {
+    "id": "seg-62",
+    "start": 162.26,
+    "end": 163.81233333333333,
+    "speaker": "DUCKWORTH",
+    "text": "There’s certainly a possibility of faking.",
+    "translation": "물론 거짓으로 답할 가능성도 분명히 존재하죠."
+  },
+  {
+    "id": "seg-63",
+    "start": 163.81233333333333,
+    "end": 165.279,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, remember, I’m a researcher.",
+    "translation": "제 말은, 아시다시피 전 연구자잖아요."
+  },
+  {
+    "id": "seg-64",
+    "start": 165.279,
+    "end": 168.6154,
+    "speaker": "DUCKWORTH",
+    "text": "So usually when I’m asking people, it’s not because I’m hiring them, right?",
+    "translation": "그러니까 보통 제가 사람들에게 물어볼 때는 그 사람들을 채용하려는 목적이 아니죠, 그렇죠?"
+  },
+  {
+    "id": "seg-65",
+    "start": 168.6154,
+    "end": 174.17266666666666,
+    "speaker": "DUCKWORTH",
+    "text": "So there’s less of an incentive to fake with somebody who’s not holding your future in their hands.",
+    "translation": "자신의 미래를 쥐고 흔들지 않는 사람에게는 거짓말을 할 인센티브가 덜하니까요."
+  },
+  {
+    "id": "seg-66",
+    "start": 174.17266666666666,
+    "end": 177.699,
+    "speaker": "DUBNER",
+    "text": "But you still are holding a clipboard or some equivalent thereof, right?",
+    "translation": "하지만 그래도 여전히 클립보드든 뭐든 들고 계시잖아요, 그렇죠?"
+  },
+  {
+    "id": "seg-67",
+    "start": 177.699,
+    "end": 178.82666666666668,
+    "speaker": "DUBNER",
+    "text": "You’re an authority figure.",
+    "translation": "권위 있는 인물이시잖아요."
+  },
+  {
+    "id": "seg-68",
+    "start": 178.82666666666668,
+    "end": 181.573,
+    "speaker": "DUCKWORTH",
+    "text": "Well, there’s something else people do that’s not flat-out faking.",
+    "translation": "음, 사람들이 대놓고 거짓말을 하는 것 말고도 또 다른 행동을 하는데요."
+  },
+  {
+    "id": "seg-69",
+    "start": 181.573,
+    "end": 183.52,
+    "speaker": "DUCKWORTH",
+    "text": "And it’s called social desirability bias.",
+    "translation": "그걸 '사회적 바람직성 편향'이라고 불러요."
+  },
+  {
+    "id": "seg-70",
+    "start": 183.52,
+    "end": 187.30633333333333,
+    "speaker": "DUCKWORTH",
+    "text": "We like to appear in ways that are socially desirable.",
+    "translation": "우리는 사회적으로 바람직해 보이는 모습으로 비춰지길 원하거든요."
+  },
+  {
+    "id": "seg-71",
+    "start": 187.30633333333333,
+    "end": 192.0995,
+    "speaker": "DUCKWORTH",
+    "text": "Actually, not only because we think, people with clipboards are watching us, or that anyone else is watching us.",
+    "translation": "사실, 클립보드를 든 사람이 우리를 지켜보고 있다거나 다른 누군가가 보고 있어서만은 아니에요."
+  },
+  {
+    "id": "seg-72",
+    "start": 192.0995,
+    "end": 196.54,
+    "speaker": "DUCKWORTH",
+    "text": "But turns out, there’s a form of social desirability bias where you just don’t want to look bad to yourself.",
+    "translation": "알고 보니, 그냥 자기 자신에게 나쁘게 보이고 싶지 않아서 생기는 사회적 바람직성 편향도 있더라고요."
+  },
+  {
+    "id": "seg-73",
+    "start": 196.54,
+    "end": 198.65333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "People don’t like to think badly of themselves.",
+    "translation": "사람들은 자신을 나쁘게 생각하는 걸 싫어하니까요."
+  },
+  {
+    "id": "seg-74",
+    "start": 198.65333333333334,
+    "end": 204.20925,
+    "speaker": "DUCKWORTH",
+    "text": "They just don’t want to reckon in the most honest way with all their flaws and faults.",
+    "translation": "자신의 모든 결점과 잘못을 가장 정직하게 직시하고 싶지 않은 것뿐이죠."
+  },
+  {
+    "id": "seg-75",
+    "start": 204.20925,
+    "end": 211.40444444444444,
+    "speaker": "DUCKWORTH",
+    "text": "So there’s all kinds of reasons why we might inflate our scores on something like on a scale from one to 10, how hard a worker are you?",
+    "translation": "그러니까 '1부터 10까지의 척도에서 당신은 얼마나 열심히 일하는 사람입니까?' 같은 질문에 우리 점수를 부풀릴 이유는 차고 넘칩니다."
+  },
+  {
+    "id": "seg-76",
+    "start": 211.40444444444444,
+    "end": 214.159,
+    "speaker": "DUBNER",
+    "text": "Now, how much of this is, what’s it called?",
+    "translation": "자, 이 중에서 그... 뭐라고 하죠?"
+  },
+  {
+    "id": "seg-77",
+    "start": 214.159,
+    "end": 217.68,
+    "speaker": "DUBNER",
+    "text": "”Illusory superiority,” whatever, the Lake Wobegon effect?",
+    "translation": "'환상적 우월감'이었나요? 그 레이크 워비곤 효과 같은 건 얼마나 차지하나요?"
+  },
+  {
+    "id": "seg-78",
+    "start": 217.68,
+    "end": 218.8195,
+    "speaker": "DUCKWORTH",
+    "text": "Oh, yeah, optimistic bias.",
+    "translation": "아, 맞아요. 낙관적 편향이요."
+  },
+  {
+    "id": "seg-79",
+    "start": 218.8195,
+    "end": 223.9795,
+    "speaker": "DUBNER",
+    "text": "So, how much of it is a legitimate poor assessment because we think we’re better than we are?",
+    "translation": "그러니까 우리가 실제보다 더 낫다고 착각해서 생기는 잘못된 자기평가가 실제로 얼마나 차지하느냐는 거죠?"
+  },
+  {
+    "id": "seg-80",
+    "start": 223.9795,
+    "end": 230.81714285714284,
+    "speaker": "DUCKWORTH",
+    "text": "A lot of this does fall into that category, that at some subconscious level, we just don’t want to think about ourselves in a negative way.",
+    "translation": "많은 부분이 실제로 그 부류에 속해요. 무의식적인 수준에서 우리는 자신에 대해 부정적으로 생각하고 싶지 않은 뿐인 거죠."
+  },
+  {
+    "id": "seg-81",
+    "start": 230.81714285714284,
+    "end": 238.08,
+    "speaker": "DUCKWORTH",
+    "text": "We might actually think we’re being accurate, but we’re just fooling ourselves because we would like to think that we’re hard workers.",
+    "translation": "우리는 실제로 스스로가 정확하다고 생각할지 모르지만, 자신이 열심히 일하는 사람이라고 믿고 싶어서 그저 스스로를 속이고 있는 거예요."
+  },
+  {
+    "id": "seg-82",
+    "start": 238.08,
+    "end": 241.7597142857143,
+    "speaker": "DUBNER",
+    "text": "And how much of this is about— is it called reference bias?",
+    "translation": "그럼 이 중에서 얼마만큼이— 그걸 준거 편향이라고 부르나요?"
+  },
+  {
+    "id": "seg-83",
+    "start": 241.7597142857143,
+    "end": 243.466,
+    "speaker": "DUBNER",
+    "text": "Is that what your people call this?",
+    "translation": "학계에서는 그렇게 부르나요?"
+  },
+  {
+    "id": "seg-84",
+    "start": 243.466,
+    "end": 249.02666666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, I’m kind of obsessed with this other reason why “Are you a hard worker?” is not a perfect question.",
+    "translation": "네, 저는 '당신은 열심히 일하는 사람인가요?'라는 질문이 완벽하지 않은 또 다른 이유에 아주 꽂혀 있어요."
+  },
+  {
+    "id": "seg-85",
+    "start": 249.02666666666667,
+    "end": 250.3598,
+    "speaker": "DUCKWORTH",
+    "text": "And that is the following—.",
+    "translation": "그 이유는 바로 다음과 같아요—."
+  },
+  {
+    "id": "seg-86",
+    "start": 250.3598,
+    "end": 256.93266666666665,
+    "speaker": "DUBNER",
+    "text": "Can I just say, before you explain, I love that your question today is a question that you think is prima facie a bad question.",
+    "translation": "설명하시기 전에 한 말씀만 드리자면, 오늘 던지신 질문이 언뜻 보기에 별로인 질문이라고 스스로 생각하신다는 점이 아주 마음에 드네요."
+  },
+  {
+    "id": "seg-87",
+    "start": 256.93266666666665,
+    "end": 258.03316666666666,
+    "speaker": "DUBNER",
+    "text": "No, I do!",
+    "translation": "아뇨, 진짜예요!"
+  },
+  {
+    "id": "seg-88",
+    "start": 258.03316666666666,
+    "end": 258.67949999999996,
+    "speaker": "DUBNER",
+    "text": "I’m serious.",
+    "translation": "진심이에요."
+  },
+  {
+    "id": "seg-89",
+    "start": 258.67949999999996,
+    "end": 262.38185714285714,
+    "speaker": "DUBNER",
+    "text": "It makes it more fun to learn that the question was thought to be poor.",
+    "translation": "질문 자체가 별로라는 점을 알게 되니까 배우는 게 더 재미있어지네요."
+  },
+  {
+    "id": "seg-90",
+    "start": 262.38185714285714,
+    "end": 264.888,
+    "speaker": "DUBNER",
+    "text": "But now you’re going to tell us why it’s good that it’s a poor question.",
+    "translation": "하지만 이제 그게 왜 별로라서 좋은 질문인지 설명해 주시겠군요."
+  },
+  {
+    "id": "seg-91",
+    "start": 264.888,
+    "end": 266.7523333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, well, at least I’ll tell you why it’s interesting.",
+    "translation": "네, 적어도 왜 흥미로운지는 말씀드릴게요."
+  },
+  {
+    "id": "seg-92",
+    "start": 266.7523333333333,
+    "end": 269.4856666666667,
+    "speaker": "DUCKWORTH",
+    "text": "So, when I ask you, are you a hard worker?",
+    "translation": "그러니까, 제가 \"당신은 열심히 일하는 사람인가요?\"라고 물으면,"
+  },
+  {
+    "id": "seg-93",
+    "start": 269.4856666666667,
+    "end": 272.6525,
+    "speaker": "DUCKWORTH",
+    "text": "What immediately comes to mind is, like you said, compared to whom?",
+    "translation": "스티븐이 말한 것처럼 \"누구와 비교해서?\"라는 생각이 즉시 머릿속에 떠오르죠."
+  },
+  {
+    "id": "seg-94",
+    "start": 272.6525,
+    "end": 274.21,
+    "speaker": "DUCKWORTH",
+    "text": "And you might say the universe of people.",
+    "translation": "그리고 세상 모든 사람들과 비교해서라고 답할 수도 있어요."
+  },
+  {
+    "id": "seg-95",
+    "start": 274.21,
+    "end": 275.08000000000004,
+    "speaker": "DUCKWORTH",
+    "text": "In fact, you did.",
+    "translation": "실제로 그렇게 말씀하셨고요."
+  },
+  {
+    "id": "seg-96",
+    "start": 275.08000000000004,
+    "end": 278.16,
+    "speaker": "DUCKWORTH",
+    "text": "But guess what, Stephen, you cannot conjure up the universe of people.",
+    "translation": "하지만 스티븐, 세상 모든 사람들을 머릿속으로 다 불러낼 수는 없잖아요."
+  },
+  {
+    "id": "seg-97",
+    "start": 278.16,
+    "end": 280.29266666666666,
+    "speaker": "DUCKWORTH",
+    "text": "That would be more than seven billion, right?",
+    "translation": "70억 명이 훨씬 넘을 텐데 말이죠?"
+  },
+  {
+    "id": "seg-98",
+    "start": 280.29266666666666,
+    "end": 286.1485714285715,
+    "speaker": "DUCKWORTH",
+    "text": "You cannot imagine what the distribution of humanity looks like, and then place yourself somewhere in that distribution.",
+    "translation": "인류의 분포가 어떤 모습인지 상상하고, 그 분포에서 자신이 어디쯤 위치하는지 가늠하는 건 불가능해요."
+  },
+  {
+    "id": "seg-99",
+    "start": 286.1485714285715,
+    "end": 289.54380000000003,
+    "speaker": "DUCKWORTH",
+    "text": "What really you do is you come up with a few salient examples.",
+    "translation": "실제로 우리가 하는 행동은 몇 가지 두드러진 사례를 떠올리는 것뿐이죠."
+  },
+  {
+    "id": "seg-100",
+    "start": 289.54380000000003,
+    "end": 291.4,
+    "speaker": "DUCKWORTH",
+    "text": "You think of your wife."
+  },
+  {
+    "id": "seg-101",
+    "start": 291.4,
+    "end": 291.7195,
+    "speaker": "DUBNER",
+    "text": "Lazy."
+  },
+  {
+    "id": "seg-102",
+    "start": 291.7195,
+    "end": 292.586,
+    "speaker": "DUCKWORTH",
+    "text": "No, she’s not."
+  },
+  {
+    "id": "seg-103",
+    "start": 292.586,
+    "end": 293.68,
+    "speaker": "DUCKWORTH",
+    "text": "You think of me."
+  },
+  {
+    "id": "seg-104",
+    "start": 293.68,
+    "end": 294.4,
+    "speaker": "DUBNER",
+    "text": "Super lazy."
+  },
+  {
+    "id": "seg-105",
+    "start": 294.4,
+    "end": 297.17333333333335,
+    "speaker": "DUBNER",
+    "text": "Angie Duckworth never does anything."
+  },
+  {
+    "id": "seg-106",
+    "start": 297.17333333333335,
+    "end": 300.72,
+    "speaker": "DUCKWORTH",
+    "text": "You’re like, let me revise my score."
+  },
+  {
+    "id": "seg-107",
+    "start": 300.72,
+    "end": 300.98857142857145,
+    "speaker": "DUCKWORTH",
+    "text": "9.9!"
+  },
+  {
+    "id": "seg-108",
+    "start": 300.98857142857145,
+    "end": 304.02633333333335,
+    "speaker": "DUCKWORTH",
+    "text": "But you can see how these numbers move around, right?"
+  },
+  {
+    "id": "seg-109",
+    "start": 304.02633333333335,
+    "end": 312.46925,
+    "speaker": "DUCKWORTH",
+    "text": "And reference bias refers to the bias of having a given arbitrary frame of comparison that is idiosyncratic."
+  },
+  {
+    "id": "seg-110",
+    "start": 312.46925,
+    "end": 316.964875,
+    "speaker": "DUCKWORTH",
+    "text": "You think you’re comparing yourself to the universe of all people, but you’re not."
+  },
+  {
+    "id": "seg-111",
+    "start": 316.964875,
+    "end": 319.4395,
+    "speaker": "DUCKWORTH",
+    "text": "You’re comparing yourself to a very small number of people."
+  },
+  {
+    "id": "seg-112",
+    "start": 319.4395,
+    "end": 327.41999999999996,
+    "speaker": "DUCKWORTH",
+    "text": "And if you choose a comparison set that happens to be super hard-working, then you’re going to have artificially lower responses."
+  },
+  {
+    "id": "seg-113",
+    "start": 327.41999999999996,
+    "end": 332.16,
+    "speaker": "NARRATOR",
+    "text": "One of my favorite studies on this is an international study of personality, okay?"
+  },
+  {
+    "id": "seg-114",
+    "start": 332.16,
+    "end": 335.45300000000003,
+    "speaker": "NARRATOR",
+    "text": "And the personality trait that’s being studied is conscientiousness."
+  },
+  {
+    "id": "seg-115",
+    "start": 335.45300000000003,
+    "end": 341.08975,
+    "speaker": "NARRATOR",
+    "text": "Now, some countries, one might argue, are a little more conscientious in general."
+  },
+  {
+    "id": "seg-116",
+    "start": 341.08975,
+    "end": 350.70222222222225,
+    "speaker": "NARRATOR",
+    "text": "And I’m not biased because of my Asian back— some would say that the Far East, that the Chinese, the Koreans, and the Japanese, on questions like: are you a hard worker?"
+  },
+  {
+    "id": "seg-117",
+    "start": 350.70222222222225,
+    "end": 351.82633333333337,
+    "speaker": "NARRATOR",
+    "text": "Are you dependable?"
+  },
+  {
+    "id": "seg-118",
+    "start": 351.82633333333337,
+    "end": 353.06600000000003,
+    "speaker": "NARRATOR",
+    "text": "Are you punctual?"
+  },
+  {
+    "id": "seg-119",
+    "start": 353.06600000000003,
+    "end": 353.9518,
+    "speaker": "NARRATOR",
+    "text": "Are you orderly?"
+  },
+  {
+    "id": "seg-120",
+    "start": 353.9518,
+    "end": 355.33233333333334,
+    "speaker": "NARRATOR",
+    "text": "That they might do better.",
+    "translation": "더 잘할 수 있을 거라 생각하는 거죠."
+  },
+  {
+    "id": "seg-121",
+    "start": 355.33233333333334,
+    "end": 362.0263333333333,
+    "speaker": "NARRATOR",
+    "text": "Well, the least conscientious people in the world, by self-report, are exactly those people from the Far East.",
+    "translation": "자기 보고에 따르면, 세계에서 성실성이 가장 떨어지는 사람들이 바로 극동 지역 사람들입니다."
+  },
+  {
+    "id": "seg-122",
+    "start": 362.0263333333333,
+    "end": 381.179,
+    "speaker": "NARRATOR",
+    "text": "And the authors of the study said, “Look, it’s theoretically possible that all of our stereotypes are 100 percent wrong, but it’s also possible that these individuals from these cultures have such high standards for hard work, and being orderly, and the trains running on time, that they have given themselves lower answers.”",
+    "translation": "그리고 연구 저자들은 이렇게 말했습니다. \"우리의 고정관념이 100퍼센트 틀렸을 가능성도 있지만, 이 문화권의 사람들이 열심히 일하고, 질서를 지키고, 기차가 정시에 주행하는 것에 대해 너무나 높은 기준을 가지고 있어서 스스로에게 낮은 점수를 주었을 가능성도 있습니다.\""
+  },
+  {
+    "id": "seg-123",
+    "start": 381.179,
+    "end": 389.8228571428571,
+    "speaker": "DUBNER",
+    "text": "Is asking about how hard you work a particularly incisive or insightful question if you want to measure reference bias?",
+    "translation": "기준점 편향을 측정하고 싶을 때, 일을 얼마나 열심히 하느냐고 묻는 것이 특별히 예리하거나 통찰력 있는 질문인가요?"
+  },
+  {
+    "id": "seg-124",
+    "start": 389.8228571428571,
+    "end": 396.0210526315789,
+    "speaker": "DUBNER",
+    "text": "Are you really going to learn a lot about a person by how much they may deviate from the norm by that question?",
+    "translation": "그 질문을 통해 그 사람이 표준에서 얼마나 벗어나는지를 알면, 정말로 그 사람에 대해 많은 것을 배울 수 있나요?"
+  },
+  {
+    "id": "seg-125",
+    "start": 396.0210526315789,
+    "end": 400.22,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t know that “are you a hard worker?” how good it is on its own.",
+    "translation": "\"당신은 열심히 일하는 사람인가요?\"라는 질문 자체만으로는 얼마나 효과가 있을지 모르겠어요."
+  },
+  {
+    "id": "seg-126",
+    "start": 400.22,
+    "end": 409.31966666666665,
+    "speaker": "DUCKWORTH",
+    "text": "But, there is something you can do with asking someone if they’re a hard worker, and that is to give them little vignettes, little stories of other people.",
+    "translation": "하지만 본인이 열심히 일하는지 물어보면서 동시에 쓸 수 있는 방법이 있는데, 바로 다른 사람들에 대한 짧은 이야기나 상황 카드를 보여주는 겁니다."
+  },
+  {
+    "id": "seg-127",
+    "start": 409.31966666666665,
+    "end": 412.65999999999997,
+    "speaker": "DUCKWORTH",
+    "text": "This person wakes up at 5:00 in the morning and then they start working at 7:00.",
+    "translation": "\"이 사람은 아침 5시에 일어나서 7시부터 일을 시작합니다\" 같은 이야기 말이죠."
+  },
+  {
+    "id": "seg-128",
+    "start": 412.65999999999997,
+    "end": 412.91999999999996,
+    "speaker": "DUCKWORTH",
+    "text": "And—.",
+    "translation": "그리고..."
+  },
+  {
+    "id": "seg-129",
+    "start": 412.91999999999996,
+    "end": 414.6844444444444,
+    "speaker": "DUBNER",
+    "text": "You can manipulate the heck out of people.",
+    "translation": "사람들을 아주 제대로 들었다 놨다 할 수 있겠네요."
+  },
+  {
+    "id": "seg-130",
+    "start": 414.6844444444444,
+    "end": 415.7133333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Well no, it’s not a manipulation.",
+    "translation": "아뇨, 조종하는 게 아니에요."
+  },
+  {
+    "id": "seg-131",
+    "start": 415.7133333333333,
+    "end": 418.293,
+    "speaker": "DUCKWORTH",
+    "text": "You ask them to then rate the person in the story.",
+    "translation": "그런 질문을 던진 다음 이야기 속 인물을 평가해 보라고 하는 겁니다."
+  },
+  {
+    "id": "seg-132",
+    "start": 418.293,
+    "end": 423.40666666666664,
+    "speaker": "DUCKWORTH",
+    "text": "So, you give them a series of stories and then you can tell what their frame of reference is with some precision.",
+    "translation": "이야기 몇 개를 들려주고 나면, 그 사람의 준거 틀이 무엇인지 꽤 정확하게 파악할 수 있죠."
+  },
+  {
+    "id": "seg-133",
+    "start": 423.40666666666664,
+    "end": 427.0933333333333,
+    "speaker": "DUCKWORTH",
+    "text": "But you can kind of get at whether this person is rating hard.",
+    "translation": "즉, 이 사람이 짜게 평가하는 편인지 알 수 있게 됩니다."
+  },
+  {
+    "id": "seg-134",
+    "start": 427.0933333333333,
+    "end": 430.09,
+    "speaker": "DUCKWORTH",
+    "text": "Are they a strict rater, or do they have really lax standards?",
+    "translation": "엄격한 평가자인지, 아니면 기준이 아주 느슨한 사람인지 말이에요."
+  },
+  {
+    "id": "seg-135",
+    "start": 430.09,
+    "end": 437.879,
+    "speaker": "NARRATOR",
+    "text": "Because when you give them a certain story, one person might say, “yeah, that person sounds like a seven out of 10.” And another person might say, “slacker.",
+    "translation": "어떤 이야기를 들려주었을 때, 한 사람은 \"네, 10점 만점에 7점 정도 되겠네요\"라고 말할 수 있지만, 다른 사람은 \"게으름뱅이네요."
+  },
+  {
+    "id": "seg-136",
+    "start": 437.879,
+    "end": 447.86925,
+    "speaker": "NARRATOR",
+    "text": "Two out of 10.” So the “are you a hard worker?” question coupled with asking the person to rate hypothetical others can get you a little closer.",
+    "translation": "10점 만점에 2점입니다\"라고 할 수도 있으니까요. 따라서 \"열심히 일하나요?\"라는 질문에 가상의 타인을 평가하게 하는 방식을 결합하면 진실에 조금 더 다가갈 수 있습니다."
+  },
+  {
+    "id": "seg-137",
+    "start": 447.86925,
+    "end": 448.32975,
+    "speaker": "DUBNER",
+    "text": "All right.",
+    "translation": "그렇군요."
+  },
+  {
+    "id": "seg-138",
+    "start": 448.32975,
+    "end": 450.70666666666665,
+    "speaker": "DUBNER",
+    "text": "So let’s say I take a room of 100 people.",
+    "translation": "그럼 한 방에 100명의 사람들이 있다고 해봅시다."
+  },
+  {
+    "id": "seg-139",
+    "start": 450.70666666666665,
+    "end": 452.1,
+    "speaker": "DUBNER",
+    "text": "I randomize them.",
+    "translation": "그 사람들을 무작위로 나누는 겁니다."
+  },
+  {
+    "id": "seg-140",
+    "start": 452.1,
+    "end": 456.7733333333333,
+    "speaker": "DUBNER",
+    "text": "And for half of them, I give them examples of people who are demonstrably hard workers.",
+    "translation": "그리고 그중 절반에게는 눈에 보일 정도로 열심히 일하는 사람들의 사례를 보여줍니다."
+  },
+  {
+    "id": "seg-141",
+    "start": 456.7733333333333,
+    "end": 458.21999999999997,
+    "speaker": "DUBNER",
+    "text": "This person gets up at 4:00, da da da.",
+    "translation": "이 사람은 새벽 4시에 일어납니다, 어쩌고저쩌고 하면서요."
+  },
+  {
+    "id": "seg-142",
+    "start": 458.21999999999997,
+    "end": 461.7278,
+    "speaker": "DUBNER",
+    "text": "And the other ones I give stories that are demonstrably not hard workers.",
+    "translation": "그리고 나머지 절반에게는 딱 봐도 열심히 하지 않는 사람들의 이야기를 들려줍니다."
+  },
+  {
+    "id": "seg-143",
+    "start": 461.7278,
+    "end": 465.21500000000003,
+    "speaker": "DUBNER",
+    "text": "Then I have these two sets of 50 people do a task.",
+    "translation": "그러고 나서 이 50명씩 나뉜 두 그룹에게 어떤 과제를 시켜봅니다."
+  },
+  {
+    "id": "seg-144",
+    "start": 465.21500000000003,
+    "end": 471.14,
+    "speaker": "DUBNER",
+    "text": "Do I see their assessment of other people’s hard work rub off in any way in how well they perform?",
+    "translation": "열심히 일하는 다른 사람들에 대한 그들의 평가가 그들 자신의 수행 능력에 어떤 식으로든 영향을 미칠까요?"
+  },
+  {
+    "id": "seg-145",
+    "start": 471.14,
+    "end": 478.71950000000004,
+    "speaker": "DUCKWORTH",
+    "text": "So you’ve designed an experiment where you’re trying to prime, if you will, or encourage hard work or not hard work by giving them different comparison sets, right?",
+    "translation": "그러니까, 서로 다른 비교군을 주어서 열심히 하거나 하지 않도록 일종의 프라이밍, 그러니까 자극을 주려고 실험을 설계하신 거네요, 그렇죠?"
+  },
+  {
+    "id": "seg-146",
+    "start": 478.71950000000004,
+    "end": 480.05333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I’m not sure.",
+    "translation": "잘은 모르겠네요."
+  },
+  {
+    "id": "seg-147",
+    "start": 480.05333333333334,
+    "end": 496.26,
+    "speaker": "DUCKWORTH",
+    "text": "But I am guessing that if you give people examples of really hard workers, that if they feel like those people you described are similar to them, and the hard work is within their grasp, it’s something that they can do, then you’ll get them to work harder.",
+    "translation": "하지만 제 생각에는, 정말 열심히 일하는 사람들의 사례를 보여줬을 때, 만약 그 사람들이 자신과 비슷하다고 느끼고 그 노력이 자신도 충분히 할 수 있는 영역이라고 생각한다면, 더 열심히 일하게 될 것 같아요."
+  },
+  {
+    "id": "seg-148",
+    "start": 496.26,
+    "end": 502.96,
+    "speaker": "DUCKWORTH",
+    "text": "But on the contrary, if you have given them out-of-reach examples, like, “Do you know how hard Gandhi worked on this?",
+    "translation": "하지만 반대로, 현실과 너무 동떨어진 사례를 보여준다면 말이죠. 이를테면 '간디가 여기에 얼마나 공을 들였는지 알아?"
+  },
+  {
+    "id": "seg-149",
+    "start": 502.96,
+    "end": 505.3063333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Let me tell you how hard Gandhi worked on this task.”",
+    "translation": "간디가 이 일에 얼마나 열심히 매달렸는지 말해줄게' 같은 식이라면요."
+  },
+  {
+    "id": "seg-150",
+    "start": 505.3063333333333,
+    "end": 506.8533333333333,
+    "speaker": "DUBNER",
+    "text": "They just lie down and take a nap.",
+    "translation": "그럼 그냥 누워서 낮잠이나 자겠죠."
+  },
+  {
+    "id": "seg-151",
+    "start": 506.8533333333333,
+    "end": 508.44,
+    "speaker": "DUCKWORTH",
+    "text": "They just give up.",
+    "translation": "그냥 포기해 버리는 거죠."
+  },
+  {
+    "id": "seg-152",
+    "start": 508.44,
+    "end": 513.644125,
+    "speaker": "DUCKWORTH",
+    "text": "You’ve held out these examples that actually diminish their confidence that they could do as well.",
+    "translation": "자신도 그렇게 잘할 수 있을 거라는 자신감을 깎아내리는 사례를 제시한 셈이니까요."
+  },
+  {
+    "id": "seg-153",
+    "start": 513.644125,
+    "end": 517.039,
+    "speaker": "DUBNER",
+    "text": "So reference bias, it can get complicated fast.",
+    "translation": "그럼 준거 편향이라는 게 금방 복잡해질 수 있겠네요."
+  },
+  {
+    "id": "seg-154",
+    "start": 517.039,
+    "end": 519.909125,
+    "speaker": "DUBNER",
+    "text": "Am I wrong to think of it as essentially relativity?",
+    "translation": "이걸 본질적으로 상대성의 문제로 생각하는 게 틀린 건가요?"
+  },
+  {
+    "id": "seg-155",
+    "start": 519.909125,
+    "end": 523.3678,
+    "speaker": "DUCKWORTH",
+    "text": "It is a kind of bias that comes out of relativity.",
+    "translation": "그건 상대성에서 비롯되는 일종의 편향이 맞아요."
+  },
+  {
+    "id": "seg-156",
+    "start": 523.3678,
+    "end": 533.33,
+    "speaker": "DUCKWORTH",
+    "text": "I actually think that whenever anybody makes any kind of statement like, “Was it a good restaurant?” “How was the movie?” “Was it a good day?” That actually there’s always a frame of reference.",
+    "translation": "사실 저는 누군가가 \"그 식당 괜찮았어?\" \"영화 어땠어?\" \"오늘 하루 좋았어?\" 같은 질문을 할 때마다 항상 어떤 준거 프레임이 존재한다고 생각해요."
+  },
+  {
+    "id": "seg-157",
+    "start": 533.33,
+    "end": 536.92,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, it doesn’t mean anything to say something without a comparison.",
+    "translation": "제 말은, 비교 대상이 없다면 어떤 말을 하든 아무런 의미가 없다는 거죠."
+  },
+  {
+    "id": "seg-158",
+    "start": 536.92,
+    "end": 545.5995,
+    "speaker": "DUCKWORTH",
+    "text": "And all reference bias is saying is that sometimes, those frames of comparison, those references, can be different depending on the person.",
+    "translation": "그리고 준거 편향이 말하고자 하는 것은, 때로는 그런 비교의 기준, 즉 준거가 사람마다 다를 수 있다는 점이에요."
+  },
+  {
+    "id": "seg-159",
+    "start": 545.5995,
+    "end": 548.4794999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And that’s why we get these paradoxical results.",
+    "translation": "그래서 이런 역설적인 결과가 나오는 거고요."
+  },
+  {
+    "id": "seg-160",
+    "start": 548.4794999999999,
+    "end": 552.6654545454545,
+    "speaker": "DUBNER",
+    "text": "Was Albert Einstein ever asked how hard a worker he was, do you think?",
+    "translation": "알베르트 아인슈타인도 자기가 얼마나 열심히 일하는 사람인지 질문을 받은 적이 있었을까요?"
+  },
+  {
+    "id": "seg-161",
+    "start": 552.6654545454545,
+    "end": 553.6618181818181,
+    "speaker": "DUCKWORTH",
+    "text": "I wish he were.",
+    "translation": "받아봤으면 좋았겠네요."
+  },
+  {
+    "id": "seg-162",
+    "start": 553.6618181818181,
+    "end": 554.4036363636363,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t know.",
+    "translation": "잘은 모르겠어요."
+  },
+  {
+    "id": "seg-163",
+    "start": 554.4036363636363,
+    "end": 556.55975,
+    "speaker": "DUCKWORTH",
+    "text": "And I don’t know what Albert Einstein would say.",
+    "translation": "그리고 아인슈타인이 뭐라고 답했을지도 모르겠고요."
+  },
+  {
+    "id": "seg-164",
+    "start": 556.55975,
+    "end": 560.712,
+    "speaker": "DUCKWORTH",
+    "text": "I will say he was actually a not-so-bad psychologist.",
+    "translation": "한 가지 말씀드리자면, 그분은 사실 심리학자로서도 꽤 훌륭했어요."
+  },
+  {
+    "id": "seg-165",
+    "start": 560.712,
+    "end": 567.3199999999999,
+    "speaker": "DUCKWORTH",
+    "text": "So, he might have had the psychological insight to know that his standards of hard work might be different than others.",
+    "translation": "그래서 자신이 생각하는 노력의 기준이 남들과 다를 수 있다는 심리학적 통찰을 가졌을지도 모르죠."
+  },
+  {
+    "id": "seg-166",
+    "start": 567.3199999999999,
+    "end": 573.919375,
+    "speaker": "DUBNER",
+    "text": "I love— He was once asked to explain the theory of relativity to someone who didn’t know or care about science at all.",
+    "translation": "이 얘기 정말 좋아하는데— 한 번은 과학에 전혀 관심도 없고 잘 모르는 사람에게 상대성 이론을 설명해 달라는 요청을 받았대요."
+  },
+  {
+    "id": "seg-167",
+    "start": 573.919375,
+    "end": 576.28,
+    "speaker": "DUBNER",
+    "text": "So, this is what he reportedly said.",
+    "translation": "그때 이렇게 말했다고 전해지더라고요."
+  },
+  {
+    "id": "seg-168",
+    "start": 576.28,
+    "end": 578.96,
+    "speaker": "DUBNER",
+    "text": "He probably didn’t say this, but someone says he once said it.",
+    "translation": "진짜로 한 말은 아닐지 몰라도, 누군가는 그가 그렇게 말했다고 하더군요."
+  },
+  {
+    "id": "seg-169",
+    "start": 578.96,
+    "end": 583.20975,
+    "speaker": "DUBNER",
+    "text": "He said, “Well, when you sit with a nice girl for two hours, you think it’s only a minute.",
+    "translation": "그가 이르길, \"이보게, 예쁜 여자와 두 시간 동안 같이 앉아 있으면 1분처럼 느껴진다네."
+  },
+  {
+    "id": "seg-170",
+    "start": 583.20975,
+    "end": 586.504,
+    "speaker": "DUBNER",
+    "text": "But when you sit on a hot stove for a minute, you think it’s two hours.",
+    "translation": "하지만 뜨거운 난로 위에 1분 동안 앉아 있으면 두 시간처럼 느껴지지."
+  },
+  {
+    "id": "seg-171",
+    "start": 586.504,
+    "end": 587.192,
+    "speaker": "DUBNER",
+    "text": "That’s relativity.”",
+    "translation": "그게 바로 상대성이라네.\""
+  },
+  {
+    "id": "seg-172",
+    "start": 587.192,
+    "end": 589.6,
+    "speaker": "DUCKWORTH",
+    "text": "Albert Einstein in no way said that.",
+    "translation": "아인슈타인이 그런 말을 했을 리가 없어요."
+  },
+  {
+    "id": "seg-173",
+    "start": 589.6,
+    "end": 590.976,
+    "speaker": "DUBNER",
+    "text": "Oh, I don’t know.",
+    "translation": "글쎄요, 모르는 일이죠."
+  },
+  {
+    "id": "seg-174",
+    "start": 590.976,
+    "end": 599.9726666666667,
+    "speaker": "DUBNER",
+    "text": "I will tell you this, in a book I’m reading about Jewish history, How Jews Changed the World, it’s said that five Jews changed how we see the world most significantly.",
+    "translation": "이건 확실히 말씀드릴 수 있어요. 제가 읽고 있는 유대인 역사책인 《유대인은 어떻게 세상을 바꾸었는가》에 따르면, 다섯 명의 유대인이 우리가 세상을 바라보는 방식을 가장 크게 바꾸어 놓았다고 해요."
+  },
+  {
+    "id": "seg-175",
+    "start": 599.9726666666667,
+    "end": 603.0266666666666,
+    "speaker": "DUBNER",
+    "text": "So, Moses said the law is everything.",
+    "translation": "첫째로, 모세는 법이 전부라고 했죠."
+  },
+  {
+    "id": "seg-176",
+    "start": 603.0266666666666,
+    "end": 606.4933333333333,
+    "speaker": "DUBNER",
+    "text": "And then Jesus said love is everything.",
+    "translation": "그리고 예수는 사랑이 전부라고 했고요."
+  },
+  {
+    "id": "seg-177",
+    "start": 606.4933333333333,
+    "end": 609.32,
+    "speaker": "DUBNER",
+    "text": "Marx said money is everything.",
+    "translation": "마르크스는 돈이 전부라고 했습니다."
+  },
+  {
+    "id": "seg-178",
+    "start": 609.32,
+    "end": 611.46,
+    "speaker": "DUBNER",
+    "text": "Freud said sex is everything.",
+    "translation": "프로이트는 성(性)이 전부라고 했죠."
+  },
+  {
+    "id": "seg-179",
+    "start": 611.46,
+    "end": 617.079,
+    "speaker": "DUBNER",
+    "text": "And Einstein said everything is relative.",
+    "translation": "마지막으로 아인슈타인은 모든 것은 상대적이라고 했습니다."
+  },
+  {
+    "id": "seg-180",
+    "start": 617.079,
+    "end": 620.1600000000001,
+    "speaker": "NARRATOR",
+    "text": "Still to come on No Stupid Questions:",
+    "translation": "진짜 궁금한 질문들, 잠시 후에 계속됩니다."
+  },
+  {
+    "id": "seg-181",
+    "start": 620.1600000000001,
+    "end": 625.24,
+    "speaker": "DUCKWORTH",
+    "text": "Of course, science says that we can actually derive pleasure from anticipated future rewards.",
+    "translation": "물론 과학적으로도 우리는 미래에 기대되는 보상에서 실제로 즐거움을 얻을 수 있다고 해요."
+  },
+  {
+    "id": "seg-182",
+    "start": 625.24,
+    "end": 625.5600000000001,
+    "speaker": "DUBNER",
+    "text": "Oh yeah.",
+    "translation": "아, 맞아요."
+  },
+  {
+    "id": "seg-183",
+    "start": 625.5600000000001,
+    "end": 628.32,
+    "speaker": "DUBNER",
+    "text": "The vacation you haven’t had yet is way better than the one you just had.",
+    "translation": "아직 가지 않은 휴가가 방금 다녀온 휴가보다 훨씬 더 좋잖아요."
+  },
+  {
+    "id": "seg-184",
+    "start": 628.32,
+    "end": 634.68,
+    "speaker": "DUBNER",
+    "text": "Always.",
+    "translation": "언제나 그렇죠."
+  },
+  {
+    "id": "seg-185",
+    "start": 634.68,
+    "end": 635.6800000000001,
+    "speaker": "DUBNER",
+    "text": "Angela Duckworth.",
+    "translation": "안젤라 더크워스 씨."
+  },
+  {
+    "id": "seg-186",
+    "start": 635.6800000000001,
+    "end": 636.8,
+    "speaker": "DUCKWORTH",
+    "text": "Stephen Dubner.",
+    "translation": "스티븐 더브너 씨."
+  },
+  {
+    "id": "seg-187",
+    "start": 636.8,
+    "end": 638.15,
+    "speaker": "DUBNER",
+    "text": "Here’s my question for you today.",
+    "translation": "오늘 드릴 질문은 이겁니다."
+  },
+  {
+    "id": "seg-188",
+    "start": 638.15,
+    "end": 643.5866666666667,
+    "speaker": "DUBNER",
+    "text": "It’s about happiness, which is an interesting and weirdly contentious subject, in a way.",
+    "translation": "행복에 관한 이야기인데요, 어떻게 보면 참 흥미로우면서도 묘하게 논란이 많은 주제죠."
+  },
+  {
+    "id": "seg-189",
+    "start": 643.5866666666667,
+    "end": 646.8958,
+    "speaker": "DUCKWORTH",
+    "text": "Because people disagree about what makes happiness.",
+    "translation": "무엇이 행복을 만드는지에 대해 사람마다 의견이 다르니까요."
+  },
+  {
+    "id": "seg-190",
+    "start": 646.8958,
+    "end": 650.48,
+    "speaker": "DUBNER",
+    "text": "And you don’t think about happiness the way many people do.",
+    "translation": "그리고 안젤라 씨도 많은 사람들과는 다르게 행복을 바라보시잖아요."
+  },
+  {
+    "id": "seg-191",
+    "start": 650.48,
+    "end": 653.919,
+    "speaker": "DUBNER",
+    "text": "Many people think of happiness as goal number one in life.",
+    "translation": "많은 이들이 행복을 삶의 제1의 목표로 생각하죠."
+  },
+  {
+    "id": "seg-192",
+    "start": 653.919,
+    "end": 655.5195,
+    "speaker": "DUBNER",
+    "text": "And your father told you, “Hell no.",
+    "translation": "하지만 아버님께서는 \"말도 안 되는 소리."
+  },
+  {
+    "id": "seg-193",
+    "start": 655.5195,
+    "end": 657.2796666666667,
+    "speaker": "DUBNER",
+    "text": "I don’t care if you’re happy, be successful.",
+    "translation": "네가 행복하든 말든 상관없으니, 성공하거라\"라고 하셨다면서요."
+  },
+  {
+    "id": "seg-194",
+    "start": 657.2796666666667,
+    "end": 662.6933333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, I mostly care about achievement as a psychologist, and as the daughter of my father.",
+    "translation": "네, 맞아요. 심리학자로서도 그렇고 저희 아버지의 딸로서도 저는 주로 성취에 관심이 많아요."
+  },
+  {
+    "id": "seg-195",
+    "start": 662.6933333333334,
+    "end": 666.1995,
+    "speaker": "DUCKWORTH",
+    "text": "But I will tell you, I grew up in the Positive Psychology Center.",
+    "translation": "하지만 저도 긍정심리학 센터 출신이라는 걸 말씀드리고 싶네요."
+  },
+  {
+    "id": "seg-196",
+    "start": 666.1995,
+    "end": 667.1723076923076,
+    "speaker": "DUCKWORTH",
+    "text": "That’s where I did my Ph.D.",
+    "translation": "제가 박사 학위를 받은 곳이거든요."
+  },
+  {
+    "id": "seg-197",
+    "start": 667.1723076923076,
+    "end": 669.1907692307692,
+    "speaker": "DUCKWORTH",
+    "text": "So you can ask me a happiness question.",
+    "translation": "그러니 행복에 관한 질문도 편하게 하셔도 됩니다."
+  },
+  {
+    "id": "seg-198",
+    "start": 669.1907692307692,
+    "end": 669.6953846153847,
+    "speaker": "DUBNER",
+    "text": "All right.",
+    "translation": "좋습니다."
+  },
+  {
+    "id": "seg-199",
+    "start": 669.6953846153847,
+    "end": 671.88,
+    "speaker": "DUBNER",
+    "text": "So, different disciplines look at happiness in different ways.",
+    "translation": "분야마다 행복을 바라보는 관점이 저마다 다른데요."
+  },
+  {
+    "id": "seg-200",
+    "start": 671.88,
+    "end": 673.8393333333333,
+    "speaker": "DUBNER",
+    "text": "Different disciplines call it different things.",
+    "translation": "학문 분야마다 부르는 명칭은 제각각 다릅니다."
+  },
+  {
+    "id": "seg-201",
+    "start": 673.8393333333333,
+    "end": 676.1595,
+    "speaker": "DUBNER",
+    "text": "But happiness seems to be a word a lot of them have landed on.",
+    "translation": "하지만 결국 많은 학자들이 '행복'이라는 단어로 의견을 모은 것 행동 같습니다."
+  },
+  {
+    "id": "seg-202",
+    "start": 676.1595,
+    "end": 679.17,
+    "speaker": "DUCKWORTH",
+    "text": "There’s really three aspects of happiness that are widely used.",
+    "translation": "행복에는 실제로 널리 쓰이는 세 가지 관점이 있어요."
+  },
+  {
+    "id": "seg-203",
+    "start": 679.17,
+    "end": 680.2897499999999,
+    "speaker": "DUCKWORTH",
+    "text": "One is life satisfaction.",
+    "translation": "첫 번째는 삶의 만족도입니다."
+  },
+  {
+    "id": "seg-204",
+    "start": 680.2897499999999,
+    "end": 684.8078,
+    "speaker": "DUCKWORTH",
+    "text": "And then the second is positive emotion, like feeling energetic or joyful.",
+    "translation": "그리고 두 번째는 활기차거나 기쁜 감정 같은 긍정적인 감정이고요."
+  },
+  {
+    "id": "seg-205",
+    "start": 684.8078,
+    "end": 689.7991428571428,
+    "speaker": "DUCKWORTH",
+    "text": "Now I know those sound like the same thing, but life satisfaction is thinking that your life is good.",
+    "translation": "이 둘이 같은 말처럼 들릴 수 있겠지만, 삶의 만족도는 자기 삶이 괜찮다고 생각하는 인지적인 부분입니다."
+  },
+  {
+    "id": "seg-206",
+    "start": 689.7991428571428,
+    "end": 698.786,
+    "speaker": "DUCKWORTH",
+    "text": "So overall you would say, “Oh, I wouldn’t want to trade my life with another’s.” Whereas this positive emotion thing is quite literally feeling positively.",
+    "translation": "그러니까 전반적으로 '내 삶을 다른 사람의 삶과 바꾸고 싶지 않다'고 말하는 것이죠. 반면 긍정적 감정은 말 그대로 기분 좋은 감정을 느끼는 상태를 뜻해요."
+  },
+  {
+    "id": "seg-207",
+    "start": 698.786,
+    "end": 700.6796666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And those aren’t exactly the same thing.",
+    "translation": "이 둘이 완전히 같은 건 아닙니다."
+  },
+  {
+    "id": "seg-208",
+    "start": 700.6796666666667,
+    "end": 706.0795,
+    "speaker": "DUCKWORTH",
+    "text": "But the third aspect of happiness is actually very different, and that is the absence of negative emotion.",
+    "translation": "그런데 행복의 세 번째 관점은 이와는 아주 다릅니다. 바로 부정적인 감정이 없는 상태죠."
+  },
+  {
+    "id": "seg-209",
+    "start": 706.0795,
+    "end": 710.6595,
+    "speaker": "DUCKWORTH",
+    "text": "So, the absence of anxiety and depression, worry and so forth.",
+    "translation": "즉 불안이나 우울, 걱정 등이 없는 상태를 말합니다."
+  },
+  {
+    "id": "seg-210",
+    "start": 710.6595,
+    "end": 712.279,
+    "speaker": "DUCKWORTH",
+    "text": "So anyway, those are three aspects.",
+    "translation": "어쨌든 이렇게 세 가지 관점이 있습니다."
+  },
+  {
+    "id": "seg-211",
+    "start": 712.279,
+    "end": 714.4156,
+    "speaker": "DUCKWORTH",
+    "text": "Economists tend to think about life satisfaction more.",
+    "translation": "경제학자들은 삶의 만족도 쪽에 더 주목하는 경향이 있죠."
+  },
+  {
+    "id": "seg-212",
+    "start": 714.4156,
+    "end": 717.399,
+    "speaker": "DUBNER",
+    "text": "And there are several economists who’ve been working on this for many years.",
+    "translation": "그리고 이 분야를 오랫동안 연구해 온 경제학자들이 여러 명 있습니다."
+  },
+  {
+    "id": "seg-213",
+    "start": 717.399,
+    "end": 723.3733333333333,
+    "speaker": "DUBNER",
+    "text": "David Blanchflower who’s been one of the economists studying this, recently published a paper, the latest in a long line.",
+    "translation": "이 분야를 연구해 온 경제학자 중 한 명인 데이비드 블랜치플라워가 최근에 논문을 발표했는데, 오랫동안 이어 온 연구의 연장선에 있는 최신 논문입니다."
+  },
+  {
+    "id": "seg-214",
+    "start": 723.3733333333333,
+    "end": 725.22,
+    "speaker": "DUBNER",
+    "text": "And he talks about the happiness curve.",
+    "translation": "그는 거기서 '행복 곡선'에 대해 이야기합니다."
+  },
+  {
+    "id": "seg-215",
+    "start": 725.22,
+    "end": 730.1195,
+    "speaker": "DUBNER",
+    "text": "And if you look at the curve, it’s a gigantic U, like a smile.",
+    "translation": "그 곡선을 보면 웃는 표정처럼 커다란 U자 모양을 하고 있죠."
+  },
+  {
+    "id": "seg-216",
+    "start": 730.1195,
+    "end": 733.6048571428571,
+    "speaker": "DUBNER",
+    "text": "And basically, it starts measuring happiness at age 16.",
+    "translation": "기본적으로 16세부터 행복도를 측정하기 시작하는데요."
+  },
+  {
+    "id": "seg-217",
+    "start": 733.6048571428571,
+    "end": 737.1189999999999,
+    "speaker": "DUBNER",
+    "text": "And that’s when people are the happiest, in these data at least.",
+    "translation": "적어도 이 데이터상으로는 그때가 사람들이 가장 행복할 때입니다."
+  },
+  {
+    "id": "seg-218",
+    "start": 737.1189999999999,
+    "end": 740.199,
+    "speaker": "DUBNER",
+    "text": "And then it drops, and drops, and drops, and drops.",
+    "translation": "그러다가 행복도가 떨어지고, 떨어지고, 또 계속 떨어집니다."
+  },
+  {
+    "id": "seg-219",
+    "start": 740.199,
+    "end": 743.5831999999999,
+    "speaker": "DUBNER",
+    "text": "And then it turns again at about age 50.",
+    "translation": "그러고는 50세 무렵에 반등하기 시작하죠."
+  },
+  {
+    "id": "seg-220",
+    "start": 743.5831999999999,
+    "end": 743.9674,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-221",
+    "start": 743.9674,
+    "end": 748.7066666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And to be precise, I think it’s about 47 to 48.",
+    "translation": "그리고 더 정확히 말하자면, 한 47세에서 48세 정도인 것 같아요."
+  },
+  {
+    "id": "seg-222",
+    "start": 748.7066666666667,
+    "end": 750.7333333333333,
+    "speaker": "DUCKWORTH",
+    "text": "And I only say that because I’m 49.",
+    "translation": "제가 49세라서 잘 아는 건데요."
+  },
+  {
+    "id": "seg-223",
+    "start": 750.7333333333333,
+    "end": 753,
+    "speaker": "DUCKWORTH",
+    "text": "So, this matters a lot to me.",
+    "translation": "그래서 저한테는 이게 아주 중요한 문제예요."
+  },
+  {
+    "id": "seg-224",
+    "start": 753,
+    "end": 754.46,
+    "speaker": "DUBNER",
+    "text": "Okay, so you’re in for good times ahead.",
+    "translation": "그렇군요, 그럼 앞으로 좋은 날만 남으셨네요."
+  },
+  {
+    "id": "seg-225",
+    "start": 754.46,
+    "end": 755.568,
+    "speaker": "DUBNER",
+    "text": "So, here’s the question.",
+    "translation": "자, 그럼 질문 드릴게요."
+  },
+  {
+    "id": "seg-226",
+    "start": 755.568,
+    "end": 765.9333333333333,
+    "speaker": "DUBNER",
+    "text": "If you believe the happiness curve, and that our happiness basically drops from teenagerhood until whatever you want to call it, age 50: middle age, late-middle age, middle-middle age.",
+    "translation": "이 행복 곡선이라는 걸 믿는다면, 그러니까 우리의 행복이 10대 때부터 흔히 말하는 50세, 즉 중년, 인생의 중후반기 혹은 중반기까지 기본적으로 떨어진다는 걸 믿는다면 말이죠."
+  },
+  {
+    "id": "seg-227",
+    "start": 765.9333333333333,
+    "end": 769.73975,
+    "speaker": "DUBNER",
+    "text": "And then, it swings really hard upward for a long time.",
+    "translation": "그러고 나서는 아주 오랫동안 급격하게 위로 상승하잖아요."
+  },
+  {
+    "id": "seg-228",
+    "start": 769.73975,
+    "end": 773.8677142857143,
+    "speaker": "DUBNER",
+    "text": "If you do believe that, why do you think that is the case?",
+    "translation": "만약 그걸 정말로 믿으신다면, 왜 그런 현상이 나타난다고 생각하시나요?"
+  },
+  {
+    "id": "seg-229",
+    "start": 773.8677142857143,
+    "end": 776.128,
+    "speaker": "DUBNER",
+    "text": "Is it that there are things happening in there?",
+    "translation": "그 시기에 무슨 일들이 일어나서 그런 걸까요?"
+  },
+  {
+    "id": "seg-230",
+    "start": 776.128,
+    "end": 777.0133333333333,
+    "speaker": "DUBNER",
+    "text": "Is it adjustments?",
+    "translation": "상황에 적응해서일까요?"
+  },
+  {
+    "id": "seg-231",
+    "start": 777.0133333333333,
+    "end": 778.0478,
+    "speaker": "DUBNER",
+    "text": "Is it habituation?",
+    "translation": "아니면 익숙해져서일까요?"
+  },
+  {
+    "id": "seg-232",
+    "start": 778.0478,
+    "end": 779.3911999999999,
+    "speaker": "DUBNER",
+    "text": "You’re the psychologist.",
+    "translation": "심리학자이시니까요."
+  },
+  {
+    "id": "seg-233",
+    "start": 779.3911999999999,
+    "end": 780.6656666666667,
+    "speaker": "DUBNER",
+    "text": "Tell us what.",
+    "translation": "이유를 좀 알려주세요."
+  },
+  {
+    "id": "seg-234",
+    "start": 780.6656666666667,
+    "end": 785.5111999999999,
+    "speaker": "DUCKWORTH",
+    "text": "So, I’ve seen this work by Blanchflower, and I will tell you that it’s very thorough.",
+    "translation": "저도 블랜치플라워의 연구를 봤는데, 정말 아주 철저하게 연구했더라고요."
+  },
+  {
+    "id": "seg-235",
+    "start": 785.5111999999999,
+    "end": 788.18,
+    "speaker": "DUCKWORTH",
+    "text": "I think there’s good reason to believe it’s real.",
+    "translation": "그게 진짜라고 믿을 만한 타당한 이유가 있다고 봅니다."
+  },
+  {
+    "id": "seg-236",
+    "start": 788.18,
+    "end": 792.959,
+    "speaker": "DUCKWORTH",
+    "text": "So, generally what Blanchflower is using is survey data, self-report.",
+    "translation": "보통 블랜치플라워가 사용하는 자료는 설문조사, 그러니까 자기 보고식 데이터인데요."
+  },
+  {
+    "id": "seg-237",
+    "start": 792.959,
+    "end": 805.36,
+    "speaker": "DUCKWORTH",
+    "text": "Usually the phrasing is, “how satisfied are you with your life?” I think it may be because as you hit that midlife period, you’re maybe under a combination of family stress, because parenting is not easy.",
+    "translation": "대체로 질문은 \"자신의 삶에 얼마나 만족하십니까?\"라는 식이죠. 제 생각에는 중년기에 접어들면서, 육아가 쉽지 않다 보니 가정에서의 스트레스가 겹쳐서 그런 게 아닐까 싶어요."
+  },
+  {
+    "id": "seg-238",
+    "start": 805.36,
+    "end": 806.5142857142857,
+    "speaker": "DUCKWORTH",
+    "text": "And work stress.",
+    "translation": "게다가 업무 스트레스까지 더해지니까요."
+  },
+  {
+    "id": "seg-239",
+    "start": 806.5142857142857,
+    "end": 813.1592499999999,
+    "speaker": "DUBNER",
+    "text": "And could it be that age 48 to 52 is when many parents are seeing their teenagers move out of the house?",
+    "translation": "그리고 혹시 48세에서 52세 무렵이 많은 부모들이 사춘기 자녀를 품에서 독립시키는 시기라서 그런 건 아닐까요?"
+  },
+  {
+    "id": "seg-240",
+    "start": 813.1592499999999,
+    "end": 814.56,
+    "speaker": "DUCKWORTH",
+    "text": "That is a possibility.",
+    "translation": "그럴 가능성도 있죠."
+  },
+  {
+    "id": "seg-241",
+    "start": 814.56,
+    "end": 826.62,
+    "speaker": "DUCKWORTH",
+    "text": "These samples don’t only include married adults, but yes, one of the findings from marriage research is that so many married couples with children fear the empty-nest syndrome.",
+    "translation": "이 표본들에 기혼 성인만 포함된 건 아니지만, 결혼 관련 연구에서 나오는 결과 중 하나는 자녀를 둔 많은 부부들이 빈 둥지 증후군을 두려워한다는 거예요."
+  },
+  {
+    "id": "seg-242",
+    "start": 826.62,
+    "end": 835.0464999999999,
+    "speaker": "DUCKWORTH",
+    "text": "But actually, on average, people tend to be happier once they’ve sort of gotten over the initial crying of your last kid being dropped off to college.",
+    "translation": "하지만 실제로는 평균적으로 마지막 아이를 대학에 보내고 처음 얼마간 울고 차츰 적응하고 나면, 사람들은 더 행복해지는 경향이 있어요."
+  },
+  {
+    "id": "seg-243",
+    "start": 835.0464999999999,
+    "end": 837.5191666666667,
+    "speaker": "DUCKWORTH",
+    "text": "I think there are other explanations, though.",
+    "translation": "하지만 다른 설명들도 있을 것 같아요."
+  },
+  {
+    "id": "seg-244",
+    "start": 837.5191666666667,
+    "end": 839.3066666666667,
+    "speaker": "DUBNER",
+    "text": "That’s what I want to hear.",
+    "translation": "바로 그 얘기를 듣고 싶었어요."
+  },
+  {
+    "id": "seg-245",
+    "start": 839.3066666666667,
+    "end": 842.3198749999999,
+    "speaker": "DUCKWORTH",
+    "text": "So Blanchflower doesn’t actually say that he knows.",
+    "translation": "블랜치플라워도 자기가 확실하게 원인을 알고 있다고 말하지는 않아요."
+  },
+  {
+    "id": "seg-246",
+    "start": 842.3198749999999,
+    "end": 850,
+    "speaker": "DUCKWORTH",
+    "text": "And I think that’s right to be humble about, okay look, there’s this U-shaped happiness curve, but nobody really knows for sure what’s going on.",
+    "translation": "그리고 여기에 대해선 겸손한 태도를 취하는 게 맞다고 봐요. '좋아, U자형 행복 곡선이라는 건 존재하지만, 왜 그런지 확실히 아는 사람은 아무도 없다'는 식으로요."
+  },
+  {
+    "id": "seg-247",
+    "start": 850,
+    "end": 864.9299090909091,
+    "speaker": "DUCKWORTH",
+    "text": "I want to suggest that when you’re in the beginning of life — and this is what I think might account for the downward slope in happiness until you reach your late 40s — you are striving; you are trying to attain goals maybe that you’re not reaching.",
+    "translation": "제 생각을 말씀드리자면, 인생의 초반에는 — 40대 후반에 이르기까지 행복도가 하향 곡선을 그리는 이유가 이것 때문일 것 같은데요 — 우리는 늘 발버둥을 쳐요. 도달하지 못할지도 모르는 목표를 달성하려고 하죠."
+  },
+  {
+    "id": "seg-248",
+    "start": 864.9299090909091,
+    "end": 869.419,
+    "speaker": "DUCKWORTH",
+    "text": "And if you think about what happiness is, it’s the achieving of the goals that you’ve set.",
+    "translation": "그리고 행복의 본질이 뭔지 생각해보면, 그건 자기가 세운 목표를 달성하는 데 있거든요."
+  },
+  {
+    "id": "seg-249",
+    "start": 869.419,
+    "end": 871.275,
+    "speaker": "DUCKWORTH",
+    "text": "And there are two ways to do that, right?",
+    "translation": "그리고 그걸 달성하는 데는 두 가지 방법이 있어요, 그렇죠?"
+  },
+  {
+    "id": "seg-250",
+    "start": 871.275,
+    "end": 874.52,
+    "speaker": "DUCKWORTH",
+    "text": "One is to achieve those goals, and the other one is to have lower goals.",
+    "translation": "하나는 그 목표를 달성하는 것이고, 다른 하나는 목표 자체를 낮추는 겁니다."
+  },
+  {
+    "id": "seg-251",
+    "start": 874.52,
+    "end": 885.72,
+    "speaker": "DUCKWORTH",
+    "text": "So, maybe the higher expectations that we have for what we hope for in life earlier, that accounts for why we’re downward sloping until a certain point, and then we reckon with what’s possible.",
+    "translation": "그러니까 어릴 때 삶에 대해 가졌던 기대치가 높은 것, 이것이 특정 시점까지 행복도가 낮아지는 이유일 수 있고, 그 이후에는 비로소 무엇이 실현 가능한지 직시하게 되는 거죠."
+  },
+  {
+    "id": "seg-252",
+    "start": 885.72,
+    "end": 886.7666666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And then, we’re happier.",
+    "translation": "그러고 나면 더 행복해지는 겁니다."
+  },
+  {
+    "id": "seg-253",
+    "start": 886.7666666666667,
+    "end": 888.9193333333334,
+    "speaker": "DUBNER",
+    "text": "Can I ask you to unpack that a tiny bit?",
+    "translation": "그 부분에 대해 조금만 더 자세히 설명해주실 수 있을까요?"
+  },
+  {
+    "id": "seg-254",
+    "start": 888.9193333333334,
+    "end": 893.24,
+    "speaker": "DUBNER",
+    "text": "Are you saying that there’s just less gap between our dream and reality?",
+    "translation": "우리 꿈과 현실 사이의 간극이 예전보다 좁아진다는 말씀이신가요?"
+  },
+  {
+    "id": "seg-255",
+    "start": 893.24,
+    "end": 902.0342857142857,
+    "speaker": "DUBNER",
+    "text": "Or that we settle, that we habituate, and become more accepting of what we’ve got, even if it wasn’t what we hoped it might be?",
+    "translation": "아니면 우리의 기대에 미치지 못하더라도, 타협하고, 익숙해지고, 우리가 가진 것을 좀 더 순응하며 받아들이게 된다는 뜻인가요?"
+  },
+  {
+    "id": "seg-256",
+    "start": 902.0342857142857,
+    "end": 903.7866666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Well, that’s a pretty nuanced distinction.",
+    "translation": "와, 아주 미묘한 차이를 짚으셨네요."
+  },
+  {
+    "id": "seg-257",
+    "start": 903.7866666666667,
+    "end": 908.439,
+    "speaker": "DUCKWORTH",
+    "text": "But I agree, there’s setting lower goals, not having high expectations for your life.",
+    "translation": "하지만 동감해요. 목표를 더 낮게 설정해서 삶에 대한 기대치를 낮추는 방법이 있죠."
+  },
+  {
+    "id": "seg-258",
+    "start": 908.439,
+    "end": 916.2194999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And then alternatively, there’s keeping those high expectations, but having this distanced perspective, and like very zen about the fact that you missed those goals.",
+    "translation": "아니면 반대로, 원대한 기대치는 그대로 두되, 한 걸음 물러서서 바라보는 시각을 갖고 목표를 이루지 못한 것에 대해 아주 초연해지는 방법도 있어요."
+  },
+  {
+    "id": "seg-259",
+    "start": 916.2194999999999,
+    "end": 932.8133333333334,
+    "speaker": "DUCKWORTH",
+    "text": "But either way, what it says is that the kind of increasing happiness that you are predicted to experience in your 50s, and your 60s, and so forth, are not because you’re actually objectively doing better, but because, in some way, you have subjectively changed the targets themselves.",
+    "translation": "하지만 어느 쪽이든 간에, 우리가 50대, 60대에 경험할 것으로 예상되는 행복감의 상승은 객관적으로 우리가 더 잘살게 되어서가 아니라, 결과적으로 주관적인 목표 지점 자체가 바뀌었기 때문이라는 거죠."
+  },
+  {
+    "id": "seg-260",
+    "start": 932.8133333333334,
+    "end": 940.5799999999999,
+    "speaker": "DUBNER",
+    "text": "Are you suggesting — and I think there is research that suggests this — that young people are unrealistically optimistic?",
+    "translation": "젊은 사람들이 비현실적으로 낙관적이라는 말씀이신가요? 제 생각엔 그걸 뒷받침하는 연구도 있는 것 같은데요."
+  },
+  {
+    "id": "seg-261",
+    "start": 940.5799999999999,
+    "end": 944.9995,
+    "speaker": "DUBNER",
+    "text": "And even if the answer to that is yes, can you really say that it is unwisely?",
+    "translation": "그리고 설령 그렇다고 해도, 그게 정말 현명하지 못한 태도라고 단정 지을 수 있을까요?"
+  },
+  {
+    "id": "seg-262",
+    "start": 944.9995,
+    "end": 952.954375,
+    "speaker": "DUBNER",
+    "text": "Because maybe one of the things that you need a surplus of when you’re starting out is optimism, because in fact, it can be hard.",
+    "translation": "왜냐하면 처음 시작할 때는 낙관적인 태도가 차고 넘쳐야 할 수도 있잖아요. 실제로 시작하는 건 아주 힘들 수 있으니까요."
+  },
+  {
+    "id": "seg-263",
+    "start": 952.954375,
+    "end": 957.12,
+    "speaker": "DUCKWORTH",
+    "text": "There is a psychologist who I love named Don Moore.",
+    "translation": "제가 정말 좋아하는 돈 무어라는 심리학자가 있어요."
+  },
+  {
+    "id": "seg-264",
+    "start": 957.12,
+    "end": 959.0666666666667,
+    "speaker": "DUCKWORTH",
+    "text": "He’s a judgment and decision-making scientist.",
+    "translation": "판단 및 의사결정 분야를 연구하는 과학자인데요."
+  },
+  {
+    "id": "seg-265",
+    "start": 959.0666666666667,
+    "end": 965.706,
+    "speaker": "DUCKWORTH",
+    "text": "And he believes that not only the young, but people of all ages, can be recklessly optimistic.",
+    "translation": "그분은 젊은이들뿐만 아니라 모든 연령대의 사람들이 무모할 정도로 낙관적일 수 있다고 믿어요."
+  },
+  {
+    "id": "seg-266",
+    "start": 965.706,
+    "end": 968.9110000000001,
+    "speaker": "DUCKWORTH",
+    "text": "And he thinks that this overconfidence is actually a problem.",
+    "translation": "그리고 이런 과도한 자신감이 실제로 문제가 된다고 생각하죠."
+  },
+  {
+    "id": "seg-267",
+    "start": 968.9110000000001,
+    "end": 980.0663333333333,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, when he says this, entrepreneurs just leap out of the woodwork and they say, “you got to be optimistic to get anything done!” And I think Don Moore would say, no, it’s just better to be accurate.",
+    "translation": "제 말은, 그가 이런 주장을 할 때마다 기업가들이 갑자기 나타나서 \"뭔가를 이루려면 당연히 낙관적이어야 한다!\"라고 말하거든요. 하지만 돈 무어는 그냥 정확한 게 더 좋은 거라고 말할 것 같아요."
+  },
+  {
+    "id": "seg-268",
+    "start": 980.0663333333333,
+    "end": 983.1193333333333,
+    "speaker": "DUCKWORTH",
+    "text": "And he has some experimental evidence to support that.",
+    "translation": "그리고 그걸 뒷받침하는 실험적 증거도 가지고 있죠."
+  },
+  {
+    "id": "seg-269",
+    "start": 983.1193333333333,
+    "end": 995.2289999999999,
+    "speaker": "DUCKWORTH",
+    "text": "I think that these high aspirations that young people have — rose-tinted movies in their head about what their wedding is going to be like, and how their children are going to be beautiful and perfect.",
+    "translation": "젊은이들이 품고 있는 높은 포부, 예를 들어 결혼식은 어떨지, 아이들은 얼마나 예쁘고 완벽할지에 대해 머릿속으로 그리는 장밋빛 영화들 있잖아요."
+  },
+  {
+    "id": "seg-270",
+    "start": 995.2289999999999,
+    "end": 999.3299999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And all these projections into the future, which are probably a little naive.",
+    "translation": "그리고 조금은 순진할 수 있는 미래에 대한 이런 모든 예측들이요."
+  },
+  {
+    "id": "seg-271",
+    "start": 999.3299999999999,
+    "end": 1002.9733333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I think you could ask the question whether they’re really unwise or not.",
+    "translation": "그게 정말 어리석은 일인지 아닌지는 의문을 가져볼 수 있다고 생각해요."
+  },
+  {
+    "id": "seg-272",
+    "start": 1002.9733333333334,
+    "end": 1008.906,
+    "speaker": "DUCKWORTH",
+    "text": "I do think that if you reach higher, you’ll get farther, but you might be less happy doing it.",
+    "translation": "목표를 더 높게 잡으면 더 멀리 갈 수 있겠지만, 그 과정에서 덜 행복할 수는 있다고 생각해요."
+  },
+  {
+    "id": "seg-273",
+    "start": 1008.906,
+    "end": 1010.279,
+    "speaker": "DUBNER",
+    "text": "So let me ask you this.",
+    "translation": "그럼 이걸 여쭤볼게요."
+  },
+  {
+    "id": "seg-274",
+    "start": 1010.279,
+    "end": 1018.9995714285715,
+    "speaker": "DUBNER",
+    "text": "Since we see that measured happiness is very high at 16, and since you’re talking about reckless optimism is a feature of that age.",
+    "translation": "우리가 보기에 16세의 행복지수가 매우 높게 측정되고, 방금 말씀하신 무모한 낙관주의가 그 나이대의 특징이라면 말이죠."
+  },
+  {
+    "id": "seg-275",
+    "start": 1018.9995714285715,
+    "end": 1025.7995,
+    "speaker": "DUBNER",
+    "text": "How can you explain, then, the relatively very high and increasing suicide rate?",
+    "translation": "그렇다면 상대적으로 매우 높고 계속 증가하는 자살률은 어떻게 설명할 수 있을까요?"
+  },
+  {
+    "id": "seg-276",
+    "start": 1025.7995,
+    "end": 1027.199,
+    "speaker": "DUBNER",
+    "text": "Or maybe it does explain it.",
+    "translation": "어쩌면 오히려 그 때문에 설명이 될지도 모르겠네요."
+  },
+  {
+    "id": "seg-277",
+    "start": 1027.199,
+    "end": 1036.259,
+    "speaker": "DUBNER",
+    "text": "Maybe it’s that the cohort that are prone towards suicidal thoughts are those who see that gap between expectations and reality.",
+    "translation": "자살 생각을 하기 쉬운 집단은 기대와 현실 사이의 괴리를 뼈저리게 느끼는 사람들일 수도 있으니까요."
+  },
+  {
+    "id": "seg-278",
+    "start": 1036.259,
+    "end": 1040.0591666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Well, first of all, I don’t want to say that optimism is inherently reckless.",
+    "translation": "음, 우선 낙관주의가 본질적으로 무모하다고 말씀드리고 싶지는 않아요."
+  },
+  {
+    "id": "seg-279",
+    "start": 1040.0591666666667,
+    "end": 1041.6395,
+    "speaker": "DUCKWORTH",
+    "text": "Some would say that it’s reckless.",
+    "translation": "누군가는 그게 무모하다고 말할 수도 있겠지만요."
+  },
+  {
+    "id": "seg-280",
+    "start": 1041.6395,
+    "end": 1043.1863333333333,
+    "speaker": "DUCKWORTH",
+    "text": "I wouldn’t use exactly that language.",
+    "translation": "저는 꼭 그런 표현을 쓰지는 않을 것 같아요."
+  },
+  {
+    "id": "seg-281",
+    "start": 1043.1863333333333,
+    "end": 1051.5465,
+    "speaker": "DUCKWORTH",
+    "text": "I might amend your question to say, look, if young people, have these optimistic aspirations, how do we explain increasing rates of suicide and depression?",
+    "translation": "질문을 조금 수정해서, '젊은이들이 이렇게 낙관적인 포부를 품고 있다면, 자살률과 우울증 비율이 높아지는 건 어떻게 설명해야 할까?'라고 물어볼 수 있겠네요."
+  },
+  {
+    "id": "seg-282",
+    "start": 1051.5465,
+    "end": 1053.2926666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And I think that’s an excellent question.",
+    "translation": "그리고 그건 정말 좋은 질문이라고 생각해요."
+  },
+  {
+    "id": "seg-283",
+    "start": 1053.2926666666667,
+    "end": 1055.2057142857143,
+    "speaker": "DUBNER",
+    "text": "That’s the question I meant to ask.",
+    "translation": "제가 바로 그걸 여쭤보려던 참이었어요."
+  },
+  {
+    "id": "seg-284",
+    "start": 1055.2057142857143,
+    "end": 1056.6933333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I really don’t think anyone knows.",
+    "translation": "사실 아무도 확실히는 모른다고 생각해요."
+  },
+  {
+    "id": "seg-285",
+    "start": 1056.6933333333334,
+    "end": 1064.2195000000002,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, I think the mystery of increasing rates of anxiety, depression and suicide are still exactly that — a mystery.",
+    "translation": "제 말은, 불안, 우울증, 자살률이 증가하는 원인은 여전히 미스터리로 남아 있다는 거죠."
+  },
+  {
+    "id": "seg-286",
+    "start": 1064.2195000000002,
+    "end": 1073.4222222222222,
+    "speaker": "DUCKWORTH",
+    "text": "One hypothesis that has been advanced is the same hypothesis that’s been advanced for why a lot of other people, who are not just young adults or adolescents, are unhappy.",
+    "translation": "제시된 한 가지 가설은 청소년이나 청년뿐만 아니라 다른 많은 사람들이 불행한 이유에 대해 제기된 가설과 같아요."
+  },
+  {
+    "id": "seg-287",
+    "start": 1073.4222222222222,
+    "end": 1077.04,
+    "speaker": "DUCKWORTH",
+    "text": "And that is that we do have this ratcheting up of expectations.",
+    "translation": "바로 기대치가 계속 높아지고 있다는 점이죠."
+  },
+  {
+    "id": "seg-288",
+    "start": 1077.04,
+    "end": 1083.19,
+    "speaker": "DUCKWORTH",
+    "text": "And so there is this gap between what we are achieving and our aspirations.",
+    "translation": "그래서 우리가 이루고 있는 것과 우리의 기대치 사이에 간극이 생기는 겁니다."
+  },
+  {
+    "id": "seg-289",
+    "start": 1083.19,
+    "end": 1084.8995,
+    "speaker": "DUCKWORTH",
+    "text": "Not because we’re achieving less.",
+    "translation": "우리가 예전보다 성취를 못 해서가 아니에요."
+  },
+  {
+    "id": "seg-290",
+    "start": 1084.8995,
+    "end": 1086.136,
+    "speaker": "DUCKWORTH",
+    "text": "We’re probably achieving more.",
+    "translation": "아마 더 많은 걸 성취하고 있을 거예요."
+  },
+  {
+    "id": "seg-291",
+    "start": 1086.136,
+    "end": 1088.1593333333333,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, we’re learning more.",
+    "translation": "그러니까, 우리는 더 많이 배우고 있잖아요."
+  },
+  {
+    "id": "seg-292",
+    "start": 1088.1593333333333,
+    "end": 1091.7863333333332,
+    "speaker": "DUCKWORTH",
+    "text": "We’re having, in some cases, higher-quality experiences.",
+    "translation": "어떤 면에서는 더 질 높은 경험을 하기도 하고요."
+  },
+  {
+    "id": "seg-293",
+    "start": 1091.7863333333332,
+    "end": 1097.55,
+    "speaker": "DUCKWORTH",
+    "text": "But our aspirations are growing faster than our objective achievements.",
+    "translation": "하지만 우리의 기대치가 객관적인 성취보다 더 빠르게 커지고 있어요."
+  },
+  {
+    "id": "seg-294",
+    "start": 1097.55,
+    "end": 1107.1036,
+    "speaker": "DUCKWORTH",
+    "text": "By the way, another possibility, Stephen, is that the people who are happier are just different from the people who are depressed, and they’re both growing in number and the middle’s getting carved out.",
+    "translation": "그건 그렇고 스티븐, 또 다른 가능성은 더 행복해하는 사람들과 우울해하는 사람들이 원래 다른 부류인데, 이 두 집단은 모두 늘어나는 반면 그 중간에 있는 사람들이 줄어들고 있다는 거예요."
+  },
+  {
+    "id": "seg-295",
+    "start": 1107.1036,
+    "end": 1110.84,
+    "speaker": "DUBNER",
+    "text": "If you do believe these data, what do you do with it?",
+    "translation": "만약 이 데이터를 믿는다면, 이걸 어떻게 활용해야 할까요?"
+  },
+  {
+    "id": "seg-296",
+    "start": 1110.84,
+    "end": 1112.2,
+    "speaker": "DUBNER",
+    "text": "Let’s say you’re a 16-year-old person.",
+    "translation": "여러분이 16세 청소년이라고 해보죠."
+  },
+  {
+    "id": "seg-297",
+    "start": 1112.2,
+    "end": 1114.48,
+    "speaker": "DUBNER",
+    "text": "Let’s say you’re a 50-year-old person.",
+    "translation": "아니면 50세라고 해봅시다."
+  },
+  {
+    "id": "seg-298",
+    "start": 1114.48,
+    "end": 1115.992,
+    "speaker": "DUBNER",
+    "text": "Let’s say, you’re a 75-year-old person.",
+    "translation": "아니면 75세라고 해보죠."
+  },
+  {
+    "id": "seg-299",
+    "start": 1115.992,
+    "end": 1118.536,
+    "speaker": "DUBNER",
+    "text": "By the way, happiness does start to decline when you’re older.",
+    "translation": "참고로 행복감은 나이가 들면서 다시 감소하기 시작합니다."
+  },
+  {
+    "id": "seg-300",
+    "start": 1118.536,
+    "end": 1120.2195000000002,
+    "speaker": "DUBNER",
+    "text": "A lot of people around you are dying.",
+    "translation": "주변에 많은 사람들이 죽어가고 있고요."
+  },
+  {
+    "id": "seg-301",
+    "start": 1120.2195000000002,
+    "end": 1122.064625,
+    "speaker": "DUBNER",
+    "text": "Your own health is not doing so well.",
+    "translation": "본인의 건강 상태도 그리 좋지 못하죠."
+  },
+  {
+    "id": "seg-302",
+    "start": 1122.064625,
+    "end": 1129.8000000000002,
+    "speaker": "DUBNER",
+    "text": "But if you see that big U in front of you, okay, if you’re 16 or if you’re in the middle of the upslope, how do you hack that happiness curve?",
+    "translation": "하지만 눈앞에 거대한 U자 곡선이 보인다면, 그러니까 16살이거나 혹은 상승 곡선의 중간에 있다면, 이 행복 곡선을 어떻게 하면 해킹할 수 있을까요?"
+  },
+  {
+    "id": "seg-303",
+    "start": 1129.8000000000002,
+    "end": 1131.3,
+    "speaker": "DUBNER",
+    "text": "What do you do with that information?",
+    "translation": "그 정보를 어떻게 활용해야 할까요?"
+  },
+  {
+    "id": "seg-304",
+    "start": 1131.3,
+    "end": 1133.6182,
+    "speaker": "DUCKWORTH",
+    "text": "So, let’s start with the 16-year-old, because I have one.",
+    "translation": "그럼 우선 16살 이야기부터 시작해 보죠. 마침 저희 집에도 한 명 있거든요."
+  },
+  {
+    "id": "seg-305",
+    "start": 1133.6182,
+    "end": 1135,
+    "speaker": "DUCKWORTH",
+    "text": "So, what would I say to one?",
+    "translation": "그래서 제가 그 친구한테 무슨 말을 해줄 수 있을까요?"
+  },
+  {
+    "id": "seg-306",
+    "start": 1135,
+    "end": 1135.76,
+    "speaker": "DUBNER",
+    "text": "Condolences.",
+    "translation": "위로의 말씀을 전합니다."
+  },
+  {
+    "id": "seg-307",
+    "start": 1135.76,
+    "end": 1137.32,
+    "speaker": "DUCKWORTH",
+    "text": "Oh, she’s so wonderful!",
+    "translation": "어우, 우리 딸은 정말 멋진 아이예요!"
+  },
+  {
+    "id": "seg-308",
+    "start": 1137.32,
+    "end": 1139.84,
+    "speaker": "DUCKWORTH",
+    "text": "She’s actually a shockingly happy 16-year-old.",
+    "translation": "사실 그 나이 치고는 놀라울 정도로 행복한 16살이거든요."
+  },
+  {
+    "id": "seg-309",
+    "start": 1139.84,
+    "end": 1140.7066666666667,
+    "speaker": "DUBNER",
+    "text": "She’s all over the data.",
+    "translation": "데이터를 완전히 거스르고 있네요."
+  },
+  {
+    "id": "seg-310",
+    "start": 1140.7066666666667,
+    "end": 1141.24,
+    "speaker": "DUCKWORTH",
+    "text": "That’s right!",
+    "translation": "맞아요!"
+  },
+  {
+    "id": "seg-311",
+    "start": 1141.24,
+    "end": 1142.4,
+    "speaker": "DUCKWORTH",
+    "text": "She’s at the top of the curve.",
+    "translation": "곡선의 맨 꼭대기에 있는 셈이죠."
+  },
+  {
+    "id": "seg-312",
+    "start": 1142.4,
+    "end": 1143.96,
+    "speaker": "DUCKWORTH",
+    "text": "She just doesn’t know what’s ahead.",
+    "translation": "앞으로 어떤 일이 닥칠지 아직 모를 뿐이에요."
+  },
+  {
+    "id": "seg-313",
+    "start": 1143.96,
+    "end": 1147.488,
+    "speaker": "DUBNER",
+    "text": "Also, we should say, the teenager can be happy while making the parents miserable.",
+    "translation": "아, 그리고 10대 청소년은 부모를 속 터지게 만들면서 정작 본인은 행복할 수 있다는 점도 짚고 넘어가야겠네요."
+  },
+  {
+    "id": "seg-314",
+    "start": 1147.488,
+    "end": 1150.8733333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, I think what teenagers experience is actually high highs and low lows.",
+    "translation": "네, 제 생각에 10대들이 경험하는 건 감정의 기복이 엄청나게 심하다는 거예요."
+  },
+  {
+    "id": "seg-315",
+    "start": 1150.8733333333334,
+    "end": 1153.08,
+    "speaker": "DUCKWORTH",
+    "text": "And there’s a lot of scientific evidence for that, too.",
+    "translation": "그걸 뒷받침하는 과학적 증거도 아주 많고요."
+  },
+  {
+    "id": "seg-316",
+    "start": 1153.08,
+    "end": 1158.2995,
+    "speaker": "DUCKWORTH",
+    "text": "I’m a university professor, so I see lots of 18 to 22-year-olds who have their fair share of angst.",
+    "translation": "제가 대학 교수다 보니 걱정과 불안이 한창인 18세에서 22세 사이의 학생들을 정말 많이 보는데요."
+  },
+  {
+    "id": "seg-317",
+    "start": 1158.2995,
+    "end": 1162.1915999999999,
+    "speaker": "DUCKWORTH",
+    "text": "And they are experiencing the decrease in happiness.",
+    "translation": "그 친구들은 행복이 감소하는 걸 실제로 겪고 있어요."
+  },
+  {
+    "id": "seg-318",
+    "start": 1162.1915999999999,
+    "end": 1164.8799999999999,
+    "speaker": "DUCKWORTH",
+    "text": "They have memories of being carefree children.",
+    "translation": "아무 걱정 없던 어린 시절의 기억이 있으니까요."
+  },
+  {
+    "id": "seg-319",
+    "start": 1164.8799999999999,
+    "end": 1171.76,
+    "speaker": "DUCKWORTH",
+    "text": "And I think that downward slope, my guess is, kind of feeling the difference between what it was and what it is today.",
+    "translation": "제 짐작 상으로는, 옛날엔 어땠는지와 지금은 어떤지 그 차이를 체감하면서 내리막길을 걷는 기분을 느끼는 것 같아요."
+  },
+  {
+    "id": "seg-320",
+    "start": 1171.76,
+    "end": 1173.3497499999999,
+    "speaker": "DUCKWORTH",
+    "text": "We’re very sensitive to changes.",
+    "translation": "우리는 변화에 정말 민감하잖아요."
+  },
+  {
+    "id": "seg-321",
+    "start": 1173.3497499999999,
+    "end": 1178.3995,
+    "speaker": "DUCKWORTH",
+    "text": "And so to feel that everything was so simple then, and you could eat an ice cream cone without guilt.",
+    "translation": "그래서 그 시절에는 모든 게 참 단순했고, 아무 죄책감 없이 아이스크림 콘을 먹을 수 있었다고 느끼는 거죠."
+  },
+  {
+    "id": "seg-322",
+    "start": 1178.3995,
+    "end": 1182.6195,
+    "speaker": "DUCKWORTH",
+    "text": "And they’re all of a sudden burdened with the weighty responsibilities of adulthood.",
+    "translation": "그러다 갑자기 어른이라는 무거운 책임감을 짊어지게 되니까요."
+  },
+  {
+    "id": "seg-323",
+    "start": 1182.6195,
+    "end": 1187.7797500000001,
+    "speaker": "DUCKWORTH",
+    "text": "Their first career choices, their first disappointments professionally, or maybe major ones romantically.",
+    "translation": "첫 직업 선택이라든가, 일에서 겪는 첫 좌절, 어쩌면 연애에서의 큰 좌절 같은 것들이죠."
+  },
+  {
+    "id": "seg-324",
+    "start": 1187.7797500000001,
+    "end": 1193.0258333333334,
+    "speaker": "DUCKWORTH",
+    "text": "And when you’re sad it’s just — it’s really hard to be convinced that you’ll ever not be sad.",
+    "translation": "그리고 슬플 때는, 나중에라도 슬프지 않게 될 거라는 사실을 믿기가 정말 힘들잖아요."
+  },
+  {
+    "id": "seg-325",
+    "start": 1193.0258333333334,
+    "end": 1204.88,
+    "speaker": "DUCKWORTH",
+    "text": "So, I like to tell young people who are in emotional turmoil, or experiencing the decrease in their emotional well-being, that life is long, and that they won’t feel exactly this way forever.",
+    "translation": "그래서 저는 정서적으로 혼란을 겪고 있거나 마음이 많이 힘들어진 젊은 친구들에게, 인생은 길고 영원히 지금 같은 기분은 아닐 거라고 말해주곤 해요."
+  },
+  {
+    "id": "seg-326",
+    "start": 1204.88,
+    "end": 1207.799,
+    "speaker": "DUBNER",
+    "text": "Well let’s say you’re at the bottom right now.",
+    "translation": "그럼, 당신이 지금 바닥에 있다고 해보죠."
+  },
+  {
+    "id": "seg-327",
+    "start": 1207.799,
+    "end": 1209.3795,
+    "speaker": "DUBNER",
+    "text": "Technically, you’re about there.",
+    "translation": "수치상으로는 당신도 대략 그쯤에 와 있네요."
+  },
+  {
+    "id": "seg-328",
+    "start": 1209.3795,
+    "end": 1215.0533333333333,
+    "speaker": "DUBNER",
+    "text": "So, how do you exploit the oncoming onslaught of happiness you’re about to experience?",
+    "translation": "그럼 이제 곧 밀려올 그 엄청난 행복을 어떻게 활용해야 할까요?"
+  },
+  {
+    "id": "seg-329",
+    "start": 1215.0533333333333,
+    "end": 1221.9992499999998,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, other than just looking forward, which, of course, science says that we can actually derive pleasure from anticipated future rewards.",
+    "translation": "제 말은, 앞날을 기대하는 것 외에도 말이죠. 물론 과학적으로도 앞으로 받을 보상을 기대하며 즐거움을 느낄 수 있다고 하잖아요."
+  },
+  {
+    "id": "seg-330",
+    "start": 1221.9992499999998,
+    "end": 1222.39975,
+    "speaker": "DUBNER",
+    "text": "Oh yeah.",
+    "translation": "그럼요."
+  },
+  {
+    "id": "seg-331",
+    "start": 1222.39975,
+    "end": 1225.159,
+    "speaker": "DUBNER",
+    "text": "The vacation you haven’t had yet is way better than the one you just had.",
+    "translation": "아직 안 간 휴가가 방금 다녀온 휴가보다 훨씬 더 좋죠."
+  },
+  {
+    "id": "seg-332",
+    "start": 1225.159,
+    "end": 1226.12,
+    "speaker": "DUBNER",
+    "text": "Always.",
+    "translation": "항상 그렇죠."
+  },
+  {
+    "id": "seg-333",
+    "start": 1226.12,
+    "end": 1226.54,
+    "speaker": "DUCKWORTH",
+    "text": "Exactly.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-334",
+    "start": 1226.54,
+    "end": 1233.9427142857144,
+    "speaker": "DUCKWORTH",
+    "text": "So, aside from anticipating the future, I mean, this shift in your mindset from: oh, what’s going to happen?",
+    "translation": "그러니까 미래를 기대하는 것 외에도, 마음가짐을 바꾸는 거죠. '아, 앞으로 무슨 일이 일어날까?'"
+  },
+  {
+    "id": "seg-335",
+    "start": 1233.9427142857144,
+    "end": 1234.6735714285714,
+    "speaker": "DUCKWORTH",
+    "text": "What could I do?",
+    "translation": "'내가 뭘 할 수 있을까?'"
+  },
+  {
+    "id": "seg-336",
+    "start": 1234.6735714285714,
+    "end": 1236.1000000000001,
+    "speaker": "DUCKWORTH",
+    "text": "What I haven’t yet done?",
+    "translation": "'아직 조바심내며 이루지 못한 건 뭐지?'에서"
+  },
+  {
+    "id": "seg-337",
+    "start": 1236.1000000000001,
+    "end": 1240.04,
+    "speaker": "DUCKWORTH",
+    "text": "To: life is complicated, and there’s a lot to be grateful for.",
+    "translation": "'인생은 참 복잡하지만, 감사할 일이 참 많구나'로 말이에요."
+  },
+  {
+    "id": "seg-338",
+    "start": 1240.04,
+    "end": 1252.4718,
+    "speaker": "DUBNER",
+    "text": "I know that Blanchflower and his colleagues do suggest that one potential reason for the upswing in happiness around midlife is that you’ve seen people that you grew up with having really bad fortune, dying and whatnot.",
+    "translation": "블랜치플라워와 동료 학자들의 연구를 보면, 중년에 접어들면서 행복도가 다시 올라가는 이유 중 하나로 같이 자란 주변 사람들이 정말 불행한 일을 겪거나 죽는 모습을 보게 되기 때문이라는 분석도 있더라고요."
+  },
+  {
+    "id": "seg-339",
+    "start": 1252.4718,
+    "end": 1256.4234,
+    "speaker": "DUBNER",
+    "text": "As you said, your gratitude may kind of start to kick in a little bit more.",
+    "translation": "말씀하신 대로, 감사하는 마음이 조금씩 더 생겨나기 시작하는 걸 수도 있겠네요."
+  },
+  {
+    "id": "seg-340",
+    "start": 1256.4234,
+    "end": 1260.6795000000002,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, the cynical interpretation of that is, it’s all downward social comparison.",
+    "translation": "그러니까 냉소적으로 해석하자면, 결국 전부 하향 사회 비교라는 거죠."
+  },
+  {
+    "id": "seg-341",
+    "start": 1260.6795000000002,
+    "end": 1263.7063333333333,
+    "speaker": "DUCKWORTH",
+    "text": "You look at people who like, oh, my gosh, I can’t believe that happened.",
+    "translation": "세상에, 어떻게 그런 일이 일어날 수 있지? 싶은 사람들을 보면서,"
+  },
+  {
+    "id": "seg-342",
+    "start": 1263.7063333333333,
+    "end": 1265.6,
+    "speaker": "DUCKWORTH",
+    "text": "And that somehow makes you feel better.",
+    "translation": "어쩐지 스스로 위안을 얻는 거예요."
+  },
+  {
+    "id": "seg-343",
+    "start": 1265.6,
+    "end": 1268.695,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, just having some perspective, right?",
+    "translation": "제 말은, 그냥 한 걸음 물러서서 넓게 보는 거라는 거죠."
+  },
+  {
+    "id": "seg-344",
+    "start": 1268.695,
+    "end": 1275.1333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "And that is something that 16-year-olds, God bless them, do not yet have in abundance.",
+    "translation": "그리고 그건 16살짜리 아이들에게는, 기특하게도, 아직 부족한 부분이고요."
+  },
+  {
+    "id": "seg-345",
+    "start": 1275.1333333333334,
+    "end": 1284.88,
+    "speaker": "DUCKWORTH",
+    "text": "The wide-angle lens on life that allows you to appreciate a good cup of coffee and, wow, nothing went wrong today.",
+    "translation": "커피 한 잔을 음미할 수 있게 해주고 '와, 오늘은 아무런 안 좋은 일도 없었네'라고 느끼게 해주는 인생의 광각 렌즈 같은 거 말이에요."
+  },
+  {
+    "id": "seg-346",
+    "start": 1284.88,
+    "end": 1285.02,
+    "speaker": "DUBNER",
+    "text": "Wow.",
+    "translation": "와."
+  },
+  {
+    "id": "seg-347",
+    "start": 1285.02,
+    "end": 1286.9726666666668,
+    "speaker": "DUBNER",
+    "text": "You really have lowered your expectations, haven’t you?",
+    "translation": "기대치를 정말 많이 낮추셨네요, 그렇죠?"
+  },
+  {
+    "id": "seg-348",
+    "start": 1286.9726666666668,
+    "end": 1288.8195,
+    "speaker": "DUCKWORTH",
+    "text": "I guess that’s why I’m so happy.",
+    "translation": "그래서 제가 이렇게 행복한가 봐요."
+  },
+  {
+    "id": "seg-349",
+    "start": 1288.8195,
+    "end": 1291.48,
+    "speaker": "DUBNER",
+    "text": "So, let me ask you one last question.",
+    "translation": "그럼, 마지막으로 질문 하나만 할게요."
+  },
+  {
+    "id": "seg-350",
+    "start": 1291.48,
+    "end": 1298.3056666666666,
+    "speaker": "DUBNER",
+    "text": "Let’s say that someone listening to this just wants to optimize their happiness, no matter how old they are, no matter what circumstances they’re in.",
+    "translation": "이 방송을 듣고 있는 누군가가 나이나 처한 상황에 상관없이 그냥 자신의 행복을 극대화하고 싶다고 해보죠."
+  },
+  {
+    "id": "seg-351",
+    "start": 1298.3056666666666,
+    "end": 1305.5485714285714,
+    "speaker": "DUBNER",
+    "text": "One thing that strikes me about looking at the curve is, it feels too imprecise to see it grouped just by year of age, right?",
+    "translation": "이 곡선을 보면서 드는 생각 중 하나는, 그냥 나이별로만 묶어서 보기에는 너무 부정확하다는 느낌이 든다는 거예요, 그렇죠?"
+  },
+  {
+    "id": "seg-352",
+    "start": 1305.5485714285714,
+    "end": 1313.5992,
+    "speaker": "DUBNER",
+    "text": "But if I’m 52 and supposed to be at the bottom of my happiness, about to climb, that doesn’t really relate to the things that actually happen day to day.",
+    "translation": "내가 만약 52세이고 행복의 최저점에 도달해 이제 막 올라갈 일만 남았다고 해도, 그게 실제로 매일 일어나는 일들과 직접적으로 와닿지는 않잖아요."
+  },
+  {
+    "id": "seg-353",
+    "start": 1313.5992,
+    "end": 1320.76,
+    "speaker": "DUBNER",
+    "text": "So how would you suggest people try to get rid of the things that make them unhappy and increase the ones that work?",
+    "translation": "그렇다면 사람들이 자신을 불행하게 만드는 일은 줄이고, 도움이 되는 일은 늘리기 위해 어떻게 해야 한다고 조언하시겠어요?"
+  },
+  {
+    "id": "seg-354",
+    "start": 1320.76,
+    "end": 1326.73925,
+    "speaker": "DUCKWORTH",
+    "text": "Anytime you see a pretty graph that has a nice U or a line, I mean, you know it’s an average.",
+    "translation": "예쁜 U자형이나 선 곡선 그래프를 볼 때마다, 그건 그냥 평균치라는 걸 염두에 두어야 해요."
+  },
+  {
+    "id": "seg-355",
+    "start": 1326.73925,
+    "end": 1330.7278000000001,
+    "speaker": "DUCKWORTH",
+    "text": "So, it’s not exactly the same curve for everyone.",
+    "translation": "그러니까 모두에게 똑같이 적용되는 곡선은 아니라는 거죠."
+  },
+  {
+    "id": "seg-356",
+    "start": 1330.7278000000001,
+    "end": 1336.8600000000001,
+    "speaker": "DUCKWORTH",
+    "text": "But more to the point, what can I do to actually make my slope a little more steep?",
+    "translation": "하지만 더 중요한 건, 내 그래프의 기울기를 실제로 조금 더 가파르게 만들기 위해 내가 무엇을 할 수 있는가 하는 점이에요."
+  },
+  {
+    "id": "seg-357",
+    "start": 1336.8600000000001,
+    "end": 1340.62,
+    "speaker": "DUCKWORTH",
+    "text": "Or make my inflection point happen now and not a year from now?",
+    "translation": "아니면 그 반등 시점이 1년 뒤가 아니라 바로 지금 오게 하려면 어떻게 해야 할까요?"
+  },
+  {
+    "id": "seg-358",
+    "start": 1340.62,
+    "end": 1345.7754,
+    "speaker": "DUCKWORTH",
+    "text": "I think the key to so much of our emotional well-being is attention.",
+    "translation": "저는 우리 정서적 웰빙의 핵심은 바로 '주의 집중'이라고 생각해요."
+  },
+  {
+    "id": "seg-359",
+    "start": 1345.7754,
+    "end": 1353.6,
+    "speaker": "DUCKWORTH",
+    "text": "So, for example, if I think of what happened in the last 24 hours, I mean, gosh, the mental landscape is vast.",
+    "translation": "예를 들어, 지난 24시간 동안 무슨 일이 있었는지 떠올려 보면, 정말이지 마음의 풍경은 어마어마하게 넓거든요."
+  },
+  {
+    "id": "seg-360",
+    "start": 1353.6,
+    "end": 1363.51,
+    "speaker": "DUCKWORTH",
+    "text": "Attention is central because I can choose to either think of all the things that happened that were good or I can choose to think about things that were bad.",
+    "translation": "주의를 어디에 기울이느냐가 정말 중요해요. 일어난 일 중에서 좋은 일들만 생각할 수도 있고, 나쁜 일들만 생각할 수도 있으니까요."
+  },
+  {
+    "id": "seg-361",
+    "start": 1363.51,
+    "end": 1367.2125555555556,
+    "speaker": "DUCKWORTH",
+    "text": "And if I make no choice at all, the default is to actually think of negative things.",
+    "translation": "그리고 아무런 선택도 하지 않으면, 기본적으로는 부정적인 것들을 생각하게 되죠."
+  },
+  {
+    "id": "seg-362",
+    "start": 1367.2125555555556,
+    "end": 1379.8923333333332,
+    "speaker": "DUCKWORTH",
+    "text": "And that is why one of the most reliable interventions to increase happiness is called the “Three Blessings Exercise.” And you simply think of three good things that happened, usually in the last 24 hours.",
+    "translation": "그래서 행복을 증진하는 가장 확실한 방법 중 하나가 '세 가지 감사한 일 적기'라고 불리는 거예요. 보통 지난 24시간 동안 일어났던 좋은 일 세 가지를 그냥 떠올려보는 거죠."
+  },
+  {
+    "id": "seg-363",
+    "start": 1379.8923333333332,
+    "end": 1381.4,
+    "speaker": "DUCKWORTH",
+    "text": "And you rattle them off.",
+    "translation": "그리고 그걸 빠르게 읊어보는 거예요."
+  },
+  {
+    "id": "seg-364",
+    "start": 1381.4,
+    "end": 1385.919,
+    "speaker": "DUCKWORTH",
+    "text": "I’ve gotten so good at it, I can do it usually in 10 or 15 seconds.",
+    "translation": "전 이게 아주 익숙해져서 보통 10초나 15초면 다 해요."
+  },
+  {
+    "id": "seg-365",
+    "start": 1385.919,
+    "end": 1389,
+    "speaker": "DUCKWORTH",
+    "text": "Lucy, Amanda, the avocado was ripe.",
+    "translation": "루시, 아만다, 그리고 아보카도가 잘 익은 것."
+  },
+  {
+    "id": "seg-366",
+    "start": 1389,
+    "end": 1389.1599999999999,
+    "speaker": "DUBNER",
+    "text": "Wait.",
+    "translation": "잠깐만요."
+  },
+  {
+    "id": "seg-367",
+    "start": 1389.1599999999999,
+    "end": 1391.58,
+    "speaker": "DUBNER",
+    "text": "Just naming your children fulfills the three?",
+    "translation": "그냥 아이들 이름만 대면 세 개가 채워지는 건가요?"
+  },
+  {
+    "id": "seg-368",
+    "start": 1391.58,
+    "end": 1392.12,
+    "speaker": "DUBNER",
+    "text": "That’s what you’re saying?",
+    "translation": "정말 그렇게 하신다는 거예요?"
+  },
+  {
+    "id": "seg-369",
+    "start": 1392.12,
+    "end": 1398.17925,
+    "speaker": "DUCKWORTH",
+    "text": "I know you’re going to say “That’s a kind of a cheat,” or “How is that possible?” But yeah, when I bring my kids to mind, I’m like, Lucy’s healthy, Amanda finished her midterms.",
+    "translation": "속임수라거나 그게 어떻게 말이 되냐고 하실 줄 알았어요. 하지만 아이들을 떠올리면 '루시가 건강하네', '아만다가 중간고사를 끝냈네' 같은 생각이 들거든요."
+  },
+  {
+    "id": "seg-370",
+    "start": 1398.17925,
+    "end": 1403.8472000000002,
+    "speaker": "DUCKWORTH",
+    "text": "And yeah, I mentioned the avocado, I don’t want to put that on the same level as my children.",
+    "translation": "아보카도 얘기는, 당연히 제 아이들과 같은 수준에 두려는 건 아니에요."
+  },
+  {
+    "id": "seg-371",
+    "start": 1403.8472000000002,
+    "end": 1408.8755555555556,
+    "speaker": "DUCKWORTH",
+    "text": "But it was a miracle of God that the avocado was actually not too ripe and not under-ripe.",
+    "translation": "하지만 아보카도가 너무 익지도 않고 덜 익지도 않은 상태였던 건 정말 신의 기적이었어요."
+  },
+  {
+    "id": "seg-372",
+    "start": 1408.8755555555556,
+    "end": 1419.2,
+    "speaker": "DUBNER",
+    "text": "Just so you know, that avocado is probably grown in Mexico where the avocado ranch is run by a criminal cartel killing and extorting innocent people.",
+    "translation": "참고로 말씀드리자면, 그 아보카도는 아마 멕시코에서 재배되었을 텐데, 거긴 범죄 카르텔이 무고한 사람들을 죽이고 갈취하며 아보카도 농장을 운영하는 곳이에요."
+  },
+  {
+    "id": "seg-373",
+    "start": 1419.2,
+    "end": 1420.40975,
+    "speaker": "DUCKWORTH",
+    "text": "I’ve got blood on my hands.",
+    "translation": "제 손에 피를 묻혔군요."
+  },
+  {
+    "id": "seg-374",
+    "start": 1420.40975,
+    "end": 1422.4796666666666,
+    "speaker": "DUBNER",
+    "text": "But if that makes you happy, Angela, that’s fine.",
+    "translation": "그래도 안젤라, 그걸로 행복하시다면 다행이네요."
+  },
+  {
+    "id": "seg-375",
+    "start": 1422.4796666666666,
+    "end": 1424.5439999999999,
+    "speaker": "DUCKWORTH",
+    "text": "There you go focusing on the negative, Stephen.",
+    "translation": "스티븐, 또 그렇게 부정적인 것에 집중하시네요."
+  },
+  {
+    "id": "seg-376",
+    "start": 1424.5439999999999,
+    "end": 1427.12,
+    "speaker": "DUCKWORTH",
+    "text": "You have so much to learn.",
+    "translation": "아직 배우실 게 참 많네요."
+  }
+]
