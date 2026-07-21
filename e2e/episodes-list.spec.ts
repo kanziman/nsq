@@ -91,7 +91,7 @@ test.describe('에피소드 목록 대시보드 UI E2E', () => {
     });
 
     // 1. 취소 흐름 검증
-    const deleteBtn = page.getByRole('button', { name: '삭제' });
+    const deleteBtn = page.getByRole('button', { name: '에피소드 삭제' });
     await deleteBtn.dispatchEvent('click');
 
     // 경고 다이얼로그 모달 오픈 확인
@@ -109,7 +109,7 @@ test.describe('에피소드 목록 대시보드 UI E2E', () => {
 
     // 2. 승인/삭제 성공 흐름 검증
     await deleteBtn.dispatchEvent('click');
-    const confirmBtn = page.getByRole('button', { name: '진짜 삭제' });
+    const confirmBtn = page.getByRole('button', { name: '삭제', exact: true });
     await confirmBtn.dispatchEvent('click');
 
     // 모달 및 카드가 최종적으로 DOM에서 제거됨을 검증
