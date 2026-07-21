@@ -80,7 +80,7 @@ export default function EpisodeCard({
               에피소드를 삭제하시겠습니까?
             </h4>
             <p className="text-xs text-muted-soft leading-[1.55]">
-              다운로드된 오디오 및 대본 정보가 컴퓨터에서 영구적으로 삭제됩니다.
+              다운로드된 오디오 및 대본 파일이 영구 삭제됩니다.
             </p>
           </div>
           <div className="flex justify-end gap-3">
@@ -94,7 +94,7 @@ export default function EpisodeCard({
               onClick={handleConfirmDelete}
               className="h-9 px-4 rounded-md bg-primary text-primary-foreground text-xs font-medium hover:bg-primary-active transition-colors cursor-pointer"
             >
-              진짜 삭제
+              삭제
             </button>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function EpisodeCard({
           />
           {onDelete && (
             <button
-              aria-label="삭제"
+              aria-label="에피소드 삭제"
               onClick={handleDeleteClick}
               className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
             >
@@ -155,7 +155,7 @@ export default function EpisodeCard({
         <div className="relative aspect-video w-full overflow-hidden bg-hairline/20 flex items-center justify-center">
           {onDelete && (
             <button
-              aria-label="삭제"
+              aria-label="에피소드 삭제"
               disabled
               className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/40 text-ink/40 border border-hairline/40 rounded-full shadow-sm backdrop-blur-sm cursor-not-allowed"
             >
@@ -207,7 +207,7 @@ export default function EpisodeCard({
       <div className="relative aspect-video w-full overflow-hidden bg-primary/5 flex items-center justify-center">
         {onDelete && (
           <button
-            aria-label="삭제"
+            aria-label="에피소드 삭제"
             onClick={handleDeleteClick}
             className="absolute top-2 right-2 z-10 w-8 h-8 flex items-center justify-center bg-surface-card/90 text-ink border border-hairline rounded-full shadow-sm backdrop-blur-sm transition-all duration-300 md:opacity-0 md:group-hover:opacity-100 hover:bg-danger hover:text-white hover:border-danger cursor-pointer"
           >
@@ -225,7 +225,7 @@ export default function EpisodeCard({
           </h3>
           <div className="group relative p-2.5 rounded-md bg-surface-dark border border-hairline text-xs text-on-dark-soft leading-[1.55] min-h-[3rem] overflow-hidden">
             <span className="line-clamp-2 group-hover:line-clamp-none transition-all duration-300">
-              {errorMsg || '임포트 중 상세 불명의 오류가 발생했습니다.'}
+              {errorMsg || '임포트 중 오류가 발생했습니다.'}
             </span>
           </div>
         </div>

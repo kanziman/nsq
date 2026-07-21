@@ -255,20 +255,20 @@ describe('EpisodeDashboard Component', () => {
     });
 
     // 2. 삭제 클릭 -> 다이얼로그 모달 오픈
-    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    const deleteBtn = screen.getByRole('button', { name: /에피소드 삭제/i });
     fireEvent.click(deleteBtn);
 
     expect(
       screen.getByText(/에피소드를 삭제하시겠습니까/i),
     ).toBeInTheDocument();
 
-    // 3. DELETE API 모의 및 진짜 삭제 클릭
+    // 3. DELETE API 모의 및 삭제 클릭
     vi.mocked(global.fetch).mockResolvedValueOnce({
       ok: true,
       json: async () => ({ success: true }),
     } as Response);
 
-    const confirmBtn = screen.getByRole('button', { name: /진짜 삭제/i });
+    const confirmBtn = screen.getByRole('button', { name: /^삭제$/i });
 
     await act(async () => {
       fireEvent.click(confirmBtn);

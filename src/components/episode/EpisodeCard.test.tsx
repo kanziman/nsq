@@ -128,7 +128,7 @@ describe('EpisodeCard Component', () => {
   it('should show AlertDialog modal when delete button is clicked', () => {
     render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
 
-    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    const deleteBtn = screen.getByRole('button', { name: /에피소드 삭제/i });
     fireEvent.click(deleteBtn);
 
     expect(
@@ -139,10 +139,10 @@ describe('EpisodeCard Component', () => {
   it('should call onDelete prop and close modal when confirm delete is clicked', async () => {
     render(<EpisodeCard episode={COMPLETED_EPISODE} onDelete={mockOnDelete} />);
 
-    const deleteBtn = screen.getByRole('button', { name: /삭제/i });
+    const deleteBtn = screen.getByRole('button', { name: /에피소드 삭제/i });
     fireEvent.click(deleteBtn);
 
-    const confirmBtn = screen.getByRole('button', { name: /진짜 삭제/i });
+    const confirmBtn = screen.getByRole('button', { name: /^삭제$/i });
     fireEvent.click(confirmBtn);
 
     expect(mockOnDelete).toHaveBeenCalledTimes(1);
