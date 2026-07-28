@@ -1,0 +1,438 @@
+{"speaker":"DUBNER","text":"I don’t mean to be disrespectful."}
+{"speaker":"DUCKWORTH","text":"Except for, you do."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"I’m Stephen Dubner."}
+{"speaker":"BOTH","text":"And you’re listening to No Stupid Questions."}
+{"speaker":"NARRATOR","text":"Today on the show: we all need feedback to improve, so why is it so hard to hear criticism?"}
+{"speaker":"DUCKWORTH","text":"If you don’t give him critical feedback, what he could have done better …"}
+{"speaker":"DUBNER","text":"He tells you what a terrible person you are."}
+{"speaker":"DUCKWORTH","text":"He just denigrates you."}
+{"speaker":"NARRATOR","text":"Also: which is the more meaningful act — celebrating a friend’s accomplishment, or supporting them through a loss?"}
+{"speaker":"DUCKWORTH","text":"Most people already know to be supportive when someone is having a bad day."}
+{"speaker":"DUBNER","text":"So it’s okay to ditch him because you already know that."}
+{"speaker":"DUBNER","text":"Whereas if something good happens, I want to be there for the champagne."}
+{"speaker":"DUCKWORTH","text":"Stephen."}
+{"speaker":"DUBNER","text":"Angela."}
+{"speaker":"DUCKWORTH","text":"Everyone I know recognizes that feedback makes you better, whatever it is that you’re trying to do."}
+{"speaker":"DUCKWORTH","text":"But nobody I know likes to be criticized."}
+{"speaker":"DUCKWORTH","text":"So what do you think that is?"}
+{"speaker":"DUBNER","text":"So I do love that question."}
+{"speaker":"DUBNER","text":"But let me ask you a couple of questions about the question."}
+{"speaker":"DUBNER","text":"So you’re linking feedback and criticism."}
+{"speaker":"DUCKWORTH","text":"Negative feedback."}
+{"speaker":"DUBNER","text":"When you said feedback makes you better, I believe in that more than I believe in just about anything on earth."}
+{"speaker":"DUBNER","text":"If you want to improve, you need really good feedback."}
+{"speaker":"DUBNER","text":"But I would also say there are a lot of forms of feedback, including negative feedback, that aren’t really criticism, that aren’t painful at all."}
+{"speaker":"DUCKWORTH","text":"Like what?"}
+{"speaker":"DUBNER","text":"Well, I think about — I’m a kind of mid-career golfer, right?"}
+{"speaker":"DUBNER","text":"One of my favorite things about golf is that the feedback loop is super tight."}
+{"speaker":"DUCKWORTH","text":"It’s so short because it’s immediate, right?"}
+{"speaker":"DUBNER","text":"Immediate."}
+{"speaker":"DUCKWORTH","text":"You see if the ball went where you want it to go."}
+{"speaker":"DUBNER","text":"And also, once you start to learn a little bit about the physics of the swing and how it works, you become self-diagnosing."}
+{"speaker":"DUCKWORTH","text":"So you not only know where the ball went, you know why it went off course."}
+{"speaker":"DUBNER","text":"Exactly."}
+{"speaker":"DUBNER","text":"And that to me is a really exciting thing, because, like you said, it’s hard to learn or improve at anything without getting feedback."}
+{"speaker":"DUBNER","text":"But the kind of feedback you’re talking about, you’re talking about criticism of how I did a certain thing assessed by someone beyond me."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I think it’s usually from another person, right?"}
+{"speaker":"DUCKWORTH","text":"It’s not from just looking at the ball."}
+{"speaker":"DUBNER","text":"So I agree that everybody says they want it."}
+{"speaker":"DUBNER","text":"And nobody really does."}
+{"speaker":"DUBNER","text":"And honestly, I think it is a universal paradox that we know it’s good for us, and we know that it’s painful."}
+{"speaker":"DUBNER","text":"I’ve asked a lot of different people a form of this question."}
+{"speaker":"DUBNER","text":"In fact, I recently asked it to David Byrne, a songwriter-performer —"}
+{"speaker":"DUCKWORTH","text":"Talking Heads."}
+{"speaker":"DUBNER","text":"Talking Heads."}
+{"speaker":"DUBNER","text":"And I just asked him, Talking Heads were a very, very well-reviewed rock band."}
+{"speaker":"DUBNER","text":"They were, like, a total critic’s favorite."}
+{"speaker":"DUBNER","text":"It’d be really hard to find a critic from back then that mattered that didn’t like Talking Heads."}
+{"speaker":"DUBNER","text":"But I asked him about negative reviews and he sounded as wounded and fragile as anybody, which is that, yeah, they really, really, really hurt."}
+{"speaker":"DUCKWORTH","text":"He can probably still remember some of them."}
+{"speaker":"DUBNER","text":"He did remember them."}
+{"speaker":"DUBNER","text":"But here’s the way I feel about accepting criticism."}
+{"speaker":"DUBNER","text":"If people are coming at you with feedback that is useful for improving yourself, then you should run at it and embrace it, even if it’s painful."}
+{"speaker":"DUBNER","text":"But if they’re criticizing you on a dimension that is either dogmatic, or personal, or unbalanced — which you often encounter — so really what you have to do is you have to learn to sort out the different categories of criticism."}
+{"speaker":"DUBNER","text":"And they go into heaps."}
+{"speaker":"DUBNER","text":"And the heap that has critical stuff that’s useful is really small."}
+{"speaker":"DUBNER","text":"Let’s say I write an article or do a podcast that gets 500 comments or replies on Twitter."}
+{"speaker":"DUBNER","text":"It doesn’t take that long to triage through and say, “Okay, those 400 are saying, yeah, it’s nice,” but then there’s 80 that say, “Oh, I can’t believe you let this person come on your show to say these things.” And to them I say, “Okay, that’s a listener who’s got a point of view that I disagree with."}
+{"speaker":"DUBNER","text":"I think it’s nice to have people you may disagree with voice their views and hear about them, right?” And then there might be 10 or 15 that actually say, “You tried to make this point, but ultimately, you failed because you didn’t bring in this variable or this idea.” And to me, that is the most valuable."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"That tiny little sliver."}
+{"speaker":"DUBNER","text":"So I feel the biggest problem with criticism and accepting feedback is that since the vast majority is mostly noise, most people don’t want to sift through to get the signal that will actually make them better."}
+{"speaker":"DUCKWORTH","text":"Yeah, I think that’s right."}
+{"speaker":"DUCKWORTH","text":"And I think even when you do know that you’re talking about really useful feedback from a credible source, I personally still find it hard to take."}
+{"speaker":"DUCKWORTH","text":"I really do."}
+{"speaker":"DUBNER","text":"Would you rather they say, “I love this and everything you do”?"}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"I’m of two minds."}
+{"speaker":"DUCKWORTH","text":"Part of me really does just want unadulterated praise."}
+{"speaker":"DUCKWORTH","text":"At the end of my class, my students rate my class, and then they have these open-ended comments."}
+{"speaker":"DUCKWORTH","text":"And I’m hoping to get 10 out of 10."}
+{"speaker":"DUCKWORTH","text":"And when I see a student giving me a three out of 10, which happens, I’m awake at night worrying about it."}
+{"speaker":"DUBNER","text":"Are they anonymous?"}
+{"speaker":"DUCKWORTH","text":"Completely anonymous."}
+{"speaker":"DUBNER","text":"So you can’t seek out and punish that person."}
+{"speaker":"DUCKWORTH","text":"I can’t fail that person."}
+{"speaker":"DUBNER","text":"But you would if you could."}
+{"speaker":"DUCKWORTH","text":"I hope not."}
+{"speaker":"DUCKWORTH","text":"But okay."}
+{"speaker":"DUCKWORTH","text":"So that’s part of me, right?"}
+{"speaker":"DUCKWORTH","text":"I just want praise."}
+{"speaker":"DUCKWORTH","text":"But there’s another competing part of me that wants to get better and wants to make the next class better."}
+{"speaker":"DUCKWORTH","text":"And I think this explains why everybody knows that feedback makes them better, and then nobody wants it."}
+{"speaker":"DUCKWORTH","text":"It’s not inconsistent when you just realize that people contain multiple selves."}
+{"speaker":"DUCKWORTH","text":"Multiple motives."}
+{"speaker":"DUCKWORTH","text":"And I think even just understanding that has been helpful."}
+{"speaker":"DUCKWORTH","text":"My friend — and you know him as well, Adam Grant — taught me this trick."}
+{"speaker":"DUCKWORTH","text":"So Adam asks for feedback all the time."}
+{"speaker":"DUCKWORTH","text":"Especially, I’m thinking of when he gives talks."}
+{"speaker":"DUCKWORTH","text":"And if you don’t give him critical feedback, what he could have done better —"}
+{"speaker":"DUBNER","text":"He tells you what a terrible person you are."}
+{"speaker":"DUCKWORTH","text":"He just denigrates you."}
+{"speaker":"DUCKWORTH","text":"That’s basically how it works."}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUCKWORTH","text":"He’s very persistent, though."}
+{"speaker":"DUCKWORTH","text":"He keeps asking."}
+{"speaker":"DUCKWORTH","text":"And he has this trick, which is that, he doesn’t like the experience of getting negative feedback, but then he grades himself on how he received the feedback."}
+{"speaker":"DUCKWORTH","text":"So it gives him an opportunity to still get a 10 out of 10, because you could get a three out of 10 from the student, and then you could say, “Oh, but you know what?"}
+{"speaker":"DUCKWORTH","text":"I give myself a 10 out of 10 for listening to the feedback.”"}
+{"speaker":"DUBNER","text":"So outside of, let’s say, teaching a class or writing a book, do you seek out and/or desire honest assessments of things you do?"}
+{"speaker":"DUCKWORTH","text":"For a short while, I was asking for numeric ratings on dinner."}
+{"speaker":"DUCKWORTH","text":"Okay, scale from zero to 10, how are we rating these enchiladas?"}
+{"speaker":"DUCKWORTH","text":"Seven."}
+{"speaker":"DUCKWORTH","text":"How could I make it an eight?"}
+{"speaker":"DUBNER","text":"But did you accept that?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"One thing I will say is that when it comes to things that are not part of your identity — I mean, the paradox is that the core identity of a person is the actual thing that they do want to probably get better at, right?"}
+{"speaker":"DUCKWORTH","text":"So say somebody says, “You know what, Stephen?"}
+{"speaker":"DUCKWORTH","text":"You’re a little condescending.” Actually, some students have told me I’m a little condescending and I name-drop."}
+{"speaker":"DUCKWORTH","text":"And when I first read that in my comments on my course, I was like, “What?"}
+{"speaker":"DUCKWORTH","text":"That’s ridiculous.” But I think it cut so close to the bone because in my identity I really don’t want to be that sort of person."}
+{"speaker":"DUCKWORTH","text":"But that’s the exact kind of criticism I should be open to."}
+{"speaker":"DUCKWORTH","text":"So I think I’ve achieved some kind of at least awareness."}
+{"speaker":"DUCKWORTH","text":"Don’t you think that’s progress?"}
+{"speaker":"DUBNER","text":"I do think that’s progress."}
+{"speaker":"DUBNER","text":"I think it’s also fair to ask yourself: Well, okay, this person has a critical thing to say."}
+{"speaker":"DUBNER","text":"I recognize it as legitimate."}
+{"speaker":"DUBNER","text":"But there’s also a reason that you do it, and you’re okay with that."}
+{"speaker":"DUCKWORTH","text":"But if you do that, then you’re never going to change, right?"}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"Well, here’s an important thing, I think."}
+{"speaker":"DUBNER","text":"You have to acknowledge that there’s great heterogeneity among humans, and no one likes everything."}
+{"speaker":"DUBNER","text":"So here’s an example."}
+{"speaker":"DUBNER","text":"When I was in grad school — I did an M.F.A., a writing program — and there were workshops and seminars."}
+{"speaker":"DUBNER","text":"Seminars were instruction."}
+{"speaker":"DUBNER","text":"Workshops were, students would bring in their writing."}
+{"speaker":"DUBNER","text":"So you would get somebody’s manuscript, and it would usually be like 30 to 50 pages of a novel or a short story."}
+{"speaker":"DUBNER","text":"Take them home and read them, and then you’d come in, and you’d discuss them."}
+{"speaker":"DUBNER","text":"As you can imagine, those conversations could become very fraught with all different sorts of emotions."}
+{"speaker":"DUBNER","text":"There were all kinds of cliques, friendships, enemies."}
+{"speaker":"DUBNER","text":"There were people who liked a certain style of writing and others who didn’t and so on."}
+{"speaker":"DUBNER","text":"But what was really interesting to me is once you get a few weeks into the semester, it was totally predictable who would like what and why."}
+{"speaker":"DUCKWORTH","text":"So you knew probably even before you entered the room?"}
+{"speaker":"DUBNER","text":"Everybody knew, really, who was going to like it in an earnest way, who was going to like it in a grudging way, who was going to dislike, on, and on, and on."}
+{"speaker":"DUBNER","text":"And then I started to think, “Well, what if you brought in here some manuscript that didn’t have a name on it?"}
+{"speaker":"DUBNER","text":"Anonymous."}
+{"speaker":"DUBNER","text":"And let’s say I’m the professor, and I slip in a manuscript that’s not written by someone in the class."}
+{"speaker":"DUBNER","text":"Maybe it’s Virginia Woolf, maybe it’s Tolstoy?” And can I tell you what?"}
+{"speaker":"DUBNER","text":"Virginia Woolf would have gotten the crap beat out of her in that class, including by people who think they love Virginia Woolf."}
+{"speaker":"DUCKWORTH","text":"So you’re saying that these are biased reviews, right?"}
+{"speaker":"DUBNER","text":"I’m saying, A, there’s bias, and B, there’s taste, there’s preference."}
+{"speaker":"DUBNER","text":"And so when you are the person getting the criticism, you have to say to yourself, you know what, if it’s golf, the shot was good or not."}
+{"speaker":"DUBNER","text":"Right?"}
+{"speaker":"DUBNER","text":"But if it’s subjective, you have to say, there is a group of people out there who are not interested in this idea for reasons that I may think are legitimate or not."}
+{"speaker":"DUBNER","text":"And I’m going to be okay with having that criticism exist."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"But Stephen, what if three people, three separate people —"}
+{"speaker":"DUBNER","text":"Say that you’re condescending and name-dropping?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"If you got that feedback."}
+{"speaker":"DUBNER","text":"Okay, so here’s what I think you don’t want to do."}
+{"speaker":"DUBNER","text":"If you’re a banker, you’re a writer, you’re a parent, creative person, whatever, the biggest mistake we can make, and I’ve made this mistake, is let criticism hurt you to the point where you narrow and shrink your drive."}
+{"speaker":"DUBNER","text":"When I was a young writer — just moved to New York — I was writing all different kinds of things."}
+{"speaker":"DUBNER","text":"And I had a play going that I was so excited about."}
+{"speaker":"DUBNER","text":"And then, I happened one evening to have dinner with a much older gentleman that I’d gotten to know — a guy that I’d done some work for."}
+{"speaker":"DUBNER","text":"And he was a playwright."}
+{"speaker":"DUBNER","text":"I was a word processor for living."}
+{"speaker":"DUBNER","text":"This is back when people were just starting to get their things revised on computer."}
+{"speaker":"DUBNER","text":"So I was a guy who knew how to do that."}
+{"speaker":"DUBNER","text":"So I had re-typed a couple of his plays."}
+{"speaker":"DUBNER","text":"And so, we became friends, and we went out to dinner and he said, “What are you working on?” And I told him about this play."}
+{"speaker":"DUBNER","text":"And he was a really nice guy."}
+{"speaker":"DUCKWORTH","text":"He hated it."}
+{"speaker":"DUBNER","text":"Hated it."}
+{"speaker":"DUBNER","text":"He said, “Wow."}
+{"speaker":"DUBNER","text":"It’s not a good idea."}
+{"speaker":"DUBNER","text":"It’s not going to work."}
+{"speaker":"DUBNER","text":"I wouldn’t spend any time on that.” And it broke me."}
+{"speaker":"DUBNER","text":"And I literally never went back to it because I didn’t have the confidence."}
+{"speaker":"DUBNER","text":"Now, I’m not saying that would have been a good play."}
+{"speaker":"DUBNER","text":"But I really regret that, because I let someone else’s criticism, which may or may not have been legitimate, shrink my choice set."}
+{"speaker":"DUBNER","text":"I want to be the only one shrinking my choice set."}
+{"speaker":"DUBNER","text":"And that’s where I feel that criticism hurts a lot of people unduly."}
+{"speaker":"DUCKWORTH","text":"The guy can’t even use a word processor, for God’s sake."}
+{"speaker":"DUCKWORTH","text":"What do you know?!"}
+{"speaker":"DUBNER","text":"But at the end of the day, he’s one person and I’m the one that’s making it."}
+{"speaker":"DUBNER","text":"I need to forge on until I’m convinced that it’s no good or good."}
+{"speaker":"DUCKWORTH","text":"So I think the summary recommendation is that we should be hungry for feedback and actually, that appetite for knowing what other people think doesn’t mean that we have to swallow everything."}
+{"speaker":"DUBNER","text":"I have read about research by psychologists that make feedback more effective by including a preface."}
+{"speaker":"DUBNER","text":"Do you know about this research?"}
+{"speaker":"DUCKWORTH","text":"I think I remember being one of the blind reviewers."}
+{"speaker":"DUBNER","text":"Did you give them some good criticism?"}
+{"speaker":"DUCKWORTH","text":"I actually mostly praised."}
+{"speaker":"DUCKWORTH","text":"I love this paper."}
+{"speaker":"DUBNER","text":"So here’s the preface."}
+{"speaker":"DUBNER","text":"These are the 19 words you’re supposed to say before you tell someone how much they’ve screwed up."}
+{"speaker":"DUBNER","text":"“I’m giving you these comments because I have very high expectations, and I know that you can reach them.”"}
+{"speaker":"DUCKWORTH","text":"I think it’s genius."}
+{"speaker":"DUCKWORTH","text":"This is the work of David Yeager and Geoff Cohen and other psychologists."}
+{"speaker":"DUCKWORTH","text":"And it’s called the wise-feedback paper."}
+{"speaker":"DUCKWORTH","text":"It’s actually now quite well-known."}
+{"speaker":"DUCKWORTH","text":"And it was a random assignment study."}
+{"speaker":"DUCKWORTH","text":"I remember very well, actually, from reading it the first time, where students are writing essays in class."}
+{"speaker":"DUCKWORTH","text":"And the miraculous effect was that the students who got this short encouragement, just 19 words, were much more eager to do something with the feedback."}
+{"speaker":"DUCKWORTH","text":"So they revised their essays."}
+{"speaker":"DUCKWORTH","text":"I think in some subsequent studies they did better academically, especially students who had been struggling."}
+{"speaker":"DUCKWORTH","text":"And it’s terrific advice for all of us feedback givers — and we all are in one way, shape, or form — which is, I think what we’re trying to communicate to people is useful information."}
+{"speaker":"DUCKWORTH","text":"And this little preface inoculates the receiver from the kind of like, “I’m not good, and you don’t think I can make it.” And I think a lot of times when people get criticism, they think the real message is that they’re not going to make it."}
+{"speaker":"DUCKWORTH","text":"And this little 19-word preface says, “No, the reason I’m giving you this feedback is because I think you are going to make it, and this is going to help you get there.”"}
+{"speaker":"DUBNER","text":"I will say, as a receiver of feedback, not a dispenser, but as a receiver, I kind of am attracted to the idea of radical candor, as some people call it."}
+{"speaker":"DUBNER","text":"Obviously, every environment is different."}
+{"speaker":"DUBNER","text":"But some of the criticism that I remember the most as feeling hurtful, it was unspoken criticism."}
+{"speaker":"DUCKWORTH","text":"Kind of like a passive-aggressive —"}
+{"speaker":"DUBNER","text":"I think it was meant out of love, honestly."}
+{"speaker":"DUBNER","text":"My first life was playing music in a band, and we were pretty noisy, borderline-punky band."}
+{"speaker":"DUBNER","text":"And once in a while, one of my siblings or someone would say, “Hey, I see you’re playing so-and-so."}
+{"speaker":"DUBNER","text":"I’m going to come see you.” And I’d say, “You don’t really need to do that.” But then they would show up."}
+{"speaker":"DUBNER","text":"I knew it wasn’t the kind of music that they would like."}
+{"speaker":"DUBNER","text":"And I remember one time, we were playing here in New York."}
+{"speaker":"DUBNER","text":"We didn’t live here."}
+{"speaker":"DUBNER","text":"It was a big deal."}
+{"speaker":"DUBNER","text":"And I had a sibling come."}
+{"speaker":"DUBNER","text":"After the show, I remember him saying, “You guys really looked like you were having a lot of fun up there.” And I remember just thinking, it’s okay to say, “Wow, this is not my kinda thing, but way to go.” Whatever."}
+{"speaker":"DUBNER","text":"It would be like me saying at the end of this this podcast, “Angela, you really said a lot of words there.”"}
+{"speaker":"DUCKWORTH","text":"So this idea of radical candor, which I think is a business phrase, right?"}
+{"speaker":"DUBNER","text":"Made famous by Ray Dalio of Bridgewater Associates."}
+{"speaker":"DUCKWORTH","text":"And Kim Scott, right?"}
+{"speaker":"DUCKWORTH","text":"Kim Scott wrote a book called Radical Candor."}
+{"speaker":"DUCKWORTH","text":"And I think the basic idea is when you have a culture of truth-telling at all times."}
+{"speaker":"DUCKWORTH","text":"I mean, Stephen, your breath smells."}
+{"speaker":"DUCKWORTH","text":"That joke there was both unfunny and inappropriate."}
+{"speaker":"DUBNER","text":"I’m out of here."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"You can slam the door on the way out."}
+{"speaker":"DUCKWORTH","text":"And I’m very sympathetic to that, if it can really be done well."}
+{"speaker":"DUCKWORTH","text":"I think the problem is when you have some people who are bought in to radical candor and other people who hate it."}
+{"speaker":"DUBNER","text":"I think an exercise for you and me after this session is over, we should each send each other an email with some feedback."}
+{"speaker":"DUCKWORTH","text":"Can we make it only nasty feedback?"}
+{"speaker":"DUBNER","text":"We’ll have to agree to press the button at the same time."}
+{"speaker":"DUBNER","text":"So I can’t make mine nastier based on how nasty you were to me."}
+{"speaker":"DUBNER","text":"Is that a deal?"}
+{"speaker":"DUCKWORTH","text":"Well, okay."}
+{"speaker":"DUCKWORTH","text":"I’m fine with that."}
+{"speaker":"DUCKWORTH","text":"But I want to tell you one thing."}
+{"speaker":"DUCKWORTH","text":"I’m giving you those comments because I have very high expectations."}
+{"speaker":"DUCKWORTH","text":"And I know you can reach them."}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions: Angela teaches Stephen how to support a friend in need."}
+{"speaker":"DUCKWORTH","text":"Use your judgment."}
+{"speaker":"DUBNER","text":"I need the script."}
+{"speaker":"DUBNER","text":"I don’t want judgment!"}
+{"speaker":"DUBNER","text":"Okay, Angela Duckworth, question for you."}
+{"speaker":"DUBNER","text":"It could be real, but it’s mostly a thought experiment."}
+{"speaker":"DUBNER","text":"So, let’s say you’ve got a choice, a binary choice."}
+{"speaker":"DUBNER","text":"You can send one note of congratulations to someone who you feel deserves it, or you can send one condolence note to someone who really needs it."}
+{"speaker":"DUBNER","text":"Which do you send, and why?"}
+{"speaker":"DUBNER","text":"And actually, I can make it more realistic."}
+{"speaker":"DUBNER","text":"So, I happen to know that you know Pete Carroll, football coach of the Seattle Seahawks."}
+{"speaker":"DUCKWORTH","text":"Yes, of course."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUBNER","text":"You know him through your Grit work and so on?"}
+{"speaker":"DUCKWORTH","text":"I do."}
+{"speaker":"DUCKWORTH","text":"And he’s also an advisor to my nonprofit, Character Lab."}
+{"speaker":"DUBNER","text":"And I know that you’re not a big football fan."}
+{"speaker":"DUBNER","text":"Not especially."}
+{"speaker":"DUBNER","text":"But you’ve heard of football."}
+{"speaker":"DUBNER","text":"You know what it is."}
+{"speaker":"DUCKWORTH","text":"Yes, mostly from Pete Carroll."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"So, here’s a guy who’s been a, a very successful coach for many, many years and apparently is a nice and charismatic human."}
+{"speaker":"DUBNER","text":"Is that true?"}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUCKWORTH","text":"He’s a very nice and charismatic human."}
+{"speaker":"DUCKWORTH","text":"Like, genuinely."}
+{"speaker":"DUBNER","text":"So, let’s imagine that the Seattle Seahawks are playing in the Super Bowl, which they have done in the past."}
+{"speaker":"DUCKWORTH","text":"They have."}
+{"speaker":"DUBNER","text":"And they’ve won one."}
+{"speaker":"DUBNER","text":"They’ve lost one."}
+{"speaker":"DUBNER","text":"I think that’s right."}
+{"speaker":"DUBNER","text":"They’ve won one and lost one."}
+{"speaker":"DUCKWORTH","text":"They’ve won one for sure."}
+{"speaker":"DUBNER","text":"Okay, so let’s say that Pete Carroll and his Seattle Seahawks are playing in the Super Bowl and they win in one version of this thought experiment and the other version they lose."}
+{"speaker":"DUBNER","text":"To which event do you respond more quickly with a note, the congratulatory note or the condolence note, and why?"}
+{"speaker":"DUCKWORTH","text":"I would, in that hypothetical, be much quicker to congratulate than to extend condolences."}
+{"speaker":"DUBNER","text":"Because why?"}
+{"speaker":"DUCKWORTH","text":"You know, I think —"}
+{"speaker":"DUBNER","text":"Because surely, he’s already gotten 15,000 other congratulatory notes."}
+{"speaker":"DUBNER","text":"Everybody wants to be his friend right now."}
+{"speaker":"DUCKWORTH","text":"I’m just going to be lost in a sea of congratulations."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"So is the congratulations for him?"}
+{"speaker":"DUBNER","text":"For you?"}
+{"speaker":"DUCKWORTH","text":"Well, I think that there’s one reason why the congratulations come faster."}
+{"speaker":"DUCKWORTH","text":"And I always hesitate with the condolence note because I always actually find it hard to do it well."}
+{"speaker":"DUCKWORTH","text":"I often find myself writing things like, “Let me know if there’s anything I can do.” And it’s blindingly obvious that there’s literally nothing you could do."}
+{"speaker":"DUCKWORTH","text":"Now, when you write a note of congratulations, for me it’s very intuitive."}
+{"speaker":"DUCKWORTH","text":"And I happen to know there’s also scientific research behind this, is that the job of somebody writing a note of congratulations is to match the level of energy and the tone of the person who’s experiencing the victory."}
+{"speaker":"DUBNER","text":"When you say it’s their job, with the outcome being what?"}
+{"speaker":"DUCKWORTH","text":"I think when somebody has something good happen to them, what they’re looking for is to have it kind of like, first of all, sustained, right?"}
+{"speaker":"DUCKWORTH","text":"And second of all, it would be great if you could be in some kind of positive echo chamber and your good fortune gets magnified."}
+{"speaker":"DUBNER","text":"And, like, you understand what a big deal this was."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"Imagine this."}
+{"speaker":"DUCKWORTH","text":"Imagine that you’re applying for some kind of job or fellowship and you get it."}
+{"speaker":"DUCKWORTH","text":"So, Stephen, there are actually four different ways you can respond when somebody has good news."}
+{"speaker":"DUCKWORTH","text":"All right, there’s active and there’s passive."}
+{"speaker":"DUCKWORTH","text":"And then there’s constructive and destructive."}
+{"speaker":"DUCKWORTH","text":"So, the research from Shelly Gable says that what people are looking for is active-constructive responses to good news."}
+{"speaker":"DUCKWORTH","text":"You know, you match my tone."}
+{"speaker":"DUCKWORTH","text":"You’re enthusiastic."}
+{"speaker":"DUCKWORTH","text":"You ask for elaboration."}
+{"speaker":"DUCKWORTH","text":"You want to know more."}
+{"speaker":"DUCKWORTH","text":"All right, that’s the best."}
+{"speaker":"DUCKWORTH","text":"The worst is probably active-destructive, where you’re high energy, but you’re like, “This is terrible."}
+{"speaker":"DUCKWORTH","text":"Imagine the taxes on that fellowship.” Right?"}
+{"speaker":"DUCKWORTH","text":"And that’s really, really toxic."}
+{"speaker":"DUCKWORTH","text":"But there’s two other not so great ways to respond to a friend."}
+{"speaker":"DUCKWORTH","text":"And one is passive-constructive."}
+{"speaker":"DUCKWORTH","text":"So you’re being constructive, but you’re not matching me in my energy."}
+{"speaker":"DUCKWORTH","text":"You’re like, “Oh, I guess that’s nice.” And then finally, there’s passive-destructive where you’re like, you know —."}
+{"speaker":"DUBNER","text":"Have you seen the butter?"}
+{"speaker":"DUCKWORTH","text":"Exactly."}
+{"speaker":"DUCKWORTH","text":"Exactly."}
+{"speaker":"DUCKWORTH","text":"It’s like, “Stephen, oh, my gosh, this fellowship actually happened."}
+{"speaker":"DUCKWORTH","text":"I can’t believe it.’” And you’re like, “So I wonder what time dinner is going to be.”"}
+{"speaker":"DUBNER","text":"And number 4 is the best you’re saying, to be clear, passive-destructive is the best?"}
+{"speaker":"DUCKWORTH","text":"That’s exactly what I wanted you to take home."}
+{"speaker":"DUCKWORTH","text":"No, Stephen, please be actively constructive."}
+{"speaker":"DUCKWORTH","text":"I know you can do it."}
+{"speaker":"DUBNER","text":"Okay, so if scientists have thought through so much the optimizing congratulations, why not condolences?"}
+{"speaker":"DUBNER","text":"Why don’t you know as much about that?"}
+{"speaker":"DUBNER","text":"Because you were saying that you don’t really know how to do that well."}
+{"speaker":"DUBNER","text":"Why not?"}
+{"speaker":"DUCKWORTH","text":"Well, I think if it’s in writing especially, right?"}
+{"speaker":"DUCKWORTH","text":"When you’re sending somebody a note, you feel like you’re just saying cliché things that feel insincere."}
+{"speaker":"DUCKWORTH","text":"You end up saying things like, “I’m sorry for your loss."}
+{"speaker":"DUCKWORTH","text":"If there’s anything I can do, please let me know."}
+{"speaker":"DUCKWORTH","text":"My thoughts are with you.” And honestly, those things are usually completely true."}
+{"speaker":"DUCKWORTH","text":"But I think sometimes it just feels unthoughtful or not specific enough."}
+{"speaker":"DUBNER","text":"What does the science tell us about being on the receiving end, though, when you’re grieving, mourning, experiencing a loss?"}
+{"speaker":"DUBNER","text":"And again, the loss could range from a loved one dying, to not getting a promotion, to losing a football game, etc.?"}
+{"speaker":"DUCKWORTH","text":"Well, I’m most acquainted with the research on how to be a good friend to someone who’s grieving or experiencing distress in person."}
+{"speaker":"NARRATOR","text":"DUBNER: Okay."}
+{"speaker":"NARRATOR","text":"So, tell us what you know about that."}
+{"speaker":"DUCKWORTH","text":"So the technique to use is something called supportive listening."}
+{"speaker":"DUCKWORTH","text":"And in a nutshell, it is that when you are listening to someone who is going through a real emotional episode, you want to be empathic and you don’t want to leap to what many people do, which is to try to get them out of their funk right away."}
+{"speaker":"DUCKWORTH","text":"Try to problem solve for them."}
+{"speaker":"DUCKWORTH","text":"Mostly what people need to feel is to feel heard and seen."}
+{"speaker":"DUCKWORTH","text":"So, you kind of echo back what they said."}
+{"speaker":"DUCKWORTH","text":"If someone says, “Oh, my God, I just feel so lonely,” don’t say, “Oh there’s all these reasons not to feel lonely.” Say, “What I hear you saying is that you feel lonely."}
+{"speaker":"DUCKWORTH","text":"And, and that must be really hard.”"}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"I’m sorry."}
+{"speaker":"DUBNER","text":"That sounded like a Saturday Night Live version of grieving."}
+{"speaker":"DUBNER","text":"“What I hear you saying is you feel lonely.” Well, yeah."}
+{"speaker":"DUCKWORTH","text":"I know."}
+{"speaker":"DUCKWORTH","text":"It sounds like it shouldn’t work, right?"}
+{"speaker":"DUBNER","text":"I don’t mean to be disrespectful."}
+{"speaker":"DUCKWORTH","text":"Except for, you do."}
+{"speaker":"DUBNER","text":"Well, maybe a little bit, but no."}
+{"speaker":"DUBNER","text":"So you’re saying it’s literally say, “What I hear you saying is the thing that you just said.”"}
+{"speaker":"DUCKWORTH","text":"Yes."}
+{"speaker":"DUCKWORTH","text":"It’s like you’re reflecting back to that person."}
+{"speaker":"DUCKWORTH","text":"Now look, I know you’re skeptical, right?"}
+{"speaker":"DUBNER","text":"What I hear you saying is that you think I’m skeptical about this."}
+{"speaker":"DUCKWORTH","text":"Well, what I hear you saying, Stephen, exactly."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"And is that because mirroring is a form of flattery or identification?"}
+{"speaker":"DUCKWORTH","text":"I think mirroring is just a signal that the person has actually received the message."}
+{"speaker":"DUCKWORTH","text":"I mean, if I’m having an argument with my husband, or even if I come home with a problem and he immediately thinks, “Oh, well, here’s how you solve your problem.” I feel like he skipped an important stage in the conversation."}
+{"speaker":"DUCKWORTH","text":"And that stage is that I need to feel heard."}
+{"speaker":"DUCKWORTH","text":"And I need to feel like there was a sympathetic response before we get into plans that I might make to solve my problem."}
+{"speaker":"DUCKWORTH","text":"And I know it sounds like it shouldn’t work, but you should go try it."}
+{"speaker":"DUBNER","text":"Okay so this is super-interesting and useful."}
+{"speaker":"DUBNER","text":"I do want to try it."}
+{"speaker":"DUBNER","text":"So okay, I’m thinking this through."}
+{"speaker":"DUBNER","text":"Let’s say I come home one day, and my wife says, “Ugh, it’s been such a hard day."}
+{"speaker":"DUBNER","text":"I’ve spent four hours on the phone, no joke, with the health insurance company just trying to get them to do the thing that they’ve already supposed to have been doing and that we’re paying them a fortune for every month."}
+{"speaker":"DUBNER","text":"And even though it was four hours, we didn’t get an outcome.” So you’re saying the first thing I should do is say, “What I hear you saying is that you just spent a lot of time that was really frustrating.” And then what do I say?"}
+{"speaker":"DUBNER","text":"And I can tell my wife, who’s pretty sharp, she’s going to say, “Why are you telling me what I just said?” and then I’ll say, “Well, Angie told me to."}
+{"speaker":"DUBNER","text":"Because she says this works.”"}
+{"speaker":"DUCKWORTH","text":"She said it would sound sincere."}
+{"speaker":"DUBNER","text":"Right."}
+{"speaker":"DUBNER","text":"Because if you can fake sincerity, you’ve got it made."}
+{"speaker":"DUBNER","text":"So if I say, “What I hear you saying is that you spent all this time,” and then what comes next?"}
+{"speaker":"DUCKWORTH","text":"Well, look."}
+{"speaker":"DUCKWORTH","text":"Use your judgment."}
+{"speaker":"DUCKWORTH","text":"You don’t have to say, “What I hear you saying.”"}
+{"speaker":"DUBNER","text":"I need the script."}
+{"speaker":"DUBNER","text":"I don’t want judgment."}
+{"speaker":"DUCKWORTH","text":"I mean, just take a beat, right?"}
+{"speaker":"DUCKWORTH","text":"Just to be like, “Oh, god, that sounds awful."}
+{"speaker":"DUCKWORTH","text":"Four hours."}
+{"speaker":"DUCKWORTH","text":"Wow."}
+{"speaker":"DUCKWORTH","text":"You must be incredibly frustrated.” And then, it could be like, “Oh, well, maybe I could call this person or whatever.” But if you just leap forward to the stage of the conversation where you’re problem-solving or giving advice, you’re not matching the person’s emotional state."}
+{"speaker":"DUCKWORTH","text":"And I think, personally speaking, but also based on the research, people need to feel like there’s some acknowledgment."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"But let me go back to the original."}
+{"speaker":"DUBNER","text":"So Pete Carroll, the coach of the Seahawks — you said you didn’t like the idea of sending the note, that in-person it would be different."}
+{"speaker":"DUBNER","text":"So let’s say condition A, Seahawks win the Super Bowl and you have the opportunity to, the next day, show up and congratulate Pete Carroll in person."}
+{"speaker":"DUBNER","text":"Thought experiment B, they lose."}
+{"speaker":"DUBNER","text":"You have the opportunity to show up and offer condolences in person."}
+{"speaker":"DUBNER","text":"Which you are more likely to do then?"}
+{"speaker":"DUCKWORTH","text":"I would rather be the one to offer congratulations."}
+{"speaker":"DUBNER","text":"Because it’s better for you or because it’s better for him?"}
+{"speaker":"DUCKWORTH","text":"I guess, I was just being selfish there."}
+{"speaker":"DUCKWORTH","text":"Because the whole scenario was just a better one."}
+{"speaker":"DUCKWORTH","text":"I mean, look, as a friend, I think it is maybe equally important that you help people enjoy their good days and also get through their bad days."}
+{"speaker":"DUCKWORTH","text":"It’s just, I think that most people already know that the job of a good friend is to be supportive when someone is having a bad day."}
+{"speaker":"DUBNER","text":"So it’s okay to ditch him because you already know that."}
+{"speaker":"DUBNER","text":"Whereas if something good happens, I want to be there for the champagne."}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUCKWORTH","text":"Let’s just imagine the following."}
+{"speaker":"DUCKWORTH","text":"Let me give you a different thought experiment."}
+{"speaker":"DUCKWORTH","text":"Okay, you come crying to me, right?"}
+{"speaker":"DUCKWORTH","text":"What’s the likelihood that me or one of your friends is going to know what to do?"}
+{"speaker":"DUCKWORTH","text":"It’s reflexive."}
+{"speaker":"DUCKWORTH","text":"The likelihood is high that people will have some intuition to do the right thing, which is to listen."}
+{"speaker":"DUBNER","text":"Let’s go for a walk."}
+{"speaker":"DUBNER","text":"Let’s grab a drink."}
+{"speaker":"DUCKWORTH","text":"Or what I’m hearing is that you had a bad day, right?"}
+{"speaker":"DUCKWORTH","text":"Or, that sounds really hard."}
+{"speaker":"DUCKWORTH","text":"Some of us need that reminder."}
+{"speaker":"DUCKWORTH","text":"But I’ll just say that for many of us, when our friends have something really good happen to them, it can be less intuitive for some people to realize you have a job there, too."}
+{"speaker":"DUCKWORTH","text":"And that is to help your friend revel in their good fortune and, I think there may be a lot of people who maybe to their own surprise, if they ask their friends, would find that they could be a little more positive when their friends come to them with good news."}
+{"speaker":"DUBNER","text":"I would just offer, or ask about one counter balance."}
+{"speaker":"DUBNER","text":"Which is that I have a friend, a close friend, who has several kids."}
+{"speaker":"DUBNER","text":"But the first kid died at a very young age."}
+{"speaker":"DUBNER","text":"And it was really tragic."}
+{"speaker":"DUBNER","text":"But he once commented to me, he said, “Especially when it first happened nobody would ever bring it up to me.” He said, “They seemed sure that they shouldn’t bring it up because I wouldn’t want to talk about it."}
+{"speaker":"DUBNER","text":"The fact is that’s the only thing I wanted to talk about."}
+{"speaker":"DUBNER","text":"But none of them wanted to talk about it.” And I was really moved by that and thought that might be an extreme example, but I have a feeling that happens a lot more than we think."}
+{"speaker":"DUCKWORTH","text":"How about this as an answer to your question about what could his friends have done, this couple’s friends, have done differently?"}
+{"speaker":"DUCKWORTH","text":"And also, an answer to your question about, do you write the condolence note?"}
+{"speaker":"DUCKWORTH","text":"Do you write a note of congratulations?"}
+{"speaker":"DUCKWORTH","text":"I think the lesson from social psychology is that we are very often wrong."}
+{"speaker":"DUCKWORTH","text":"When we try to mindread, when we try to guess what other people want us to do, we often make assumptions that are just wrong."}
+{"speaker":"DUCKWORTH","text":"And the antidote, especially in a longer-term relationship, because it’s not like the last time you’re going to see your friend, is to say, “What do you want me to do here?"}
+{"speaker":"DUCKWORTH","text":"I mean, just ask."}
+{"speaker":"DUCKWORTH","text":"I’m not sure you want to talk about this or whether you’d really prefer we not talk about this."}
+{"speaker":"DUCKWORTH","text":"Can you tell me?” And then take the cue from them because mindreading feels accurate, but is most often not as accurate as you think."}
+{"speaker":"DUBNER","text":"What I hear you saying, Angela, is that I should just ask people what they would like me to do."}
+{"speaker":"DUBNER","text":"Is that accurate?"}
+{"speaker":"DUCKWORTH","text":"That’s an accurate statement."}
+{"speaker":"DUCKWORTH","text":"I’m so glad you asked."}
+{"speaker":"DUBNER","text":"I learned something today."}
+{"speaker":"DUBNER","text":"Thank you."}
+{"speaker":"DUCKWORTH","text":"You’re welcome."}

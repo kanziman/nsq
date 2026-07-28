@@ -1,0 +1,451 @@
+{"speaker":"DUBNER","text":"I’m thankful that most academics are such terrible writers."}
+{"speaker":"DUCKWORTH","text":"Right."}
+{"speaker":"DUCKWORTH","text":"It gives you a job."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"I’m Stephen Dubner."}
+{"speaker":"BOTH","text":"And you’re listening to No Stupid Questions."}
+{"speaker":"NARRATOR","text":"Today on the show: How do you get people to work for free, without their even knowing it?"}
+{"speaker":"DUCKWORTH","text":"It’s, like, better than Tom Sawyer, really."}
+{"speaker":"DUBNER","text":"He just painted a freaking fence!"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"NARRATOR","text":"Also: there are millions of academic articles published each year, but how much is this research actually benefiting us?"}
+{"speaker":"DUCKWORTH","text":"Not even other scientists are reading these articles."}
+{"speaker":"DUBNER","text":"And not even scientist’s mothers."}
+{"speaker":"DUCKWORTH","text":"Very likely not."}
+{"speaker":"DUBNER","text":"Angela."}
+{"speaker":"DUCKWORTH","text":"Stephen."}
+{"speaker":"DUBNER","text":"Nice to see you."}
+{"speaker":"DUCKWORTH","text":"It is great to see you."}
+{"speaker":"DUBNER","text":"Special occasion today."}
+{"speaker":"DUCKWORTH","text":"Very special, I think."}
+{"speaker":"DUBNER","text":"Our first ever guest on No Stupid Questions."}
+{"speaker":"DUBNER","text":"And I think he may be a remarkable guest."}
+{"speaker":"DUCKWORTH","text":"I think he’s absolutely a remarkable guest."}
+{"speaker":"DUBNER","text":"But we should probably lower the expectations."}
+{"speaker":"DUBNER","text":"I think he’ll be an okay guest."}
+{"speaker":"DUCKWORTH","text":"He’s fine."}
+{"speaker":"NARRATOR","text":"Luis VON AHN: Great, guys."}
+{"speaker":"NARRATOR","text":"Great."}
+{"speaker":"DUCKWORTH","text":"So Luis Von Ahn is probably best known for being the creator of Duolingo, the popular app for learning foreign languages."}
+{"speaker":"NARRATOR","text":"Hi."}
+{"speaker":"DUBNER","text":"Luis, welcome."}
+{"speaker":"DUBNER","text":"Could you give us the 60-second version of your entire life?"}
+{"speaker":"NARRATOR","text":"I am currently the C.E.O."}
+{"speaker":"NARRATOR","text":"of a company called Duolingo."}
+{"speaker":"NARRATOR","text":"We teach languages."}
+{"speaker":"NARRATOR","text":"I was born and grew up in Guatemala."}
+{"speaker":"NARRATOR","text":"Came to the U.S."}
+{"speaker":"NARRATOR","text":"for college."}
+{"speaker":"NARRATOR","text":"I was a professor of computer science at Carnegie Mellon University."}
+{"speaker":"NARRATOR","text":"And something else that I did that became pretty popular is these distorted characters that you have to type all over the Internet to prove that you’re human."}
+{"speaker":"NARRATOR","text":"It’s called a CAPTCHA."}
+{"speaker":"DUBNER","text":"And it stands for something clever."}
+{"speaker":"NARRATOR","text":"It’s an acronym."}
+{"speaker":"NARRATOR","text":"Yes."}
+{"speaker":"NARRATOR","text":"It’s Completely Automated Public Turing Test to Tell Computers and Humans Apart."}
+{"speaker":"NARRATOR","text":"It’s a mouthful."}
+{"speaker":"DUBNER","text":"And this was to get the other end of a computer to prove that you were a human and not another computer."}
+{"speaker":"NARRATOR","text":"That’s correct."}
+{"speaker":"NARRATOR","text":"For example, to prevent people from buying all of the tickets for a concert on Ticketmaster."}
+{"speaker":"DUBNER","text":"That didn’t work very well, because they still do."}
+{"speaker":"NARRATOR","text":"They do."}
+{"speaker":"NARRATOR","text":"But it prevents other things."}
+{"speaker":"NARRATOR","text":"For example, it prevents things like people from writing programs to obtain millions of free email accounts."}
+{"speaker":"DUBNER","text":"Luis Von Ahn, I have a question for you now."}
+{"speaker":"DUBNER","text":"And it goes like this."}
+{"speaker":"DUBNER","text":"What do Luis Von Ahn and Tom Sawyer have in common?"}
+{"speaker":"NARRATOR","text":"I’m going to guess."}
+{"speaker":"NARRATOR","text":"It probably has to do with tricking somebody to paint a fence."}
+{"speaker":"DUBNER","text":"I was not going to use the word “trick.” I was trying to use the word “entice.” So you remember the Tom Sawyer story?"}
+{"speaker":"NARRATOR","text":"You know, I actually don’t remember it super well."}
+{"speaker":"DUBNER","text":"Angela, do you remember the Tom Sawyer story?"}
+{"speaker":"DUCKWORTH","text":"I don’t, actually."}
+{"speaker":"DUBNER","text":"Okay, so, in The Adventures of Tom Sawyer, Tom Sawyer’s Aunt Polly tells him his Saturday chore is to whitewash, or paint, this really tall fence."}
+{"speaker":"DUBNER","text":"And he’s bummed because he’d rather be fishing, or swimming, or playing."}
+{"speaker":"DUBNER","text":"And then he decides, well, what if I persuade people that this is not grunt work, but a novel and awesome thing to do."}
+{"speaker":"DUBNER","text":"And then his friends start coming by."}
+{"speaker":"DUBNER","text":"And pretty soon, not only have they painted the fence in turns, but he’s made them pay him for the privilege of painting the fence."}
+{"speaker":"DUBNER","text":"So, here’s a short passage: “And when the middle of the afternoon came, from being a poor, poverty-stricken boy in the morning, Tom was literally rolling in wealth.” In the least pejorative way possible, I thought of you when I was reading about the way you’ve built your companies, which is incredibly ingenious, and it seems like it helps everybody."}
+{"speaker":"DUBNER","text":"But can you explain what I mean by you being Tom Sawyer-ish in that regard?"}
+{"speaker":"NARRATOR","text":"Yeah."}
+{"speaker":"NARRATOR","text":"For a while, a lot of my research had a lot to do with how do you entice people to do things that computers cannot do?"}
+{"speaker":"NARRATOR","text":"When I was a first-year graduate student, I helped invent these CAPTCHAs."}
+{"speaker":"DUBNER","text":"And can you tell the story of how you even knew that that was a function that computers needed?"}
+{"speaker":"NARRATOR","text":"I was at Carnegie Mellon University."}
+{"speaker":"NARRATOR","text":"And the guy who at the time was the chief scientist of Yahoo, his name was Udi Manber, came to give a talk."}
+{"speaker":"NARRATOR","text":"And the talk was about 10 problems that they didn’t know how to solve at Yahoo."}
+{"speaker":"DUBNER","text":"And Yahoo, we should say, was a big deal."}
+{"speaker":"NARRATOR","text":"At the time it was the single biggest internet company."}
+{"speaker":"NARRATOR","text":"Yahoo was, like, Google is today."}
+{"speaker":"NARRATOR","text":"It was huge."}
+{"speaker":"NARRATOR","text":"And then they had these 10 problems."}
+{"speaker":"NARRATOR","text":"I now understand that the reason he came to give this talk was to recruit potential employees."}
+{"speaker":"NARRATOR","text":"I thought that he actually needed help solving these problems."}
+{"speaker":"NARRATOR","text":"But one of the problems he talked about was, they didn’t know how to stop people from writing programs to obtain millions of email accounts for free."}
+{"speaker":"NARRATOR","text":"The people who wanted to do that were spammers."}
+{"speaker":"NARRATOR","text":"Each account only allowed you to send, like, 500 messages a day."}
+{"speaker":"NARRATOR","text":"But if you wanted to send 50 million emails, you needed millions of accounts from which to send the spam messages."}
+{"speaker":"NARRATOR","text":"So they wanted a way to stop this."}
+{"speaker":"DUBNER","text":"And people were just writing bots to sign up for millions of email accounts?"}
+{"speaker":"NARRATOR","text":"That’s right."}
+{"speaker":"NARRATOR","text":"And so first, we came up with a more general idea: what if we could come up with a test that can distinguish whether the thing that is getting an email account is actually a human or a computer?"}
+{"speaker":"NARRATOR","text":"See, a human’s not going to get 50 million email accounts, because they’ll lose patience, but a computer would get 50 million."}
+{"speaker":"NARRATOR","text":"So if we could distinguish between humans and computers, then we could solve the problem."}
+{"speaker":"NARRATOR","text":"And, by the way, this is an old idea in computer science, distinguishing between a human and computer, it’s called a Turing Test."}
+{"speaker":"NARRATOR","text":"This was proposed by Alan Turing."}
+{"speaker":"NARRATOR","text":"Many people call him the father of computing."}
+{"speaker":"NARRATOR","text":"His idea was a computer will be intelligent once somebody cannot really determine whether they’re talking to a human or to a computer."}
+{"speaker":"NARRATOR","text":"Now, in this case it’s a human judge trying to tell whether they’re talking to a computer or human."}
+{"speaker":"NARRATOR","text":"In the case for this problem that we were trying to solve, we needed a computer to be able to determine whether it was talking to a human or computer."}
+{"speaker":"NARRATOR","text":"We needed to test that a computer could administer and grade, but not pass."}
+{"speaker":"NARRATOR","text":"At first, it seems paradoxical."}
+{"speaker":"NARRATOR","text":"But then, when you’re a professor, you actually realize this is not that uncommon."}
+{"speaker":"NARRATOR","text":"You can administer tests without being able to pass them."}
+{"speaker":"NARRATOR","text":"I definitely did that."}
+{"speaker":"NARRATOR","text":"So anyways, the idea was that, the more general idea."}
+{"speaker":"NARRATOR","text":"And then at some point we came up with the specific one, which was, at the time, computers were not very good at reading images of distorted text."}
+{"speaker":"NARRATOR","text":"But humans were."}
+{"speaker":"NARRATOR","text":"So this is something that a computer can actually administer and grade."}
+{"speaker":"NARRATOR","text":"So a computer starts by putting some letters on an image, then it distorts them."}
+{"speaker":"NARRATOR","text":"All you have to do is just match the distorted letter."}
+{"speaker":"NARRATOR","text":"So that was the idea with the CAPTCHA."}
+{"speaker":"DUBNER","text":"Were there other ideas you had that didn’t work?"}
+{"speaker":"NARRATOR","text":"There were others that did work, but just not as well."}
+{"speaker":"NARRATOR","text":"For example, we could give you a bunch of pictures of, like, flowers, and then just ask you, what are these pictures of?"}
+{"speaker":"NARRATOR","text":"And then you would have to type the word “flower.”"}
+{"speaker":"DUCKWORTH","text":"Is that too open-ended?"}
+{"speaker":"NARRATOR","text":"Yeah."}
+{"speaker":"NARRATOR","text":"It was too open-ended."}
+{"speaker":"NARRATOR","text":"It was harder."}
+{"speaker":"NARRATOR","text":"It required people to know how to spell."}
+{"speaker":"NARRATOR","text":"Not everybody knows how to spell."}
+{"speaker":"NARRATOR","text":"Whereas the beautiful thing about the distorted letters is that, for every letter there’s actually a key on the keyboard."}
+{"speaker":"NARRATOR","text":"And humans happen to be pretty good at that."}
+{"speaker":"DUBNER","text":"And it worked beautifully, yes?"}
+{"speaker":"NARRATOR","text":"It worked beautifully."}
+{"speaker":"NARRATOR","text":"I mean, pretty quickly, essentially every website out there was using it in one way or another to stop people from writing programs that would abuse the system."}
+{"speaker":"NARRATOR","text":"At the time, about 200 million times a day somebody would type a CAPTCHA on the internet."}
+{"speaker":"NARRATOR","text":"So could we somehow figure out how to get them to do something useful?"}
+{"speaker":"NARRATOR","text":"And this is where it occurred to me that you could get them to help us digitize books."}
+{"speaker":"NARRATOR","text":"Google was trying to digitize all of the world’s books."}
+{"speaker":"NARRATOR","text":"And the way that works is, you take a book and you take a digital photograph of every page of the book."}
+{"speaker":"NARRATOR","text":"That gives you images with words in them."}
+{"speaker":"NARRATOR","text":"The next step is that the computer needs to decipher all of these words."}
+{"speaker":"NARRATOR","text":"But for older books, the computer could not decipher all the words."}
+{"speaker":"DUBNER","text":"Or even probably some fonts."}
+{"speaker":"NARRATOR","text":"Yeah, it was harder, or the picture was not super clear or something."}
+{"speaker":"NARRATOR","text":"The computer could not recognize about 30 percent of the words."}
+{"speaker":"NARRATOR","text":"The way we hooked up the whole process was, we took the pictures from the book, and then the words that the computer could not understand, we would send them to people while they were typing CAPTCHAs on the internet."}
+{"speaker":"DUBNER","text":"So Google ended up buying your company, correct?"}
+{"speaker":"NARRATOR","text":"Yes."}
+{"speaker":"DUBNER","text":"But even before that, you were licensing your technology to The New York Times, for instance, to digitize its archives."}
+{"speaker":"DUCKWORTH","text":"So the CAPTCHAs were not just random words."}
+{"speaker":"NARRATOR","text":"The CAPTCHAs were not just random words."}
+{"speaker":"NARRATOR","text":"They were actually coming from books that the computer could not recognize."}
+{"speaker":"NARRATOR","text":"And we would use what people were typing to help digitize this stuff."}
+{"speaker":"DUBNER","text":"Angela, you didn’t know that."}
+{"speaker":"DUCKWORTH","text":"I didn’t know that!"}
+{"speaker":"DUBNER","text":"So as you learn that, think back."}
+{"speaker":"DUBNER","text":"You’ve probably filled in a few thousand CAPTCHAs in your life."}
+{"speaker":"DUCKWORTH","text":"I feel like I didn’t get paid for any of that."}
+{"speaker":"DUBNER","text":"That’s what I was going to ask, do you feel like, I didn’t get paid?"}
+{"speaker":"DUBNER","text":"Or do you feel like, oh my gosh, that’s so awesome that in the process of me doing this thing that I needed to do to get what I wanted to get, I also helped digitize an archive —"}
+{"speaker":"DUCKWORTH","text":"I think it’s great."}
+{"speaker":"DUCKWORTH","text":"I wonder, did anybody ever know?"}
+{"speaker":"NARRATOR","text":"A lot of people knew."}
+{"speaker":"NARRATOR","text":"And we actually didn’t try to hide it."}
+{"speaker":"NARRATOR","text":"There was a big question mark in there that when you clicked on it, it would tell you what it was."}
+{"speaker":"NARRATOR","text":"It turned out most people didn’t click on it."}
+{"speaker":"DUCKWORTH","text":"So there was, like, a little button that said —"}
+{"speaker":"NARRATOR","text":"You’re helping digitize things."}
+{"speaker":"NARRATOR","text":"So we were getting these words and we were sending them to people while they were getting a Facebook account or whatever, they were helping us to digitize The New York Times."}
+{"speaker":"DUBNER","text":"Can I just say, I think that’s awesome."}
+{"speaker":"DUBNER","text":"I mean, I just think it’s so clever that you were able to repurpose labor."}
+{"speaker":"DUCKWORTH","text":"It’s better than Tom Sawyer, really."}
+{"speaker":"DUBNER","text":"It is better than Tom Sawyer."}
+{"speaker":"DUBNER","text":"He just painted a freaking fence."}
+{"speaker":"DUBNER","text":"And it’s going to need to be painted again in three years."}
+{"speaker":"DUBNER","text":"And once The New York Times is digitized, it won’t."}
+{"speaker":"DUCKWORTH","text":"Is it still true, though?"}
+{"speaker":"DUCKWORTH","text":"Haven’t computers gotten better at being able to read distorted text?"}
+{"speaker":"NARRATOR","text":"So, computers have gotten way better."}
+{"speaker":"NARRATOR","text":"What has happened over time is that the modern versions of CAPTCHAs, the secure ones, are unlikely to use distorted characters now, and they’re back to this original idea of pictures of things."}
+{"speaker":"NARRATOR","text":"Like, you get pictures of street signs, and you’re asked, which of these is not a stop sign?"}
+{"speaker":"DUCKWORTH","text":"Why can’t they do that?"}
+{"speaker":"DUCKWORTH","text":"I mean, gosh, that sounds like a great task for a computer."}
+{"speaker":"NARRATOR","text":"I think in most cases they can."}
+{"speaker":"NARRATOR","text":"This comes because something like Google Maps is trying to map all of the world, and they’re trying to recognize all of the stop signs in the world."}
+{"speaker":"NARRATOR","text":"Whenever the computer’s not very sure that it saw a stop sign, it says, oh, okay, here’s what I want to do."}
+{"speaker":"NARRATOR","text":"I want to send it to somebody that’s trying to get an email account somewhere, and I’m going to ask them, is this a stop sign or not?"}
+{"speaker":"NARRATOR","text":"And so you’re helping, basically, build much better maps, or build better image recognition, or something like that."}
+{"speaker":"DUCKWORTH","text":"So is there any of this win-win logic at the heart of Duolingo?"}
+{"speaker":"NARRATOR","text":"There was at the beginning."}
+{"speaker":"NARRATOR","text":"There no longer is."}
+{"speaker":"DUBNER","text":"Oh, I was hoping there still was."}
+{"speaker":"DUBNER","text":"So just explain what Duolingo is and how it works."}
+{"speaker":"NARRATOR","text":"So, primarily it is an app to learn languages."}
+{"speaker":"NARRATOR","text":"It’s now the most popular way to learn languages in the world."}
+{"speaker":"NARRATOR","text":"There are more people learning languages on Duolingo in the United States than there are people learning languages in the whole U.S."}
+{"speaker":"NARRATOR","text":"public school system."}
+{"speaker":"NARRATOR","text":"We have 10 times as many people learning Irish on Duolingo than there are Irish native speakers."}
+{"speaker":"DUBNER","text":"And you have a lot of people learning Game of Thrones and Star Trek languages."}
+{"speaker":"NARRATOR","text":"Make of it what you will, there are more people learning High Valyrian on Duolingo from Game of Thrones than there are people learning Irish."}
+{"speaker":"DUBNER","text":"Can we also just quickly do the business proposition?"}
+{"speaker":"DUBNER","text":"You’re still privately held, correct?"}
+{"speaker":"NARRATOR","text":"It is a private company."}
+{"speaker":"DUBNER","text":"Venture-funded."}
+{"speaker":"NARRATOR","text":"Venture-funded company."}
+{"speaker":"NARRATOR","text":"Yes."}
+{"speaker":"DUBNER","text":"And the last I read, the valuation was in the neighborhood of one and a half billion dollars."}
+{"speaker":"NARRATOR","text":"Yeah, about one and half billion."}
+{"speaker":"DUBNER","text":"So, most of your product, the vast majority is free."}
+{"speaker":"DUBNER","text":"So how are you worth one and a half billion?"}
+{"speaker":"NARRATOR","text":"Yeah."}
+{"speaker":"NARRATOR","text":"So you can learn a language entirely for free on Duolingo."}
+{"speaker":"NARRATOR","text":"In fact, this was the mission of the company."}
+{"speaker":"NARRATOR","text":"In part because learning English can really change your life."}
+{"speaker":"NARRATOR","text":"You know, it’s nice to learn French to go and order a croissant in Paris."}
+{"speaker":"NARRATOR","text":"But really, learning English in non-English speaking countries can double your income potential."}
+{"speaker":"DUBNER","text":"There is data that shows that learning a second language if you’re an English-speaking American is pretty much useless."}
+{"speaker":"DUCKWORTH","text":"I think it’s the lowest-rated skill from employers in a recent survey."}
+{"speaker":"DUBNER","text":"But if it were High Valyrian, maybe?"}
+{"speaker":"DUCKWORTH","text":"It wasn’t on the survey."}
+{"speaker":"NARRATOR","text":"Well, but, there’s other things, by the way."}
+{"speaker":"NARRATOR","text":"I, of course, have to be here to tell you about all the benefits of learning a language."}
+{"speaker":"NARRATOR","text":"It is also good for your brain."}
+{"speaker":"DUCKWORTH","text":"It’s good for executive function."}
+{"speaker":"DUCKWORTH","text":"Prefrontal cortex."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"NARRATOR","text":"But the mission has really been always to be able to teach for free."}
+{"speaker":"DUBNER","text":"Is that related to your coming from Guatemala, where English is an incredibly valuable skill, yes?"}
+{"speaker":"NARRATOR","text":"It is entirely."}
+{"speaker":"NARRATOR","text":"Not only is it an incredibly valuable skill."}
+{"speaker":"NARRATOR","text":"It’s a very poor country."}
+{"speaker":"NARRATOR","text":"And everybody wanted to learn English, and nobody had money."}
+{"speaker":"NARRATOR","text":"And all the ways there were to learn English were really expensive."}
+{"speaker":"DUBNER","text":"So if I’m writing the Luis Von Ahn biography, like the hagiography, I say, “Listen, if you, Angela, are feeling a little bit exploited that you didn’t get paid for entering all those CAPTCHAs, you should know that he plowed the money back into a way to teach everyone English around the world.”"}
+{"speaker":"DUCKWORTH","text":"For free."}
+{"speaker":"DUCKWORTH","text":"I’m good with him."}
+{"speaker":"DUCKWORTH","text":"I feel like we’re even now."}
+{"speaker":"NARRATOR","text":"So the way we make money is, we have to be consistent with our mission."}
+{"speaker":"NARRATOR","text":"So the first thing that occurred to us is just put an ad at the end of a lesson."}
+{"speaker":"NARRATOR","text":"It turns out we have enough users that that actually made us tens of millions of dollars a year."}
+{"speaker":"NARRATOR","text":"Soon after that, we added a subscription, where the main thing the subscription did was turn off the ads."}
+{"speaker":"NARRATOR","text":"We make way more money from the subscription than from the ads."}
+{"speaker":"DUCKWORTH","text":"What percentage of your users turn off the ads?"}
+{"speaker":"NARRATOR","text":"So 3 percent of our users are paying subscribers."}
+{"speaker":"DUBNER","text":"But even being only 3 percent outweighs the revenue from the ads?"}
+{"speaker":"NARRATOR","text":"Significantly."}
+{"speaker":"NARRATOR","text":"Eighty-five percent of our revenue comes from those 3 percent of the users."}
+{"speaker":"DUBNER","text":"That’s the way Spotify works as well."}
+{"speaker":"DUBNER","text":"There are a lot more free users, but the premium well more than make up for it."}
+{"speaker":"NARRATOR","text":"It’s exactly the same thing."}
+{"speaker":"NARRATOR","text":"So last year we made $90 million from this, and then this year we’re probably going to double it."}
+{"speaker":"NARRATOR","text":"We’re thinking about going public."}
+{"speaker":"NARRATOR","text":"So I’m not supposed to give too many estimates."}
+{"speaker":"DUBNER","text":"It’s just us in the room."}
+{"speaker":"DUBNER","text":"There’s no microphones or anything."}
+{"speaker":"DUBNER","text":"So you said that in the beginning Duolingo used the translation for a different purpose."}
+{"speaker":"DUBNER","text":"Can you describe that?"}
+{"speaker":"NARRATOR","text":"Yeah."}
+{"speaker":"NARRATOR","text":"In the beginning it was a very similar idea to this book digitization."}
+{"speaker":"NARRATOR","text":"What can we get out of people learning a language?"}
+{"speaker":"NARRATOR","text":"Can we get something useful from them that computers cannot yet do?"}
+{"speaker":"NARRATOR","text":"And at the time the idea was, could we get them to translate stuff for free for us?"}
+{"speaker":"NARRATOR","text":"So what we did is, we actually had contracts with C.N.N."}
+{"speaker":"NARRATOR","text":"and BuzzFeed."}
+{"speaker":"NARRATOR","text":"They would write all their news in English."}
+{"speaker":"NARRATOR","text":"They would give it to us."}
+{"speaker":"NARRATOR","text":"And then we would have these users that were learning English on Duolingo and then after a certain point we would say, “Hey, you want to practice what you just learned?"}
+{"speaker":"NARRATOR","text":"Here’s a CNN article in English."}
+{"speaker":"NARRATOR","text":"Why don’t you help us translate it to your native language?” Imagine they were native Spanish speakers."}
+{"speaker":"NARRATOR","text":"So they would, to practice their English, would help us translate the article to Spanish, and then we would get multiple users to translate the same kind of paragraphs and stuff."}
+{"speaker":"NARRATOR","text":"And then a computer program would kind of combine all of it."}
+{"speaker":"NARRATOR","text":"And then we would give a translation back to CNN, who would pay us for this translation."}
+{"speaker":"NARRATOR","text":"It had one huge problem, though."}
+{"speaker":"NARRATOR","text":"Translation is a crappy business to be in, because the prices are always going down and computer translation is getting better and better."}
+{"speaker":"DUBNER","text":"Can I say, you’re the first computer scientist I’ve ever spoken with who, afterward, I understood a little bit better about how to think about problem-solving."}
+{"speaker":"DUBNER","text":"And it didn’t just make me feel confused."}
+{"speaker":"NARRATOR","text":"Oh, thank you."}
+{"speaker":"NARRATOR","text":"There are other computer scientists like this."}
+{"speaker":"DUBNER","text":"I’m sure there’s a few, but, but I’ve also had some wildly baffling conversations where I really try to understand because computing is a marvel, especially for those who don’t really understand it very well."}
+{"speaker":"DUBNER","text":"It seems like magic and I want it to not be magic."}
+{"speaker":"DUBNER","text":"I’ve often asked to understand different pieces of it, and I kind of gain a little bit of an understanding."}
+{"speaker":"DUBNER","text":"But the way you approach it, it’s not about the bits and the bytes."}
+{"speaker":"DUBNER","text":"It’s about humanity and how to manipulate the relationship in the right way."}
+{"speaker":"DUBNER","text":"So I appreciate your explaining things so well."}
+{"speaker":"NARRATOR","text":"Well, thank you."}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions: Luis Von Ahn answers Angela’s question about the volume of academic research being produced these days:"}
+{"speaker":"NARRATOR","text":"We could do something like, if you publish too many papers that have very few citations, you get tenure taken away."}
+{"speaker":"DUBNER","text":"Oh, I like that."}
+{"speaker":"DUBNER","text":"Relegation."}
+{"speaker":"DUBNER","text":"Relegation from the academy."}
+{"speaker":"NARRATOR","text":"So you just gotta watch out."}
+{"speaker":"NARRATOR","text":"You just can’t publish dumb papers."}
+{"speaker":"NARRATOR","text":"Welcome back to No Stupid Questions."}
+{"speaker":"NARRATOR","text":"Today, Angela and Stephen are speaking with Luis Von Ahn, the computer scientist who invented CAPTCHA and is now the C.E.O."}
+{"speaker":"NARRATOR","text":"of the language app Duolingo."}
+{"speaker":"DUCKWORTH","text":"I am really interested in Luis’s position on scientific productivity."}
+{"speaker":"DUCKWORTH","text":"I do believe we should be producing scientific insights into everything."}
+{"speaker":"DUCKWORTH","text":"But, I realize that there are something like one or even two million, depending on the estimate that you read, new scientific articles produced every year and the typical article will get zero, one, maybe two citations, meaning not even other scientists are in any obvious way reading these articles."}
+{"speaker":"DUBNER","text":"And not even scientists’ mothers."}
+{"speaker":"DUCKWORTH","text":"Maybe not."}
+{"speaker":"NARRATOR","text":"Most likely not."}
+{"speaker":"DUCKWORTH","text":"Very likely not."}
+{"speaker":"DUCKWORTH","text":"So Luis, as somebody who began as a professor in computer science, or at least was at one point in your career, and then moved outside of academia into the “real world,” what do you think about whether there is utility in these many, many, many articles that are being produced?"}
+{"speaker":"NARRATOR","text":"Well, that’s not an easy question."}
+{"speaker":"NARRATOR","text":"But what I never really liked this, about being a professor, is I think a lot of people — including me, I was guilty of this — they think the end goal is the paper, not the result."}
+{"speaker":"NARRATOR","text":"And some of the people that I admire the most did not have that many papers throughout their career."}
+{"speaker":"NARRATOR","text":"Each one of them really changed the world."}
+{"speaker":"NARRATOR","text":"I think that we should strive to be a lot more like that."}
+{"speaker":"NARRATOR","text":"In computer science, in particular, you hear of people who have 14 papers at the same conference."}
+{"speaker":"NARRATOR","text":"I can tell you this."}
+{"speaker":"NARRATOR","text":"I kind of don’t care how smart you are."}
+{"speaker":"NARRATOR","text":"You cannot have 14 world-changing, amazing ideas in one year."}
+{"speaker":"NARRATOR","text":"You just can’t."}
+{"speaker":"DUBNER","text":"But to some degree, you can’t blame the perpetrators so much themselves because the incentive structure is set up to encourage that, right?"}
+{"speaker":"NARRATOR","text":"A hundred percent."}
+{"speaker":"NARRATOR","text":"The problem is you need a way to measure it."}
+{"speaker":"DUCKWORTH","text":"The measurement kind of got in the way."}
+{"speaker":"DUCKWORTH","text":"So, measurement was always number of citations, number of papers."}
+{"speaker":"DUCKWORTH","text":"These are supposed to be proxies for the impact of your scientific discoveries."}
+{"speaker":"DUCKWORTH","text":"But now, I feel like we’re chasing the metric."}
+{"speaker":"DUCKWORTH","text":"And then that has led to this citation arms race."}
+{"speaker":"DUCKWORTH","text":"Twenty or 30 years ago, to become a tenured professor, there was an expectation of some small number of citations and papers."}
+{"speaker":"DUCKWORTH","text":"And now it’s just exploded, where you can’t even get interviewed for a job unless you have a reasonably long vita with lots of articles."}
+{"speaker":"NARRATOR","text":"It’s crazy."}
+{"speaker":"NARRATOR","text":"And also things like Google Scholar really helped to do this, because now you can count very easily how many citations somebody has."}
+{"speaker":"NARRATOR","text":"And then, your worth as a scientist is you have two thousand citations, or 10 thousand citations, or 30 thousand citations."}
+{"speaker":"DUBNER","text":"You mentioned people who are great in their field, which I guess you mean your field, computer science, who have published only maybe a handful of papers."}
+{"speaker":"DUBNER","text":"Can you give an example?"}
+{"speaker":"NARRATOR","text":"A good example was my Ph.D."}
+{"speaker":"NARRATOR","text":"adviser, Manuel Blum, very prominent in the field."}
+{"speaker":"NARRATOR","text":"I mean, he got the Turing Award, which is the kind of Nobel Prize for computer science."}
+{"speaker":"DUBNER","text":"He’s a cryptographer?"}
+{"speaker":"NARRATOR","text":"He helped invent modern cryptography."}
+{"speaker":"NARRATOR","text":"He has more than a handful of papers, but he really didn’t seem to publish more than a couple of papers per year."}
+{"speaker":"NARRATOR","text":"And there’s a few of them that are really the beginnings of some amazing things."}
+{"speaker":"DUCKWORTH","text":"What motivated him?"}
+{"speaker":"DUCKWORTH","text":"And if he wasn’t motivated by citation count, how would you characterize what woke him up in the morning, kept him working so hard?"}
+{"speaker":"NARRATOR","text":"I think in his case, he truly, truly wanted to understand things."}
+{"speaker":"NARRATOR","text":"When I started working with him, I would try to explain something to him."}
+{"speaker":"NARRATOR","text":"And he would say, “I’m sorry, I don’t understand.” And he did that many, many times."}
+{"speaker":"NARRATOR","text":"And at some point I started wondering, was this guy smart?"}
+{"speaker":"NARRATOR","text":"I seemed to be saying very simple stuff."}
+{"speaker":"NARRATOR","text":"But he just wants to have a really deep understanding of things."}
+{"speaker":"NARRATOR","text":"And at some point, I started realizing what a deep understanding meant."}
+{"speaker":"NARRATOR","text":"For example, if you have a really deep understanding of something, you can explain it really well."}
+{"speaker":"NARRATOR","text":"These people who can’t explain things super well, they probably don’t have that great of an understanding of it."}
+{"speaker":"DUBNER","text":"So did you learn at that point that you didn’t really fully understand even your own idea?"}
+{"speaker":"NARRATOR","text":"Correct."}
+{"speaker":"DUBNER","text":"And he helped you do that without telling you that’s what he was doing?"}
+{"speaker":"NARRATOR","text":"Exactly."}
+{"speaker":"NARRATOR","text":"And I got much better at explaining certain things."}
+{"speaker":"NARRATOR","text":"I mean, it would be, like, the first line, and he’d say, “I’m sorry, I don’t understand.” And you know, it really pissed me off."}
+{"speaker":"NARRATOR","text":"He still doesn’t understand one thing, and he’s still at it."}
+{"speaker":"NARRATOR","text":"He wants to understand consciousness."}
+{"speaker":"NARRATOR","text":"This is the thing he has wanted to understand his entire life."}
+{"speaker":"DUBNER","text":"What does that mean, to understand consciousness?"}
+{"speaker":"NARRATOR","text":"I’m not even sure."}
+{"speaker":"DUBNER","text":"Maybe you should turn the tables."}
+{"speaker":"DUBNER","text":"Say, “I’m sorry, Manuel."}
+{"speaker":"DUBNER","text":"I don’t understand what you mean by this idea."}
+{"speaker":"DUBNER","text":"Can you explain it to me?”"}
+{"speaker":"NARRATOR","text":"It’s a pretty complex thing, right?"}
+{"speaker":"NARRATOR","text":"I mean, consciousness."}
+{"speaker":"NARRATOR","text":"I’m sure you guys know way more about this, particularly Angela being an academic in this field."}
+{"speaker":"NARRATOR","text":"I mean, there’s something about this, the thing that’s controlling us."}
+{"speaker":"DUCKWORTH","text":"Right."}
+{"speaker":"DUCKWORTH","text":"You know, if you’re sitting in the park, you think you have consciousness, and you see a squirrel chasing an acorn, and you presume that the squirrel does not have the kind of consciousness we have."}
+{"speaker":"DUCKWORTH","text":"And then you go into a tailspin of, but how would I know?"}
+{"speaker":"DUCKWORTH","text":"Do computer scientists actually think about questions like this?"}
+{"speaker":"NARRATOR","text":"Yes, yes, yes."}
+{"speaker":"NARRATOR","text":"Particularly early artificial intelligence researchers really wondered: What will it take for a computer to be able to do everything that a human can?"}
+{"speaker":"NARRATOR","text":"And then you start wondering, well, okay, do they need to be conscious?"}
+{"speaker":"NARRATOR","text":"You know, from the outside, if all they’re doing is the same input/output behavior, who cares whether they’re conscious or not?"}
+{"speaker":"DUBNER","text":"So you say early A.I."}
+{"speaker":"DUBNER","text":"or maybe even early computer people?"}
+{"speaker":"DUBNER","text":"It reminds me a little bit of the earliest economists, going back a few hundred years ago, they were moral philosophers and economics was just the nitty gritty way of measuring how people were changing as society and industry was changing."}
+{"speaker":"DUBNER","text":"Do you see a similar kind of generational shift among computer scientists?"}
+{"speaker":"DUBNER","text":"That there was more — whether it’s philosophy or that kind of high-order thinking — than now?"}
+{"speaker":"DUBNER","text":"Because I think a lot of people now, when they hear about someone going to school now for computer science, they almost think of it as like a very, very, very high-end trade school, because there’s an industry."}
+{"speaker":"DUBNER","text":"It’s a great vocation."}
+{"speaker":"DUBNER","text":"I’m curious whether the field has continued to produce and encourage that kind of philosophical thinking."}
+{"speaker":"NARRATOR","text":"I think it has definitely shifted from the early days."}
+{"speaker":"NARRATOR","text":"I think these people were a lot more philosophical, and they really were trying to answer very fundamental questions about what it means to be a human."}
+{"speaker":"NARRATOR","text":"I mean, now you go to school for computer science and you can get a very high-paying job at Google or at Facebook."}
+{"speaker":"NARRATOR","text":"So it’s a different type of person has started going into the field."}
+{"speaker":"NARRATOR","text":"That doesn’t mean that there’s nobody out there thinking about all the deep questions."}
+{"speaker":"NARRATOR","text":"But overwhelmingly, I would say, it’s become a lot more pragmatic."}
+{"speaker":"DUBNER","text":"Okay, so getting back to Angela’s original question about all these papers."}
+{"speaker":"DUBNER","text":"As a layperson, I would think, wow, 2 million new papers every year, that’s fantastic."}
+{"speaker":"DUBNER","text":"We’re broadening scientific knowledge so much."}
+{"speaker":"DUBNER","text":"But if the preponderance of it is some form of job audition/academic status climbing/virtue signaling/whatever, then it’s not so good, right?"}
+{"speaker":"NARRATOR","text":"It’s very hard to say whether this is good or not."}
+{"speaker":"NARRATOR","text":"I mean, there’s the other argument, which is like, if you’re trying to be creative, 99 percent of the stuff you come up with is going to be crap."}
+{"speaker":"NARRATOR","text":"There’s some research that says, look, you just need volume of ideas."}
+{"speaker":"DUCKWORTH","text":"There’s this theory of creativity from Dean Keith Simonton."}
+{"speaker":"DUCKWORTH","text":"It’s called the Equal Odds Rule and it says exactly that."}
+{"speaker":"DUCKWORTH","text":"You want a good idea?"}
+{"speaker":"DUCKWORTH","text":"Well, start with 10 ideas."}
+{"speaker":"DUCKWORTH","text":"Maybe one of them will be good."}
+{"speaker":"DUCKWORTH","text":"Okay, you want two good ideas?"}
+{"speaker":"DUCKWORTH","text":"Generate 20 ideas."}
+{"speaker":"DUCKWORTH","text":"It’s really just a linear function and more is better."}
+{"speaker":"DUBNER","text":"How should a non-academic researcher feel about all the research produced by academics, the vast majority of which is written for a tiny cohort of your peers, in a language that is literally indecipherable to the layperson — maybe not psychology papers, but comp sci, and a lot of economics papers."}
+{"speaker":"DUBNER","text":"Should we feel it is — this is going to sound too fresh — some elite, masturbatory festival where you guys are all in your lovely ivory towers doing research that very rarely trickles down or affects us and yet is often funded by some version of taxpayer?"}
+{"speaker":"DUBNER","text":"You know, I’m not saying that academic researchers should focus on “news you can use” kind of research, but it does seem extraordinarily cordoned off, including the fact that academic journals cost $20,000 a year."}
+{"speaker":"DUBNER","text":"Very few people will actually access them."}
+{"speaker":"DUBNER","text":"So how do you just feel about that from the production end?"}
+{"speaker":"NARRATOR","text":"That’s an excellent question."}
+{"speaker":"NARRATOR","text":"I think there are some academics whose role, a lot of times, is to translate research."}
+{"speaker":"NARRATOR","text":"And I think they get very good at it."}
+{"speaker":"NARRATOR","text":"Angela being one of these people — not your entire role, but you’ve done a really good job just translating a lot of research."}
+{"speaker":"DUBNER","text":"I’m thankful that most academics are such terrible writers."}
+{"speaker":"DUCKWORTH","text":"Right."}
+{"speaker":"DUCKWORTH","text":"It gives you a job."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"I would be useless."}
+{"speaker":"NARRATOR","text":"I think there should be more people that try to translate things to the general audience."}
+{"speaker":"DUBNER","text":"Should universities spend more time doing that themselves, or should the journals?"}
+{"speaker":"DUBNER","text":"I mean, some journals actually, to their credit, now do."}
+{"speaker":"DUBNER","text":"Like N.B.E.R., the National Bureau of Economic Research."}
+{"speaker":"DUBNER","text":"They send out all the working papers every week, which is usually 25 or 30 papers."}
+{"speaker":"DUBNER","text":"And then once a week they do a digest."}
+{"speaker":"DUBNER","text":"It’s kind of written in journalism form."}
+{"speaker":"DUBNER","text":"And those are the papers that get written about in The New York Times and Wall Street Journal much more often because reporters might be bright people, but they may not read all 30 economic papers every week."}
+{"speaker":"DUBNER","text":"And so, I figure that’s a good function."}
+{"speaker":"DUBNER","text":"But I still feel just that there’s a kind of loss to society, that there’s all this brainpower and good ideas."}
+{"speaker":"DUBNER","text":"Because every time I meet an academic, it can be in a very obscure field, and I always ask him, “What do you think about."}
+{"speaker":"DUBNER","text":"What are you working on?” They always have something amazing."}
+{"speaker":"DUBNER","text":"Always."}
+{"speaker":"DUBNER","text":"And I’m like, “I’ve never heard a thing about that."}
+{"speaker":"DUBNER","text":"Where would I have read that?” And they’re like, “Well, in the Journal of Lefthanded Cardiological, you know— “."}
+{"speaker":"DUCKWORTH","text":"Okay, so here’s a theory."}
+{"speaker":"DUCKWORTH","text":"As probably Manuel will tell you."}
+{"speaker":"DUCKWORTH","text":"It’s not easy to write clearly, even for your peers."}
+{"speaker":"DUCKWORTH","text":"Also, if you’re not a very clear thinker or an especially good writer, there’s a kind of retreat into the—"}
+{"speaker":"DUBNER","text":"Dazzle them."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"With syllables."}
+{"speaker":"NARRATOR","text":"With formulas."}
+{"speaker":"DUCKWORTH","text":"With formulas and passive tense sentences that are really long."}
+{"speaker":"DUCKWORTH","text":"I have mixed feelings."}
+{"speaker":"DUCKWORTH","text":"On the one hand, more scientific discovery is better."}
+{"speaker":"DUCKWORTH","text":"But it’s absolutely true, there’s this strange incentive system at work where you are personally awarded on volume."}
+{"speaker":"DUCKWORTH","text":"And it would be better if we had an incentive system that rewarded quality and not quantity."}
+{"speaker":"DUCKWORTH","text":"Right now, I think it’s rewarding both."}
+{"speaker":"DUCKWORTH","text":"But the metrics are so much more visible when it comes to quantity than quality."}
+{"speaker":"DUCKWORTH","text":"I don’t have any brilliant ideas of how to make the system better."}
+{"speaker":"NARRATOR","text":"We could do something like, if you publish too many papers that have very few citations, you get tenure taken away."}
+{"speaker":"DUBNER","text":"Oh, I like that."}
+{"speaker":"DUBNER","text":"Relegation."}
+{"speaker":"DUBNER","text":"Relegation from the academy."}
+{"speaker":"NARRATOR","text":"So you just gotta watch out."}
+{"speaker":"NARRATOR","text":"You just can’t publish dumb papers."}
+{"speaker":"DUBNER","text":"Okay."}
+{"speaker":"DUBNER","text":"I want you to start that movement, and I’m going to sign on to be your enforcer."}
+{"speaker":"DUBNER","text":"That would be so much fun."}
+{"speaker":"NARRATOR","text":"We would not be loved by the academic world."}
+{"speaker":"DUBNER","text":"It’s okay."}
+{"speaker":"DUBNER","text":"It’s not my world."}

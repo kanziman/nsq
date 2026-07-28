@@ -1,0 +1,431 @@
+{"speaker":"DUBNER","text":"I haven’t spiraled yet, and I’m pretty old."}
+{"speaker":"DUCKWORTH","text":"Just make it a few more years and you’ll be good."}
+{"speaker":"DUBNER","text":"I’m just running out the clock now."}
+{"speaker":"DUCKWORTH","text":"I’m Angela Duckworth."}
+{"speaker":"DUBNER","text":"I’m Stephen Dubner."}
+{"speaker":"BOTH","text":"And you’re listening to No Stupid Questions."}
+{"speaker":"NARRATOR","text":"Today on the show: Is it immoral to slack off at work when others are depending on you to do a good job?"}
+{"speaker":"DUBNER","text":"I had a tiny bit of authority as an umpire of a minor Little League game, and I exploited it for my own benefit."}
+{"speaker":"NARRATOR","text":"Also: How valuable is it to have a personal mission statement?"}
+{"speaker":"DUBNER","text":"That sounds like a marketing scam."}
+{"speaker":"DUCKWORTH","text":"I can sell you one."}
+{"speaker":"DUCKWORTH","text":"And it comes with a set of steak knives."}
+{"speaker":"DUBNER","text":"Angela Duckworth, I have what may be a truly stupid question but this is the one place I’m allowed to ask it."}
+{"speaker":"DUCKWORTH","text":"That’s right."}
+{"speaker":"DUBNER","text":"So here it goes."}
+{"speaker":"DUBNER","text":"Do you believe, as I do, that incompetence is often a form of dishonesty?"}
+{"speaker":"DUBNER","text":"And I can spell out further what I mean by that if you’d like."}
+{"speaker":"DUCKWORTH","text":"I have a first intuition, which is “no,” but why don’t you elaborate a little bit?"}
+{"speaker":"NARRATOR","text":"DUBNER: Yeah."}
+{"speaker":"NARRATOR","text":"Okay."}
+{"speaker":"NARRATOR","text":"So I realize it’s a murky question."}
+{"speaker":"NARRATOR","text":"But what I’m suggesting is this: I have encountered a lot of people who consider themselves good people — moral, and righteous, and pro-social, and so on, who happen to be not very good at what they do professionally."}
+{"speaker":"NARRATOR","text":"So their work can be sloppy, or careless, or they don’t try very hard to improve; they don’t get upset when they mess up, which irritates me."}
+{"speaker":"DUCKWORTH","text":"I was going to say, that upsets you most probably."}
+{"speaker":"DUBNER","text":"It does."}
+{"speaker":"DUBNER","text":"It does."}
+{"speaker":"DUBNER","text":"And I guess the biggest factor is they don’t consider how their actions affect other people in that work sphere."}
+{"speaker":"DUBNER","text":"So I used to think this was just garden variety incompetence — that they were doing their best, but they just weren’t very good."}
+{"speaker":"DUBNER","text":"But over the years, I’ve come to think that most people are capable of doing better, but for whatever reason, they don’t."}
+{"speaker":"DUBNER","text":"And my impression is that they consider it less important to be competent in their professional sphere, because in their daily personal lives they are good and ethical people."}
+{"speaker":"DUBNER","text":"So I’ve come to feel, in some cases, that incompetence is a form of dishonesty — that these people are essentially stealing time from their coworkers who have to clean up their messes."}
+{"speaker":"DUBNER","text":"They’re degrading the shared enterprise of work that others are putting a lot of effort into."}
+{"speaker":"DUBNER","text":"So what do you think?"}
+{"speaker":"DUBNER","text":"Am I a monster for thinking this, or is there some validity?"}
+{"speaker":"DUCKWORTH","text":"Well, I hope that was therapeutic for you, Stephen, just expressing all of that."}
+{"speaker":"DUBNER","text":"I feel great, thanks."}
+{"speaker":"DUBNER","text":"I’m done."}
+{"speaker":"DUBNER","text":"See you later."}
+{"speaker":"DUCKWORTH","text":"I think I now understand the question better."}
+{"speaker":"DUCKWORTH","text":"You see incompetence of the sort “they did sloppy work, not trying your best, etc.” as something which is harmful to others."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"And that there’s agency, that there’s a choice, that it’s not really trying your best, but in fact some volitional decision to not get things done on time, or not bring things to a standard of excellence that the person could have done."}
+{"speaker":"DUCKWORTH","text":"Is that right?"}
+{"speaker":"DUBNER","text":"First of all, if I ever start a punk band, “volitional decision” is my name."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"You, as always, boiled it down beautifully, much shorter and much more on point."}
+{"speaker":"DUBNER","text":"So, yes, that’s my issue."}
+{"speaker":"DUBNER","text":"That there is a matter of volition, but volition needs to include a conscious decision to care less about the quality in a realm where others do overtly care."}
+{"speaker":"DUCKWORTH","text":"Okay."}
+{"speaker":"DUCKWORTH","text":"Fair enough."}
+{"speaker":"DUCKWORTH","text":"And at the core of both incompetence and dishonesty is a sort of selfishness."}
+{"speaker":"DUCKWORTH","text":"Like, “This is good for me."}
+{"speaker":"DUCKWORTH","text":"I know it’s bad for you, but because it’s good for me."}
+{"speaker":"DUCKWORTH","text":"I’m going to do it anyway.” So I can see why you’re asking a question now, better than I first did, because my first intuition was like, “No, let’s go onto the next question.” But I think the argument turns on whether people who are not doing work that’s up to your standard are, by and large, doing it because they feel licensed to try less hard since they’re trying so hard in other realms of their life."}
+{"speaker":"DUCKWORTH","text":"And I don’t know that that describes the incompetence that I’ve seen."}
+{"speaker":"DUCKWORTH","text":"It is true, though, that people do occasionally feel like there’s some kind of “sum of goodness” that they have to get to."}
+{"speaker":"DUCKWORTH","text":"And if you tell three truths, then it allows you to tell one lie."}
+{"speaker":"DUBNER","text":"Right."}
+{"speaker":"DUCKWORTH","text":"I mean do you really feel like people who are taking it easy and doing not as great — don’t you think it’s often because they don’t even see the problem?"}
+{"speaker":"DUCKWORTH","text":"That they’re not consciously aware that they are at all substandard?"}
+{"speaker":"DUBNER","text":"So that is a good and important question."}
+{"speaker":"DUBNER","text":"My guess is that most people know."}
+{"speaker":"DUBNER","text":"I guess one reason I didn’t enjoy so much the jobs I had in journalism is I don’t like being overly dependent on others’ input when I care a lot about the quality."}
+{"speaker":"DUBNER","text":"So I guess what I’m describing is a control freak."}
+{"speaker":"DUCKWORTH","text":"I know what you mean, and I think it’s caring so much."}
+{"speaker":"DUCKWORTH","text":"And I think it probably irritates you, or something a little stronger than irritation, to feel like other people are not caring as much."}
+{"speaker":"DUBNER","text":"Yes."}
+{"speaker":"DUCKWORTH","text":"Right."}
+{"speaker":"DUBNER","text":"Yes."}
+{"speaker":"DUBNER","text":"In fact, I sometimes discuss with my Freakonomics Radio producing partner, Alison Craiglow, one of the single most important characteristics that I really need someone to have to be a useful member of our team is that they have to really, really, really hate to screw up."}
+{"speaker":"DUBNER","text":"And if they don’t hate it, if it doesn’t burn them and keep them up at night — because I screw up all the time."}
+{"speaker":"DUBNER","text":"I mean, everybody does."}
+{"speaker":"DUBNER","text":"So my rule of thumb is: Every time I screw up, I try to take it apart, learn from it, and find a way to eliminate that kind of mistake again."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I mean, for you and me, we actually don’t have a problem being like, “Oh, I feel bad that I made that mistake.” And then we, without a lot of emotional charge, set about trying to understand why we made the mistake, and try not to do it again."}
+{"speaker":"DUCKWORTH","text":"I think what often happens, though, is that there is a spiral of anxiety and, “I’m a bad person.” I think this happens a lot to some people."}
+{"speaker":"DUBNER","text":"You know, while you were saying that, I actually had a memory flash of a traumatic — not really traumatic — a dramatic, at least, and really negative event from adolescence."}
+{"speaker":"DUBNER","text":"And I think about it still pretty routinely whenever I’m about to be lazy, or do something stupid, or whatnot."}
+{"speaker":"DUBNER","text":"So I played baseball as a kid and I think I was in Little League still, but then they had the minor Little League, the little kids, and I was umpiring, and you got paid $1.50."}
+{"speaker":"DUBNER","text":"So it was awesome."}
+{"speaker":"DUCKWORTH","text":"That’s a lot of money."}
+{"speaker":"DUBNER","text":"There was a rule that the games had to go a certain number of innings to be “official,” but it was like two or three innings, because they were really little kids, or until dark."}
+{"speaker":"DUBNER","text":"And for some reason, on this night, I just was feeling so lazy, or irresponsible, or whatever, that even though the sun was still very high in the sky, after the requisite number of innings, I said, “Okay, that’s it."}
+{"speaker":"DUBNER","text":"The game’s over.”"}
+{"speaker":"DUCKWORTH","text":"You called it."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"I had a tiny bit of authority as an umpire of a minor Little League game, and I exploited it for my own benefit, because I just wanted to get out of there, get my $1.50, and go buy candy with it."}
+{"speaker":"DUBNER","text":"And I got called out on it later by the guy who ran the league, and he did it in a very nice way."}
+{"speaker":"DUBNER","text":"And that made me feel even worse."}
+{"speaker":"DUCKWORTH","text":"What’d he say?"}
+{"speaker":"DUBNER","text":"He said, “Listen, you’re right that you do have the authority to call the game after a certain number of innings, but the whole point of that is about beating darkness.” I remember, he put it back on me and said, “As you remember from playing in the minors, this is a highlight of their week."}
+{"speaker":"DUBNER","text":"They love to come here and then to take something away that they’re expecting is a real sadness.” And I felt terrible."}
+{"speaker":"DUBNER","text":"And so to this day, whenever I think about not giving something the proper amount of attention or effort, that incident cycles through my subconscious and the horrible feeling I had of guilt, essentially, and shame makes me push a little bit harder."}
+{"speaker":"DUCKWORTH","text":"But you don’t spiral, right?"}
+{"speaker":"DUCKWORTH","text":"So, you feel a twinge or more of guilt or shame when you fall short of a moral standard or a performance standard, but you don’t seem to me like somebody who spirals then, and then can’t get beyond it."}
+{"speaker":"DUBNER","text":"I haven’t spiraled yet, and I’m pretty old."}
+{"speaker":"DUCKWORTH","text":"Just make it a few more years and you’ll be good."}
+{"speaker":"DUBNER","text":"I’m just running out the clock now."}
+{"speaker":"DUBNER","text":"No, I haven’t."}
+{"speaker":"DUBNER","text":"But I can see where it’s a powerful emotion, powerful construct, and so now I feel bad about being the guy who said a little while ago that, “people should hate to screw up more."}
+{"speaker":"DUBNER","text":"It’s good for you.” I do sound like a monster."}
+{"speaker":"DUCKWORTH","text":"You grew, even in the course of one conversation."}
+{"speaker":"DUCKWORTH","text":"No, I think if we can learn to feel bad, but not to feel too bad."}
+{"speaker":"DUCKWORTH","text":"But look, I believe in caring."}
+{"speaker":"DUCKWORTH","text":"And I think that’s where this all started."}
+{"speaker":"DUCKWORTH","text":"Right?"}
+{"speaker":"DUCKWORTH","text":"Like, you would like people to care about their moral standards, about their performance standards."}
+{"speaker":"DUCKWORTH","text":"And I don’t think it’s a bad thing."}
+{"speaker":"DUBNER","text":"Yeah."}
+{"speaker":"DUBNER","text":"You know, what drives me crazy is when someone did something wrong, or totally forgot to do it, or sent the wrong file to the wrong person, and they’re like, “Oh, no problem."}
+{"speaker":"DUBNER","text":"Here you go.” And I’m like, “No."}
+{"speaker":"DUBNER","text":"It is a little bit of a problem.” And that’s what I mean by treating competence as a form of honesty."}
+{"speaker":"DUBNER","text":"Maybe if I’d framed it that way, rather than the two negatives."}
+{"speaker":"DUBNER","text":"Do you think that competence is a form of honesty?"}
+{"speaker":"DUCKWORTH","text":"Yeah, I mean, what competence and honesty have in common is that there is a standard and there is integrity."}
+{"speaker":"DUCKWORTH","text":"That it matters whether I reach the standard or if I fall short."}
+{"speaker":"DUCKWORTH","text":"The thing I would want to say as a psychologist is that most people don’t actually go to bed at night and think, “I was incompetent,” nor do they go to bed at night and think that they were dishonest."}
+{"speaker":"DUCKWORTH","text":"And actually, when you look at research on honesty and dishonesty, people have almost an infinite number of ways to rationalize what they did, so that when they go to bed at night, they feel like, “Oh, I did my best."}
+{"speaker":"DUCKWORTH","text":"And maybe it was a little bit of a lie, but it was a justified lie.” And they might not even use the word “lie” when they put themselves to bed at night."}
+{"speaker":"DUCKWORTH","text":"So I think one question is: What is really the failure?"}
+{"speaker":"DUCKWORTH","text":"Is it the failure to care about not reaching a standard?"}
+{"speaker":"DUCKWORTH","text":"Or is it much deeper than that?"}
+{"speaker":"DUCKWORTH","text":"And I suspect it’s deeper than that."}
+{"speaker":"DUCKWORTH","text":"That’s why it’s so hard to change."}
+{"speaker":"DUBNER","text":"You’re saying it’s more a failure of awareness, then?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I think in many cases there is a failure of awareness or a kind of subterfuge."}
+{"speaker":"DUCKWORTH","text":"We’re faking out our own self, because nobody wants to go to bed thinking that they’re dishonest or incapable, and so it’s much easier to create some account for what we did, and what we said, and how we conducted ourselves where we can go to bed and still be the good guy."}
+{"speaker":"DUBNER","text":"Tell me a little bit more about moral licensing, which you’ve hinted at."}
+{"speaker":"DUBNER","text":"And it’s something that we’ve looked at on a few Freakonomics Radio episodes in the past."}
+{"speaker":"DUBNER","text":"There was a nice experiment done by John List."}
+{"speaker":"DUBNER","text":"And they basically found that if people feel like they’re doing good work, they’re willing to take license in other areas — in other words, be a little bit either slack or dishonest."}
+{"speaker":"DUBNER","text":"So I’m curious how strong the literature is in psychology and whether this idea of moral licensing is truly a real and universal thing."}
+{"speaker":"DUCKWORTH","text":"Yeah, I’m not an expert in moral licensing, but my read of the research is that it is a real thing."}
+{"speaker":"DUCKWORTH","text":"It’s part of a broader psychological phenomenon, which is this idea that we can license ourselves to do something which is inconsistent with our principles because we feel like we got credit earlier."}
+{"speaker":"DUCKWORTH","text":"I mean, to me, the most accessible example is you go to a fast food restaurant and because you order a Diet Coke, you get the super-sized fries."}
+{"speaker":"DUCKWORTH","text":"Like, “Well, look, I saved 150 calories on the soda."}
+{"speaker":"DUCKWORTH","text":"So now I’m going to get this 450-calorie, salty potato snack.” So the human mind is quite prone to thinking that, “Look, nobody’s perfect, so I’m just trying to get to a certain number of good acts."}
+{"speaker":"DUCKWORTH","text":"And if I’ve done that in one way, I don’t have to do it now that I’ve already reached my threshold.” And maybe that accounts for both incompetence to some extent like, “This is good enough.” And also, maybe, dishonesty."}
+{"speaker":"DUCKWORTH","text":"You can imagine that this could drive both of these irksome, not great behaviors."}
+{"speaker":"DUBNER","text":"You took all the romance out of french fries, by the way."}
+{"speaker":"DUBNER","text":"450-calorie, salty potato snack?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUBNER","text":"So can you tell us another example or two about moral licensing?"}
+{"speaker":"DUBNER","text":"I seem to recall having read things about racial attitudes."}
+{"speaker":"DUBNER","text":"If people do a certain thing, or give a certain answer in one realm that shows them to be racially enlightened or racially fair, that they will basically pat themselves on the back and that a subsequent action might actually be in the opposite direction?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I mean, I think that makes it sound quite simple, right?"}
+{"speaker":"DUCKWORTH","text":"That when we do a good act then it puts money in our virtue bank, and then we can spend it a little bit later."}
+{"speaker":"DUCKWORTH","text":"There was a meta-analysis that I read — that is a study of studies."}
+{"speaker":"DUCKWORTH","text":"And in this case, there had been 91 different studies of moral licensing."}
+{"speaker":"DUCKWORTH","text":"And in this meta-analysis, Stephen, there was a small effect."}
+{"speaker":"DUCKWORTH","text":"It wasn’t a sledgehammer effect."}
+{"speaker":"DUCKWORTH","text":"The problem is that the published studies had bigger effects than the unpublished studies."}
+{"speaker":"DUCKWORTH","text":"And that always makes you wonder whether file drawers are just overflowing with, “Eh, it’s really nothing.” My guess is that there is something there, but it could be really small and there’s so many other things that drive human behavior."}
+{"speaker":"DUCKWORTH","text":"We probably all have some licensing going on below our conscious awareness, but we also have other things going on below and above our conscious awareness."}
+{"speaker":"DUCKWORTH","text":"And maybe the moral here is that we should be aware of that tendency."}
+{"speaker":"DUCKWORTH","text":"Because, the desirable thing is to have a standard, reflect on that standard, and then to apply that standard to all occasions in your life, and not feel like you’re getting to a, a score and then beyond that it’s good enough."}
+{"speaker":"DUCKWORTH","text":"I mean, satisficing is really not a great way to approach morality."}
+{"speaker":"DUBNER","text":"Okay, so let’s say that I want to be as, what sounds like, impossibly self-aware as you just described, because that’s hard."}
+{"speaker":"DUBNER","text":"But let’s say I want to be aware of this tendency."}
+{"speaker":"DUBNER","text":"I want to address it, try to understand where it’s coming from, and if I deviate, try to fix it somehow."}
+{"speaker":"DUBNER","text":"Do you have any advice for that?"}
+{"speaker":"DUCKWORTH","text":"You know, Max Bazerman, who is a behavioral scientist that we both know, has recently been writing about this."}
+{"speaker":"DUCKWORTH","text":"I think his term for it is, “better, not perfect.” And I think when you set out perfection as the ideal, then it actually, maybe paradoxically, gets us to be less moral because we think, “I’ll never do that.” And then you just to hell with it."}
+{"speaker":"DUCKWORTH","text":"And so, “better” is a better goal than “perfect.” And if you are always striving to be better, if you are in that mindset, I think you might be less likely to morally license because you wouldn’t take this next occasion to tell a little bit of a lie, or take someone else’s time, because you’re always trying to do better."}
+{"speaker":"DUCKWORTH","text":"I don’t know."}
+{"speaker":"DUCKWORTH","text":"That sounds a little Pollyanna to me, but one of my recent “oh my gosh, this must explain everything about human nature” theories is that attention is so limited."}
+{"speaker":"DUCKWORTH","text":"And one of the problems with incompetence, dishonesty, and so many other problems, is that our attention is so selective, and we can just ignore so much."}
+{"speaker":"DUBNER","text":"Let me ask you one last thing."}
+{"speaker":"DUBNER","text":"It strikes me, and again, I may be wrong, but that just about everyone wants to appear to be moral, right?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUBNER","text":"Very few people seem to want to be considered immoral, or even amoral."}
+{"speaker":"DUBNER","text":"Has anyone ever done a good job measuring the gap of declared morality and actual morality?"}
+{"speaker":"DUCKWORTH","text":"You know, I don’t know."}
+{"speaker":"DUCKWORTH","text":"One of the most influential psychologists when I was in school was a guy named John Sabini, who felt like what’s really going on here is that people want to feel like they’re good, capable human beings and their desire to do that can warp things, can make them oblivious to things."}
+{"speaker":"DUCKWORTH","text":"And they can just change the narrative."}
+{"speaker":"DUCKWORTH","text":"Like, “Oh, the reason I had to steal that thing is because the system is corrupt, and therefore, it was a good thing that I stole that thing.” So I do think the desire is very strong."}
+{"speaker":"DUCKWORTH","text":"I don’t know if anybody has measured the gap."}
+{"speaker":"DUCKWORTH","text":"To do that, of course, you would have to have some measure of actual moral behavior."}
+{"speaker":"DUCKWORTH","text":"It would be very hard to do in the real world."}
+{"speaker":"DUBNER","text":"Well, as with so many things that we most care about — so many behaviors and attitudes and so on — we really, really want to see them in the wild and not in the lab."}
+{"speaker":"DUBNER","text":"And the lab really, I mean, no offense to you and your field, it isn’t great at measuring and analyzing complicated behaviors."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I mean, almost by definition, right?"}
+{"speaker":"DUCKWORTH","text":"Because when you bring something to the lab, you create some little circumstance, this situation."}
+{"speaker":"DUCKWORTH","text":"But that makes it very oversimplified."}
+{"speaker":"DUCKWORTH","text":"You know, there was one field study of morality, the wallet test, where I think it was something like 17,000 wallets were left in all different parts of the world, and then it was just observed."}
+{"speaker":"DUCKWORTH","text":"Like, what do people do when they find a wallet?"}
+{"speaker":"DUCKWORTH","text":"Most people are honest."}
+{"speaker":"DUCKWORTH","text":"That was one of the conclusions of the study."}
+{"speaker":"DUCKWORTH","text":"Not everyone."}
+{"speaker":"DUCKWORTH","text":"So you could begin, at least, to try to get out of the lab and ask the question, for example, whether the people who were encountering these wallets consider themselves to be honest people."}
+{"speaker":"DUCKWORTH","text":"And then you could see whether they really did or didn’t return the wallet to the owner, or try."}
+{"speaker":"DUBNER","text":"Well, going back to the question I asked about incompetence as a form of dishonesty."}
+{"speaker":"DUBNER","text":"Now that you’ve told me that most of us see ourselves as good and wanting to be seen as good, I feel I put myself in the minority there of, like, I care much less about people and more about not sucking."}
+{"speaker":"DUBNER","text":"So, if nothing else, I’ve established bona fides that I don’t always go with the crowd."}
+{"speaker":"DUCKWORTH","text":"That’s probably one reason I like you."}
+{"speaker":"DUCKWORTH","text":"I think that you are not one to be checking with what everybody else thinks first before you decide what you think."}
+{"speaker":"DUBNER","text":"Right."}
+{"speaker":"DUBNER","text":"But, I mean, hopefully one of the few things that you’d like to be with the crowd on is wanting to appear to be a good person."}
+{"speaker":"DUCKWORTH","text":"I’m sure you have that."}
+{"speaker":"DUCKWORTH","text":"I don’t think you go to bed at night thinking you’re not a good person either."}
+{"speaker":"DUCKWORTH","text":"I don’t."}
+{"speaker":"DUBNER","text":"You don’t go to bed thinking, “I’m not a good person”?"}
+{"speaker":"DUBNER","text":"Or you don’t go to bed thinking you’re—"}
+{"speaker":"DUCKWORTH","text":"I don’t go to bed thinking that — in other words, I’m guilty of probably rationalizing all kinds of little things and ignoring lots of things that I would like to ignore."}
+{"speaker":"DUCKWORTH","text":"But I’m just saying that I am sure you do the same thing because it’s human nature."}
+{"speaker":"DUBNER","text":"You know, I think the moral of the story is not to go to bed at night."}
+{"speaker":"NARRATOR","text":"Still to come on No Stupid Questions: Angela and Stephen debate the value of top-level personal goals."}
+{"speaker":"DUBNER","text":"How about: “Every day, try to suck a little bit less.”"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"Stephen, I’m curious whether you have a top-level goal."}
+{"speaker":"DUBNER","text":"What?"}
+{"speaker":"DUCKWORTH","text":"It’s a simple yes or no question."}
+{"speaker":"DUBNER","text":"That sounds like a marketing scam."}
+{"speaker":"DUCKWORTH","text":"Because I can sell you one."}
+{"speaker":"DUCKWORTH","text":"And it comes with a set of steak knives."}
+{"speaker":"DUBNER","text":"Did you know that Andrew Yang, former presidential candidate, was a Cutco knife salesman early in his career?"}
+{"speaker":"DUCKWORTH","text":"I did not know that."}
+{"speaker":"DUBNER","text":"It’s true."}
+{"speaker":"DUBNER","text":"So wait."}
+{"speaker":"DUBNER","text":"Do I have a top-level goal?"}
+{"speaker":"DUBNER","text":"You’re asking me."}
+{"speaker":"DUBNER","text":"So okay, first of all, I have to say, I feel like you and I are pretty good friends."}
+{"speaker":"DUCKWORTH","text":"We are pretty good friends, I think."}
+{"speaker":"DUBNER","text":"But I feel the fact that you’re asking me if I have a top-level goal infers you don’t know me at all."}
+{"speaker":"DUCKWORTH","text":"Because you have no idea what I’m talking about, or because, of course, you have one."}
+{"speaker":"DUBNER","text":"Because I definitely don’t have any idea what you’re talking about."}
+{"speaker":"DUBNER","text":"And I’m almost sure that I don’t have a top-level goal."}
+{"speaker":"DUCKWORTH","text":"No, no, no."}
+{"speaker":"DUCKWORTH","text":"Hold on."}
+{"speaker":"DUCKWORTH","text":"Let me explain what it is."}
+{"speaker":"DUCKWORTH","text":"I’m guessing you do."}
+{"speaker":"DUCKWORTH","text":"So this “top level goal” is essentially a mission statement."}
+{"speaker":"DUCKWORTH","text":"It’s the “why” behind everything that you do, let’s say, professionally."}
+{"speaker":"DUCKWORTH","text":"Obviously, you’re a dad, you’re a husband, you’re a friend."}
+{"speaker":"DUCKWORTH","text":"But just as a writer, or as a journalist, what is the “why” that unifies everything that you do?"}
+{"speaker":"DUBNER","text":"I understand your question better now, and I’m less insulted."}
+{"speaker":"DUBNER","text":"Number one."}
+{"speaker":"DUCKWORTH","text":"No disrespect intended."}
+{"speaker":"DUBNER","text":"Number two: I dislike the idea of a mission statement even more than the top-level goal, I have to say."}
+{"speaker":"DUCKWORTH","text":"Really?"}
+{"speaker":"DUBNER","text":"Honestly, I’m of two minds."}
+{"speaker":"DUBNER","text":"The idea of a mission statement sounds obviously like a good idea, right?"}
+{"speaker":"DUBNER","text":"If it’s a well-considered declaration of your deepest intentions."}
+{"speaker":"DUBNER","text":"On the other hand, my actual experience with mission statements is that they are often institutional B.S., that they’re too soft to be actionable, or they’re so obvious as to be unnecessary."}
+{"speaker":"DUBNER","text":"It makes me think a little bit about — you know, a lot of companies publish their ethical code, and I can’t remember who said it, but somebody smart once wrote about how if a company decides it needs to write down their code of ethics, they’ve already screwed up."}
+{"speaker":"DUBNER","text":"And the ones that operate ethically don’t actually need to write down the code of ethics, which basically says you’re supposed to not lie, cheat, and steal."}
+{"speaker":"DUCKWORTH","text":"So, Stephen, I can understand the cynicism."}
+{"speaker":"DUCKWORTH","text":"Sometimes the rift between what a company or an organization says they’re going to do, and then what they do is so striking that you kind of wish they had never said what their ideals were."}
+{"speaker":"DUCKWORTH","text":"But look, I think it’s actually very helpful to be explicit about your values."}
+{"speaker":"DUCKWORTH","text":"Because why not add some clarity?"}
+{"speaker":"DUCKWORTH","text":"It’s not a panacea."}
+{"speaker":"DUCKWORTH","text":"But would you not agree that it’s better to have a code of conduct or a set of core principles so when you hire someone, for example, they know what you’re all about?"}
+{"speaker":"DUBNER","text":"You know, I know that the good person’s answer is, “Yes, Angela, you’re absolutely right.” But a lot of the mission statements I see are: “We help humankind by being forward-thinking individuals with the collective intention of benevolence.”"}
+{"speaker":"DUCKWORTH","text":"So abstract and so intractable."}
+{"speaker":"DUBNER","text":"Well, also, it’s a subset of what we already know, as humans, we’re supposed to do."}
+{"speaker":"DUBNER","text":"That’s really my bigger problem with it."}
+{"speaker":"DUBNER","text":"Here’s what I think is a good mission statement is a statement of an actual mission."}
+{"speaker":"DUBNER","text":"For instance, I’m making this up, but here’s one from 1968: “We’re going to try to send a couple of people on a rocket ship to the moon, and get them there alive, have them walk around a little bit, and then get them back to Earth alive."}
+{"speaker":"DUBNER","text":"Mission accomplished."}
+{"speaker":"DUBNER","text":"Or not.” That’s what I see as a useful mission statement."}
+{"speaker":"DUCKWORTH","text":"There’s accountability."}
+{"speaker":"DUCKWORTH","text":"There’s specificity."}
+{"speaker":"DUBNER","text":"Exactly."}
+{"speaker":"DUCKWORTH","text":"It’s not like, “improve humankind.” Maybe you’re bristling at the abstraction, and therefore, this feels meaningless to you."}
+{"speaker":"DUBNER","text":"You know, I will say this."}
+{"speaker":"DUBNER","text":"There is an organization I used to work with that had what I thought was a lovely mission statement."}
+{"speaker":"DUBNER","text":"Maybe this is why I’m a little bit down on it."}
+{"speaker":"DUBNER","text":"This was for W.N.Y.C., or New York Public Radio."}
+{"speaker":"DUBNER","text":"Their mission statement was — I love this — it was, “to make the mind more curious, the heart more open, and the spirit more joyful through excellent audio programming that is deeply rooted in New York City.” So forget about the last part about excellent audio programming: “To make the mind more curious, the heart more open, the spirit more joyful.” I love that!"}
+{"speaker":"DUBNER","text":"Like, if that was in a bottle, I’d want to buy it and drink it."}
+{"speaker":"DUBNER","text":"But here’s the fact."}
+{"speaker":"DUBNER","text":"That mission statement was for an organization that ended up having a lot of organizational difficulty."}
+{"speaker":"DUBNER","text":"And this hearkens back a little bit to moral licensing, which is, if I say that I’m doing wonderful things, what’s the relationship between that statement and actually doing wonderful things?"}
+{"speaker":"DUBNER","text":"And do we actually focus enough on execution to ensure that we do those wonderful things, as opposed to declare it?"}
+{"speaker":"DUBNER","text":"That’s my issue with mission statements."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"I can see that."}
+{"speaker":"DUCKWORTH","text":"But what I was wondering in that very long mission statement that started off in poetry and ended in prose, with audio programming, etc., when you read it to me, by the way, I thought you were going to say what you liked about it was the last part, right?"}
+{"speaker":"DUCKWORTH","text":"Because it was specific, and it wasn’t so abstract, etc."}
+{"speaker":"DUBNER","text":"You’re right."}
+{"speaker":"DUBNER","text":"I’m a bundle of contradictions, aren’t I?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"But look, I think the clear answer to this question is, “No, you do not."}
+{"speaker":"DUCKWORTH","text":"You do not have a top-level goal.” “I will not eat green eggs and ham."}
+{"speaker":"DUCKWORTH","text":"I will not eat them, Sam I Am.”"}
+{"speaker":"DUBNER","text":"You know, again, I can see how it would be a good idea."}
+{"speaker":"DUBNER","text":"On the other hand, one reason I thought why it might not be a good idea is because if you have something declared, or written down, or broadcast as your goal, doesn’t that kind of put a crimp on your ability to evolve, and change, and innovate?"}
+{"speaker":"DUCKWORTH","text":"Well, here’s the thing."}
+{"speaker":"DUCKWORTH","text":"I think abstraction — and you were like “Ah, these things are so vague, and what does it even mean to like, ‘make the world a better place?’” The abstraction is good and bad."}
+{"speaker":"DUCKWORTH","text":"So you pointed out some of the bad things about abstraction."}
+{"speaker":"DUCKWORTH","text":"It can mean anything."}
+{"speaker":"DUCKWORTH","text":"But the good is flexibility."}
+{"speaker":"DUCKWORTH","text":"And if you have a top-level goal, like football coach Pete Carroll, who coaches the Seattle Seahawks, two words, very simple: “always compete.” He uses the word compete to mean basically, “be your best,” not to necessarily beat the opponent."}
+{"speaker":"DUCKWORTH","text":"It’s so abstract."}
+{"speaker":"DUCKWORTH","text":"And I see how that can be frustrating, “Oh, what the heck does this mean?” But also there’s a reason why these things are so abstract."}
+{"speaker":"DUCKWORTH","text":"It is supposed to give a “why” for everything that you do."}
+{"speaker":"DUCKWORTH","text":"And so there’s a tradeoff in terms of abstraction versus specificity."}
+{"speaker":"DUBNER","text":"I have to say, I love that mission statement."}
+{"speaker":"DUBNER","text":"“Always compete.”"}
+{"speaker":"DUCKWORTH","text":"You just like good writing."}
+{"speaker":"DUCKWORTH","text":"I think all these ones that you like are like, “Oh, that’s beautiful.”"}
+{"speaker":"DUBNER","text":"Maybe."}
+{"speaker":"DUBNER","text":"But it’s exactly what you just said."}
+{"speaker":"DUBNER","text":"It’s abstract enough to mean almost anything, but it’s specific enough you can always find an explanation for how it contributes to what you’re trying to do."}
+{"speaker":"DUBNER","text":"Doesn’t mean “win,” because sometimes you can compete as hard as you are capable of, and you’re still not going to win."}
+{"speaker":"DUBNER","text":"And that doesn’t mean that you failed."}
+{"speaker":"DUCKWORTH","text":"Right."}
+{"speaker":"DUCKWORTH","text":"For some people, it can be very useful to have a compass which orients them to what they’re doing and helps them make decisions."}
+{"speaker":"DUCKWORTH","text":"You know, I have a top-level goal and it helps me."}
+{"speaker":"DUBNER","text":"Give it to us."}
+{"speaker":"DUCKWORTH","text":"My top level goal is to use psychological science to help children thrive."}
+{"speaker":"DUCKWORTH","text":"But maybe that goal is especially helpful to me because I understand it."}
+{"speaker":"DUCKWORTH","text":"But maybe when we then ask the question: how useful is this top-level goal for outsiders?"}
+{"speaker":"DUCKWORTH","text":"Maybe it’s not as useful."}
+{"speaker":"DUCKWORTH","text":"Maybe it’s even detrimental in some way, for me to parade around with my top-level goal sign."}
+{"speaker":"NARRATOR","text":"DUBNER: Well, so I like your top-level goal."}
+{"speaker":"NARRATOR","text":"Do you call it a mission statement or top-level goal, or is it one and the same?"}
+{"speaker":"DUCKWORTH","text":"I call it a top-level goal, because I think humans have goals that are hierarchical, and we have lots of low-level goals that are really specific and concrete."}
+{"speaker":"DUCKWORTH","text":"And then basically, it’s your to-do list, right?"}
+{"speaker":"DUCKWORTH","text":"You know, what have I got to get done today, this week?"}
+{"speaker":"DUCKWORTH","text":"And then, if you ask, “why” — like, those are goals that are in service to more abstract, longer-term goals: maybe things I’m trying to get done this year."}
+{"speaker":"DUCKWORTH","text":"And when you keep asking “why” and you can’t get any farther, you’re like, “What do you mean, ‘why’?"}
+{"speaker":"DUCKWORTH","text":"Like, that’s the whole point of everything.” That’s when you’ve gotten to the top."}
+{"speaker":"DUCKWORTH","text":"And that’s why I call it a top-level goal."}
+{"speaker":"DUCKWORTH","text":"But mission statement works just as well."}
+{"speaker":"DUBNER","text":"So here’s an interesting example."}
+{"speaker":"DUBNER","text":"Google, their current mission statement, which I personally find pretty good, is as follows: “To organize the world’s information and make it universally accessible and useful.” What I like about that is that it’s specific and it’s not preachy."}
+{"speaker":"DUBNER","text":"But just so we know, an unofficial motto of Google, but widely disseminated, used to be: “Don’t be evil.”"}
+{"speaker":"DUCKWORTH","text":"Really?"}
+{"speaker":"DUBNER","text":"It was."}
+{"speaker":"DUCKWORTH","text":"Don’t be evil?"}
+{"speaker":"DUBNER","text":"I believe “don’t be evil” came from way, way, way back in the beginning."}
+{"speaker":"DUBNER","text":"And we should say, it lasted up until — I believe was 2018 when they removed that phrase from their corporate code of conduct."}
+{"speaker":"DUCKWORTH","text":"Now, why do you think that is?"}
+{"speaker":"DUBNER","text":"Well, I don’t know if they’ve ever said why."}
+{"speaker":"DUBNER","text":"I think they would be foolish to do so."}
+{"speaker":"DUCKWORTH","text":"As their P.R."}
+{"speaker":"DUCKWORTH","text":"consultant, you would advise against such a declaration."}
+{"speaker":"DUBNER","text":"So I’m reading here, when Google was re-organized under their new parent company, Alphabet, they assumed a slightly adjusted version of the motto."}
+{"speaker":"DUBNER","text":"And it became “do the right thing.” But yeah, “don’t be evil” was stricken from the corporate code of conduct in 2018."}
+{"speaker":"DUBNER","text":"Again, that shows the danger, I guess, of having such a statement, which is: it can and will be used against you."}
+{"speaker":"DUBNER","text":"But I think, the first one I read, “to organize the world’s information,” that’s their actual mission statement."}
+{"speaker":"DUBNER","text":"And the other, those mottoes, the two versions, are more like they’re part of a corporate code of conduct."}
+{"speaker":"DUBNER","text":"But your question about this makes me think about this idea that we wrote about in one of our books a while ago."}
+{"speaker":"DUBNER","text":"It was about the idea of having a moral compass."}
+{"speaker":"DUCKWORTH","text":"This is you and Levitt, right?"}
+{"speaker":"DUBNER","text":"Correct."}
+{"speaker":"DUCKWORTH","text":"We didn’t write a book that I forgot about."}
+{"speaker":"DUBNER","text":"Would that we had, but we haven’t yet."}
+{"speaker":"DUBNER","text":"So, the idea of a moral compass again is extremely appealing."}
+{"speaker":"DUBNER","text":"We all like to think that we have learned, through our parents, and our communities, and the people that we admire and so on, to have a moral compass, a way of navigating our way through the world."}
+{"speaker":"DUBNER","text":"But the conclusion that Levitt and I came to in this book that we were writing — in Think Like a Freak, which was really trying to help people understand how to problem solve — what we had advocated was, if you’re really concerned about problem solving, then you should put away your moral compass."}
+{"speaker":"DUBNER","text":"And the reason is that what a moral compass does is basically, you align yourself to what’s the right or wrong way to think about a given issue, whether it’s fracking, or gun control, or genetically engineered food."}
+{"speaker":"DUCKWORTH","text":"Climate change."}
+{"speaker":"DUBNER","text":"And if you operate with your moral compass, it’s easy to lose track of what the actual issue is."}
+{"speaker":"DUBNER","text":"A moral compass can persuade you that all the answers are obvious, even when they’re not."}
+{"speaker":"DUBNER","text":"It can persuade you that there’s a bright line between right and wrong, even when there isn’t."}
+{"speaker":"DUBNER","text":"And worse, it can persuade you that you already know everything you need to know about a subject."}
+{"speaker":"DUCKWORTH","text":"Right, you can delude yourself."}
+{"speaker":"DUBNER","text":"So in my mind, that’s my reason for not wanting to embrace your perfectly suitable suggestion about the top-level statement."}
+{"speaker":"DUCKWORTH","text":"If I just forced you to say something, what would you say as a guiding philosophy?"}
+{"speaker":"DUBNER","text":"For my work, you mean?"}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"Or you can answer it however you want."}
+{"speaker":"DUBNER","text":"I think if I had to have, as you’re forcing me to, a sort of top level goal, professionally, how about: “Every day, try to suck a little bit less.”"}
+{"speaker":"DUCKWORTH","text":"Which is like “try to be better every day.” Unless I’m missing something, right?"}
+{"speaker":"DUBNER","text":"You sound totally uninspired by my top-line goal."}
+{"speaker":"DUCKWORTH","text":"Is there a difference between sucking less and being better?"}
+{"speaker":"DUBNER","text":"Being a little bit better every day sounds a little bit back-patty and sanctimonious, whereas trying to suck a little bit less everyday — to me — sounds a little bit more motivational, because I’m not looking for praise."}
+{"speaker":"DUCKWORTH","text":"Actually, there is a difference between trying to be better and trying to suck less."}
+{"speaker":"DUCKWORTH","text":"And the difference is, in psychology anyway, we distinguish between approach motivation and avoidance motivation."}
+{"speaker":"DUCKWORTH","text":"So there are two reasons why people strive."}
+{"speaker":"DUCKWORTH","text":"And one is because they want to get better, and the other is they want to fail less."}
+{"speaker":"DUCKWORTH","text":"So maybe you are running from “sucking,” or failure."}
+{"speaker":"DUCKWORTH","text":"I take back my question, because they’re not the same thing."}
+{"speaker":"DUBNER","text":"I guess I feel that if you’re the kind of person who would even think about having a top-level goal, of course it’s to improve and so on."}
+{"speaker":"DUBNER","text":"But I actually find that, for me personally, eliminating mistakes, in other words, I hate to say it, accentuating the negative to some degree, or eliminating the negative."}
+{"speaker":"DUBNER","text":"For me, that is useful because the “try to be better” part is meant to be inherent."}
+{"speaker":"DUBNER","text":"It reminds me of you know, Michelangelo was asked, “How do I sculpt a David?”"}
+{"speaker":"DUCKWORTH","text":"Take away everything that’s not David."}
+{"speaker":"DUBNER","text":"There you go."}
+{"speaker":"DUCKWORTH","text":"Not that anybody can really verify that he said that, but maybe it’ll come out in the fact-checking."}
+{"speaker":"DUCKWORTH","text":"I think some people don’t need a top-level goal, and that is because they have their priorities in order."}
+{"speaker":"DUCKWORTH","text":"And they don’t see any necessity to be explicit about where they’re going."}
+{"speaker":"DUCKWORTH","text":"I think maybe the reason why it helped me is: everyone’s got an inbox, and probably everyone feels like their inbox is a little more full than they would like."}
+{"speaker":"DUCKWORTH","text":"Like, “oh, speak here” or like, “talk to you” or like, “review this document.” And If I don’t have some way of making those choices that is the ultimate “why” for me, it’s like, well, what am I doing?"}
+{"speaker":"DUCKWORTH","text":"Otherwise I just end up becoming a people-pleasing machine."}
+{"speaker":"DUCKWORTH","text":"Even this podcast that we’re doing together, I was like, “Oh, well, we’re going to be exploring human nature in ways that hopefully are a little bit helpful and a little bit engaging."}
+{"speaker":"DUCKWORTH","text":"And there’ll be some parents and people who work with kids, like teachers."}
+{"speaker":"DUCKWORTH","text":"And that’ll be helpful.” And if I didn’t have that connection, I wouldn’t have done it."}
+{"speaker":"DUBNER","text":"So now I feel terrible."}
+{"speaker":"DUCKWORTH","text":"Yeah."}
+{"speaker":"DUCKWORTH","text":"Because I’m way superior to you, morally."}
+{"speaker":"DUBNER","text":"You’re way superior to me."}
+{"speaker":"DUBNER","text":"I’m the opposite of all the good things that you’re promoting."}
+{"speaker":"DUCKWORTH","text":"No."}
+{"speaker":"DUBNER","text":"I’m not using psychological science to help children thrive."}
+{"speaker":"DUBNER","text":"I’m giving parents terrible ideas about how to destroy their dreams, and to not even bother having a mission statement."}
+{"speaker":"DUCKWORTH","text":"No, no, no."}
+{"speaker":"DUCKWORTH","text":"We’re both increasing the metric tonnage of psychological wisdom, even if by a few ounces."}
+{"speaker":"DUBNER","text":"So, Angela, it sounds like you believe that a mission statement or top-level goal has real value, at least for many people."}
+{"speaker":"DUBNER","text":"So even though I’m not a convert, do you feel that most people, all people, should do it?"}
+{"speaker":"DUCKWORTH","text":"I’m not going to go so far as to mandate it for all of humanity, but I will say I think it’s helpful for many people."}
+{"speaker":"DUCKWORTH","text":"It helped me."}
+{"speaker":"DUCKWORTH","text":"I’ve talked to people, some on the younger end, 18, 19, some quite far along in life, and for a lot of those people they felt like sitting down with a pencil and a paper and trying to actually say what they’re all about — I gave them the boundary of 10 words or fewer, any more than that and you’re not even going to remember the darn thing."}
+{"speaker":"DUCKWORTH","text":"I think many of those people found it very helpful."}
+{"speaker":"DUCKWORTH","text":"Not everyone."}
+{"speaker":"DUBNER","text":"Have you noticed any correlations?"}
+{"speaker":"DUBNER","text":"The kind of people who are most likely to have mission statements already are also likely to be or do “X”?"}
+{"speaker":"DUCKWORTH","text":"Well, I think a lot of the people that I’ve noticed that have these mission statements articulated are actually leaders."}
+{"speaker":"DUBNER","text":"So what would you say if a given leader were to say, “You know what?"}
+{"speaker":"DUBNER","text":"Here’s why I don’t have a mission statement."}
+{"speaker":"DUBNER","text":"Mission statements are slogans that are the province of political candidates and marketers."}
+{"speaker":"DUBNER","text":"And if you think that I and my organization can be reduced to a mission statement, then you don’t understand the way the world works.”"}
+{"speaker":"DUCKWORTH","text":"Wow."}
+{"speaker":"DUCKWORTH","text":"I would say, “First of all, have you eaten?"}
+{"speaker":"DUCKWORTH","text":"You sound angry."}
+{"speaker":"DUCKWORTH","text":"Can I make you a sandwich?” I really think that’s the first thing I would say."}
+{"speaker":"DUCKWORTH","text":"But if it weren’t the sandwich problem, I guess I would say that almost every organization I can think of, actually, Stephen, literally, for-profit, not-for-profit, they do have one."}
+{"speaker":"DUCKWORTH","text":"Even countries have statements."}
+{"speaker":"DUCKWORTH","text":"I mean the Declaration of Independence, the founding fathers could have just said, “You know what I mean?"}
+{"speaker":"DUCKWORTH","text":"It’s kind of self-evident, right?” They decided to, to write it down."}
+{"speaker":"DUBNER","text":"Yeah, I guess “life, liberty, and the pursuit of happiness” is not a bad top-line goal, I guess."}
+{"speaker":"DUCKWORTH","text":"It’s not."}
+{"speaker":"DUBNER","text":"All right."}
+{"speaker":"DUBNER","text":"I think here’s what it boils down — you’ve persuaded me of this: If a top-line goal, or mission statement, is well-written, I’m okay with it."}
+{"speaker":"DUBNER","text":"“Always compete.” “Life, liberty, pursuit of happiness.” But once we get into the, “Embrace our collective ambiguity to produce less terrible things in the world by making our widgets slightly more angular,” then I’m probably not so interested."}
+{"speaker":"DUCKWORTH","text":"I agree."}

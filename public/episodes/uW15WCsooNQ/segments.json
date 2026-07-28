@@ -1,0 +1,3450 @@
+[
+  {
+    "id": "seg-0",
+    "start": 0,
+    "end": 2.1912000000000003,
+    "speaker": "DUBNER",
+    "text": "I haven’t spiraled yet, and I’m pretty old.",
+    "translation": "저 꽤 나이가 들었는데도 아직 나락으로 떨어지진 않았어요."
+  },
+  {
+    "id": "seg-1",
+    "start": 2.1912000000000003,
+    "end": 5.4956,
+    "speaker": "DUCKWORTH",
+    "text": "Just make it a few more years and you’ll be good.",
+    "translation": "몇 년만 더 버티면 괜찮아질 거예요."
+  },
+  {
+    "id": "seg-2",
+    "start": 5.4956,
+    "end": 9.4,
+    "speaker": "DUBNER",
+    "text": "I’m just running out the clock now.",
+    "translation": "이젠 그냥 시간만 때우고 있는 중이죠."
+  },
+  {
+    "id": "seg-3",
+    "start": 9.4,
+    "end": 11.173333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I’m Angela Duckworth.",
+    "translation": "앤절라 덕워스입니다."
+  },
+  {
+    "id": "seg-4",
+    "start": 11.173333333333334,
+    "end": 12.119666666666667,
+    "speaker": "DUBNER",
+    "text": "I’m Stephen Dubner.",
+    "translation": "스티븐 더브너입니다."
+  },
+  {
+    "id": "seg-5",
+    "start": 12.119666666666667,
+    "end": 15.719,
+    "speaker": "BOTH",
+    "text": "And you’re listening to No Stupid Questions.",
+    "translation": "듣고 계신 방송은 <바보 같은 질문은 없어>입니다."
+  },
+  {
+    "id": "seg-6",
+    "start": 15.719,
+    "end": 21.759249999999998,
+    "speaker": "NARRATOR",
+    "text": "Today on the show: Is it immoral to slack off at work when others are depending on you to do a good job?",
+    "translation": "오늘 방송에서는 다른 사람들이 자신에게 의지하고 있는 상황에서, 직장에서 꾀를 부리는 것이 과연 비도덕적인 일인가에 대해 이야기해 봅니다."
+  },
+  {
+    "id": "seg-7",
+    "start": 21.759249999999998,
+    "end": 30.679,
+    "speaker": "DUBNER",
+    "text": "I had a tiny bit of authority as an umpire of a minor Little League game, and I exploited it for my own benefit.",
+    "translation": "리틀 야구 리그에서 심판을 보며 아주 쥐꼬리만 한 권력이 있었는데요, 그걸 제 사리사욕을 위해 써먹었죠."
+  },
+  {
+    "id": "seg-8",
+    "start": 30.679,
+    "end": 34.1,
+    "speaker": "NARRATOR",
+    "text": "Also: How valuable is it to have a personal mission statement?",
+    "translation": "아울러, 개인의 사명 선언문을 갖는 것이 얼마나 가치 있는 일인지도 알아봅니다."
+  },
+  {
+    "id": "seg-9",
+    "start": 34.1,
+    "end": 35.826,
+    "speaker": "DUBNER",
+    "text": "That sounds like a marketing scam.",
+    "translation": "그건 마케팅 사기처럼 들리네요."
+  },
+  {
+    "id": "seg-10",
+    "start": 35.826,
+    "end": 37.032,
+    "speaker": "DUCKWORTH",
+    "text": "I can sell you one.",
+    "translation": "제가 하나 팔 수도 있어요."
+  },
+  {
+    "id": "seg-11",
+    "start": 37.032,
+    "end": 41.2,
+    "speaker": "DUCKWORTH",
+    "text": "And it comes with a set of steak knives.",
+    "translation": "스테이크 나이프 세트도 사은품으로 끼워 드릴게요."
+  },
+  {
+    "id": "seg-12",
+    "start": 41.2,
+    "end": 48.614999999999995,
+    "speaker": "DUBNER",
+    "text": "Angela Duckworth, I have what may be a truly stupid question but this is the one place I’m allowed to ask it.",
+    "translation": "앤절라 덕워스, 진짜 바보 같은 질문일 수도 있는 질문이 하나 있는데, 그래도 여기서는 이런 걸 물어봐도 되는 거죠?"
+  },
+  {
+    "id": "seg-13",
+    "start": 48.614999999999995,
+    "end": 49.671,
+    "speaker": "DUCKWORTH",
+    "text": "That’s right.",
+    "translation": "그럼요."
+  },
+  {
+    "id": "seg-14",
+    "start": 49.671,
+    "end": 50.70633333333333,
+    "speaker": "DUBNER",
+    "text": "So here it goes.",
+    "translation": "그럼 묻겠습니다."
+  },
+  {
+    "id": "seg-15",
+    "start": 50.70633333333333,
+    "end": 56.218999999999994,
+    "speaker": "DUBNER",
+    "text": "Do you believe, as I do, that incompetence is often a form of dishonesty?",
+    "translation": "무능함이 종종 불정직함의 한 형태라는 제 생각에 동의하시나요?"
+  },
+  {
+    "id": "seg-16",
+    "start": 56.218999999999994,
+    "end": 59.36,
+    "speaker": "DUBNER",
+    "text": "And I can spell out further what I mean by that if you’d like.",
+    "translation": "원하시면 무슨 뜻인지 좀 더 자세히 설명해 드릴 수도 있어요."
+  },
+  {
+    "id": "seg-17",
+    "start": 59.36,
+    "end": 63.413333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I have a first intuition, which is “no,” but why don’t you elaborate a little bit?",
+    "translation": "제 첫 직감은 '아니오'이긴 한데, 어떤 의미인지 좀 더 자세히 이야기해 주시겠어요?"
+  },
+  {
+    "id": "seg-18",
+    "start": 63.413333333333334,
+    "end": 64.04,
+    "speaker": "NARRATOR",
+    "text": "DUBNER: Yeah.",
+    "translation": "그럴게요."
+  },
+  {
+    "id": "seg-19",
+    "start": 64.04,
+    "end": 64.19966666666667,
+    "speaker": "NARRATOR",
+    "text": "Okay.",
+    "translation": "좋습니다."
+  },
+  {
+    "id": "seg-20",
+    "start": 64.19966666666667,
+    "end": 65.735,
+    "speaker": "NARRATOR",
+    "text": "So I realize it’s a murky question.",
+    "translation": "그래서 참 애매하고 복잡한 문제라는 걸 저도 압니다."
+  },
+  {
+    "id": "seg-21",
+    "start": 65.735,
+    "end": 79.93249999999999,
+    "speaker": "NARRATOR",
+    "text": "But what I’m suggesting is this: I have encountered a lot of people who consider themselves good people — moral, and righteous, and pro-social, and so on, who happen to be not very good at what they do professionally.",
+    "translation": "제가 하고 싶은 말은 이겁니다. 스스로를 도덕적이고, 정의롭고, 이타적인 '좋은 사람'이라고 생각하면서도, 정작 자기 일은 도통 안 하는 사람들을 많이 만나봤거든요."
+  },
+  {
+    "id": "seg-22",
+    "start": 79.93249999999999,
+    "end": 89.55636363636364,
+    "speaker": "NARRATOR",
+    "text": "So their work can be sloppy, or careless, or they don’t try very hard to improve; they don’t get upset when they mess up, which irritates me.",
+    "translation": "그런 사람들은 일을 대충 하거나 부주의하게 처리하고, 더 나아지려고 노력하지도 않죠. 실수를 해놓고도 전혀 머쓱해하지 않는데, 전 그게 정말 짜증 나더라고요."
+  },
+  {
+    "id": "seg-23",
+    "start": 89.55636363636364,
+    "end": 92.8595,
+    "speaker": "DUCKWORTH",
+    "text": "I was going to say, that upsets you most probably.",
+    "translation": "안 그래도 그 부분이 제일 거슬리셨을 것 같네요."
+  },
+  {
+    "id": "seg-24",
+    "start": 92.8595,
+    "end": 93.49950000000001,
+    "speaker": "DUBNER",
+    "text": "It does.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-25",
+    "start": 93.49950000000001,
+    "end": 94.239,
+    "speaker": "DUBNER",
+    "text": "It does.",
+    "translation": "정말 그렇습니다."
+  },
+  {
+    "id": "seg-26",
+    "start": 94.239,
+    "end": 101.45333333333333,
+    "speaker": "DUBNER",
+    "text": "And I guess the biggest factor is they don’t consider how their actions affect other people in that work sphere.",
+    "translation": "그리고 무엇보다 일터에서 자신의 행동이 다른 사람들에게 어떤 영향을 미치는지 전혀 배려하지 않는다는 게 가장 큰 문제예요."
+  },
+  {
+    "id": "seg-27",
+    "start": 101.45333333333333,
+    "end": 108.439,
+    "speaker": "DUBNER",
+    "text": "So I used to think this was just garden variety incompetence — that they were doing their best, but they just weren’t very good.",
+    "translation": "예전에는 이게 그냥 흔해 빠진 무능함 때문이라고 생각했어요. 최선은 다하는데 실력이 없는 것뿐이라고요."
+  },
+  {
+    "id": "seg-28",
+    "start": 108.439,
+    "end": 113.86633333333333,
+    "speaker": "DUBNER",
+    "text": "But over the years, I’ve come to think that most people are capable of doing better, but for whatever reason, they don’t.",
+    "translation": "하지만 시간이 흐르면서, 대부분의 사람들은 더 잘할 능력이 있는데도 무슨 이유에서인지 그러지 않는다는 생각이 들기 시작하더군요."
+  },
+  {
+    "id": "seg-29",
+    "start": 113.86633333333333,
+    "end": 125.41333333333333,
+    "speaker": "DUBNER",
+    "text": "And my impression is that they consider it less important to be competent in their professional sphere, because in their daily personal lives they are good and ethical people.",
+    "translation": "제 생각에는 그들이 일상생활 속 개인적인 삶에서는 착하고 도덕적인 사람이기 때문에, 직업적인 영역에서 유능해지는 건 덜 중요하게 여기는 게 아닌가 싶어요."
+  },
+  {
+    "id": "seg-30",
+    "start": 125.41333333333333,
+    "end": 137.5195,
+    "speaker": "DUBNER",
+    "text": "So I’ve come to feel, in some cases, that incompetence is a form of dishonesty — that these people are essentially stealing time from their coworkers who have to clean up their messes.",
+    "translation": "그래서 어떤 경우에는 이런 무능함이 일종의 속임수가 아닌가 하는 생각까지 듭니다. 결국 자기 뒤처리를 해야 하는 동료들의 시간을 훔치고 있는 셈이니까요."
+  },
+  {
+    "id": "seg-31",
+    "start": 137.5195,
+    "end": 142.44583333333333,
+    "speaker": "DUBNER",
+    "text": "They’re degrading the shared enterprise of work that others are putting a lot of effort into.",
+    "translation": "다른 사람들이 엄청나게 공을 들이고 있는 공동의 업무 가치를 훼손하고 있는 거죠."
+  },
+  {
+    "id": "seg-32",
+    "start": 142.44583333333333,
+    "end": 143.48,
+    "speaker": "DUBNER",
+    "text": "So what do you think?",
+    "translation": "어떻게 생각하세요?"
+  },
+  {
+    "id": "seg-33",
+    "start": 143.48,
+    "end": 146.04,
+    "speaker": "DUBNER",
+    "text": "Am I a monster for thinking this, or is there some validity?",
+    "translation": "제가 이런 생각을 하는 게 괴물 같은 건가요, 아니면 나름 타당한 구석이 있나요?"
+  },
+  {
+    "id": "seg-34",
+    "start": 146.04,
+    "end": 150.466,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I hope that was therapeutic for you, Stephen, just expressing all of that.",
+    "translation": "글쎄요, 스티븐, 그렇게 속마음을 다 털어놓으시니 마음이 좀 가벼워지셨길 바랄게요."
+  },
+  {
+    "id": "seg-35",
+    "start": 150.466,
+    "end": 151.9198,
+    "speaker": "DUBNER",
+    "text": "I feel great, thanks.",
+    "translation": "아주 개운하네요, 감사합니다."
+  },
+  {
+    "id": "seg-36",
+    "start": 151.9198,
+    "end": 152.39939999999999,
+    "speaker": "DUBNER",
+    "text": "I’m done.",
+    "translation": "전 다 털어놨어요."
+  },
+  {
+    "id": "seg-37",
+    "start": 152.39939999999999,
+    "end": 153.14319999999998,
+    "speaker": "DUBNER",
+    "text": "See you later.",
+    "translation": "다음에 봬요."
+  },
+  {
+    "id": "seg-38",
+    "start": 153.14319999999998,
+    "end": 155.87066666666666,
+    "speaker": "DUCKWORTH",
+    "text": "I think I now understand the question better.",
+    "translation": "이제 질문이 좀 더 명확히 이해되는 것 같네요."
+  },
+  {
+    "id": "seg-39",
+    "start": 155.87066666666666,
+    "end": 163.5198,
+    "speaker": "DUCKWORTH",
+    "text": "You see incompetence of the sort “they did sloppy work, not trying your best, etc.” as something which is harmful to others.",
+    "translation": "그러니까 '일을 대충 한다거나, 최선을 다하지 않는다' 같은 식의 무능함을 타인에게 피해를 주는 행위로 보시는 거군요."
+  },
+  {
+    "id": "seg-40",
+    "start": 163.5198,
+    "end": 164.0396,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-41",
+    "start": 164.0396,
+    "end": 178.93381818181817,
+    "speaker": "DUCKWORTH",
+    "text": "And that there’s agency, that there’s a choice, that it’s not really trying your best, but in fact some volitional decision to not get things done on time, or not bring things to a standard of excellence that the person could have done.",
+    "translation": "그리고 스스로 선택권이 있고 의지가 개입되어 있다는 것, 그러니까 진짜 최선을 다하지 못한 게 아니라 실질적으로 제시간에 일을 끝내지 않거나 남들만큼 훌륭한 수준으로 해내지 않겠다는 자발적인 결정을 내렸다는 거죠."
+  },
+  {
+    "id": "seg-42",
+    "start": 178.93381818181817,
+    "end": 179.70863636363637,
+    "speaker": "DUCKWORTH",
+    "text": "Is that right?",
+    "translation": "그 말이 맞죠?"
+  },
+  {
+    "id": "seg-43",
+    "start": 179.70863636363637,
+    "end": 185.296,
+    "speaker": "DUBNER",
+    "text": "First of all, if I ever start a punk band, “volitional decision” is my name.",
+    "translation": "우선 제가 펑크 밴드를 만든다면 밴드 이름은 '자발적인 결정'으로 해야겠네요."
+  },
+  {
+    "id": "seg-44",
+    "start": 185.296,
+    "end": 185.832,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-45",
+    "start": 185.832,
+    "end": 191.84,
+    "speaker": "DUBNER",
+    "text": "You, as always, boiled it down beautifully, much shorter and much more on point.",
+    "translation": "늘 그렇듯 핵심을 아주 명쾌하고 간결하게 짚어주셨어요."
+  },
+  {
+    "id": "seg-46",
+    "start": 191.84,
+    "end": 193.2,
+    "speaker": "DUBNER",
+    "text": "So, yes, that’s my issue.",
+    "translation": "맞아요, 그게 바로 제가 제기하는 문제입니다."
+  },
+  {
+    "id": "seg-47",
+    "start": 193.2,
+    "end": 208.04,
+    "speaker": "DUBNER",
+    "text": "That there is a matter of volition, but volition needs to include a conscious decision to care less about the quality in a realm where others do overtly care.",
+    "translation": "자발성의 문제이긴 한데, 달성하고자 하는 결과물과 관련해서 다른 사람들은 대놓고 공을 들이는 영역에서 본인은 의식적으로 신경을 덜 쓰기로 결정하는 것까지 포함해야 합니다."
+  },
+  {
+    "id": "seg-48",
+    "start": 208.04,
+    "end": 208.239,
+    "speaker": "DUCKWORTH",
+    "text": "Okay.",
+    "translation": "그렇군요."
+  },
+  {
+    "id": "seg-49",
+    "start": 208.239,
+    "end": 208.80975,
+    "speaker": "DUCKWORTH",
+    "text": "Fair enough.",
+    "translation": "그럴듯하네요."
+  },
+  {
+    "id": "seg-50",
+    "start": 208.80975,
+    "end": 214.40404166666667,
+    "speaker": "DUCKWORTH",
+    "text": "And at the core of both incompetence and dishonesty is a sort of selfishness.",
+    "translation": "그리고 무능함과 부정직함의 핵심에는 일종의 이기심이 깔려 있어요."
+  },
+  {
+    "id": "seg-51",
+    "start": 214.40404166666667,
+    "end": 215.87429166666666,
+    "speaker": "DUCKWORTH",
+    "text": "Like, “This is good for me.",
+    "translation": "'이건 나한테 좋은 거야."
+  },
+  {
+    "id": "seg-52",
+    "start": 215.87429166666666,
+    "end": 218.81479166666665,
+    "speaker": "DUCKWORTH",
+    "text": "I know it’s bad for you, but because it’s good for me.",
+    "translation": "너한테는 안 좋다는 걸 알지만, 나한테 좋으니까."
+  },
+  {
+    "id": "seg-53",
+    "start": 218.81479166666665,
+    "end": 241.48,
+    "speaker": "DUCKWORTH",
+    "text": "I’m going to do it anyway.” So I can see why you’re asking a question now, better than I first did, because my first intuition was like, “No, let’s go onto the next question.” But I think the argument turns on whether people who are not doing work that’s up to your standard are, by and large, doing it because they feel licensed to try less hard since they’re trying so hard in other realms of their life.",
+    "translation": "어쨌든 난 그냥 할 거야'라는 식이죠. 이제 왜 이런 질문을 하시는지 처음에 비해 훨씬 잘 이해가 가네요. 제 첫 직감은 '아니, 다음 질문으로 넘어가자'였거든요. 하지만 이 논의의 핵심은, 당신의 기준에 못 미치는 결과물을 내는 사람들이 대개 삶의 다른 부분에서 너무 열심히 노력하고 있기 때문에 여기서는 노력을 좀 덜 해도 된다고 스스로 정당화하느냐는 것입니다."
+  },
+  {
+    "id": "seg-54",
+    "start": 241.48,
+    "end": 246.93333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "And I don’t know that that describes the incompetence that I’ve seen.",
+    "translation": "그런데 제가 봐온 무능함이 정말 그런 성격인지는 잘 모르겠어요."
+  },
+  {
+    "id": "seg-55",
+    "start": 246.93333333333334,
+    "end": 254.9713,
+    "speaker": "DUCKWORTH",
+    "text": "It is true, though, that people do occasionally feel like there’s some kind of “sum of goodness” that they have to get to.",
+    "translation": "하지만 사람들이 가끔 자신이 채워야 할 '도덕적 총량' 같은 게 존재한다고 느끼는 건 사실이에요."
+  },
+  {
+    "id": "seg-56",
+    "start": 254.9713,
+    "end": 258.17991666666666,
+    "speaker": "DUCKWORTH",
+    "text": "And if you tell three truths, then it allows you to tell one lie.",
+    "translation": "세 번 진실을 말했으니 한 번은 거짓말을 해도 괜찮다고 생각하는 것처럼요."
+  },
+  {
+    "id": "seg-57",
+    "start": 258.17991666666666,
+    "end": 258.4798333333333,
+    "speaker": "DUBNER",
+    "text": "Right.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-58",
+    "start": 258.4798333333333,
+    "end": 267.63272727272727,
+    "speaker": "DUCKWORTH",
+    "text": "I mean do you really feel like people who are taking it easy and doing not as great — don’t you think it’s often because they don’t even see the problem?",
+    "translation": "그러니까 편하게 일하면서 대충대충 하는 사람들이 정말... 애초에 문제를 전혀 인지하지 못해서 그러는 경우는 많지 않다고 생각하시나요?"
+  },
+  {
+    "id": "seg-59",
+    "start": 267.63272727272727,
+    "end": 272.47999999999996,
+    "speaker": "DUCKWORTH",
+    "text": "That they’re not consciously aware that they are at all substandard?",
+    "translation": "그들은 본인이 기준 미달이라는 걸 의식적으로 전혀 모른다는 뜻인가요?"
+  },
+  {
+    "id": "seg-60",
+    "start": 272.47999999999996,
+    "end": 275.1428571428571,
+    "speaker": "DUBNER",
+    "text": "So that is a good and important question.",
+    "translation": "그건 정말 좋고도 중요한 질문이네요."
+  },
+  {
+    "id": "seg-61",
+    "start": 275.1428571428571,
+    "end": 277.74285714285713,
+    "speaker": "DUBNER",
+    "text": "My guess is that most people know.",
+    "translation": "제 생각에는 대부분의 사람들이 알고 있을 것 같아요."
+  },
+  {
+    "id": "seg-62",
+    "start": 277.74285714285713,
+    "end": 292.2125,
+    "speaker": "DUBNER",
+    "text": "I guess one reason I didn’t enjoy so much the jobs I had in journalism is I don’t like being overly dependent on others’ input when I care a lot about the quality.",
+    "translation": "제가 기자로 일할 때 그 일들을 그리 좋아하지 않았던 이유 중 하나는, 결과물의 퀄리티에 신경을 많이 쓰다 보니 다른 사람들의 의견에 너무 의존하게 되는 게 싫어서였던 것 같아요."
+  },
+  {
+    "id": "seg-63",
+    "start": 292.2125,
+    "end": 294.2639,
+    "speaker": "DUBNER",
+    "text": "So I guess what I’m describing is a control freak.",
+    "translation": "그러니까 제가 말씀드리는 건 결국 통제 강박증 같은 거겠네요."
+  },
+  {
+    "id": "seg-64",
+    "start": 294.2639,
+    "end": 297.3422857142857,
+    "speaker": "DUCKWORTH",
+    "text": "I know what you mean, and I think it’s caring so much.",
+    "translation": "무슨 뜻인지 알겠어요. 그리고 전 그게 그만큼 많이 신경을 쓰기 때문이라고 생각해요."
+  },
+  {
+    "id": "seg-65",
+    "start": 297.3422857142857,
+    "end": 304,
+    "speaker": "DUCKWORTH",
+    "text": "And I think it probably irritates you, or something a little stronger than irritation, to feel like other people are not caring as much.",
+    "translation": "그리고 다른 사람들은 자기만큼 신경 쓰지 않는다고 느껴지면 짜증이 나거나, 아니면 짜증보다 좀 더 강한 감정이 생기시는 것 같아요."
+  },
+  {
+    "id": "seg-66",
+    "start": 304,
+    "end": 304.53999999999996,
+    "speaker": "DUBNER",
+    "text": "Yes.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-67",
+    "start": 304.53999999999996,
+    "end": 305.08,
+    "speaker": "DUCKWORTH",
+    "text": "Right.",
+    "translation": "그렇죠."
+  },
+  {
+    "id": "seg-68",
+    "start": 305.08,
+    "end": 305.34000000000003,
+    "speaker": "DUBNER",
+    "text": "Yes.",
+    "translation": "그렇습니다."
+  },
+  {
+    "id": "seg-69",
+    "start": 305.34000000000003,
+    "end": 324.93333333333334,
+    "speaker": "DUBNER",
+    "text": "In fact, I sometimes discuss with my Freakonomics Radio producing partner, Alison Craiglow, one of the single most important characteristics that I really need someone to have to be a useful member of our team is that they have to really, really, really hate to screw up.",
+    "translation": "사실 저는 제 '프리코노믹스 라디오' 제작 파트너인 앨리슨 크레이글로우와 가끔 이런 얘길 나누는데요, 우리 팀의 유용한 일원이 되기 위해 정말 꼭 필요한 가장 중요한 자질 중 하나는, 실수하는 것을 진짜, 진짜, 진짜로 끔찍이 싫어해야 한다는 점이에요."
+  },
+  {
+    "id": "seg-70",
+    "start": 324.93333333333334,
+    "end": 330.719,
+    "speaker": "DUBNER",
+    "text": "And if they don’t hate it, if it doesn’t burn them and keep them up at night — because I screw up all the time.",
+    "translation": "그리고 만약 그걸 싫어하지 않는다면, 그 일로 가슴이 쓰리고 밤에 잠을 못 이루지 않는다면 말이죠. 왜냐하면 저도 맨날 실수하거든요."
+  },
+  {
+    "id": "seg-71",
+    "start": 330.719,
+    "end": 332.0396666666667,
+    "speaker": "DUBNER",
+    "text": "I mean, everybody does.",
+    "translation": "제 말은, 누구나 다 실수하잖아요."
+  },
+  {
+    "id": "seg-72",
+    "start": 332.0396666666667,
+    "end": 341.8342857142857,
+    "speaker": "DUBNER",
+    "text": "So my rule of thumb is: Every time I screw up, I try to take it apart, learn from it, and find a way to eliminate that kind of mistake again.",
+    "translation": "그래서 제 행동 지침은 이래요. 실수할 때마다 왜 그랬는지 따져보고, 거기서 배우고, 다시는 그런 실수를 반복하지 않을 방법을 찾는 거죠."
+  },
+  {
+    "id": "seg-73",
+    "start": 341.8342857142857,
+    "end": 342.10857142857145,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "그렇죠."
+  },
+  {
+    "id": "seg-74",
+    "start": 342.10857142857145,
+    "end": 354.35974999999996,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, for you and me, we actually don’t have a problem being like, “Oh, I feel bad that I made that mistake.” And then we, without a lot of emotional charge, set about trying to understand why we made the mistake, and try not to do it again.",
+    "translation": "그러니까 우리 같은 사람들은 '아, 내가 그런 실수를 하다니 유감이다'라고 털어내는 데 별 어려움이 없어요. 그러고 나서는 크게 감정 소비하지 않고, 왜 실수를 했는지 이해하려고 노력하고 다시는 그러지 않으려고 하죠."
+  },
+  {
+    "id": "seg-75",
+    "start": 354.35974999999996,
+    "end": 364.06,
+    "speaker": "DUCKWORTH",
+    "text": "I think what often happens, though, is that there is a spiral of anxiety and, “I’m a bad person.” I think this happens a lot to some people.",
+    "translation": "하지만 보통 어떤 일이 일어나냐 하면, 불안감이 소용돌이치면서 '난 나쁜 사람이야'라는 자책으로 이어지곤 해요. 어떤 사람들에게는 이런 일이 아주 자주 일어난다고 봐요."
+  },
+  {
+    "id": "seg-76",
+    "start": 364.06,
+    "end": 374.6933333333333,
+    "speaker": "DUBNER",
+    "text": "You know, while you were saying that, I actually had a memory flash of a traumatic — not really traumatic — a dramatic, at least, and really negative event from adolescence.",
+    "translation": "그 말씀 하시는 동안, 문득 청소년기 때 겪었던 정신적 충격까지는 아니고 적어도 꽤 극적이고 정말 부정적이었던 일이 머릿속을 스쳐 지나갔어요."
+  },
+  {
+    "id": "seg-77",
+    "start": 374.6933333333333,
+    "end": 382.4266666666667,
+    "speaker": "DUBNER",
+    "text": "And I think about it still pretty routinely whenever I’m about to be lazy, or do something stupid, or whatnot.",
+    "translation": "그리고 전 귀찮아지려고 하거나, 바보 같은 짓을 하려고 하거나 그럴 때마다 아직도 그 일을 꽤 자주 떠올려요."
+  },
+  {
+    "id": "seg-78",
+    "start": 382.4266666666667,
+    "end": 392.08,
+    "speaker": "DUBNER",
+    "text": "So I played baseball as a kid and I think I was in Little League still, but then they had the minor Little League, the little kids, and I was umpiring, and you got paid $1.50.",
+    "translation": "어릴 때 야구를 했었는데 아마 리틀 야구단에 있을 때였을 거예요. 더 어린아이들이 뛰는 마이너 리틀 리그가 있었는데, 제가 심판을 봐주고 1.5달러를 받았거든요."
+  },
+  {
+    "id": "seg-79",
+    "start": 392.08,
+    "end": 393.4878,
+    "speaker": "DUBNER",
+    "text": "So it was awesome.",
+    "translation": "정말 최고였죠."
+  },
+  {
+    "id": "seg-80",
+    "start": 393.4878,
+    "end": 394.58925,
+    "speaker": "DUCKWORTH",
+    "text": "That’s a lot of money.",
+    "translation": "엄청 큰돈이네요."
+  },
+  {
+    "id": "seg-81",
+    "start": 394.58925,
+    "end": 404.8457142857143,
+    "speaker": "DUBNER",
+    "text": "There was a rule that the games had to go a certain number of innings to be “official,” but it was like two or three innings, because they were really little kids, or until dark.",
+    "translation": "경기가 '공식 경기'로 인정받으려면 치러야 하는 최소 이닝 수가 있었어요. 아주 어린 아이들이 하는 경기라 한 2, 3이닝 정도였거나, 아니면 해가 질 때까지였죠."
+  },
+  {
+    "id": "seg-82",
+    "start": 404.8457142857143,
+    "end": 419.312,
+    "speaker": "DUBNER",
+    "text": "And for some reason, on this night, I just was feeling so lazy, or irresponsible, or whatever, that even though the sun was still very high in the sky, after the requisite number of innings, I said, “Okay, that’s it.",
+    "translation": "그런데 무슨 이유에서인지 그날 밤 저는 너무 귀찮고 무책임해져서, 아직 하늘에 해가 쨍쨍한데도 규정 이닝을 채우자마자 '자, 여기까지 하겠습니다'라고 해버렸어요."
+  },
+  {
+    "id": "seg-83",
+    "start": 419.312,
+    "end": 420.07950000000005,
+    "speaker": "DUBNER",
+    "text": "The game’s over.”",
+    "translation": "경기는 끝났습니다'라고요."
+  },
+  {
+    "id": "seg-84",
+    "start": 420.07950000000005,
+    "end": 421.026,
+    "speaker": "DUCKWORTH",
+    "text": "You called it.",
+    "translation": "경기를 끝내버리셨군요."
+  },
+  {
+    "id": "seg-85",
+    "start": 421.026,
+    "end": 421.3795,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-86",
+    "start": 421.3795,
+    "end": 434.23199999999997,
+    "speaker": "DUBNER",
+    "text": "I had a tiny bit of authority as an umpire of a minor Little League game, and I exploited it for my own benefit, because I just wanted to get out of there, get my $1.50, and go buy candy with it.",
+    "translation": "마이너 리틀야구 심판으로서 가진 아주 미미한 권한을 제 사리사욕을 위해 악용한 거죠. 그냥 빨리 퇴근해서 1.5달러를 받고, 그걸로 사탕이나 사 먹고 싶었거든요."
+  },
+  {
+    "id": "seg-87",
+    "start": 434.23199999999997,
+    "end": 439.1395,
+    "speaker": "DUBNER",
+    "text": "And I got called out on it later by the guy who ran the league, and he did it in a very nice way.",
+    "translation": "나중에 리그 운영자분한테 한 소리 들었는데, 아주 정중하게 말씀하시더라고요."
+  },
+  {
+    "id": "seg-88",
+    "start": 439.1395,
+    "end": 441.1325,
+    "speaker": "DUBNER",
+    "text": "And that made me feel even worse.",
+    "translation": "그래서 마음이 더 안 좋았어요."
+  },
+  {
+    "id": "seg-89",
+    "start": 441.1325,
+    "end": 441.893,
+    "speaker": "DUCKWORTH",
+    "text": "What’d he say?",
+    "translation": "그분이 뭐라고 하셨는데요?"
+  },
+  {
+    "id": "seg-90",
+    "start": 441.893,
+    "end": 456.28000000000003,
+    "speaker": "DUBNER",
+    "text": "He said, “Listen, you’re right that you do have the authority to call the game after a certain number of innings, but the whole point of that is about beating darkness.” I remember, he put it back on me and said, “As you remember from playing in the minors, this is a highlight of their week.",
+    "translation": "그분이 말씀하시길, '이봐요, 일정 이닝이 지난 후에 경기를 종료할 권한이 심판에게 있는 건 맞지만, 그 규칙은 원래 해가 져서 어두워질 때를 대비한 겁니다'라고 하셨어요. 그리고 저한테 되물어보시더라고요. '자네도 마이너 리그에서 뛰어봐서 알겠지만, 아이들에게는 이 경기가 한 주 중 가장 기다려지는 순간이라네.'"
+  },
+  {
+    "id": "seg-91",
+    "start": 456.28000000000003,
+    "end": 462.48,
+    "speaker": "DUBNER",
+    "text": "They love to come here and then to take something away that they’re expecting is a real sadness.” And I felt terrible.",
+    "translation": "아이들은 여기 와서 경기하는 걸 너무 좋아하는데, 기대했던 걸 빼앗아 버리는 건 정말 슬픈 일이지.' 그 말을 듣고 정말 쥐구멍에라도 들어가고 싶었습니다."
+  },
+  {
+    "id": "seg-92",
+    "start": 462.48,
+    "end": 480.24924999999996,
+    "speaker": "DUBNER",
+    "text": "And so to this day, whenever I think about not giving something the proper amount of attention or effort, that incident cycles through my subconscious and the horrible feeling I had of guilt, essentially, and shame makes me push a little bit harder.",
+    "translation": "그래서 지금까지도 어떤 일에 충분한 관심이나 노력을 기울이지 않으려고 할 때마다, 그 사건이 무의식중에 떠올라요. 그때 느꼈던 끔찍한 죄책감과 부끄러움 때문에 조금만 더 노력하자며 스스로를 채찍질하게 되죠."
+  },
+  {
+    "id": "seg-93",
+    "start": 480.24924999999996,
+    "end": 482.2,
+    "speaker": "DUCKWORTH",
+    "text": "But you don’t spiral, right?",
+    "translation": "하지만 꼬리에 꼬리를 무는 부정적인 생각에 빠져들지는 않으시죠?"
+  },
+  {
+    "id": "seg-94",
+    "start": 482.2,
+    "end": 496.14566666666667,
+    "speaker": "DUCKWORTH",
+    "text": "So, you feel a twinge or more of guilt or shame when you fall short of a moral standard or a performance standard, but you don’t seem to me like somebody who spirals then, and then can’t get beyond it.",
+    "translation": "도덕적 기준이나 성과 기준에 미치지 못했을 때 찌릿한 죄책감이나 수치심은 느끼시지만, 거기에 사로잡혀서 헤어 나오지 못하는 분처럼 보이지는 않거든요."
+  },
+  {
+    "id": "seg-95",
+    "start": 496.14566666666667,
+    "end": 498.3752,
+    "speaker": "DUBNER",
+    "text": "I haven’t spiraled yet, and I’m pretty old.",
+    "translation": "아직 그런 나선형 수렁에는 빠져본 적 없어요, 나이도 꽤 먹었는데 말이죠."
+  },
+  {
+    "id": "seg-96",
+    "start": 498.3752,
+    "end": 501.79159999999996,
+    "speaker": "DUCKWORTH",
+    "text": "Just make it a few more years and you’ll be good.",
+    "translation": "몇 년만 더 버티시면 괜찮을 거예요."
+  },
+  {
+    "id": "seg-97",
+    "start": 501.79159999999996,
+    "end": 504.5,
+    "speaker": "DUBNER",
+    "text": "I’m just running out the clock now.",
+    "translation": "이제 그냥 시간 때우며 은퇴만 기다리고 있어요."
+  },
+  {
+    "id": "seg-98",
+    "start": 504.5,
+    "end": 505.54499999999996,
+    "speaker": "DUBNER",
+    "text": "No, I haven’t.",
+    "translation": "아니요, 그런 적은 없어요."
+  },
+  {
+    "id": "seg-99",
+    "start": 505.54499999999996,
+    "end": 516.1196666666667,
+    "speaker": "DUBNER",
+    "text": "But I can see where it’s a powerful emotion, powerful construct, and so now I feel bad about being the guy who said a little while ago that, “people should hate to screw up more.",
+    "translation": "하지만 그 감정이 얼마나 강력한 감정이자 심리적 기제인지는 이해가 가네요. 그래서 조금 전에 '사람들이 실수하는 걸 더 끔찍이 싫어해야 한다'고 말했던 게 좀 미안해지네요."
+  },
+  {
+    "id": "seg-100",
+    "start": 516.1196666666667,
+    "end": 518.5595000000001,
+    "speaker": "DUBNER",
+    "text": "It’s good for you.” I do sound like a monster.",
+    "translation": "\"네 몸에 좋은 거야.\" 제가 진짜 괴물처럼 말하긴 하네요."
+  },
+  {
+    "id": "seg-101",
+    "start": 518.5595000000001,
+    "end": 521.904,
+    "speaker": "DUCKWORTH",
+    "text": "You grew, even in the course of one conversation.",
+    "translation": "한 번의 대화 속에서도 성장하셨군요."
+  },
+  {
+    "id": "seg-102",
+    "start": 521.904,
+    "end": 527.5060000000001,
+    "speaker": "DUCKWORTH",
+    "text": "No, I think if we can learn to feel bad, but not to feel too bad.",
+    "translation": "아니요, 기분 나빠하는 법을 배우되 너무 나쁘게 느끼지만 않으면 된다고 생각해요."
+  },
+  {
+    "id": "seg-103",
+    "start": 527.5060000000001,
+    "end": 529.404875,
+    "speaker": "DUCKWORTH",
+    "text": "But look, I believe in caring.",
+    "translation": "하지만 보세요, 저는 신경을 쓰는 것이 중요하다고 믿어요."
+  },
+  {
+    "id": "seg-104",
+    "start": 529.404875,
+    "end": 531.664,
+    "speaker": "DUCKWORTH",
+    "text": "And I think that’s where this all started.",
+    "translation": "그리고 여기서부터 이 모든 게 시작되었다고 생각하고요."
+  },
+  {
+    "id": "seg-105",
+    "start": 531.664,
+    "end": 531.929,
+    "speaker": "DUCKWORTH",
+    "text": "Right?",
+    "translation": "그렇죠?"
+  },
+  {
+    "id": "seg-106",
+    "start": 531.929,
+    "end": 536.88,
+    "speaker": "DUCKWORTH",
+    "text": "Like, you would like people to care about their moral standards, about their performance standards.",
+    "translation": "사람들이 자신의 도덕적 기준이나 성과 기준에 대해 신경을 썼으면 좋겠는 거잖아요."
+  },
+  {
+    "id": "seg-107",
+    "start": 536.88,
+    "end": 539.44,
+    "speaker": "DUCKWORTH",
+    "text": "And I don’t think it’s a bad thing.",
+    "translation": "그리고 저는 그게 나쁜 거라고 생각하지 않아요."
+  },
+  {
+    "id": "seg-108",
+    "start": 539.44,
+    "end": 539.76,
+    "speaker": "DUBNER",
+    "text": "Yeah.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-109",
+    "start": 539.76,
+    "end": 550.079,
+    "speaker": "DUBNER",
+    "text": "You know, what drives me crazy is when someone did something wrong, or totally forgot to do it, or sent the wrong file to the wrong person, and they’re like, “Oh, no problem.",
+    "translation": "있잖아요, 제가 정말 미치겠는 건 누군가 잘못을 저질렀거나, 완전히 깜빡했거나, 다른 사람에게 엉뚱한 파일을 보내놓고는 \"아, 문제없어요."
+  },
+  {
+    "id": "seg-110",
+    "start": 550.079,
+    "end": 551.999,
+    "speaker": "DUBNER",
+    "text": "Here you go.” And I’m like, “No.",
+    "translation": "여기요\"라고 할 때예요. 그럼 전 속으로 '아니,"
+  },
+  {
+    "id": "seg-111",
+    "start": 551.999,
+    "end": 558.44,
+    "speaker": "DUBNER",
+    "text": "It is a little bit of a problem.” And that’s what I mean by treating competence as a form of honesty.",
+    "translation": "이건 문제가 좀 있지'라고 생각하죠. 능력을 정직함의 한 형태라고 보는 건 바로 그런 뜻이에요."
+  },
+  {
+    "id": "seg-112",
+    "start": 558.44,
+    "end": 561.36,
+    "speaker": "DUBNER",
+    "text": "Maybe if I’d framed it that way, rather than the two negatives.",
+    "translation": "부정적인 표현 두 기를 쓰기보다 그렇게 표현했으면 좋았을 텐데요."
+  },
+  {
+    "id": "seg-113",
+    "start": 561.36,
+    "end": 564.968,
+    "speaker": "DUBNER",
+    "text": "Do you think that competence is a form of honesty?",
+    "translation": "당신은 성실한 능력이 정직함의 한 형태라고 생각하시나요?"
+  },
+  {
+    "id": "seg-114",
+    "start": 564.968,
+    "end": 572.9866666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, I mean, what competence and honesty have in common is that there is a standard and there is integrity.",
+    "translation": "네, 그러니까 능력과 정직함의 공통점은 기준이 존재하고 진실성이 있다는 점이죠."
+  },
+  {
+    "id": "seg-115",
+    "start": 572.9866666666667,
+    "end": 577.144,
+    "speaker": "DUCKWORTH",
+    "text": "That it matters whether I reach the standard or if I fall short.",
+    "translation": "내가 그 기준에 도달했는지, 아니면 미치지 못했는지가 중요하다는 거예요."
+  },
+  {
+    "id": "seg-116",
+    "start": 577.144,
+    "end": 588.976,
+    "speaker": "DUCKWORTH",
+    "text": "The thing I would want to say as a psychologist is that most people don’t actually go to bed at night and think, “I was incompetent,” nor do they go to bed at night and think that they were dishonest.",
+    "translation": "심리학자로서 한 가지 말씀드리고 싶은 건, 대부분의 사람들이 밤에 누워서 '난 무능했어'라고 생각하지 않고, '내가 정직하지 못했어'라고 생각하지도 않는다는 사실이에요."
+  },
+  {
+    "id": "seg-117",
+    "start": 588.976,
+    "end": 602.588,
+    "speaker": "DUCKWORTH",
+    "text": "And actually, when you look at research on honesty and dishonesty, people have almost an infinite number of ways to rationalize what they did, so that when they go to bed at night, they feel like, “Oh, I did my best.",
+    "translation": "실제로 정직함과 부정직함에 대한 연구를 보면, 사람들은 자신이 한 행동을 합리화할 방법을 무궁무진하게 가지고 있어서 밤에 잘 때는 '어쨌든 난 최선을 다했어'라고 느끼죠."
+  },
+  {
+    "id": "seg-118",
+    "start": 602.588,
+    "end": 610.3745454545455,
+    "speaker": "DUCKWORTH",
+    "text": "And maybe it was a little bit of a lie, but it was a justified lie.” And they might not even use the word “lie” when they put themselves to bed at night.",
+    "translation": "그리고 '조금 거짓말을 하긴 했지만, 그럴 만한 사정이 있었어'라고 생각하기도 하고요. 실제로 잘 때는 '거짓말'이라는 단어조차 쓰지 않을 수도 있어요."
+  },
+  {
+    "id": "seg-119",
+    "start": 610.3745454545455,
+    "end": 614.1500000000001,
+    "speaker": "DUCKWORTH",
+    "text": "So I think one question is: What is really the failure?",
+    "translation": "그래서 한 가지 의문이 드네요. 진짜 실패란 무엇일까요?"
+  },
+  {
+    "id": "seg-120",
+    "start": 614.1500000000001,
+    "end": 618.1657142857143,
+    "speaker": "DUCKWORTH",
+    "text": "Is it the failure to care about not reaching a standard?",
+    "translation": "기준에 도달하지 못한 것에 대해 신경을 쓰지 않는 걸까요?"
+  },
+  {
+    "id": "seg-121",
+    "start": 618.1657142857143,
+    "end": 619.8074,
+    "speaker": "DUCKWORTH",
+    "text": "Or is it much deeper than that?",
+    "translation": "아니면 그보다 훨씬 더 깊은 문제일까요?"
+  },
+  {
+    "id": "seg-122",
+    "start": 619.8074,
+    "end": 621.5761428571428,
+    "speaker": "DUCKWORTH",
+    "text": "And I suspect it’s deeper than that.",
+    "translation": "저는 그것보다 더 깊은 문제일 거라고 봐요."
+  },
+  {
+    "id": "seg-123",
+    "start": 621.5761428571428,
+    "end": 623.4395,
+    "speaker": "DUCKWORTH",
+    "text": "That’s why it’s so hard to change.",
+    "translation": "그래서 그렇게 바꾸기가 어려운 거죠."
+  },
+  {
+    "id": "seg-124",
+    "start": 623.4395,
+    "end": 626.2266666666667,
+    "speaker": "DUBNER",
+    "text": "You’re saying it’s more a failure of awareness, then?",
+    "translation": "그렇다면 그보다는 인식의 실패에 가깝다는 말씀이신가요?"
+  },
+  {
+    "id": "seg-125",
+    "start": 626.2266666666667,
+    "end": 626.62,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-126",
+    "start": 626.62,
+    "end": 632.679,
+    "speaker": "DUCKWORTH",
+    "text": "I think in many cases there is a failure of awareness or a kind of subterfuge.",
+    "translation": "많은 경우에 인식이 부족하거나 일종의 자기 기만이 작용한다고 생각해요."
+  },
+  {
+    "id": "seg-127",
+    "start": 632.679,
+    "end": 648.92,
+    "speaker": "DUCKWORTH",
+    "text": "We’re faking out our own self, because nobody wants to go to bed thinking that they’re dishonest or incapable, and so it’s much easier to create some account for what we did, and what we said, and how we conducted ourselves where we can go to bed and still be the good guy.",
+    "translation": "우리는 스스로를 속이고 있어요. 왜냐하면 아무도 자신이 부정직하거나 무능하다고 생각하며 잠자리에 들고 싶어 하지 않으니까요. 그래서 자신이 한 일, 한 말, 그리고 자신의 행동에 대해 핑계를 만들어내고, 결국 스스로를 '착한 사람'이라 생각하며 발 뻗고 자는 게 훨씬 편하기 때문이죠."
+  },
+  {
+    "id": "seg-128",
+    "start": 648.92,
+    "end": 653.7466666666667,
+    "speaker": "DUBNER",
+    "text": "Tell me a little bit more about moral licensing, which you’ve hinted at.",
+    "translation": "방금 넌지시 언급하신 '도덕적 허가'에 대해 조금 더 자세히 말씀해 주세요."
+  },
+  {
+    "id": "seg-129",
+    "start": 653.7466666666667,
+    "end": 658.64975,
+    "speaker": "DUBNER",
+    "text": "And it’s something that we’ve looked at on a few Freakonomics Radio episodes in the past.",
+    "translation": "이건 예전에 저희 팟캐스트 '프리코노믹스 라디오' 몇몇 에피소드에서도 다룬 적이 있는 주제인데요."
+  },
+  {
+    "id": "seg-130",
+    "start": 658.64975,
+    "end": 661.0533333333334,
+    "speaker": "DUBNER",
+    "text": "There was a nice experiment done by John List.",
+    "translation": "존 리스트가 진행한 아주 좋은 실험이 있었어요."
+  },
+  {
+    "id": "seg-131",
+    "start": 661.0533333333334,
+    "end": 670.8266666666667,
+    "speaker": "DUBNER",
+    "text": "And they basically found that if people feel like they’re doing good work, they’re willing to take license in other areas — in other words, be a little bit either slack or dishonest.",
+    "translation": "그 실험에서 밝혀진 건, 사람들이 자신이 좋은 일을 하고 있다고 느끼면 다른 영역에서는 스스로에게 면죄부를 주려 한다는 거였어요. 다시 말해, 약간 해이해지거나 부정직해진다는 거죠."
+  },
+  {
+    "id": "seg-132",
+    "start": 670.8266666666667,
+    "end": 682.16,
+    "speaker": "DUBNER",
+    "text": "So I’m curious how strong the literature is in psychology and whether this idea of moral licensing is truly a real and universal thing.",
+    "translation": "그래서 심리학계에서 관련 연구가 얼마나 탄탄한지, 그리고 이 도덕적 허가라는 개념이 정말로 실재하고 보편적인 현상인지 궁금합니다."
+  },
+  {
+    "id": "seg-133",
+    "start": 682.16,
+    "end": 688.3996666666666,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah, I’m not an expert in moral licensing, but my read of the research is that it is a real thing.",
+    "translation": "네, 제가 도덕적 허가 분야의 전문가는 아니지만, 관련 연구를 읽어본 바로는 실제로 존재하는 현상입니다."
+  },
+  {
+    "id": "seg-134",
+    "start": 688.3996666666666,
+    "end": 698.3134285714285,
+    "speaker": "DUCKWORTH",
+    "text": "It’s part of a broader psychological phenomenon, which is this idea that we can license ourselves to do something which is inconsistent with our principles because we feel like we got credit earlier.",
+    "translation": "이건 더 넓은 의미의 심리학적 현상의 일부인데요, 이전에 이미 좋은 평가를 받을 만한 행동을 했기 때문에 자신의 원칙에 어긋나는 행동을 해도 괜찮다고 스스로에게 허락하는 개념이죠."
+  },
+  {
+    "id": "seg-135",
+    "start": 698.3134285714285,
+    "end": 707.44,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, to me, the most accessible example is you go to a fast food restaurant and because you order a Diet Coke, you get the super-sized fries.",
+    "translation": "제 생각에 가장 이해하기 쉬운 예는 패스트푸드점에 가서 다이어트 콜라를 주문했으니까 감자튀김은 가장 큰 사이즈로 시키는 거예요."
+  },
+  {
+    "id": "seg-136",
+    "start": 707.44,
+    "end": 710.9456666666666,
+    "speaker": "DUCKWORTH",
+    "text": "Like, “Well, look, I saved 150 calories on the soda.",
+    "translation": "이러는 거죠. '음, 탄산음료에서 150칼로리를 줄였잖아."
+  },
+  {
+    "id": "seg-137",
+    "start": 710.9456666666666,
+    "end": 724.6526666666666,
+    "speaker": "DUCKWORTH",
+    "text": "So now I’m going to get this 450-calorie, salty potato snack.” So the human mind is quite prone to thinking that, “Look, nobody’s perfect, so I’m just trying to get to a certain number of good acts.",
+    "translation": "그러니까 이제 이 450칼로리짜리 짭조름한 감자튀김을 먹어도 돼.' 이처럼 인간의 마음은 아주 쉽게 이렇게 생각하는 경향이 있어요. '완벽한 사람은 없잖아. 그러니까 어느 정도의 선행 점수만 채우면 돼.'"
+  },
+  {
+    "id": "seg-138",
+    "start": 724.6526666666666,
+    "end": 738.84,
+    "speaker": "DUCKWORTH",
+    "text": "And if I’ve done that in one way, I don’t have to do it now that I’ve already reached my threshold.” And maybe that accounts for both incompetence to some extent like, “This is good enough.” And also, maybe, dishonesty.",
+    "translation": "'어떤 식으로든 기준치에 도달했다면 이제는 굳이 안 해도 돼'라는 식이죠. 그리고 어쩌면 이런 생각이 어느 정도는 '이 정도면 됐지'라는 식의 무능함이나, 혹은 부정직함의 원인이 될 수도 있어요."
+  },
+  {
+    "id": "seg-139",
+    "start": 738.84,
+    "end": 744.48,
+    "speaker": "DUCKWORTH",
+    "text": "You can imagine that this could drive both of these irksome, not great behaviors.",
+    "translation": "이런 심리가 이 두 가지 아주 짜증 나고 바람직하지 않은 행동을 모두 유도할 수 있다는 생각이 드네요."
+  },
+  {
+    "id": "seg-140",
+    "start": 744.48,
+    "end": 748.072,
+    "speaker": "DUBNER",
+    "text": "You took all the romance out of french fries, by the way.",
+    "translation": "그나저나 덕분에 감자튀김에 대한 환상이 완전히 깨졌네요."
+  },
+  {
+    "id": "seg-141",
+    "start": 748.072,
+    "end": 750.12,
+    "speaker": "DUBNER",
+    "text": "450-calorie, salty potato snack?",
+    "translation": "450칼로리짜리 짭조름한 감자 간식이라니요?"
+  },
+  {
+    "id": "seg-142",
+    "start": 750.12,
+    "end": 750.68,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네, 맞아요."
+  },
+  {
+    "id": "seg-143",
+    "start": 750.68,
+    "end": 756.04,
+    "speaker": "DUBNER",
+    "text": "So can you tell us another example or two about moral licensing?",
+    "translation": "그럼 도덕적 허용에 대한 다른 예를 한두 개 더 들어주실 수 있나요?"
+  },
+  {
+    "id": "seg-144",
+    "start": 756.04,
+    "end": 759.84,
+    "speaker": "DUBNER",
+    "text": "I seem to recall having read things about racial attitudes.",
+    "translation": "인종적 태도에 관한 글을 읽었던 기억이 나는데요."
+  },
+  {
+    "id": "seg-145",
+    "start": 759.84,
+    "end": 778.7714285714286,
+    "speaker": "DUBNER",
+    "text": "If people do a certain thing, or give a certain answer in one realm that shows them to be racially enlightened or racially fair, that they will basically pat themselves on the back and that a subsequent action might actually be in the opposite direction?",
+    "translation": "어떤 분야에서 인종적으로 깨어있거나 공정하다는 것을 보여주는 특정 행동을 하거나 답변을 하면, 속으로 스스로를 기특해하다가 그다음 행동은 오히려 반대 방향으로 가게 된다는 건가요?"
+  },
+  {
+    "id": "seg-146",
+    "start": 778.7714285714286,
+    "end": 779.1028571428571,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-147",
+    "start": 779.1028571428571,
+    "end": 782.35925,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, I think that makes it sound quite simple, right?",
+    "translation": "제 말은, 그렇게 설명하면 아주 간단하게 들린다는 거죠, 그렇죠?"
+  },
+  {
+    "id": "seg-148",
+    "start": 782.35925,
+    "end": 788.44,
+    "speaker": "DUCKWORTH",
+    "text": "That when we do a good act then it puts money in our virtue bank, and then we can spend it a little bit later.",
+    "translation": "착한 행동을 하면 도덕성 은행에 돈이 저금되고, 나중에 그걸 꺼내 쓸 수 있다는 식이니까요."
+  },
+  {
+    "id": "seg-149",
+    "start": 788.44,
+    "end": 793.35975,
+    "speaker": "DUCKWORTH",
+    "text": "There was a meta-analysis that I read — that is a study of studies.",
+    "translation": "제가 예전에 읽은 메타분석, 그러니까 기존 연구들을 종합 분석한 논문이 있었는데요."
+  },
+  {
+    "id": "seg-150",
+    "start": 793.35975,
+    "end": 798.57975,
+    "speaker": "DUCKWORTH",
+    "text": "And in this case, there had been 91 different studies of moral licensing.",
+    "translation": "이 경우에는 도덕적 허용에 관한 91개의 서로 다른 연구를 분석한 것이었습니다."
+  },
+  {
+    "id": "seg-151",
+    "start": 798.57975,
+    "end": 802.6600000000001,
+    "speaker": "DUCKWORTH",
+    "text": "And in this meta-analysis, Stephen, there was a small effect.",
+    "translation": "스티븐, 이 메타분석 결과 효과가 그리 크지 않은 것으로 나타났어요."
+  },
+  {
+    "id": "seg-152",
+    "start": 802.6600000000001,
+    "end": 804.36,
+    "speaker": "DUCKWORTH",
+    "text": "It wasn’t a sledgehammer effect.",
+    "translation": "엄청나게 강력한 효과는 아니었던 거죠."
+  },
+  {
+    "id": "seg-153",
+    "start": 804.36,
+    "end": 811.16,
+    "speaker": "DUCKWORTH",
+    "text": "The problem is that the published studies had bigger effects than the unpublished studies.",
+    "translation": "문제는 출판된 논문들이 출판되지 않은 논문들보다 효과가 더 크게 나타났다는 점입니다."
+  },
+  {
+    "id": "seg-154",
+    "start": 811.16,
+    "end": 823.4395,
+    "speaker": "DUCKWORTH",
+    "text": "And that always makes you wonder whether file drawers are just overflowing with, “Eh, it’s really nothing.” My guess is that there is something there, but it could be really small and there’s so many other things that drive human behavior.",
+    "translation": "그렇게 되면 ‘아, 사실 별거 아니네’ 하고 서랍 속으로 묻혀버린 연구들이 수두룩한 건 아닌지 늘 의심하게 되죠. 제 생각에는 분명 무언가 영향이 있긴 하겠지만, 아주 미미할 수 있고 인간의 행동을 좌우하는 다른 요인들이 워낙 많기도 합니다."
+  },
+  {
+    "id": "seg-155",
+    "start": 823.4395,
+    "end": 833.112,
+    "speaker": "DUCKWORTH",
+    "text": "We probably all have some licensing going on below our conscious awareness, but we also have other things going on below and above our conscious awareness.",
+    "translation": "우리는 아마 무의식적으로 어느 정도 도덕적 허용 심리를 작동시키고 있겠지만, 의식 안팎에서 작동하는 다른 요인들도 아주 많잖아요."
+  },
+  {
+    "id": "seg-156",
+    "start": 833.112,
+    "end": 839.573,
+    "speaker": "DUCKWORTH",
+    "text": "And maybe the moral here is that we should be aware of that tendency.",
+    "translation": "어쩌면 여기서 얻을 수 있는 교훈은 우리가 그런 경향이 있다는 걸 인지해야 한다는 점인 것 같아요."
+  },
+  {
+    "id": "seg-157",
+    "start": 839.573,
+    "end": 854.4123333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Because, the desirable thing is to have a standard, reflect on that standard, and then to apply that standard to all occasions in your life, and not feel like you’re getting to a, a score and then beyond that it’s good enough.",
+    "translation": "왜냐하면 바람직한 자세는 자신만의 기준을 세우고, 그 기준을 되돌아보며, 삶의 모든 순간에 그 기준을 적용하는 것이지, 어느 정도 점수를 채웠으니 이제 이만하면 됐다고 생각하는 게 아니기 때문입니다."
+  },
+  {
+    "id": "seg-158",
+    "start": 854.4123333333333,
+    "end": 859.56,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, satisficing is really not a great way to approach morality.",
+    "translation": "그러니까, 적당히 이 정도면 됐다고 타협하는 건 도덕성을 대하는 좋은 자세가 아니라는 거죠."
+  },
+  {
+    "id": "seg-159",
+    "start": 859.56,
+    "end": 867.7194999999999,
+    "speaker": "DUBNER",
+    "text": "Okay, so let’s say that I want to be as, what sounds like, impossibly self-aware as you just described, because that’s hard.",
+    "translation": "좋아요, 그럼 방금 말씀하신 것처럼 힘들어 보이긴 하지만 엄청나게 높은 수준의 자기 성찰을 하고 싶다고 해보죠. 그건 정말 어려운 일이니까요."
+  },
+  {
+    "id": "seg-160",
+    "start": 867.7194999999999,
+    "end": 870.62925,
+    "speaker": "DUBNER",
+    "text": "But let’s say I want to be aware of this tendency.",
+    "translation": "하지만 제가 이런 성향을 의식하고 싶다고 해볼게요."
+  },
+  {
+    "id": "seg-161",
+    "start": 870.62925,
+    "end": 877.1437999999999,
+    "speaker": "DUBNER",
+    "text": "I want to address it, try to understand where it’s coming from, and if I deviate, try to fix it somehow.",
+    "translation": "여기에 대처하고 싶고, 이게 어디서 비롯된 건지 이해해 보려고 하고, 만약 선을 벗어난다면 어떻게든 고쳐보려고 노력하고 싶어요."
+  },
+  {
+    "id": "seg-162",
+    "start": 877.1437999999999,
+    "end": 879.4956,
+    "speaker": "DUBNER",
+    "text": "Do you have any advice for that?",
+    "translation": "거기에 대해 조언해 줄 만한 게 있을까요?"
+  },
+  {
+    "id": "seg-163",
+    "start": 879.4956,
+    "end": 886.7194,
+    "speaker": "DUCKWORTH",
+    "text": "You know, Max Bazerman, who is a behavioral scientist that we both know, has recently been writing about this.",
+    "translation": "우리 둘 다 잘 아는 행동과학자인 맥스 바저먼이 최근에 이 주제에 대해 글을 쓰고 있거든요."
+  },
+  {
+    "id": "seg-164",
+    "start": 886.7194,
+    "end": 900.0836363636364,
+    "speaker": "DUCKWORTH",
+    "text": "I think his term for it is, “better, not perfect.” And I think when you set out perfection as the ideal, then it actually, maybe paradoxically, gets us to be less moral because we think, “I’ll never do that.” And then you just to hell with it.",
+    "translation": "그 사람은 이걸 '완벽함이 아니라 개선'이라는 말로 표현하는 것 같아요. 완벽을 이상향으로 삼으면 역설적으로 도덕성이 더 떨어질 수 있어요. '난 절대 저렇게 못 해'라고 생각하면서 아예 포기해 버리니까요."
+  },
+  {
+    "id": "seg-165",
+    "start": 900.0836363636364,
+    "end": 917.506,
+    "speaker": "DUCKWORTH",
+    "text": "And so, “better” is a better goal than “perfect.” And if you are always striving to be better, if you are in that mindset, I think you might be less likely to morally license because you wouldn’t take this next occasion to tell a little bit of a lie, or take someone else’s time, because you’re always trying to do better.",
+    "translation": "그래서 '완벽함'보다는 '더 나아지는 것'이 더 좋은 목표예요. 항상 더 나아지려고 노력하는 마음가짐을 갖고 있다면, 도덕적 면죄부를 덜 주게 될 것 같아요. 항상 더 잘하려고 노력하니까 다음번에 가벼운 거짓말을 하거나 남의 시간을 뺏는 행동을 흐지부지 넘기지 않을 테니까요."
+  },
+  {
+    "id": "seg-166",
+    "start": 917.506,
+    "end": 918.17575,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t know.",
+    "translation": "잘은 모르겠네요."
+  },
+  {
+    "id": "seg-167",
+    "start": 918.17575,
+    "end": 928.696,
+    "speaker": "DUCKWORTH",
+    "text": "That sounds a little Pollyanna to me, but one of my recent “oh my gosh, this must explain everything about human nature” theories is that attention is so limited.",
+    "translation": "제가 말해놓고도 좀 낙천적으로 들리긴 하는데, 최근에 제가 '와, 이게 인간 본성의 모든 걸 설명해 주네'라고 느낀 이론 중 하나가 바로 주의력의 한계예요."
+  },
+  {
+    "id": "seg-168",
+    "start": 928.696,
+    "end": 938.639,
+    "speaker": "DUCKWORTH",
+    "text": "And one of the problems with incompetence, dishonesty, and so many other problems, is that our attention is so selective, and we can just ignore so much.",
+    "translation": "무능함이나 부정직함 같은 수많은 문제점 중 하나는 우리의 주의력이 너무 선택적이라서 아주 많은 것들을 그냥 못 본 체할 수 있다는 거예요."
+  },
+  {
+    "id": "seg-169",
+    "start": 938.639,
+    "end": 940.5060000000001,
+    "speaker": "DUBNER",
+    "text": "Let me ask you one last thing.",
+    "translation": "마지막으로 하나만 더 물어볼게요."
+  },
+  {
+    "id": "seg-170",
+    "start": 940.5060000000001,
+    "end": 948.6282857142858,
+    "speaker": "DUBNER",
+    "text": "It strikes me, and again, I may be wrong, but that just about everyone wants to appear to be moral, right?",
+    "translation": "제가 보기에는, 물론 제 생각이 틀릴 수도 있지만, 거의 모든 사람들이 도덕적인 사람처럼 보이고 싶어 하잖아요, 그렇죠?"
+  },
+  {
+    "id": "seg-171",
+    "start": 948.6282857142858,
+    "end": 949.1141428571428,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-172",
+    "start": 949.1141428571428,
+    "end": 954.72,
+    "speaker": "DUBNER",
+    "text": "Very few people seem to want to be considered immoral, or even amoral.",
+    "translation": "스스로 부도덕하거나 심지어 도덕과 무관한 사람으로 여겨지길 원하는 사람은 거의 없잖아요."
+  },
+  {
+    "id": "seg-173",
+    "start": 954.72,
+    "end": 961.6631,
+    "speaker": "DUBNER",
+    "text": "Has anyone ever done a good job measuring the gap of declared morality and actual morality?",
+    "translation": "드러내는 도덕성과 실제 도덕성의 격차를 제대로 측정한 사람이 혹시 있었나요?"
+  },
+  {
+    "id": "seg-174",
+    "start": 961.6631,
+    "end": 962.9836,
+    "speaker": "DUCKWORTH",
+    "text": "You know, I don’t know.",
+    "translation": "글쎄요, 잘 모르겠네요."
+  },
+  {
+    "id": "seg-175",
+    "start": 962.9836,
+    "end": 981.1142857142858,
+    "speaker": "DUCKWORTH",
+    "text": "One of the most influential psychologists when I was in school was a guy named John Sabini, who felt like what’s really going on here is that people want to feel like they’re good, capable human beings and their desire to do that can warp things, can make them oblivious to things.",
+    "translation": "제가 학교 다닐 때 가장 영향력 있었던 심리학자 중 한 명이 존 사비니라는 사람이었는데요. 그분은 핵심이 사람들이 스스로를 선하고 능력 있는 인간이라고 느끼고 싶어 하는 데 있고, 그 열망이 상황을 왜곡하고 여러 일들에 무감각하게 만든다고 생각했어요."
+  },
+  {
+    "id": "seg-176",
+    "start": 981.1142857142858,
+    "end": 982.865,
+    "speaker": "DUCKWORTH",
+    "text": "And they can just change the narrative.",
+    "translation": "그리고 스스로 이야기를 각색해 버리는 거죠."
+  },
+  {
+    "id": "seg-177",
+    "start": 982.865,
+    "end": 991.327,
+    "speaker": "DUCKWORTH",
+    "text": "Like, “Oh, the reason I had to steal that thing is because the system is corrupt, and therefore, it was a good thing that I stole that thing.” So I do think the desire is very strong.",
+    "translation": "예를 들면 '아, 내가 저걸 훔쳐야 했던 건 사회 시스템이 부패해서야. 그러니까 저걸 훔친 건 잘한 일이야' 이런 식으로요. 그래서 그런 욕망이 정말 강하다고 생각해요."
+  },
+  {
+    "id": "seg-178",
+    "start": 991.327,
+    "end": 992.96,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t know if anybody has measured the gap.",
+    "translation": "그 격차를 누가 측정했는지는 모르겠네요."
+  },
+  {
+    "id": "seg-179",
+    "start": 992.96,
+    "end": 999.487,
+    "speaker": "DUCKWORTH",
+    "text": "To do that, of course, you would have to have some measure of actual moral behavior.",
+    "translation": "물론 그걸 측정하려면 실제 도덕적 행동을 측정할 수 있는 기준이 있어야겠죠."
+  },
+  {
+    "id": "seg-180",
+    "start": 999.487,
+    "end": 1001.6229999999999,
+    "speaker": "DUCKWORTH",
+    "text": "It would be very hard to do in the real world.",
+    "translation": "실제 세상에서는 그렇게 하기가 정말 어렵겠죠."
+  },
+  {
+    "id": "seg-181",
+    "start": 1001.6229999999999,
+    "end": 1011.0126666666666,
+    "speaker": "DUBNER",
+    "text": "Well, as with so many things that we most care about — so many behaviors and attitudes and so on — we really, really want to see them in the wild and not in the lab.",
+    "translation": "맞아요, 우리가 가장 중요하게 생각하는 행동이나 태도 같은 많은 것들이 그렇듯이, 우리는 그걸 실험실이 아닌 실제 현장에서 정말 보고 싶어 하니까요."
+  },
+  {
+    "id": "seg-182",
+    "start": 1011.0126666666666,
+    "end": 1020.48,
+    "speaker": "DUBNER",
+    "text": "And the lab really, I mean, no offense to you and your field, it isn’t great at measuring and analyzing complicated behaviors.",
+    "translation": "그리고 실험실은, 뭐, 당신과 그 연구 분야를 비하하려는 건 아니지만, 복잡한 행동을 측정하고 분석하는 데 그리 뛰어나진 않잖아요."
+  },
+  {
+    "id": "seg-183",
+    "start": 1020.48,
+    "end": 1020.8399999999999,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-184",
+    "start": 1020.8399999999999,
+    "end": 1022.4879999999999,
+    "speaker": "DUCKWORTH",
+    "text": "I mean, almost by definition, right?",
+    "translation": "사실상 거의 당연히 그렇다고 봐야죠."
+  },
+  {
+    "id": "seg-185",
+    "start": 1022.4879999999999,
+    "end": 1027.4923333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Because when you bring something to the lab, you create some little circumstance, this situation.",
+    "translation": "실험실로 무언가를 가져온다는 건 인위적인 작은 환경, 즉 상황을 만드는 거니까요."
+  },
+  {
+    "id": "seg-186",
+    "start": 1027.4923333333334,
+    "end": 1029.9991666666667,
+    "speaker": "DUCKWORTH",
+    "text": "But that makes it very oversimplified.",
+    "translation": "하지만 그 때문에 상황이 너무 단순해져 버려요."
+  },
+  {
+    "id": "seg-187",
+    "start": 1029.9991666666667,
+    "end": 1041.025,
+    "speaker": "DUCKWORTH",
+    "text": "You know, there was one field study of morality, the wallet test, where I think it was something like 17,000 wallets were left in all different parts of the world, and then it was just observed.",
+    "translation": "도덕성에 관한 유명한 현장 연구가 하나 있었는데, '지갑 테스트'라고 해서 전 세계 곳곳에 약 17,000개의 지갑을 남겨두고 사람들이 어떻게 하는지 그냥 관찰한 거였어요."
+  },
+  {
+    "id": "seg-188",
+    "start": 1041.025,
+    "end": 1043.65,
+    "speaker": "DUCKWORTH",
+    "text": "Like, what do people do when they find a wallet?",
+    "translation": "사람들이 지갑을 주웠을 때 어떻게 행동하는지 본 거죠."
+  },
+  {
+    "id": "seg-189",
+    "start": 1043.65,
+    "end": 1044.9531666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Most people are honest.",
+    "translation": "대부분의 사람은 정직했어요."
+  },
+  {
+    "id": "seg-190",
+    "start": 1044.9531666666667,
+    "end": 1046.999,
+    "speaker": "DUCKWORTH",
+    "text": "That was one of the conclusions of the study.",
+    "translation": "그게 그 연구의 결론 중 하나였죠."
+  },
+  {
+    "id": "seg-191",
+    "start": 1046.999,
+    "end": 1047.7323333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Not everyone.",
+    "translation": "전부는 아니었지만요."
+  },
+  {
+    "id": "seg-192",
+    "start": 1047.7323333333334,
+    "end": 1058.7436,
+    "speaker": "DUCKWORTH",
+    "text": "So you could begin, at least, to try to get out of the lab and ask the question, for example, whether the people who were encountering these wallets consider themselves to be honest people.",
+    "translation": "그러니까 적어도 실험실에서 벗어나서, 예를 들어 이 지갑들을 주운 사람들이 스스로를 스스로 정직한 사람이라고 생각하는지를 물어보는 시도부터 시작할 수는 있겠죠."
+  },
+  {
+    "id": "seg-193",
+    "start": 1058.7436,
+    "end": 1063.2997,
+    "speaker": "DUCKWORTH",
+    "text": "And then you could see whether they really did or didn’t return the wallet to the owner, or try.",
+    "translation": "그리고 나서 그들이 정말로 지갑을 주인에게 돌려주었는지, 혹은 돌려주려고 노력했는지를 확인해 볼 수 있을 거고요."
+  },
+  {
+    "id": "seg-194",
+    "start": 1063.2997,
+    "end": 1068.813,
+    "speaker": "DUBNER",
+    "text": "Well, going back to the question I asked about incompetence as a form of dishonesty.",
+    "translation": "음, 제가 아까 드렸던 질문, 즉 '무능함도 일종의 부정직함인가'라는 질문으로 돌아가서요."
+  },
+  {
+    "id": "seg-195",
+    "start": 1068.813,
+    "end": 1085.1733333333332,
+    "speaker": "DUBNER",
+    "text": "Now that you’ve told me that most of us see ourselves as good and wanting to be seen as good, I feel I put myself in the minority there of, like, I care much less about people and more about not sucking.",
+    "translation": "방금 우리 대부분은 스스로를 좋은 사람으로 보고 남들에게도 그렇게 보이고 싶어 한다고 하셨잖아요. 그걸 들으니 저는 '나는 남들 신경 쓰기보다는 그냥 일이나 제대로 하자는 주의인데' 하면서 좀 소수파에 속해 있다는 생각이 드네요."
+  },
+  {
+    "id": "seg-196",
+    "start": 1085.1733333333332,
+    "end": 1090.5390000000002,
+    "speaker": "DUBNER",
+    "text": "So, if nothing else, I’ve established bona fides that I don’t always go with the crowd.",
+    "translation": "뭐, 어쨌든 제가 항상 주류를 따르지만은 않는다는 사실은 증명된 셈이네요."
+  },
+  {
+    "id": "seg-197",
+    "start": 1090.5390000000002,
+    "end": 1092.8234,
+    "speaker": "DUCKWORTH",
+    "text": "That’s probably one reason I like you.",
+    "translation": "그게 제가 당신을 좋아하는 이유 중 하나일 거예요."
+  },
+  {
+    "id": "seg-198",
+    "start": 1092.8234,
+    "end": 1098.9795,
+    "speaker": "DUCKWORTH",
+    "text": "I think that you are not one to be checking with what everybody else thinks first before you decide what you think.",
+    "translation": "당신은 스스로의 생각을 결정하기 전에 다른 사람들이 어떻게 생각하는지부터 눈치 보는 스타일은 아니거든요."
+  },
+  {
+    "id": "seg-199",
+    "start": 1098.9795,
+    "end": 1099.334625,
+    "speaker": "DUBNER",
+    "text": "Right.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-200",
+    "start": 1099.334625,
+    "end": 1105.9,
+    "speaker": "DUBNER",
+    "text": "But, I mean, hopefully one of the few things that you’d like to be with the crowd on is wanting to appear to be a good person.",
+    "translation": "하지만 제 말은, 사람들이랑 의견이 같았으면 하는 몇 안 되는 것 중 하나가 바로 좋은 사람으로 보이고 싶어 하는 마음이잖아요."
+  },
+  {
+    "id": "seg-201",
+    "start": 1105.9,
+    "end": 1107.1333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I’m sure you have that.",
+    "translation": "당신도 분명 그럴 거라고 확신해요."
+  },
+  {
+    "id": "seg-202",
+    "start": 1107.1333333333334,
+    "end": 1110.015,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t think you go to bed at night thinking you’re not a good person either.",
+    "translation": "당신도 밤에 잠자리에 들 때 스스로가 좋은 사람이 아니라고 생각하면서 자진 않을 테니까요."
+  },
+  {
+    "id": "seg-203",
+    "start": 1110.015,
+    "end": 1110.605,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t.",
+    "translation": "저도 안 그래요."
+  },
+  {
+    "id": "seg-204",
+    "start": 1110.605,
+    "end": 1113.1028571428571,
+    "speaker": "DUBNER",
+    "text": "You don’t go to bed thinking, “I’m not a good person”?",
+    "translation": "스스로가 '좋은 사람이 아니다'라고 생각하면서 자진 않는다고요?"
+  },
+  {
+    "id": "seg-205",
+    "start": 1113.1028571428571,
+    "end": 1114.257142857143,
+    "speaker": "DUBNER",
+    "text": "Or you don’t go to bed thinking you’re—",
+    "translation": "아니면 본인이—"
+  },
+  {
+    "id": "seg-206",
+    "start": 1114.257142857143,
+    "end": 1123.66,
+    "speaker": "DUCKWORTH",
+    "text": "I don’t go to bed thinking that — in other words, I’m guilty of probably rationalizing all kinds of little things and ignoring lots of things that I would like to ignore.",
+    "translation": "스스로 그렇게 생각하며 자진 않는다는 뜻이에요. 다시 말해, 저도 온갖 소소한 일들을 합리화하고, 모른 체하고 싶은 일들은 그냥 넘겨버리는 잘못을 저지르곤 하죠."
+  },
+  {
+    "id": "seg-207",
+    "start": 1123.66,
+    "end": 1127.9333333333334,
+    "speaker": "DUCKWORTH",
+    "text": "But I’m just saying that I am sure you do the same thing because it’s human nature.",
+    "translation": "하지만 당신도 똑같이 그럴 거라고 확신해요. 그게 인간의 본성이니까요."
+  },
+  {
+    "id": "seg-208",
+    "start": 1127.9333333333334,
+    "end": 1133.76,
+    "speaker": "DUBNER",
+    "text": "You know, I think the moral of the story is not to go to bed at night.",
+    "translation": "이 얘기의 교훈은 밤에 잠을 자면 안 된다는 것 같네요."
+  },
+  {
+    "id": "seg-209",
+    "start": 1133.76,
+    "end": 1140.1866666666667,
+    "speaker": "NARRATOR",
+    "text": "Still to come on No Stupid Questions: Angela and Stephen debate the value of top-level personal goals.",
+    "translation": "이어서 '바보 같은 질문은 없다'에서는 안젤라와 스티븐이 최상위 개인 목표의 가치에 대해 토론합니다."
+  },
+  {
+    "id": "seg-210",
+    "start": 1140.1866666666667,
+    "end": 1148.1190000000001,
+    "speaker": "DUBNER",
+    "text": "How about: “Every day, try to suck a little bit less.”",
+    "translation": "이건 어때요? \"매일 조금씩만 덜 한심해지자.\""
+  },
+  {
+    "id": "seg-211",
+    "start": 1148.1190000000001,
+    "end": 1149.159,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "그러게요."
+  },
+  {
+    "id": "seg-212",
+    "start": 1149.159,
+    "end": 1154.919,
+    "speaker": "DUCKWORTH",
+    "text": "Stephen, I’m curious whether you have a top-level goal.",
+    "translation": "스티븐, 당신에게도 최상위 목표라는 게 있는지 궁금해요."
+  },
+  {
+    "id": "seg-213",
+    "start": 1154.919,
+    "end": 1155.5856666666668,
+    "speaker": "DUBNER",
+    "text": "What?",
+    "translation": "네?"
+  },
+  {
+    "id": "seg-214",
+    "start": 1155.5856666666668,
+    "end": 1158.2872,
+    "speaker": "DUCKWORTH",
+    "text": "It’s a simple yes or no question.",
+    "translation": "간단하게 예, 아니오로 답할 수 있는 질문이에요."
+  },
+  {
+    "id": "seg-215",
+    "start": 1158.2872,
+    "end": 1160.3,
+    "speaker": "DUBNER",
+    "text": "That sounds like a marketing scam.",
+    "translation": "무슨 마케팅 사기 같네요."
+  },
+  {
+    "id": "seg-216",
+    "start": 1160.3,
+    "end": 1161.992,
+    "speaker": "DUCKWORTH",
+    "text": "Because I can sell you one.",
+    "translation": "제가 하나 팔 수도 있거든요."
+  },
+  {
+    "id": "seg-217",
+    "start": 1161.992,
+    "end": 1165.256,
+    "speaker": "DUCKWORTH",
+    "text": "And it comes with a set of steak knives.",
+    "translation": "그러면 스테이크 칼 세트도 같이 드려요."
+  },
+  {
+    "id": "seg-218",
+    "start": 1165.256,
+    "end": 1171.879,
+    "speaker": "DUBNER",
+    "text": "Did you know that Andrew Yang, former presidential candidate, was a Cutco knife salesman early in his career?",
+    "translation": "대선 후보였던 앤드루 양이 커리어 초기에 컷코 칼 판매원이었다는 사실을 알고 계셨나요?"
+  },
+  {
+    "id": "seg-219",
+    "start": 1171.879,
+    "end": 1173.479,
+    "speaker": "DUCKWORTH",
+    "text": "I did not know that.",
+    "translation": "그건 몰랐네요."
+  },
+  {
+    "id": "seg-220",
+    "start": 1173.479,
+    "end": 1174.4395,
+    "speaker": "DUBNER",
+    "text": "It’s true.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-221",
+    "start": 1174.4395,
+    "end": 1175.385,
+    "speaker": "DUBNER",
+    "text": "So wait.",
+    "translation": "잠깐만요."
+  },
+  {
+    "id": "seg-222",
+    "start": 1175.385,
+    "end": 1177.215,
+    "speaker": "DUBNER",
+    "text": "Do I have a top-level goal?",
+    "translation": "저한테 최상위 목표가 있는지 물어보시는 건가요?"
+  },
+  {
+    "id": "seg-223",
+    "start": 1177.215,
+    "end": 1178.3726666666666,
+    "speaker": "DUBNER",
+    "text": "You’re asking me.",
+    "translation": "저한테 물어보시는 거군요."
+  },
+  {
+    "id": "seg-224",
+    "start": 1178.3726666666666,
+    "end": 1182.0396666666668,
+    "speaker": "DUBNER",
+    "text": "So okay, first of all, I have to say, I feel like you and I are pretty good friends.",
+    "translation": "그보다 우선, 저는 우리가 꽤 친한 친구 사이라고 생각하거든요."
+  },
+  {
+    "id": "seg-225",
+    "start": 1182.0396666666668,
+    "end": 1183.72,
+    "speaker": "DUCKWORTH",
+    "text": "We are pretty good friends, I think.",
+    "translation": "제 생각에도 우린 꽤 친한 친구죠."
+  },
+  {
+    "id": "seg-226",
+    "start": 1183.72,
+    "end": 1189.42,
+    "speaker": "DUBNER",
+    "text": "But I feel the fact that you’re asking me if I have a top-level goal infers you don’t know me at all.",
+    "translation": "그런데 저한테 최상위 목표가 있냐고 물어보시는 걸 보면, 저를 전혀 모르시는 것 같다는 생각이 드네요."
+  },
+  {
+    "id": "seg-227",
+    "start": 1189.42,
+    "end": 1193.2263333333333,
+    "speaker": "DUCKWORTH",
+    "text": "Because you have no idea what I’m talking about, or because, of course, you have one.",
+    "translation": "제가 무슨 말을 하는지 전혀 모르셔서 그런가요, 아니면 당연히 그런 목표가 있으셔서 그런가요?"
+  },
+  {
+    "id": "seg-228",
+    "start": 1193.2263333333333,
+    "end": 1195.48,
+    "speaker": "DUBNER",
+    "text": "Because I definitely don’t have any idea what you’re talking about.",
+    "translation": "왜냐하면 무슨 말씀을 하시는지 정말 전혀 모르겠거든요."
+  },
+  {
+    "id": "seg-229",
+    "start": 1195.48,
+    "end": 1198.2101818181818,
+    "speaker": "DUBNER",
+    "text": "And I’m almost sure that I don’t have a top-level goal.",
+    "translation": "그리고 저한테 최상위 목표 같은 건 확실히 없을 거라고 확신하고요."
+  },
+  {
+    "id": "seg-230",
+    "start": 1198.2101818181818,
+    "end": 1198.919,
+    "speaker": "DUCKWORTH",
+    "text": "No, no, no.",
+    "translation": "아니, 아니에요."
+  },
+  {
+    "id": "seg-231",
+    "start": 1198.919,
+    "end": 1199.44,
+    "speaker": "DUCKWORTH",
+    "text": "Hold on.",
+    "translation": "잠시만요."
+  },
+  {
+    "id": "seg-232",
+    "start": 1199.44,
+    "end": 1200.8238,
+    "speaker": "DUCKWORTH",
+    "text": "Let me explain what it is.",
+    "translation": "그게 뭔지 설명해 드릴게요."
+  },
+  {
+    "id": "seg-233",
+    "start": 1200.8238,
+    "end": 1202.5729999999999,
+    "speaker": "DUCKWORTH",
+    "text": "I’m guessing you do.",
+    "translation": "분명히 있으실 것 같거든요."
+  },
+  {
+    "id": "seg-234",
+    "start": 1202.5729999999999,
+    "end": 1207.5475714285715,
+    "speaker": "DUCKWORTH",
+    "text": "So this “top level goal” is essentially a mission statement.",
+    "translation": "그러니까 이 '최상위 목표'라는 건 본질적으로 사명 선언문 같은 거예요."
+  },
+  {
+    "id": "seg-235",
+    "start": 1207.5475714285715,
+    "end": 1212.64,
+    "speaker": "DUCKWORTH",
+    "text": "It’s the “why” behind everything that you do, let’s say, professionally.",
+    "translation": "예를 들어 직업적으로 하는 모든 일의 이면에 있는 '이유' 같은 거죠."
+  },
+  {
+    "id": "seg-236",
+    "start": 1212.64,
+    "end": 1215.288,
+    "speaker": "DUCKWORTH",
+    "text": "Obviously, you’re a dad, you’re a husband, you’re a friend.",
+    "translation": "물론 아빠로서, 남편으로서, 친구로서의 삶도 있겠지만요."
+  },
+  {
+    "id": "seg-237",
+    "start": 1215.288,
+    "end": 1222.54,
+    "speaker": "DUCKWORTH",
+    "text": "But just as a writer, or as a journalist, what is the “why” that unifies everything that you do?",
+    "translation": "하지만 작가로서, 혹은 언론인으로서 당신이 하는 모든 일을 하나로 묶어주는 '이유'는 무엇인가요?"
+  },
+  {
+    "id": "seg-238",
+    "start": 1222.54,
+    "end": 1225.32,
+    "speaker": "DUBNER",
+    "text": "I understand your question better now, and I’m less insulted.",
+    "translation": "이제 무슨 질문인지 더 잘 이해가 가네요. 기분도 덜 상하고요."
+  },
+  {
+    "id": "seg-239",
+    "start": 1225.32,
+    "end": 1225.7733333333333,
+    "speaker": "DUBNER",
+    "text": "Number one.",
+    "translation": "우선 첫 번째로 말이죠."
+  },
+  {
+    "id": "seg-240",
+    "start": 1225.7733333333333,
+    "end": 1227.08,
+    "speaker": "DUCKWORTH",
+    "text": "No disrespect intended.",
+    "translation": "무시하려는 의도는 아니었어요."
+  },
+  {
+    "id": "seg-241",
+    "start": 1227.08,
+    "end": 1232.3399444444444,
+    "speaker": "DUBNER",
+    "text": "Number two: I dislike the idea of a mission statement even more than the top-level goal, I have to say.",
+    "translation": "두 번째로, 솔직히 저는 사명 선언문이라는 개념을 최상위 목표보다 훨씬 더 싫어해요."
+  },
+  {
+    "id": "seg-242",
+    "start": 1232.3399444444444,
+    "end": 1232.6,
+    "speaker": "DUCKWORTH",
+    "text": "Really?",
+    "translation": "정말요?"
+  },
+  {
+    "id": "seg-243",
+    "start": 1232.6,
+    "end": 1233.8628571428571,
+    "speaker": "DUBNER",
+    "text": "Honestly, I’m of two minds.",
+    "translation": "솔직히 양가적인 감정이 들어요."
+  },
+  {
+    "id": "seg-244",
+    "start": 1233.8628571428571,
+    "end": 1239.1733333333332,
+    "speaker": "DUBNER",
+    "text": "The idea of a mission statement sounds obviously like a good idea, right?",
+    "translation": "사명 선언문이라는 개념 자체는 분명히 좋은 생각처럼 들리잖아요?"
+  },
+  {
+    "id": "seg-245",
+    "start": 1239.1733333333332,
+    "end": 1243.36925,
+    "speaker": "DUBNER",
+    "text": "If it’s a well-considered declaration of your deepest intentions.",
+    "translation": "자신의 가장 깊은 의도를 깊이 고민해서 선언한 것이라면 말이죠."
+  },
+  {
+    "id": "seg-246",
+    "start": 1243.36925,
+    "end": 1257.6195,
+    "speaker": "DUBNER",
+    "text": "On the other hand, my actual experience with mission statements is that they are often institutional B.S., that they’re too soft to be actionable, or they’re so obvious as to be unnecessary.",
+    "translation": "반면에 사명 선언문에 대한 제 실제 경험은, 대개 기관의 허울 좋은 헛소리이거나, 너무 추상적이어서 실천하기 어렵거나, 아니면 너무 뻔해서 굳이 필요 없는 경우가 많다는 거예요."
+  },
+  {
+    "id": "seg-247",
+    "start": 1257.6195,
+    "end": 1272.94,
+    "speaker": "DUBNER",
+    "text": "It makes me think a little bit about — you know, a lot of companies publish their ethical code, and I can’t remember who said it, but somebody smart once wrote about how if a company decides it needs to write down their code of ethics, they’ve already screwed up.",
+    "translation": "그걸 보니 이런 생각이 좀 드네요. 많은 기업이 윤리 강령을 발표하잖아요. 누가 말했는지는 기억나지 않지만, 어떤 똑똑한 사람이 쓰기를, 기업이 윤리 강령을 종이에 적어야겠다고 결정하는 순간 이미 망한 거라고 하더군요."
+  },
+  {
+    "id": "seg-248",
+    "start": 1272.94,
+    "end": 1281.3195,
+    "speaker": "DUBNER",
+    "text": "And the ones that operate ethically don’t actually need to write down the code of ethics, which basically says you’re supposed to not lie, cheat, and steal.",
+    "translation": "그리고 윤리적으로 운영되는 기업은 거짓말하고, 속이고, 훔치지 말아야 한다는 본질적인 내용을 담은 윤리 강령을 굳이 적어 둘 필요가 없죠."
+  },
+  {
+    "id": "seg-249",
+    "start": 1281.3195,
+    "end": 1284.48,
+    "speaker": "DUCKWORTH",
+    "text": "So, Stephen, I can understand the cynicism.",
+    "translation": "스티븐, 왜 그렇게 냉소적으로 보시는지 이해해요."
+  },
+  {
+    "id": "seg-250",
+    "start": 1284.48,
+    "end": 1294.52,
+    "speaker": "DUCKWORTH",
+    "text": "Sometimes the rift between what a company or an organization says they’re going to do, and then what they do is so striking that you kind of wish they had never said what their ideals were.",
+    "translation": "때로는 기업이나 단체가 하겠다는 일과 실제로 하는 일 사이의 괴리가 너무 커서, 차라리 그들의 이상향이 무엇인지 말하지나 말지 하는 생각이 들 때도 있죠."
+  },
+  {
+    "id": "seg-251",
+    "start": 1294.52,
+    "end": 1300.96975,
+    "speaker": "DUCKWORTH",
+    "text": "But look, I think it’s actually very helpful to be explicit about your values.",
+    "translation": "하지만 전 자신의 가치관을 명확히 밝히는 게 실제로 큰 도움이 된다고 생각해요."
+  },
+  {
+    "id": "seg-252",
+    "start": 1300.96975,
+    "end": 1303.52,
+    "speaker": "DUCKWORTH",
+    "text": "Because why not add some clarity?",
+    "translation": "명확하게 해서 나쁠 건 없잖아요?"
+  },
+  {
+    "id": "seg-253",
+    "start": 1303.52,
+    "end": 1304.6879999999999,
+    "speaker": "DUCKWORTH",
+    "text": "It’s not a panacea.",
+    "translation": "그게 만병통치약은 아니지만요."
+  },
+  {
+    "id": "seg-254",
+    "start": 1304.6879999999999,
+    "end": 1313.18,
+    "speaker": "DUCKWORTH",
+    "text": "But would you not agree that it’s better to have a code of conduct or a set of core principles so when you hire someone, for example, they know what you’re all about?",
+    "translation": "그래도 행동 강령이나 핵심 원칙이 세워져 있으면, 예를 들어 누군가를 채용할 때 그 사람이 회사의 지향점을 알 수 있으니 더 좋다는 점에는 동의하지 않으세요?"
+  },
+  {
+    "id": "seg-255",
+    "start": 1313.18,
+    "end": 1330.76,
+    "speaker": "DUBNER",
+    "text": "You know, I know that the good person’s answer is, “Yes, Angela, you’re absolutely right.” But a lot of the mission statements I see are: “We help humankind by being forward-thinking individuals with the collective intention of benevolence.”",
+    "translation": "착한 사람이라면 당연히 \"맞아요, 앤절라, 당신 말이 전적으로 옳아요\"라고 답하겠죠. 하지만 제가 보는 사명 선언문의 대다수는 이래요. \"우리는 자비라는 공동의 목표를 가진 미래지향적인 개인으로서 인류에 기여합니다.\""
+  },
+  {
+    "id": "seg-256",
+    "start": 1330.76,
+    "end": 1333.3600000000001,
+    "speaker": "DUCKWORTH",
+    "text": "So abstract and so intractable.",
+    "translation": "너무 추상적이고 해결하기 어려운 말이네요."
+  },
+  {
+    "id": "seg-257",
+    "start": 1333.3600000000001,
+    "end": 1338.0795,
+    "speaker": "DUBNER",
+    "text": "Well, also, it’s a subset of what we already know, as humans, we’re supposed to do.",
+    "translation": "게다가 그건 우리가 인간으로서 당연히 해야 한다고 이미 알고 있는 일들의 일부분일 뿐이에요."
+  },
+  {
+    "id": "seg-258",
+    "start": 1338.0795,
+    "end": 1340.36,
+    "speaker": "DUBNER",
+    "text": "That’s really my bigger problem with it.",
+    "translation": "그 점이 제가 가진 더 큰 문제의식이에요."
+  },
+  {
+    "id": "seg-259",
+    "start": 1340.36,
+    "end": 1344.5726666666667,
+    "speaker": "DUBNER",
+    "text": "Here’s what I think is a good mission statement is a statement of an actual mission.",
+    "translation": "제가 생각하는 좋은 사명 선언문이란 진짜 구체적인 임무를 선언하는 거예요."
+  },
+  {
+    "id": "seg-260",
+    "start": 1344.5726666666667,
+    "end": 1358.74,
+    "speaker": "DUBNER",
+    "text": "For instance, I’m making this up, but here’s one from 1968: “We’re going to try to send a couple of people on a rocket ship to the moon, and get them there alive, have them walk around a little bit, and then get them back to Earth alive.",
+    "translation": "예를 들어, 제가 지어낸 말이긴 하지만 1968년에 나온 이런 미션이 있다고 해보죠. '우리는 우주선을 타고 달로 갈 사람 두 명을 안전하게 보내고, 거기서 조금 걸어 다니게 한 다음, 다시 지구로 무사히 귀환시키려고 합니다.'"
+  },
+  {
+    "id": "seg-261",
+    "start": 1358.74,
+    "end": 1359.902111111111,
+    "speaker": "DUBNER",
+    "text": "Mission accomplished.",
+    "translation": "임무 완료."
+  },
+  {
+    "id": "seg-262",
+    "start": 1359.902111111111,
+    "end": 1364.4189999999999,
+    "speaker": "DUBNER",
+    "text": "Or not.” That’s what I see as a useful mission statement.",
+    "translation": "아니면 실패했거나.' 제가 보기에 유용한 미션 선언문은 바로 이런 겁니다."
+  },
+  {
+    "id": "seg-263",
+    "start": 1364.4189999999999,
+    "end": 1365.4595,
+    "speaker": "DUCKWORTH",
+    "text": "There’s accountability.",
+    "translation": "책임 소재가 확실하네요."
+  },
+  {
+    "id": "seg-264",
+    "start": 1365.4595,
+    "end": 1367.12,
+    "speaker": "DUCKWORTH",
+    "text": "There’s specificity.",
+    "translation": "구체적이기도 하고요."
+  },
+  {
+    "id": "seg-265",
+    "start": 1367.12,
+    "end": 1367.4097499999998,
+    "speaker": "DUBNER",
+    "text": "Exactly.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-266",
+    "start": 1367.4097499999998,
+    "end": 1374.1595000000002,
+    "speaker": "DUCKWORTH",
+    "text": "It’s not like, “improve humankind.” Maybe you’re bristling at the abstraction, and therefore, this feels meaningless to you.",
+    "translation": "'인류를 이롭게 한다' 같은 게 아니잖아요. 아마 그런 추상적인 면 때문에 짜증이 나고, 그래서 아무 의미 없게 느껴지시는 걸지도 몰라요."
+  },
+  {
+    "id": "seg-267",
+    "start": 1374.1595000000002,
+    "end": 1375.6395,
+    "speaker": "DUBNER",
+    "text": "You know, I will say this.",
+    "translation": "사실, 이런 말씀을 드려야겠네요."
+  },
+  {
+    "id": "seg-268",
+    "start": 1375.6395,
+    "end": 1380.3144705882353,
+    "speaker": "DUBNER",
+    "text": "There is an organization I used to work with that had what I thought was a lovely mission statement.",
+    "translation": "제가 예전에 일했던 조직 중에 정말 멋진 미션 선언문을 가진 곳이 있었어요."
+  },
+  {
+    "id": "seg-269",
+    "start": 1380.3144705882353,
+    "end": 1383.0845294117646,
+    "speaker": "DUBNER",
+    "text": "Maybe this is why I’m a little bit down on it.",
+    "translation": "어쩌면 그래서 제가 이 미션 선언문이라는 것에 대해 좀 회의적인 것 같기도 해요."
+  },
+  {
+    "id": "seg-270",
+    "start": 1383.0845294117646,
+    "end": 1385.639,
+    "speaker": "DUBNER",
+    "text": "This was for W.N.Y.C., or New York Public Radio.",
+    "translation": "뉴욕 공영 라디오 방송국인 W.N.Y.C.라는 곳이었는데요."
+  },
+  {
+    "id": "seg-271",
+    "start": 1385.639,
+    "end": 1403.65,
+    "speaker": "DUBNER",
+    "text": "Their mission statement was — I love this — it was, “to make the mind more curious, the heart more open, and the spirit more joyful through excellent audio programming that is deeply rooted in New York City.” So forget about the last part about excellent audio programming: “To make the mind more curious, the heart more open, the spirit more joyful.” I love that!",
+    "translation": "그곳의 미션 선언문은 이랬는데, 전 정말 마음에 들었어요. '뉴욕시에 뿌리를 둔 훌륭한 오디오 프로그램을 통해 마음을 더 호기심 있게, 가슴을 더 열리게, 영혼을 더 즐겁게 만드는 것.' 뒷부분의 '훌륭한 오디오 프로그램' 어쩌구는 빼고 앞부분만 보면요, '마음을 더 호기심 있게, 가슴을 더 열리게, 영혼을 더 즐겁게.' 정말 멋지지 않나요?"
+  },
+  {
+    "id": "seg-272",
+    "start": 1403.65,
+    "end": 1407.04,
+    "speaker": "DUBNER",
+    "text": "Like, if that was in a bottle, I’d want to buy it and drink it.",
+    "translation": "만약 그런 걸 병에 담아 판다면, 전 사서 마시고 싶을 정도예요."
+  },
+  {
+    "id": "seg-273",
+    "start": 1407.04,
+    "end": 1408.2628571428572,
+    "speaker": "DUBNER",
+    "text": "But here’s the fact.",
+    "translation": "하지만 현실은 이랬습니다."
+  },
+  {
+    "id": "seg-274",
+    "start": 1408.2628571428572,
+    "end": 1414.4926666666668,
+    "speaker": "DUBNER",
+    "text": "That mission statement was for an organization that ended up having a lot of organizational difficulty.",
+    "translation": "그 미션 선언문을 가진 조직은 결국 내부적으로 정말 많은 문제에 부딪히게 되었거든요."
+  },
+  {
+    "id": "seg-275",
+    "start": 1414.4926666666668,
+    "end": 1426.9593333333332,
+    "speaker": "DUBNER",
+    "text": "And this hearkens back a little bit to moral licensing, which is, if I say that I’m doing wonderful things, what’s the relationship between that statement and actually doing wonderful things?",
+    "translation": "이건 '도덕적 허가 효과'와도 약간 관련이 있는데요. 내가 멋진 일을 하고 있다고 말하는 것과 실제로 그 멋진 일을 하는 것 사이에는 어떤 관계가 있는 걸까요?"
+  },
+  {
+    "id": "seg-276",
+    "start": 1426.9593333333332,
+    "end": 1434.92,
+    "speaker": "DUBNER",
+    "text": "And do we actually focus enough on execution to ensure that we do those wonderful things, as opposed to declare it?",
+    "translation": "그리고 우리는 그렇게 하겠다고 공표하는 것에 비해, 실제로 그 멋진 일들을 이루어내기 위한 '실행'에 충분히 집중하고 있는 걸까요?"
+  },
+  {
+    "id": "seg-277",
+    "start": 1434.92,
+    "end": 1436.468,
+    "speaker": "DUBNER",
+    "text": "That’s my issue with mission statements.",
+    "translation": "그게 바로 제가 미션 선언문에 대해 느끼는 문제점입니다."
+  },
+  {
+    "id": "seg-278",
+    "start": 1436.468,
+    "end": 1436.736,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-279",
+    "start": 1436.736,
+    "end": 1437.808,
+    "speaker": "DUCKWORTH",
+    "text": "I can see that.",
+    "translation": "무슨 말씀인지 알겠네요."
+  },
+  {
+    "id": "seg-280",
+    "start": 1437.808,
+    "end": 1450.0234,
+    "speaker": "DUCKWORTH",
+    "text": "But what I was wondering in that very long mission statement that started off in poetry and ended in prose, with audio programming, etc., when you read it to me, by the way, I thought you were going to say what you liked about it was the last part, right?",
+    "translation": "근데 제가 궁금했던 건요, 아까 그 장황한 사명 선언문 있잖아요. 운문으로 시작해서 산문으로 끝나고, 오디오 프로그램 얘기 등이 나오는 부분이요. 아까 그걸 저한테 읽어주셨을 때, 저는 질문자님이 마음에 들어 하신 부분이 그 제일 마지막 부분일 줄 알았거든요."
+  },
+  {
+    "id": "seg-281",
+    "start": 1450.0234,
+    "end": 1452.736,
+    "speaker": "DUCKWORTH",
+    "text": "Because it was specific, and it wasn’t so abstract, etc.",
+    "translation": "왜냐하면 그 구절은 구체적이고 너무 추상적이지도 않았으니까요."
+  },
+  {
+    "id": "seg-282",
+    "start": 1452.736,
+    "end": 1453.248,
+    "speaker": "DUBNER",
+    "text": "You’re right.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-283",
+    "start": 1453.248,
+    "end": 1455.5990000000002,
+    "speaker": "DUBNER",
+    "text": "I’m a bundle of contradictions, aren’t I?",
+    "translation": "제가 원래 이렇게 모순 덩어리예요."
+  },
+  {
+    "id": "seg-284",
+    "start": 1455.5990000000002,
+    "end": 1455.939,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "그러게요."
+  },
+  {
+    "id": "seg-285",
+    "start": 1455.939,
+    "end": 1460.1905882352942,
+    "speaker": "DUCKWORTH",
+    "text": "But look, I think the clear answer to this question is, “No, you do not.",
+    "translation": "하지만 제 생각에 이 질문에 대한 명확한 답은 '아니요, 그렇지 않습니다'인 것 같아요."
+  },
+  {
+    "id": "seg-286",
+    "start": 1460.1905882352942,
+    "end": 1463.9995,
+    "speaker": "DUCKWORTH",
+    "text": "You do not have a top-level goal.” “I will not eat green eggs and ham.",
+    "translation": "선생님은 최상위 목표가 없으신 거죠. '난 전혀 안 먹을 거야."
+  },
+  {
+    "id": "seg-287",
+    "start": 1463.9995,
+    "end": 1465.9597142857142,
+    "speaker": "DUCKWORTH",
+    "text": "I will not eat them, Sam I Am.”",
+    "translation": "절대 안 먹을 거야, 샘 난 싫어.' 이런 것처럼요."
+  },
+  {
+    "id": "seg-288",
+    "start": 1465.9597142857142,
+    "end": 1468.1220714285714,
+    "speaker": "DUBNER",
+    "text": "You know, again, I can see how it would be a good idea.",
+    "translation": "네, 말씀하신 대로 그게 좋은 아이디어일 수 있다는 건 이해해요."
+  },
+  {
+    "id": "seg-289",
+    "start": 1468.1220714285714,
+    "end": 1481.28,
+    "speaker": "DUBNER",
+    "text": "On the other hand, one reason I thought why it might not be a good idea is because if you have something declared, or written down, or broadcast as your goal, doesn’t that kind of put a crimp on your ability to evolve, and change, and innovate?",
+    "translation": "하지만 반대로 그게 좋지 않을 수도 있다고 생각한 이유 중 하나는, 목표를 밝히거나, 적어두거나, 널리 표현해 두면 오히려 발전하고, 변화하고, 혁신하는 능력이 제약받지 않을까 해서요."
+  },
+  {
+    "id": "seg-290",
+    "start": 1481.28,
+    "end": 1482.512,
+    "speaker": "DUCKWORTH",
+    "text": "Well, here’s the thing.",
+    "translation": "음, 사실은 이래요."
+  },
+  {
+    "id": "seg-291",
+    "start": 1482.512,
+    "end": 1492.3654285714285,
+    "speaker": "DUCKWORTH",
+    "text": "I think abstraction — and you were like “Ah, these things are so vague, and what does it even mean to like, ‘make the world a better place?’” The abstraction is good and bad.",
+    "translation": "아까 '아, 이런 건 너무 모호하잖아, 세상을 더 살기 좋은 곳으로 만든다는 게 도대체 무슨 뜻이야?'라고 하셨잖아요. 추상성에는 장단점이 있어요."
+  },
+  {
+    "id": "seg-292",
+    "start": 1492.3654285714285,
+    "end": 1495.38,
+    "speaker": "DUCKWORTH",
+    "text": "So you pointed out some of the bad things about abstraction.",
+    "translation": "질문자님은 추상성의 단점들을 짚어주신 거고요."
+  },
+  {
+    "id": "seg-293",
+    "start": 1495.38,
+    "end": 1496.944,
+    "speaker": "DUCKWORTH",
+    "text": "It can mean anything.",
+    "translation": "그건 어떤 의미로든 해석될 수 있으니까요."
+  },
+  {
+    "id": "seg-294",
+    "start": 1496.944,
+    "end": 1499.0355555555557,
+    "speaker": "DUCKWORTH",
+    "text": "But the good is flexibility.",
+    "translation": "하지만 장점은 바로 유연성이에요."
+  },
+  {
+    "id": "seg-295",
+    "start": 1499.0355555555557,
+    "end": 1514.1866666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And if you have a top-level goal, like football coach Pete Carroll, who coaches the Seattle Seahawks, two words, very simple: “always compete.” He uses the word compete to mean basically, “be your best,” not to necessarily beat the opponent.",
+    "translation": "시애틀 시호크스의 미식축구 감독인 피트 캐롤의 최상위 목표는 '항상 경쟁하라'라는 아주 단순한 두 단어예요. 그는 이 경쟁이라는 단어를 상대방을 이기기보다 기본적으로 '최선을 다하라'는 의미로 써요."
+  },
+  {
+    "id": "seg-296",
+    "start": 1514.1866666666667,
+    "end": 1515.374875,
+    "speaker": "DUCKWORTH",
+    "text": "It’s so abstract.",
+    "translation": "정말 추상적이죠."
+  },
+  {
+    "id": "seg-297",
+    "start": 1515.374875,
+    "end": 1521.5993333333333,
+    "speaker": "DUCKWORTH",
+    "text": "And I see how that can be frustrating, “Oh, what the heck does this mean?” But also there’s a reason why these things are so abstract.",
+    "translation": "그래서 '아니, 도대체 이게 무슨 소리야?'라며 답답할 수도 있지만, 이렇게 추상적인 데는 다 이유가 있어요."
+  },
+  {
+    "id": "seg-298",
+    "start": 1521.5993333333333,
+    "end": 1525.093,
+    "speaker": "DUCKWORTH",
+    "text": "It is supposed to give a “why” for everything that you do.",
+    "translation": "자기가 하는 모든 일에 '왜'라는 이유를 부여해 주려는 거거든요."
+  },
+  {
+    "id": "seg-299",
+    "start": 1525.093,
+    "end": 1530.0598333333335,
+    "speaker": "DUCKWORTH",
+    "text": "And so there’s a tradeoff in terms of abstraction versus specificity.",
+    "translation": "그래서 얼마나 추상적이냐, 얼마나 구체적이냐 사이에는 트레이드오프가 존재해요."
+  },
+  {
+    "id": "seg-300",
+    "start": 1530.0598333333335,
+    "end": 1533.567,
+    "speaker": "DUBNER",
+    "text": "I have to say, I love that mission statement.",
+    "translation": "솔직히 말해서 저는 그 사명 선언문이 정말 마음에 들어요."
+  },
+  {
+    "id": "seg-301",
+    "start": 1533.567,
+    "end": 1534.2392,
+    "speaker": "DUBNER",
+    "text": "“Always compete.”",
+    "translation": "\"항상 경쟁하라.\""
+  },
+  {
+    "id": "seg-302",
+    "start": 1534.2392,
+    "end": 1535.77,
+    "speaker": "DUCKWORTH",
+    "text": "You just like good writing.",
+    "translation": "그냥 글이 마음에 드시는 거겠죠."
+  },
+  {
+    "id": "seg-303",
+    "start": 1535.77,
+    "end": 1539.5,
+    "speaker": "DUCKWORTH",
+    "text": "I think all these ones that you like are like, “Oh, that’s beautiful.”",
+    "translation": "선배님이 좋아하시는 건 다 '오, 멋지다' 싶은 것들인 것 같아요."
+  },
+  {
+    "id": "seg-304",
+    "start": 1539.5,
+    "end": 1540.12,
+    "speaker": "DUBNER",
+    "text": "Maybe.",
+    "translation": "그럴지도 모르겠네요."
+  },
+  {
+    "id": "seg-305",
+    "start": 1540.12,
+    "end": 1542.26,
+    "speaker": "DUBNER",
+    "text": "But it’s exactly what you just said.",
+    "translation": "하지만 방금 하신 말씀이 정확히 맞아요."
+  },
+  {
+    "id": "seg-306",
+    "start": 1542.26,
+    "end": 1549.88,
+    "speaker": "DUBNER",
+    "text": "It’s abstract enough to mean almost anything, but it’s specific enough you can always find an explanation for how it contributes to what you’re trying to do.",
+    "translation": "거의 어떤 의미든 다 담을 수 있을 만큼 추상적이면서도, 내가 하려는 일에 어떻게 기여하는지 항상 설명할 수 있을 만큼 구체적이거든요."
+  },
+  {
+    "id": "seg-307",
+    "start": 1549.88,
+    "end": 1555.066,
+    "speaker": "DUBNER",
+    "text": "Doesn’t mean “win,” because sometimes you can compete as hard as you are capable of, and you’re still not going to win.",
+    "translation": "그게 '이긴다'는 뜻은 아니에요. 가끔은 내가 할 수 있는 한 최선을 다해 경쟁해도 이기지 못할 수도 있으니까요."
+  },
+  {
+    "id": "seg-308",
+    "start": 1555.066,
+    "end": 1556.4,
+    "speaker": "DUBNER",
+    "text": "And that doesn’t mean that you failed.",
+    "translation": "그렇다고 해서 실패했다는 뜻은 아닙니다."
+  },
+  {
+    "id": "seg-309",
+    "start": 1556.4,
+    "end": 1556.8,
+    "speaker": "DUCKWORTH",
+    "text": "Right.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-310",
+    "start": 1556.8,
+    "end": 1565.675,
+    "speaker": "DUCKWORTH",
+    "text": "For some people, it can be very useful to have a compass which orients them to what they’re doing and helps them make decisions.",
+    "translation": "어떤 사람들에게는 자신이 무엇을 하고 있는지 방향을 잡아주고 결정을 내리는 데 도움이 되는 나침반이 있으면 아주 유용할 수 있어요."
+  },
+  {
+    "id": "seg-311",
+    "start": 1565.675,
+    "end": 1568.88,
+    "speaker": "DUCKWORTH",
+    "text": "You know, I have a top-level goal and it helps me.",
+    "translation": "있잖아요, 저도 최상위 목표가 하나 있는데 그게 도움이 많이 돼요."
+  },
+  {
+    "id": "seg-312",
+    "start": 1568.88,
+    "end": 1569.4914285714285,
+    "speaker": "DUBNER",
+    "text": "Give it to us.",
+    "translation": "그게 뭔지 들려주세요."
+  },
+  {
+    "id": "seg-313",
+    "start": 1569.4914285714285,
+    "end": 1574.9524999999999,
+    "speaker": "DUCKWORTH",
+    "text": "My top level goal is to use psychological science to help children thrive.",
+    "translation": "제 최상위 목표는 '심리학을 활용해서 아이들이 잘 성장할 수 있도록 돕는 것'이에요."
+  },
+  {
+    "id": "seg-314",
+    "start": 1574.9524999999999,
+    "end": 1580.8971428571429,
+    "speaker": "DUCKWORTH",
+    "text": "But maybe that goal is especially helpful to me because I understand it.",
+    "translation": "하지만 그 목표는 제가 잘 이해하고 있기 때문에 저한테 특히 도움이 되는 걸지도 몰라요."
+  },
+  {
+    "id": "seg-315",
+    "start": 1580.8971428571429,
+    "end": 1585.3832,
+    "speaker": "DUCKWORTH",
+    "text": "But maybe when we then ask the question: how useful is this top-level goal for outsiders?",
+    "translation": "그런데 이런 질문을 던져보면 어떨까요? 이 최상위 목표가 외부 사람들에게는 얼마나 유용할까 하고요."
+  },
+  {
+    "id": "seg-316",
+    "start": 1585.3832,
+    "end": 1587.26975,
+    "speaker": "DUCKWORTH",
+    "text": "Maybe it’s not as useful.",
+    "translation": "그다지 유용하지 않을지도 몰라요."
+  },
+  {
+    "id": "seg-317",
+    "start": 1587.26975,
+    "end": 1592.7418181818182,
+    "speaker": "DUCKWORTH",
+    "text": "Maybe it’s even detrimental in some way, for me to parade around with my top-level goal sign.",
+    "translation": "제가 제 최상위 목표가 적힌 팻말을 들고 돌아다니는 게 어떤 면에서는 오히려 해가 될 수도 있죠."
+  },
+  {
+    "id": "seg-318",
+    "start": 1592.7418181818182,
+    "end": 1595.1563636363637,
+    "speaker": "NARRATOR",
+    "text": "DUBNER: Well, so I like your top-level goal.",
+    "translation": "음, 저는 당신의 최상위 목표가 마음에 드는데요."
+  },
+  {
+    "id": "seg-319",
+    "start": 1595.1563636363637,
+    "end": 1598.26,
+    "speaker": "NARRATOR",
+    "text": "Do you call it a mission statement or top-level goal, or is it one and the same?",
+    "translation": "그걸 사명 선언문이라고 부르시나요, 아니면 최상위 목표라고 하시나요? 둘이 같은 건가요?"
+  },
+  {
+    "id": "seg-320",
+    "start": 1598.26,
+    "end": 1607.1723333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I call it a top-level goal, because I think humans have goals that are hierarchical, and we have lots of low-level goals that are really specific and concrete.",
+    "translation": "저는 그걸 '최상위 목표'라고 불러요. 인간의 목표에는 위계질서가 있어서, 아주 구체적이고 실질적인 하위 목표들을 많이 가지고 있거든요."
+  },
+  {
+    "id": "seg-321",
+    "start": 1607.1723333333334,
+    "end": 1609.017142857143,
+    "speaker": "DUCKWORTH",
+    "text": "And then basically, it’s your to-do list, right?",
+    "translation": "그리고 그 하위 목표들은 기본적으로 해야 할 일 목록, 즉 투두 리스트 같은 거죠."
+  },
+  {
+    "id": "seg-322",
+    "start": 1609.017142857143,
+    "end": 1611.1352,
+    "speaker": "DUCKWORTH",
+    "text": "You know, what have I got to get done today, this week?",
+    "translation": "있잖아요, 오늘 아니면 이번 주에 끝내야 하는 일들 말이에요."
+  },
+  {
+    "id": "seg-323",
+    "start": 1611.1352,
+    "end": 1619.77,
+    "speaker": "DUCKWORTH",
+    "text": "And then, if you ask, “why” — like, those are goals that are in service to more abstract, longer-term goals: maybe things I’m trying to get done this year.",
+    "translation": "그리고 여기서 \"왜\"라고 자문해 보면, 그 목표들은 더 추상적이고 장기적인 목표를 이루기 위한 것들이에요. 이를테면 올해 이루고자 하는 일들이죠."
+  },
+  {
+    "id": "seg-324",
+    "start": 1619.77,
+    "end": 1624.5156363636363,
+    "speaker": "DUCKWORTH",
+    "text": "And when you keep asking “why” and you can’t get any farther, you’re like, “What do you mean, ‘why’?",
+    "translation": "그렇게 계속 \"왜\"라고 묻다 보면 더 이상 답할 수 없는 단계에 이르게 돼요. '왜라니 그게 무슨 소리야?' 하면서요."
+  },
+  {
+    "id": "seg-325",
+    "start": 1624.5156363636363,
+    "end": 1627.9995,
+    "speaker": "DUCKWORTH",
+    "text": "Like, that’s the whole point of everything.” That’s when you’ve gotten to the top.",
+    "translation": "그냥 '이게 내 모든 행동의 궁극적인 목적'이 되는 순간이죠. 그때가 바로 최상위에 도달한 겁니다."
+  },
+  {
+    "id": "seg-326",
+    "start": 1627.9995,
+    "end": 1630.295,
+    "speaker": "DUCKWORTH",
+    "text": "And that’s why I call it a top-level goal.",
+    "translation": "그래서 저는 그걸 최상위 목표라고 불러요."
+  },
+  {
+    "id": "seg-327",
+    "start": 1630.295,
+    "end": 1632.2,
+    "speaker": "DUCKWORTH",
+    "text": "But mission statement works just as well.",
+    "translation": "하지만 '사명 선언문'이라고 해도 똑같이 잘 통하죠."
+  },
+  {
+    "id": "seg-328",
+    "start": 1632.2,
+    "end": 1633.72,
+    "speaker": "DUBNER",
+    "text": "So here’s an interesting example.",
+    "translation": "여기 아주 흥미로운 예가 있네요."
+  },
+  {
+    "id": "seg-329",
+    "start": 1633.72,
+    "end": 1648.621818181818,
+    "speaker": "DUBNER",
+    "text": "Google, their current mission statement, which I personally find pretty good, is as follows: “To organize the world’s information and make it universally accessible and useful.” What I like about that is that it’s specific and it’s not preachy.",
+    "translation": "구글의 현재 사명 선언문은—개인적으로 꽤 괜찮다고 생각하는데요—다음과 같습니다. \"전 세계의 정보를 체계화하여 모두가 편리하게 이용할 수 있도록 하는 것.\" 제가 이 선언문에서 마음에 드는 점은 구체적이면서도 훈계조가 아니라는 겁니다."
+  },
+  {
+    "id": "seg-330",
+    "start": 1648.621818181818,
+    "end": 1655.9198333333334,
+    "speaker": "DUBNER",
+    "text": "But just so we know, an unofficial motto of Google, but widely disseminated, used to be: “Don’t be evil.”",
+    "translation": "하지만 아시다시피, 널리 알려진 비공식 구글의 슬로건은 원래 \"사악해지지 말자(Don't be evil)\"였습니다."
+  },
+  {
+    "id": "seg-331",
+    "start": 1655.9198333333334,
+    "end": 1656.3196666666668,
+    "speaker": "DUCKWORTH",
+    "text": "Really?",
+    "translation": "정말요?"
+  },
+  {
+    "id": "seg-332",
+    "start": 1656.3196666666668,
+    "end": 1657.1193333333333,
+    "speaker": "DUBNER",
+    "text": "It was.",
+    "translation": "그랬었죠."
+  },
+  {
+    "id": "seg-333",
+    "start": 1657.1193333333333,
+    "end": 1658.2795,
+    "speaker": "DUCKWORTH",
+    "text": "Don’t be evil?",
+    "translation": "사악해지지 말자고요?"
+  },
+  {
+    "id": "seg-334",
+    "start": 1658.2795,
+    "end": 1661.84,
+    "speaker": "DUBNER",
+    "text": "I believe “don’t be evil” came from way, way, way back in the beginning.",
+    "translation": "제 기억에 \"사악해지지 말자\"는 구글의 아주 아주 초창기 시절에 나온 말이에요."
+  },
+  {
+    "id": "seg-335",
+    "start": 1661.84,
+    "end": 1670.7815384615385,
+    "speaker": "DUBNER",
+    "text": "And we should say, it lasted up until — I believe was 2018 when they removed that phrase from their corporate code of conduct.",
+    "translation": "그리고 이 문구는 2018년쯤 기업 행동 강령에서 삭제될 때까지 꽤 오랫동안 유지되었던 걸로 알고 있습니다."
+  },
+  {
+    "id": "seg-336",
+    "start": 1670.7815384615385,
+    "end": 1673.1723076923079,
+    "speaker": "DUCKWORTH",
+    "text": "Now, why do you think that is?",
+    "translation": "왜 그랬을 거라고 생각하세요?"
+  },
+  {
+    "id": "seg-337",
+    "start": 1673.1723076923079,
+    "end": 1675.7046249999999,
+    "speaker": "DUBNER",
+    "text": "Well, I don’t know if they’ve ever said why.",
+    "translation": "글쎄요, 구글 측에서 이유를 밝힌 적이 있는지는 모르겠네요."
+  },
+  {
+    "id": "seg-338",
+    "start": 1675.7046249999999,
+    "end": 1677.9863333333335,
+    "speaker": "DUBNER",
+    "text": "I think they would be foolish to do so.",
+    "translation": "굳이 이유를 밝히는 건 어리석은 짓이었을 테니까요."
+  },
+  {
+    "id": "seg-339",
+    "start": 1677.9863333333335,
+    "end": 1679.04,
+    "speaker": "DUCKWORTH",
+    "text": "As their P.R.",
+    "translation": "홍보 차원에서도 그렇겠네요."
+  },
+  {
+    "id": "seg-340",
+    "start": 1679.04,
+    "end": 1682.2663333333335,
+    "speaker": "DUCKWORTH",
+    "text": "consultant, you would advise against such a declaration.",
+    "translation": "컨설턴트라면 그런 선언은 하지 말라고 조언하시겠네요."
+  },
+  {
+    "id": "seg-341",
+    "start": 1682.2663333333335,
+    "end": 1690.1733333333334,
+    "speaker": "DUBNER",
+    "text": "So I’m reading here, when Google was re-organized under their new parent company, Alphabet, they assumed a slightly adjusted version of the motto.",
+    "translation": "여기 읽어보니까, 구글이 새로운 모회사인 알파벳 아래로 재편되었을 때, 이 모토를 약간 수정해서 채택했대요."
+  },
+  {
+    "id": "seg-342",
+    "start": 1690.1733333333334,
+    "end": 1698.44,
+    "speaker": "DUBNER",
+    "text": "And it became “do the right thing.” But yeah, “don’t be evil” was stricken from the corporate code of conduct in 2018.",
+    "translation": "그게 \"옳은 일을 하라\"로 바뀌었어요. 하지만 맞아요, \"악해지지 말자\"는 2018년에 기업 행동 강령에서 삭제되었죠."
+  },
+  {
+    "id": "seg-343",
+    "start": 1698.44,
+    "end": 1705.222,
+    "speaker": "DUBNER",
+    "text": "Again, that shows the danger, I guess, of having such a statement, which is: it can and will be used against you.",
+    "translation": "그건 그런 선언문을 두는 것의 위험성을 보여주는 것 같아요. 즉, 그 선언문이 결국 자신에게 불리하게 작용할 수 있고, 실제로 그렇게 된다는 거죠."
+  },
+  {
+    "id": "seg-344",
+    "start": 1705.222,
+    "end": 1710.48,
+    "speaker": "DUBNER",
+    "text": "But I think, the first one I read, “to organize the world’s information,” that’s their actual mission statement.",
+    "translation": "하지만 제가 처음에 읽었던 \"전 세계의 정보를 조직한다\"라는 건 그들의 진짜 사명 선언문이에요."
+  },
+  {
+    "id": "seg-345",
+    "start": 1710.48,
+    "end": 1717.0125,
+    "speaker": "DUBNER",
+    "text": "And the other, those mottoes, the two versions, are more like they’re part of a corporate code of conduct.",
+    "translation": "그리고 다른 모토들, 그 두 가지 버전은 기업 행동 강령에 더 가깝고요."
+  },
+  {
+    "id": "seg-346",
+    "start": 1717.0125,
+    "end": 1724.68,
+    "speaker": "DUBNER",
+    "text": "But your question about this makes me think about this idea that we wrote about in one of our books a while ago.",
+    "translation": "하지만 이에 대한 질문을 보니까 예전에 저희 책 중 하나에서 썼던 아이디어가 생각나네요."
+  },
+  {
+    "id": "seg-347",
+    "start": 1724.68,
+    "end": 1726.8685714285714,
+    "speaker": "DUBNER",
+    "text": "It was about the idea of having a moral compass.",
+    "translation": "도덕적 나침반을 갖는다는 생각에 관한 것이었어요."
+  },
+  {
+    "id": "seg-348",
+    "start": 1726.8685714285714,
+    "end": 1728.48,
+    "speaker": "DUCKWORTH",
+    "text": "This is you and Levitt, right?",
+    "translation": "이거 스티븐이랑 레빗 교수님 얘기 맞죠?"
+  },
+  {
+    "id": "seg-349",
+    "start": 1728.48,
+    "end": 1728.8,
+    "speaker": "DUBNER",
+    "text": "Correct.",
+    "translation": "맞아요."
+  },
+  {
+    "id": "seg-350",
+    "start": 1728.8,
+    "end": 1730.43,
+    "speaker": "DUCKWORTH",
+    "text": "We didn’t write a book that I forgot about.",
+    "translation": "제가 깜빡한, 우리 둘이 같이 쓴 책이 있는 건 아니죠?"
+  },
+  {
+    "id": "seg-351",
+    "start": 1730.43,
+    "end": 1732.2514285714285,
+    "speaker": "DUBNER",
+    "text": "Would that we had, but we haven’t yet.",
+    "translation": "우리도 같이 썼다면 좋았겠지만, 아직은 없어요."
+  },
+  {
+    "id": "seg-352",
+    "start": 1732.2514285714285,
+    "end": 1735.8266666666666,
+    "speaker": "DUBNER",
+    "text": "So, the idea of a moral compass again is extremely appealing.",
+    "translation": "어쨌든 도덕적 나침반이라는 개념은 정말 매력적이에요."
+  },
+  {
+    "id": "seg-353",
+    "start": 1735.8266666666666,
+    "end": 1747.4793333333332,
+    "speaker": "DUBNER",
+    "text": "We all like to think that we have learned, through our parents, and our communities, and the people that we admire and so on, to have a moral compass, a way of navigating our way through the world.",
+    "translation": "우리 모두는 부모님, 지역 사회, 그리고 우리가 동경하는 사람들을 통해 이 세상을 헤쳐 나갈 수 있는 방법인 도덕적 나침반을 배웠다고 생각하고 싶어 하죠."
+  },
+  {
+    "id": "seg-354",
+    "start": 1747.4793333333332,
+    "end": 1763.839,
+    "speaker": "DUBNER",
+    "text": "But the conclusion that Levitt and I came to in this book that we were writing — in Think Like a Freak, which was really trying to help people understand how to problem solve — what we had advocated was, if you’re really concerned about problem solving, then you should put away your moral compass.",
+    "translation": "하지만 레빗과 제가 쓴 책, 즉 사람들이 문제를 해결하는 방법을 이해하도록 돕는 책이었던 '생각을 바꾸는 생각(Think Like a Freak)'에서 내린 결론은, 정말로 문제 해결에 관심이 있다면 도덕적 나침반은 잠시 접어두어야 한다는 것이었어요."
+  },
+  {
+    "id": "seg-355",
+    "start": 1763.839,
+    "end": 1778.159,
+    "speaker": "DUBNER",
+    "text": "And the reason is that what a moral compass does is basically, you align yourself to what’s the right or wrong way to think about a given issue, whether it’s fracking, or gun control, or genetically engineered food.",
+    "translation": "그 이유는 도덕적 나침반이 하는 일은 기본적으로 수압파쇄법이든, 총기 규제든, 유전자 변형 식품이든, 어떤 사안에 대해 무엇이 옳고 그른 생각인지 미리 정해두는 것이기 때문입니다."
+  },
+  {
+    "id": "seg-356",
+    "start": 1778.159,
+    "end": 1778.96925,
+    "speaker": "DUCKWORTH",
+    "text": "Climate change.",
+    "translation": "기후 변화도 그렇고요."
+  },
+  {
+    "id": "seg-357",
+    "start": 1778.96925,
+    "end": 1784.8595,
+    "speaker": "DUBNER",
+    "text": "And if you operate with your moral compass, it’s easy to lose track of what the actual issue is.",
+    "translation": "도덕적 나침반을 가지고 움직이면, 실제 본질적인 문제가 무엇인지 놓치기 쉽습니다."
+  },
+  {
+    "id": "seg-358",
+    "start": 1784.8595,
+    "end": 1790.0685714285714,
+    "speaker": "DUBNER",
+    "text": "A moral compass can persuade you that all the answers are obvious, even when they’re not.",
+    "translation": "도덕적 나침반은 답이 명확하지 않은 상황에서도 모든 답이 명백하다고 믿게 만들 수 있어요."
+  },
+  {
+    "id": "seg-359",
+    "start": 1790.0685714285714,
+    "end": 1794.06,
+    "speaker": "DUBNER",
+    "text": "It can persuade you that there’s a bright line between right and wrong, even when there isn’t.",
+    "translation": "그리고 옳고 그름 사이에 명확한 선이 존재하지 않을 때도, 그런 선이 있다고 믿게 만들 수 있죠."
+  },
+  {
+    "id": "seg-360",
+    "start": 1794.06,
+    "end": 1799.58,
+    "speaker": "DUBNER",
+    "text": "And worse, it can persuade you that you already know everything you need to know about a subject.",
+    "translation": "그리고 더 나쁜 건, 어떤 주제에 대해 이미 알아야 할 걸 다 알고 있다고 스스로를 설득하게 만든다는 점이에요."
+  },
+  {
+    "id": "seg-361",
+    "start": 1799.58,
+    "end": 1801.10975,
+    "speaker": "DUCKWORTH",
+    "text": "Right, you can delude yourself.",
+    "translation": "맞아요, 스스로를 속일 수 있죠."
+  },
+  {
+    "id": "seg-362",
+    "start": 1801.10975,
+    "end": 1809.669625,
+    "speaker": "DUBNER",
+    "text": "So in my mind, that’s my reason for not wanting to embrace your perfectly suitable suggestion about the top-level statement.",
+    "translation": "그래서 제 생각에는, 최상위 선언에 대한 당신의 아주 적절한 제안을 제가 받아들이고 싶지 않은 이유가 바로 그것 때문이에요."
+  },
+  {
+    "id": "seg-363",
+    "start": 1809.669625,
+    "end": 1814.9,
+    "speaker": "DUCKWORTH",
+    "text": "If I just forced you to say something, what would you say as a guiding philosophy?",
+    "translation": "만약 제가 억지로라도 한마디 하게 만든다면, 당신의 삶의 철학으로 무엇을 말씀하시겠어요?"
+  },
+  {
+    "id": "seg-364",
+    "start": 1814.9,
+    "end": 1816.2,
+    "speaker": "DUBNER",
+    "text": "For my work, you mean?",
+    "translation": "제 일에 관해서 말씀이신가요?"
+  },
+  {
+    "id": "seg-365",
+    "start": 1816.2,
+    "end": 1816.46,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "네."
+  },
+  {
+    "id": "seg-366",
+    "start": 1816.46,
+    "end": 1818.64,
+    "speaker": "DUCKWORTH",
+    "text": "Or you can answer it however you want.",
+    "translation": "아니면 원하시는 대로 편하게 답하셔도 돼요."
+  },
+  {
+    "id": "seg-367",
+    "start": 1818.64,
+    "end": 1830.29625,
+    "speaker": "DUBNER",
+    "text": "I think if I had to have, as you’re forcing me to, a sort of top level goal, professionally, how about: “Every day, try to suck a little bit less.”",
+    "translation": "만약 말씀하신 대로 억지로라도 일종의 직업적 최상위 목표를 정해야 한다면, 이건 어떨까요? \"매일 조금씩만 덜 한심해지자.\""
+  },
+  {
+    "id": "seg-368",
+    "start": 1830.29625,
+    "end": 1834.29,
+    "speaker": "DUCKWORTH",
+    "text": "Which is like “try to be better every day.” Unless I’m missing something, right?",
+    "translation": "그건 결국 \"매일 더 나아지려고 노력하자\"는 뜻이잖아요. 제가 뭘 놓치고 있는 게 아니라면 맞죠?"
+  },
+  {
+    "id": "seg-369",
+    "start": 1834.29,
+    "end": 1837.232,
+    "speaker": "DUBNER",
+    "text": "You sound totally uninspired by my top-line goal.",
+    "translation": "제 최상위 목표에 전혀 감흥을 못 느끼시는 것 같네요."
+  },
+  {
+    "id": "seg-370",
+    "start": 1837.232,
+    "end": 1841.32,
+    "speaker": "DUCKWORTH",
+    "text": "Is there a difference between sucking less and being better?",
+    "translation": "덜 한심해지는 것과 더 나아지는 것 사이에 차이가 있나요?"
+  },
+  {
+    "id": "seg-371",
+    "start": 1841.32,
+    "end": 1854.167,
+    "speaker": "DUBNER",
+    "text": "Being a little bit better every day sounds a little bit back-patty and sanctimonious, whereas trying to suck a little bit less everyday — to me — sounds a little bit more motivational, because I’m not looking for praise.",
+    "translation": "매일 조금씩 더 나아진다는 건 스스로를 대견해하고 위선적인 느낌이 드는 반면, 매일 조금씩 덜 한심해지려고 노력하는 건 저한테는 더 자극이 돼요. 전 칭찬을 바라는 게 아니거든요."
+  },
+  {
+    "id": "seg-372",
+    "start": 1854.167,
+    "end": 1858.4595,
+    "speaker": "DUCKWORTH",
+    "text": "Actually, there is a difference between trying to be better and trying to suck less.",
+    "translation": "사실 더 나아지려는 것과 덜 한심해지려는 것 사이에는 차이가 있어요."
+  },
+  {
+    "id": "seg-373",
+    "start": 1858.4595,
+    "end": 1865.46,
+    "speaker": "DUCKWORTH",
+    "text": "And the difference is, in psychology anyway, we distinguish between approach motivation and avoidance motivation.",
+    "translation": "그리고 그 차이는, 심리학적으로 볼 때, 접근 동기와 회피 동기의 차이로 나뉩니다."
+  },
+  {
+    "id": "seg-374",
+    "start": 1865.46,
+    "end": 1867.869588235294,
+    "speaker": "DUCKWORTH",
+    "text": "So there are two reasons why people strive.",
+    "translation": "그러니까 사람들이 노력하는 데는 두 가지 이유가 있는 거죠."
+  },
+  {
+    "id": "seg-375",
+    "start": 1867.869588235294,
+    "end": 1872.1723333333332,
+    "speaker": "DUCKWORTH",
+    "text": "And one is because they want to get better, and the other is they want to fail less.",
+    "translation": "하나는 더 잘하고 싶어서이고, 다른 하나는 덜 실패하고 싶어서예요."
+  },
+  {
+    "id": "seg-376",
+    "start": 1872.1723333333332,
+    "end": 1876.3719999999998,
+    "speaker": "DUCKWORTH",
+    "text": "So maybe you are running from “sucking,” or failure.",
+    "translation": "어쩌면 당신은 '한심함'이나 실패로부터 도망치고 있는 걸지도 몰라요."
+  },
+  {
+    "id": "seg-377",
+    "start": 1876.3719999999998,
+    "end": 1879.5465,
+    "speaker": "DUCKWORTH",
+    "text": "I take back my question, because they’re not the same thing.",
+    "translation": "질문 취소할게요, 둘은 명백히 다른 거니까요."
+  },
+  {
+    "id": "seg-378",
+    "start": 1879.5465,
+    "end": 1887.8337142857142,
+    "speaker": "DUBNER",
+    "text": "I guess I feel that if you’re the kind of person who would even think about having a top-level goal, of course it’s to improve and so on.",
+    "translation": "최상위 목표를 가질 만한 고민을 하는 사람이라면 당연히 더 발전하고 발전하려는 게 기본 전제라고 생각해요."
+  },
+  {
+    "id": "seg-379",
+    "start": 1887.8337142857142,
+    "end": 1897.6319999999998,
+    "speaker": "DUBNER",
+    "text": "But I actually find that, for me personally, eliminating mistakes, in other words, I hate to say it, accentuating the negative to some degree, or eliminating the negative.",
+    "translation": "하지만 개인적으로 저는 실수를 줄이는 것, 즉 말하기는 좀 그렇지만 어느 정도 부정적인 면을 강조하거나 그 부정적인 면을 없애는 것에서 동력을 얻는 편이에요."
+  },
+  {
+    "id": "seg-380",
+    "start": 1897.6319999999998,
+    "end": 1904.0795,
+    "speaker": "DUBNER",
+    "text": "For me, that is useful because the “try to be better” part is meant to be inherent.",
+    "translation": "저한테는 그 말이 아주 유용하게 다가오는데, '더 나아지려고 노력한다'는 부분은 원래 당연히 내포되어 있는 거니까요."
+  },
+  {
+    "id": "seg-381",
+    "start": 1904.0795,
+    "end": 1907.24,
+    "speaker": "DUBNER",
+    "text": "It reminds me of you know, Michelangelo was asked, “How do I sculpt a David?”",
+    "translation": "이걸 보니 그 일화가 떠오르네요. 누군가 미켈란젤로에게 \"다비드상은 어떻게 조각하나요?\"라고 물었대요."
+  },
+  {
+    "id": "seg-382",
+    "start": 1907.24,
+    "end": 1909.0265,
+    "speaker": "DUCKWORTH",
+    "text": "Take away everything that’s not David.",
+    "translation": "다비드가 아닌 건 전부 깎아내면 됩니다."
+  },
+  {
+    "id": "seg-383",
+    "start": 1909.0265,
+    "end": 1909.946,
+    "speaker": "DUBNER",
+    "text": "There you go.",
+    "translation": "바로 그거죠."
+  },
+  {
+    "id": "seg-384",
+    "start": 1909.946,
+    "end": 1915.1933333333332,
+    "speaker": "DUCKWORTH",
+    "text": "Not that anybody can really verify that he said that, but maybe it’ll come out in the fact-checking.",
+    "translation": "실제로 그가 그런 말을 했는지는 아무도 검증할 수 없겠지만, 뭐 팩트체크할 때 밝혀지겠죠."
+  },
+  {
+    "id": "seg-385",
+    "start": 1915.1933333333332,
+    "end": 1923.3733333333334,
+    "speaker": "DUCKWORTH",
+    "text": "I think some people don’t need a top-level goal, and that is because they have their priorities in order.",
+    "translation": "제 생각에 어떤 사람들은 최상위 목표가 필요 없는데, 그건 이미 우선순위가 잘 정리되어 있기 때문이에요."
+  },
+  {
+    "id": "seg-386",
+    "start": 1923.3733333333334,
+    "end": 1929.1866666666667,
+    "speaker": "DUCKWORTH",
+    "text": "And they don’t see any necessity to be explicit about where they’re going.",
+    "translation": "그리고 자신이 어디로 향하고 있는지 구태여 명시할 필요성을 못 느끼는 거죠."
+  },
+  {
+    "id": "seg-387",
+    "start": 1929.1866666666667,
+    "end": 1938.2457142857143,
+    "speaker": "DUCKWORTH",
+    "text": "I think maybe the reason why it helped me is: everyone’s got an inbox, and probably everyone feels like their inbox is a little more full than they would like.",
+    "translation": "그게 저한테 도움이 되었던 이유는 아마 이것 때문일 거예요. 누구나 수신함이 있고, 아마 다들 다 자기 수신함이 생각보다 좀 많이 차 있다고 느낄 텐데요."
+  },
+  {
+    "id": "seg-388",
+    "start": 1938.2457142857143,
+    "end": 1951.84,
+    "speaker": "DUCKWORTH",
+    "text": "Like, “oh, speak here” or like, “talk to you” or like, “review this document.” And If I don’t have some way of making those choices that is the ultimate “why” for me, it’s like, well, what am I doing?",
+    "translation": "예를 들어 '여기 와서 강연해 달라'거나 '얘기 좀 하자', '이 문서 좀 검토해 달라' 같은 연락들이요. 저에게 궁극적인 '이유'가 되어주는 기준이 없다면, 이런 선택을 할 때 '대체 내가 지금 뭘 하고 있는 거지?' 싶을 거예요."
+  },
+  {
+    "id": "seg-389",
+    "start": 1951.84,
+    "end": 1955.0793333333334,
+    "speaker": "DUCKWORTH",
+    "text": "Otherwise I just end up becoming a people-pleasing machine.",
+    "translation": "안 그랬으면 전 그냥 남들 비위나 맞추는 기계가 되어버렸을 겁니다."
+  },
+  {
+    "id": "seg-390",
+    "start": 1955.0793333333334,
+    "end": 1965.22,
+    "speaker": "DUCKWORTH",
+    "text": "Even this podcast that we’re doing together, I was like, “Oh, well, we’re going to be exploring human nature in ways that hopefully are a little bit helpful and a little bit engaging.",
+    "translation": "우리가 같이 진행하는 이 팟캐스트조차도, 저는 '아, 우리가 인간 본성을 탐구하면서 사람들에게 조금이나마 도움이 되고 흥미를 줄 수 있겠구나'라고 생각했거든요."
+  },
+  {
+    "id": "seg-391",
+    "start": 1965.22,
+    "end": 1969.42,
+    "speaker": "DUCKWORTH",
+    "text": "And there’ll be some parents and people who work with kids, like teachers.",
+    "translation": "그리고 부모님들이나 교사처럼 아이들과 일하는 분들도 들을 테니까요."
+  },
+  {
+    "id": "seg-392",
+    "start": 1969.42,
+    "end": 1974.2595000000001,
+    "speaker": "DUCKWORTH",
+    "text": "And that’ll be helpful.” And if I didn’t have that connection, I wouldn’t have done it.",
+    "translation": "그럼 도움이 되겠구나 싶었죠. 만약 그런 연결고리가 없었다면 전 안 했을 거예요."
+  },
+  {
+    "id": "seg-393",
+    "start": 1974.2595000000001,
+    "end": 1976.0552,
+    "speaker": "DUBNER",
+    "text": "So now I feel terrible.",
+    "translation": "그 말을 들으니 제가 참 형편없는 사람처럼 느껴지네요."
+  },
+  {
+    "id": "seg-394",
+    "start": 1976.0552,
+    "end": 1976.5914,
+    "speaker": "DUCKWORTH",
+    "text": "Yeah.",
+    "translation": "그러게요."
+  },
+  {
+    "id": "seg-395",
+    "start": 1976.5914,
+    "end": 1979.5996666666667,
+    "speaker": "DUCKWORTH",
+    "text": "Because I’m way superior to you, morally.",
+    "translation": "제가 도덕적으로 훨씬 더 우월하니까요."
+  },
+  {
+    "id": "seg-396",
+    "start": 1979.5996666666667,
+    "end": 1981.599,
+    "speaker": "DUBNER",
+    "text": "You’re way superior to me.",
+    "translation": "완전 저보다 훨씬 우월하시네요."
+  },
+  {
+    "id": "seg-397",
+    "start": 1981.599,
+    "end": 1985.00925,
+    "speaker": "DUBNER",
+    "text": "I’m the opposite of all the good things that you’re promoting.",
+    "translation": "저는 당신이 추구하는 그 모든 좋은 가치들과는 정반대인 사람이에요."
+  },
+  {
+    "id": "seg-398",
+    "start": 1985.00925,
+    "end": 1985.4595,
+    "speaker": "DUCKWORTH",
+    "text": "No.",
+    "translation": "아니에요."
+  },
+  {
+    "id": "seg-399",
+    "start": 1985.4595,
+    "end": 1988.78,
+    "speaker": "DUBNER",
+    "text": "I’m not using psychological science to help children thrive.",
+    "translation": "전 아이들이 잘 성장할 수 있도록 돕기 위해 심리학을 활용하고 있는 게 아니거든요."
+  },
+  {
+    "id": "seg-400",
+    "start": 1988.78,
+    "end": 1996.1995000000002,
+    "speaker": "DUBNER",
+    "text": "I’m giving parents terrible ideas about how to destroy their dreams, and to not even bother having a mission statement.",
+    "translation": "제가 지금 부모님들에게 아이들의 꿈을 짓밟고, 사명 선언문 같은 건 아예 만들 생각도 하지 말라는 끔찍한 아이디어를 심어주고 있네요."
+  },
+  {
+    "id": "seg-401",
+    "start": 1996.1995000000002,
+    "end": 1997.3398750000001,
+    "speaker": "DUCKWORTH",
+    "text": "No, no, no.",
+    "translation": "아니에요, 전혀 그렇지 않아요."
+  },
+  {
+    "id": "seg-402",
+    "start": 1997.3398750000001,
+    "end": 2004.1,
+    "speaker": "DUCKWORTH",
+    "text": "We’re both increasing the metric tonnage of psychological wisdom, even if by a few ounces.",
+    "translation": "우리는 단 몇 온스일지라도 심리학적 지식의 총량을 늘려가고 있는걸요."
+  },
+  {
+    "id": "seg-403",
+    "start": 2004.1,
+    "end": 2011.46,
+    "speaker": "DUBNER",
+    "text": "So, Angela, it sounds like you believe that a mission statement or top-level goal has real value, at least for many people.",
+    "translation": "그러니까, 안젤라, 당신은 사명 선언문이나 최상위 목표가 적어도 많은 사람들에게는 실질적인 가치가 있다고 믿는 것 같네요."
+  },
+  {
+    "id": "seg-404",
+    "start": 2011.46,
+    "end": 2017.5066666666667,
+    "speaker": "DUBNER",
+    "text": "So even though I’m not a convert, do you feel that most people, all people, should do it?",
+    "translation": "제가 완전히 설득된 건 아니지만, 대다수 사람이나 모든 사람이 사명 선언문을 만들어야 한다고 생각하시나요?"
+  },
+  {
+    "id": "seg-405",
+    "start": 2017.5066666666667,
+    "end": 2024.8393333333333,
+    "speaker": "DUCKWORTH",
+    "text": "I’m not going to go so far as to mandate it for all of humanity, but I will say I think it’s helpful for many people.",
+    "translation": "인류 전체에 의무적으로 적용해야 한다고까지 하진 않겠지만, 많은 사람들에게 도움이 된다고는 말씀드릴 수 있어요."
+  },
+  {
+    "id": "seg-406",
+    "start": 2024.8393333333333,
+    "end": 2026.32,
+    "speaker": "DUCKWORTH",
+    "text": "It helped me.",
+    "translation": "저한테도 도움이 되었고요."
+  },
+  {
+    "id": "seg-407",
+    "start": 2026.32,
+    "end": 2046.839,
+    "speaker": "DUCKWORTH",
+    "text": "I’ve talked to people, some on the younger end, 18, 19, some quite far along in life, and for a lot of those people they felt like sitting down with a pencil and a paper and trying to actually say what they’re all about — I gave them the boundary of 10 words or fewer, any more than that and you’re not even going to remember the darn thing.",
+    "translation": "제가 18, 19세 선상의 어린 친구들부터 나이가 지긋하신 분들까지 대화를 나눠봤는데요. 그중 많은 분들이 연필과 종이를 들고 앉아 자신이 추구하는 가치가 무엇인지 실제로 정리해 보는 과정이 도움이 되었다고 느꼈어요. 저는 10단어 이하로 제한을 두라고 했는데요, 그보다 길어지면 기억하기도 힘들 테니까요."
+  },
+  {
+    "id": "seg-408",
+    "start": 2046.839,
+    "end": 2048.98,
+    "speaker": "DUCKWORTH",
+    "text": "I think many of those people found it very helpful.",
+    "translation": "그 과정이 아주 유용했다고 느끼는 분들이 꽤 많았던 것 같아요."
+  },
+  {
+    "id": "seg-409",
+    "start": 2048.98,
+    "end": 2049.72,
+    "speaker": "DUCKWORTH",
+    "text": "Not everyone.",
+    "translation": "물론 전부는 아니겠지만요."
+  },
+  {
+    "id": "seg-410",
+    "start": 2049.72,
+    "end": 2050.98,
+    "speaker": "DUBNER",
+    "text": "Have you noticed any correlations?",
+    "translation": "어떤 상관관계 같은 걸 발견하셨나요?"
+  },
+  {
+    "id": "seg-411",
+    "start": 2050.98,
+    "end": 2058.3151000000003,
+    "speaker": "DUBNER",
+    "text": "The kind of people who are most likely to have mission statements already are also likely to be or do “X”?",
+    "translation": "이미 사명 선언문을 가지고 있을 법한 사람들이 '어떤 성향'을 보이거나 무언가를 할 가능성이 높다거나 하는 분석이 있을까요?"
+  },
+  {
+    "id": "seg-412",
+    "start": 2058.3151000000003,
+    "end": 2064.149875,
+    "speaker": "DUCKWORTH",
+    "text": "Well, I think a lot of the people that I’ve noticed that have these mission statements articulated are actually leaders.",
+    "translation": "글쎄요, 보니까 이미 사명 선언문을 명확하게 규정해 둔 사람들의 상당수는 리더들이더라고요."
+  },
+  {
+    "id": "seg-413",
+    "start": 2064.149875,
+    "end": 2070.04,
+    "speaker": "DUBNER",
+    "text": "So what would you say if a given leader were to say, “You know what?",
+    "translation": "그렇다면 만약 어떤 리더가 이렇게 말하면 뭐라고 하시겠어요? \"있잖아,"
+  },
+  {
+    "id": "seg-414",
+    "start": 2070.04,
+    "end": 2072.2799999999997,
+    "speaker": "DUBNER",
+    "text": "Here’s why I don’t have a mission statement.",
+    "translation": "내가 사명 선언문을 두지 않는 이유는 이래."
+  },
+  {
+    "id": "seg-415",
+    "start": 2072.2799999999997,
+    "end": 2077.6533333333336,
+    "speaker": "DUBNER",
+    "text": "Mission statements are slogans that are the province of political candidates and marketers.",
+    "translation": "사명 선언문이라는 건 정치인이나 마케터들의 전유물인 슬로건에 불과해."
+  },
+  {
+    "id": "seg-416",
+    "start": 2077.6533333333336,
+    "end": 2086.159,
+    "speaker": "DUBNER",
+    "text": "And if you think that I and my organization can be reduced to a mission statement, then you don’t understand the way the world works.”",
+    "translation": "그리고 나와 우리 조직이 사명 선언문 한 줄로 요약될 수 있다고 생각한다면, 그건 세상이 어떻게 돌아가는지 전혀 모르는 거야.\""
+  },
+  {
+    "id": "seg-417",
+    "start": 2086.159,
+    "end": 2086.3545555555556,
+    "speaker": "DUCKWORTH",
+    "text": "Wow.",
+    "translation": "와우."
+  },
+  {
+    "id": "seg-418",
+    "start": 2086.3545555555556,
+    "end": 2088.6926666666664,
+    "speaker": "DUCKWORTH",
+    "text": "I would say, “First of all, have you eaten?",
+    "translation": "저는 이렇게 말할 것 같아요. \"우선, 식사는 하셨어요?"
+  },
+  {
+    "id": "seg-419",
+    "start": 2088.6926666666664,
+    "end": 2090.5465,
+    "speaker": "DUCKWORTH",
+    "text": "You sound angry.",
+    "translation": "화가 많이 나신 것 같아서요.\""
+  },
+  {
+    "id": "seg-420",
+    "start": 2090.5465,
+    "end": 2096.071214285714,
+    "speaker": "DUCKWORTH",
+    "text": "Can I make you a sandwich?” I really think that’s the first thing I would say.",
+    "translation": "\"샌드위치 좀 만들어 드릴까요?\" 진짜 제가 가장 먼저 할 말은 이거일 것 같아요."
+  },
+  {
+    "id": "seg-421",
+    "start": 2096.071214285714,
+    "end": 2107.045,
+    "speaker": "DUCKWORTH",
+    "text": "But if it weren’t the sandwich problem, I guess I would say that almost every organization I can think of, actually, Stephen, literally, for-profit, not-for-profit, they do have one.",
+    "translation": "하지만 샌드위치 얘기가 아니라면, 스티븐, 제가 생각나는 거의 모든 조직, 진짜 문자 그대로 영리든 비영리든 간에 사명 선언문이 하나씩은 있다고 말할 것 같아요."
+  },
+  {
+    "id": "seg-422",
+    "start": 2107.045,
+    "end": 2109.48,
+    "speaker": "DUCKWORTH",
+    "text": "Even countries have statements.",
+    "translation": "국가조차도 그런 선언문이 있으니까요."
+  },
+  {
+    "id": "seg-423",
+    "start": 2109.48,
+    "end": 2114.98,
+    "speaker": "DUCKWORTH",
+    "text": "I mean the Declaration of Independence, the founding fathers could have just said, “You know what I mean?",
+    "translation": "미국 독립선언서만 봐도 그래요. 건국의 아버지들이 그냥 \"무슨 말인지 알지?"
+  },
+  {
+    "id": "seg-424",
+    "start": 2114.98,
+    "end": 2119.38,
+    "speaker": "DUCKWORTH",
+    "text": "It’s kind of self-evident, right?” They decided to, to write it down.",
+    "translation": "대충 보면 딱 알잖아?\" 하고 넘어갈 수도 있었는데, 굳이 글로 기록하기로 한 거잖아요."
+  },
+  {
+    "id": "seg-425",
+    "start": 2119.38,
+    "end": 2124.5114,
+    "speaker": "DUBNER",
+    "text": "Yeah, I guess “life, liberty, and the pursuit of happiness” is not a bad top-line goal, I guess.",
+    "translation": "네, '생명, 자유, 그리고 행복의 추구'는 꽤 괜찮은 핵심 목표 같긴 하네요."
+  },
+  {
+    "id": "seg-426",
+    "start": 2124.5114,
+    "end": 2125.0876,
+    "speaker": "DUCKWORTH",
+    "text": "It’s not.",
+    "translation": "그렇죠."
+  },
+  {
+    "id": "seg-427",
+    "start": 2125.0876,
+    "end": 2125.6638,
+    "speaker": "DUBNER",
+    "text": "All right.",
+    "translation": "좋아요."
+  },
+  {
+    "id": "seg-428",
+    "start": 2125.6638,
+    "end": 2134.06,
+    "speaker": "DUBNER",
+    "text": "I think here’s what it boils down — you’ve persuaded me of this: If a top-line goal, or mission statement, is well-written, I’m okay with it.",
+    "translation": "결국 핵심은 이겁니다. 이 부분에선 설득당했네요. 핵심 목표든 사명 선언문이든 제대로 잘만 쓰인 거라면 저도 찬성이에요."
+  },
+  {
+    "id": "seg-429",
+    "start": 2134.06,
+    "end": 2154.56,
+    "speaker": "DUBNER",
+    "text": "“Always compete.” “Life, liberty, pursuit of happiness.” But once we get into the, “Embrace our collective ambiguity to produce less terrible things in the world by making our widgets slightly more angular,” then I’m probably not so interested.",
+    "translation": "\"늘 경쟁하라\"라든가 \"생명, 자유, 행복의 추구\" 같은 거요. 하지만 \"우리의 부품 장치를 약간 더 각지게 만들어 세상에 덜 끔찍한 물건을 내놓기 위해 우리의 집단적 모호성을 포용하자\" 같은 식으로 흘러가기 시작하면, 전 별로 관심 없을 것 같아요."
+  },
+  {
+    "id": "seg-430",
+    "start": 2154.56,
+    "end": 2154.561,
+    "speaker": "DUCKWORTH",
+    "text": "I agree.",
+    "translation": "동감이에요."
+  }
+]
